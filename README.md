@@ -31,14 +31,14 @@ The [scripts/extract_idsignpost.py](scripts/extract_idsignpost.py) script is the
 
 ### Key Features
 
-- **Smart field detection**: Maps CSS classes like `field-name-field-description` to friendly labels using [`FIELD_LABELS`](scripts/extract_idsignpost.py#L17-L26)
-- **Text cleaning**: [clean_text](scripts/extract_idsignpost.py#L30-L38) double-unescapes HTML entities, normalizes line breaks, and removes excess whitespace
-- **Label derivation**: [derive_label](scripts/extract_idsignpost.py#L102-L119) extracts field labels from both explicit `.field-label` nodes and CSS class names
-- **Split URL fixing**: [fix_split_urls](scripts/extract_idsignpost.py#L41-L66) repairs URLs that are split across HTML link elements and following text (e.g., when `@N07/collections/...` appears outside the `<a>` tag)
-- **URL normalization**: [normalize_markdown_links](scripts/extract_idsignpost.py#L76-L99) decodes percent-encoded characters (`%20` → space, etc.), and wraps all URLs in angle brackets for proper Markdown formatting
-- **Nested list handling**: [render_markdown](scripts/extract_idsignpost.py#L173-L208) intelligently formats single-line vs. multi-line values, including nested bullets for multi-value fields
-- **Date parsing**: [format_submitted](scripts/extract_idsignpost.py#L220-L236) and [to_iso_datetime](scripts/extract_idsignpost.py#L238-L246) convert "Submitted by X on Day, DD/MM/YYYY - HH:MM" to structured format
-- **Selective processing**: [gather_files](scripts/extract_idsignpost.py#L209-L217) globs `*.html` files, excluding `about.html`
+- **Smart field detection**: Maps CSS classes like `field-name-field-description` to friendly labels using [`FIELD_LABELS`](scripts/extract_idsignpost.py#L21-L31)
+- **Text cleaning**: [clean_text](scripts/extract_idsignpost.py#L34-L42) double-unescapes HTML entities, normalizes line breaks, and removes excess whitespace
+- **Label derivation**: [derive_label](scripts/extract_idsignpost.py#L109-L126) extracts field labels from both explicit `.field-label` nodes and CSS class names
+- **Split URL fixing**: [fix_split_urls](scripts/extract_idsignpost.py#L45-L60) repairs URLs that are split across HTML link elements and following text (e.g., when `@N07/collections/...` appears outside the `<a>` tag)
+- **URL normalization**: [normalize_markdown_links](scripts/extract_idsignpost.py#L90-L106) ensures URLs are valid RFC 3986 URIs, and wraps all URLs in angle brackets for proper Markdown formatting
+- **Nested list handling**: [render_markdown](scripts/extract_idsignpost.py#L184-L217) intelligently formats single-line vs. multi-line values, including nested bullets for multi-value fields
+- **Date parsing**: [format_submitted](scripts/extract_idsignpost.py#L231-L247) and [to_iso_datetime](scripts/extract_idsignpost.py#L249-L257) convert "Submitted by X on Day, DD/MM/YYYY - HH:MM" to structured format
+- **Selective processing**: [gather_files](scripts/extract_idsignpost.py#L220-L228) globs `*.html` files, excluding `about.html`
 
 ## Installation
 
@@ -57,6 +57,7 @@ Dependencies (from [pyproject.toml](pyproject.toml) and [uv.lock](uv.lock)):
 
 - `beautifulsoup4>=4.12.3` - HTML parsing
 - `markdownify>=0.12.1` - HTML to Markdown conversion
+- `pyarrow>=14.0.0` - Parquet columnar storage export
 
 ## Usage
 
@@ -207,6 +208,21 @@ resource-name.html,Resource Title,author; 2015-06-09T17:02:00,Description text,A
 - Multi-line fields: Newlines preserved (or space-separated with `--no-newlines`)
 - Array fields: Values joined by chosen delimiter (e.g., `Online;PDF;Publication`)
 
+### Convert JSON to Parquet
+
+The [scripts/json_to_parquet.py](scripts/json_to_parquet.py) script converts the JSON catalog into Apache Parquet columnar storage format with strongly typed schemas (`Free` stored as boolean, missing values as `null`s).
+
+```bash
+# Convert JSON to Parquet
+uv run python scripts/json_to_parquet.py --output idsignpost.parquet
+```
+
+#### Command-Line Options
+
+- `--input`: Input JSON file (default: `idsignpost.json`)
+- `--output`: Output Parquet file (default: `idsignpost.parquet`)
+- `--delimiter`: Separator for array fields (default: `;`)
+
 ## Project Structure
 
 ```plaintext
@@ -214,10 +230,13 @@ resource-name.html,Resource Title,author; 2015-06-09T17:02:00,Description text,A
 ├── idsignpost.md            # Generated Markdown catalog
 ├── idsignpost.json          # Generated JSON catalog
 ├── idsignpost.csv           # Generated CSV catalog
+├── idsignpost.parquet       # Generated Parquet columnar catalog
 ├── scripts/                 # Python scripts
 │   ├── extract_idsignpost.py  # HTML to Markdown converter
 │   ├── md_to_json.py          # Markdown to JSON converter
-│   └── json_to_csv.py         # JSON to CSV converter
+│   ├── json_to_csv.py         # JSON to CSV converter
+│   ├── json_to_parquet.py     # JSON to Parquet converter
+│   └── url_utils.py           # Shared URL normalization & sanitization
 ├── pyproject.toml           # Python project configuration
 ├── uv.lock                  # Locked dependencies
 └── README.md                # This file
@@ -240,10 +259,10 @@ Each resource entry follows this structure:
 - Keywords: keyword1 keyword2 keyword3
 ```
 
-**Link Format**: All links are normalized to the format `[url](<url>)` where:
-- Display text is the decoded URL (with `%20` and other encodings removed)
-- URL target is also decoded and wrapped in angle brackets
-- This ensures URLs are human-readable in both the Markdown source and rendered output
+**Link Format**: All links are normalized to the format `[text](<url>)` where:
+- Display text is human-readable (with unescaped spaces and descriptions preserved)
+- URL target is a valid RFC 3986 URI and wrapped in angle brackets
+- In downstream exports (JSON, CSV, Parquet), `Web link` is extracted as a clean, plain, valid URL
 
 Multi-line field values are indented:
 
@@ -270,7 +289,8 @@ Multi-value fields use nested bullets:
 3. Run `uv run python scripts/extract_idsignpost.py --output idsignpost.md` for full extraction
 4. Optionally run `uv run python scripts/md_to_json.py --output idsignpost.json --pretty` to generate JSON
 5. Optionally run `uv run python scripts/json_to_csv.py --output idsignpost.csv` to generate CSV
-6. Review and commit the updated files
+6. Optionally run `uv run python scripts/json_to_parquet.py --output idsignpost.parquet` to generate Parquet
+7. Review and commit the updated files
 
 ## Legacy Context
 
