@@ -26,6 +26,9 @@ env/
 # Project-specific
 idsignpost.md.bak
 *.bak
+.url_cache.json
+test_sample*
+
 
 # uv
 .python-version
