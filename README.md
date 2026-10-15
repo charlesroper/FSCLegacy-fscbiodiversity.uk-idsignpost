@@ -56,6 +56,8 @@ uv sync
 Dependencies (from [pyproject.toml](pyproject.toml) and [uv.lock](uv.lock)):
 
 - `beautifulsoup4>=4.12.3` - HTML parsing
+- `ddgs>=9.16.0` - DuckDuckGo search integration for finding alternative links
+- `httpx>=0.28.0` - Fast async HTTP client for URL health checks and API requests
 - `markdownify>=0.12.1` - HTML to Markdown conversion
 - `pyarrow>=14.0.0` - Parquet columnar storage export
 
@@ -133,25 +135,68 @@ uv run python scripts/md_to_json.py --output idsignpost.json --indent 0
 - `--indent`: JSON indentation level (default: 2, use 0 for compact)
 - `--pretty`: Pretty-print JSON with sorted keys
 
+### Verify URLs and Enrich Links
+
+The [scripts/verify_urls.py](scripts/verify_urls.py) script verifies the health of primary `Web link` URLs in the JSON catalog, queries the Internet Archive Wayback Machine for historical snapshots, and searches for live alternative resources when a link is broken. It:
+
+1. **Checks live URL status**: Uses an async HTTP client with browser user-agent and redirect tracking, and classifies each link as `ok`, `broken` (404/410/DNS failure) or `blocked` (401/403/429/5xx/timeouts, usually bot protection, so the true state is unknown). The raw code is kept in `Web link status`, the classification in `Web link state`.
+2. **Queries Wayback Machine**: Queries `https://archive.org/wayback/available` (with retry/backoff) to find the closest archived snapshot.
+3. **Discovers alternative URLs**: Only for `broken` links, queries DuckDuckGo using the resource's `Title` and `Author(s)`. Candidates must be live (HTTP 2xx/3xx), have tracking parameters stripped, and are given a **heuristic** score (0.0 - 1.0, not a calibrated probability) based on title similarity, author match, domain authority, and keyword overlap.
+4. **Maintains persistent cache**: Stores only definitive results in `.url_cache.json` (30-day TTL, `--cache-ttl-days`). Transient failures (timeouts, 429s, search/Wayback errors) are retried on the next run.
+
+#### Usage
+
+Verify URLs in the JSON catalog:
+
+```bash
+# Verify all URLs in idsignpost.json (in-place)
+uv run python scripts/verify_urls.py
+
+# Test on first 5 entries
+uv run python scripts/verify_urls.py --test 5 --output test_sample.json
+
+# Adjust concurrency and timeout
+uv run python scripts/verify_urls.py --concurrency 10 --wayback-concurrency 3 --timeout 15.0
+
+# Force re-check bypassing the local cache
+uv run python scripts/verify_urls.py --refresh
+```
+
+#### Command-Line Options
+
+- `--input`: Input JSON file (default: `idsignpost.json`)
+- `--output`: Output JSON file (default: `idsignpost.json`)
+- `--cache-file`: Persistent cache file (default: `.url_cache.json`)
+- `--concurrency`: Max concurrent live HTTP workers (default: 10)
+- `--wayback-concurrency`: Max concurrent Wayback API requests (default: 3)
+- `--timeout`: HTTP timeout in seconds (default: 10.0)
+- `--min-prob`: Minimum confidence threshold for alternative links (default: 0.40)
+- `--test [N]`: Process only the first N entries
+- `--refresh`: Force re-verifying cached URLs
+
 #### JSON Output Format
 
 Each entry in the JSON array contains:
 
 ```json
 {
-  "filename": "resource-name.html",
-  "Title": "Resource Title",
-  "Submitted": "author_name; 2015-06-09T17:02:00",
-  "Description": "Detailed description text...",
-  "Author(s)": "Author Name(s)",
-  "Free": "Yes",
-  "Available as": ["Online", "PDF"],
-  "Web link": "https://example.com/resource",
-  "Keywords": "keyword1 keyword2 keyword3"
+  "filename": "adult-trichoptera-caddisflies-britain-and-ireland.html",
+  "Title": "The adult Trichoptera (caddisflies) of Britain and Ireland",
+  "Submitted": "rich burkmar; 2015-06-09T17:02:00",
+  "Description": "RES Handbook Vol 1 Part 17...",
+  "Author(s)": "Barnard & Ross",
+  "Free": "No",
+  "Available as": "Publication",
+  "Web link": "https://www.field-studies-council.org/shop/publications/trichoptera-adults/",
+  "Web link status": "403",
+  "Wayback link": "https://web.archive.org/web/20230928004119/https://www.field-studies-council.org/shop/publications/trichoptera-adults/",
+  "Alternative link": "https://www.nhbs.com/res-handbook-volume-1-part-17-the-adult-trichoptera-caddisflies-of-britain-and-ireland-book",
+  "Alternative probability": 0.83,
+  "Keywords": "Royal Entomological Society of London FSC entsoc"
 }
 ```
 
-Multi-value fields are arrays, single-line and multi-line fields are strings.
+Multi-value fields are arrays, single-line and multi-line fields are strings. Missing values or unneeded alternatives are `null`.
 
 ### Convert JSON to CSV
 
@@ -194,23 +239,23 @@ uv run python scripts/json_to_csv.py --output idsignpost.csv --no-newlines
 
 #### CSV Output Format
 
-The CSV file has columns matching the original markdown field order:
+The CSV file has columns matching the canonical field order:
 
 ```
-filename,Title,Submitted,Description,Author(s),Free,Available as,Web link,Keywords,...
-resource-name.html,Resource Title,author; 2015-06-09T17:02:00,Description text,Author Name,Yes,Online;PDF,https://example.com,keyword1;keyword2
+filename,Title,Submitted,Description,Author(s),Free,Available as,Web link,Web link status,Wayback link,Alternative link,Alternative probability,Additional web link,Keywords,...
 ```
 
-**Column order**: Fields appear in the canonical order (filename, Title, Submitted, Description, Author(s), Free, Available as, Web link, Additional web link, Keywords, Major group(s), Body), followed by any additional fields alphabetically.
+**Column order**: Fields appear in canonical order (`filename`, `Title`, `Submitted`, `Description`, `Author(s)`, `Free`, `Available as`, `Web link`, `Web link status`, `Wayback link`, `Alternative link`, `Alternative probability`, `Additional web link`, `Keywords`, `Major group(s)`, `Body`), followed by any additional fields alphabetically.
 
 **Field handling**:
 - Single-line fields: Direct value
 - Multi-line fields: Newlines preserved (or space-separated with `--no-newlines`)
 - Array fields: Values joined by chosen delimiter (e.g., `Online;PDF;Publication`)
+- Missing/Null values: Represented as empty strings
 
 ### Convert JSON to Parquet
 
-The [scripts/json_to_parquet.py](scripts/json_to_parquet.py) script converts the JSON catalog into Apache Parquet columnar storage format with strongly typed schemas (`Free` stored as boolean, missing values as `null`s).
+The [scripts/json_to_parquet.py](scripts/json_to_parquet.py) script converts the JSON catalog into Apache Parquet columnar storage format with strongly typed schemas (`Free` stored as boolean, `Alternative probability` stored as nullable float64, missing values as `null`s).
 
 ```bash
 # Convert JSON to Parquet
@@ -228,12 +273,13 @@ uv run python scripts/json_to_parquet.py --output idsignpost.parquet
 ```plaintext
 ├── idsignpost/              # Source HTML files (legacy FSC pages)
 ├── idsignpost.md            # Generated Markdown catalog
-├── idsignpost.json          # Generated JSON catalog
+├── idsignpost.json          # Generated JSON catalog (with URL verification & alternatives)
 ├── idsignpost.csv           # Generated CSV catalog
 ├── idsignpost.parquet       # Generated Parquet columnar catalog
 ├── scripts/                 # Python scripts
 │   ├── extract_idsignpost.py  # HTML to Markdown converter
 │   ├── md_to_json.py          # Markdown to JSON converter
+│   ├── verify_urls.py         # URL health checker, Wayback lookups & alternative search
 │   ├── json_to_csv.py         # JSON to CSV converter
 │   ├── json_to_parquet.py     # JSON to Parquet converter
 │   └── url_utils.py           # Shared URL normalization & sanitization
@@ -287,10 +333,11 @@ Multi-value fields use nested bullets:
 1. Place HTML files in the `idsignpost/` directory
 2. Run `uv run python scripts/extract_idsignpost.py --test` to verify parsing on a sample
 3. Run `uv run python scripts/extract_idsignpost.py --output idsignpost.md` for full extraction
-4. Optionally run `uv run python scripts/md_to_json.py --output idsignpost.json --pretty` to generate JSON
-5. Optionally run `uv run python scripts/json_to_csv.py --output idsignpost.csv` to generate CSV
-6. Optionally run `uv run python scripts/json_to_parquet.py --output idsignpost.parquet` to generate Parquet
-7. Review and commit the updated files
+4. Run `uv run python scripts/md_to_json.py --output idsignpost.json --pretty` to generate JSON
+5. Run `uv run python scripts/verify_urls.py --input idsignpost.json --output idsignpost.json` to verify URLs, retrieve Wayback snapshots, and search alternatives for broken links
+6. Run `uv run python scripts/json_to_csv.py --output idsignpost.csv` to generate CSV
+7. Run `uv run python scripts/json_to_parquet.py --output idsignpost.parquet` to generate Parquet
+8. Review and commit the updated files
 
 ## Legacy Context
 
