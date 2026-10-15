@@ -147,7 +147,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.narrs.org.uk/documents/ARC reptile ID Guide.pdf](<http://www.narrs.org.uk/documents/ARC reptile ID Guide.pdf>)
+- Web link: [http://www.narrs.org.uk/documents/ARC reptile ID Guide.pdf](<http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf>)
 
 ## athecate-hydroids-and-their-medusae.html
 
@@ -986,7 +986,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4,3L55N,KM61IY,CVO2E,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
 - Keywords: sea shore coast coastal seabirds
 
 ## bto-bird-id-video-cattle-egret.html
@@ -1028,7 +1028,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4,3OFFR,KM61IY,D8B5B,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
 - Keywords: waterbirds waterbird wader
 
 ## bto-bird-id-video-common-shanks.html
@@ -1094,7 +1094,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4,4LHGI,KM61IY,H2VEX,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
 - Keywords: wetland wildfowl lakes
 
 ## bto-bird-id-video-godwits.html
@@ -1211,7 +1211,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4,4PAPH,KM61IY,HLGLL,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1>)
 
 ## bto-bird-id-video-kestrel-and-merlin.html
 
@@ -1296,7 +1296,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4,4N5FU,KM61IY,HAW2T,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1>)
 - Keywords: seabird seabirds marine coastal
 
 ## bto-bird-id-video-redwing-and-fieldfare.html
@@ -1382,7 +1382,7 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4,43OCY,KM61IY,EVOLU,1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1>)
 - Keywords: grebe
 
 ## bto-bird-id-video-summer-buzzards.html
@@ -1859,7 +1859,7 @@
 - Author(s): Francis Rose
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%...](<https://www.summerfieldbooks.com/colour-identification-guide-to-grasses,-sedges,-rushes-and-ferns~207>)
+- Web link: [https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%...](<https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207>)
 
 ## commensal-and-parasitic-copepods-associated-marine-invertebrates-2nd-ed.html
 
@@ -2125,8 +2125,8 @@
 - Author(s): Ian Wallace
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Shell identification February%...](<http://www.record-lrc.co.uk/Downloads/Shell identification February 2012 version2[18042012].pdf>)
-- Additional web link: [guide to Life on Sandy Shores between Co](<http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March 2012 compressed2[18042012].pdf>)
+- Web link: [http://www.record-lrc.co.uk/Downloads/Shell identification February%...](<http://www.record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2%5B18042012%5D.pdf>)
+- Additional web link: [guide to Life on Sandy Shores between Co](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
 - Keywords: Shells shell seashell Liverpool
 
 ## draft-key-british-blowflies-calliphoridae-and-woodlouse-flies-rhinophoridae.html
@@ -2299,7 +2299,7 @@
   - PDF
 - Web link: [http://srs.britishspiders.org.uk/resource/De\_Hooiwagens\_1st\_revision1406...](<http://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf>)
 - Additional web link:
-  - [De Nederlandse hooiwagens from Pemberley](<http://www.pemberleybooks.com/Search.asp?Keywords=De Nederlandse hooiwagens&;SearchCategory=0&;btnSearch.x=23&;btnSearch.y=12>)
+  - [De Nederlandse hooiwagens from Pemberley](<http://www.pemberleybooks.com/Search.asp?Keywords=De%20Nederlandse%20hooiwagens&%3BSearchCategory=0&%3BbtnSearch.x=23&%3BbtnSearch.y=12>)
   - [Entomologische Tabellen](<https://www.naturalis.nl/wetenschap>)
 - Keywords: Opilionids
 
@@ -2333,7 +2333,7 @@
 - Author(s): Allen J. Coombes
 - Free: No
 - Available as: Publication
-- Web link: [https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+(Eyewitness+...](<https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+(Eyewitness+Handbooks)&hl=en&sa=X&ei=dRCVVev-OaWE7gbZv4DYAg&ved=0CCoQ6AEwAA>)
+- Web link: [https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+(Eyewitness+...](<https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+%28Eyewitness+Handbooks%29&hl=en&sa=X&ei=dRCVVev-OaWE7gbZv4DYAg&ved=0CCoQ6AEwAA>)
 - Keywords: conifers
 
 ## farmland-bird-id-guide.html
@@ -3036,7 +3036,7 @@
 - Author(s): Bumblebee Conservation Trust
 - Free: Yes
 - Available as: PDF
-- Web link: [https://bumblebeeconservation.org/images/uploads/Resources/BBCT\_Bumblebe...](<https://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_>)(big\_8).pdf
+- Web link: [https://bumblebeeconservation.org/images/uploads/Resources/BBCT\_Bumblebe...(big\_8).pdf](<https://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf>)
 
 ## guide-common-fossils.html
 
@@ -3253,8 +3253,8 @@
 - Author(s): Ian Wallace Kathryn Turner
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March%2...](<http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March 2012 compressed2[18042012].pdf>)
-- Additional web link: [Animals other than Shells](<http://www.record-lrc.co.uk/Downloads/Other than shells identification version Feb 2012_2[18042012].pdf>)
+- Web link: [http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March%2...](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
+- Additional web link: [Animals other than Shells](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
 - Keywords: Shells shell seashell Liverpool seashore
 
 ## guide-main-groups-pond-invertebrates.html
@@ -3353,7 +3353,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.fscbiodiversity.uk/sites/default/files/Guide\_to\_Shrops\_Ortho...](<../sites/default/files/Guide_to_Shrops_Orthops_version 3.pdf>)
+- Web link: [https://www.fscbiodiversity.uk/sites/default/files/Guide\_to\_Shrops\_Ortho...](<https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf>)
 - Keywords: Grasshoppers Crickets Earwigs
 
 ## guide-summer-coastal-birds.html
@@ -3568,7 +3568,7 @@
 - Author(s): Peter Marren, Felicity Rose Cole
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.discoverwildlife.com/index.php?p=3355](<http://www.discoverwildlife.com/index.php?p=3355>)
+- Web link: [http://www.discoverwildlife.com/index.php?p=3355](<http://www.discoverwildlife.com/index.php%3Fp%3D3355>)
 - Keywords: season, seasonal, autumn
 
 ## how-identify-hoverflies.html
@@ -3579,7 +3579,7 @@
 - Author(s): BBC Wildlife Magazine/Felicity Rose Cole
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.discoverwildlife.com/index.php?p=2990](<http://www.discoverwildlife.com/index.php?p=2990>)
+- Web link: [http://www.discoverwildlife.com/index.php?p=2990](<http://www.discoverwildlife.com/index.php%3Fp%3D2990>)
 - Comment Body: This doesn't tell you how to identify hoverflies. It has some pictures of some of the common hoverflies, but the illustrations are not very accurate and there is no information given on how to tell the illustrated species apart from some equally common look-alikes. Really doesn't live up to its title!
 
 ## hybrid-flora-british-isles.html
@@ -3671,7 +3671,7 @@
 - Author(s): Bishop, J.
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.mba.ac.uk/sites/default/files/downloads/ID](<http://www.mba.ac.uk/sites/default/files/downloads/ID>) NNS English.pdf
+- Web link: [http://www.mba.ac.uk/sites/default/files/downloads/IDNNS English.pdf](<http://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
 - Additional web link: [MBA Bishop Group website](<https://www.mba.ac.uk/fellows/bishop-group-associate-fellow>)
 - Keywords: invasive
 
@@ -4169,7 +4169,7 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicr...](<https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicrophorus[07052011].pdf>)
+- Web link: [https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicr...](<https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicrophorus%5b07052011%5d.pdf>)
 - Keywords: Silphidae, Coleoptera
 
 ## key-british-species-phalacridae.html
@@ -5570,7 +5570,7 @@
 - Author(s): Poulain, Michel, Marianne Meyer et Jean Bozonnet
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomycètes~3341>)
+- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
 - Keywords: slime moulds slimemoulds
 
 ## les-myxomycètes.html
@@ -5586,7 +5586,7 @@
 - Author(s): Poulain, Michel, Marianne Meyer et Jean Bozonnet
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomycètes~3341>)
+- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
 - Keywords: slime moulds slimemoulds
 
 ## lichen-app-assessing-nitrogen-pollution.html
@@ -5954,8 +5954,8 @@
 - Author(s): Ian Wallace
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Other than shells identifica...](<http://www.record-lrc.co.uk/Downloads/Other than shells identification version Feb 2012_2[18042012].pdf>)
-- Additional web link: [Guide to Life on Sandy Shores between C](<http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March 2012 compressed2[18042012].pdf>)
+- Web link: [http://www.record-lrc.co.uk/Downloads/Other than shells identifica...](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
+- Additional web link: [Guide to Life on Sandy Shores between C](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
 - Keywords: shore seaweeds, bryozoans, barnacles, Liverpool seashore Crabs and mobile Crustacea, Barnacles, Tube worms, Oysters, Hydroids and Bryozoa, Sponges, Urchins, Brittle Starfish, seaweeds, eggs aegg capsules, Sea Squirts Sea Slugs borers
 
 ## north-west-european-thecate-hydroids-and-their-medusae-part-1.html
@@ -6175,7 +6175,7 @@
 - Author(s): Silphidae recording Scheme
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae...](<http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae Key_2019 version.pdf>)
+- Web link: [http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae...](<http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf>)
 - Additional web link: [Silphidae recording scheme](<http://www.coleoptera.org.uk/silphidae/home>)
 - Keywords: carrion
 
@@ -6212,7 +6212,7 @@
 - Author(s): Adrian Chalkley
 - Free: Yes
 - Available as: PDF
-- Web link: [https://sns.org.uk/files/Downloads/Dytiscus key 3.pdf](<https://sns.org.uk/files/Downloads/Dytiscus key 3.pdf>)
+- Web link: [https://sns.org.uk/files/Downloads/Dytiscus key 3.pdf](<https://sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf>)
 - Keywords: aquatic freshwater ponds rivers streams coleoptera
 
 ## photo-key-large-aquatic-bugs.html
@@ -6223,7 +6223,7 @@
 - Author(s): Adrian Chalkley
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.fscbiodiversity.uk/photokeysand paddling](<../photokeysand paddling.html>)
+- Web link: [https://www.fscbiodiversity.uk/photokeysand paddling](<https://www.fscbiodiversity.uk/photokeysand%20paddling.html>)
 - Keywords: aquatic freshwater ponds rivers streams hemiptera heteroptera
 - Comment Body: What an excellent couple of guides from Adrian Chalkey. Looking forward to yet more - well done to all
 
@@ -6618,7 +6618,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol01\_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol01_Part07.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol01\_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf>)
 - Keywords: booklice barklice barkflies res handbooks out of print
 
 ## res-handbook-vol-1-part-9-ephemeroptera.html
@@ -6748,7 +6748,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol10\_Part04b...](<https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol10_Part04b.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol10\_Part04b...](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
 - Keywords: res handbooks out of print house flies stable flies
 
 ## res-handbook-vol-10-part-5a-diptera-tephritidae.html
@@ -6849,7 +6849,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol02\_Part05a...](<https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol02_Part05a.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol02\_Part05a...](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf>)
 - Keywords: res handbooks out of print
 
 ## res-handbook-vol-4-part-1-coleoptera-introduction-and-keys-families.html
@@ -6888,7 +6888,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol04\_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol04_Part02.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol04\_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf>)
 - Keywords: res handbooks out of print ground beetles tiger
 
 ## res-handbook-vol-4-part-3-coleoptera-hydradephaga.html
@@ -7122,7 +7122,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol06\_Part02b...](<https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol06_Part02b.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol06\_Part02b...](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf>)
 - Keywords: res handbooks out of print sawflies
 
 ## res-handbook-vol-6-part-2c-hymenoptera-symphyta.html
@@ -7252,7 +7252,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol07\_Part02a...](<https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol07_Part02a_ii.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol07\_Part02a...](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf>)
 - Keywords: res handbooks out of print ichneumonid wasps
 
 ## res-handbook-vol-7-part-2b-ichneumonidae-orthopelmatinae-anomaloninae.html
@@ -7421,7 +7421,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol09\_Part04a...](<https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol09_Part04a.pdf>)
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol09\_Part04a...](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf>)
 - Keywords: res handbooks out of print
 - Comment Body: Some useful information in this 1969 key, but it is known to contain some errors and there are more accurate recent keys available. For information on identifying this group of flies see: [http://www.brc.ac.uk/soldierflies-and-allies/resources](<http://www.brc.ac.uk/soldierflies-and-allies/resources>)
 
@@ -7524,7 +7524,7 @@
 - Author(s): Francis Rose and Clare O'Reilly
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/the-wild-flower-key:-how-to...](<https://www.summerfieldbooks.com/the-wild-flower-key:-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578>)
+- Web link: [https://www.summerfieldbooks.com/the-wild-flower-key:-how-to...](<https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578>)
 - Keywords: Vascular Plants, Botanical Keys
 
 ## saltmarsh-plants-britain.html
@@ -7664,7 +7664,7 @@
 - Author(s): Chris Wood
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/seasearch,-observer's-guide-to-mari...](<https://www.summerfieldbooks.com/seasearch,-observer's-guide-to-marine-life-of-britain-and-ireland,--2nd-edition~5960>)
+- Web link: [https://www.summerfieldbooks.com/seasearch,-observer's-guide-to-mari...](<https://www.summerfieldbooks.com/seasearch%2C-observer%27s-guide-to-marine-life-of-britain-and-ireland%2C--2nd-edition~5960>)
 - Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
 
 ## seasons.html
@@ -7721,7 +7721,7 @@
 - Author(s): David W. Williams
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.fscbiodiversity.uk/](<../index.html>)
+- Web link: [https://www.fscbiodiversity.uk/](<https://www.fscbiodiversity.uk/index.html>)
 
 ## shropshire-weevils-associated-conifers.html
 
@@ -7733,7 +7733,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF2.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF2.pdf>)
+- Web link: [www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF2.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 
 ## shropshire-weevils-associated-deadwood-fungi-and-rotting-timbers.html
@@ -7746,7 +7746,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF3.pdf>)
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 
 ## shropshire-weevils-associated-elms-and-oaks.html
@@ -7759,7 +7759,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF4.pdf>)
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 
 ## shropshire-weevils-associated-rosaceous-trees-and-shrubs.html
@@ -7772,7 +7772,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF5.pdf>)
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 
 ## shropshire-weevils-associated-sycamore-beech-alder-birch-and-hazel.html
@@ -7785,7 +7785,7 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF1.pdf>)
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 
 ## simple-key-caddis-larvae.html
@@ -8015,7 +8015,7 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens 1978 - part 1 - pag 1-229.pdf>)
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-2.html
@@ -8026,7 +8026,7 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens 1978 - part 2 - pag 228-321.pdf>)
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-3.html
@@ -8037,7 +8037,7 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens 1978 - part 3 - pag 322-464.pdf>)
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
 
 ## sponges-britain-and-ireland.html
@@ -8118,7 +8118,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/](<https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629273458864/>)
 
 ## steven-falks-flickr-collection-araneae.html
 
@@ -8128,7 +8128,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/](<https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631875078693/>)
 
 ## steven-falks-flickr-collection-birds.html
 
@@ -8138,7 +8138,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/](<https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/](<https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/>)
 
 ## steven-falks-flickr-collection-diptera.html
 
@@ -8148,7 +8148,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/](<https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629586945825/>)
 - Keywords: true flies two-winged flies
 
 ## steven-falks-flickr-collection-hemiptera.html
@@ -8159,7 +8159,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/](<https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631681890925/>)
 
 ## steven-falks-flickr-collection-hymenoptera.html
 
@@ -8169,7 +8169,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/](<https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629294459686/>)
 
 ## steven-falks-flickr-collection-mammals.html
 
@@ -8179,7 +8179,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/](<https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/>)
 
 ## steven-falks-flickr-collection-molluscs.html
 
@@ -8189,7 +8189,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/](<https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/](<https://www.flickr.com/photos/63075200%40N07/collections/72157632294575034/>)
 - Keywords: snails slugs bivalves
 
 ## steven-falks-flickr-collection-odonata.html
@@ -8200,7 +8200,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/](<https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587472171/>)
 
 ## steven-falks-flickr-collection-opiliones.html
 
@@ -8210,7 +8210,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/](<https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631637889685/>)
 
 ## steven-falks-flickr-collection-orthoptera.html
 
@@ -8220,7 +8220,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631291968800/](<https://www.flickr.com/photos/63075200@N07/collections/72157631291968800/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631291968800/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631291968800/>)
 
 ## steven-falks-flickr-collection-reptiles.html
 
@@ -8230,7 +8230,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/](<https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629207224086/>)
 
 ## steven-falks-flickr-collections-coleoptera.html
 
@@ -8240,7 +8240,7 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/](<https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/>)
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587478333/>)
 
 ## synopsis-british-fauna-no-4-2nd-edn-harvestmen.html
 
@@ -8250,7 +8250,7 @@
 - Author(s): Hillyard & Sankey
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyar...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard & Sankey 1989 British Opiliones.pdf>)
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyar...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
 
 ## tachinid-recording-scheme.html
@@ -8819,7 +8819,7 @@
 - Author(s): Holly Dillon
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf](<../sites/default/files/winter-webs.pdf>)
+- Web link: [https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf](<https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf>)
 
 ## woodland-name-trail-mini-beasts.html
 
