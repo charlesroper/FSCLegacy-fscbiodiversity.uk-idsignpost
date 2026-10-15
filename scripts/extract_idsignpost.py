@@ -10,9 +10,13 @@ from datetime import datetime
 import sys
 from pathlib import Path
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, NavigableString, Tag
 from markdownify import markdownify
 from urllib.parse import unquote
+
+# Add parent directory to path so url_utils is importable
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from url_utils import sanitize_url  # noqa: E402
 
 FIELD_LABELS = {
     "field-description": "Description",
@@ -41,18 +45,9 @@ def clean_text(value: str) -> str:
 def fix_split_urls(fragment: str) -> str:
     """Fix URLs that are split between a link and following text.
 
-    E.g., <a href="...url">...url</a>@N07/rest handles cases where the @ symbol
-    and following path were outside the link tag in the original HTML.
-
-    We need to:
-    1. Extract the URL continuation after </a>
-    2. Append it to the href attribute
-    3. Append it to the link text
-    4. Remove the text after </a>
+    Handles cases where the @ symbol and path were outside the link tag in Flickr links.
     """
-    # Pattern: <a href="([^"]*)">([^<]*)</a>([@/][^\s<]*)
-    # Captures: (1) href value, (2) link text, (3) URL continuation
-    pattern = r'<a\s+href="([^"]*)">([^<]*)</a>([@/][^\s<]*)'
+    pattern = r'<a\s+href="([^"]*)">([^<]*)</a>(@[^\s<]*)'
 
     def fix_match(match: re.Match) -> str:
         href = match.group(1)
@@ -65,6 +60,19 @@ def fix_split_urls(fragment: str) -> str:
     return re.sub(pattern, fix_match, fragment)
 
 
+def merge_trailing_link_text(field: Tag) -> None:
+    """Merge text immediately following an <a> tag inside a link item (e.g. trailing filenames)."""
+    for a in field.find_all("a"):
+        nxt = a.next_sibling
+        if nxt and isinstance(nxt, NavigableString) and nxt.strip():
+            continuation = str(nxt).strip()
+            href = a.get("href", "") + continuation
+            a["href"] = href
+            text = (a.string or a.get_text()) + continuation
+            a.string = text
+            nxt.extract()
+
+
 def to_markdown(fragment: str) -> str:
     fragment = fix_split_urls(fragment)
     text = markdownify(fragment, heading_style="ATX", bullets="-")
@@ -72,30 +80,29 @@ def to_markdown(fragment: str) -> str:
     return normalize_markdown_links(text)
 
 
-URL_LINK_PATTERN = re.compile(r"\[(?P<text>[^\]]+)\]\((?P<url>[^)]+)\)")
-ANGLE_LINK_PATTERN = re.compile(r"<(?P<url>https?://[^>]+)>")
+URL_LINK_PATTERN = re.compile(
+    r"\[(?P<text>[^\]]+)\]\((?:<(?P<angle_url>[^>]+)>|(?P<url>https?://[^\s()]+(?:\([^()]*\)[^\s()]*)*|[^)]+))\)"
+)
+# Match bare <https?://...> not inside a markdown link target
+ANGLE_LINK_PATTERN = re.compile(r"(?<!\()<(https?://[^>]+)>")
 
 
 def normalize_markdown_links(text: str) -> str:
-    def format_link(match: re.Match) -> str:
-        raw_url = match.group("url").strip()
-        # Skip if already wrapped in angle brackets
-        if raw_url.startswith("<") and raw_url.endswith(">"):
-            return match.group(0)
-        decoded_url = unquote(raw_url)
-        link_text = match.group("text")
-        # Always decode the display text to remove %20 and other encodings
-        display_text = unquote(link_text)
-        return f"[{display_text}](<{decoded_url}>)"
-
     def format_angle(match: re.Match) -> str:
-        raw_url = match.group("url").strip()
-        decoded_url = unquote(raw_url)
-        return f"[{decoded_url}](<{decoded_url}>)"
+        raw_url = match.group(1).strip()
+        url = sanitize_url(raw_url)
+        return f"[{url}](<{url}>)"
+
+    def format_link(match: re.Match) -> str:
+        raw_url = match.group("angle_url") or match.group("url")
+        url = sanitize_url(raw_url)
+        link_text = match.group("text")
+        display_text = unquote(link_text)
+        return f"[{display_text}](<{url}>)"
 
     # First pass: normalize bare angle-bracketed URLs
     text = ANGLE_LINK_PATTERN.sub(format_angle, text)
-    # Second pass: normalize markdown links (but skip if URL already has angle brackets)
+    # Second pass: normalize markdown links
     return URL_LINK_PATTERN.sub(format_link, text)
 
 
@@ -123,6 +130,8 @@ def extract_fields(main: BeautifulSoup) -> list[tuple[str, list[str]]]:
     fields: list[tuple[str, list[str]]] = []
     for field in main.select(".field"):
         label = derive_label(field)
+        if label == "Web link":
+            merge_trailing_link_text(field)
         items = field.select(".field-item")
         if items:
             values = [to_markdown(item.decode_contents()) for item in items]

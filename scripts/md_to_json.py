@@ -9,6 +9,10 @@ import re
 import sys
 from pathlib import Path
 
+# Add parent directory to path so url_utils is importable
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from url_utils import sanitize_url  # noqa: E402
+
 
 def parse_markdown_entry(lines: list[str]) -> dict[str, str | list[str]]:
     """Parse a single markdown entry into a dictionary."""
@@ -86,6 +90,12 @@ def _save_field(
         else:
             # Multi-value field - keep as array
             entry[field] = [v for v in values if v]
+
+    if field == "Web link":
+        if isinstance(entry[field], list):
+            entry[field] = [sanitize_url(v) for v in entry[field]]
+        elif isinstance(entry[field], str) and entry[field]:
+            entry[field] = sanitize_url(entry[field])
 
 
 def parse_markdown_file(file_path: Path) -> list[dict[str, str | list[str]]]:

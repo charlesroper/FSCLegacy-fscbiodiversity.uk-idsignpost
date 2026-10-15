@@ -9,6 +9,10 @@ import json
 import sys
 from pathlib import Path
 
+# Add parent directory to path so url_utils is importable
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from url_utils import sanitize_url  # noqa: E402
+
 
 # Canonical field order matching the markdown format
 FIELD_ORDER = [
@@ -66,6 +70,12 @@ def json_to_csv(
         row = {}
         for field in fieldnames:
             value = entry.get(field, "")
+
+            if field == "Web link":
+                if isinstance(value, list):
+                    value = [sanitize_url(str(v)) for v in value if str(v).strip()]
+                elif isinstance(value, str) and value.strip():
+                    value = sanitize_url(value)
 
             # Handle different value types
             if isinstance(value, list):
