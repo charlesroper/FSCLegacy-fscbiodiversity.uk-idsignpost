@@ -24,6 +24,11 @@ FIELD_ORDER = [
     "Free",
     "Available as",
     "Web link",
+    "Web link status",
+    "Web link state",
+    "Wayback link",
+    "Alternative link",
+    "Alternative probability",
     "Additional web link",
     "Keywords",
     "Major group(s)",
@@ -70,6 +75,8 @@ def json_to_csv(
         row = {}
         for field in fieldnames:
             value = entry.get(field, "")
+            if value is None:
+                value = ""
 
             if field == "Web link":
                 if isinstance(value, list):

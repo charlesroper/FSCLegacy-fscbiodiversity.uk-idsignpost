@@ -21,6 +21,11 @@ FIELD_ORDER = [
     "Free",
     "Available as",
     "Web link",
+    "Web link status",
+    "Web link state",
+    "Wayback link",
+    "Alternative link",
+    "Alternative probability",
     "Additional web link",
     "Keywords",
     "Comment Body",
@@ -42,6 +47,14 @@ def convert_entry_value(field: str, value: object, delimiter: str = ";") -> obje
             if val_lower == "no":
                 return False
         return None
+
+    if field == "Alternative probability":
+        if value is None:
+            return None
+        try:
+            return float(value)
+        except (ValueError, TypeError):
+            return None
 
     if isinstance(value, list):
         filtered = [str(v) for v in value if v]
@@ -83,6 +96,9 @@ def json_to_parquet(
         if f == "Free":
             arrow_fields.append(pa.field(f, pa.bool_(), nullable=True))
             arrow_arrays.append(pa.array(columns[f], type=pa.bool_()))
+        elif f == "Alternative probability":
+            arrow_fields.append(pa.field(f, pa.float64(), nullable=True))
+            arrow_arrays.append(pa.array(columns[f], type=pa.float64()))
         else:
             arrow_fields.append(pa.field(f, pa.string(), nullable=True))
             arrow_arrays.append(pa.array(columns[f], type=pa.string()))
