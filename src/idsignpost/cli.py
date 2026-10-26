@@ -51,7 +51,14 @@ def _cmd_extract(args: argparse.Namespace) -> int:
 
     output = Path(args.output or "idsignpost.json")
     if output.exists():
-        entries = merge_verification(entries, load_catalog(output))
+        try:
+            entries = merge_verification(entries, load_catalog(output))
+        except ValueError:
+            print(
+                f"idsignpost extract: {output} is not a canonical catalog; "
+                "verification fields will be reset",
+                file=sys.stderr,
+            )
     write_json(entries, output)
     print(
         f"idsignpost extract: wrote {len(entries)} entries to {output}", file=sys.stderr

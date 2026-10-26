@@ -306,3 +306,16 @@ def test_run_extracts_verifies_and_exports(
     assert [entry.id for entry in entries] == ["flickr-split", "full-entry"]
     assert sum(entry.web_link_state == "ok" for entry in entries) == 1
     assert csv_path.exists() and parquet_path.exists() and md_path.exists()
+
+
+def test_extract_replaces_a_legacy_catalog(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    output = tmp_path / "idsignpost.json"
+    output.write_text(json.dumps([{"Title": "legacy"}]), encoding="utf-8")
+
+    assert main(["extract", "--html-dir", str(FIXTURES), "--output", str(output)]) == 0
+
+    assert "not a canonical catalog" in capsys.readouterr().err
+    entries = read_catalog(output)
+    assert [entry.id for entry in entries] == ["flickr-split", "full-entry"]
