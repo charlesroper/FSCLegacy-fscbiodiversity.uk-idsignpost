@@ -4500,9 +4500,6 @@
 - Web link state: broken
 - Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
 - Wayback link: [https://web.archive.org/web/20241102235505/https://www.field-studies-council.org/shop/publications/plant-galls-guide/](<https://web.archive.org/web/20241102235505/https://www.field-studies-council.org/shop/publications/plant-galls-guide/>)
-- Alternative link: [https://summerfield-books.ams3.digitaloceanspaces.com/wp-content/uploads/2020/01/Plant-galls.jpg](<https://summerfield-books.ams3.digitaloceanspaces.com/wp-content/uploads/2020/01/Plant-galls.jpg>)
-- Alternative probability: 0.70
-- Alternative reasoning: This URL points directly to the product image of the guide on a bookseller's site, which is a specific resource associated with the publication.
 - Verified at: 2026-10-26T19:46:02.096296+00:00
 
 ## guide-reptiles-and-amphibians-found-uk.html
@@ -4697,9 +4694,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
-- Alternative link: [https://www.pemberleybooks.com/ProductImage.aspx?File=50741.jpg&Size=400](<https://www.pemberleybooks.com/ProductImage.aspx?File=50741.jpg&Size=400>)
-- Alternative probability: 0.70
-- Alternative reasoning: This is a direct product page for the identification chart from a reputable natural history bookseller.
 - Verified at: 2026-10-26T19:46:10.032753+00:00
 
 ## harvestmen-nottinghamshire.html
@@ -5881,9 +5875,6 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130307619:1793044004778947](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130307619:1793044004778947>)
-- Alternative link: [https://www.scribd.com/document/775396303/British-Beetle-Families-Identification-Guide](<https://www.scribd.com/document/775396303/British-Beetle-Families-Identification-Guide>)
-- Alternative probability: 0.40
-- Alternative reasoning: This document on Scribd contains Mike Hackston's identification keys for various British beetle families, including Bostrichidae.
 - Verified at: 2026-10-26T19:46:58.840084+00:00
 
 ## key-identification-british-bothrideridae.html
@@ -6186,9 +6177,6 @@
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044031758128](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044031758128>)
 - Wayback link: [https://web.archive.org/web/20210513103348/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae](<https://web.archive.org/web/20210513103348/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae>)
-- Alternative link: [https://www.scribd.com/document/1073574807/Family-Dytiscidae-Illustrated-Key-to-British-Species](<https://www.scribd.com/document/1073574807/Family-Dytiscidae-Illustrated-Key-to-British-Species>)
-- Alternative probability: 0.60
-- Alternative reasoning: This Scribd document hosts a copy of Mike Hackston's illustrated key for the identification of British Dytiscidae.
 - Verified at: 2026-10-26T19:47:29.808308+00:00
 
 ## key-identification-british-elmidae.html
@@ -6924,9 +6912,6 @@
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044821793174](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044821793174>)
 - Wayback link: [https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae](<https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
-- Alternative link: [https://quelestcetanimal-lagalerie.com/wp-content/uploads/2015/05/Anatomie-dun-Tenebrionidae.jpg](<https://quelestcetanimal-lagalerie.com/wp-content/uploads/2015/05/Anatomie-dun-Tenebrionidae.jpg>)
-- Alternative probability: 0.70
-- Alternative reasoning: While this is a direct link to an image, the source page (quelestcetanimal-lagalerie.com) explicitly hosts and links to the PDF of Mike Hackston's Tenebrionidae identification key.
 - Verified at: 2026-10-26T20:00:33.876459+00:00
 
 ## key-identification-british-tetratomidae.html
@@ -8886,6 +8871,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210917181923/https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf](<https://web.archive.org/web/20210917181923/https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf>)
+- Verified at: 2026-10-26T20:09:25.255635+00:00
 
 ## res-handbook-vol-1-part-11-thysanoptera.html
 
@@ -8936,6 +8922,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
+- Verified at: 2026-10-26T20:09:26.317776+00:00
 
 ## res-handbook-vol-1-part-2-thysanura-and-diplura.html
 
@@ -8952,9 +8939,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210513135750/https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf](<https://web.archive.org/web/20210513135750/https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png>)
-- Alternative probability: 0.70
-- Alternative reasoning: This URL is associated with the Royal Entomological Society's official page for the handbook, which provides access to the publication details and download options.
 - Verified at: 2026-10-26T19:50:18.338301+00:00
 
 ## res-handbook-vol-1-part-5-dermaptera-and-orthoptera.html
@@ -8972,9 +8956,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on this dedicated publications page for direct download.
 - Verified at: 2026-10-26T19:50:24.237433+00:00
 
 ## res-handbook-vol-1-part-6-plecoptera.html
@@ -8992,9 +8973,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210309030505/https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf](<https://web.archive.org/web/20210309030505/https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including Plecoptera, as free downloadable PDFs on this page.
 - Verified at: 2026-10-26T20:00:48.121348+00:00
 
 ## res-handbook-vol-1-part-7-psocoptera.html
@@ -9029,6 +9007,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712164601/https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf](<https://web.archive.org/web/20210712164601/https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf>)
+- Verified at: 2026-10-26T20:09:27.402464+00:00
 
 ## res-handbook-vol-1-parts-12-13-mecoptera-megaloptera-neuroptera.html
 
@@ -9045,9 +9024,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712090819/https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf](<https://web.archive.org/web/20210712090819/https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on its official publications page.
 - Verified at: 2026-10-26T19:50:38.262068+00:00
 
 ## res-handbook-vol-10-part-1-diptera-syrphidae.html
@@ -9082,9 +9058,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211106131835/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf](<https://web.archive.org/web/20211106131835/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society hosts the official collection of out-of-print handbooks, including this specific volume, which are available for download as PDFs.
 - Verified at: 2026-10-26T19:50:45.868775+00:00
 
 ## res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae-0.html
@@ -9102,9 +9075,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210711204000/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf](<https://web.archive.org/web/20210711204000/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.70
-- Alternative reasoning: This is the official Royal Entomological Society archive page where the out-of-print handbooks, including this volume, are hosted for free download.
 - Verified at: 2026-10-26T19:50:39.780462+00:00
 
 ## res-handbook-vol-10-part-2c-diptera-pipunculidae.html
@@ -9193,9 +9163,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf](<https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society (RES) hosts its out-of-print handbooks, including the Muscidae volume, for free download on this dedicated page.
 - Verified at: 2026-10-26T19:51:08.862668+00:00
 
 ## res-handbook-vol-10-part-5a-diptera-tephritidae.html
@@ -9250,9 +9217,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211021073903/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf](<https://web.archive.org/web/20211021073903/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.80
-- Alternative reasoning: The Royal Entomological Society hosts a dedicated page for out-of-print handbooks where many of these titles are provided as free downloadable PDFs.
 - Verified at: 2026-10-26T19:51:21.166751+00:00
 
 ## res-handbook-vol-2-part-2b-hemiptera-cicadomorpha-deltocephalinae.html
@@ -9304,9 +9268,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210713124423/https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf](<https://web.archive.org/web/20210713124423/https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.90
-- Alternative reasoning: The Royal Entomological Society (RES) hosts its out-of-print handbooks as free downloadable PDFs on this page, which is the official source for the requested guide.
 - Verified at: 2026-10-26T19:51:30.666941+00:00
 
 ## res-handbook-vol-2-part-4a-homoptera-aphidoidea-part-chaitophoridae-callaphididae.html
@@ -9338,9 +9299,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210711071313/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf](<https://web.archive.org/web/20210711071313/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol2part5a.jpg](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol2part5a.jpg>)
-- Alternative probability: 0.50
-- Alternative reasoning: This URL points directly to the image asset for the specific handbook on the official Royal Entomological Society website, confirming its presence in their digital repository.
 - Verified at: 2026-10-26T19:51:31.899149+00:00
 
 ## res-handbook-vol-4-part-1-coleoptera-introduction-and-keys-families.html
@@ -9594,9 +9552,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.80
-- Alternative reasoning: The Royal Entomological Society (RES) hosts the official digital archives of their out-of-print handbooks, including this specific volume, which can be accessed via their publications portal.
 - Verified at: 2026-10-26T20:01:19.951351+00:00
 
 ## res-handbook-vol-5-part-5a-coleoptera-rhizophagidae.html
@@ -9807,9 +9762,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf](<https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol6part4.jpg](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol6part4.jpg>)
-- Alternative probability: 0.40
-- Alternative reasoning: This URL points directly to the image resource for the specific handbook volume, which is often associated with the page hosting the download link on the official site.
 - Verified at: 2026-10-26T19:52:13.497536+00:00
 
 ## res-handbook-vol-6-part-5-cuckoo-wasps-hymenoptera-chrysididae.html
@@ -9847,9 +9799,6 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf](<https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
-- Alternative probability: 0.80
-- Alternative reasoning: The Royal Entomological Society (RES) hosts the official product page for their out-of-print handbooks, including this specific volume, which serves as the primary source for the identification guide.
 - Verified at: 2026-10-26T19:52:17.224754+00:00
 
 ## res-handbook-vol-7-part-11-classification-biology-braconid-wasps-hymenoptera-braconidae.html

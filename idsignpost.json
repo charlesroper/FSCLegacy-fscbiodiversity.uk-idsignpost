@@ -7088,9 +7088,9 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://www.field-studies-council.org/shop/",
     "wayback_link": "https://web.archive.org/web/20241102235505/https://www.field-studies-council.org/shop/publications/plant-galls-guide/",
-    "alternative_link": "https://summerfield-books.ams3.digitaloceanspaces.com/wp-content/uploads/2020/01/Plant-galls.jpg",
-    "alternative_probability": 0.7,
-    "alternative_reasoning": "This URL points directly to the product image of the guide on a bookseller's site, which is a specific resource associated with the publication.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:46:02.096296+00:00"
   },
   {
@@ -7390,9 +7390,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/",
-    "alternative_link": "https://www.pemberleybooks.com/ProductImage.aspx?File=50741.jpg&Size=400",
-    "alternative_probability": 0.7,
-    "alternative_reasoning": "This is a direct product page for the identification chart from a reputable natural history bookseller.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:46:10.032753+00:00"
   },
   {
@@ -9186,9 +9186,9 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130307619:1793044004778947",
     "wayback_link": null,
-    "alternative_link": "https://www.scribd.com/document/775396303/British-Beetle-Families-Identification-Guide",
-    "alternative_probability": 0.4,
-    "alternative_reasoning": "This document on Scribd contains Mike Hackston's identification keys for various British beetle families, including Bostrichidae.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:46:58.840084+00:00"
   },
   {
@@ -9636,9 +9636,9 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044031758128",
     "wayback_link": "https://web.archive.org/web/20210513103348/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae",
-    "alternative_link": "https://www.scribd.com/document/1073574807/Family-Dytiscidae-Illustrated-Key-to-British-Species",
-    "alternative_probability": 0.6,
-    "alternative_reasoning": "This Scribd document hosts a copy of Mike Hackston's illustrated key for the identification of British Dytiscidae.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:47:29.808308+00:00"
   },
   {
@@ -10712,9 +10712,9 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044821793174",
     "wayback_link": "https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae",
-    "alternative_link": "https://quelestcetanimal-lagalerie.com/wp-content/uploads/2015/05/Anatomie-dun-Tenebrionidae.jpg",
-    "alternative_probability": 0.7,
-    "alternative_reasoning": "While this is a direct link to an image, the source page (quelestcetanimal-lagalerie.com) explicitly hosts and links to the PDF of Mike Hackston's Tenebrionidae identification key.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T20:00:33.876459+00:00"
   },
   {
@@ -13727,7 +13727,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "verified_at": null
+    "verified_at": "2026-10-26T20:09:25.255635+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-11-thysanoptera",
@@ -13805,7 +13805,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "verified_at": null
+    "verified_at": "2026-10-26T20:09:26.317776+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-2-thysanura-and-diplura",
@@ -13828,9 +13828,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210513135750/https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png",
-    "alternative_probability": 0.7,
-    "alternative_reasoning": "This URL is associated with the Royal Entomological Society's official page for the handbook, which provides access to the publication details and download options.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:50:18.338301+00:00"
   },
   {
@@ -13854,9 +13854,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on this dedicated publications page for direct download.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:50:24.237433+00:00"
   },
   {
@@ -13880,9 +13880,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210309030505/https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society hosts its out-of-print handbooks, including Plecoptera, as free downloadable PDFs on this page.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T20:00:48.121348+00:00"
   },
   {
@@ -13935,7 +13935,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "verified_at": null
+    "verified_at": "2026-10-26T20:09:27.402464+00:00"
   },
   {
     "id": "res-handbook-vol-1-parts-12-13-mecoptera-megaloptera-neuroptera",
@@ -13958,9 +13958,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210712090819/https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on its official publications page.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:50:38.262068+00:00"
   },
   {
@@ -14010,9 +14010,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211106131835/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society hosts the official collection of out-of-print handbooks, including this specific volume, which are available for download as PDFs.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:50:45.868775+00:00"
   },
   {
@@ -14036,9 +14036,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210711204000/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.7,
-    "alternative_reasoning": "This is the official Royal Entomological Society archive page where the out-of-print handbooks, including this volume, are hosted for free download.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:50:39.780462+00:00"
   },
   {
@@ -14166,9 +14166,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society (RES) hosts its out-of-print handbooks, including the Muscidae volume, for free download on this dedicated page.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:51:08.862668+00:00"
   },
   {
@@ -14244,9 +14244,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211021073903/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.8,
-    "alternative_reasoning": "The Royal Entomological Society hosts a dedicated page for out-of-print handbooks where many of these titles are provided as free downloadable PDFs.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:51:21.166751+00:00"
   },
   {
@@ -14322,9 +14322,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210713124423/https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The Royal Entomological Society (RES) hosts its out-of-print handbooks as free downloadable PDFs on this page, which is the official source for the requested guide.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:51:30.666941+00:00"
   },
   {
@@ -14371,9 +14371,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210711071313/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol2part5a.jpg",
-    "alternative_probability": 0.5,
-    "alternative_reasoning": "This URL points directly to the image asset for the specific handbook on the official Royal Entomological Society website, confirming its presence in their digital repository.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:51:31.899149+00:00"
   },
   {
@@ -14735,9 +14735,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.8,
-    "alternative_reasoning": "The Royal Entomological Society (RES) hosts the official digital archives of their out-of-print handbooks, including this specific volume, which can be accessed via their publications portal.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T20:01:19.951351+00:00"
   },
   {
@@ -15047,9 +15047,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol6part4.jpg",
-    "alternative_probability": 0.4,
-    "alternative_reasoning": "This URL points directly to the image resource for the specific handbook volume, which is often associated with the page hosting the download link on the official site.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:52:13.497536+00:00"
   },
   {
@@ -15099,9 +15099,9 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf",
-    "alternative_link": "https://www.royensoc.co.uk/publications/out-of-print-handbooks/",
-    "alternative_probability": 0.8,
-    "alternative_reasoning": "The Royal Entomological Society (RES) hosts the official product page for their out-of-print handbooks, including this specific volume, which serves as the primary source for the identification guide.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
     "verified_at": "2026-10-26T19:52:17.224754+00:00"
   },
   {
