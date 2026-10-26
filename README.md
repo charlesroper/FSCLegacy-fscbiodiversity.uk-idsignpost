@@ -1,357 +1,120 @@
-# FSC Legacy - Biodiversity ID Signpost Extractor
+# idsignpost
 
-Tools to transform legacy Field Studies Council (FSC) biodiversity identification resource HTML pages into a unified Markdown, JSON, and CSV catalog for Britain and Ireland.
+Build and verify a catalog of biodiversity identification resources from the legacy FSC ID Signpost pages.
 
-The legacy HTML pages can be found at [https://www.fscbiodiversity.uk/idsignpost](<https://www.fscbiodiversity.uk/idsignpost>)
+The package turns the HTML pages in `idsignpost/` into one validated catalog, checks every link, archives what still works, and finds replacements for guides that have moved. Outputs are JSON, CSV, Parquet, and Markdown rendered from the same canonical records.
 
-## Overview
+## Install
 
-This repository exists to transform legacy idsignpost HTML pages into Markdown, JSON, and CSV. The extraction script parses HTML metadata and content from individual resource pages, producing clean output with standardized formatting for identification guides, keys, and field resources covering British and Irish wildlife and flora.
-
-## What `extract_idsignpost.py` Does
-
-The [scripts/extract_idsignpost.py](scripts/extract_idsignpost.py) script is the core tool that:
-
-1. **Parses HTML files** from the `idsignpost/` directory
-2. **Extracts structured metadata** from `<div id="main">` blocks including:
-   - Title (from `<h1>` tags)
-   - Submission metadata (author and date)
-   - Field data (Description, Author(s), Free status, Availability, Web links, Keywords, etc.)
-3. **Converts to clean Markdown** using BeautifulSoup and Markdownify
-4. **Normalizes formatting and links**:
-   - Repairs URLs split across HTML boundaries (e.g., `</a>@N07/path`)
-   - Decodes percent-encoded characters in URLs (`%20` → space, etc.)
-   - Wraps all links in angle brackets for proper Markdown syntax: `[url](<url>)`
-   - Cleans up HTML entities (double-unescapes)
-   - Removes excess whitespace
-   - Adds blank line after headings for readability
-   - Handles multi-line field values with proper indentation
-   - Formats dates to ISO format (YYYY-MM-DDTHH:MM:SS)
-5. **Outputs a unified markdown file** with each resource as a `##` heading followed by bullet-point metadata
-
-### Key Features
-
-- **Smart field detection**: Maps CSS classes like `field-name-field-description` to friendly labels using [`FIELD_LABELS`](scripts/extract_idsignpost.py#L21-L31)
-- **Text cleaning**: [clean_text](scripts/extract_idsignpost.py#L34-L42) double-unescapes HTML entities, normalizes line breaks, and removes excess whitespace
-- **Label derivation**: [derive_label](scripts/extract_idsignpost.py#L109-L126) extracts field labels from both explicit `.field-label` nodes and CSS class names
-- **Split URL fixing**: [fix_split_urls](scripts/extract_idsignpost.py#L45-L60) repairs URLs that are split across HTML link elements and following text (e.g., when `@N07/collections/...` appears outside the `<a>` tag)
-- **URL normalization**: [normalize_markdown_links](scripts/extract_idsignpost.py#L90-L106) ensures URLs are valid RFC 3986 URIs, and wraps all URLs in angle brackets for proper Markdown formatting
-- **Nested list handling**: [render_markdown](scripts/extract_idsignpost.py#L184-L217) intelligently formats single-line vs. multi-line values, including nested bullets for multi-value fields
-- **Date parsing**: [format_submitted](scripts/extract_idsignpost.py#L231-L247) and [to_iso_datetime](scripts/extract_idsignpost.py#L249-L257) convert "Submitted by X on Day, DD/MM/YYYY - HH:MM" to structured format
-- **Selective processing**: [gather_files](scripts/extract_idsignpost.py#L220-L228) globs `*.html` files, excluding `about.html`
-
-## Installation
-
-This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+The project targets Python 3.12 and uses `uv` for everything.
 
 ```bash
-# Clone the repository
-git clone <repo-url>
-cd FSCLegacy-fscbiodiversity.uk-idsignpost
-
-# Install dependencies with uv (recommended)
 uv sync
 ```
 
-Dependencies (from [pyproject.toml](pyproject.toml) and [uv.lock](uv.lock)):
-
-- `beautifulsoup4>=4.12.3` - HTML parsing
-- `ddgs>=9.16.0` - DuckDuckGo search integration for finding alternative links
-- `httpx>=0.28.0` - Fast async HTTP client for URL health checks and API requests
-- `markdownify>=0.12.1` - HTML to Markdown conversion
-- `pyarrow>=14.0.0` - Parquet columnar storage export
-
-## Usage
-
-All scripts are run using `uv run python scripts/<script-name>.py`.
-
-### Extract HTML to Markdown
-
-#### Full Extraction
-
-Regenerate the complete Markdown catalog from all HTML files:
+Verification calls the Gemini API. Set the key in your shell before running `verify` or `run`:
 
 ```bash
-uv run python scripts/extract_idsignpost.py --output idsignpost.md
+export GEMINI_API_KEY="..."
 ```
 
-#### Test Mode
+Extraction, export, and the test suite do not need a key.
 
-Process a sample of files (default 5) to verify parsing:
+## Quick start
 
 ```bash
-uv run python scripts/extract_idsignpost.py --test 5
+# Parse the legacy HTML into idsignpost.json
+uv run idsignpost extract
+
+# Check links, look up snapshots, and search for replacements
+uv run idsignpost verify
+
+# Render idsignpost.csv, idsignpost.parquet, and idsignpost.md
+uv run idsignpost export
+
+# Do all three in one pass
+uv run idsignpost run
 ```
 
-#### Custom Path
+`extract --limit 5` prints a sample to stdout instead of writing the catalog. Use `--output` to write a file explicitly.
 
-Specify a different HTML directory:
+`run` extracts the whole corpus, verifies the selected entries, and exports only if verification finishes without aborting.
+
+## Verify a slice
+
+Verification hits the live web, so a full run is slow. Select a smaller set with one of these options:
 
 ```bash
-uv run python scripts/extract_idsignpost.py --path ./my-html-files --output output.md
+# A reproducible cross-section of 40 entries, balanced across link states
+uv run idsignpost verify --sample 40
+
+# The first 25 entries in catalog order
+uv run idsignpost verify --limit 25
+
+# Only entries already marked broken
+uv run idsignpost verify --only-broken
 ```
 
-#### Command-Line Options
+`--only-broken` applies before `--sample` or `--limit`. The two selectors cannot be combined. `verify` always loads and writes the full catalog; only the selected entries change.
 
-- `--path`: Directory containing idsignpost HTML files (default: `./idsignpost`)
-- `--test [N]`: Process only N files for testing (default: 5)
-- `--output`: Write output to file instead of stdout
+Useful additions:
 
-### Convert Markdown to JSON
+- `--refresh` ignores the cache and rechecks everything.
+- `--save-archive` asks the Wayback Machine to capture live pages that have no snapshot. Captures run with two workers and a 60 second timeout.
+- `--min-prob 0.6` raises the confidence needed before a replacement link is accepted.
+- `--model`, `--concurrency`, `--wayback-concurrency`, and `--gemini-concurrency` tune the clients.
 
-The [scripts/md_to_json.py](scripts/md_to_json.py) script parses the generated Markdown catalog into structured JSON format for programmatic access. It:
+## How verification decides
 
-1. **Parses Markdown entries** by splitting on `##` heading delimiters
-2. **Distinguishes field types**:
-   - Single-line fields: `Title: value`
-   - Multi-line fields: Values spanning multiple indented lines (joined with newlines)
-   - Multi-value fields: Nested bullet lists, converted to JSON arrays
-3. **Adds filename field**: Each entry includes the source HTML filename
-4. **Preserves text formatting**: Maintains paragraph breaks and structure in multi-line fields
-5. **Outputs clean JSON**: UTF-8 encoded with configurable indentation
+Each entry with a `web_link` passes through the same stages:
 
-#### Usage
+1. An HTTP GET classifies the link as `ok`, `broken`, or `blocked`. `blocked` means unverified: the server refused the request or answered with a temporary error.
+2. A suspicious redirect (host change, collapse to the site root, soft-404 page, login wall) goes to Gemini for a second opinion. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
+3. A broken entry asks Gemini, with Google Search grounding, for up to three ranked replacements. Candidates are blocked against known dead hosts, private addresses, the original URL, and a live check before one is stored.
+4. The Wayback Machine is queried for a snapshot. Only a live entry can trigger a new capture.
+5. When the final state is not `broken`, any old alternative fields are cleared.
 
-Convert the markdown catalog to JSON format:
+Temporary failures never overwrite a good result. A timeout or 5xx leaves the previous state in place and is retried on the next run, and the cache does not store it.
+
+## Cache
+
+`.url_cache.json` has two tiers. The URL tier holds facts about a page, such as status, redirect target, page title, and snapshot. The entry tier holds per-entry verdicts and alternatives. Two catalog entries can point at the same URL without sharing entry verdicts, and the URL is checked once per run.
+
+Records expire after 30 days by default. Pass `--cache-ttl-days` to change that. A cache written by a different schema version is discarded.
+
+## Output
+
+`extract` and `verify` write `idsignpost.json`, a sorted array of validated records. Export renders it to:
+
+| File | Contents |
+|------|----------|
+| `idsignpost.csv` | Snake case columns, list fields joined with `; ` |
+| `idsignpost.parquet` | Native types for booleans, lists, and scores |
+| `idsignpost.md` | Readable entries under `## <filename>` |
+
+The canonical state values are `ok`, `broken`, and `blocked`. CSV, Parquet, and Markdown label `blocked` as unverified so readers do not mistake it for a healthy link.
+
+Verification fields include `web_link_status`, `web_link_state`, `web_link_resolved`, `wayback_link`, `alternative_link`, `alternative_probability`, `alternative_reasoning`, and `verified_at`.
+
+## Development
+
+Run the same checks as the repository gate:
 
 ```bash
-# Output to stdout
-uv run python scripts/md_to_json.py
-
-# Save to file
-uv run python scripts/md_to_json.py --output idsignpost.json
-
-# Pretty-print with sorted keys
-uv run python scripts/md_to_json.py --output idsignpost.json --pretty
-
-# Compact JSON (no indentation)
-uv run python scripts/md_to_json.py --output idsignpost.json --indent 0
+uv run ruff check --fix .
+uv run ruff format .
+uv run ty check
+uv run pytest
 ```
 
-#### Command-Line Options
-
-- `--input`: Input markdown file (default: `idsignpost.md`)
-- `--output`: Output JSON file (if not specified, outputs to stdout)
-- `--indent`: JSON indentation level (default: 2, use 0 for compact)
-- `--pretty`: Pretty-print JSON with sorted keys
-
-### Verify URLs and Enrich Links
-
-The [scripts/verify_urls.py](scripts/verify_urls.py) script verifies the health of primary `Web link` URLs in the JSON catalog, queries the Internet Archive Wayback Machine for historical snapshots, and searches for live alternative resources when a link is broken. It:
-
-1. **Checks live URL status**: Uses an async HTTP client with browser user-agent and redirect tracking, and classifies each link as `ok`, `broken` (404/410/DNS failure) or `blocked` (401/403/429/5xx/timeouts, usually bot protection, so the true state is unknown). The raw code is kept in `Web link status`, the classification in `Web link state`.
-2. **Queries Wayback Machine**: Queries `https://archive.org/wayback/available` (with retry/backoff) to find the closest archived snapshot.
-3. **Discovers alternative URLs**: Only for `broken` links, queries DuckDuckGo using the resource's `Title` and `Author(s)`. Candidates must be live (HTTP 2xx/3xx), have tracking parameters stripped, and are given a **heuristic** score (0.0 - 1.0, not a calibrated probability) based on title similarity, author match, domain authority, and keyword overlap.
-4. **Maintains persistent cache**: Stores only definitive results in `.url_cache.json` (30-day TTL, `--cache-ttl-days`). Transient failures (timeouts, 429s, search/Wayback errors) are retried on the next run.
-
-#### Usage
-
-Verify URLs in the JSON catalog:
+Tests run offline by default and mock network calls with `respx`. The live smoke test is deselected unless you ask for it:
 
 ```bash
-# Verify all URLs in idsignpost.json (in-place)
-uv run python scripts/verify_urls.py
-
-# Test on first 5 entries
-uv run python scripts/verify_urls.py --test 5 --output test_sample.json
-
-# Adjust concurrency and timeout
-uv run python scripts/verify_urls.py --concurrency 10 --wayback-concurrency 3 --timeout 15.0
-
-# Force re-check bypassing the local cache
-uv run python scripts/verify_urls.py --refresh
+uv run pytest -m live
 ```
 
-#### Command-Line Options
+`SPEC.md` describes the pipeline, schemas, and cache rules in full. `NARRATIVE.md` records why the implementation took the shape it did.
 
-- `--input`: Input JSON file (default: `idsignpost.json`)
-- `--output`: Output JSON file (default: `idsignpost.json`)
-- `--cache-file`: Persistent cache file (default: `.url_cache.json`)
-- `--concurrency`: Max concurrent live HTTP workers (default: 10)
-- `--wayback-concurrency`: Max concurrent Wayback API requests (default: 3)
-- `--timeout`: HTTP timeout in seconds (default: 10.0)
-- `--min-prob`: Minimum confidence threshold for alternative links (default: 0.40)
-- `--test [N]`: Process only the first N entries
-- `--refresh`: Force re-verifying cached URLs
+## Legacy scripts
 
-#### JSON Output Format
-
-Each entry in the JSON array contains:
-
-```json
-{
-  "filename": "adult-trichoptera-caddisflies-britain-and-ireland.html",
-  "Title": "The adult Trichoptera (caddisflies) of Britain and Ireland",
-  "Submitted": "rich burkmar; 2015-06-09T17:02:00",
-  "Description": "RES Handbook Vol 1 Part 17...",
-  "Author(s)": "Barnard & Ross",
-  "Free": "No",
-  "Available as": "Publication",
-  "Web link": "https://www.field-studies-council.org/shop/publications/trichoptera-adults/",
-  "Web link status": "403",
-  "Wayback link": "https://web.archive.org/web/20230928004119/https://www.field-studies-council.org/shop/publications/trichoptera-adults/",
-  "Alternative link": "https://www.nhbs.com/res-handbook-volume-1-part-17-the-adult-trichoptera-caddisflies-of-britain-and-ireland-book",
-  "Alternative probability": 0.83,
-  "Keywords": "Royal Entomological Society of London FSC entsoc"
-}
-```
-
-Multi-value fields are arrays, single-line and multi-line fields are strings. Missing values or unneeded alternatives are `null`.
-
-### Convert JSON to CSV
-
-The [scripts/json_to_csv.py](scripts/json_to_csv.py) script converts the JSON catalog to CSV (comma-separated values) format for use in spreadsheets, databases, and data analysis tools. It:
-
-1. **Reads JSON entries** from the structured JSON catalog
-2. **Maintains canonical field order**: Columns appear in the same order as the original markdown format (filename, Title, Submitted, Description, etc.)
-3. **Normalizes field structure**: Ensures all entries have consistent columns
-4. **Handles field types**:
-   - Single-line fields: Output as-is
-   - Multi-line fields: Preserved with newlines (or converted to spaces with `--no-newlines`)
-   - Array fields: Joined with a configurable delimiter (default: semicolon)
-5. **Produces RFC 4180 compliant CSV**: Proper escaping, quoted fields, UTF-8 encoding
-6. **Flexible output**: Command-line options for customization
-
-#### Usage
-
-Convert the JSON catalog to CSV:
-
-```bash
-# Basic conversion (output to idsignpost.csv)
-uv run python scripts/json_to_csv.py
-
-# Specify custom input/output paths
-uv run python scripts/json_to_csv.py --input my-catalog.json --output my-catalog.csv
-
-# Use pipe character as array delimiter instead of semicolon
-uv run python scripts/json_to_csv.py --output idsignpost.csv --delimiter "|"
-
-# Replace newlines with spaces for single-line fields
-uv run python scripts/json_to_csv.py --output idsignpost.csv --no-newlines
-```
-
-#### Command-Line Options
-
-- `--input`: Input JSON file (default: `idsignpost.json`)
-- `--output`: Output CSV file (default: `idsignpost.csv`)
-- `--delimiter`: Separator for array fields (default: `;`)
-- `--no-newlines`: Replace newlines with spaces in multi-line fields
-
-#### CSV Output Format
-
-The CSV file has columns matching the canonical field order:
-
-```
-filename,Title,Submitted,Description,Author(s),Free,Available as,Web link,Web link status,Wayback link,Alternative link,Alternative probability,Additional web link,Keywords,...
-```
-
-**Column order**: Fields appear in canonical order (`filename`, `Title`, `Submitted`, `Description`, `Author(s)`, `Free`, `Available as`, `Web link`, `Web link status`, `Wayback link`, `Alternative link`, `Alternative probability`, `Additional web link`, `Keywords`, `Major group(s)`, `Body`), followed by any additional fields alphabetically.
-
-**Field handling**:
-- Single-line fields: Direct value
-- Multi-line fields: Newlines preserved (or space-separated with `--no-newlines`)
-- Array fields: Values joined by chosen delimiter (e.g., `Online;PDF;Publication`)
-- Missing/Null values: Represented as empty strings
-
-### Convert JSON to Parquet
-
-The [scripts/json_to_parquet.py](scripts/json_to_parquet.py) script converts the JSON catalog into Apache Parquet columnar storage format with strongly typed schemas (`Free` stored as boolean, `Alternative probability` stored as nullable float64, missing values as `null`s).
-
-```bash
-# Convert JSON to Parquet
-uv run python scripts/json_to_parquet.py --output idsignpost.parquet
-```
-
-#### Command-Line Options
-
-- `--input`: Input JSON file (default: `idsignpost.json`)
-- `--output`: Output Parquet file (default: `idsignpost.parquet`)
-- `--delimiter`: Separator for array fields (default: `;`)
-
-## Project Structure
-
-```plaintext
-├── idsignpost/              # Source HTML files (legacy FSC pages)
-├── idsignpost.md            # Generated Markdown catalog
-├── idsignpost.json          # Generated JSON catalog (with URL verification & alternatives)
-├── idsignpost.csv           # Generated CSV catalog
-├── idsignpost.parquet       # Generated Parquet columnar catalog
-├── scripts/                 # Python scripts
-│   ├── extract_idsignpost.py  # HTML to Markdown converter
-│   ├── md_to_json.py          # Markdown to JSON converter
-│   ├── verify_urls.py         # URL health checker, Wayback lookups & alternative search
-│   ├── json_to_csv.py         # JSON to CSV converter
-│   ├── json_to_parquet.py     # JSON to Parquet converter
-│   └── url_utils.py           # Shared URL normalization & sanitization
-├── pyproject.toml           # Python project configuration
-├── uv.lock                  # Locked dependencies
-└── README.md                # This file
-```
-
-## Output Format
-
-Each resource entry follows this structure:
-
-```markdown
-## filename.html
-
-- Title: Resource Title
-- Submitted: author_name; 2015-06-09T17:02:00
-- Description: Detailed description text
-- Author(s): Author Name(s)
-- Free: Yes/No
-- Available as: Publication, Online, PDF
-- Web link: [https://example.com/resource](<https://example.com/resource>)
-- Keywords: keyword1 keyword2 keyword3
-```
-
-**Link Format**: All links are normalized to the format `[text](<url>)` where:
-- Display text is human-readable (with unescaped spaces and descriptions preserved)
-- URL target is a valid RFC 3986 URI and wrapped in angle brackets
-- In downstream exports (JSON, CSV, Parquet), `Web link` is extracted as a clean, plain, valid URL
-
-Multi-line field values are indented:
-
-```markdown
-- Description:
-  First paragraph of description.
-  
-  Second paragraph of description.
-```
-
-Multi-value fields use nested bullets:
-
-```markdown
-- Available as:
-  - Online
-  - PDF
-  - Publication
-```
-
-## Workflow
-
-1. Place HTML files in the `idsignpost/` directory
-2. Run `uv run python scripts/extract_idsignpost.py --test` to verify parsing on a sample
-3. Run `uv run python scripts/extract_idsignpost.py --output idsignpost.md` for full extraction
-4. Run `uv run python scripts/md_to_json.py --output idsignpost.json --pretty` to generate JSON
-5. Run `uv run python scripts/verify_urls.py --input idsignpost.json --output idsignpost.json` to verify URLs, retrieve Wayback snapshots, and search alternatives for broken links
-6. Run `uv run python scripts/json_to_csv.py --output idsignpost.csv` to generate CSV
-7. Run `uv run python scripts/json_to_parquet.py --output idsignpost.parquet` to generate Parquet
-8. Review and commit the updated files
-
-## Legacy Context
-
-This is a preservation project for the Field Studies Council (FSC) biodiversity identification resources website. The original HTML pages contained metadata about identification guides, keys, and field resources for British and Irish wildlife covering:
-
-- Invertebrates (insects, spiders, crustaceans, molluscs)
-- Vertebrates (mammals, birds, reptiles, amphibians, fish)
-- Plants (wildflowers, trees, bryophytes, algae, fungi)
-- Marine life (seaweeds, hydroids, barnacles)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Software**: The extraction and conversion scripts are freely available under the MIT License.
-
-**Data and Content**: The biodiversity identification resource metadata in the catalog files is sourced from the Field Studies Council's legacy website and various contributors. This catalog data is provided for archival and reference purposes. Users should respect the intellectual property rights of original authors and publishers when using the resource information.
+`scripts/` holds the original extractor and verification scripts. The package replaces them for new work. The HTML corpus in `idsignpost/` remains the input for `extract`.
