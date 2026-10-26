@@ -376,9 +376,11 @@
   - Online
   - PDF
 - Web link: [http://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm](<http://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm>)
-- Web link status: connect_error
+- Web link status: redirect_mismatch
 - Web link state: broken
+- Web link resolved: [https://www.bibsbryology.org/](<https://www.bibsbryology.org/>)
 - Wayback link: [https://web.archive.org/web/20200129051430/https://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm](<https://web.archive.org/web/20200129051430/https://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm>)
+- Verified at: 2026-10-26T20:00:19.046234+00:00
 
 ## bee-orchids-and-their-relatives.html
 
@@ -446,9 +448,10 @@
 - Available as: Online
 - Keywords: Beetle, Moth trap, Moth trap intruders, Coleoptera, Beetles, Arthropoda
 - Web link: [https://www.60shadesofbrown.uk/beetles-attracted-to-light](<https://www.60shadesofbrown.uk/beetles-attracted-to-light>)
-- Web link status: connect_error
-- Web link state: broken
+- Web link status: 200
+- Web link state: ok
 - Wayback link: [https://web.archive.org/web/20260713064621/https://www.60shadesofbrown.uk/beetles-attracted-to-light](<https://web.archive.org/web/20260713064621/https://www.60shadesofbrown.uk/beetles-attracted-to-light>)
+- Verified at: 2026-10-26T19:59:45.066844+00:00
 
 ## beginners-guide-identifying-british-mammal-bones.html
 
@@ -846,6 +849,8 @@
 - Web link: [https://www.field-studies-council.org/shop/publications/lonchaeidae/](<https://www.field-studies-council.org/shop/publications/lonchaeidae/>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230927091746/https://www.field-studies-council.org/shop/publications/lonchaeidae/](<https://web.archive.org/web/20230927091746/https://www.field-studies-council.org/shop/publications/lonchaeidae/>)
+- Verified at: 2026-10-26T19:59:47.256585+00:00
 
 ## british-marine-mollusca-facebook-group.html
 
@@ -1088,6 +1093,7 @@
 - Web link: [https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-and-ireland~235](<https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-and-ireland~235>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160813085644/http://summerfieldbooks.com/willows%2Dand%2Dpoplars%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E235](<https://web.archive.org/web/20160813085644/http://summerfieldbooks.com/willows%2Dand%2Dpoplars%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E235>)
 - Verified at: 2026-10-26T19:43:10.634318+00:00
 
 ## bsbi-handbook-no-5-charophytes-great-britain-and-ireland.html
@@ -1102,6 +1108,8 @@
 - Web link: [https://www.summerfieldbooks.com/charophytes-of-great-britain-and-ireland~236](<https://www.summerfieldbooks.com/charophytes-of-great-britain-and-ireland~236>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160813084904/http://summerfieldbooks.com/charophytes%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E236](<https://web.archive.org/web/20160813084904/http://summerfieldbooks.com/charophytes%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E236>)
+- Verified at: 2026-10-26T19:59:53.549180+00:00
 
 ## bsbi-handbook-no-6-crucifers.html
 
@@ -1115,6 +1123,7 @@
 - Web link: [https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239](<https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160907111140/http://summerfieldbooks.com:80/crucifers-of-great-britain-and-ireland~239](<https://web.archive.org/web/20160907111140/http://summerfieldbooks.com:80/crucifers-of-great-britain-and-ireland~239>)
 - Verified at: 2026-10-26T19:43:17.493862+00:00
 
 ## bsbi-handbook-no-7-roses-great-britain-and-ireland.html
@@ -1129,6 +1138,7 @@
 - Web link: [https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233](<https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20170316062202/http://summerfieldbooks.com/roses%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E233](<https://web.archive.org/web/20170316062202/http://summerfieldbooks.com/roses%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E233>)
 - Alternative link: [https://bsbi.org/learn/publications](<https://bsbi.org/learn/publications>)
 - Alternative probability: 0.40
 - Alternative reasoning: The Botanical Society of Britain and Ireland (BSBI) is the publisher and maintains a list of their handbooks, though it may redirect to external sellers.
@@ -1146,6 +1156,7 @@
 - Web link: [https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238](<https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20170316065143/http://summerfieldbooks.com/pondweeds%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E238](<https://web.archive.org/web/20170316065143/http://summerfieldbooks.com/pondweeds%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E238>)
 - Verified at: 2026-10-26T19:43:43.546929+00:00
 
 ## bsbi-handbook-no-9-dandelions-great-britain-and-ireland.html
@@ -1159,6 +1170,7 @@
 - Web link: [https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland~232](<https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland~232>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160813030255/http://summerfieldbooks.com/dandelions%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E232](<https://web.archive.org/web/20160813030255/http://summerfieldbooks.com/dandelions%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E232>)
 - Alternative link: [https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595](<https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595>)
 - Alternative probability: 0.90
 - Alternative reasoning: This page provides specific bibliographic details, status (out of print), and information about the publication, serving as a direct reference for the book.
@@ -1258,6 +1270,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/sanderling-curlew-sandpiper](<https://www.bto.org/learn/skills/bird-identification/videos/sanderling-curlew-sandpiper>)
+- Wayback link: [https://web.archive.org/web/20250426073506/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-sanderling-curlew-sandpiper](<https://web.archive.org/web/20250426073506/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-sanderling-curlew-sandpiper>)
 - Verified at: 2026-10-26T19:43:01.085186+00:00
 
 ## bto-bird-id-video-adult-black-backed-gulls.html
@@ -1273,6 +1286,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
+- Wayback link: [https://web.archive.org/web/20210116005553/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1](<https://web.archive.org/web/20210116005553/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
 - Verified at: 2026-10-26T19:43:03.706574+00:00
 
 ## bto-bird-id-video-cattle-egret.html
@@ -1287,6 +1301,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cattle-egret](<https://www.bto.org/learn/skills/bird-identification/videos/cattle-egret>)
+- Wayback link: [https://web.archive.org/web/20250516232027/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cattle-egret](<https://web.archive.org/web/20250516232027/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cattle-egret>)
 - Verified at: 2026-10-26T19:43:08.099430+00:00
 
 ## bto-bird-id-video-chaffinch-brambling.html
@@ -1302,6 +1317,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/chaffinch-brambling](<https://www.bto.org/learn/skills/bird-identification/videos/chaffinch-brambling>)
+- Wayback link: [https://web.archive.org/web/20230831104749/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-chaffinch-brambling](<https://web.archive.org/web/20230831104749/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-chaffinch-brambling>)
 - Verified at: 2026-10-26T19:43:15.628616+00:00
 
 ## bto-bird-id-video-collared-dove-turtle-dove.html
@@ -1316,6 +1332,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/collared-dove-turtle-dove](<https://www.bto.org/learn/skills/bird-identification/videos/collared-dove-turtle-dove>)
+- Wayback link: [https://web.archive.org/web/20250420223434/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-collared-dove-turtle-dove](<https://web.archive.org/web/20250420223434/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-collared-dove-turtle-dove>)
 - Verified at: 2026-10-26T19:43:22.690935+00:00
 
 ## bto-bird-id-video-common-and-jack-snipe.html
@@ -1331,6 +1348,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
+- Wayback link: [https://web.archive.org/web/20210115233330/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1](<https://web.archive.org/web/20210115233330/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
 - Verified at: 2026-10-26T19:43:31.548956+00:00
 
 ## bto-bird-id-video-common-shanks.html
@@ -1346,6 +1364,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-shanks](<https://www.bto.org/learn/skills/bird-identification/videos/common-shanks>)
+- Wayback link: [https://web.archive.org/web/20230630124558/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-shanks](<https://web.archive.org/web/20230630124558/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-shanks>)
 - Verified at: 2026-10-26T19:43:36.736060+00:00
 
 ## bto-bird-id-video-common-sparrows-reed-bunting.html
@@ -1361,6 +1380,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-sparrows-reed-bunting](<https://www.bto.org/learn/skills/bird-identification/videos/common-sparrows-reed-bunting>)
+- Wayback link: [https://web.archive.org/web/20250408185625/https://www.bto.org/develop-your-skills/bird-identification/videos/bird-id-common-sparrows-reed-bunting](<https://web.archive.org/web/20250408185625/https://www.bto.org/develop-your-skills/bird-identification/videos/bird-id-common-sparrows-reed-bunting>)
 - Verified at: 2026-10-26T19:43:50.470022+00:00
 
 ## bto-bird-id-video-cormorant-and-shag.html
@@ -1376,6 +1396,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cormorant-and-shag](<https://www.bto.org/learn/skills/bird-identification/videos/cormorant-and-shag>)
+- Wayback link: [https://web.archive.org/web/20250512082851/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cormorant-and-shag](<https://web.archive.org/web/20250512082851/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cormorant-and-shag>)
 - Verified at: 2026-10-26T19:43:52.798202+00:00
 
 ## bto-bird-id-video-cuckoo.html
@@ -1391,6 +1412,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cuckoo](<https://www.bto.org/learn/skills/bird-identification/videos/cuckoo>)
+- Wayback link: [https://web.archive.org/web/20250117120027/https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo](<https://web.archive.org/web/20250117120027/https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo>)
 - Verified at: 2026-10-26T19:43:57.883387+00:00
 
 ## bto-bird-id-video-curlew-and-whimbrel.html
@@ -1406,6 +1428,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/curlew-and-whimbrel](<https://www.bto.org/learn/skills/bird-identification/videos/curlew-and-whimbrel>)
+- Wayback link: [https://web.archive.org/web/20250516230554/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-curlew-and-whimbrel](<https://web.archive.org/web/20250516230554/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-curlew-and-whimbrel>)
 - Verified at: 2026-10-26T19:43:59.727344+00:00
 
 ## bto-bird-id-video-diving-ducks.html
@@ -1421,6 +1444,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
+- Wayback link: [https://web.archive.org/web/20210115232252/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1](<https://web.archive.org/web/20210115232252/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
 - Verified at: 2026-10-26T19:44:04.917435+00:00
 
 ## bto-bird-id-video-godwits.html
@@ -1436,6 +1460,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/black-tailed-and-bar-tailed-godwit](<https://www.bto.org/learn/skills/bird-identification/videos/black-tailed-and-bar-tailed-godwit>)
+- Wayback link: [https://web.archive.org/web/20241105025131/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-black-tailed-and-bar-tailed-godwit](<https://web.archive.org/web/20241105025131/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-black-tailed-and-bar-tailed-godwit>)
 - Verified at: 2026-10-26T19:44:06.557362+00:00
 
 ## bto-bird-id-video-goldcrest-firecrest.html
@@ -1572,9 +1597,11 @@
 - Available as: Online
 - Keywords: film, seabirds
 - Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls](<https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/eye-iceland-and-glaucous-gulls](<https://www.bto.org/learn/skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
 - Wayback link: [https://web.archive.org/web/20250424170823/https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls](<https://web.archive.org/web/20250424170823/https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
+- Verified at: 2026-10-26T19:59:53.955650+00:00
 
 ## bto-bird-id-video-identifying-linnet-and-twite.html
 
@@ -1758,9 +1785,11 @@
 - Available as: Online
 - Keywords: film
 - Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers>)
-- Web link status: connect_error
-- Web link state: broken
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/ringed-plovers](<https://www.bto.org/learn/skills/bird-identification/videos/ringed-plovers>)
 - Wayback link: [https://web.archive.org/web/20250323083529/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers](<https://web.archive.org/web/20250323083529/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers>)
+- Verified at: 2026-10-26T19:59:57.829928+00:00
 
 ## bto-bird-id-video-scoters.html
 
@@ -3043,6 +3072,7 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20240912093143/https://www.field-studies-council.org/shop/publications/echinoderms/](<https://web.archive.org/web/20240912093143/https://www.field-studies-council.org/shop/publications/echinoderms/>)
 - Alternative link: [https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616](<https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616>)
 - Alternative probability: 0.85
 - Alternative reasoning: This is a direct product page for the specific publication mentioned, which is a common source for purchasing such identification guides.
@@ -3360,6 +3390,7 @@
 - Web link: [https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/](<https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251206023240/https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/](<https://web.archive.org/web/20251206023240/https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/>)
 - Verified at: 2026-10-26T19:45:18.049801+00:00
 
 ## field-key-bee-flies-netherlands.html
@@ -3670,6 +3701,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html](<https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html>)
+- Alternative link: [https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html](<https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct, active URL for the interactive Geoglossum identification key created by Malcolm Greaves, as referenced by multiple reliable sources.
+- Verified at: 2026-10-26T20:00:03.510153+00:00
 
 ## geotrupidae-key-british-species.html
 
@@ -4480,9 +4515,10 @@
 - Available as: Online
 - Keywords: frogs toads newts lizards snakes
 - Web link: [http://www.herpetofauna.co.uk/identification.asp](<http://www.herpetofauna.co.uk/identification.asp>)
-- Web link status: 503
+- Web link status: 403
 - Web link state: unverified
 - Wayback link: [https://web.archive.org/web/20260901234524/http://www.herpetofauna.co.uk/identification.asp](<https://web.archive.org/web/20260901234524/http://www.herpetofauna.co.uk/identification.asp>)
+- Verified at: 2026-10-26T20:00:10.469563+00:00
 
 ## guide-shropshire-orthoptera-and-dermaptera.html
 
@@ -4789,8 +4825,13 @@
 - Available as: Online
 - Keywords: season, seasonal, autumn
 - Web link: [http://www.discoverwildlife.com/index.php%3Fp%3D3355](<http://www.discoverwildlife.com/index.php%3Fp%3D3355>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D3355](<https://www.discoverwildlife.com/index.php%3Fp%3D3355>)
+- Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL for the article titled 'How to identify autumn seeds' on the Discover Wildlife website, which matches the authors and content description provided.
+- Verified at: 2026-10-26T20:00:14.305630+00:00
 
 ## how-identify-hoverflies.html
 
@@ -5161,6 +5202,7 @@
 - Web link: [https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/](<https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250716141859/https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/](<https://web.archive.org/web/20250716141859/https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/>)
 - Verified at: 2026-10-26T19:46:30.606374+00:00
 
 ## illustrated-key-cuckoo-wasps-hymenoptera-chrysididae-nordic-and-baltic-countries.html
@@ -5423,6 +5465,7 @@
 - Web link: [https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/](<https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250823055500/https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/](<https://web.archive.org/web/20250823055500/https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/>)
 - Verified at: 2026-10-26T19:46:38.257991+00:00
 
 ## key-adults-british-lacewings-and-their-allies-neuroptera-megaloptera-raphidiptera-and.html
@@ -5466,9 +5509,10 @@
 - Keywords: Hymenoptera
 - Web link: [https://bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf](<https://bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf>)
 - Additional web link: [https://bwars.com/](<https://bwars.com/>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210928023606/https://www.bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf](<https://web.archive.org/web/20210928023606/https://www.bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf>)
+- Verified at: 2026-10-26T20:00:19.395403+00:00
 
 ## key-british-species-aderidae.html
 
@@ -5589,6 +5633,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf](<https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the current primary hosting site for Mike Hackston's collection of insect identification keys, which includes his work on British Coleoptera.
+- Verified at: 2026-10-26T20:00:18.516724+00:00
 
 ## key-british-species-phalacridae.html
 
@@ -6222,6 +6270,7 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044035573540](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044035573540>)
+- Wayback link: [https://web.archive.org/web/20130911053025/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae](<https://web.archive.org/web/20130911053025/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae>)
 - Verified at: 2026-10-26T19:47:38.355425+00:00
 
 ## key-identification-british-gyrinidae.html
@@ -6871,9 +6920,14 @@
 - Available as: Online
 - Keywords: Darkling beetle Tenebrionidae
 - Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044821793174](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044821793174>)
 - Wayback link: [https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae](<https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
+- Alternative link: [https://quelestcetanimal-lagalerie.com/wp-content/uploads/2015/05/Anatomie-dun-Tenebrionidae.jpg](<https://quelestcetanimal-lagalerie.com/wp-content/uploads/2015/05/Anatomie-dun-Tenebrionidae.jpg>)
+- Alternative probability: 0.70
+- Alternative reasoning: While this is a direct link to an image, the source page (quelestcetanimal-lagalerie.com) explicitly hosts and links to the PDF of Mike Hackston's Tenebrionidae identification key.
+- Verified at: 2026-10-26T20:00:33.876459+00:00
 
 ## key-identification-british-tetratomidae.html
 
@@ -7305,6 +7359,7 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044127073172](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044127073172>)
+- Wayback link: [https://web.archive.org/web/20201103040247/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae](<https://web.archive.org/web/20201103040247/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the updated URL structure for Mike Hackston's insect keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' domain.
@@ -7803,9 +7858,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=bYwNalYALUY](<https://www.youtube.com/watch?v=bYwNalYALUY>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 200
+- Web link state: ok
 - Wayback link: [https://web.archive.org/web/20251207195928/https://www.youtube.com/watch?v=bYwNalYALUY](<https://web.archive.org/web/20251207195928/https://www.youtube.com/watch?v=bYwNalYALUY>)
+- Verified at: 2026-10-26T20:00:34.537239+00:00
 
 ## may-wildflowers-spotter’s-sheet.html
 
@@ -7900,9 +7956,10 @@
 - Available as: App
 - Web link: [https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps](<https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps>)
 - Additional web link: [https://apps.apple.com/us/app/moormoss/id965179918](<https://apps.apple.com/us/app/moormoss/id965179918>)
-- Web link status: timeout
+- Web link status: 403
 - Web link state: unverified
 - Wayback link: [https://web.archive.org/web/20250812221727/https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps](<https://web.archive.org/web/20250812221727/https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps>)
+- Verified at: 2026-10-26T20:00:34.990049+00:00
 
 ## moorplants-pdf.html
 
@@ -7982,8 +8039,10 @@
 - Available as: Online
 - Comment Body: The link for this site is not working (at November 2017) and I can't find a replacement link anywhere.
 - Web link: [https://www.000webhost.com/migrate?static=true](<https://www.000webhost.com/migrate?static=true>)
-- Web link status: timeout
+- Web link status: 403
 - Web link state: unverified
+- Web link resolved: [https://www.hostinger.com/special/000webhost](<https://www.hostinger.com/special/000webhost>)
+- Verified at: 2026-10-26T20:00:36.491991+00:00
 
 ## myxomycetes-britain-and-ireland-identification-handbook.html
 
@@ -8549,9 +8608,10 @@
   - Online
   - App
 - Web link: [https://www.planttracker.org.uk/](<https://www.planttracker.org.uk/>)
-- Web link status: connect_error
-- Web link state: broken
+- Web link status: 403
+- Web link state: unverified
 - Wayback link: [https://web.archive.org/web/20260424003223/https://www.planttracker.org.uk/](<https://web.archive.org/web/20260424003223/https://www.planttracker.org.uk/>)
+- Verified at: 2026-10-26T20:00:40.088480+00:00
 
 ## playing-field-plants.html
 
@@ -8632,6 +8692,7 @@
 - Web link: [https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be](<https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260617053830/https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be](<https://web.archive.org/web/20260617053830/https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be>)
 - Verified at: 2026-10-26T19:49:50.897499+00:00
 
 ## provisional-atlas-bees-wasps-and-ants-shropshire.html
@@ -8824,6 +8885,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210917181923/https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf](<https://web.archive.org/web/20210917181923/https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf>)
 
 ## res-handbook-vol-1-part-11-thysanoptera.html
 
@@ -8839,6 +8901,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210716075334/https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf](<https://web.archive.org/web/20210716075334/https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf>)
+- Verified at: 2026-10-26T20:00:43.738556+00:00
 
 ## res-handbook-vol-1-part-14a-trichoptera-hydroptilidae.html
 
@@ -8854,6 +8918,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210713004646/https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf](<https://web.archive.org/web/20210713004646/https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf>)
+- Verified at: 2026-10-26T20:00:44.566645+00:00
 
 ## res-handbook-vol-1-part-16-siphonaptera.html
 
@@ -8869,6 +8935,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
 
 ## res-handbook-vol-1-part-2-thysanura-and-diplura.html
 
@@ -8884,6 +8951,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210513135750/https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf](<https://web.archive.org/web/20210513135750/https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png>)
 - Alternative probability: 0.70
 - Alternative reasoning: This URL is associated with the Royal Entomological Society's official page for the handbook, which provides access to the publication details and download options.
@@ -8903,6 +8971,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.90
 - Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on this dedicated publications page for direct download.
@@ -8922,6 +8991,11 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210309030505/https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf](<https://web.archive.org/web/20210309030505/https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including Plecoptera, as free downloadable PDFs on this page.
+- Verified at: 2026-10-26T20:00:48.121348+00:00
 
 ## res-handbook-vol-1-part-7-psocoptera.html
 
@@ -8937,6 +9011,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211123140745/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf](<https://web.archive.org/web/20211123140745/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf>)
+- Verified at: 2026-10-26T20:00:55.270891+00:00
 
 ## res-handbook-vol-1-part-9-ephemeroptera.html
 
@@ -8952,6 +9028,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712164601/https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf](<https://web.archive.org/web/20210712164601/https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf>)
 
 ## res-handbook-vol-1-parts-12-13-mecoptera-megaloptera-neuroptera.html
 
@@ -8967,6 +9044,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712090819/https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf](<https://web.archive.org/web/20210712090819/https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.90
 - Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on its official publications page.
@@ -8986,6 +9064,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211114215100/https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf](<https://web.archive.org/web/20211114215100/https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf>)
+- Verified at: 2026-10-26T20:01:00.380920+00:00
 
 ## res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae.html
 
@@ -9001,6 +9081,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211106131835/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf](<https://web.archive.org/web/20211106131835/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.90
 - Alternative reasoning: The Royal Entomological Society hosts the official collection of out-of-print handbooks, including this specific volume, which are available for download as PDFs.
@@ -9020,6 +9101,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711204000/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf](<https://web.archive.org/web/20210711204000/https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.70
 - Alternative reasoning: This is the official Royal Entomological Society archive page where the out-of-print handbooks, including this volume, are hosted for free download.
@@ -9039,6 +9121,11 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211204155441/https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf](<https://web.archive.org/web/20211204155441/https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct, functional PDF link for the R. L. Coe Pipunculidae handbook hosted on the Royal Entomological Society's official website.
+- Verified at: 2026-10-26T20:00:59.523526+00:00
 
 ## res-handbook-vol-10-part-3a-diptera-conopidae.html
 
@@ -9054,6 +9141,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210812103327/https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf](<https://web.archive.org/web/20210812103327/https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf>)
+- Verified at: 2026-10-26T20:01:08.656134+00:00
 
 ## res-handbook-vol-10-part-4a-i-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and.html
 
@@ -9069,6 +9158,8 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211114023509/https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf](<https://web.archive.org/web/20211114023509/https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf>)
+- Verified at: 2026-10-26T20:01:11.729346+00:00
 
 ## res-handbook-vol-10-part-4a-ii-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and.html
 
@@ -9082,8 +9173,10 @@
   - PDF
 - Keywords: res handbooks out of print blow flies
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211114023823/https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf](<https://web.archive.org/web/20211114023823/https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf>)
+- Verified at: 2026-10-26T20:01:16.448354+00:00
 
 ## res-handbook-vol-10-part-4b-diptera-cyclorrhapha-calyptrata-section-b-muscidae.html
 
@@ -9099,6 +9192,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf](<https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.90
 - Alternative reasoning: The Royal Entomological Society (RES) hosts its out-of-print handbooks, including the Muscidae volume, for free download on this dedicated page.
@@ -9116,8 +9210,13 @@
   - PDF
 - Keywords: res handbooks out of print picture winged flies picture-winged flies fruit flies
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211029064418/https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf](<https://web.archive.org/web/20211029064418/https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official Royal Entomological Society page that hosts the PDF download for the specified handbook.
+- Verified at: 2026-10-26T20:01:21.018858+00:00
 
 ## res-handbook-vol-10-part-7-diptera-hippoboscidae-and-nycteribiidae-keds-flat-flies-and.html
 
@@ -9133,6 +9232,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211010023212/https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf](<https://web.archive.org/web/20211010023212/https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf>)
 - Verified at: 2026-10-26T19:51:06.691603+00:00
 
 ## res-handbook-vol-2-part-2a-hemiptera-cicadomorpha-excluding-deltocephalinae-and.html
@@ -9149,6 +9249,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211021073903/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf](<https://web.archive.org/web/20211021073903/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
 - Alternative probability: 0.80
 - Alternative reasoning: The Royal Entomological Society hosts a dedicated page for out-of-print handbooks where many of these titles are provided as free downloadable PDFs.
@@ -9168,6 +9269,7 @@
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211021074314/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf](<https://web.archive.org/web/20211021074314/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf>)
 - Verified at: 2026-10-26T19:51:22.916421+00:00
 
 ## res-handbook-vol-2-part-2c-cicadellidae-typhlocybinae-checklist-british-auchenorhyncha.html
@@ -9182,9 +9284,10 @@
   - PDF
 - Keywords: res handbooks out of print leafhoppers
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712213938/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf](<https://web.archive.org/web/20210712213938/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf>)
+- Verified at: 2026-10-26T20:01:16.175669+00:00
 
 ## res-handbook-vol-2-part-3-hemiptera-fulgoromorpha.html
 
@@ -9488,9 +9591,13 @@
   - PDF
 - Keywords: res handbooks out of print
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 404
+- Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.80
+- Alternative reasoning: The Royal Entomological Society (RES) hosts the official digital archives of their out-of-print handbooks, including this specific volume, which can be accessed via their publications portal.
+- Verified at: 2026-10-26T20:01:19.951351+00:00
 
 ## res-handbook-vol-5-part-5a-coleoptera-rhizophagidae.html
 
@@ -10469,8 +10576,10 @@
   - PDF
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 - Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf>)
-- Web link status: connect_error
-- Web link state: broken
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf](<https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf>)
+- Verified at: 2026-10-26T20:01:18.622402+00:00
 
 ## shropshire-weevils-associated-rosaceous-trees-and-shrubs.html
 
@@ -10484,8 +10593,10 @@
   - PDF
 - Keywords: weevil coleptera beetles weevils Curculionoidea
 - Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf](<https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf>)
+- Verified at: 2026-10-26T20:01:22.620003+00:00
 
 ## shropshire-weevils-associated-sycamore-beech-alder-birch-and-hazel.html
 
@@ -10614,6 +10725,7 @@
 - Web link status: 200
 - Web link state: ok
 - Web link resolved: [https://www.field-studies-council.org/shop/publications/soil-types-aidgap-ebook/](<https://www.field-studies-council.org/shop/publications/soil-types-aidgap-ebook/>)
+- Wayback link: [https://web.archive.org/web/20230328023707/https://www.field-studies-council.org/shop/publications/soil-types-aidgap/](<https://web.archive.org/web/20230328023707/https://www.field-studies-council.org/shop/publications/soil-types-aidgap/>)
 - Verified at: 2026-10-26T19:53:23.306556+00:00
 
 ## solitary-bees-identification-and-nesting-ecology.html
@@ -10891,8 +11003,10 @@
 - Available as: PDF
 - Keywords: winter spring season Galanthus snowdrops
 - Web link: [https://bsbi.org/download/1613](<https://bsbi.org/download/1613>)
-- Web link status: timeout
-- Web link state: unverified
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://bsbi.org/learn/resources/identification-guides/snowdrop-identification](<https://bsbi.org/learn/resources/identification-guides/snowdrop-identification>)
+- Verified at: 2026-10-26T20:01:11.310511+00:00
 
 ## staphylinidae-rove-beetles-britain-and-ireland-part-5.html
 
@@ -11332,6 +11446,7 @@
 - Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-3/](<https://www.field-studies-council.org/shop/publications/true-weevils-3/>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231004025653/https://www.field-studies-council.org/shop/publications/true-weevils-3/](<https://web.archive.org/web/20231004025653/https://www.field-studies-council.org/shop/publications/true-weevils-3/>)
 - Verified at: 2026-10-26T19:53:53.031202+00:00
 
 ## tufted-forget-me-not-id-video.html
@@ -11403,6 +11518,7 @@
 - Web link: [https://www.facebook.com/groups/1460150090961032/](<https://www.facebook.com/groups/1460150090961032/>)
 - Web link status: 400
 - Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221104110354/https://www.facebook.com/groups/1460150090961032](<https://web.archive.org/web/20221104110354/https://www.facebook.com/groups/1460150090961032>)
 - Verified at: 2026-10-26T19:53:47.806788+00:00
 
 ## uk-harvetmen-flickr-album.html
@@ -11818,6 +11934,7 @@
 - Web link: [https://www.plantlife.org.uk/download_file/force/1239/311/](<https://www.plantlife.org.uk/download_file/force/1239/311/>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180421052308/http://www.plantlife.org.uk:80/download_file/force/1239/311](<https://web.archive.org/web/20180421052308/http://www.plantlife.org.uk:80/download_file/force/1239/311>)
 - Verified at: 2026-10-26T19:54:08.068244+00:00
 
 ## wildflowers-look-september.html
