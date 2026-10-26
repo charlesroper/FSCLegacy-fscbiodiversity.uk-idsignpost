@@ -1,19 +1,41 @@
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
 [project]
-name = "idsignpost-extractor"
+name = "idsignpost"
 version = "0.1.0"
-description = "Extract idsignpost HTML entries into markdown."
-requires-python = ">=3.10"
+description = "Build and verify a catalog of biodiversity identification resources."
+readme = "README.md"
+requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.12.3",
-    "ddgs>=9.16.0",
+    "google-genai>=1.0.0",
     "httpx>=0.28.0",
     "markdownify>=0.12.1",
+    "pydantic>=2.9.0",
     "pyarrow>=14.0.0",
 ]
 
+[project.scripts]
+idsignpost = "idsignpost.cli:main"
+
 [dependency-groups]
 dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "respx>=0.22.0",
     "ruff>=0.14.13",
     "ty>=0.0.12",
 ]
 
+[tool.pytest.ini_options]
+addopts = "-m 'not live'"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "live: tests that call live network endpoints",
+]
+
+[tool.ruff]
+target-version = "py312"
