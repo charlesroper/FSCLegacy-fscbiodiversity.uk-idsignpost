@@ -16,7 +16,6 @@ Instructions and standards for agents working on this repository.
   uv sync --link-mode copy
   ```
   If a cached wheel extracts incompletely, reinstall with `uv sync --reinstall --no-cache --link-mode copy`. Keep `TMPDIR` set for `uv run` commands. Do not commit the external environment path.
-- **Code and text search:** Use `rg` (ripgrep) exclusively for searching files and prose across the repository. Do not invoke raw grep.
 
 ## Prose and documentation style
 
