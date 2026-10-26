@@ -68,6 +68,12 @@ def test_sanitize_keeps_meaningful_query_order() -> None:
     )
 
 
+def test_sanitize_preserves_existing_query_encoding() -> None:
+    url = "https://example.org/a?dm_i=IG4%2C3L55N&q=a+b"
+
+    assert sanitize_url(url) == url
+
+
 def test_fragment_is_kept_in_stored_url_but_dropped_from_cache_key() -> None:
     url = "https://example.org/guide.pdf?utm_source=x#page-4"
 

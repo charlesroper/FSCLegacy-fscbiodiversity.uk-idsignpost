@@ -49,3 +49,24 @@ When a link is confirmed broken (or when Gemini rejects a suspicious redirect to
 
 ### Stratified sampling and offline test suite
 To test representative slices of the catalogue rapidly, `sampler.py` draws deterministic stratified samples across link states (`ok`, `broken`, `blocked`, `missing`) and media formats (`--sample N --seed 42`). Every module is backed by an offline `pytest` + `respx` suite in `tests/`, with optional `@pytest.mark.live` smoke tests for live API verification.
+
+---
+
+## 4. First pipeline stage: direct extraction
+
+The first real stage is `src/idsignpost/extract.py`, which reads `idsignpost/*.html` straight into `CatalogEntry` models. The old chain went HTML to Markdown to JSON, so every field passed through a text format that could lose structure. Direct extraction removes that round trip and keeps the HTML as the only source.
+
+The parser handles the quirks that the legacy pages accumulated:
+
+- **Fields are read inside `div#main` only.** Every page also contains a sidebar with search filters, including a second "Free" field. Reading the whole document would let sidebar values override the page being described.
+- **Entities are decoded twice.** The pages were saved with double escapes such as `&amp;#13;`, so a single decode leaves literal `&#13;` in the text. Non-breaking spaces become normal spaces and repeated spaces collapse.
+- **Hrefs need their own decode.** Entity decoding covers text nodes, but an `&amp;amp;` in an `href` survives as `&amp;` after the parser. Without a second decode, tracking parameters hide behind a broken parameter name and are never stripped. Applying `html.unescape` before sanitization resolved fifteen of the sixteen URL mismatches against the legacy catalogue.
+- **Split Flickr URLs are repaired.** Some anchors end early, leaving `@N07/123` as loose text after the link. The trailing text is folded back into the anchor before the href is read.
+- **Descriptions become Markdown with angle-bracketed targets.** Links keep their sanitized absolute URL, so relative legacy paths resolve against the archived site and tracking parameters disappear.
+- **Verification survives re-extraction.** Fields from `web_link_status` to `verified_at` are copied forward when the id and `web_link` are unchanged, and cleared when the link itself changes. A rebuild must not discard a month of link checks.
+
+The full corpus and the legacy `idsignpost.json` provide a useful audit. All 736 entries match on title, submitted name and timestamp, author, free flag, availability, and keywords. The 127 description differences are the intended consolidation of multi-item descriptions from lists into single strings. One other difference is intentional: `000webhost.com/migrate?utm_source=...` now loses its tracking parameters as the specification requires.
+
+Sanitization also had to stay stable. The legacy page for the BTO video guides carries `%2C` inside a query string, and re-encoding every query value rewrote it as a comma, which would have invalidated the stored verification for those entries. `sanitize_url` now keeps the original query bytes when no tracking parameter is present and only rebuilds the query when something must be removed.
+
+`uv run idsignpost extract --limit 5` prints a sample to stdout, which keeps the canonical file safe during exploration. A full run writes 736 entries to `idsignpost.json`.

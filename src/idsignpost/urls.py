@@ -44,6 +44,10 @@ def _is_tracking_param(name: str) -> bool:
 
 def _encode_query(query: str) -> str:
     pairs = parse_qsl(query, keep_blank_values=True)
+    if not any(_is_tracking_param(name) for name, _ in pairs):
+        # Keep the legacy page's own encoding (for example %2C or +) so stored
+        # URLs stay stable across extractions.
+        return quote(query, safe=_QUERY_SAFE + "%")
     kept = [(name, value) for name, value in pairs if not _is_tracking_param(name)]
     return "&".join(
         f"{quote(name, safe='')}={quote(value, safe=_QUERY_SAFE)}"
