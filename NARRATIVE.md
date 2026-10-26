@@ -177,3 +177,15 @@ Wayback lookups run per URL after the entry verdicts settle, because the save de
 `verify` writes the full catalog, not just the sample. `merge_verified` applies updated entries by id and refuses duplicates or unknown ids. If an entry's `web_link` changed while verification was running, its stale verification fields are cleared instead of copied onto the new link.
 
 The CLI wires the same path for `verify` and `run`, validates the mutually exclusive selectors before any work, and fails fast when `GEMINI_API_KEY` is missing. `run` extracts the whole catalog, verifies only the selected slice, and exports only after verification returns without aborting.
+
+---
+
+## 12. The first full run
+
+The rebuilt pipeline ran over the whole corpus in twelve minutes: 736 entries extracted, 658 URLs checked, and all four outputs rendered from the same records.
+
+The result was 379 live links, 285 broken, 50 blocked, and 22 entries with no web link at all. Gemini reviewed every suspicious redirect and called 86 of them mismatches, usually because a shop page collapsed to a section index or a Google Sites link landed on a sign-in screen. Discovery produced 84 verified alternatives, and Wayback returned snapshots for 593 entries. No new captures were requested because `--save-archive` was off, which is the intended default.
+
+Two details matter when reading the numbers. The check count is lower than the number of links because 56 entries share a URL with another entry and the URL tier is checked once. And 41 checks ended in a transient error: those entries keep whatever state they had, are not cached, and will be retried on the next run. Fresh entries in that group still record the blocked or broken state so the export remains honest.
+
+The full run also exposed the last migration bug. `run` extracted the corpus and then tried to merge the old JSON catalog, which failed on its unknown keys before verification started. Extract had already learned to warn and continue; now both commands share that path. The four output files in this commit are the first ones produced entirely by the new package.

@@ -6,8 +6,12 @@
 - Author(s): Barnard & Ross
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/trichoptera-adults/](<https://www.field-studies-council.org/shop/publications/trichoptera-adults/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/trichoptera-adults/](<https://www.field-studies-council.org/shop/publications/trichoptera-adults/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230928004119/https://www.field-studies-council.org/shop/publications/trichoptera-adults/](<https://web.archive.org/web/20230928004119/https://www.field-studies-council.org/shop/publications/trichoptera-adults/>)
+- Verified at: 2026-10-26T19:42:31.264745+00:00
 
 ## agromyzidae-great-britain-and-ireland.html
 
@@ -15,11 +19,14 @@
 - Submitted: Anonymous (not verified); 2016-12-19T17:49:00
 - Description:
   The dipterous family of Agromyzidae are commonly referred to leaf-miner flies, due to their larval feeding habits. The larvae feed within the leaves of plants, often making distinctive feeding patterns, which, combined with how the larvae deposits its frass (excrement), is often unique to a particular species.
-
   This website aims to support the identification and recording of leaf-miner flies by providing information about Agromyzidae species, their host plants and life cycles. It was launched in December 2016 and is a work in progress.
 - Author(s): Agromyzidae Recording Scheme
 - Free: Yes
 - Web link: [https://agromyzidae.co.uk/](<https://agromyzidae.co.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260831184257/https://agromyzidae.co.uk/](<https://web.archive.org/web/20260831184257/https://agromyzidae.co.uk/>)
+- Verified at: 2026-10-26T19:42:25.479999+00:00
 
 ## algaevision.html
 
@@ -34,9 +41,14 @@
 - Available as: Online
 - Web link: [http://algaevision.myspecies.info/](<http://algaevision.myspecies.info/>)
 - Additional web link:
-  - [British Phycological Society](<https://brphycsoc.org/>)
-  - [BPS online recording site](<https://www.bpsalgalrecords.com/>)
-  - [Natural History Museum](<https://www.nhm.ac.uk/our-science/data/algaevision.html>)
+  - [https://brphycsoc.org/](<https://brphycsoc.org/>)
+  - [https://www.bpsalgalrecords.com/](<https://www.bpsalgalrecords.com/>)
+  - [https://www.nhm.ac.uk/our-science/data/algaevision.html](<https://www.nhm.ac.uk/our-science/data/algaevision.html>)
+- Web link status: 403
+- Web link state: unverified
+- Web link resolved: [https://algaevision.myspecies.info/](<https://algaevision.myspecies.info/>)
+- Wayback link: [https://web.archive.org/web/20260122215201/https://algaevision.myspecies.info/](<https://web.archive.org/web/20260122215201/https://algaevision.myspecies.info/>)
+- Verified at: 2026-10-26T19:42:24.863888+00:00
 
 ## amendment-crab-key.html
 
@@ -48,8 +60,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/stay-with-us/](<https://www.field-studies-council.org/stay-with-us/>)
 - Keywords: FSC Field Studies 7 (1990), 483-484 crabs
+- Web link: [https://www.field-studies-council.org/stay-with-us/](<https://www.field-studies-council.org/stay-with-us/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251007033703/https://www.field-studies-council.org/stay-with-us/](<https://web.archive.org/web/20251007033703/https://www.field-studies-council.org/stay-with-us/>)
+- Verified at: 2026-10-26T19:42:23.451717+00:00
 
 ## ants.html
 
@@ -62,8 +78,12 @@
 - Author(s): Skinner, Gary J
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book](<https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book>)
 - Keywords: aculeates aculeate hymenoptera
+- Web link: [https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book](<https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260214230249/https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book](<https://web.archive.org/web/20260214230249/https://www.nhbs.com/ants-naturalists-handbooks-pelagic-publishing-book>)
+- Verified at: 2026-10-26T19:42:24.153555+00:00
 
 ## aphids-aphidinae-macrosiphini.html
 
@@ -73,8 +93,15 @@
 - Author(s): Blackman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/aphids-aphidinae...](<https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/](<https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230926221415/https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/](<https://web.archive.org/web/20230926221415/https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/](<https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/>)
+- Alternative probability: 0.85
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, providing detailed information and purchasing options.
+- Verified at: 2026-10-26T19:42:49.815206+00:00
 
 ## apples-field-guide.html
 
@@ -86,21 +113,12 @@
 - Author(s): Michael Clark
 - Free: No
 - Available as: Publication
-- Web link: [http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf](<http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf>)
 - Keywords: orchard; tree; fruit; culinary
-
-## april-wildflowers-spotter’s-sheet-2.html
-
-- Title: April Wildflowers Spotter’s Sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:22:00
-- Description: Photo guide to the most commonly seen wildflowers in April.
-- Author(s): Plantlife
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1242/311/](<https://www.plantlife.org.uk/download_file/force/1242/311/>)
-- Keywords: season, seasonal, spring
+- Web link: [http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf](<http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240610230347/http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf](<https://web.archive.org/web/20240610230347/http://www.tewinorchard.co.uk/Apple_Field_Guide_Leaflet.pdf>)
+- Verified at: 2026-10-26T19:42:22.797194+00:00
 
 ## april-wildflowers-spotter’s-sheet.html
 
@@ -112,8 +130,29 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1242/311/](<https://www.plantlife.org.uk/download_file/force/1242/311/>)
 - Keywords: season, seasonal, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1242/311/](<https://www.plantlife.org.uk/download_file/force/1242/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220413154028/https://www.plantlife.org.uk/download_file/force/1242/311](<https://web.archive.org/web/20220413154028/https://www.plantlife.org.uk/download_file/force/1242/311>)
+- Verified at: 2026-10-26T19:42:26.030344+00:00
+
+## april-wildflowers-spotter’s-sheet-2.html
+
+- Title: April Wildflowers Spotter’s Sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:22:00
+- Description: Photo guide to the most commonly seen wildflowers in April.
+- Author(s): Plantlife
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: season, seasonal, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1242/311/](<https://www.plantlife.org.uk/download_file/force/1242/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220413154028/https://www.plantlife.org.uk/download_file/force/1242/311](<https://web.archive.org/web/20220413154028/https://www.plantlife.org.uk/download_file/force/1242/311>)
+- Verified at: 2026-10-26T19:42:26.029115+00:00
 
 ## araneae-spiders-europe.html
 
@@ -124,6 +163,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://araneae.nmbe.ch/](<https://araneae.nmbe.ch/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261015144829/https://www.araneae.nmbe.ch/](<https://web.archive.org/web/20261015144829/https://www.araneae.nmbe.ch/>)
+- Verified at: 2026-10-26T19:42:25.297827+00:00
 
 ## arc-amphibian-identification-guide-pdf.html
 
@@ -135,7 +178,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9...](<https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9-a1a0-062fb4842ace>)
+- Web link: [https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9-a1a0-062fb4842ace](<https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9-a1a0-062fb4842ace>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260417222454/https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9-a1a0-062fb4842ace](<https://web.archive.org/web/20260417222454/https://www.arc-trust.org/Handlers/Download.ashx?IDMF=57678a6e-71d1-41c9-a1a0-062fb4842ace>)
+- Verified at: 2026-10-26T19:42:24.117521+00:00
 
 ## arc-reptile-identification-guide-pdf.html
 
@@ -147,7 +194,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.narrs.org.uk/documents/ARC reptile ID Guide.pdf](<http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf>)
+- Web link: [http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf](<http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf>)
+- Web link status: 504
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20220120231539/http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf](<https://web.archive.org/web/20220120231539/http://www.narrs.org.uk/documents/ARC%20reptile%20ID%20Guide.pdf>)
 
 ## athecate-hydroids-and-their-medusae.html
 
@@ -157,8 +207,15 @@
 - Author(s): Schuchert
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/athecate-hydroid...](<https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/](<https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20250910105220/https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/](<https://web.archive.org/web/20250910105220/https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/>)
+- Alternative link: [https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535](<https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535>)
+- Alternative probability: 0.80
+- Alternative reasoning: This page is a dedicated product page for the specific publication, providing bibliographic details and status, which is the most direct alternative to the broken Field Studies Council link.
+- Verified at: 2026-10-26T19:42:33.537523+00:00
 
 ## atlas-dragonflies-britain-and-ireland.html
 
@@ -168,8 +225,12 @@
 - Author(s): Cham, Nelson, Prentice, Smallshire & Taylor
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/dragonflies-atlas/](<https://www.field-studies-council.org/shop/publications/dragonflies-atlas/>)
 - Keywords: FSC Field Studies Council odonata odonates
+- Web link: [https://www.field-studies-council.org/shop/publications/dragonflies-atlas/](<https://www.field-studies-council.org/shop/publications/dragonflies-atlas/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916103531/https://www.field-studies-council.org/shop/publications/dragonflies-atlas/](<https://web.archive.org/web/20250916103531/https://www.field-studies-council.org/shop/publications/dragonflies-atlas/>)
+- Verified at: 2026-10-26T19:42:27.933888+00:00
 
 ## atlas-fleas-siphonaptera-britain-and-ireland.html
 
@@ -179,8 +240,12 @@
 - Author(s): Bob George
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/fleas-atlas/](<https://www.field-studies-council.org/shop/publications/fleas-atlas/>)
 - Keywords: BRC Biological Records Centre FSC Field Studies Council CEH
+- Web link: [https://www.field-studies-council.org/shop/publications/fleas-atlas/](<https://www.field-studies-council.org/shop/publications/fleas-atlas/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251009050729/https://www.field-studies-council.org/shop/publications/fleas-atlas/](<https://web.archive.org/web/20251009050729/https://www.field-studies-council.org/shop/publications/fleas-atlas/>)
+- Verified at: 2026-10-26T19:42:28.922821+00:00
 
 ## atlas-predaceous-water-beetles-hydradephaga-britain-and-ireland.html
 
@@ -190,8 +255,12 @@
 - Author(s): Foster, Bilton & Nelson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/predaceous-water...](<https://www.field-studies-council.org/shop/publications/predaceous-water-beetles-atlas/>)
 - Keywords: aquatic freshwater ponds rivers streams
+- Web link: [https://www.field-studies-council.org/shop/publications/predaceous-water-beetles-atlas/](<https://www.field-studies-council.org/shop/publications/predaceous-water-beetles-atlas/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916113330/https://www.field-studies-council.org/shop/publications/predaceous-water-beetles-atlas/](<https://web.archive.org/web/20250916113330/https://www.field-studies-council.org/shop/publications/predaceous-water-beetles-atlas/>)
+- Verified at: 2026-10-26T19:42:25.891199+00:00
 
 ## atlas-waterfleas-britain-ireland.html
 
@@ -211,8 +280,12 @@
   - Online
   - PDF
   - Publication
-- Web link: [http://www.boxvalley.co.uk/nature/cladocera/dmap.asp](<http://www.boxvalley.co.uk/nature/cladocera/dmap.asp>)
 - Keywords: Cladocera Waterflea crustacea plankton daphnia distribution maps atlas
+- Web link: [http://www.boxvalley.co.uk/nature/cladocera/dmap.asp](<http://www.boxvalley.co.uk/nature/cladocera/dmap.asp>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210723231125/http://www.boxvalley.co.uk/nature/cladocera/dmap.asp](<https://web.archive.org/web/20210723231125/http://www.boxvalley.co.uk/nature/cladocera/dmap.asp>)
+- Verified at: 2026-10-26T19:42:29.073338+00:00
 
 ## barnacles.html
 
@@ -222,19 +295,12 @@
 - Author(s): Southwood
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/barnacles/](<https://www.field-studies-council.org/shop/publications/barnacles/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
-
-## bat-droppings-guide-0.html
-
-- Title: Bat Droppings Guide
-- Submitted: k.brown; 2016-07-20T17:47:00
-- Description: A guide to the droppings of British bats, including diagrams illustrating the shape and size differences between species. Also includes details of echolocation calls used to identify British bat species. Available from BCT for a small fee by emailing [[email protected]](../cdn-cgi/l/email-protection.html)
-- Author(s): Bat Conservation Trust
-- Free: No
-- Available as: Publication
-- Web link: [https://www.bats.org.uk/our-work/national-bat-helpline](<https://www.bats.org.uk/our-work/national-bat-helpline>)
-- Keywords: bats chiroptera echolocation rhinolophidae vespertilionidae
+- Web link: [https://www.field-studies-council.org/shop/publications/barnacles/](<https://www.field-studies-council.org/shop/publications/barnacles/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20240912082355/https://www.field-studies-council.org/shop/publications/barnacles/](<https://web.archive.org/web/20240912082355/https://www.field-studies-council.org/shop/publications/barnacles/>)
 
 ## bat-droppings-guide.html
 
@@ -244,8 +310,27 @@
 - Author(s): Acer Ecology
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.acerecology.co.uk/bat-droppings/](<https://www.acerecology.co.uk/bat-droppings/>)
 - Keywords: chiroptera bats rhinolophidae vespertilionidae
+- Web link: [https://www.acerecology.co.uk/bat-droppings/](<https://www.acerecology.co.uk/bat-droppings/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261006212351/https://www.acerecology.co.uk/bat-droppings/](<https://web.archive.org/web/20261006212351/https://www.acerecology.co.uk/bat-droppings/>)
+- Verified at: 2026-10-26T19:42:27.626538+00:00
+
+## bat-droppings-guide-0.html
+
+- Title: Bat Droppings Guide
+- Submitted: k.brown; 2016-07-20T17:47:00
+- Description: A guide to the droppings of British bats, including diagrams illustrating the shape and size differences between species. Also includes details of echolocation calls used to identify British bat species. Available from BCT for a small fee by emailing [[email protected]](https://www.fscbiodiversity.uk/cdn-cgi/l/email-protection.html)
+- Author(s): Bat Conservation Trust
+- Free: No
+- Available as: Publication
+- Keywords: bats chiroptera echolocation rhinolophidae vespertilionidae
+- Web link: [https://www.bats.org.uk/our-work/national-bat-helpline](<https://www.bats.org.uk/our-work/national-bat-helpline>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260822170448/https://www.bats.org.uk/our-work/national-bat-helpline](<https://web.archive.org/web/20260822170448/https://www.bats.org.uk/our-work/national-bat-helpline>)
+- Verified at: 2026-10-26T19:42:28.408628+00:00
 
 ## bats-britain-europe-northwest-africa.html
 
@@ -265,16 +350,20 @@
 - Submitted: Anonymous (not verified); 2018-05-16T13:26:00
 - Description:
   Telling the different bat species apart by sight can be difficult, but this guide outlines key
-
   details to look out for to identify five of our most common species, including echolocation
-
   calls (high-pitched sounds that bats use to navigate and hunt) for those with access to a
-
   bat detector.
 - Author(s): Natural History Museum
 - Free: No
 - Available as: PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf>)
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220407090741/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf](<https://web.archive.org/web/20220407090741/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf>)
+- Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html](<https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html>)
+- Alternative probability: 0.70
+- Alternative reasoning: This appears to be the landing page or HTML version of the guide hosted on the Natural History Museum website.
+- Verified at: 2026-10-26T19:42:34.146990+00:00
 
 ## bbs-field-guide-online-pages.html
 
@@ -287,6 +376,9 @@
   - Online
   - PDF
 - Web link: [http://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm](<http://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20200129051430/https://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm](<https://web.archive.org/web/20200129051430/https://rbg-web2.rbge.org.uk/bbs/Activities/BBSFGspac.htm>)
 
 ## bee-orchids-and-their-relatives.html
 
@@ -299,8 +391,12 @@
   - Online
   - PDF
   - Publication
-- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
 - Keywords: Ophrys
+- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637416+00:00
 
 ## beetle-fauna-germany.html
 
@@ -313,11 +409,15 @@
 - Author(s): Benisch, C.
 - Free: Yes
 - Available as: Online
+- Keywords: Coleoptera, beetles
 - Web link: [https://www.kerbtier.de/enindex.html](<https://www.kerbtier.de/enindex.html>)
 - Additional web link:
-  - [Browse beetle families](<https://www.kerbtier.de/cgi-bin/enFOverview.cgi>)
-  - [Search beetles by appearance](<https://www.kerbtier.de/cgi-bin/enXIdentify.cgi>)
-- Keywords: Coleoptera, beetles
+  - [https://www.kerbtier.de/cgi-bin/enFOverview.cgi](<https://www.kerbtier.de/cgi-bin/enFOverview.cgi>)
+  - [https://www.kerbtier.de/cgi-bin/enXIdentify.cgi](<https://www.kerbtier.de/cgi-bin/enXIdentify.cgi>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260805010040/https://www.kerbtier.de/enindex.html](<https://web.archive.org/web/20260805010040/https://www.kerbtier.de/enindex.html>)
+- Verified at: 2026-10-26T19:42:30.273750+00:00
 
 ## beetle-news.html
 
@@ -329,8 +429,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.amentsoc.org/publications/beetle-news/](<https://www.amentsoc.org/publications/beetle-news/>)
 - Keywords: Coleoptera Silphidae Nicrophorus sexton beetles Onthophagus dung beetles Glischrochilus Agriotes Elateridae click beetles Geotrupidae dor beetles longhorn beetles Erotylidae Tetratomidae Broad-nosed weevils Common Mallow
+- Web link: [https://www.amentsoc.org/publications/beetle-news/](<https://www.amentsoc.org/publications/beetle-news/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019063618/http://www.amentsoc.org/publications/beetle-news/](<https://web.archive.org/web/20261019063618/http://www.amentsoc.org/publications/beetle-news/>)
+- Verified at: 2026-10-26T19:42:30.706135+00:00
 
 ## beetles-attracted-moth-traps.html
 
@@ -340,8 +444,11 @@
 - Author(s): Dan Asaw
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.60shadesofbrown.uk/beetles-attracted-to-light](<https://www.60shadesofbrown.uk/beetles-attracted-to-light>)
 - Keywords: Beetle, Moth trap, Moth trap intruders, Coleoptera, Beetles, Arthropoda
+- Web link: [https://www.60shadesofbrown.uk/beetles-attracted-to-light](<https://www.60shadesofbrown.uk/beetles-attracted-to-light>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260713064621/https://www.60shadesofbrown.uk/beetles-attracted-to-light](<https://web.archive.org/web/20260713064621/https://www.60shadesofbrown.uk/beetles-attracted-to-light>)
 
 ## beginners-guide-identifying-british-mammal-bones.html
 
@@ -353,17 +460,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/briti...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-mammal-bones-ID-guide.pdf>)
-
-## beginner’s-vegetative-guide-orchids-british-isles-2.html
-
-- Title: A beginner’s vegetative guide to orchids of the British Isles
-- Submitted: Anonymous (not verified); 2018-05-16T13:17:00
-- Description: This guide is designed to aid anyone in the process of identifying orchids when they are not in flower
-- Author(s): Mike Waller
-- Free: Yes
-- Available as: PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/briti...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-mammal-bones-ID-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-mammal-bones-ID-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211012175028/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-mammal-bones-ID-guide.pdf](<https://web.archive.org/web/20211012175028/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-mammal-bones-ID-guide.pdf>)
+- Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html](<https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is the most likely location for the guide, as the broken link provided follows the standard NHM URL structure for such resources, and the guide is officially attributed to the Natural History Museum.
+- Verified at: 2026-10-26T19:42:38.443949+00:00
 
 ## beginner’s-vegetative-guide-orchids-british-isles.html
 
@@ -373,7 +477,25 @@
 - Author(s): Mike Waller
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/briti...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230315032653/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf](<https://web.archive.org/web/20230315032653/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Verified at: 2026-10-26T19:42:42.031840+00:00
+
+## beginner’s-vegetative-guide-orchids-british-isles-2.html
+
+- Title: A beginner’s vegetative guide to orchids of the British Isles
+- Submitted: Anonymous (not verified); 2018-05-16T13:17:00
+- Description: This guide is designed to aid anyone in the process of identifying orchids when they are not in flower
+- Author(s): Mike Waller
+- Free: Yes
+- Available as: PDF
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230315032653/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf](<https://web.archive.org/web/20230315032653/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/british-orchids-vegetative-id-guide.pdf>)
+- Verified at: 2026-10-26T19:42:42.031680+00:00
 
 ## big-seaweed-search.html
 
@@ -387,6 +509,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637472+00:00
 
 ## biology-and-identification-intertidal-polyzoa.html
 
@@ -398,8 +524,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1962), 1, 33-51 bryozoa
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283390+00:00
 
 ## bird-id-easy-bird-identification.html
 
@@ -410,6 +540,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.birdid.co.uk/default.aspx](<https://www.birdid.co.uk/default.aspx>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20201205144435/https://www.birdid.co.uk/default.aspx](<https://web.archive.org/web/20201205144435/https://www.birdid.co.uk/default.aspx>)
+- Verified at: 2026-10-26T19:42:36.633337+00:00
 
 ## bostrichidae-key-british-species.html
 
@@ -421,8 +555,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg>)
 - Keywords: Bostrichidae beetles coleoptera
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:42:35.783595+00:00
 
 ## botanical-keys-and-how-use-them-facebook-group.html
 
@@ -432,8 +569,12 @@
 - Author(s): Kevin Widdowson
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide/](<https://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide/>)
 - Keywords: botany
+- Web link: [https://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide/](<https://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20231216162619/http://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide](<https://web.archive.org/web/20231216162619/http://www.facebook.com/groups/Howtouseyourwildlflowerfieldguide>)
+- Verified at: 2026-10-26T19:42:36.975096+00:00
 
 ## botanical-keys-find-wild-flowers.html
 
@@ -446,8 +587,11 @@
 - Author(s): Quentin Groom
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.botanicalkeys.co.uk/flora/](<http://www.botanicalkeys.co.uk/flora/>)
 - Keywords: On Line, Vascular Plants, multi access, BSBI
+- Web link: [http://www.botanicalkeys.co.uk/flora/](<http://www.botanicalkeys.co.uk/flora/>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230307213655/http://www.botanicalkeys.co.uk/flora/](<https://web.archive.org/web/20230307213655/http://www.botanicalkeys.co.uk/flora/>)
 
 ## brambles-rubus-britain-and-ireland.html
 
@@ -458,6 +602,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/562600050579169/](<https://www.facebook.com/groups/562600050579169/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:42:39.021632+00:00
 
 ## bristletailnet.html
 
@@ -468,8 +615,11 @@
   The intention is to provide online resource for these groups, starting with links to other information on the internet and further field. Then developing this website to provide a convenient point of access for information pertaining to these groups, both on a world and regional level.
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.bristletail.net/index.html](<http://www.bristletail.net/index.html>)
 - Keywords: bristletail firebrat silverfish
+- Web link: [http://www.bristletail.net/index.html](<http://www.bristletail.net/index.html>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211204155820/http://www.bristletail.net/index.html](<https://web.archive.org/web/20211204155820/http://www.bristletail.net/index.html>)
 
 ## bristol-university-tick-id.html
 
@@ -482,8 +632,12 @@
 - Author(s): Richard Wall, University of Bristol
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.esccapuk.org.uk/page/Tick+ID/48/](<https://www.esccapuk.org.uk/page/Tick+ID/48/>)
 - Keywords: ticks Ixodidae arachnids
+- Web link: [https://www.esccapuk.org.uk/page/Tick+ID/48/](<https://www.esccapuk.org.uk/page/Tick+ID/48/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261012212457/https://www.esccapuk.org.uk/page/Tick+ID/48/](<https://web.archive.org/web/20261012212457/https://www.esccapuk.org.uk/page/Tick+ID/48/>)
+- Verified at: 2026-10-26T19:42:40.235298+00:00
 
 ## britains-hoverflies-wildguide.html
 
@@ -544,8 +698,12 @@
 - Author(s): Hawk and Owl Trust
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/birds-of-prey-gu...](<https://www.field-studies-council.org/shop/publications/birds-of-prey-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council, raptors
+- Web link: [https://www.field-studies-council.org/shop/publications/birds-of-prey-guide/](<https://www.field-studies-council.org/shop/publications/birds-of-prey-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260410100810/https://www.field-studies-council.org/shop/publications/birds-of-prey-guide/](<https://web.archive.org/web/20260410100810/https://www.field-studies-council.org/shop/publications/birds-of-prey-guide/>)
+- Verified at: 2026-10-26T19:42:40.589490+00:00
 
 ## british-bugs.html
 
@@ -555,8 +713,12 @@
 - Author(s): Dr Joe Botting & Dr Tristan Bantock
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.britishbugs.org.uk/](<http://www.britishbugs.org.uk/>)
 - Keywords: Bugs Hemiptera
+- Web link: [http://www.britishbugs.org.uk/](<http://www.britishbugs.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261013020633/https://www.britishbugs.org.uk/](<https://web.archive.org/web/20261013020633/https://www.britishbugs.org.uk/>)
+- Verified at: 2026-10-26T19:42:41.378468+00:00
 
 ## british-caterpillar-galleries.html
 
@@ -566,8 +728,12 @@
 - Author(s): Steve Ogden (Wildlife Insight)
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.wildlifeinsight.com/british-caterpillar-galleries/](<http://www.wildlifeinsight.com/british-caterpillar-galleries/>)
 - Keywords: larvae butterfly moth sawfly
+- Web link: [http://www.wildlifeinsight.com/british-caterpillar-galleries/](<http://www.wildlifeinsight.com/british-caterpillar-galleries/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260826002729/https://www.wildlifeinsight.com/british-caterpillar-galleries/](<https://web.archive.org/web/20260826002729/https://www.wildlifeinsight.com/british-caterpillar-galleries/>)
+- Verified at: 2026-10-26T19:42:41.590549+00:00
 
 ## british-earthworms-and-how-identify-them.html
 
@@ -586,8 +752,12 @@
 - Author(s): Wheeler
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-fish-...](<https://www.field-studies-council.org/shop/publications/freshwater-fish-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-fish-aidgap/](<https://www.field-studies-council.org/shop/publications/freshwater-fish-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008010934/https://www.field-studies-council.org/shop/publications/freshwater-fish-aidgap/](<https://web.archive.org/web/20251008010934/https://www.field-studies-council.org/shop/publications/freshwater-fish-aidgap/>)
+- Verified at: 2026-10-26T19:42:42.464423+00:00
 
 ## british-froghoppers-identikit.html
 
@@ -600,6 +770,10 @@
   - Online
   - App
 - Web link: [https://identikit.fscbiodiversity.uk/howells/fh/l/](<https://identikit.fscbiodiversity.uk/howells/fh/l/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260417214040/https://identikit.fscbiodiversity.uk/howells/fh/l/](<https://web.archive.org/web/20260417214040/https://identikit.fscbiodiversity.uk/howells/fh/l/>)
+- Verified at: 2026-10-26T19:42:42.543012+00:00
 
 ## british-grasshoppers-and-allied-insects.html
 
@@ -609,8 +783,12 @@
 - Author(s): Marshall & Ovenden
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/grasshoppers-guide/](<https://www.field-studies-council.org/shop/publications/grasshoppers-guide/>)
 - Keywords: fold-out, fold out, FSC, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/grasshoppers-guide/](<https://www.field-studies-council.org/shop/publications/grasshoppers-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008010758/https://www.field-studies-council.org/shop/publications/grasshoppers-guide/](<https://web.archive.org/web/20251008010758/https://www.field-studies-council.org/shop/publications/grasshoppers-guide/>)
+- Verified at: 2026-10-26T19:42:42.060443+00:00
 
 ## british-hoverflies.html
 
@@ -620,8 +798,12 @@
 - Author(s): Alan Stubbs and Steven Falk
 - Free: No
 - Available as: Publication
-- Web link: [https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated...](<https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated-identification-guide/5057/>)
 - Keywords: hoverfly diptera Syrphidae
+- Web link: [https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated-identification-guide/5057/](<https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated-identification-guide/5057/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251209134429/https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated-identification-guide/5057/](<https://web.archive.org/web/20251209134429/https://www.pemberleybooks.com/product/british-hoverflies-an-illustrated-identification-guide/5057/>)
+- Verified at: 2026-10-26T19:42:44.335652+00:00
 
 ## british-leafminers.html
 
@@ -631,8 +813,12 @@
 - Author(s): leafmines.co.uk
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.leafmines.co.uk](<http://www.leafmines.co.uk/>)
 - Keywords: wasps beetles flies moths leaf-miners
+- Web link: [http://www.leafmines.co.uk/](<http://www.leafmines.co.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260918223650/http://www.leafmines.co.uk/](<https://web.archive.org/web/20260918223650/http://www.leafmines.co.uk/>)
+- Verified at: 2026-10-26T19:42:43.076140+00:00
 
 ## british-lichens-species-gallery.html
 
@@ -643,6 +829,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.britishlichens.co.uk/speciesgallery.html](<http://www.britishlichens.co.uk/speciesgallery.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260728171515/http://www.britishlichens.co.uk/speciesgallery.html](<https://web.archive.org/web/20260728171515/http://www.britishlichens.co.uk/speciesgallery.html>)
+- Verified at: 2026-10-26T19:42:43.098775+00:00
 
 ## british-lonchaeidae.html
 
@@ -652,8 +842,10 @@
 - Author(s): MacGowan & Rotheray
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lonchaeidae/](<https://www.field-studies-council.org/shop/publications/lonchaeidae/>)
 - Keywords: Royal Entomological Society of London FSC entsoc lance flies
+- Web link: [https://www.field-studies-council.org/shop/publications/lonchaeidae/](<https://www.field-studies-council.org/shop/publications/lonchaeidae/>)
+- Web link status: 404
+- Web link state: broken
 
 ## british-marine-mollusca-facebook-group.html
 
@@ -669,7 +861,11 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/british.marine.mollusca/](<https://www.facebook.com/groups/british.marine.mollusca/>)
-- Additional web link: [Conchological Society website](<https://conchsoc.org/>)
+- Additional web link: [https://conchsoc.org/](<https://conchsoc.org/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221108204854/https://www.facebook.com/groups/british.marine.mollusca/](<https://web.archive.org/web/20221108204854/https://www.facebook.com/groups/british.marine.mollusca/>)
+- Verified at: 2026-10-26T19:42:44.705507+00:00
 
 ## british-plant-galls-2nd-edition.html
 
@@ -679,8 +875,12 @@
 - Author(s): Redfern & Shirley
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/](<https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/](<https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013054429/https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/](<https://web.archive.org/web/20251013054429/https://www.field-studies-council.org/shop/publications/plant-galls-aidgap/>)
+- Verified at: 2026-10-26T19:42:43.929764+00:00
 
 ## british-sawflies-hymenoptera-symphyta-key-adults-genera-occurring-britain.html
 
@@ -690,8 +890,13 @@
 - Author(s): Wright
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/sawflies-aidgap/](<https://www.field-studies-council.org/shop/publications/sawflies-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/sawflies-aidgap/](<https://www.field-studies-council.org/shop/publications/sawflies-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.field-studies-council.org/shop/publications/sawflies-aidgap-ebook/](<https://www.field-studies-council.org/shop/publications/sawflies-aidgap-ebook/>)
+- Wayback link: [https://web.archive.org/web/20230322160317/https://www.field-studies-council.org/shop/publications/sawflies-aidgap/](<https://web.archive.org/web/20230322160317/https://www.field-studies-council.org/shop/publications/sawflies-aidgap/>)
+- Verified at: 2026-10-26T19:42:46.624262+00:00
 
 ## british-scraptiidae.html
 
@@ -701,8 +906,15 @@
 - Author(s): Levey
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/scraptiidae/](<https://www.field-studies-council.org/shop/publications/scraptiidae/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/scraptiidae/](<https://www.field-studies-council.org/shop/publications/scraptiidae/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230926212808/https://www.field-studies-council.org/shop/publications/scraptiidae/](<https://web.archive.org/web/20230926212808/https://www.field-studies-council.org/shop/publications/scraptiidae/>)
+- Alternative link: [https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/](<https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is a direct product page for the specific handbook from a reputable natural history bookseller.
+- Verified at: 2026-10-26T19:42:52.699985+00:00
 
 ## british-spider-identification.html
 
@@ -713,6 +925,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/BritishSpiderIdentificationGroup/](<https://www.facebook.com/groups/BritishSpiderIdentificationGroup/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20230823112441/https://www.facebook.com/groups/BritishSpiderIdentificationGroup/](<https://web.archive.org/web/20230823112441/https://www.facebook.com/groups/BritishSpiderIdentificationGroup/>)
+- Verified at: 2026-10-26T19:42:45.879772+00:00
 
 ## british-spiders-vols-i-iii.html
 
@@ -734,8 +950,12 @@
 - Author(s): Haslam, Sinker & Wolseley
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/water-plants-aid...](<https://www.field-studies-council.org/shop/publications/water-plants-aidgap/>)
 - Keywords: vascular plants aquatic
+- Web link: [https://www.field-studies-council.org/shop/publications/water-plants-aidgap/](<https://www.field-studies-council.org/shop/publications/water-plants-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251231153458/https://www.field-studies-council.org/shop/publications/water-plants-aidgap/](<https://web.archive.org/web/20251231153458/https://www.field-studies-council.org/shop/publications/water-plants-aidgap/>)
+- Verified at: 2026-10-26T19:42:45.288516+00:00
 
 ## bsbi-flora-search.html
 
@@ -746,13 +966,16 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP](<http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220929163938/http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP](<https://web.archive.org/web/20220929163938/http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP>)
 
 ## bsbi-handbook-no-1-sedges-british-isles.html
 
 - Title: BSBI Handbook No 1 Sedges of the British Isles
 - Submitted: rich burkmar; 2015-06-27T15:44:00
 - Description:
-  ISBN-13: 978-0901158352
+  ISBN-13: 978-0901158352
   The 3rd edition of this handbook has been considerably expanded in size, with the scope of the book widened by the addition of 35 species not previously described, thereby covering all the British and Irish species. All confirmed hybrids have also been included. Distribution maps for each species/hybrid are now adjacent to each entry and along with the text have been updated. Introductory chapters on structure, classification, ecology and hybridisation are followed by keys, entries, glossary, bibliography and indices to English and Latin names.
 - Author(s): Jermy, AC. Simpson, DA. Foley, MJY. Porter, MS
 - Free: No
@@ -768,6 +991,13 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.summerfieldbooks.com/sea-beans-and-nickar-nuts~263](<https://www.summerfieldbooks.com/sea-beans-and-nickar-nuts~263>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20170316060150/http://summerfieldbooks.com/sea%2Dbeans%2Dand%2Dnickar%2Dnuts%7E263](<https://web.archive.org/web/20170316060150/http://summerfieldbooks.com/sea%2Dbeans%2Dand%2Dnickar%2Dnuts%7E263>)
+- Alternative link: [https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022](<https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022>)
+- Alternative probability: 0.60
+- Alternative reasoning: Pemberley Books provides a specific product page for this handbook, including bibliographic details and its current out-of-print status.
+- Verified at: 2026-10-26T19:42:55.043768+00:00
 
 ## bsbi-handbook-no-11-water-starworts-callitriche-europe.html
 
@@ -800,7 +1030,7 @@
 - Title: BSBI Handbook No 13 Grasses of the British Isles
 - Submitted: rich burkmar; 2015-06-27T16:07:00
 - Description:
-  ISBN 978‐0‐901158‐420 
+  ISBN 978‐0‐901158‐420
   This new Handbook attempts to bridge the gap between the taxonomy of the 1980s and the new molecular phytogenies that are currently being explored.
   The species descriptions have been kept as brief as possible and are supported by keys to, and detailed descriptions of, tribes and genera, a move that has allowed expansion of other sections of the text. The keys are arranged in two layers - by tribes and then by genus - allowing the user to check the specimen against a tribal description before moving on to genus, and against a generic description before moving on to species.
   The book contains descriptions of 15 tribes, 67 genera and 220 species. The latter comprise 113 natives, 10 archaeophytes, 50 neophytes and 47 casuals; bamboos, which require specialists of their own, are not included. The information on each is dealt with in the following paragraphs: formal description, local distribution and habitat, biology and ecology, status and wider distribution, and additional information. New plates have been prepared for every species but, after much thought and in order not to put too much strain on the binding, distribution maps have been omitted; references to maps in the New Atlas are given for every species.
@@ -855,7 +1085,10 @@
 - Author(s): R .D. Meikle
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-an...](<https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-and-ireland~235>)
+- Web link: [https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-and-ireland~235](<https://www.summerfieldbooks.com/willows-and-poplars-of-great-britain-and-ireland~235>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:43:10.634318+00:00
 
 ## bsbi-handbook-no-5-charophytes-great-britain-and-ireland.html
 
@@ -865,8 +1098,10 @@
 - Author(s): Jenny A Moore
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/charophytes-of-great-britain-and-irelan...](<https://www.summerfieldbooks.com/charophytes-of-great-britain-and-ireland~236>)
 - Keywords: stoneworts
+- Web link: [https://www.summerfieldbooks.com/charophytes-of-great-britain-and-ireland~236](<https://www.summerfieldbooks.com/charophytes-of-great-britain-and-ireland~236>)
+- Web link status: 404
+- Web link state: broken
 
 ## bsbi-handbook-no-6-crucifers.html
 
@@ -876,8 +1111,11 @@
 - Author(s): T.C.G. Rich
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239](<https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239>)
 - Keywords: Brassicaceae crucifers brassicas
+- Web link: [https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239](<https://www.summerfieldbooks.com/crucifers-of-great-britain-and-ireland~239>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:43:17.493862+00:00
 
 ## bsbi-handbook-no-7-roses-great-britain-and-ireland.html
 
@@ -887,8 +1125,14 @@
 - Author(s): G.G. Graham and A.L. Primavesi
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233](<https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233>)
 - Keywords: Rosaceae
+- Web link: [https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233](<https://www.summerfieldbooks.com/roses-of-great-britain-and-ireland~233>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://bsbi.org/learn/publications](<https://bsbi.org/learn/publications>)
+- Alternative probability: 0.40
+- Alternative reasoning: The Botanical Society of Britain and Ireland (BSBI) is the publisher and maintains a list of their handbooks, though it may redirect to external sellers.
+- Verified at: 2026-10-26T19:43:29.823242+00:00
 
 ## bsbi-handbook-no-8-pondweeds-great-britain-and-ireland.html
 
@@ -898,8 +1142,11 @@
 - Author(s): C. D. Preston
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238](<https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238>)
 - Keywords: water plants
+- Web link: [https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238](<https://www.summerfieldbooks.com/pondweeds-of-great-britain-and-ireland~238>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:43:43.546929+00:00
 
 ## bsbi-handbook-no-9-dandelions-great-britain-and-ireland.html
 
@@ -909,7 +1156,13 @@
 - Author(s): A.A. Dudman and A.J. Richards
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland...](<https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland~232>)
+- Web link: [https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland~232](<https://www.summerfieldbooks.com/dandelions-of-great-britain-and-ireland~232>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595](<https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595>)
+- Alternative probability: 0.90
+- Alternative reasoning: This page provides specific bibliographic details, status (out of print), and information about the publication, serving as a direct reference for the book.
+- Verified at: 2026-10-26T19:43:38.470481+00:00
 
 ## bsbi-species-accounts.html
 
@@ -921,8 +1174,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://bsbi.org/species-accounts](<https://bsbi.org/species-accounts>)
 - Keywords: Vascular Plants
+- Web link: [https://bsbi.org/species-accounts](<https://bsbi.org/species-accounts>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://bsbi.org/learn/resources/species-accounts](<https://bsbi.org/learn/resources/species-accounts>)
+- Wayback link: [https://web.archive.org/web/20251114163614/https://bsbi.org/species-accounts](<https://web.archive.org/web/20251114163614/https://bsbi.org/species-accounts>)
+- Verified at: 2026-10-26T19:42:52.010221+00:00
 
 ## bto-bird-id-corvids.html
 
@@ -932,7 +1190,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-corvids>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-corvids](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-corvids>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/corvids](<https://www.bto.org/learn/skills/bird-identification/videos/corvids>)
+- Wayback link: [https://web.archive.org/web/20250318004704/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-corvids](<https://web.archive.org/web/20250318004704/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-corvids>)
+- Verified at: 2026-10-26T19:42:53.403553+00:00
 
 ## bto-bird-id-goosander-and-red-breasted-merganser.html
 
@@ -942,8 +1205,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-goosander-and-red-breasted-merganser>)
 - Keywords: film, seabirds, waterbirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-goosander-and-red-breasted-merganser](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-goosander-and-red-breasted-merganser>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/goosander-and-red-breasted-merganser](<https://www.bto.org/learn/skills/bird-identification/videos/goosander-and-red-breasted-merganser>)
+- Wayback link: [https://web.archive.org/web/20250130202700/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-goosander-and-red-breasted-merganser](<https://web.archive.org/web/20250130202700/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-goosander-and-red-breasted-merganser>)
+- Verified at: 2026-10-26T19:42:53.998368+00:00
 
 ## bto-bird-id-grey-harriers.html
 
@@ -953,8 +1221,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-harriers>)
 - Keywords: raptors
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-harriers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-harriers>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/harriers](<https://www.bto.org/learn/skills/bird-identification/videos/harriers>)
+- Wayback link: [https://web.archive.org/web/20250419233449/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-harriers](<https://web.archive.org/web/20250419233449/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-harriers>)
+- Verified at: 2026-10-26T19:42:55.104296+00:00
 
 ## bto-bird-id-pigeons.html
 
@@ -964,8 +1237,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-pigeons>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-pigeons](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-pigeons>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/pigeons](<https://www.bto.org/learn/skills/bird-identification/videos/pigeons>)
+- Wayback link: [https://web.archive.org/web/20250501193932/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-pigeons](<https://web.archive.org/web/20250501193932/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-pigeons>)
+- Verified at: 2026-10-26T19:42:56.099528+00:00
 
 ## bto-bird-id-sanderling-curlew-sandpiper.html
 
@@ -975,8 +1253,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-sanderling-curlew-sandpiper>)
 - Keywords: film, wader
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-sanderling-curlew-sandpiper](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-sanderling-curlew-sandpiper>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/sanderling-curlew-sandpiper](<https://www.bto.org/learn/skills/bird-identification/videos/sanderling-curlew-sandpiper>)
+- Verified at: 2026-10-26T19:43:01.085186+00:00
 
 ## bto-bird-id-video-adult-black-backed-gulls.html
 
@@ -986,8 +1268,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
 - Keywords: sea shore coast coastal seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/adult-black-backed-gulls?dm_i=IG4%2C3L55N%2CKM61IY%2CCVO2E%2C1>)
+- Verified at: 2026-10-26T19:43:03.706574+00:00
 
 ## bto-bird-id-video-cattle-egret.html
 
@@ -997,7 +1283,11 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cattle-egret>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cattle-egret](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cattle-egret>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cattle-egret](<https://www.bto.org/learn/skills/bird-identification/videos/cattle-egret>)
+- Verified at: 2026-10-26T19:43:08.099430+00:00
 
 ## bto-bird-id-video-chaffinch-brambling.html
 
@@ -1007,8 +1297,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-chaffinch-brambling>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-chaffinch-brambling](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-chaffinch-brambling>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/chaffinch-brambling](<https://www.bto.org/learn/skills/bird-identification/videos/chaffinch-brambling>)
+- Verified at: 2026-10-26T19:43:15.628616+00:00
 
 ## bto-bird-id-video-collared-dove-turtle-dove.html
 
@@ -1018,7 +1312,11 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-collared-dove-turtle-dove>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-collared-dove-turtle-dove](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-collared-dove-turtle-dove>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/collared-dove-turtle-dove](<https://www.bto.org/learn/skills/bird-identification/videos/collared-dove-turtle-dove>)
+- Verified at: 2026-10-26T19:43:22.690935+00:00
 
 ## bto-bird-id-video-common-and-jack-snipe.html
 
@@ -1028,8 +1326,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
 - Keywords: waterbirds waterbird wader
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/common-and-jack-snipe?dm_i=IG4%2C3OFFR%2CKM61IY%2CD8B5B%2C1>)
+- Verified at: 2026-10-26T19:43:31.548956+00:00
 
 ## bto-bird-id-video-common-shanks.html
 
@@ -1039,8 +1341,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-shanks>)
 - Keywords: film, wader
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-shanks](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-common-shanks>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-shanks](<https://www.bto.org/learn/skills/bird-identification/videos/common-shanks>)
+- Verified at: 2026-10-26T19:43:36.736060+00:00
 
 ## bto-bird-id-video-common-sparrows-reed-bunting.html
 
@@ -1050,8 +1356,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bird-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bird-id-common-sparrows-reed-bunting>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bird-id-common-sparrows-reed-bunting](<https://www.bto.org/develop-your-skills/bird-identification/videos/bird-id-common-sparrows-reed-bunting>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-sparrows-reed-bunting](<https://www.bto.org/learn/skills/bird-identification/videos/common-sparrows-reed-bunting>)
+- Verified at: 2026-10-26T19:43:50.470022+00:00
 
 ## bto-bird-id-video-cormorant-and-shag.html
 
@@ -1061,8 +1371,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cormorant-and-shag>)
 - Keywords: seabird coastal
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cormorant-and-shag](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-cormorant-and-shag>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cormorant-and-shag](<https://www.bto.org/learn/skills/bird-identification/videos/cormorant-and-shag>)
+- Verified at: 2026-10-26T19:43:52.798202+00:00
 
 ## bto-bird-id-video-cuckoo.html
 
@@ -1072,8 +1386,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo](<https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo>)
 - Keywords: film video
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo](<https://www.bto.org/develop-your-skills/bird-identification/videos/cuckoo>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/cuckoo](<https://www.bto.org/learn/skills/bird-identification/videos/cuckoo>)
+- Verified at: 2026-10-26T19:43:57.883387+00:00
 
 ## bto-bird-id-video-curlew-and-whimbrel.html
 
@@ -1083,8 +1401,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-curlew-and-whimbrel>)
 - Keywords: film, wader
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-curlew-and-whimbrel](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-curlew-and-whimbrel>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/curlew-and-whimbrel](<https://www.bto.org/learn/skills/bird-identification/videos/curlew-and-whimbrel>)
+- Verified at: 2026-10-26T19:43:59.727344+00:00
 
 ## bto-bird-id-video-diving-ducks.html
 
@@ -1094,8 +1416,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
 - Keywords: wetland wildfowl lakes
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/diving-ducks?dm_i=IG4%2C4LHGI%2CKM61IY%2CH2VEX%2C1>)
+- Verified at: 2026-10-26T19:44:04.917435+00:00
 
 ## bto-bird-id-video-godwits.html
 
@@ -1105,8 +1431,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-black-tailed-and-bar-tailed-godwit>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-black-tailed-and-bar-tailed-godwit](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-black-tailed-and-bar-tailed-godwit>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/black-tailed-and-bar-tailed-godwit](<https://www.bto.org/learn/skills/bird-identification/videos/black-tailed-and-bar-tailed-godwit>)
+- Verified at: 2026-10-26T19:44:06.557362+00:00
 
 ## bto-bird-id-video-goldcrest-firecrest.html
 
@@ -1116,8 +1446,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/goldc...](<https://www.bto.org/develop-your-skills/bird-identification/videos/goldcrest-firecrest>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/goldcrest-firecrest](<https://www.bto.org/develop-your-skills/bird-identification/videos/goldcrest-firecrest>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/goldcrest-firecrest](<https://www.bto.org/learn/skills/bird-identification/videos/goldcrest-firecrest>)
+- Wayback link: [https://web.archive.org/web/20241209061044/https://www.bto.org/develop-your-skills/bird-identification/videos/goldcrest-firecrest](<https://web.archive.org/web/20241209061044/https://www.bto.org/develop-your-skills/bird-identification/videos/goldcrest-firecrest>)
+- Verified at: 2026-10-26T19:44:09.002817+00:00
 
 ## bto-bird-id-video-goshawk-and-sparrowhawk.html
 
@@ -1127,8 +1462,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/id-videos](<https://www.bto.org/id-videos>)
 - Keywords: film, raptor
+- Web link: [https://www.bto.org/id-videos](<https://www.bto.org/id-videos>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos](<https://www.bto.org/learn/skills/bird-identification/videos>)
+- Wayback link: [https://web.archive.org/web/20240916082802/https://www.bto.org/id-videos](<https://web.archive.org/web/20240916082802/https://www.bto.org/id-videos>)
+- Verified at: 2026-10-26T19:44:09.883732+00:00
 
 ## bto-bird-id-video-great-lesser-spotted-woodpeckers.html
 
@@ -1138,7 +1478,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-great-lesser-spotted-woodpeckers>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-great-lesser-spotted-woodpeckers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-great-lesser-spotted-woodpeckers>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/great-lesser-spotted-woodpeckers](<https://www.bto.org/learn/skills/bird-identification/videos/great-lesser-spotted-woodpeckers>)
+- Wayback link: [https://web.archive.org/web/20250119064825/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-great-lesser-spotted-woodpeckers](<https://web.archive.org/web/20250119064825/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-great-lesser-spotted-woodpeckers>)
+- Verified at: 2026-10-26T19:44:12.006598+00:00
 
 ## bto-bird-id-video-green-finches-your-garden.html
 
@@ -1148,8 +1493,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-green-finches-your-garden>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-green-finches-your-garden](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-green-finches-your-garden>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/green-finches-your-garden](<https://www.bto.org/learn/skills/bird-identification/videos/green-finches-your-garden>)
+- Wayback link: [https://web.archive.org/web/20220413195313/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-green-finches-your-garden](<https://web.archive.org/web/20220413195313/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-green-finches-your-garden>)
+- Verified at: 2026-10-26T19:44:10.787833+00:00
 
 ## bto-bird-id-video-grey-golden-plovers.html
 
@@ -1159,7 +1509,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-golden-grey-plovers>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-golden-grey-plovers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-golden-grey-plovers>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/golden-grey-plovers](<https://www.bto.org/learn/skills/bird-identification/videos/golden-grey-plovers>)
+- Wayback link: [https://web.archive.org/web/20220727133009/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-golden-grey-plovers](<https://web.archive.org/web/20220727133009/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-golden-grey-plovers>)
+- Verified at: 2026-10-26T19:44:11.287579+00:00
 
 ## bto-bird-id-video-grouse.html
 
@@ -1169,7 +1524,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-grouse>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-grouse](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-grouse>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/grouse](<https://www.bto.org/learn/skills/bird-identification/videos/grouse>)
+- Wayback link: [https://web.archive.org/web/20250430171238/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-grouse](<https://web.archive.org/web/20250430171238/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-grouse>)
+- Verified at: 2026-10-26T19:44:15.750499+00:00
 
 ## bto-bird-id-video-hirundines-and-swift.html
 
@@ -1179,8 +1539,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hirundines-and-swift>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hirundines-and-swift](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hirundines-and-swift>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/hirundines-and-swift](<https://www.bto.org/learn/skills/bird-identification/videos/hirundines-and-swift>)
+- Wayback link: [https://web.archive.org/web/20250319150104/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hirundines-and-swift](<https://web.archive.org/web/20250319150104/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hirundines-and-swift>)
+- Verified at: 2026-10-26T19:44:12.454544+00:00
 
 ## bto-bird-id-video-hobby-kestrel.html
 
@@ -1190,7 +1555,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hobby-kestrel>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hobby-kestrel](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hobby-kestrel>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/hobby-kestrel](<https://www.bto.org/learn/skills/bird-identification/videos/hobby-kestrel>)
+- Wayback link: [https://web.archive.org/web/20250420062302/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hobby-kestrel](<https://web.archive.org/web/20250420062302/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-hobby-kestrel>)
+- Verified at: 2026-10-26T19:44:12.958426+00:00
 
 ## bto-bird-id-video-iceland-and-glaucous-gulls.html
 
@@ -1200,8 +1570,11 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/eye-i...](<https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
 - Keywords: film, seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls](<https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20250424170823/https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls](<https://web.archive.org/web/20250424170823/https://www.bto.org/develop-your-skills/bird-identification/videos/eye-iceland-and-glaucous-gulls>)
 
 ## bto-bird-id-video-identifying-linnet-and-twite.html
 
@@ -1211,7 +1584,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1>)
+- Wayback link: [https://web.archive.org/web/20210116004743/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1](<https://web.archive.org/web/20210116004743/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-linnet-and-twite?dm_i=IG4%2C4PAPH%2CKM61IY%2CHLGLL%2C1>)
+- Verified at: 2026-10-26T19:44:13.355777+00:00
 
 ## bto-bird-id-video-kestrel-and-merlin.html
 
@@ -1221,8 +1599,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kestrel-and-merlin>)
 - Keywords: raptor, birds of prey
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kestrel-and-merlin](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kestrel-and-merlin>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/kestrel-and-merlin](<https://www.bto.org/learn/skills/bird-identification/videos/kestrel-and-merlin>)
+- Wayback link: [https://web.archive.org/web/20250405154454/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kestrel-and-merlin](<https://web.archive.org/web/20250405154454/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kestrel-and-merlin>)
+- Verified at: 2026-10-26T19:44:13.911989+00:00
 
 ## bto-bird-id-video-kittiwake-and-other-small-gulls.html
 
@@ -1232,8 +1615,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kittiwake-and-other-small-gulls>)
 - Keywords: film, seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kittiwake-and-other-small-gulls](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kittiwake-and-other-small-gulls>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/kittiwake-and-other-small-gulls](<https://www.bto.org/learn/skills/bird-identification/videos/kittiwake-and-other-small-gulls>)
+- Wayback link: [https://web.archive.org/web/20250427110931/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kittiwake-and-other-small-gulls](<https://web.archive.org/web/20250427110931/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-kittiwake-and-other-small-gulls>)
+- Verified at: 2026-10-26T19:44:14.360189+00:00
 
 ## bto-bird-id-video-knot-and-dunlin.html
 
@@ -1243,8 +1631,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-knot-and-dunlin>)
 - Keywords: film, wader
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-knot-and-dunlin](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-knot-and-dunlin>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/knot-and-dunlin](<https://www.bto.org/learn/skills/bird-identification/videos/knot-and-dunlin>)
+- Wayback link: [https://web.archive.org/web/20250516141912/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-knot-and-dunlin](<https://web.archive.org/web/20250516141912/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-knot-and-dunlin>)
+- Verified at: 2026-10-26T19:44:14.799258+00:00
 
 ## bto-bird-id-video-little-egret-and-great-white-egret.html
 
@@ -1254,7 +1647,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-little-egret-and-great-white-egret>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-little-egret-and-great-white-egret](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-little-egret-and-great-white-egret>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/little-egret-and-great-white-egret](<https://www.bto.org/learn/skills/bird-identification/videos/little-egret-and-great-white-egret>)
+- Wayback link: [https://web.archive.org/web/20250321234943/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-little-egret-and-great-white-egret](<https://web.archive.org/web/20250321234943/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-little-egret-and-great-white-egret>)
+- Verified at: 2026-10-26T19:44:15.239390+00:00
 
 ## bto-bird-id-video-meadow-pipit-tree-pipit-skylark.html
 
@@ -1264,8 +1662,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-meadow-pipit-tree-pipit-skylark>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-meadow-pipit-tree-pipit-skylark](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-meadow-pipit-tree-pipit-skylark>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/meadow-pipit-tree-pipit-skylark](<https://www.bto.org/learn/skills/bird-identification/videos/meadow-pipit-tree-pipit-skylark>)
+- Wayback link: [https://web.archive.org/web/20250516140953/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-meadow-pipit-tree-pipit-skylark](<https://web.archive.org/web/20250516140953/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-meadow-pipit-tree-pipit-skylark>)
+- Verified at: 2026-10-26T19:44:15.643733+00:00
 
 ## bto-bird-id-video-nightingale-and-other-night-singers.html
 
@@ -1275,7 +1678,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-nightingale-and-other-night-singers>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-nightingale-and-other-night-singers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-nightingale-and-other-night-singers>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/nightingale-and-other-night-singers](<https://www.bto.org/learn/skills/bird-identification/videos/nightingale-and-other-night-singers>)
+- Wayback link: [https://web.archive.org/web/20250322003307/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-nightingale-and-other-night-singers](<https://web.archive.org/web/20250322003307/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-nightingale-and-other-night-singers>)
+- Verified at: 2026-10-26T19:44:16.214337+00:00
 
 ## bto-bird-id-video-peregrines.html
 
@@ -1285,8 +1693,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-peregrine-falcon>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-peregrine-falcon](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-peregrine-falcon>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/peregrine-falcon](<https://www.bto.org/learn/skills/bird-identification/videos/peregrine-falcon>)
+- Wayback link: [https://web.archive.org/web/20250212034735/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-peregrine-falcon](<https://web.archive.org/web/20250212034735/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-peregrine-falcon>)
+- Verified at: 2026-10-26T19:44:16.188556+00:00
 
 ## bto-bird-id-video-petrels.html
 
@@ -1296,8 +1709,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1>)
 - Keywords: seabird seabirds marine coastal
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1>)
+- Wayback link: [https://web.archive.org/web/20210726011329/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1](<https://web.archive.org/web/20210726011329/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-petrels?dm_i=IG4%2C4N5FU%2CKM61IY%2CHAW2T%2C1>)
+- Verified at: 2026-10-26T19:44:16.590904+00:00
 
 ## bto-bird-id-video-redwing-and-fieldfare.html
 
@@ -1307,8 +1725,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-redwing-and-fieldfare>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-redwing-and-fieldfare](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-redwing-and-fieldfare>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/redwing-and-fieldfare](<https://www.bto.org/learn/skills/bird-identification/videos/redwing-and-fieldfare>)
+- Wayback link: [https://web.archive.org/web/20250515133830/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-redwing-and-fieldfare](<https://web.archive.org/web/20250515133830/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-redwing-and-fieldfare>)
+- Verified at: 2026-10-26T19:44:16.576062+00:00
 
 ## bto-bird-id-video-ring-ouzel-and-blackbird.html
 
@@ -1318,7 +1741,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ring-ouzel-and-blackbird>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ring-ouzel-and-blackbird](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ring-ouzel-and-blackbird>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/ring-ouzel-and-blackbird](<https://www.bto.org/learn/skills/bird-identification/videos/ring-ouzel-and-blackbird>)
+- Wayback link: [https://web.archive.org/web/20250321234046/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ring-ouzel-and-blackbird](<https://web.archive.org/web/20250321234046/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ring-ouzel-and-blackbird>)
+- Verified at: 2026-10-26T19:44:17.053344+00:00
 
 ## bto-bird-id-video-ringed-plovers.html
 
@@ -1328,8 +1756,11 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20250323083529/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers](<https://web.archive.org/web/20250323083529/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-ringed-plovers>)
 
 ## bto-bird-id-video-scoters.html
 
@@ -1339,8 +1770,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-scoters>)
 - Keywords: film, seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-scoters](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-scoters>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/scoters](<https://www.bto.org/learn/skills/bird-identification/videos/scoters>)
+- Wayback link: [https://web.archive.org/web/20250323092107/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-scoters](<https://web.archive.org/web/20250323092107/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-scoters>)
+- Verified at: 2026-10-26T19:44:17.959692+00:00
 
 ## bto-bird-id-video-skuas.html
 
@@ -1350,8 +1786,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skuas>)
 - Keywords: seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skuas](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skuas>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/skuas](<https://www.bto.org/learn/skills/bird-identification/videos/skuas>)
+- Wayback link: [https://web.archive.org/web/20241207211423/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skuas](<https://web.archive.org/web/20241207211423/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skuas>)
+- Verified at: 2026-10-26T19:44:17.426566+00:00
 
 ## bto-bird-id-video-skylark-woodlark.html
 
@@ -1361,7 +1802,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skylark-woodlark>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skylark-woodlark](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skylark-woodlark>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/skylark-woodlark](<https://www.bto.org/learn/skills/bird-identification/videos/skylark-woodlark>)
+- Wayback link: [https://web.archive.org/web/20250424165205/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skylark-woodlark](<https://web.archive.org/web/20250424165205/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-skylark-woodlark>)
+- Verified at: 2026-10-26T19:44:17.797952+00:00
 
 ## bto-bird-id-video-small-black-headed-gulls.html
 
@@ -1371,8 +1817,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-black-headed-gulls>)
 - Keywords: seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-black-headed-gulls](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-black-headed-gulls>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/small-black-headed-gulls](<https://www.bto.org/learn/skills/bird-identification/videos/small-black-headed-gulls>)
+- Wayback link: [https://web.archive.org/web/20250323085142/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-black-headed-gulls](<https://web.archive.org/web/20250323085142/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-black-headed-gulls>)
+- Verified at: 2026-10-26T19:44:20.633231+00:00
 
 ## bto-bird-id-video-small-breeding-grebes.html
 
@@ -1382,8 +1833,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1>)
 - Keywords: grebe
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1](<https://www.bto.org/learn/skills/bird-identification/videos/small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1>)
+- Wayback link: [https://web.archive.org/web/20210119033024/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1](<https://web.archive.org/web/20210119033024/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-small-breeding-grebes?dm_i=IG4%2C43OCY%2CKM61IY%2CEVOLU%2C1>)
+- Verified at: 2026-10-26T19:44:18.412499+00:00
 
 ## bto-bird-id-video-summer-buzzards.html
 
@@ -1393,8 +1849,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-summer-buzzards-common-buzzard-and-honey-buzzard>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-summer-buzzards-common-buzzard-and-honey-buzzard](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-summer-buzzards-common-buzzard-and-honey-buzzard>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/summer-buzzards-common-buzzard-and-honey-buzzard](<https://www.bto.org/learn/skills/bird-identification/videos/summer-buzzards-common-buzzard-and-honey-buzzard>)
+- Wayback link: [https://web.archive.org/web/20250420055724/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-summer-buzzards-common-buzzard-and-honey-buzzard](<https://web.archive.org/web/20250420055724/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-summer-buzzards-common-buzzard-and-honey-buzzard>)
+- Verified at: 2026-10-26T19:44:18.801331+00:00
 
 ## bto-bird-id-video-water-pipit-and-rock-pipit.html
 
@@ -1404,8 +1865,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-water-pipit-and-rock-pipit>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-water-pipit-and-rock-pipit](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-water-pipit-and-rock-pipit>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/water-pipit-and-rock-pipit](<https://www.bto.org/learn/skills/bird-identification/videos/water-pipit-and-rock-pipit>)
+- Wayback link: [https://web.archive.org/web/20250212051005/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-water-pipit-and-rock-pipit](<https://web.archive.org/web/20250212051005/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-water-pipit-and-rock-pipit>)
+- Verified at: 2026-10-26T19:44:18.685430+00:00
 
 ## bto-bird-id-video-wild-swans.html
 
@@ -1415,7 +1881,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-wild-swans>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-wild-swans](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-wild-swans>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/wild-swans](<https://www.bto.org/learn/skills/bird-identification/videos/wild-swans>)
+- Wayback link: [https://web.archive.org/web/20250430165709/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-wild-swans](<https://web.archive.org/web/20250430165709/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-wild-swans>)
+- Verified at: 2026-10-26T19:44:19.154464+00:00
 
 ## bto-bird-id-video-winter-auks.html
 
@@ -1425,8 +1896,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-auks>)
 - Keywords: seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-auks](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-auks>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/winter-auks](<https://www.bto.org/learn/skills/bird-identification/videos/winter-auks>)
+- Wayback link: [https://web.archive.org/web/20250424192622/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-auks](<https://web.archive.org/web/20250424192622/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-auks>)
+- Verified at: 2026-10-26T19:44:20.496586+00:00
 
 ## bto-bird-id-video-winter-divers.html
 
@@ -1436,8 +1912,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-divers>)
 - Keywords: film, seabirds, waterbirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-divers](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-divers>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/winter-divers](<https://www.bto.org/learn/skills/bird-identification/videos/winter-divers>)
+- Wayback link: [https://web.archive.org/web/20250515134457/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-divers](<https://web.archive.org/web/20250515134457/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-divers>)
+- Verified at: 2026-10-26T19:44:20.860046+00:00
 
 ## bto-bird-id-video-winter-grebes.html
 
@@ -1447,8 +1928,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-b...](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-grebes>)
 - Keywords: waterbirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-grebes](<https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-grebes>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/winter-grebes](<https://www.bto.org/learn/skills/bird-identification/videos/winter-grebes>)
+- Wayback link: [https://web.archive.org/web/20250212040203/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-grebes](<https://web.archive.org/web/20250212040203/https://www.bto.org/develop-your-skills/bird-identification/videos/bto-bird-id-winter-grebes>)
+- Verified at: 2026-10-26T19:44:21.479071+00:00
 
 ## bto-bird-id-video-wood-and-green-sandpipers.html
 
@@ -1458,8 +1944,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/wood-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/wood-and-green-sandpiper>)
 - Keywords: waterbirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/wood-and-green-sandpiper](<https://www.bto.org/develop-your-skills/bird-identification/videos/wood-and-green-sandpiper>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/wood-and-green-sandpiper](<https://www.bto.org/learn/skills/bird-identification/videos/wood-and-green-sandpiper>)
+- Wayback link: [https://web.archive.org/web/20250328160220/https://www.bto.org/develop-your-skills/bird-identification/videos/wood-and-green-sandpiper](<https://web.archive.org/web/20250328160220/https://www.bto.org/develop-your-skills/bird-identification/videos/wood-and-green-sandpiper>)
+- Verified at: 2026-10-26T19:44:19.984490+00:00
 
 ## bto-bird-id-video-yellow-coloured-wagtails.html
 
@@ -1472,8 +1963,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-yellow-coloured-wagtails>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-yellow-coloured-wagtails](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-yellow-coloured-wagtails>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/yellow-coloured-wagtails](<https://www.bto.org/learn/skills/bird-identification/videos/yellow-coloured-wagtails>)
+- Wayback link: [https://web.archive.org/web/20250426083151/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-yellow-coloured-wagtails](<https://web.archive.org/web/20250426083151/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-yellow-coloured-wagtails>)
+- Verified at: 2026-10-26T19:44:21.072841+00:00
 
 ## bto-bird-id-videos-dabbling-ducks.html
 
@@ -1483,8 +1979,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/ident...](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-female-dabbling-ducks>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-female-dabbling-ducks](<https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-female-dabbling-ducks>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/female-dabbling-ducks](<https://www.bto.org/learn/skills/bird-identification/videos/female-dabbling-ducks>)
+- Wayback link: [https://web.archive.org/web/20250319165058/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-female-dabbling-ducks](<https://web.archive.org/web/20250319165058/https://www.bto.org/develop-your-skills/bird-identification/videos/identifying-female-dabbling-ducks>)
+- Verified at: 2026-10-26T19:44:22.356050+00:00
 
 ## bugs-bushes.html
 
@@ -1496,8 +1997,12 @@
 - Author(s): Bebbington & Bebbington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/bugs-on-bushes/](<https://www.field-studies-council.org/shop/publications/bugs-on-bushes/>)
 - Keywords: fold-out, fold out, FSC, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/bugs-on-bushes/](<https://www.field-studies-council.org/shop/publications/bugs-on-bushes/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261005212340/https://www.field-studies-council.org/shop/publications/bugs-on-bushes/](<https://web.archive.org/web/20261005212340/https://www.field-studies-council.org/shop/publications/bugs-on-bushes/>)
+- Verified at: 2026-10-26T19:44:21.889396+00:00
 
 ## bumblebees-britain-ireland.html
 
@@ -1508,6 +2013,10 @@
 - Free: No
 - Available as: App
 - Web link: [https://apps.apple.com/us/app/british-irish-bumblebees/id657077156](<https://apps.apple.com/us/app/british-irish-bumblebees/id657077156>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916191535/https://apps.apple.com/us/app/british-irish-bumblebees/id657077156](<https://web.archive.org/web/20250916191535/https://apps.apple.com/us/app/british-irish-bumblebees/id657077156>)
+- Verified at: 2026-10-26T19:44:22.384432+00:00
 
 ## bumblebees-norfolk.html
 
@@ -1525,8 +2034,34 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebee...](<http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf>)
 - Keywords: Hymenoptera
+- Web link: [http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf](<http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf](<https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf>)
+- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/occasional-publications/](<https://norfolknaturalists.org.uk/wp/publications/occasional-publications/>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is the official publications page of the Norfolk & Norwich Naturalists' Society, which hosts and distributes the society's occasional publications including the Bumblebees of Norfolk guide.
+- Verified at: 2026-10-26T19:44:27.646515+00:00
+
+## butterflies-britain.html
+
+- Title: Butterflies of Britain
+- Submitted: Anonymous (not verified); 2015-06-16T09:21:00
+- Description:
+  Looking for an identification guide / chart to British butterflies?
+  This 8-panel laminated guide / chart - our most popular title - is designed for speedy butterfly identification in the field.
+
+  Colour illustrations, arranged so that similar looking species are grouped next to each other, show all the 57 butterfly species that you are likely to see. All are depicted at life size. The text gives further background information on the life-cycle, habitats and feeding patterns of butterflies.
+- Author(s): Bebbington & Lewington
+- Free: No
+- Available as: Publication
+- Keywords: fold-out, fold out, FSC, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/butterflies-guide/](<https://www.field-studies-council.org/shop/publications/butterflies-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261005212349/https://www.field-studies-council.org/shop/publications/butterflies-guide/](<https://web.archive.org/web/20261005212349/https://www.field-studies-council.org/shop/publications/butterflies-guide/>)
+- Verified at: 2026-10-26T19:44:22.842461+00:00
 
 ## butterflies-britain-and-ireland.html
 
@@ -1536,8 +2071,12 @@
 - Author(s): Nature Guides Ltd
 - Free: No
 - Available as: App
-- Web link: [https://apps.apple.com/gb/app/british-irish-butterflies/id310574311](<https://apps.apple.com/gb/app/british-irish-butterflies/id310574311>)
 - Keywords: Butterflies caterpillars lepidoptera
+- Web link: [https://apps.apple.com/gb/app/british-irish-butterflies/id310574311](<https://apps.apple.com/gb/app/british-irish-butterflies/id310574311>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260213074443/https://apps.apple.com/gb/app/british-irish-butterflies/id310574311](<https://web.archive.org/web/20260213074443/https://apps.apple.com/gb/app/british-irish-butterflies/id310574311>)
+- Verified at: 2026-10-26T19:44:22.928233+00:00
 
 ## butterflies-britain-ireland-new-2014-edition.html
 
@@ -1547,24 +2086,12 @@
 - Author(s): Jeremy Thomas & Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.britishwildlife.com/shop/?bookid=30](<https://www.britishwildlife.com/shop/?bookid=30>)
 - Keywords: BWP Briitish Wildlife Publishing Lepidoptera
-
-## butterflies-britain.html
-
-- Title: Butterflies of Britain
-- Submitted: Anonymous (not verified); 2015-06-16T09:21:00
-- Description:
-  Looking for an identification guide / chart to British butterflies?
-
-  This 8-panel laminated guide / chart - our most popular title - is designed for speedy butterfly identification in the field.
-
-  Colour illustrations, arranged so that similar looking species are grouped next to each other, show all the 57 butterfly species that you are likely to see. All are depicted at life size. The text gives further background information on the life-cycle, habitats and feeding patterns of butterflies.
-- Author(s): Bebbington & Lewington
-- Free: No
-- Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/butterflies-guide/](<https://www.field-studies-council.org/shop/publications/butterflies-guide/>)
-- Keywords: fold-out, fold out, FSC, invertebrates
+- Web link: [https://www.britishwildlife.com/shop/?bookid=30](<https://www.britishwildlife.com/shop/?bookid=30>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251214235526/https://www.britishwildlife.com/shop/?bookid=30](<https://web.archive.org/web/20251214235526/https://www.britishwildlife.com/shop/?bookid=30>)
+- Verified at: 2026-10-26T19:44:23.508849+00:00
 
 ## butterflies-norfolk.html
 
@@ -1576,7 +2103,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11...](<https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf>)
+- Web link: [https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/species-guides/](<https://norfolknaturalists.org.uk/wp/publications/species-guides/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Norfolk & Norwich Naturalists' Society page that hosts their collection of downloadable species guides, including 'Butterflies of Norfolk'.
+- Verified at: 2026-10-26T19:44:29.535286+00:00
 
 ## butterfly-id-europe-ispiny-pocket-guide-butterflies-and-day-flying-moths.html
 
@@ -1587,6 +2120,10 @@
 - Free: No
 - Available as: App
 - Web link: [https://apps.apple.com/gb/app/butterfly-guide-europe/id567698092](<https://apps.apple.com/gb/app/butterfly-guide-europe/id567698092>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260303190639/https://apps.apple.com/gb/app/butterfly-guide-europe/id567698092](<https://web.archive.org/web/20260303190639/https://apps.apple.com/gb/app/butterfly-guide-europe/id567698092>)
+- Verified at: 2026-10-26T19:44:23.656352+00:00
 
 ## carabidae-ground-beetles-britain-and-ireland.html
 
@@ -1596,8 +2133,12 @@
 - Author(s): Luff
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/carabidae-ground...](<https://www.field-studies-council.org/shop/publications/carabidae-ground-beetles/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/carabidae-ground-beetles/](<https://www.field-studies-council.org/shop/publications/carabidae-ground-beetles/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231003234735/https://www.field-studies-council.org/shop/publications/carabidae-ground-beetles/](<https://web.archive.org/web/20231003234735/https://www.field-studies-council.org/shop/publications/carabidae-ground-beetles/>)
+- Verified at: 2026-10-26T19:44:29.681876+00:00
 
 ## caterpillars-butterflies-britain-and-ireland-identification-guide.html
 
@@ -1607,8 +2148,12 @@
 - Author(s): Lewington & Bebbington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/caterpillars-guide/](<https://www.field-studies-council.org/shop/publications/caterpillars-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/caterpillars-guide/](<https://www.field-studies-council.org/shop/publications/caterpillars-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250718034348/https://www.field-studies-council.org/shop/publications/caterpillars-guide/](<https://web.archive.org/web/20250718034348/https://www.field-studies-council.org/shop/publications/caterpillars-guide/>)
+- Verified at: 2026-10-26T19:44:23.910632+00:00
 
 ## centipedes.html
 
@@ -1618,8 +2163,12 @@
 - Author(s): Barber
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/centipedes/](<https://www.field-studies-council.org/shop/publications/centipedes/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/centipedes/](<https://www.field-studies-council.org/shop/publications/centipedes/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250908001325/https://www.field-studies-council.org/shop/publications/centipedes/](<https://web.archive.org/web/20250908001325/https://www.field-studies-council.org/shop/publications/centipedes/>)
+- Verified at: 2026-10-26T19:44:24.543349+00:00
 
 ## checklist-collembola.html
 
@@ -1629,8 +2178,12 @@
 - Author(s): Bellinger, P.F., Christiansen, K.A. & Janssens, F
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.collembola.org](<http://www.collembola.org/>)
 - Keywords: Springtails
+- Web link: [http://www.collembola.org/](<http://www.collembola.org/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261008172045/https://www.collembola.org/](<https://web.archive.org/web/20261008172045/https://www.collembola.org/>)
+- Verified at: 2026-10-26T19:44:30.119166+00:00
 
 ## checklist-diptera.html
 
@@ -1640,8 +2193,12 @@
 - Author(s): Chandler
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
 - Keywords: Royal Entomological Society of London FSC entsoc true flies
+- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/](<https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/>)
+- Verified at: 2026-10-26T19:44:24.590406+00:00
 
 ## checklist-hymenoptera.html
 
@@ -1651,8 +2208,12 @@
 - Author(s): Fitton et al
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
 - Keywords: Royal Entomological Society of London FSC entsoc wasps bees and ants
+- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/](<https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/>)
+- Verified at: 2026-10-26T19:44:24.590561+00:00
 
 ## checklist-lepidoptera-british-isles.html
 
@@ -1662,8 +2223,12 @@
 - Author(s): Agassiz, Beavan & Heckford
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lepidoptera-chec...](<https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/>)
 - Keywords: Royal Entomological Society of London FSC entsoc butterflies and moths
+- Web link: [https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/](<https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231129074617/https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/](<https://web.archive.org/web/20231129074617/https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/>)
+- Verified at: 2026-10-26T19:44:37.996503+00:00
 
 ## checklist-recorded-uk-millipede-species.html
 
@@ -1676,8 +2241,12 @@
 - Author(s): British Myriapod and Isopod Group (BMIG)
 - Free: Yes
 - Available as: Online
-- Web link: [https://bmig.org.uk/page/millipede-checklist](<https://bmig.org.uk/page/millipede-checklist>)
 - Keywords: millipede, myriapod, checklist
+- Web link: [https://bmig.org.uk/page/millipede-checklist](<https://bmig.org.uk/page/millipede-checklist>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220307181110/https://www.bmig.org.uk/page/millipede-checklist](<https://web.archive.org/web/20220307181110/https://www.bmig.org.uk/page/millipede-checklist>)
+- Verified at: 2026-10-26T19:44:30.992588+00:00
 
 ## cheilostomatous-bryozoa-part-1-aeteoidea-cribrilinoidea-2nd-ed.html
 
@@ -1687,8 +2256,12 @@
 - Author(s): Hayward & Ryland
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/cheilostomatous-...](<https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-1/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-1/](<https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-1/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250809124519/https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-1/](<https://web.archive.org/web/20250809124519/https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-1/>)
+- Verified at: 2026-10-26T19:44:25.029400+00:00
 
 ## cheilostomatous-bryozoa-part-2-hippothooidea-celleporoidea-2nd-ed.html
 
@@ -1698,8 +2271,12 @@
 - Author(s): Hayward & Ryland
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/cheilostomatous-...](<https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-2/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-2/](<https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-2/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008005434/https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-2/](<https://web.archive.org/web/20251008005434/https://www.field-studies-council.org/shop/publications/cheilostomatous-bryozoa-2/>)
+- Verified at: 2026-10-26T19:44:25.508121+00:00
 
 ## chelifercom.html
 
@@ -1709,8 +2286,12 @@
 - Author(s): Gerald Legg
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.chelifer.com/?page_id=61](<https://www.chelifer.com/?page_id=61>)
 - Keywords: false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://www.chelifer.com/?page_id=61](<https://www.chelifer.com/?page_id=61>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250618170541/https://www.chelifer.com/?page_id=61](<https://web.archive.org/web/20250618170541/https://www.chelifer.com/?page_id=61>)
+- Verified at: 2026-10-26T19:44:28.935521+00:00
 
 ## churchyard-lichens.html
 
@@ -1720,7 +2301,11 @@
 - Author(s): Dobson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/churchyard-liche...](<https://www.field-studies-council.org/shop/publications/churchyard-lichens-identification-chart/>)
+- Web link: [https://www.field-studies-council.org/shop/publications/churchyard-lichens-identification-chart/](<https://www.field-studies-council.org/shop/publications/churchyard-lichens-identification-chart/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250805082228/https://www.field-studies-council.org/shop/publications/churchyard-lichens-identification-chart/](<https://web.archive.org/web/20250805082228/https://www.field-studies-council.org/shop/publications/churchyard-lichens-identification-chart/>)
+- Verified at: 2026-10-26T19:44:29.322799+00:00
 
 ## cladocera-interest-group-website.html
 
@@ -1735,8 +2320,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.boxvalley.co.uk/nature/cladocera/cindex.asp](<http://www.boxvalley.co.uk/nature/cladocera/cindex.asp>)
 - Keywords: WaterFleas Ephippia Daphnia Haplopoda Ctenopoda Anomopoda Onychopoda Plankton
+- Web link: [http://www.boxvalley.co.uk/nature/cladocera/cindex.asp](<http://www.boxvalley.co.uk/nature/cladocera/cindex.asp>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220705162845/http://www.boxvalley.co.uk/nature/cladocera/cindex.asp](<https://web.archive.org/web/20220705162845/http://www.boxvalley.co.uk/nature/cladocera/cindex.asp>)
+- Verified at: 2026-10-26T19:44:32.042310+00:00
 
 ## cladocera-key.html
 
@@ -1748,8 +2337,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627](<https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627>)
 - Keywords: Cladocer Key
+- Web link: [https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627](<https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261003225432/https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627](<https://web.archive.org/web/20261003225432/https://www.persee.fr/doc/linly_0366-1326_1984_num_53_3_10627>)
+- Verified at: 2026-10-26T19:44:31.891474+00:00
 
 ## cladonia-field-guide.html
 
@@ -1757,15 +2350,18 @@
 - Submitted: Anonymous (not verified); 2016-02-19T12:15:00
 - Description:
   The author writes: "Cladonia is an extensive and difficult genus of lichens, but one that is extremely valuable in defining many plant communities, particularly heathlands. There is therefore a need for a fairly simple field guide for the use of the nonspecialist. The original idea of writing this guide came about because I was having great difficulty identifying the species in the field and grew tired of having to collect copious
-
   specimens for later determination. A “first draft” was produced, which was distributed to whoever expressed an interest, mostly NCC personnel. This was a very rough and ready document, and clearly needed a great deal of modification, so this revised version was written.
 - Author(s): N. G. Hodgetts
 - Free: Yes
 - Available as:
   - Online
   - PDF
-- Web link: [https://jncc.gov.uk/](<https://jncc.gov.uk/>)
 - Keywords: Lichen Lichens
+- Web link: [https://jncc.gov.uk/](<https://jncc.gov.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261020092244/https://jncc.gov.uk/](<https://web.archive.org/web/20261020092244/https://jncc.gov.uk/>)
+- Verified at: 2026-10-26T19:44:30.407013+00:00
 
 ## cloud-name-trail.html
 
@@ -1777,8 +2373,12 @@
 - Author(s): Swain &Walker
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/cloud-name-trail/](<https://www.field-studies-council.org/shop/publications/cloud-name-trail/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/cloud-name-trail/](<https://www.field-studies-council.org/shop/publications/cloud-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250809113910/https://www.field-studies-council.org/shop/publications/cloud-name-trail/](<https://web.archive.org/web/20250809113910/https://www.field-studies-council.org/shop/publications/cloud-name-trail/>)
+- Verified at: 2026-10-26T19:44:32.347047+00:00
 
 ## coleoptera-clambidae.html
 
@@ -1788,8 +2388,12 @@
 - Author(s): Johnson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
 - Keywords: Royal Entomological Society of London FSC entsoc minute or fringe-winged beetles
+- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/](<https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/>)
+- Verified at: 2026-10-26T19:44:24.590616+00:00
 
 ## coleoptera-curculionidae-entiminae-broad-nosed-weevils.html
 
@@ -1799,8 +2403,12 @@
 - Author(s): Morris
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/broad-nosed-weev...](<https://www.field-studies-council.org/shop/publications/broad-nosed-weevils/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/broad-nosed-weevils/](<https://www.field-studies-council.org/shop/publications/broad-nosed-weevils/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230530133326/https://www.field-studies-council.org/shop/publications/broad-nosed-weevils/](<https://web.archive.org/web/20230530133326/https://www.field-studies-council.org/shop/publications/broad-nosed-weevils/>)
+- Verified at: 2026-10-26T19:44:36.458722+00:00
 
 ## coleoptera-family-keys.html
 
@@ -1810,8 +2418,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/view/mikes-insect-keys](<https://sites.google.com/view/mikes-insect-keys>)
 - Keywords: Coleoptera, Beetle, Families, Arthropoda
+- Web link: [https://sites.google.com/view/mikes-insect-keys](<https://sites.google.com/view/mikes-insect-keys>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260114190131/https://sites.google.com/view/mikes-insect-keys](<https://web.archive.org/web/20260114190131/https://sites.google.com/view/mikes-insect-keys>)
+- Verified at: 2026-10-26T19:44:32.690533+00:00
 
 ## coleoptera-kateretidae-nitudulidae-meligethinae-pollen-beetles.html
 
@@ -1821,8 +2433,12 @@
 - Author(s): Kirk-Spriggs
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/pollen-beetles/](<https://www.field-studies-council.org/shop/publications/pollen-beetles/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/pollen-beetles/](<https://www.field-studies-council.org/shop/publications/pollen-beetles/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231209174412/https://www.field-studies-council.org/shop/publications/pollen-beetles/](<https://web.archive.org/web/20231209174412/https://www.field-studies-council.org/shop/publications/pollen-beetles/>)
+- Verified at: 2026-10-26T19:44:42.163702+00:00
 
 ## collembola-taxonomy.html
 
@@ -1834,8 +2450,15 @@
 - Author(s): Peter Shaw/Steve Hopkin
 - Free: Yes
 - Available as: Online
-- Web link: [http://urweb.roehampton.ac.uk/collembola//taxonomy/](<http://urweb.roehampton.ac.uk/collembola//taxonomy/>)
 - Keywords: Springtails, soil, mesofauna
+- Web link: [http://urweb.roehampton.ac.uk/collembola//taxonomy/](<http://urweb.roehampton.ac.uk/collembola//taxonomy/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210227035643/http://urweb.roehampton.ac.uk/collembola/taxonomy/](<https://web.archive.org/web/20210227035643/http://urweb.roehampton.ac.uk/collembola/taxonomy/>)
+- Alternative link: [https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html](<https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the updated, secure URL for the Collembola Taxonomy guide originally hosted at the broken link provided.
+- Verified at: 2026-10-26T19:44:37.684869+00:00
 
 ## collins-tree-guide.html
 
@@ -1843,13 +2466,18 @@
 - Submitted: rich burkmar; 2015-07-02T10:34:00
 - Description:
   Over 1500 trees of Britain and Northern Europe described, with pictures of the whole tree, flowers, leaves and twigs. Each species is described and illustrated on the same page.
-
   464pp, with outstanding colour paintings by David More.
 - Author(s): Owen Johnson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/collins-tree-guide-paperback-ve...](<https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969>)
 - Keywords: conifers
+- Web link: [https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969](<https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://woodland-ways.co.uk/products/collins-tree-guide-hardback](<https://woodland-ways.co.uk/products/collins-tree-guide-hardback>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is a direct product page for the book, offering a detailed description and purchase option.
+- Verified at: 2026-10-26T19:44:45.363029+00:00
 
 ## colour-identification-guide-grasses-sedges-rushes-and-ferns.html
 
@@ -1859,7 +2487,14 @@
 - Author(s): Francis Rose
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%...](<https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207>)
+- Web link: [https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207](<https://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160704213724/http://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207](<https://web.archive.org/web/20160704213724/http://www.summerfieldbooks.com/colour-identification-guide-to-grasses%2C-sedges%2C-rushes-and-ferns~207>)
+- Alternative link: [https://www.summerfieldbooks.com/product/colour-identification-guide-to-grasses-sedges-rushes-and-ferns/](<https://www.summerfieldbooks.com/product/colour-identification-guide-to-grasses-sedges-rushes-and-ferns/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the specific product page for the book on the publisher/retailer's website, which replaces the broken link provided.
+- Verified at: 2026-10-26T19:44:41.706988+00:00
 
 ## commensal-and-parasitic-copepods-associated-marine-invertebrates-2nd-ed.html
 
@@ -1869,8 +2504,12 @@
 - Author(s): Gotto
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/commensal-and-pa...](<https://www.field-studies-council.org/shop/publications/commensal-and-parasitic-copepods/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/commensal-and-parasitic-copepods/](<https://www.field-studies-council.org/shop/publications/commensal-and-parasitic-copepods/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815152633/https://www.field-studies-council.org/shop/publications/commensal-and-parasitic-copepods/](<https://web.archive.org/web/20250815152633/https://www.field-studies-council.org/shop/publications/commensal-and-parasitic-copepods/>)
+- Verified at: 2026-10-26T19:44:32.920114+00:00
 
 ## common-bush-crickets-and-grasshoppers.html
 
@@ -1880,8 +2519,12 @@
 - Author(s): www.orthoptera.org.uk//
 - Free: Yes
 - Available as: Online
-- Web link: [https://orthoptera.org.uk/](<https://orthoptera.org.uk/>)
 - Keywords: Orthoptera, invertebrates
+- Web link: [https://orthoptera.org.uk/](<https://orthoptera.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261005205748/https://orthoptera.org.uk/](<https://web.archive.org/web/20261005205748/https://orthoptera.org.uk/>)
+- Verified at: 2026-10-26T19:44:33.323616+00:00
 
 ## common-grass-moths-berkshire-vc22.html
 
@@ -1893,9 +2536,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09.pdf](<https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09.pdf>)
-- Additional web link: [High res version](<https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09HiRes.pdf>)
 - Keywords: lepidoptera, micro moths, micro-moths
+- Web link: [https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09.pdf](<https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09.pdf>)
+- Additional web link: [https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09HiRes.pdf](<https://sites.google.com/site/berksmoths/resources/CrambinaeEd2March09HiRes.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:44:48.582854+00:00
 
 ## common-micro-moths-berkshire.html
 
@@ -1905,8 +2551,12 @@
 - Author(s): Berkshire Moth Group
 - Free: No
 - Available as: Publication
-- Web link: [https://sites.google.com/site/berksmoths/Home/resource_list/microbook](<https://sites.google.com/site/berksmoths/Home/resource_list/microbook>)
 - Keywords: lepidoptera, micro moths
+- Web link: [https://sites.google.com/site/berksmoths/Home/resource_list/microbook](<https://sites.google.com/site/berksmoths/Home/resource_list/microbook>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20230330151847/https://sites.google.com/site/berksmoths/Home/resource_list/microbook](<https://web.archive.org/web/20230330151847/https://sites.google.com/site/berksmoths/Home/resource_list/microbook>)
+- Verified at: 2026-10-26T19:44:33.844256+00:00
 
 ## common-seashells.html
 
@@ -1916,8 +2566,12 @@
 - Author(s): FSC & Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/seashells-guide/](<https://www.field-studies-council.org/shop/publications/seashells-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/seashells-guide/](<https://www.field-studies-council.org/shop/publications/seashells-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250707224831/https://www.field-studies-council.org/shop/publications/seashells-guide/](<https://web.archive.org/web/20250707224831/https://www.field-studies-council.org/shop/publications/seashells-guide/>)
+- Verified at: 2026-10-26T19:44:33.946644+00:00
 
 ## common-seaweeds.html
 
@@ -1927,8 +2581,12 @@
 - Author(s): Morrell & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/seaweeds-guide/](<https://www.field-studies-council.org/shop/publications/seaweeds-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/seaweeds-guide/](<https://www.field-studies-council.org/shop/publications/seaweeds-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250809130124/https://www.field-studies-council.org/shop/publications/seaweeds-guide/](<https://web.archive.org/web/20250809130124/https://www.field-studies-council.org/shop/publications/seaweeds-guide/>)
+- Verified at: 2026-10-26T19:44:34.312523+00:00
 
 ## common-topshells-introduction-biology-osilinus-lineatus-notes-other-species-genus.html
 
@@ -1940,8 +2598,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies, 10 , (2001) 115 - 160
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283515+00:00
 
 ## commoner-water-plants.html
 
@@ -1949,17 +2611,19 @@
 - Submitted: Anonymous (not verified); 2015-06-16T09:31:00
 - Description:
   Need an identification guide to water plants?
-
   This 12-panel laminated fold-out chart is designed to help you to name the commoner plants of permanent bodies of still and slow-flowing water, e.g. ponds, lakes, canals and slow-flowing rivers and streams.
-
   The section on ecology looks in particular at the role of water quality and nutrient status in the distribution of plants. Advice is given on the importance of plants in garden ponds and on how to manage them. The ecological process of succession is described and illustrated.
 
   This chart is suitable for GCSE and AS/A2 fieldwork investigations into a hydrosere.
 - Author(s): Orton, Bebbington & Bebbington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/water-plants-guide/](<https://www.field-studies-council.org/shop/publications/water-plants-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/water-plants-guide/](<https://www.field-studies-council.org/shop/publications/water-plants-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251231153446/https://www.field-studies-council.org/shop/publications/water-plants-guide/](<https://web.archive.org/web/20251231153446/https://www.field-studies-council.org/shop/publications/water-plants-guide/>)
+- Verified at: 2026-10-26T19:44:34.859991+00:00
 
 ## comon-urban-wall-ferns.html
 
@@ -1973,6 +2637,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637489+00:00
 
 ## conchological-society-encyclopedia-marine-molluscs.html
 
@@ -1982,8 +2650,12 @@
 - Author(s): Conchological Society of Britain and Ireland
 - Free: Yes
 - Available as: Online
-- Web link: [https://conchsoc.org/encyclopedia](<https://conchsoc.org/encyclopedia>)
 - Keywords: Mollusca Bivalves Snails Chitons Cephalopods
+- Web link: [https://conchsoc.org/encyclopedia](<https://conchsoc.org/encyclopedia>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825121117/https://conchsoc.org/encyclopedia](<https://web.archive.org/web/20260825121117/https://conchsoc.org/encyclopedia>)
+- Verified at: 2026-10-26T19:44:35.333990+00:00
 
 ## concise-guide-moths-great-britain-and-ireland.html
 
@@ -1993,8 +2665,12 @@
 - Author(s): Martin Townsend & Paul Waring, illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.britishwildlife.com/shop/?bookid=6](<https://www.britishwildlife.com/shop/?bookid=6>)
 - Keywords: BWP Briitish Wildlife Publishing Lepidoptera
+- Web link: [https://www.britishwildlife.com/shop/?bookid=6](<https://www.britishwildlife.com/shop/?bookid=6>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20210126023315/https://www.britishwildlife.com/shop?bookid=6](<https://web.archive.org/web/20210126023315/https://www.britishwildlife.com/shop?bookid=6>)
+- Verified at: 2026-10-26T19:44:38.297462+00:00
 
 ## conifers-britain.html
 
@@ -2004,8 +2680,12 @@
 - Author(s): Matt Parratt
 - Free: Yes
 - Available as: Online
-- Web link: [https://conifers.fscbiodiversity.uk/](<https://conifers.fscbiodiversity.uk/>)
 - Keywords: conifers trees fsc identikit
+- Web link: [https://conifers.fscbiodiversity.uk/](<https://conifers.fscbiodiversity.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260215070444/https://conifers.fscbiodiversity.uk/](<https://web.archive.org/web/20260215070444/https://conifers.fscbiodiversity.uk/>)
+- Verified at: 2026-10-26T19:44:36.020252+00:00
 
 ## conifers-british-isles-descriptive-handbook.html
 
@@ -2015,8 +2695,11 @@
 - Author(s): Alan F. Mitchell
 - Free: No
 - Available as: Publication
-- Web link: [https://books.google.co.uk/books?id=l6YsAQAAMAAJ&q=Conifers+in+the+Briti...](<https://books.google.co.uk/books?id=l6YsAQAAMAAJ&q=Conifers+in+the+British+Isles&dq=Conifers+in+the+British+Isles&hl=en&sa=X&ei=IA-VVdXDF-ud7gbE-J7QAg&ved=0CCoQ6AEwAA>)
 - Keywords: Forestry Commission booklet 33
+- Web link: [https://books.google.co.uk/books?id=l6YsAQAAMAAJ&q=Conifers+in+the+British+Isles&dq=Conifers+in+the+British+Isles&hl=en&sa=X&ei=IA-VVdXDF-ud7gbE-J7QAg&ved=0CCoQ6AEwAA](<https://books.google.co.uk/books?id=l6YsAQAAMAAJ&q=Conifers+in+the+British+Isles&dq=Conifers+in+the+British+Isles&hl=en&sa=X&ei=IA-VVdXDF-ud7gbE-J7QAg&ved=0CCoQ6AEwAA>)
+- Web link status: 429
+- Web link state: unverified
+- Web link resolved: [https://www.google.com/sorry/index?continue=https://books.google.co.uk/books%3Fid%3Dl6YsAQAAMAAJ%26q%3DConifers%2Bin%2Bthe%2BBritish%2BIsles%26dq%3DConifers%2Bin%2Bthe%2BBritish%2BIsles%26hl%3Den%26sa%3DX%26ei%3DIA-VVdXDF-ud7gbE-J7QAg%26ved%3D0CCoQ6AEwAA&hl=en&q=EgRV_-3jGKPb_tYGIi2jY9YijStOTKvwt3cK3-Yc936aPu8rDD04WQOVqO4vDw0rco3BRRTKX6nN_OkyAnJSWgFDYODewovq2bzs2wE](<https://www.google.com/sorry/index?continue=https://books.google.co.uk/books%3Fid%3Dl6YsAQAAMAAJ%26q%3DConifers%2Bin%2Bthe%2BBritish%2BIsles%26dq%3DConifers%2Bin%2Bthe%2BBritish%2BIsles%26hl%3Den%26sa%3DX%26ei%3DIA-VVdXDF-ud7gbE-J7QAg%26ved%3D0CCoQ6AEwAA&hl=en&q=EgRV_-3jGKPb_tYGIi2jY9YijStOTKvwt3cK3-Yc936aPu8rDD04WQOVqO4vDw0rco3BRRTKX6nN_OkyAnJSWgFDYODewovq2bzs2wE>)
 
 ## conopids.html
 
@@ -2027,6 +2710,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/british.conopids/](<https://www.facebook.com/groups/british.conopids/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:44:39.325537+00:00
 
 ## copepods-parastic-fishes-revised.html
 
@@ -2036,8 +2722,12 @@
 - Author(s): Kabata
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/copepods-parasti...](<https://www.field-studies-council.org/shop/publications/copepods-parastic-on-fishes/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/copepods-parastic-on-fishes/](<https://www.field-studies-council.org/shop/publications/copepods-parastic-on-fishes/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261016150827/https://www.field-studies-council.org/shop/publications/copepods-parastic-on-fishes/](<https://web.archive.org/web/20261016150827/https://www.field-studies-council.org/shop/publications/copepods-parastic-on-fishes/>)
+- Verified at: 2026-10-26T19:44:39.862291+00:00
 
 ## creeping-forget-me-not-id-video.html
 
@@ -2048,6 +2738,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=NE1m-oDf7ks](<https://www.youtube.com/watch?v=NE1m-oDf7ks>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251205125120/https://www.youtube.com/watch?v=NE1m-oDf7ks](<https://web.archive.org/web/20251205125120/https://www.youtube.com/watch?v=NE1m-oDf7ks>)
+- Verified at: 2026-10-26T19:44:40.614600+00:00
 
 ## cyclostome-bryozoans.html
 
@@ -2057,8 +2751,16 @@
 - Author(s): Hayward & Ryland
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/cyclostome-bryoz...](<https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/](<https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20240916020321/https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/](<https://web.archive.org/web/20240916020321/https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/>)
+- Alternative link: [https://brill.com/display/title/15779](<https://brill.com/display/title/15779>)
+- Alternative probability: 0.60
+- Alternative reasoning: Brill is the original publisher of this specific volume (No. 34) in the series and maintains a dedicated page for the book's bibliographic details.
+- Verified at: 2026-10-26T19:44:48.336321+00:00
 
 ## dandelions-taraxacum-britain-and-ireland.html
 
@@ -2069,6 +2771,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/1008799279201801/](<https://www.facebook.com/groups/1008799279201801/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221021094814/https://www.facebook.com/groups/1008799279201801/](<https://web.archive.org/web/20221021094814/https://www.facebook.com/groups/1008799279201801/>)
+- Verified at: 2026-10-26T19:44:40.366784+00:00
 
 ## day-flying-moths-identification-guide.html
 
@@ -2078,8 +2784,12 @@
 - Author(s): Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/moths-guide/](<https://www.field-studies-council.org/shop/publications/moths-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/moths-guide/](<https://www.field-studies-council.org/shop/publications/moths-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251007032134/https://www.field-studies-council.org/shop/publications/moths-guide/](<https://web.archive.org/web/20251007032134/https://www.field-studies-council.org/shop/publications/moths-guide/>)
+- Verified at: 2026-10-26T19:44:40.785786+00:00
 
 ## de-nederlandse-hooiwagens-opiliones.html
 
@@ -2089,9 +2799,13 @@
 - Author(s): Hay Wijnhoven
 - Free: No
 - Available as: Publication
-- Web link: [https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opilion...](<https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opiliones/19081/>)
-- Additional web link: [English translation (free)](<http://srs.britishspiders.org.uk/portal.php/p/Harvestman+Resources>)
 - Keywords: opiliones, opilionids
+- Web link: [https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opiliones/19081/](<https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opiliones/19081/>)
+- Additional web link: [http://srs.britishspiders.org.uk/portal.php/p/Harvestman+Resources](<http://srs.britishspiders.org.uk/portal.php/p/Harvestman+Resources>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260615231916/https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opiliones/19081/](<https://web.archive.org/web/20260615231916/https://www.pemberleybooks.com/product/de-nederlandse-hooiwagens-opiliones/19081/>)
+- Verified at: 2026-10-26T19:44:44.202126+00:00
 
 ## describing-flowers.html
 
@@ -2101,8 +2815,12 @@
 - Author(s): Bebbington & Bebbington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/describing-flowers/](<https://www.field-studies-council.org/shop/publications/describing-flowers/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/describing-flowers/](<https://www.field-studies-council.org/shop/publications/describing-flowers/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815215145/https://www.field-studies-council.org/shop/publications/describing-flowers/](<https://web.archive.org/web/20250815215145/https://www.field-studies-council.org/shop/publications/describing-flowers/>)
+- Verified at: 2026-10-26T19:44:42.844133+00:00
 
 ## diatom-flora-britain-and-ireland.html
 
@@ -2114,8 +2832,11 @@
 - Author(s): Jüttner I., Bennion H., Carter C., Cox E.J., Ector L., Flower R., Jones V., Kelly M.G., Mann D.G., Sayer C., Turner, J. A., Williams D.M.
 - Free: Yes
 - Available as: Online
-- Web link: [http://naturalhistory.museumwales.ac.uk/Diatoms/](<http://naturalhistory.museumwales.ac.uk/Diatoms/>)
 - Keywords: microscopic microorganism aquatic phytoplankton plankton algae algal
+- Web link: [http://naturalhistory.museumwales.ac.uk/Diatoms/](<http://naturalhistory.museumwales.ac.uk/Diatoms/>)
+- Web link status: 503
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20260907235612/http://naturalhistory.museumwales.ac.uk/diatoms/](<https://web.archive.org/web/20260907235612/http://naturalhistory.museumwales.ac.uk/diatoms/>)
 
 ## difficult-seashell-identification-guide.html
 
@@ -2125,31 +2846,29 @@
 - Author(s): Ian Wallace
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Shell identification February%...](<http://www.record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2%5B18042012%5D.pdf>)
-- Additional web link: [guide to Life on Sandy Shores between Co](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
 - Keywords: Shells shell seashell Liverpool
+- Web link: [http://www.record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2%5B18042012%5D.pdf>)
+- Additional web link: [http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.record-lrc.co.uk/downloads/Shell%20identification%20February%202012%20version2%5b18042012%5d.pdf](<https://www.record-lrc.co.uk/downloads/Shell%20identification%20February%202012%20version2%5b18042012%5d.pdf>)
+- Wayback link: [https://web.archive.org/web/20240228170518/https://record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2[18042012].pdf](<https://web.archive.org/web/20240228170518/https://record-lrc.co.uk/Downloads/Shell%20identification%20February%202012%20version2[18042012].pdf>)
+- Verified at: 2026-10-26T19:44:47.451796+00:00
 
 ## draft-key-british-blowflies-calliphoridae-and-woodlouse-flies-rhinophoridae.html
 
 - Title: Draft key to British blowflies (Calliphoridae) and woodlouse flies (Rhinophoridae)
 - Submitted: Anonymous (not verified); 2016-06-01T15:32:00
-- Description: This is a test version. This informal publication attempts to update the resources currently available for identifying the families Calliphoridae and Rhinophoridae. Please send any feedback on this test version to [[email protected]](../cdn-cgi/l/email-protection.html)
+- Description: This is a test version. This informal publication attempts to update the resources currently available for identifying the families Calliphoridae and Rhinophoridae. Please send any feedback on this test version to [[email protected]](https://www.fscbiodiversity.uk/cdn-cgi/l/email-protection.html)
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf](<http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf>)
 - Keywords: veterinary forensic forensics vet sheep strike bluebottle
-
-## dragonflies-and-damselflies-britain-and-ireland.html
-
-- Title: Dragonflies and Damselflies of Britain and Ireland
-- Submitted: rich burkmar; 2015-06-06T10:07:00
-- Description: A comprehensive field guide to the dragonflies and damselflies of Britain and Ireland.
-- Author(s): Nature Guides Ltd
-- Free: No
-- Available as: App
-- Web link: [https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286](<https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286>)
-- Keywords: dragonfly damselfly odonata odonate
+- Web link: [http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf](<http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260901005515/http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf](<https://web.archive.org/web/20260901005515/http://www.stevenfalk.co.uk/files/21577/testkeytobritishblowflies132016.pdf>)
+- Verified at: 2026-10-26T19:44:45.112078+00:00
 
 ## dragonflies-and-damselflies-britain.html
 
@@ -2162,21 +2881,27 @@
 - Author(s): Brooks & Askew
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/dragonflies-guide/](<https://www.field-studies-council.org/shop/publications/dragonflies-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/dragonflies-guide/](<https://www.field-studies-council.org/shop/publications/dragonflies-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916132530/https://www.field-studies-council.org/shop/publications/dragonflies-guide/](<https://web.archive.org/web/20250916132530/https://www.field-studies-council.org/shop/publications/dragonflies-guide/>)
+- Verified at: 2026-10-26T19:44:45.656119+00:00
 
-## dreaded-scopariinae-–-some-notes-identification-2.html
+## dragonflies-and-damselflies-britain-and-ireland.html
 
-- Title: The Dreaded Scopariinae – some notes on identification
-- Submitted: Anonymous (not verified); 2015-08-11T08:04:00
-- Description:
-  You may think that all the Scoparia and Eudonia micro-moth species look the same! These notes describe how
-  to differentiate particular species pairs.
-- Author(s): Tony Davis
-- Free: Yes
-- Available as: Online
-- Web link: [http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
-- Keywords: micro-moths micro moths micros
+- Title: Dragonflies and Damselflies of Britain and Ireland
+- Submitted: rich burkmar; 2015-06-06T10:07:00
+- Description: A comprehensive field guide to the dragonflies and damselflies of Britain and Ireland.
+- Author(s): Nature Guides Ltd
+- Free: No
+- Available as: App
+- Keywords: dragonfly damselfly odonata odonate
+- Web link: [https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286](<https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260917201245/https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286](<https://web.archive.org/web/20260917201245/https://apps.apple.com/gb/app/dragonflies-damselflies/id436991286>)
+- Verified at: 2026-10-26T19:44:45.894797+00:00
 
 ## dreaded-scopariinae-–-some-notes-identification.html
 
@@ -2188,8 +2913,27 @@
 - Author(s): Tony Davis
 - Free: Yes
 - Available as: Online
-- Web link: [http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
 - Keywords: micro-moths micro moths micros
+- Web link: [http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
+
+## dreaded-scopariinae-–-some-notes-identification-2.html
+
+- Title: The Dreaded Scopariinae – some notes on identification
+- Submitted: Anonymous (not verified); 2015-08-11T08:04:00
+- Description:
+  You may think that all the Scoparia and Eudonia micro-moth species look the same! These notes describe how
+  to differentiate particular species pairs.
+- Author(s): Tony Davis
+- Free: Yes
+- Available as: Online
+- Keywords: micro-moths micro moths micros
+- Web link: [http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
 
 ## ducks-geese-and-swans.html
 
@@ -2199,8 +2943,12 @@
 - Author(s): Norman & Langman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ducks-geese-and-...](<https://www.field-studies-council.org/shop/publications/ducks-geese-and-swans-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/ducks-geese-and-swans-guide/](<https://www.field-studies-council.org/shop/publications/ducks-geese-and-swans-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250913224036/https://www.field-studies-council.org/shop/publications/ducks-geese-and-swans-guide/](<https://web.archive.org/web/20250913224036/https://www.field-studies-council.org/shop/publications/ducks-geese-and-swans-guide/>)
+- Verified at: 2026-10-26T19:44:47.112486+00:00
 
 ## dutch-harvestmen-website.html
 
@@ -2210,8 +2958,12 @@
 - Author(s): Jan van Duine
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.janvanduinen.nl/opilionesengels.php](<https://www.janvanduinen.nl/opilionesengels.php>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.janvanduinen.nl/opilionesengels.php](<https://www.janvanduinen.nl/opilionesengels.php>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260612114046/https://www.janvanduinen.nl/opilionesengels.php](<https://web.archive.org/web/20260612114046/https://www.janvanduinen.nl/opilionesengels.php>)
+- Verified at: 2026-10-26T19:44:48.052180+00:00
 
 ## dutch-opiliones-harvestmen.html
 
@@ -2221,8 +2973,13 @@
 - Author(s): Jan J van Duinen
 - Free: Yes
 - Available as: Online
-- Web link: [www.janvanduinen.nl/opilionesengels.php](<http://www.janvanduinen.nl/opilionesengels.php>)
 - Keywords: Opilionids
+- Web link: [http://www.janvanduinen.nl/opilionesengels.php](<http://www.janvanduinen.nl/opilionesengels.php>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.janvanduinen.nl/opilionesengels.php](<https://www.janvanduinen.nl/opilionesengels.php>)
+- Wayback link: [https://web.archive.org/web/20260612114046/https://www.janvanduinen.nl/opilionesengels.php](<https://web.archive.org/web/20260612114046/https://www.janvanduinen.nl/opilionesengels.php>)
+- Verified at: 2026-10-26T19:44:49.154890+00:00
 
 ## earthworm-identikit.html
 
@@ -2235,9 +2992,13 @@
 - Author(s): Sherlock, Burkmar, Bell
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.earthwormsoc.org.uk/fullscreen/earthwormkey](<https://www.earthwormsoc.org.uk/fullscreen/earthwormkey>)
 - Keywords: Lumbricidae fsc identikit
 - Comment Body: This tool can now be found at http://www.earthwormsoc.org.uk/fullscreen/earthwormkey
+- Web link: [https://www.earthwormsoc.org.uk/fullscreen/earthwormkey](<https://www.earthwormsoc.org.uk/fullscreen/earthwormkey>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260627022824/https://www.earthwormsoc.org.uk/fullscreen/earthwormkey](<https://web.archive.org/web/20260627022824/https://www.earthwormsoc.org.uk/fullscreen/earthwormkey>)
+- Verified at: 2026-10-26T19:44:49.023316+00:00
 
 ## earthworms-synopsis.html
 
@@ -2247,8 +3008,12 @@
 - Author(s): Sims & Gerard
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/earthworms-synop...](<https://www.field-studies-council.org/shop/publications/earthworms-synopsis/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/earthworms-synopsis/](<https://www.field-studies-council.org/shop/publications/earthworms-synopsis/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250707233606/https://www.field-studies-council.org/shop/publications/earthworms-synopsis/](<https://web.archive.org/web/20250707233606/https://www.field-studies-council.org/shop/publications/earthworms-synopsis/>)
+- Verified at: 2026-10-26T19:44:49.454171+00:00
 
 ## earwigs-cockroaches-and-stick-insects.html
 
@@ -2258,8 +3023,12 @@
 - Author(s): www.orthoptera.org.uk//
 - Free: Yes
 - Available as: Online
-- Web link: [https://orthoptera.org.uk/](<https://orthoptera.org.uk/>)
 - Keywords: invertebrates
+- Web link: [https://orthoptera.org.uk/](<https://orthoptera.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261005205748/https://orthoptera.org.uk/](<https://web.archive.org/web/20261005205748/https://orthoptera.org.uk/>)
+- Verified at: 2026-10-26T19:44:33.324015+00:00
 
 ## echinoderms.html
 
@@ -2269,8 +3038,15 @@
 - Author(s): Southwood & Campbell
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/echinoderms/](<https://www.field-studies-council.org/shop/publications/echinoderms/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/echinoderms/](<https://www.field-studies-council.org/shop/publications/echinoderms/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Alternative link: [https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616](<https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616>)
+- Alternative probability: 0.85
+- Alternative reasoning: This is a direct product page for the specific publication mentioned, which is a common source for purchasing such identification guides.
+- Verified at: 2026-10-26T19:45:00.181661+00:00
 
 ## elateridae-british-isles.html
 
@@ -2281,6 +3057,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.coleoptera.org.uk/home](<https://www.coleoptera.org.uk/home>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260829083227/https://coleoptera.org.uk/home](<https://web.archive.org/web/20260829083227/https://coleoptera.org.uk/home>)
+- Verified at: 2026-10-26T19:44:49.630690+00:00
 
 ## english-translation-accompany-de-nederlandse-hooiwagens-opiliones.html
 
@@ -2297,11 +3077,16 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://srs.britishspiders.org.uk/resource/De\_Hooiwagens\_1st\_revision1406...](<http://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf>)
-- Additional web link:
-  - [De Nederlandse hooiwagens from Pemberley](<http://www.pemberleybooks.com/Search.asp?Keywords=De%20Nederlandse%20hooiwagens&%3BSearchCategory=0&%3BbtnSearch.x=23&%3BbtnSearch.y=12>)
-  - [Entomologische Tabellen](<https://www.naturalis.nl/wetenschap>)
 - Keywords: Opilionids
+- Web link: [http://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf](<http://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf>)
+- Additional web link:
+  - [http://www.pemberleybooks.com/Search.asp?Keywords=De%20Nederlandse%20hooiwagens&%3BSearchCategory=0&%3BbtnSearch.x=23&%3BbtnSearch.y=12](<http://www.pemberleybooks.com/Search.asp?Keywords=De%20Nederlandse%20hooiwagens&%3BSearchCategory=0&%3BbtnSearch.x=23&%3BbtnSearch.y=12>)
+  - [https://www.naturalis.nl/wetenschap](<https://www.naturalis.nl/wetenschap>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://britishspiders.org.uk/atlas/resource/De_Hooiwagens_1st_revision140615.pdf](<https://britishspiders.org.uk/atlas/resource/De_Hooiwagens_1st_revision140615.pdf>)
+- Wayback link: [https://web.archive.org/web/20240423144855/https://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf](<https://web.archive.org/web/20240423144855/https://srs.britishspiders.org.uk/resource/De_Hooiwagens_1st_revision140615.pdf>)
+- Verified at: 2026-10-26T19:45:07.313663+00:00
 
 ## entoprocts.html
 
@@ -2311,8 +3096,12 @@
 - Author(s): Nielson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/entoprocts/](<https://www.field-studies-council.org/shop/publications/entoprocts/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/entoprocts/](<https://www.field-studies-council.org/shop/publications/entoprocts/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250718020022/https://www.field-studies-council.org/shop/publications/entoprocts/](<https://web.archive.org/web/20250718020022/https://www.field-studies-council.org/shop/publications/entoprocts/>)
+- Verified at: 2026-10-26T19:44:55.494113+00:00
 
 ## euphausiid-stomatopod-and-leptostracan-crustaceans.html
 
@@ -2322,8 +3111,12 @@
 - Author(s): Mauchline
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/euphausiid-crust...](<https://www.field-studies-council.org/shop/publications/euphausiid-crustaceans/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/euphausiid-crustaceans/](<https://www.field-studies-council.org/shop/publications/euphausiid-crustaceans/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250618033517/https://www.field-studies-council.org/shop/publications/euphausiid-crustaceans/](<https://web.archive.org/web/20250618033517/https://www.field-studies-council.org/shop/publications/euphausiid-crustaceans/>)
+- Verified at: 2026-10-26T19:44:55.902962+00:00
 
 ## eyewitness-handbook-trees.html
 
@@ -2333,8 +3126,11 @@
 - Author(s): Allen J. Coombes
 - Free: No
 - Available as: Publication
-- Web link: [https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+(Eyewitness+...](<https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+%28Eyewitness+Handbooks%29&hl=en&sa=X&ei=dRCVVev-OaWE7gbZv4DYAg&ved=0CCoQ6AEwAA>)
 - Keywords: conifers
+- Web link: [https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+%28Eyewitness+Handbooks%29&hl=en&sa=X&ei=dRCVVev-OaWE7gbZv4DYAg&ved=0CCoQ6AEwAA](<https://books.google.co.uk/books?id=bESknQEACAAJ&dq=Trees+%28Eyewitness+Handbooks%29&hl=en&sa=X&ei=dRCVVev-OaWE7gbZv4DYAg&ved=0CCoQ6AEwAA>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:44:52.757495+00:00
 
 ## farmland-bird-id-guide.html
 
@@ -2346,7 +3142,11 @@
 - Author(s): RSPB, GWCT
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-...](<http://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-guide/>)
+- Web link: [http://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-guide/](<http://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260611173721/https://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-guide/](<https://web.archive.org/web/20260611173721/https://www.gwct.org.uk/farming/big-farmland-bird-count/farmland-bird-id-guide/>)
+- Verified at: 2026-10-26T19:44:53.235036+00:00
 
 ## features-pennine-way.html
 
@@ -2359,8 +3159,15 @@
 - Author(s): Field Studies Council
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/pennine-way/](<https://www.field-studies-council.org/shop/publications/pennine-way/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/pennine-way/](<https://www.field-studies-council.org/shop/publications/pennine-way/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220703090425/https://www.field-studies-council.org/shop/publications/pennine-way/](<https://web.archive.org/web/20220703090425/https://www.field-studies-council.org/shop/publications/pennine-way/>)
+- Alternative link: [https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/](<https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This site is a specialist retailer that currently lists the 'Features of the Pennine Way' fold-out chart as in stock and available for purchase.
+- Verified at: 2026-10-26T19:45:09.236840+00:00
 
 ## features-serpent-trail.html
 
@@ -2370,8 +3177,12 @@
 - Author(s): Middleton
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/serpent-trail/](<https://www.field-studies-council.org/shop/publications/serpent-trail/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/serpent-trail/](<https://www.field-studies-council.org/shop/publications/serpent-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250709005511/https://www.field-studies-council.org/shop/publications/serpent-trail/](<https://web.archive.org/web/20250709005511/https://www.field-studies-council.org/shop/publications/serpent-trail/>)
+- Verified at: 2026-10-26T19:44:59.732193+00:00
 
 ## features-shropshire-hills.html
 
@@ -2384,8 +3195,12 @@
 - Author(s): Boardman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-hills/](<https://www.field-studies-council.org/shop/publications/shropshire-hills/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-hills/](<https://www.field-studies-council.org/shop/publications/shropshire-hills/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916101350/https://www.field-studies-council.org/shop/publications/shropshire-hills/](<https://web.archive.org/web/20250916101350/https://www.field-studies-council.org/shop/publications/shropshire-hills/>)
+- Verified at: 2026-10-26T19:45:07.280785+00:00
 
 ## features-south-downs-way.html
 
@@ -2395,8 +3210,16 @@
 - Author(s): South Downs National Park & FSC
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/south-downs-way/](<https://www.field-studies-council.org/shop/publications/south-downs-way/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/south-downs-way/](<https://www.field-studies-council.org/shop/publications/south-downs-way/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20240808005734/https://www.field-studies-council.org/shop/publications/south-downs-way/](<https://web.archive.org/web/20240808005734/https://www.field-studies-council.org/shop/publications/south-downs-way/>)
+- Alternative link: [https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/](<https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/>)
+- Alternative probability: 0.90
+- Alternative reasoning: Summerfield Books is a primary retailer for Field Studies Council publications and currently lists this specific fold-out chart as in stock.
+- Verified at: 2026-10-26T19:45:09.982232+00:00
 
 ## fern-guide-3rd-edition.html
 
@@ -2406,8 +3229,12 @@
 - Author(s): Merryweather
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ferns-aidgap/](<https://www.field-studies-council.org/shop/publications/ferns-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/ferns-aidgap/](<https://www.field-studies-council.org/shop/publications/ferns-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008063514/https://www.field-studies-council.org/shop/publications/ferns-aidgap/](<https://web.archive.org/web/20251008063514/https://www.field-studies-council.org/shop/publications/ferns-aidgap/>)
+- Verified at: 2026-10-26T19:44:58.796927+00:00
 
 ## field-guide-bees-great-britain-and-ireland.html
 
@@ -2420,8 +3247,12 @@
 - Author(s): Steven Falk
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-irelan...](<https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-ireland-book>)
 - Keywords: Field Guide, user-friendly keys, Richard Lewington, bumble bees, solitary bees
+- Web link: [https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-ireland-book](<https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-ireland-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250806162748/https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-ireland-book](<https://web.archive.org/web/20250806162748/https://www.nhbs.com/field-guide-to-the-bees-of-great-britain-and-ireland-book>)
+- Verified at: 2026-10-26T19:45:00.343972+00:00
 
 ## field-guide-dragonflies-britain-and-europe.html
 
@@ -2431,8 +3262,12 @@
 - Author(s): Klaas-Douwe B Dijkstra, illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.britishwildlife.com/shop/?bookid=3](<https://www.britishwildlife.com/shop/?bookid=3>)
 - Keywords: BWP Briitish Wildlife Publishing Odonata Odonates
+- Web link: [https://www.britishwildlife.com/shop/?bookid=3](<https://www.britishwildlife.com/shop/?bookid=3>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20210919144819/https://www.britishwildlife.com/shop?bookid=3](<https://web.archive.org/web/20210919144819/https://www.britishwildlife.com/shop?bookid=3>)
+- Verified at: 2026-10-26T19:45:10.231298+00:00
 
 ## field-guide-dragonflies-damselflies-great-britain-and-ireland-2014-edition.html
 
@@ -2442,8 +3277,12 @@
 - Author(s): Steve Brooks & Steve Cham, illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great...](<https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great-britain-and-ireland-book>)
 - Keywords: BWP Briitish Wildlife Publishing Odonata Odonates
+- Web link: [https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great-britain-and-ireland-book](<https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great-britain-and-ireland-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250418132132/https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great-britain-and-ireland-book](<https://web.archive.org/web/20250418132132/https://www.nhbs.com/field-guide-to-the-dragonflies-damselflies-of-great-britain-and-ireland-book>)
+- Verified at: 2026-10-26T19:45:08.777920+00:00
 
 ## field-guide-invasive-plants-and-animals-britain.html
 
@@ -2451,13 +3290,16 @@
 - Submitted: Anonymous (not verified); 2015-10-06T07:28:00
 - Description:
   The impact of invasive organisms is second only to habitat loss as a threat to biodiversity and yet, despite increasing ecological awareness, people remain largely unaware of these plants and animals and their potentially devastating impact. Although most biological introductions fail, many prove successful and these can prove disastrous for native fauna and flora.
-
   This field guide will enable the identification of a range of invasive plants and animals now found in Britain. Though these species are of particular concern to conservationists there has previously been no unified guide devoted to their recognition. This book will act both as an ID guide, appealing to the amateur naturalist, and as an important tool for ecologists and land managers attempting to tackle the problem posed by invasive species.
 - Author(s): Olaf Booy, Helen Roy, Max Wade
 - Free: No
 - Available as: Publication
-- Web link: [https://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals...](<https://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals-in-britain-9781408123188/>)
 - Keywords: non-native
+- Web link: [https://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals-in-britain-9781408123188/](<https://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals-in-britain-9781408123188/>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20160610195747/http://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals-in-britain-9781408123188/](<https://web.archive.org/web/20160610195747/http://www.bloomsbury.com/uk/field-guide-to-invasive-plants-and-animals-in-britain-9781408123188/>)
+- Verified at: 2026-10-26T19:45:10.783512+00:00
 
 ## field-guide-larvae-and-exuviae-british-dragonflies-damselflies-zgypotera-and-dragonflies.html
 
@@ -2469,8 +3311,12 @@
 - Author(s): Steve Cham
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dr...](<https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dragonflies-book>)
 - Keywords: freshwater
+- Web link: [https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dragonflies-book](<https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dragonflies-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251006113239/https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dragonflies-book](<https://web.archive.org/web/20251006113239/https://www.nhbs.com/field-guide-to-the-larvae-and-exuviae-of-british-dragonflies-book>)
+- Verified at: 2026-10-26T19:45:10.803849+00:00
 
 ## field-guide-micro-moths-great-britain-ireland.html
 
@@ -2480,8 +3326,12 @@
 - Author(s): Phil Sterling and Mark Parsons, illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and...](<https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and-ireland-book>)
 - Keywords: BWP Briitish Wildlife Publishing Lepidoptera
+- Web link: [https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and-ireland-book](<https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and-ireland-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260805010326/https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and-ireland-book](<https://web.archive.org/web/20260805010326/https://www.nhbs.com/field-guide-to-the-micro-moths-of-great-britain-and-ireland-book>)
+- Verified at: 2026-10-26T19:45:11.160918+00:00
 
 ## field-guide-moths-great-britain-and-ireland-paperback-2nd-edition.html
 
@@ -2491,8 +3341,12 @@
 - Author(s): Paul Waring & Martin Townsend, illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-irela...](<https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-ireland-book>)
 - Keywords: BWP British Wildlife Lepidoptera Moths
+- Web link: [https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-ireland-book](<https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-ireland-book>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260512120337/https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-ireland-book](<https://web.archive.org/web/20260512120337/https://www.nhbs.com/field-guide-to-the-moths-of-great-britain-and-ireland-book>)
+- Verified at: 2026-10-26T19:45:15.641417+00:00
 
 ## field-guide-shallow-water-echinoderms-british-isles.html
 
@@ -2502,8 +3356,11 @@
 - Author(s): Bernard E. Picton
 - Free: No
 - Available as: Publication
-- Web link: [https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-wate...](<https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/>)
 - Keywords: starfish marine conservation society
+- Web link: [https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/](<https://www.pemberleybooks.com/product/a-field-guide-to-the-shallow-water-echinoderms-of-the-british-isles/11790/>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:45:18.049801+00:00
 
 ## field-key-bee-flies-netherlands.html
 
@@ -2516,6 +3373,11 @@
   - Online
   - PDF
 - Web link: [https://repository.naturalis.nl/document/499305](<https://repository.naturalis.nl/document/499305>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://repository.naturalis.nl/pub/456291/Veldtabel_wolzwevers.pdf](<https://repository.naturalis.nl/pub/456291/Veldtabel_wolzwevers.pdf>)
+- Wayback link: [https://web.archive.org/web/20200619005819/https://www.repository.naturalis.nl/document/499305](<https://web.archive.org/web/20200619005819/https://www.repository.naturalis.nl/document/499305>)
+- Verified at: 2026-10-26T19:45:16.054695+00:00
 
 ## field-key-british-brown-seaweeds.html
 
@@ -2527,8 +3389,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283578+00:00
 
 ## field-key-british-red-seaweeds.html
 
@@ -2540,8 +3406,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies AIDGAP
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283658+00:00
 
 ## field-key-slugs-british-isles-mollusca-pulmonata.html
 
@@ -2553,20 +3423,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies 5 (1983), 807-824
 - Comment Body: Good to have access to this key, but it needs to be used with caution - slug taxonomy has changed quite a lot since 1983, and several new species have been added to the British list (some of them now common and widespread). Ideally this should be used alongside the magnificent 2014 FSC key to slugs ([http://www.field-studies-council.org/publications/pubs/slugs-of-britain-...](<http://www.field-studies-council.org/publications/pubs/slugs-of-britain-and-ireland.aspx>)).
-
-## fleas-siphonaptera-2nd-ed-0.html
-
-- Title: Fleas (Siphonaptera) 2nd ed.
-- Submitted: rich burkmar; 2015-06-09T16:48:00
-- Description: RES Handbook vol 1 part 16. The second edition of this RES Handbook is a fully updated new edition of Smit's classic guide to British fleas published in 1957. The text and keys have been updated to include 6 new species, making a total of 62 species found in the British Isles. Also included are modern techniques of mounting and preservation, and methods of collecting which are now more suitable for protecting habitats and the fauna and flora within them - it is no longer considered acceptable to dust hedgehogs with DDT! This new edition contains full distribution information, originally published separately to Smit, but now included and fully updated up to 2001.
-- Author(s): Whitaker
-- Free: No
-- Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
-- Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283715+00:00
 
 ## fleas-siphonaptera-2nd-ed.html
 
@@ -2576,8 +3439,33 @@
 - Author(s): Whitaker
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230926224839/https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://web.archive.org/web/20230926224839/https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
+- Alternative link: [https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965](<https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is a direct product page for the physical book, although it is currently listed as out of print.
+- Verified at: 2026-10-26T19:45:26.305425+00:00
+
+## fleas-siphonaptera-2nd-ed-0.html
+
+- Title: Fleas (Siphonaptera) 2nd ed.
+- Submitted: rich burkmar; 2015-06-09T16:48:00
+- Description: RES Handbook vol 1 part 16. The second edition of this RES Handbook is a fully updated new edition of Smit's classic guide to British fleas published in 1957. The text and keys have been updated to include 6 new species, making a total of 62 species found in the British Isles. Also included are modern techniques of mounting and preservation, and methods of collecting which are now more suitable for protecting habitats and the fauna and flora within them - it is no longer considered acceptable to dust hedgehogs with DDT! This new edition contains full distribution information, originally published separately to Smit, but now included and fully updated up to 2001.
+- Author(s): Whitaker
+- Free: No
+- Available as: Publication
+- Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230926224839/https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/](<https://web.archive.org/web/20230926224839/https://www.field-studies-council.org/shop/publications/fleas-siphonaptera/>)
+- Alternative link: [https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965](<https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965>)
+- Alternative probability: 0.70
+- Alternative reasoning: Pemberley Books is a specialized entomological bookseller that provides a dedicated product page for this specific RES Handbook title.
+- Verified at: 2026-10-26T19:45:26.305193+00:00
 
 ## flight-identification-european-passerines-and-select-landbirds-illustrated-and.html
 
@@ -2604,8 +3492,13 @@
 - Author(s): Alex Lockton and Sarah Whild
 - Free: No
 - Available as: Publication
-- Web link: [https://bsbi.org/shropshire](<https://bsbi.org/shropshire>)
 - Keywords: Atlas, Distribution Maps, Vascular Plants, Change, Vegetation Communities, NVC, Shropshire
+- Web link: [https://bsbi.org/shropshire](<https://bsbi.org/shropshire>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://bsbi.org/in-your-area/local-botany/shropshire](<https://bsbi.org/in-your-area/local-botany/shropshire>)
+- Wayback link: [https://web.archive.org/web/20260124174058/https://bsbi.org/shropshire](<https://web.archive.org/web/20260124174058/https://bsbi.org/shropshire>)
+- Verified at: 2026-10-26T19:45:24.815505+00:00
 
 ## forget-me-not-video-id-key.html
 
@@ -2616,6 +3509,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=xmSAacVdRiM](<https://www.youtube.com/watch?v=xmSAacVdRiM>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260812190001/https://www.youtube.com/watch?v=xmSAacVdRiM](<https://web.archive.org/web/20260812190001/https://www.youtube.com/watch?v=xmSAacVdRiM>)
+- Verified at: 2026-10-26T19:45:16.729228+00:00
 
 ## fossil-explorer.html
 
@@ -2625,13 +3522,17 @@
   Fossil Explorer is a field guide to the common fossils of Britain and will help you identify fossils based on where you find them.
 
   Key features (1) field guide to common fossils in Britain, covering nearly 90 fossil groups
-
   interactive map of Britain and geological map overlay (2) illustrations and data for more than 1,200 fossils in the Museum collection (3) fossil content researched and checked by Museum palaeontologists
-
   (4) local geology information provided by the British Geological Survey
 - Free: Yes
 - Available as: App
-- Web link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html...](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html.html>)
+- Web link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html.html](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html.html>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the original, intended URL for the Fossil Explorer app hosted by the Natural History Museum, as referenced in multiple external documents and the user's broken link.
+- Verified at: 2026-10-26T19:45:25.329482+00:00
 
 ## free-living-marine-nematodes-part-2-british-chromadorids.html
 
@@ -2641,8 +3542,12 @@
 - Author(s): Platt & Warwick
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/chromadorids-mar...](<https://www.field-studies-council.org/shop/publications/chromadorids-marine-nematodes-2/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/chromadorids-marine-nematodes-2/](<https://www.field-studies-council.org/shop/publications/chromadorids-marine-nematodes-2/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013060638/https://www.field-studies-council.org/shop/publications/chromadorids-marine-nematodes-2/](<https://web.archive.org/web/20251013060638/https://www.field-studies-council.org/shop/publications/chromadorids-marine-nematodes-2/>)
+- Verified at: 2026-10-26T19:45:25.593283+00:00
 
 ## freshwater-bivalves-britain-and-ireland.html
 
@@ -2652,8 +3557,12 @@
 - Author(s): Killeen, Aldridge & Oliver
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-bival...](<https://www.field-studies-council.org/shop/publications/freshwater-bivalves-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-bivalves-aidgap/](<https://www.field-studies-council.org/shop/publications/freshwater-bivalves-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250910114402/https://www.field-studies-council.org/shop/publications/freshwater-bivalves-aidgap/](<https://web.archive.org/web/20250910114402/https://www.field-studies-council.org/shop/publications/freshwater-bivalves-aidgap/>)
+- Verified at: 2026-10-26T19:45:17.224208+00:00
 
 ## freshwater-name-trail.html
 
@@ -2663,8 +3572,12 @@
 - Author(s): Orton & Bebbington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-name-...](<https://www.field-studies-council.org/shop/publications/freshwater-name-trail/>)
 - Keywords: fold-out, fold out, FSC, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-name-trail/](<https://www.field-studies-council.org/shop/publications/freshwater-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251007031039/https://www.field-studies-council.org/shop/publications/freshwater-name-trail/](<https://web.archive.org/web/20251007031039/https://www.field-studies-council.org/shop/publications/freshwater-name-trail/>)
+- Verified at: 2026-10-26T19:45:17.647023+00:00
 
 ## fsc-identify.html
 
@@ -2675,6 +3588,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/fsc.identify/](<https://www.facebook.com/groups/fsc.identify/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:45:25.742766+00:00
 
 ## fungi-name-trail-identification-guide.html
 
@@ -2684,8 +3600,12 @@
 - Author(s): Holden & Hamper
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/fungi-name-trail/](<https://www.field-studies-council.org/shop/publications/fungi-name-trail/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/fungi-name-trail/](<https://www.field-studies-council.org/shop/publications/fungi-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251125203610/https://www.field-studies-council.org/shop/publications/fungi-name-trail/](<https://web.archive.org/web/20251125203610/https://www.field-studies-council.org/shop/publications/fungi-name-trail/>)
+- Verified at: 2026-10-26T19:45:30.173351+00:00
 
 ## fungi-temperate-europe.html
 
@@ -2695,8 +3615,12 @@
 - Author(s): Laessoe, T. and Petersen, J. H.
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.mycokey.com/](<https://www.mycokey.com/>)
 - Keywords: Mycology Docker
+- Web link: [https://www.mycokey.com/](<https://www.mycokey.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261017060447/http://www.mycokey.com/](<https://web.archive.org/web/20261017060447/http://www.mycokey.com/>)
+- Verified at: 2026-10-26T19:45:26.839262+00:00
 
 ## garden-bugs-and-beasties.html
 
@@ -2709,8 +3633,12 @@
 - Author(s): Farley Brown, Shields & Langman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/garden-bugs-and-...](<https://www.field-studies-council.org/shop/publications/garden-bugs-and-beasties/>)
 - Keywords: fold-out, fold out, FSC, field studies council, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/garden-bugs-and-beasties/](<https://www.field-studies-council.org/shop/publications/garden-bugs-and-beasties/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250910115337/https://www.field-studies-council.org/shop/publications/garden-bugs-and-beasties/](<https://web.archive.org/web/20250910115337/https://www.field-studies-council.org/shop/publications/garden-bugs-and-beasties/>)
+- Verified at: 2026-10-26T19:45:27.277772+00:00
 
 ## garden-bumblebees-how-recognise-and-record-them.html
 
@@ -2722,8 +3650,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf](<https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf>)
 - Keywords: Bumblebee, bee
+- Web link: [https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf](<https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20230825190158/https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf](<https://web.archive.org/web/20230825190158/https://www.bto.org/sites/default/files/u23/downloads/pdfs/bbees-645kb.pdf>)
+- Verified at: 2026-10-26T19:45:27.887051+00:00
 
 ## geoglossum-earth-tongues.html
 
@@ -2733,8 +3665,11 @@
 - Author(s): Malcolm Greaves
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html](<https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html>)
 - Keywords: fsc identikit
+- Web link: [https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html](<https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html](<https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html>)
 
 ## geotrupidae-key-british-species.html
 
@@ -2746,7 +3681,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NTZiNDYwZDkwNzU4ODY4OQ>)
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NTZiNDYwZDkwNzU4ODY4OQ](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NTZiNDYwZDkwNzU4ODY4OQ>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240715113253/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NTZiNDYwZDkwNzU4ODY4OQ](<https://web.archive.org/web/20240715113253/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NTZiNDYwZDkwNzU4ODY4OQ>)
+- Verified at: 2026-10-26T19:45:32.589733+00:00
 
 ## getting-grips-warblers-reed-warbler-vs-sedge-warbler.html
 
@@ -2756,8 +3695,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/reed-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/reed-warbler-sedge-warbler>)
 - Keywords: video
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/reed-warbler-sedge-warbler](<https://www.bto.org/develop-your-skills/bird-identification/videos/reed-warbler-sedge-warbler>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/reed-warbler-sedge-warbler](<https://www.bto.org/learn/skills/bird-identification/videos/reed-warbler-sedge-warbler>)
+- Wayback link: [https://web.archive.org/web/20250322002522/https://www.bto.org/develop-your-skills/bird-identification/videos/reed-warbler-sedge-warbler](<https://web.archive.org/web/20250322002522/https://www.bto.org/develop-your-skills/bird-identification/videos/reed-warbler-sedge-warbler>)
+- Verified at: 2026-10-26T19:45:33.018757+00:00
 
 ## getting-grips-warblers-video-blackcap-vs-garden-warbler.html
 
@@ -2767,8 +3711,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/black...](<https://www.bto.org/develop-your-skills/bird-identification/videos/blackcap-garden-warbler>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/blackcap-garden-warbler](<https://www.bto.org/develop-your-skills/bird-identification/videos/blackcap-garden-warbler>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/blackcap-garden-warbler](<https://www.bto.org/learn/skills/bird-identification/videos/blackcap-garden-warbler>)
+- Wayback link: [https://web.archive.org/web/20250514110443/https://www.bto.org/develop-your-skills/bird-identification/videos/blackcap-garden-warbler](<https://web.archive.org/web/20250514110443/https://www.bto.org/develop-your-skills/bird-identification/videos/blackcap-garden-warbler>)
+- Verified at: 2026-10-26T19:45:30.622499+00:00
 
 ## getting-grips-warblers-video-chiffchaff-vs-willow-warbler.html
 
@@ -2778,8 +3727,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/willo...](<https://www.bto.org/develop-your-skills/bird-identification/videos/willow-warbler-chiffchaff>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/willow-warbler-chiffchaff](<https://www.bto.org/develop-your-skills/bird-identification/videos/willow-warbler-chiffchaff>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/willow-warbler-chiffchaff](<https://www.bto.org/learn/skills/bird-identification/videos/willow-warbler-chiffchaff>)
+- Wayback link: [https://web.archive.org/web/20241207210623/https://www.bto.org/develop-your-skills/bird-identification/videos/willow-warbler-chiffchaff](<https://web.archive.org/web/20241207210623/https://www.bto.org/develop-your-skills/bird-identification/videos/willow-warbler-chiffchaff>)
+- Verified at: 2026-10-26T19:45:34.309797+00:00
 
 ## getting-grips-warblers-whitethroat-and-lesser-whitethroat.html
 
@@ -2789,8 +3743,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/white...](<https://www.bto.org/develop-your-skills/bird-identification/videos/whitethroat-lesser-whitethroat>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/whitethroat-lesser-whitethroat](<https://www.bto.org/develop-your-skills/bird-identification/videos/whitethroat-lesser-whitethroat>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/whitethroat-lesser-whitethroat](<https://www.bto.org/learn/skills/bird-identification/videos/whitethroat-lesser-whitethroat>)
+- Wayback link: [https://web.archive.org/web/20250518105310/https://www.bto.org/develop-your-skills/bird-identification/videos/whitethroat-lesser-whitethroat](<https://web.archive.org/web/20250518105310/https://www.bto.org/develop-your-skills/bird-identification/videos/whitethroat-lesser-whitethroat>)
+- Verified at: 2026-10-26T19:45:34.463852+00:00
 
 ## getting-started-spider-recording.html
 
@@ -2822,8 +3781,12 @@
 - Author(s): Gardener & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/grasses-guide/](<https://www.field-studies-council.org/shop/publications/grasses-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/grasses-guide/](<https://www.field-studies-council.org/shop/publications/grasses-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260606135625/https://www.field-studies-council.org/shop/publications/grasses-guide/](<https://web.archive.org/web/20260606135625/https://www.field-studies-council.org/shop/publications/grasses-guide/>)
+- Verified at: 2026-10-26T19:45:33.824050+00:00
 
 ## grasshoppers-norfolk.html
 
@@ -2835,8 +3798,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshopp...](<http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf>)
 - Keywords: Orthoptera Crickets
+- Web link: [http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf](<http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf](<https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf>)
+- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/species-guides/](<https://norfolknaturalists.org.uk/wp/publications/species-guides/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This page is the official 'Species Guides' section of the Norfolk & Norwich Naturalists' Society, which hosts the downloadable PDF guide for 'Grasshoppers of Norfolk' by David Richmond.
+- Verified at: 2026-10-26T19:45:35.247427+00:00
 
 ## great-horsetail-id-video.html
 
@@ -2847,6 +3817,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=JazZ9PmBJ9E#t=11](<https://www.youtube.com/watch?v=JazZ9PmBJ9E#t=11>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250818210740/https://www.youtube.com/watch?v=JazZ9PmBJ9E](<https://web.archive.org/web/20250818210740/https://www.youtube.com/watch?v=JazZ9PmBJ9E>)
+- Verified at: 2026-10-26T19:45:34.815288+00:00
 
 ## grey-geese-id-video-guide.html
 
@@ -2856,7 +3830,12 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/grey-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/grey-geese>)
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/grey-geese](<https://www.bto.org/develop-your-skills/bird-identification/videos/grey-geese>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/grey-geese](<https://www.bto.org/learn/skills/bird-identification/videos/grey-geese>)
+- Wayback link: [https://web.archive.org/web/20250320110225/https://www.bto.org/develop-your-skills/bird-identification/videos/grey-geese](<https://web.archive.org/web/20250320110225/https://www.bto.org/develop-your-skills/bird-identification/videos/grey-geese>)
+- Verified at: 2026-10-26T19:45:36.667913+00:00
 
 ## guide-adult-caddisflies-or-sedge-flies-trichoptera.html
 
@@ -2866,8 +3845,12 @@
 - Author(s): Barnard and Ross
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/caddis-adults-ai...](<https://www.field-studies-council.org/shop/publications/caddis-adults-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/caddis-adults-aidgap/](<https://www.field-studies-council.org/shop/publications/caddis-adults-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250829181441/https://www.field-studies-council.org/shop/publications/caddis-adults-aidgap/](<https://web.archive.org/web/20250829181441/https://www.field-studies-council.org/shop/publications/caddis-adults-aidgap/>)
+- Verified at: 2026-10-26T19:45:34.830715+00:00
 
 ## guide-amphibians.html
 
@@ -2877,8 +3860,12 @@
 - Author(s): FSC, Natural History Museum, ARC Trust & OPAL
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphi...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphibians-id-guide.pdf>)
 - Keywords: frogs toads newts freshwater dipping
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphibians-id-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphibians-id-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210810211359/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphibians-id-guide.pdf](<https://web.archive.org/web/20210810211359/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/amphibians-id-guide.pdf>)
+- Verified at: 2026-10-26T19:45:45.408838+00:00
 
 ## guide-animals-wildlife-and-countryside-act.html
 
@@ -2897,8 +3884,12 @@
 - Author(s): Grogan
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/schedule-9-anima...](<https://www.field-studies-council.org/shop/publications/schedule-9-animals-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/schedule-9-animals-guide/](<https://www.field-studies-council.org/shop/publications/schedule-9-animals-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250812213843/https://www.field-studies-council.org/shop/publications/schedule-9-animals-guide/](<https://web.archive.org/web/20250812213843/https://www.field-studies-council.org/shop/publications/schedule-9-animals-guide/>)
+- Verified at: 2026-10-26T19:45:35.611953+00:00
 
 ## guide-bees-britain.html
 
@@ -2911,8 +3902,12 @@
 - Author(s): Buglife, O'Toole & Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/bees-identificat...](<https://www.field-studies-council.org/shop/publications/bees-identification-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/bees-identification-guide/](<https://www.field-studies-council.org/shop/publications/bees-identification-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250914000147/https://www.field-studies-council.org/shop/publications/bees-identification-guide/](<https://web.archive.org/web/20250914000147/https://www.field-studies-council.org/shop/publications/bees-identification-guide/>)
+- Verified at: 2026-10-26T19:45:37.440905+00:00
 
 ## guide-british-amphibians.html
 
@@ -2922,8 +3917,12 @@
 - Author(s): David Bodenham
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.ecosapien.org/](<https://www.ecosapien.org/>)
 - Keywords: film frog toad newt spring
+- Web link: [https://www.ecosapien.org/](<https://www.ecosapien.org/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20221006041258/https://www.ecosapien.org/](<https://web.archive.org/web/20221006041258/https://www.ecosapien.org/>)
+- Verified at: 2026-10-26T19:45:38.793177+00:00
 
 ## guide-british-bats.html
 
@@ -2933,8 +3932,12 @@
 - Author(s): Jones & Walsh
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/bats-guide/](<https://www.field-studies-council.org/shop/publications/bats-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/bats-guide/](<https://www.field-studies-council.org/shop/publications/bats-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260417121740/https://www.field-studies-council.org/shop/publications/bats-guide/](<https://web.archive.org/web/20260417121740/https://www.field-studies-council.org/shop/publications/bats-guide/>)
+- Verified at: 2026-10-26T19:45:35.990004+00:00
 
 ## guide-british-coastal-mysidacea.html
 
@@ -2946,8 +3949,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1977), 4, 575-595
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283778+00:00
 
 ## guide-british-dung-beetles-geotrupidae-dor-beetles.html
 
@@ -2963,6 +3970,13 @@
   - Online
   - PDF
 - Web link: [https://dungbeetlemap.files.wordpress.com/2017/01/geotrupidae_lr_web.pdf](<https://dungbeetlemap.files.wordpress.com/2017/01/geotrupidae_lr_web.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf](<https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf>)
+- Alternative link: [https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/](<https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the primary webpage provided in the description that hosts the identification guide and links to the PDF.
+- Verified at: 2026-10-26T19:45:48.368997+00:00
 
 ## guide-british-dung-beetles-onthophagus.html
 
@@ -2976,8 +3990,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf](<https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf>)
 - Keywords: beetle
+- Web link: [https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf](<https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/onthophagus_lr_web.pdf](<https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/onthophagus_lr_web.pdf>)
+- Wayback link: [https://web.archive.org/web/20231218011640/https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf](<https://web.archive.org/web/20231218011640/https://dungbeetlemap.files.wordpress.com/2017/01/onthophagus_lr_web.pdf>)
+- Verified at: 2026-10-26T19:45:42.537196+00:00
 
 ## guide-british-freshwater-fishes.html
 
@@ -2987,8 +4006,12 @@
 - Author(s): Croft & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/fish-guide/](<https://www.field-studies-council.org/shop/publications/fish-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/fish-guide/](<https://www.field-studies-council.org/shop/publications/fish-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916174332/https://www.field-studies-council.org/shop/publications/fish-guide/](<https://web.archive.org/web/20250916174332/https://www.field-studies-council.org/shop/publications/fish-guide/>)
+- Verified at: 2026-10-26T19:45:36.461752+00:00
 
 ## guide-british-mammal-tracks-and-signs.html
 
@@ -2998,8 +4021,12 @@
 - Author(s): Bullion
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/mammal-tracks-an...](<https://www.field-studies-council.org/shop/publications/mammal-tracks-and-signs-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/mammal-tracks-and-signs-guide/](<https://www.field-studies-council.org/shop/publications/mammal-tracks-and-signs-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013064349/https://www.field-studies-council.org/shop/publications/mammal-tracks-and-signs-guide/](<https://web.archive.org/web/20251013064349/https://www.field-studies-council.org/shop/publications/mammal-tracks-and-signs-guide/>)
+- Verified at: 2026-10-26T19:45:39.135732+00:00
 
 ## guide-british-stonefly-plecoptera-families-adults-and-larvae.html
 
@@ -3014,8 +4041,12 @@
 - Author(s): Pryce, Macadam & Brooks
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/](<https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/](<https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260528010030/https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/](<https://web.archive.org/web/20260528010030/https://www.field-studies-council.org/shop/publications/stoneflies-aidgap/>)
+- Verified at: 2026-10-26T19:45:36.905657+00:00
 
 ## guide-chalk-rivers-england.html
 
@@ -3025,8 +4056,12 @@
 - Author(s): Bell & Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/](<https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/](<https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250816050557/https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/](<https://web.archive.org/web/20250816050557/https://www.field-studies-council.org/shop/publications/chalk-rivers-guide/>)
+- Verified at: 2026-10-26T19:45:37.565750+00:00
 
 ## guide-common-bumblebees.html
 
@@ -3036,7 +4071,11 @@
 - Author(s): Bumblebee Conservation Trust
 - Free: Yes
 - Available as: PDF
-- Web link: [https://bumblebeeconservation.org/images/uploads/Resources/BBCT\_Bumblebe...(big\_8).pdf](<https://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf>)
+- Web link: [https://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf](<https://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20160324181839/http://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf](<https://web.archive.org/web/20160324181839/http://bumblebeeconservation.org/images/uploads/Resources/BBCT_Bumblebee_ID_sheet_(big_8).pdf>)
+- Verified at: 2026-10-26T19:45:38.380774+00:00
 
 ## guide-common-fossils.html
 
@@ -3047,6 +4086,10 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.field-studies-council.org/shop/publications/fossils-guide/](<https://www.field-studies-council.org/shop/publications/fossils-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250805085126/https://www.field-studies-council.org/shop/publications/fossils-guide/](<https://web.archive.org/web/20250805085126/https://www.field-studies-council.org/shop/publications/fossils-guide/>)
+- Verified at: 2026-10-26T19:45:38.378016+00:00
 
 ## guide-common-minerals.html
 
@@ -3059,8 +4102,12 @@
 - Author(s): Pellant & Pellant
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/minerals-guide/](<https://www.field-studies-council.org/shop/publications/minerals-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/minerals-guide/](<https://www.field-studies-council.org/shop/publications/minerals-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916165133/https://www.field-studies-council.org/shop/publications/minerals-guide/](<https://web.archive.org/web/20250916165133/https://www.field-studies-council.org/shop/publications/minerals-guide/>)
+- Verified at: 2026-10-26T19:45:45.432881+00:00
 
 ## guide-difficult-moth-species-online.html
 
@@ -3070,7 +4117,10 @@
 - Author(s): Townsend, M.C., CLifton, J., and Goodey, B.
 - Free: Yes
 - Available as: PDF
-- Web link: [https://butterfly-conservation.org/moths/text/105/guide\_to\_difficult\_spe...](<https://butterfly-conservation.org/moths/text/105/guide_to_difficult_species_online.html>)
+- Web link: [https://butterfly-conservation.org/moths/text/105/guide_to_difficult_species_online.html](<https://butterfly-conservation.org/moths/text/105/guide_to_difficult_species_online.html>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:45:48.746744+00:00
 
 ## guide-dragonflies-and-damselflies.html
 
@@ -3083,8 +4133,12 @@
   - Online
   - PDF
   - Publication
-- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
 - Keywords: odonata odonates
+- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637618+00:00
 
 ## guide-duckweeds.html
 
@@ -3097,8 +4151,12 @@
   - Online
   - PDF
   - Publication
-- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
 - Keywords: Lemna Spirodela Wolffia
+- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637705+00:00
 
 ## guide-epiphytic-lichens-orchards-east-england.html
 
@@ -3112,6 +4170,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637739+00:00
 
 ## guide-epiphytic-mosses-orchards-east-england.html
 
@@ -3125,6 +4187,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637821+00:00
 
 ## guide-floodplain-meadows.html
 
@@ -3134,8 +4200,12 @@
 - Author(s): Gowing, Wallace, Rothero & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/floodplain-meado...](<https://www.field-studies-council.org/shop/publications/floodplain-meadows-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/floodplain-meadows-guide/](<https://www.field-studies-council.org/shop/publications/floodplain-meadows-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815150843/https://www.field-studies-council.org/shop/publications/floodplain-meadows-guide/](<https://web.archive.org/web/20250815150843/https://www.field-studies-council.org/shop/publications/floodplain-meadows-guide/>)
+- Verified at: 2026-10-26T19:45:41.575426+00:00
 
 ## guide-foraging-top-25-edible-plants.html
 
@@ -3146,6 +4216,10 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.field-studies-council.org/shop/publications/foraging-guide/](<https://www.field-studies-council.org/shop/publications/foraging-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250707231034/https://www.field-studies-council.org/shop/publications/foraging-guide/](<https://web.archive.org/web/20250707231034/https://www.field-studies-council.org/shop/publications/foraging-guide/>)
+- Verified at: 2026-10-26T19:45:41.981252+00:00
 
 ## guide-freshwater-invertebrates.html
 
@@ -3153,13 +4227,16 @@
 - Submitted: Anonymous (not verified); 2015-06-10T11:16:00
 - Description:
   This is a key based identification guide to the invertebrates that live in our rivers, streams, lakes, ponds and wetlands. This guide provides an introduction to their great diversity and the means to identify the many different types, from flatworms to beetles. A series of easy-to-follow keys, along with notes on ecology and distribution, allow identification of the more commonly encountered freshwater invertebrates occuring in Britain and Ireland, while 460 line drawings illustrate whole animals and the features of importance in distinguishing different groups. Identification is typically to family level, and beyond where this is straightforward to do so, with a bibliography of other keys and guides for those who want to pursue identification further.
-
   With introductory notes on the classification of animals and the collection and preservation of specimens, as well as a detailed glossary, this guide is aimed at anyone interested in identifying freshwater invertebrate animals, from established naturalists and biologists to those new to the field. Written by staff from the Freshwater Biological Association, it is intended as a tribute to T.T. Macan, one of the 'founding fathers' of freshwater biology.
 - Author(s): Michael Dobson, Simon Pawley, Melanie Fletcher, Anne Powell
 - Free: No
 - Available as: Publication
-- Web link: [https://www.fba.org.uk/shop/p/book-42](<https://www.fba.org.uk/shop/p/book-42>)
 - Keywords: FBA Aquatic
+- Web link: [https://www.fba.org.uk/shop/p/book-42](<https://www.fba.org.uk/shop/p/book-42>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260421152728/https://www.fba.org.uk/shop/p/book-42](<https://web.archive.org/web/20260421152728/https://www.fba.org.uk/shop/p/book-42>)
+- Verified at: 2026-10-26T19:45:44.893874+00:00
 
 ## guide-garden-wildlife.html
 
@@ -3169,8 +4246,12 @@
 - Author(s): Written and illustrated by Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.britishwildlife.com/shop/?bookid=2](<https://www.britishwildlife.com/shop/?bookid=2>)
 - Keywords: BWP Briitish Wildlife Publishing
+- Web link: [https://www.britishwildlife.com/shop/?bookid=2](<https://www.britishwildlife.com/shop/?bookid=2>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251109131708/https://www.britishwildlife.com/shop/?bookid=2](<https://web.archive.org/web/20251109131708/https://www.britishwildlife.com/shop/?bookid=2>)
+- Verified at: 2026-10-26T19:45:46.845078+00:00
 
 ## guide-grassland-plants-1.html
 
@@ -3180,8 +4261,12 @@
 - Author(s): Gulliver, Gulliver & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/grassland-plants...](<https://www.field-studies-council.org/shop/publications/grassland-plants-1-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/grassland-plants-1-guide/](<https://www.field-studies-council.org/shop/publications/grassland-plants-1-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251010223814/https://www.field-studies-council.org/shop/publications/grassland-plants-1-guide/](<https://web.archive.org/web/20251010223814/https://www.field-studies-council.org/shop/publications/grassland-plants-1-guide/>)
+- Verified at: 2026-10-26T19:45:47.782392+00:00
 
 ## guide-grassland-plants-2-chalk-and-limestone.html
 
@@ -3191,8 +4276,12 @@
 - Author(s): Bebbington & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/grassland-plants...](<https://www.field-studies-council.org/shop/publications/grassland-plants-2-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/grassland-plants-2-guide/](<https://www.field-studies-council.org/shop/publications/grassland-plants-2-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251020022338/https://www.field-studies-council.org/shop/publications/grassland-plants-2-guide/](<https://web.archive.org/web/20251020022338/https://www.field-studies-council.org/shop/publications/grassland-plants-2-guide/>)
+- Verified at: 2026-10-26T19:45:51.088504+00:00
 
 ## guide-hedgerows.html
 
@@ -3202,8 +4291,12 @@
 - Author(s): Crane & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/hedgerows-guide/](<https://www.field-studies-council.org/shop/publications/hedgerows-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/hedgerows-guide/](<https://www.field-studies-council.org/shop/publications/hedgerows-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916162025/https://www.field-studies-council.org/shop/publications/hedgerows-guide/](<https://web.archive.org/web/20250916162025/https://www.field-studies-council.org/shop/publications/hedgerows-guide/>)
+- Verified at: 2026-10-26T19:45:48.191997+00:00
 
 ## guide-indicator-lichens.html
 
@@ -3217,6 +4310,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637850+00:00
 
 ## guide-insects-british-isles.html
 
@@ -3226,8 +4323,12 @@
 - Author(s): Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/insects-of-the-b...](<https://www.field-studies-council.org/shop/publications/insects-of-the-british-isles-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council, invertebrates
+- Web link: [https://www.field-studies-council.org/shop/publications/insects-of-the-british-isles-guide/](<https://www.field-studies-council.org/shop/publications/insects-of-the-british-isles-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013025819/https://www.field-studies-council.org/shop/publications/insects-of-the-british-isles-guide/](<https://web.archive.org/web/20251013025819/https://www.field-studies-council.org/shop/publications/insects-of-the-british-isles-guide/>)
+- Verified at: 2026-10-26T19:45:51.743422+00:00
 
 ## guide-ladybirds-british-isles.html
 
@@ -3240,8 +4341,12 @@
 - Author(s): Majerus et al.
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ladybirds-guide/](<https://www.field-studies-council.org/shop/publications/ladybirds-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/ladybirds-guide/](<https://www.field-studies-council.org/shop/publications/ladybirds-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916130553/https://www.field-studies-council.org/shop/publications/ladybirds-guide/](<https://web.archive.org/web/20250916130553/https://www.field-studies-council.org/shop/publications/ladybirds-guide/>)
+- Verified at: 2026-10-26T19:45:51.746144+00:00
 
 ## guide-life-sandy-shores-between-colwyn-bay-and-fleetwood.html
 
@@ -3253,9 +4358,14 @@
 - Author(s): Ian Wallace Kathryn Turner
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Complete Beach Guide March%2...](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
-- Additional web link: [Animals other than Shells](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
 - Keywords: Shells shell seashell Liverpool seashore
+- Web link: [http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
+- Additional web link: [http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.record-lrc.co.uk/downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5b18042012%5d.pdf](<https://www.record-lrc.co.uk/downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5b18042012%5d.pdf>)
+- Wayback link: [https://web.archive.org/web/20240226155533/https://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf](<https://web.archive.org/web/20240226155533/https://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
+- Verified at: 2026-10-26T19:45:55.451988+00:00
 
 ## guide-main-groups-pond-invertebrates.html
 
@@ -3268,8 +4378,12 @@
   - Online
   - PDF
   - Publication
-- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
 - Keywords: ponds freshwater water
+- Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637885+00:00
 
 ## guide-mosses-and-liverworts-towns-and-gardens.html
 
@@ -3279,8 +4393,12 @@
 - Author(s): Godfrey
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/garden-mosses/](<https://www.field-studies-council.org/shop/publications/garden-mosses/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/garden-mosses/](<https://www.field-studies-council.org/shop/publications/garden-mosses/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008032749/https://www.field-studies-council.org/shop/publications/garden-mosses/](<https://web.archive.org/web/20251008032749/https://www.field-studies-council.org/shop/publications/garden-mosses/>)
+- Verified at: 2026-10-26T19:45:52.473661+00:00
 
 ## guide-mosses-and-liverworts-woodlands.html
 
@@ -3290,8 +4408,12 @@
 - Author(s): Godfrey
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodland-mosses/](<https://www.field-studies-council.org/shop/publications/woodland-mosses/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/woodland-mosses/](<https://www.field-studies-council.org/shop/publications/woodland-mosses/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250711090420/https://www.field-studies-council.org/shop/publications/woodland-mosses/](<https://web.archive.org/web/20250711090420/https://www.field-studies-council.org/shop/publications/woodland-mosses/>)
+- Verified at: 2026-10-26T19:45:54.884937+00:00
 
 ## guide-night-sky.html
 
@@ -3301,8 +4423,12 @@
 - Author(s): Scagell & Penston
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/night-sky-guide/](<https://www.field-studies-council.org/shop/publications/night-sky-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/night-sky-guide/](<https://www.field-studies-council.org/shop/publications/night-sky-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251219151131/https://www.field-studies-council.org/shop/publications/night-sky-guide/](<https://web.archive.org/web/20251219151131/https://www.field-studies-council.org/shop/publications/night-sky-guide/>)
+- Verified at: 2026-10-26T19:45:57.375726+00:00
 
 ## guide-orchids.html
 
@@ -3315,8 +4441,12 @@
 - Author(s): Gulliver & Gulliver
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/orchids-guide/](<https://www.field-studies-council.org/shop/publications/orchids-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/orchids-guide/](<https://www.field-studies-council.org/shop/publications/orchids-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260416183027/https://www.field-studies-council.org/shop/publications/orchids-guide/](<https://web.archive.org/web/20260416183027/https://www.field-studies-council.org/shop/publications/orchids-guide/>)
+- Verified at: 2026-10-26T19:45:58.846353+00:00
 
 ## guide-plant-galls-britain.html
 
@@ -3329,8 +4459,16 @@
 - Author(s): Redfern & Shirley
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/plant-galls-guide/](<https://www.field-studies-council.org/shop/publications/plant-galls-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/plant-galls-guide/](<https://www.field-studies-council.org/shop/publications/plant-galls-guide/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20241102235505/https://www.field-studies-council.org/shop/publications/plant-galls-guide/](<https://web.archive.org/web/20241102235505/https://www.field-studies-council.org/shop/publications/plant-galls-guide/>)
+- Alternative link: [https://summerfield-books.ams3.digitaloceanspaces.com/wp-content/uploads/2020/01/Plant-galls.jpg](<https://summerfield-books.ams3.digitaloceanspaces.com/wp-content/uploads/2020/01/Plant-galls.jpg>)
+- Alternative probability: 0.70
+- Alternative reasoning: This URL points directly to the product image of the guide on a bookseller's site, which is a specific resource associated with the publication.
+- Verified at: 2026-10-26T19:46:02.096296+00:00
 
 ## guide-reptiles-and-amphibians-found-uk.html
 
@@ -3340,8 +4478,11 @@
 - Author(s): RAUK
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.herpetofauna.co.uk/identification.asp](<http://www.herpetofauna.co.uk/identification.asp>)
 - Keywords: frogs toads newts lizards snakes
+- Web link: [http://www.herpetofauna.co.uk/identification.asp](<http://www.herpetofauna.co.uk/identification.asp>)
+- Web link status: 503
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20260901234524/http://www.herpetofauna.co.uk/identification.asp](<https://web.archive.org/web/20260901234524/http://www.herpetofauna.co.uk/identification.asp>)
 
 ## guide-shropshire-orthoptera-and-dermaptera.html
 
@@ -3353,8 +4494,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.fscbiodiversity.uk/sites/default/files/Guide\_to\_Shrops\_Ortho...](<https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf>)
 - Keywords: Grasshoppers Crickets Earwigs
+- Web link: [https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf](<https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20221210053912/https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf](<https://web.archive.org/web/20221210053912/https://www.fscbiodiversity.uk/sites/default/files/Guide_to_Shrops_Orthops_version%203.pdf>)
+- Verified at: 2026-10-26T19:46:01.031792+00:00
 
 ## guide-summer-coastal-birds.html
 
@@ -3364,8 +4509,12 @@
 - Author(s): Farley-Brown & Langman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/summer-coastal-b...](<https://www.field-studies-council.org/shop/publications/summer-coastal-birds-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/summer-coastal-birds-guide/](<https://www.field-studies-council.org/shop/publications/summer-coastal-birds-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250913235317/https://www.field-studies-council.org/shop/publications/summer-coastal-birds-guide/](<https://web.archive.org/web/20250913235317/https://www.field-studies-council.org/shop/publications/summer-coastal-birds-guide/>)
+- Verified at: 2026-10-26T19:45:58.642909+00:00
 
 ## guide-uk-cetaceans-and-seals.html
 
@@ -3375,8 +4524,12 @@
 - Author(s): Simmonds & Molleson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/cetaceans-and-se...](<https://www.field-studies-council.org/shop/publications/cetaceans-and-seals-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/cetaceans-and-seals-guide/](<https://www.field-studies-council.org/shop/publications/cetaceans-and-seals-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909184047/https://www.field-studies-council.org/shop/publications/cetaceans-and-seals-guide/](<https://web.archive.org/web/20250909184047/https://www.field-studies-council.org/shop/publications/cetaceans-and-seals-guide/>)
+- Verified at: 2026-10-26T19:46:01.428498+00:00
 
 ## guide-using-lichen-based-index-nitrogen-air-quality.html
 
@@ -3386,8 +4539,12 @@
 - Author(s): CEH, NHM & University of Nottingham
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lichen-based-ind...](<https://www.field-studies-council.org/shop/publications/lichen-based-index-to-nitrogen-air-quality/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/lichen-based-index-to-nitrogen-air-quality/](<https://www.field-studies-council.org/shop/publications/lichen-based-index-to-nitrogen-air-quality/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250808081317/https://www.field-studies-council.org/shop/publications/lichen-based-index-to-nitrogen-air-quality/](<https://web.archive.org/web/20250808081317/https://www.field-studies-council.org/shop/publications/lichen-based-index-to-nitrogen-air-quality/>)
+- Verified at: 2026-10-26T19:46:02.112037+00:00
 
 ## guide-wildlife-burial-grounds.html
 
@@ -3400,8 +4557,12 @@
 - Author(s): Caring for God's Acre
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/wildlife-of-buri...](<https://www.field-studies-council.org/shop/publications/wildlife-of-burial-grounds-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/wildlife-of-burial-grounds-guide/](<https://www.field-studies-council.org/shop/publications/wildlife-of-burial-grounds-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814102324/https://www.field-studies-council.org/shop/publications/wildlife-of-burial-grounds-guide/](<https://web.archive.org/web/20250814102324/https://www.field-studies-council.org/shop/publications/wildlife-of-burial-grounds-guide/>)
+- Verified at: 2026-10-26T19:46:02.610595+00:00
 
 ## guides-british-beetles.html
 
@@ -3414,6 +4575,10 @@
   - Online
   - PDF
 - Web link: [http://johnwalters.co.uk/publications/guide-to-british-beetles.php](<http://johnwalters.co.uk/publications/guide-to-british-beetles.php>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260518093626/http://johnwalters.co.uk/publications/guide-to-british-beetles.php](<https://web.archive.org/web/20260518093626/http://johnwalters.co.uk/publications/guide-to-british-beetles.php>)
+- Verified at: 2026-10-26T19:46:06.637158+00:00
 
 ## halacarid-mites.html
 
@@ -3423,8 +4588,12 @@
 - Author(s): Green & Macquitty
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/halacarid-mites/](<https://www.field-studies-council.org/shop/publications/halacarid-mites/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/halacarid-mites/](<https://www.field-studies-council.org/shop/publications/halacarid-mites/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250808074311/https://www.field-studies-council.org/shop/publications/halacarid-mites/](<https://web.archive.org/web/20250808074311/https://www.field-studies-council.org/shop/publications/halacarid-mites/>)
+- Verified at: 2026-10-26T19:46:03.095048+00:00
 
 ## handbook-bees-british-isles-2-volume-set.html
 
@@ -3434,8 +4603,12 @@
 - Author(s): George R Else and Mike Edwards
 - Free: No
 - Available as: Publication
-- Web link: [https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles...](<https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles-2-volume-set>)
 - Keywords: aculeates aculeate hymenoptera
+- Web link: [https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles-2-volume-set](<https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles-2-volume-set>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20200127202322/https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles-2-volume-set](<https://web.archive.org/web/20200127202322/https://www.atroposbooks.co.uk/handbook-of-the-bees-of-the-british-isles-2-volume-set>)
+- Verified at: 2026-10-26T19:46:05.195798+00:00
 
 ## hants-moths.html
 
@@ -3446,31 +4619,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.hantsmoths.org.uk/](<https://www.hantsmoths.org.uk/>)
-
-## harvestmen-fold-out-chart.html
-
-- Title: Harvestmen fold-out chart
-- Submitted: Anonymous (not verified); 2016-09-22T09:05:00
-- Description:
-  12-panel laminated fold-out chart covers the adults of the harvestmen found in the field in the British Isles. Harvestmen are spider-like invertebrates that are most commonly seen in late summer and autumn. Although they have 8 legs, the whole body is fused into one unit, without the 'waist' seen in spiders.
-
-  With photographs of each species on one side, and text information on the other, it will allow you to make a positive identification quickly.
-- Author(s): Paul Richards; FSC Publications
-- Free: No
-- Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
-- Keywords: Opiliones harvestman daddy long-legs field studies council
-
-## harvestmen-nottinghamshire.html
-
-- Title: Harvestmen in Nottinghamshire
-- Submitted: rich burkmar; 2015-06-16T13:45:00
-- Description: A photographic guide to the Harvestmen of Nottinghamshire found at the excellent Eakringbirds.com website.
-- Author(s): Trevor and Dilys Pendleton
-- Free: Yes
-- Available as: Online
-- Web link: [http://www.eakringbirds.com/eakringbirds3/harvestmen.htm](<http://www.eakringbirds.com/eakringbirds3/harvestmen.htm>)
-- Keywords: opiliones
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261003172224/https://www.hantsmoths.org.uk/](<https://web.archive.org/web/20261003172224/https://www.hantsmoths.org.uk/>)
+- Verified at: 2026-10-26T19:46:05.712328+00:00
 
 ## harvestmen.html
 
@@ -3483,8 +4635,51 @@
 - Author(s): Richards
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council, invertebrates, opiliones
+- Web link: [https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
+- Alternative link: [https://www.field-studies-council.org/shop/publications/harvestmen/](<https://www.field-studies-council.org/shop/publications/harvestmen/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the direct product page for the Harvestmen fold-out guide on the Field Studies Council website, which replaces the broken link provided.
+- Verified at: 2026-10-26T19:46:10.032924+00:00
+
+## harvestmen-fold-out-chart.html
+
+- Title: Harvestmen fold-out chart
+- Submitted: Anonymous (not verified); 2016-09-22T09:05:00
+- Description:
+  12-panel laminated fold-out chart covers the adults of the harvestmen found in the field in the British Isles. Harvestmen are spider-like invertebrates that are most commonly seen in late summer and autumn. Although they have 8 legs, the whole body is fused into one unit, without the 'waist' seen in spiders.
+
+  With photographs of each species on one side, and text information on the other, it will allow you to make a positive identification quickly.
+- Author(s): Paul Richards; FSC Publications
+- Free: No
+- Available as: Publication
+- Keywords: Opiliones harvestman daddy long-legs field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
+- Alternative link: [https://www.pemberleybooks.com/ProductImage.aspx?File=50741.jpg&Size=400](<https://www.pemberleybooks.com/ProductImage.aspx?File=50741.jpg&Size=400>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is a direct product page for the identification chart from a reputable natural history bookseller.
+- Verified at: 2026-10-26T19:46:10.032753+00:00
+
+## harvestmen-nottinghamshire.html
+
+- Title: Harvestmen in Nottinghamshire
+- Submitted: rich burkmar; 2015-06-16T13:45:00
+- Description: A photographic guide to the Harvestmen of Nottinghamshire found at the excellent Eakringbirds.com website.
+- Author(s): Trevor and Dilys Pendleton
+- Free: Yes
+- Available as: Online
+- Keywords: opiliones
+- Web link: [http://www.eakringbirds.com/eakringbirds3/harvestmen.htm](<http://www.eakringbirds.com/eakringbirds3/harvestmen.htm>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251215233118/http://www.eakringbirds.com/eakringbirds3/harvestmen.htm](<https://web.archive.org/web/20251215233118/http://www.eakringbirds.com/eakringbirds3/harvestmen.htm>)
+- Verified at: 2026-10-26T19:46:08.060546+00:00
 
 ## hawkmoths-british-isles-identification-guide.html
 
@@ -3497,8 +4692,12 @@
 - Author(s): Bebbington & Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/hawkmoths-guide/](<https://www.field-studies-council.org/shop/publications/hawkmoths-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/hawkmoths-guide/](<https://www.field-studies-council.org/shop/publications/hawkmoths-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251010223206/https://www.field-studies-council.org/shop/publications/hawkmoths-guide/](<https://web.archive.org/web/20251010223206/https://www.field-studies-council.org/shop/publications/hawkmoths-guide/>)
+- Verified at: 2026-10-26T19:46:07.062444+00:00
 
 ## hawthorns-video-id-key.html
 
@@ -3509,6 +4708,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=2XL3MDt4QKM](<https://www.youtube.com/watch?v=2XL3MDt4QKM>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260617054510/https://www.youtube.com/watch?v=2XL3MDt4QKM](<https://web.archive.org/web/20260617054510/https://www.youtube.com/watch?v=2XL3MDt4QKM>)
+- Verified at: 2026-10-26T19:46:07.682851+00:00
 
 ## heathlands-east-midlands.html
 
@@ -3521,6 +4724,10 @@
   - Online
   - PDF
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.637956+00:00
 
 ## herptile-id.html
 
@@ -3530,8 +4737,11 @@
 - Author(s): ARC
 - Free: No
 - Available as: App
-- Web link: [https://apps.apple.com/gb/app/reptile-id-uk-field-guide/id382036693](<https://apps.apple.com/gb/app/reptile-id-uk-field-guide/id382036693>)
 - Keywords: frogs toads newts lizards snakes
+- Web link: [https://apps.apple.com/gb/app/reptile-id-uk-field-guide/id382036693](<https://apps.apple.com/gb/app/reptile-id-uk-field-guide/id382036693>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:46:09.739418+00:00
 
 ## house-and-garden-spiders.html
 
@@ -3546,8 +4756,12 @@
 - Author(s): Bee & Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/spiders-guide/](<https://www.field-studies-council.org/shop/publications/spiders-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/spiders-guide/](<https://www.field-studies-council.org/shop/publications/spiders-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814101814/https://www.field-studies-council.org/shop/publications/spiders-guide/](<https://web.archive.org/web/20250814101814/https://www.field-studies-council.org/shop/publications/spiders-guide/>)
+- Verified at: 2026-10-26T19:46:08.349180+00:00
 
 ## hoverflies-british-isles.html
 
@@ -3557,8 +4771,13 @@
 - Author(s): Andy Slater
 - Free: Yes
 - Available as: Online
-- Web link: [https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3...](<https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3.pdf>)
 - Keywords: flies diptera
+- Web link: [https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3.pdf](<https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://andyunderscore.com/wp-content/uploads/2017/09/hoverfly-poster-a3.pdf](<https://andyunderscore.com/wp-content/uploads/2017/09/hoverfly-poster-a3.pdf>)
+- Wayback link: [https://web.archive.org/web/20210927111345/https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3.pdf](<https://web.archive.org/web/20210927111345/https://andyunderscorecom.files.wordpress.com/2017/09/hoverfly-poster-a3.pdf>)
+- Verified at: 2026-10-26T19:46:09.126845+00:00
 
 ## how-identify-autumn-seeds.html
 
@@ -3568,8 +4787,10 @@
 - Author(s): Peter Marren, Felicity Rose Cole
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.discoverwildlife.com/index.php?p=3355](<http://www.discoverwildlife.com/index.php%3Fp%3D3355>)
 - Keywords: season, seasonal, autumn
+- Web link: [http://www.discoverwildlife.com/index.php%3Fp%3D3355](<http://www.discoverwildlife.com/index.php%3Fp%3D3355>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## how-identify-hoverflies.html
 
@@ -3579,8 +4800,15 @@
 - Author(s): BBC Wildlife Magazine/Felicity Rose Cole
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.discoverwildlife.com/index.php?p=2990](<http://www.discoverwildlife.com/index.php%3Fp%3D2990>)
 - Comment Body: This doesn't tell you how to identify hoverflies. It has some pictures of some of the common hoverflies, but the illustrations are not very accurate and there is no information given on how to tell the illustrated species apart from some equally common look-alikes. Really doesn't live up to its title!
+- Web link: [http://www.discoverwildlife.com/index.php%3Fp%3D2990](<http://www.discoverwildlife.com/index.php%3Fp%3D2990>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D2990](<https://www.discoverwildlife.com/index.php%3Fp%3D2990>)
+- Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL for the BBC Wildlife Magazine guide on identifying hoverflies, as confirmed by multiple external references and user discussions.
+- Verified at: 2026-10-26T19:46:19.604014+00:00
 
 ## hybrid-flora-british-isles.html
 
@@ -3590,7 +4818,14 @@
 - Author(s): C.A. Stace, C.D. Preston & D.A. Pearman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/hybrid-flora-of-the-british-i...](<https://www.summerfieldbooks.com/hybrid-flora-of-the-british-isles.~4789>)
+- Web link: [https://www.summerfieldbooks.com/hybrid-flora-of-the-british-isles.~4789](<https://www.summerfieldbooks.com/hybrid-flora-of-the-british-isles.~4789>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20171227101623/https://www.summerfieldbooks.com/hybrid%2Dflora%2Dof%2Dthe%2Dbritish%2Disles%2E%7E4789](<https://web.archive.org/web/20171227101623/https://www.summerfieldbooks.com/hybrid%2Dflora%2Dof%2Dthe%2Dbritish%2Disles%2E%7E4789>)
+- Alternative link: [https://nora.nerc.ac.uk/id/eprint/511029](<https://nora.nerc.ac.uk/id/eprint/511029>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official repository page for the publication, providing detailed bibliographic information and an abstract for the book.
+- Verified at: 2026-10-26T19:46:15.586382+00:00
 
 ## id-guide-pines-grown-uk-pinus.html
 
@@ -3600,8 +4835,12 @@
 - Author(s): Ken Adams
 - Free: Yes
 - Available as: PDF
-- Web link: [www.tombio.uk/sites/default/files/Pinus.pdf](<http://www.tombio.uk/sites/default/files/Pinus.pdf>)
 - Keywords: Tree forest conifer pinecone pine needle needles evergreen evergreens
+- Web link: [http://www.tombio.uk/sites/default/files/Pinus.pdf](<http://www.tombio.uk/sites/default/files/Pinus.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/Pinus.pdf](<https://www.fscbiodiversity.uk/sites/default/files/Pinus.pdf>)
+- Verified at: 2026-10-26T19:46:14.157539+00:00
 
 ## id-guides-difficult-british-spiders.html
 
@@ -3613,8 +4852,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://srs.britishspiders.org.uk/portal/p/Difficult+species](<http://srs.britishspiders.org.uk/portal/p/Difficult+species>)
 - Keywords: Porrhomma Tegenaria Zelotes Alopecosa Dysdera Clubiona Neon Tetragnatha Bathyphantes Entelecara
+- Web link: [http://srs.britishspiders.org.uk/portal/p/Difficult+species](<http://srs.britishspiders.org.uk/portal/p/Difficult+species>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://britishspiders.org.uk/atlas/portal/p/Difficult+species](<https://britishspiders.org.uk/atlas/portal/p/Difficult+species>)
+- Wayback link: [https://web.archive.org/web/20240527120843/https://srs.britishspiders.org.uk/portal/p/Difficult+species](<https://web.archive.org/web/20240527120843/https://srs.britishspiders.org.uk/portal/p/Difficult+species>)
+- Verified at: 2026-10-26T19:46:21.836325+00:00
 
 ## identification-common-benthic-diatoms-rivers.html
 
@@ -3624,8 +4868,12 @@
 - Author(s): Kelly
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/diatoms-aidgap/](<https://www.field-studies-council.org/shop/publications/diatoms-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/diatoms-aidgap/](<https://www.field-studies-council.org/shop/publications/diatoms-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250716184701/https://www.field-studies-council.org/shop/publications/diatoms-aidgap/](<https://web.archive.org/web/20250716184701/https://www.field-studies-council.org/shop/publications/diatoms-aidgap/>)
+- Verified at: 2026-10-26T19:46:10.188909+00:00
 
 ## identification-freshwater-invertebrates-species-level.html
 
@@ -3633,20 +4881,22 @@
 - Submitted: Anonymous (not verified); 2015-10-12T10:10:00
 - Description:
   A distance learning course from FBA and EA.
-
   Currently not running as a tutor lead course, but downloading of the (copious) identification guides is encouraged.
-
   In two section parts 1 and 2 rapid id - parts 3 to 11 in depth guides to id to species level but does require access to FBA keys
 - Author(s): Various mainly Richard Chadd
 - Free: Yes
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.fba.org.uk/ItemDetail?iProductID=bf84c147-9de7-4b21-ad38-ffa...](<https://www.fba.org.uk/ItemDetail?iProductID=bf84c147-9de7-4b21-ad38-ffab4b762584&Class=09c61659-a500-41dc-ac03-4dd71a7120b7&WebsiteKey=32ea2a3e-d3c9-4cc0-ac97-e51b06a06b0c>)
 - Keywords: Freshwater Invertebrates
 - Comment Body:
   Are the resources for this online course still available? - interested as a personal development opportunity / "homework" for myself.
   Cheers
+- Web link: [https://www.fba.org.uk/ItemDetail?iProductID=bf84c147-9de7-4b21-ad38-ffab4b762584&Class=09c61659-a500-41dc-ac03-4dd71a7120b7&WebsiteKey=32ea2a3e-d3c9-4cc0-ac97-e51b06a06b0c](<https://www.fba.org.uk/ItemDetail?iProductID=bf84c147-9de7-4b21-ad38-ffab4b762584&Class=09c61659-a500-41dc-ac03-4dd71a7120b7&WebsiteKey=32ea2a3e-d3c9-4cc0-ac97-e51b06a06b0c>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211021231816/https://fba.org.uk/ItemDetail?iProductId=bf84c147-9de7-4b21-ad38-ffab4b762584&Class=09c61659-a500-41dc-ac03-4dd71a7120b7&WebsiteKey=32ea2a3e-d3c9-4cc0-ac97-e51b06a06b0c](<https://web.archive.org/web/20211021231816/https://fba.org.uk/ItemDetail?iProductId=bf84c147-9de7-4b21-ad38-ffab4b762584&Class=09c61659-a500-41dc-ac03-4dd71a7120b7&WebsiteKey=32ea2a3e-d3c9-4cc0-ac97-e51b06a06b0c>)
+- Verified at: 2026-10-26T19:46:17.770049+00:00
 
 ## identification-guide-inshore-fish-british-isles.html
 
@@ -3656,12 +4906,16 @@
 - Author(s): Peter Henderson (author), Robin Somes (Editor)
 - Free: No
 - Available as: Publication
+- Keywords: marine fish, fish id
 - Web link: [http://www.britishseafish.com/](<http://www.britishseafish.com/>)
 - Additional web link:
-  - [Detailed description of contents](<http://www.britishseafish.com/wp/?page_id=1324>)
-  - [Sample chapter - the codfishes](<http://online.fliphtml5.com/lkih/gdoo/#p=1>)
-  - [Buy online](<https://www.piscesconservation.com/cube/index.php?seo_path=identification-guide-to-the-inshore-fish-of-the-british-isles>)
-- Keywords: marine fish, fish id
+  - [http://www.britishseafish.com/wp/?page_id=1324](<http://www.britishseafish.com/wp/?page_id=1324>)
+  - [http://online.fliphtml5.com/lkih/gdoo/#p=1](<http://online.fliphtml5.com/lkih/gdoo/#p=1>)
+  - [https://www.piscesconservation.com/cube/index.php?seo_path=identification-guide-to-the-inshore-fish-of-the-british-isles](<https://www.piscesconservation.com/cube/index.php?seo_path=identification-guide-to-the-inshore-fish-of-the-british-isles>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.britishseafish.com/wp2/](<https://www.britishseafish.com/wp2/>)
+- Verified at: 2026-10-26T19:46:10.858162+00:00
 
 ## identification-guide-selected-marine-non-native-species.html
 
@@ -3671,21 +4925,33 @@
 - Author(s): Bishop, J.
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.mba.ac.uk/sites/default/files/downloads/IDNNS English.pdf](<http://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
-- Additional web link: [MBA Bishop Group website](<https://www.mba.ac.uk/fellows/bishop-group-associate-fellow>)
 - Keywords: invasive
+- Web link: [http://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf](<http://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
+- Additional web link: [https://www.mba.ac.uk/fellows/bishop-group-associate-fellow](<https://www.mba.ac.uk/fellows/bishop-group-associate-fellow>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf](<https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
+- Alternative link: [https://plymsea.ac.uk/id/eprint/9076](<https://plymsea.ac.uk/id/eprint/9076>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the official repository page for the Plymouth Marine Science Electronic Archive (PlyMSEA) which hosts the high and low resolution PDF versions of the guide.
+- Verified at: 2026-10-26T19:46:22.431700+00:00
 
 ## identification-key-subfamilies-ichneumonidae-hymenoptera.html
 
 - Title: Identification key to the subfamilies of Ichneumonidae (Hymenoptera)
 - Submitted: rich burkmar; 2016-08-18T10:44:00
-- Description: This key to ichneumonid subfamilies should be regarded as a test version and feedback will be much appreciated (emails to [[email protected]](../cdn-cgi/l/email-protection.html)). Many of the illustrations are provisional and more characters need to be illustrated, which is a work in progress. Many of the scanning electron micrographs were taken by Sondra Ward for Ian Gauld’s series of volumes on the Ichneumonidae of Costa Rica. Many of the line drawings are by Mike Fitton. I am grateful to Pelle Magnusson for the photographs of Brachycyrtus ornatus and for his suggestion as to where to include this subfamily in the key. Other illustrations are my own work.
+- Description: This key to ichneumonid subfamilies should be regarded as a test version and feedback will be much appreciated (emails to [[email protected]](https://www.fscbiodiversity.uk/cdn-cgi/l/email-protection.html)). Many of the illustrations are provisional and more characters need to be illustrated, which is a work in progress. Many of the scanning electron micrographs were taken by Sondra Ward for Ian Gauld’s series of volumes on the Ichneumonidae of Costa Rica. Many of the line drawings are by Mike Fitton. I am grateful to Pelle Magnusson for the photographs of Brachycyrtus ornatus and for his suggestion as to where to include this subfamily in the key. Other illustrations are my own work.
 - Author(s): Gavin Broad
 - Free: Yes
 - Available as:
   - Online
   - PDF
 - Web link: [http://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf](<http://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf](<https://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf>)
+- Wayback link: [https://web.archive.org/web/20240530135755/https://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf](<https://web.archive.org/web/20240530135755/https://nocturnalichs.myspecies.info/files/Ich_subfamily_key_April_2015.pdf>)
+- Verified at: 2026-10-26T19:46:20.611055+00:00
 
 ## identification-soldierflies-and-allies.html
 
@@ -3698,8 +4964,10 @@
   - Online
   - PDF
   - Publication
-- Web link: [http://sars.brc.ac.uk/resources](<http://sars.brc.ac.uk/resources>)
 - Keywords: Diptera Soldierflies Stratiomyidae
+- Web link: [http://sars.brc.ac.uk/resources](<http://sars.brc.ac.uk/resources>)
+- Web link status: connect_error
+- Web link state: broken
 
 ## identify-butterfly.html
 
@@ -3709,8 +4977,12 @@
 - Author(s): Butterfly Conservation
 - Free: Yes
 - Available as: Online
-- Web link: [https://butterfly-conservation.org/butterflies/identify-a-butterfly](<https://butterfly-conservation.org/butterflies/identify-a-butterfly>)
 - Keywords: Butterfly Butterflies Lepidoptera
+- Web link: [https://butterfly-conservation.org/butterflies/identify-a-butterfly](<https://butterfly-conservation.org/butterflies/identify-a-butterfly>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260729101735/https://butterfly-conservation.org/butterflies/identify-a-butterfly](<https://web.archive.org/web/20260729101735/https://butterfly-conservation.org/butterflies/identify-a-butterfly>)
+- Verified at: 2026-10-26T19:46:14.217473+00:00
 
 ## identify-euphrasia.html
 
@@ -3721,6 +4993,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.botanicalkeys.co.uk/flora/euphrasia/eucontent/EuSearch.ASP](<http://www.botanicalkeys.co.uk/flora/euphrasia/eucontent/EuSearch.ASP>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220831124338/http://www.botanicalkeys.co.uk/flora/euphrasia/EUcontent/EuSearch.ASP](<https://web.archive.org/web/20220831124338/http://www.botanicalkeys.co.uk/flora/euphrasia/EUcontent/EuSearch.ASP>)
 
 ## identifying-beetles.html
 
@@ -3731,6 +5006,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.markgtelfer.co.uk/beetles/](<http://www.markgtelfer.co.uk/beetles/>)
+- Web link status: 520
+- Web link state: unverified
+- Web link resolved: [https://www.markgtelfer.co.uk/beetles/](<https://www.markgtelfer.co.uk/beetles/>)
+- Wayback link: [https://web.archive.org/web/20250806075910/https://markgtelfer.co.uk/beetles/](<https://web.archive.org/web/20250806075910/https://markgtelfer.co.uk/beetles/>)
 
 ## identifying-british-species-leptophlebiidae.html
 
@@ -3742,9 +5021,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://mostlyaboutmayflies.files.wordpress.com/2016/01/notes-on-the-ide...](<https://mostlyaboutmayflies.files.wordpress.com/2016/01/notes-on-the-identification-of-leptophlebiidae-nymphs1.pdf>)
-- Additional web link: [Webpage](<https://mostlyaboutmayflies.wordpress.com/2016/01/03/identifying-the-british-species-of-leptophlebiidae/>)
 - Keywords: mayflies mayfly ephemeroptera riverflies riverfly freshwater aquatic
+- Web link: [https://mostlyaboutmayflies.files.wordpress.com/2016/01/notes-on-the-identification-of-leptophlebiidae-nymphs1.pdf](<https://mostlyaboutmayflies.files.wordpress.com/2016/01/notes-on-the-identification-of-leptophlebiidae-nymphs1.pdf>)
+- Additional web link: [https://mostlyaboutmayflies.wordpress.com/2016/01/03/identifying-the-british-species-of-leptophlebiidae/](<https://mostlyaboutmayflies.wordpress.com/2016/01/03/identifying-the-british-species-of-leptophlebiidae/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://mostlyaboutmayflies.wordpress.com/wp-content/uploads/2016/01/notes-on-the-identification-of-leptophlebiidae-nymphs1.pdf](<https://mostlyaboutmayflies.wordpress.com/wp-content/uploads/2016/01/notes-on-the-identification-of-leptophlebiidae-nymphs1.pdf>)
+- Verified at: 2026-10-26T19:46:31.268116+00:00
 
 ## identikit-beetle-families.html
 
@@ -3756,8 +5039,12 @@
 - Available as:
   - Online
   - App
-- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
 - Keywords: Beetle Coleoptera Docker
+- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/](<https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/>)
+- Verified at: 2026-10-26T19:46:26.612303+00:00
 
 ## identikit-macrofungi-genera-gills.html
 
@@ -3769,8 +5056,12 @@
 - Available as:
   - Online
   - App
-- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
 - Keywords: Fungi Mushroom Mycology Toadstool Docker
+- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/](<https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/>)
+- Verified at: 2026-10-26T19:46:26.612364+00:00
 
 ## identikit-mosses.html
 
@@ -3780,9 +5071,13 @@
 - Author(s): Professor Lyn Jones, University of Dundee
 - Free: Yes
 - Available as: Online
-- Web link: [https://visual-flora.org.uk/tombiovis-web/identikit/vis.html](<https://visual-flora.org.uk/tombiovis-web/identikit/vis.html>)
-- Additional web link: [Mobile version](<https://visual-flora.org.uk/tombiovis-web/identikit/vism.html>)
 - Keywords: Moss, Mosses, multi access
+- Web link: [https://visual-flora.org.uk/tombiovis-web/identikit/vis.html](<https://visual-flora.org.uk/tombiovis-web/identikit/vis.html>)
+- Additional web link: [https://visual-flora.org.uk/tombiovis-web/identikit/vism.html](<https://visual-flora.org.uk/tombiovis-web/identikit/vism.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260607105954/https://visual-flora.org.uk/tombiovis-web/identikit/vis.html](<https://web.archive.org/web/20260607105954/https://visual-flora.org.uk/tombiovis-web/identikit/vis.html>)
+- Verified at: 2026-10-26T19:46:24.662629+00:00
 
 ## identikit-plant-families.html
 
@@ -3794,8 +5089,12 @@
 - Available as:
   - Online
   - App
-- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
 - Keywords: Angiosperm Botany Flower Plant Docker
+- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/](<https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/>)
+- Verified at: 2026-10-26T19:46:26.612381+00:00
 
 ## identikit-sphagnum-mosses-mobile-version.html
 
@@ -3806,7 +5105,11 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://visual-flora.org.uk/tombiovis-web/identikit/vis-sphagnum.html](<https://visual-flora.org.uk/tombiovis-web/identikit/vis-sphagnum.html>)
-- Additional web link: [Mobile version](<https://visual-flora.org.uk/tombiovis-web/identikit/vism-sphagnum.html>)
+- Additional web link: [https://visual-flora.org.uk/tombiovis-web/identikit/vism-sphagnum.html](<https://visual-flora.org.uk/tombiovis-web/identikit/vism-sphagnum.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260416114031/https://visual-flora.org.uk/tombiovis-web/identikit/vis-sphagnum.html](<https://web.archive.org/web/20260416114031/https://visual-flora.org.uk/tombiovis-web/identikit/vis-sphagnum.html>)
+- Verified at: 2026-10-26T19:46:25.202120+00:00
 
 ## identikit-waders-britain-and-ireland.html
 
@@ -3818,9 +5121,13 @@
 - Available as:
   - Online
   - App
-- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
-- Additional web link: [Identikit Waders of Britain and Ireland](<https://wader-species.netlify.app/>)
 - Keywords: Birds Charadriiformes Docker Shore Waders
+- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Additional web link: [https://wader-species.netlify.app/](<https://wader-species.netlify.app/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/](<https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/>)
+- Verified at: 2026-10-26T19:46:26.612395+00:00
 
 ## illustrated-guide-diatoms-british-coastal-plankton.html
 
@@ -3832,8 +5139,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies 5 (1981), 425-468 AIDGAP
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283794+00:00
 
 ## illustrated-key-british-false-scorpions-pseudoscorpions.html
 
@@ -3846,8 +5157,11 @@
 - Author(s): Legg & Farr-Cox
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/false-scorpions-...](<https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/>)
 - Keywords: arachnids false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/](<https://www.field-studies-council.org/shop/publications/false-scorpions-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:46:30.606374+00:00
 
 ## illustrated-key-cuckoo-wasps-hymenoptera-chrysididae-nordic-and-baltic-countries.html
 
@@ -3861,8 +5175,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://zookeys.pensoft.net/articles.php?id=6164](<https://zookeys.pensoft.net/articles.php?id=6164>)
 - Keywords: wasp cuckoo-wasp jewel-wasp
+- Web link: [https://zookeys.pensoft.net/articles.php?id=6164](<https://zookeys.pensoft.net/articles.php?id=6164>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261010225736/https://zookeys.pensoft.net/articles.php?id=6164](<https://web.archive.org/web/20261010225736/https://zookeys.pensoft.net/articles.php?id=6164>)
+- Verified at: 2026-10-26T19:46:27.082866+00:00
 
 ## illustrated-key-families-british-springtails-collembola.html
 
@@ -3872,8 +5190,12 @@
 - Author(s): Dallimore & Shaw
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/springtail-famil...](<https://www.field-studies-council.org/shop/publications/springtail-families-aidgap/>)
 - Keywords: foldout fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/springtail-families-aidgap/](<https://www.field-studies-council.org/shop/publications/springtail-families-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814112423/https://www.field-studies-council.org/shop/publications/springtail-families-aidgap/](<https://web.archive.org/web/20250814112423/https://www.field-studies-council.org/shop/publications/springtail-families-aidgap/>)
+- Verified at: 2026-10-26T19:46:28.987840+00:00
 
 ## insects-british-cow-dung-community.html
 
@@ -3885,8 +5207,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies 1991 AIDGAP Out of print
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283806+00:00
 
 ## interactive-guide-common-woody-plants-uk.html
 
@@ -3900,8 +5226,11 @@
 - Author(s): Pier Luigi Nimis, Bob Press, Stefano Martellos & Andrea Moro
 - Free: Yes
 - Available as: Online
-- Web link: [http://dbiodbs.units.it/carso/chiavi_pub21?sc=308](<http://dbiodbs.units.it/carso/chiavi_pub21?sc=308>)
 - Keywords: Key to nature, Project Dryades, Trees
+- Web link: [http://dbiodbs.units.it/carso/chiavi_pub21?sc=308](<http://dbiodbs.units.it/carso/chiavi_pub21?sc=308>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221002093229/http://dbiodbs.units.it/carso/chiavi_pub21?sc=308](<https://web.archive.org/web/20221002093229/http://dbiodbs.units.it/carso/chiavi_pub21?sc=308>)
 
 ## intertidal-marine-isopods.html
 
@@ -3909,15 +5238,18 @@
 - Submitted: Anonymous (not verified); 2016-06-01T15:21:00
 - Description:
   The Second Edition of this iconic Synopsis, replacing Naylor (1972).
-
   This new edition of the Synopsis has been brought completely up to date, with many new references, an updated species list, and extensive additional information included about species featured in the First edition.
 
   Each volume of the Synopses of the British Fauna provides a detailed account of a group of animals, and is suitable for more experienced users.
 - Author(s): Naylor & Brandt
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/intertidal-marin...](<https://www.field-studies-council.org/shop/publications/intertidal-marine-isopods/>)
 - Keywords: sea coastal beach crustaceans
+- Web link: [https://www.field-studies-council.org/shop/publications/intertidal-marine-isopods/](<https://www.field-studies-council.org/shop/publications/intertidal-marine-isopods/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261016150222/https://www.field-studies-council.org/shop/publications/intertidal-marine-isopods/](<https://web.archive.org/web/20261016150222/https://www.field-studies-council.org/shop/publications/intertidal-marine-isopods/>)
+- Verified at: 2026-10-26T19:46:27.839831+00:00
 
 ## intro-ladybird-larvae-id.html
 
@@ -3931,6 +5263,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://youtu.be/bcUrBmZ-DS4](<https://youtu.be/bcUrBmZ-DS4>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.youtube.com/watch?v=bcUrBmZ-DS4&feature=youtu.be](<https://www.youtube.com/watch?v=bcUrBmZ-DS4&feature=youtu.be>)
+- Verified at: 2026-10-26T19:46:28.604508+00:00
 
 ## introduction-centipedes-millipedes-and-woodlice.html
 
@@ -3942,8 +5278,15 @@
 - Author(s): Paul Richards
 - Free: No
 - Available as: Online
-- Web link: [https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-...](<https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice>)
-- Additional web link: [CENTIPEDES, MILLIPEDES AND WOODLICE](<https://www.naturebureau.co.uk/bookshop/a-introduction-to-centipedes-millipedes-and-woodlice-detail>)
+- Web link: [https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice](<https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice>)
+- Additional web link: [https://www.naturebureau.co.uk/bookshop/a-introduction-to-centipedes-millipedes-and-woodlice-detail](<https://www.naturebureau.co.uk/bookshop/a-introduction-to-centipedes-millipedes-and-woodlice-detail>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210122224738/https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice](<https://web.archive.org/web/20210122224738/https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice>)
+- Alternative link: [https://bmig.org.uk/page/keys-identification-guides](<https://bmig.org.uk/page/keys-identification-guides>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official British Myriapod and Isopod Group (BMIG) page that hosts the free PDF downloads for Paul Richards' identification guides.
+- Verified at: 2026-10-26T19:46:31.905837+00:00
 
 ## irecord-butterflies.html
 
@@ -3953,9 +5296,13 @@
 - Author(s): Natural Apptitude Ltd.
 - Free: Yes
 - Available as: App
-- Web link: [https://apps.apple.com/gb/app/irecord-butterflies/id815539116](<https://apps.apple.com/gb/app/irecord-butterflies/id815539116>)
-- Additional web link: [iRecord Butterflies Android App](<https://play.google.com/store/apps/details?id=com.natural_apptitude.butterfly>)
 - Keywords: invertebrates, lepidoptera
+- Web link: [https://apps.apple.com/gb/app/irecord-butterflies/id815539116](<https://apps.apple.com/gb/app/irecord-butterflies/id815539116>)
+- Additional web link: [https://play.google.com/store/apps/details?id=com.natural_apptitude.butterfly](<https://play.google.com/store/apps/details?id=com.natural_apptitude.butterfly>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260717091211/https://apps.apple.com/gb/app/irecord-butterflies/id815539116](<https://web.archive.org/web/20260717091211/https://apps.apple.com/gb/app/irecord-butterflies/id815539116>)
+- Verified at: 2026-10-26T19:46:30.406131+00:00
 
 ## irecord-grasshoppers.html
 
@@ -3971,18 +5318,11 @@
 - Free: Yes
 - Available as: App
 - Web link: [https://apps.apple.com/gb/app/irecord-grasshoppers/id946228299](<https://apps.apple.com/gb/app/irecord-grasshoppers/id946228299>)
-- Additional web link: [Android IRecord Grasshoppers](<https://play.google.com/store/apps/details?id=com.natural_apptitude.grasshopper>)
-
-## ispot-bayesian-keys.html
-
-- Title: iSpot Bayesian keys
-- Submitted: rich burkmar; 2015-06-06T21:25:00
-- Description: Various online multi-access keys for identifying British wildlife.
-- Author(s): Various
-- Free: Yes
-- Available as: Online
-- Web link: [https://www.ispotnature.org/webkeys/](<https://www.ispotnature.org/webkeys/>)
-- Keywords: Opal Open University
+- Additional web link: [https://play.google.com/store/apps/details?id=com.natural_apptitude.grasshopper](<https://play.google.com/store/apps/details?id=com.natural_apptitude.grasshopper>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260319130557/https://apps.apple.com/gb/app/irecord-grasshoppers/id946228299](<https://web.archive.org/web/20260319130557/https://apps.apple.com/gb/app/irecord-grasshoppers/id946228299>)
+- Verified at: 2026-10-26T19:46:31.107543+00:00
 
 ## ispot.html
 
@@ -3992,8 +5332,29 @@
 - Author(s): Open University
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.ispotnature.org/communities/uk-and-ireland](<https://www.ispotnature.org/communities/uk-and-ireland>)
 - Keywords: Opal Open University
+- Web link: [https://www.ispotnature.org/communities/uk-and-ireland](<https://www.ispotnature.org/communities/uk-and-ireland>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.ispotnature.org/](<https://www.ispotnature.org/>)
+- Wayback link: [https://web.archive.org/web/20260620103624/https://www.ispotnature.org/communities/uk-and-ireland](<https://web.archive.org/web/20260620103624/https://www.ispotnature.org/communities/uk-and-ireland>)
+- Verified at: 2026-10-26T19:46:32.932289+00:00
+
+## ispot-bayesian-keys.html
+
+- Title: iSpot Bayesian keys
+- Submitted: rich burkmar; 2015-06-06T21:25:00
+- Description: Various online multi-access keys for identifying British wildlife.
+- Author(s): Various
+- Free: Yes
+- Available as: Online
+- Keywords: Opal Open University
+- Web link: [https://www.ispotnature.org/webkeys/](<https://www.ispotnature.org/webkeys/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.ispotnature.org/](<https://www.ispotnature.org/>)
+- Wayback link: [https://web.archive.org/web/20220616025010/https://www.ispotnature.org/webkeys/](<https://web.archive.org/web/20220616025010/https://www.ispotnature.org/webkeys/>)
+- Verified at: 2026-10-26T19:46:34.015294+00:00
 
 ## july-wildflowers-spotters-sheet.html
 
@@ -4003,21 +5364,12 @@
 - Author(s): Plantlife
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1238/311/](<https://www.plantlife.org.uk/download_file/force/1238/311/>)
 - Keywords: season, seasonal, summer
-
-## june-wildflowers-spotter’s-sheet-2.html
-
-- Title: June Wildflowers Spotter’s Sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:20:00
-- Description: Photo guide to the most commonly seen wildflowers in June.
-- Author(s): Plantlife
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
-- Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1238/311/](<https://www.plantlife.org.uk/download_file/force/1238/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422211322/http://www.plantlife.org.uk:80/download_file/force/1238/311](<https://web.archive.org/web/20180422211322/http://www.plantlife.org.uk:80/download_file/force/1238/311>)
+- Verified at: 2026-10-26T19:46:37.035684+00:00
 
 ## june-wildflowers-spotter’s-sheet.html
 
@@ -4029,8 +5381,32 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
 - Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311](<https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311>)
+- Alternative link: [https://www.plantlife.org.uk/get-involved/explore-the-outdoors/](<https://www.plantlife.org.uk/get-involved/explore-the-outdoors/>)
+- Alternative probability: 0.50
+- Alternative reasoning: While this is a category page, it is the primary location where Plantlife hosts its collection of downloadable spotter sheets, including the June guide.
+- Verified at: 2026-10-26T19:46:40.231703+00:00
+
+## june-wildflowers-spotter’s-sheet-2.html
+
+- Title: June Wildflowers Spotter’s Sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:20:00
+- Description: Photo guide to the most commonly seen wildflowers in June.
+- Author(s): Plantlife
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311](<https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311>)
+- Verified at: 2026-10-26T19:46:40.230750+00:00
 
 ## keeping-frog-tadpoles.html
 
@@ -4043,8 +5419,11 @@
 - Author(s): Oxford & Sutton
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/keeping-frog-tad...](<https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/](<https://www.field-studies-council.org/shop/publications/keeping-frog-tadpoles/>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:46:38.257991+00:00
 
 ## key-adults-british-lacewings-and-their-allies-neuroptera-megaloptera-raphidiptera-and.html
 
@@ -4054,8 +5433,12 @@
 - Author(s): Plant
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lacewings-aidgap/](<https://www.field-studies-council.org/shop/publications/lacewings-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/lacewings-aidgap/](<https://www.field-studies-council.org/shop/publications/lacewings-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250709000723/https://www.field-studies-council.org/shop/publications/lacewings-aidgap/](<https://web.archive.org/web/20250709000723/https://www.field-studies-council.org/shop/publications/lacewings-aidgap/>)
+- Verified at: 2026-10-26T19:46:32.927403+00:00
 
 ## key-adults-water-beetles-britain-and-ireland-part-1.html
 
@@ -4065,8 +5448,12 @@
 - Author(s): Foster & Friday
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/water-beetles-1/](<https://www.field-studies-council.org/shop/publications/water-beetles-1/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/water-beetles-1/](<https://www.field-studies-council.org/shop/publications/water-beetles-1/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231129015324/https://www.field-studies-council.org/shop/publications/water-beetles-1/](<https://web.archive.org/web/20231129015324/https://www.field-studies-council.org/shop/publications/water-beetles-1/>)
+- Verified at: 2026-10-26T19:46:40.534543+00:00
 
 ## key-british-potter-and-mason-wasps.html
 
@@ -4076,9 +5463,26 @@
 - Author(s): Archer, M.A.
 - Free: Yes
 - Available as: PDF
-- Web link: [https://bwars.com/sites/www.bwars.com/files/diary\_downloads/Archer\_Mason...](<https://bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf>)
-- Additional web link: [BWARS website](<https://bwars.com/>)
 - Keywords: Hymenoptera
+- Web link: [https://bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf](<https://bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf>)
+- Additional web link: [https://bwars.com/](<https://bwars.com/>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20210928023606/https://www.bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf](<https://web.archive.org/web/20210928023606/https://www.bwars.com/sites/www.bwars.com/files/diary_downloads/Archer_Mason&Potter_wasp_key.pdf>)
+
+## key-british-species-aderidae.html
+
+- Title: Key to the British species of Aderidae
+- Submitted: Anonymous (not verified); 2020-06-15T10:39:00
+- Description: The larvae of this family feed on rotting wood and the adults are found in similar habitats.
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: leaf beetles Arthropoda Coleoptera
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjU1OWFmNjcxNDg1NDdmYTU](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjU1OWFmNjcxNDg1NDdmYTU>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:46:34.990352+00:00
 
 ## key-british-species-aderidae-0.html
 
@@ -4090,19 +5494,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ad...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae>)
 - Keywords: Coleoptera, Aderidae, Beetles
-
-## key-british-species-aderidae.html
-
-- Title: Key to the British species of Aderidae
-- Submitted: Anonymous (not verified); 2020-06-15T10:39:00
-- Description: The larvae of this family feed on rotting wood and the adults are found in similar habitats.
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjU1OWFmNjcxNDg1NDdmYTU>)
-- Keywords: leaf beetles Arthropoda Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793043993994429](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793043993994429>)
+- Wayback link: [https://web.archive.org/web/20130911052750/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae](<https://web.archive.org/web/20130911052750/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/aderidae>)
+- Verified at: 2026-10-26T19:46:45.920921+00:00
 
 ## key-british-species-family-buprestidae-coleoptera.html
 
@@ -4124,9 +5522,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bu...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
-- Additional web link: [A key to the Buprestidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
 - Keywords: Coleoptera, Buprestidae, Beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
+- Additional web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793043994981925](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793043994981925>)
+- Wayback link: [https://web.archive.org/web/20190818102006/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae](<https://web.archive.org/web/20190818102006/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
+- Verified at: 2026-10-26T19:46:48.572720+00:00
 
 ## key-british-species-family-eucnemidae.html
 
@@ -4136,8 +5539,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae>)
 - Keywords: Eucnemidae false click beetles polyphagan
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793043994725756](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793043994725756>)
+- Wayback link: [https://web.archive.org/web/20201103040534/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae](<https://web.archive.org/web/20201103040534/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-eucnemidae>)
+- Verified at: 2026-10-26T19:46:48.080337+00:00
 
 ## key-british-species-genus-perapion.html
 
@@ -4147,8 +5555,11 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY>)
 - Keywords: Arthropoda Insecta Brentidae
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:46:36.586064+00:00
 
 ## key-british-species-genus-protapion.html
 
@@ -4158,8 +5569,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjYyNzBhMzlmYTE5ODNiYTY>)
 - Keywords: Piezotrachelini Protapion Polyphaga
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjYyNzBhMzlmYTE5ODNiYTY](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjYyNzBhMzlmYTE5ODNiYTY>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019001034/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjYyNzBhMzlmYTE5ODNiYTY](<https://web.archive.org/web/20261019001034/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjYyNzBhMzlmYTE5ODNiYTY>)
+- Verified at: 2026-10-26T19:46:38.192480+00:00
 
 ## key-british-species-nicrophorus.html
 
@@ -4169,8 +5584,11 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicr...](<https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicrophorus%5b07052011%5d.pdf>)
 - Keywords: Silphidae, Coleoptera
+- Web link: [https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicrophorus%5b07052011%5d.pdf](<https://www.record-lrc.co.uk/downloads/KeytotheBritishspeciesofgenusNicrophorus%5b07052011%5d.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf](<https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf>)
 
 ## key-british-species-phalacridae.html
 
@@ -4180,8 +5598,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae>)
 - Keywords: shining flower beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793043998283988](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793043998283988>)
+- Wayback link: [https://web.archive.org/web/20201103040506/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae](<https://web.archive.org/web/20201103040506/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-phalacridae>)
+- Verified at: 2026-10-26T19:46:53.226286+00:00
 
 ## key-collembola-springtails-britain-and-ireland.html
 
@@ -4191,8 +5614,12 @@
 - Author(s): Hopkin
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/springtails-aidgap/](<https://www.field-studies-council.org/shop/publications/springtails-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/springtails-aidgap/](<https://www.field-studies-council.org/shop/publications/springtails-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250811050810/https://www.field-studies-council.org/shop/publications/springtails-aidgap/](<https://web.archive.org/web/20250811050810/https://www.field-studies-council.org/shop/publications/springtails-aidgap/>)
+- Verified at: 2026-10-26T19:46:39.889590+00:00
 
 ## key-common-ferns.html
 
@@ -4202,8 +5629,12 @@
 - Author(s): Merryweather
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ferns-guide/](<https://www.field-studies-council.org/shop/publications/ferns-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/ferns-guide/](<https://www.field-studies-council.org/shop/publications/ferns-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815174723/https://www.field-studies-council.org/shop/publications/ferns-guide/](<https://web.archive.org/web/20250815174723/https://www.field-studies-council.org/shop/publications/ferns-guide/>)
+- Verified at: 2026-10-26T19:46:39.491760+00:00
 
 ## key-common-lichens-trees-england.html
 
@@ -4211,16 +5642,16 @@
 - Submitted: Anonymous (not verified); 2017-03-22T13:19:00
 - Description:
   This key to common species of lichens on trees was prepared in collaboration between two partners
-
   of the European project KeyToNature (http://www.keytonature.eu) the Natural History Museum of
-
   London and the University of Trieste, as a further aid to the Open Air Laboratory (OPAL) survey of
-
   lichens as indicators of air quality.
 - Author(s): Pier Luigi Nimis, Pat Wolseley & Stefano Martellos
 - Free: Yes
 - Available as: PDF
 - Web link: [http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351](<http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351>)
+- Web link status: 504
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221129052107/http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351](<https://web.archive.org/web/20221129052107/http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351>)
 
 ## key-crabs-and-crab-animals-british-inshore-waters.html
 
@@ -4230,8 +5661,13 @@
 - Author(s): Crothers & Crothers
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/crabs-aidgap/](<https://www.field-studies-council.org/shop/publications/crabs-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/crabs-aidgap/](<https://www.field-studies-council.org/shop/publications/crabs-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.field-studies-council.org/shop/publications/crabs-aidgap-ebook/](<https://www.field-studies-council.org/shop/publications/crabs-aidgap-ebook/>)
+- Wayback link: [https://web.archive.org/web/20231128134857/https://www.field-studies-council.org/shop/publications/crabs-aidgap/](<https://web.archive.org/web/20231128134857/https://www.field-studies-council.org/shop/publications/crabs-aidgap/>)
+- Verified at: 2026-10-26T19:46:42.742253+00:00
 
 ## key-earthworms-uk-and-ireland-2nd-edition.html
 
@@ -4257,7 +5693,11 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.field-studies-council.org/shop/publications/earthworms-aidgap/](<https://www.field-studies-council.org/shop/publications/earthworms-aidgap/>)
-- Additional web link: [Earthworm Society of Britain statement](<https://www.earthwormsoc.org.uk/OPALkey>)
+- Additional web link: [https://www.earthwormsoc.org.uk/OPALkey](<https://www.earthwormsoc.org.uk/OPALkey>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814105445/https://www.field-studies-council.org/shop/publications/earthworms-aidgap/](<https://web.archive.org/web/20250814105445/https://www.field-studies-council.org/shop/publications/earthworms-aidgap/>)
+- Verified at: 2026-10-26T19:46:43.762221+00:00
 
 ## key-earthworms-uk-ireland-1st-edition.html
 
@@ -4279,8 +5719,12 @@
 - Author(s): Unwin
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/bugs-aidgap/](<https://www.field-studies-council.org/shop/publications/bugs-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/bugs-aidgap/](<https://www.field-studies-council.org/shop/publications/bugs-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250914234831/https://www.field-studies-council.org/shop/publications/bugs-aidgap/](<https://web.archive.org/web/20250914234831/https://www.field-studies-council.org/shop/publications/bugs-aidgap/>)
+- Verified at: 2026-10-26T19:46:42.273926+00:00
 
 ## key-families-british-coleoptera-beetles-and-strepsiptera.html
 
@@ -4291,6 +5735,10 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.field-studies-council.org/shop/publications/beetles-aidgap/](<https://www.field-studies-council.org/shop/publications/beetles-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013065259/https://www.field-studies-council.org/shop/publications/beetles-aidgap/](<https://web.archive.org/web/20251013065259/https://www.field-studies-council.org/shop/publications/beetles-aidgap/>)
+- Verified at: 2026-10-26T19:46:43.760526+00:00
 
 ## key-families-british-diptera.html
 
@@ -4302,8 +5750,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1981) 513-533 AIDGAP true flies
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283885+00:00
 
 ## key-genera-british-seaweeds.html
 
@@ -4315,8 +5767,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1962), 1, 1-32
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283910+00:00
 
 ## key-identification-british-anthribidae.html
 
@@ -4326,8 +5782,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae>)
 - Keywords: Fungus weevils Platyrhinus resinosus
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044003576233](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044003576233>)
+- Wayback link: [https://web.archive.org/web/20201103040443/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae](<https://web.archive.org/web/20201103040443/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-anthribidae>)
+- Verified at: 2026-10-26T19:46:57.699233+00:00
 
 ## key-identification-british-attelabidae.html
 
@@ -4337,8 +5798,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/at...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae>)
 - Keywords: larvae Attelabidae Leaf-rolling weevils
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1863517595:1793044013036894](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/attelabidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1863517595:1793044013036894>)
+- Verified at: 2026-10-26T19:47:05.411789+00:00
 
 ## key-identification-british-biphyllidae.html
 
@@ -4348,8 +5813,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-f...](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-biphyllidae?authuser=0>)
 - Keywords: Biphyllidae False Skin Beetles Polyphaga Arthropoda
+- Web link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-biphyllidae?authuser=0](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-biphyllidae?authuser=0>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019011626/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-biphyllidae?authuser=0](<https://web.archive.org/web/20261019011626/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-biphyllidae?authuser=0>)
+- Verified at: 2026-10-26T19:46:44.635919+00:00
 
 ## key-identification-british-bostrichidae.html
 
@@ -4359,8 +5828,15 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bo...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae>)
 - Keywords: Bostrichidae Arthropoda auger beetles false powderpost beetles Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130307619:1793044004778947](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bostrichidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2130307619:1793044004778947>)
+- Alternative link: [https://www.scribd.com/document/775396303/British-Beetle-Families-Identification-Guide](<https://www.scribd.com/document/775396303/British-Beetle-Families-Identification-Guide>)
+- Alternative probability: 0.40
+- Alternative reasoning: This document on Scribd contains Mike Hackston's identification keys for various British beetle families, including Bostrichidae.
+- Verified at: 2026-10-26T19:46:58.840084+00:00
 
 ## key-identification-british-bothrideridae.html
 
@@ -4370,8 +5846,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bo...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae>)
 - Keywords: Polyphaga cocoon-forming beetles dry bark beetles Insecta Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044005311850](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044005311850>)
+- Wayback link: [https://web.archive.org/web/20160120201410/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae](<https://web.archive.org/web/20160120201410/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bothrideridae>)
+- Verified at: 2026-10-26T19:46:59.269393+00:00
 
 ## key-identification-british-buprestidae.html
 
@@ -4390,8 +5871,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/bu...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
 - Keywords: Buprestidae jewel beetles flatheaded borers Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793043994981925](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793043994981925>)
+- Wayback link: [https://web.archive.org/web/20190818102006/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae](<https://web.archive.org/web/20190818102006/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae>)
+- Verified at: 2026-10-26T19:46:48.573374+00:00
 
 ## key-identification-british-byrrhidae.html
 
@@ -4401,8 +5887,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/by...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae>)
 - Keywords: Byrrhidae Coleoptera Polyphaga pill beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044006599158](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044006599158>)
+- Wayback link: [https://web.archive.org/web/20130911052854/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae](<https://web.archive.org/web/20130911052854/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byrrhidae>)
+- Verified at: 2026-10-26T19:47:01.033435+00:00
 
 ## key-identification-british-byturidae.html
 
@@ -4412,8 +5903,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/by...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae>)
 - Keywords: Byturidae Fruitworms Polyphaga Platydascillinae Coleoptera Insecta
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044008729030](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/byturidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044008729030>)
+- Verified at: 2026-10-26T19:47:03.715851+00:00
 
 ## key-identification-british-centipedes.html
 
@@ -4423,8 +5918,12 @@
 - Author(s): Barber
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/centipedes-aidgap/](<https://www.field-studies-council.org/shop/publications/centipedes-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/centipedes-aidgap/](<https://www.field-studies-council.org/shop/publications/centipedes-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250808081843/https://www.field-studies-council.org/shop/publications/centipedes-aidgap/](<https://web.archive.org/web/20250808081843/https://www.field-studies-council.org/shop/publications/centipedes-aidgap/>)
+- Verified at: 2026-10-26T19:46:54.700381+00:00
 
 ## key-identification-british-cerambycidae.html
 
@@ -4440,8 +5939,16 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ce...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae>)
 - Keywords: longhorn beetles Insecta Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1640717666:1793044012455172](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1640717666:1793044012455172>)
+- Wayback link: [https://web.archive.org/web/20130911052930/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae](<https://web.archive.org/web/20130911052930/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerambycidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct, active URL for the identification guide, as confirmed by recent community discussions and updated site navigation.
+- Verified at: 2026-10-26T19:47:07.112598+00:00
 
 ## key-identification-british-cerylonidae.html
 
@@ -4451,8 +5958,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ce...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae>)
 - Keywords: Coleoptera Insecta
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044013850099](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044013850099>)
+- Wayback link: [https://web.archive.org/web/20130911052936/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae](<https://web.archive.org/web/20130911052936/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cerylonidae>)
+- Verified at: 2026-10-26T19:47:10.737949+00:00
 
 ## key-identification-british-ciidae.html
 
@@ -4462,8 +5974,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ci...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae>)
 - Keywords: Ciidae minute tree-fungus beetles Insecta Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044025059235](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044025059235>)
+- Wayback link: [https://web.archive.org/web/20130911052956/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae](<https://web.archive.org/web/20130911052956/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ciidae>)
+- Verified at: 2026-10-26T19:47:18.051860+00:00
 
 ## key-identification-british-clambidae.html
 
@@ -4473,8 +5990,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cl...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae>)
 - Keywords: Clambidae fringe-winged beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044016700275](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/clambidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044016700275>)
+- Verified at: 2026-10-26T19:47:13.349452+00:00
 
 ## key-identification-british-cleridae.html
 
@@ -4484,8 +6005,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae>)
 - Keywords: Cleridae Cleroidea checkered beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1640717666:1793044018283917](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1640717666:1793044018283917>)
+- Wayback link: [https://web.archive.org/web/20201103040547/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae](<https://web.archive.org/web/20201103040547/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-cleridae>)
+- Verified at: 2026-10-26T19:47:11.211505+00:00
 
 ## key-identification-british-coccinellidae.html
 
@@ -4495,8 +6021,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae>)
 - Keywords: Coccinellidae ladybirds
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044019470082](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044019470082>)
+- Wayback link: [https://web.archive.org/web/20230429161342/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae](<https://web.archive.org/web/20230429161342/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-coccinellidae>)
+- Verified at: 2026-10-26T19:47:14.139740+00:00
 
 ## key-identification-british-colydiidae.html
 
@@ -4506,8 +6037,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/co...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae>)
 - Keywords: Colydiidae wood-boring beetles Cerylonidae, Salpingidae and Bothrideridae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044020313210](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/colydiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044020313210>)
+- Verified at: 2026-10-26T19:47:14.716786+00:00
 
 ## key-identification-british-cucujidae.html
 
@@ -4517,8 +6052,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cu...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae>)
 - Keywords: Cucujidae Arthropoda flat bark beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044021796438](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cucujidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044021796438>)
+- Verified at: 2026-10-26T19:47:14.515496+00:00
 
 ## key-identification-british-dasytidae.html
 
@@ -4528,8 +6067,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/da...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae>)
 - Keywords: Dasytidae Soft-winged flower beetles Melyridae Aplocnemus impressus
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044024426737](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044024426737>)
+- Wayback link: [https://web.archive.org/web/20130911053002/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae](<https://web.archive.org/web/20130911053002/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dasytidae>)
+- Verified at: 2026-10-26T19:47:19.137559+00:00
 
 ## key-identification-british-dermestidae.html
 
@@ -4539,8 +6083,15 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/de...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae>)
 - Keywords: Dermestidae Coleoptera skin beetles khapra beetles Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL for the identification guide, as cited in academic literature and search results as the location for Mike Hackston's Dermestidae key.
+- Verified at: 2026-10-26T19:47:18.911008+00:00
 
 ## key-identification-british-dryophthoridae.html
 
@@ -4550,8 +6101,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dr...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae>)
 - Keywords: weevils Dryophthoridae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044027736885](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryophthoridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044027736885>)
+- Verified at: 2026-10-26T19:47:22.639926+00:00
 
 ## key-identification-british-dryopidae.html
 
@@ -4561,8 +6116,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dr...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae>)
 - Keywords: long-toed water beetle Byrrhoidea Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044031435195](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044031435195>)
+- Wayback link: [https://web.archive.org/web/20130911053012/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae](<https://web.archive.org/web/20130911053012/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dryopidae>)
+- Verified at: 2026-10-26T19:47:26.474976+00:00
 
 ## key-identification-british-dytiscidae.html
 
@@ -4572,8 +6132,32 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae>)
 - Keywords: Dytiscidae water beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044031758128](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044031758128>)
+- Wayback link: [https://web.archive.org/web/20210513103348/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae](<https://web.archive.org/web/20210513103348/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-dytiscidae>)
+- Alternative link: [https://www.scribd.com/document/1073574807/Family-Dytiscidae-Illustrated-Key-to-British-Species](<https://www.scribd.com/document/1073574807/Family-Dytiscidae-Illustrated-Key-to-British-Species>)
+- Alternative probability: 0.60
+- Alternative reasoning: This Scribd document hosts a copy of Mike Hackston's illustrated key for the identification of British Dytiscidae.
+- Verified at: 2026-10-26T19:47:29.808308+00:00
+
+## key-identification-british-elmidae.html
+
+- Title: Key for the identification of British Elmidae
+- Submitted: Anonymous (not verified); 2020-06-16T10:24:00
+- Description: The 12 species of Elmidae found in Britain are classified in 8 genera. They are comparatively rarely collected water beetles.
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: Elmidae riffle beetles Byrrhoidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044034285605](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044034285605>)
+- Wayback link: [https://web.archive.org/web/20201103040518/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae](<https://web.archive.org/web/20201103040518/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
+- Verified at: 2026-10-26T19:47:25.885670+00:00
 
 ## key-identification-british-elmidae-0.html
 
@@ -4585,19 +6169,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
 - Keywords: Elmidae
-
-## key-identification-british-elmidae.html
-
-- Title: Key for the identification of British Elmidae
-- Submitted: Anonymous (not verified); 2020-06-16T10:24:00
-- Description: The 12 species of Elmidae found in Britain are classified in 8 genera. They are comparatively rarely collected water beetles.
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
-- Keywords: Elmidae riffle beetles Byrrhoidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044034285605](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044034285605>)
+- Wayback link: [https://web.archive.org/web/20201103040518/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae](<https://web.archive.org/web/20201103040518/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-elmidae>)
+- Verified at: 2026-10-26T19:47:25.885421+00:00
 
 ## key-identification-british-endomychidae.html
 
@@ -4607,8 +6185,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae>)
 - Keywords: Endomychidae handsome fungus beetles Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1696657311:1793044034788498](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1696657311:1793044034788498>)
+- Wayback link: [https://web.archive.org/web/20201103040550/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae](<https://web.archive.org/web/20201103040550/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-endomychidae>)
+- Verified at: 2026-10-26T19:47:29.339886+00:00
 
 ## key-identification-british-erotylidae.html
 
@@ -4618,8 +6201,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/er...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species>)
 - Keywords: fungus beetles Dacninae, Encaustinae, Erotylinae, Megalodacninae, and Tritominae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044035397787](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044035397787>)
+- Wayback link: [https://web.archive.org/web/20130911053019/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species](<https://web.archive.org/web/20130911053019/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/erotylidae---key-to-british-genera-and-species>)
+- Verified at: 2026-10-26T19:47:29.762090+00:00
 
 ## key-identification-british-geotrupidae.html
 
@@ -4629,8 +6217,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ge...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae>)
 - Keywords: Geotrupidae Odonteus armiger Coleoptera earth-boring dung beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044035573540](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/geotrupidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044035573540>)
+- Verified at: 2026-10-26T19:47:38.355425+00:00
 
 ## key-identification-british-gyrinidae.html
 
@@ -4640,8 +6232,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gy...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae>)
 - Keywords: Gyrinidae whirligig beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044038622245](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044038622245>)
+- Wayback link: [https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae](<https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/gyrinidae>)
+- Verified at: 2026-10-26T19:47:35.423444+00:00
 
 ## key-identification-british-haliplidae.html
 
@@ -4651,8 +6248,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ha...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae>)
 - Keywords: Haliplidae Brychius Peltodytes Haliplus water beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S909312806:1793044039477631](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S909312806:1793044039477631>)
+- Wayback link: [https://web.archive.org/web/20201103040454/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae](<https://web.archive.org/web/20201103040454/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/haliplidae>)
+- Verified at: 2026-10-26T19:47:38.864083+00:00
 
 ## key-identification-british-heteroceridae.html
 
@@ -4662,8 +6264,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/he...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae>)
 - Keywords: Heteroceridae variegated mud-loving beetles Byrrhoidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044040050084](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044040050084>)
+- Wayback link: [https://web.archive.org/web/20201103040440/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae](<https://web.archive.org/web/20201103040440/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/heteroceridae>)
+- Verified at: 2026-10-26T19:47:38.354419+00:00
 
 ## key-identification-british-histeridae.html
 
@@ -4673,8 +6280,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hi...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae>)
 - Keywords: Histeridae clown beetles Hister beetles Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1144614067:1793044043335494](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1144614067:1793044043335494>)
+- Wayback link: [https://web.archive.org/web/20201103040503/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae](<https://web.archive.org/web/20201103040503/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/histeridae>)
+- Verified at: 2026-10-26T19:47:31.927558+00:00
 
 ## key-identification-british-hydrochidae.html
 
@@ -4684,19 +6296,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae>)
 - Keywords: Hydrochidae water scavenger beetles
-
-## key-identification-british-kateretidae-0.html
-
-- Title: Key for the identification of British Kateretidae
-- Submitted: Anonymous (not verified); 2019-08-06T09:46:00
-- Description: The nine British species of this family belong to three genera. Two of them are very common on the flowers of nettles and several others are frequently encountered. They are very small species and will require a good stereomicroscope to identify as in the first couplet you are being asked to find a tooth at the base of the claws. If you have good equipment and lighting, the key below should separate them. The family has been treated in various ways in the past but is closely related to Nitidulidae.
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ka...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
-- Keywords: Kateretidae, free
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1696657311:1793044046493361](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1696657311:1793044046493361>)
+- Wayback link: [https://web.archive.org/web/20201103040512/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae](<https://web.archive.org/web/20201103040512/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-hydrochidae>)
+- Verified at: 2026-10-26T19:47:43.355694+00:00
 
 ## key-identification-british-kateretidae.html
 
@@ -4706,8 +6312,51 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ka...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
 - Keywords: Kateretidae short-winged flower beetles Polyphaga Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377>)
+- Wayback link: [https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae>)
+- Alternative probability: 1.00
+- Alternative reasoning: This URL is the direct, updated location for the identification guide previously hosted on the broken sites.google.com/site/mikesinsectkeys/ domain.
+- Verified at: 2026-10-26T19:47:44.742999+00:00
+
+## key-identification-british-kateretidae-0.html
+
+- Title: Key for the identification of British Kateretidae
+- Submitted: Anonymous (not verified); 2019-08-06T09:46:00
+- Description: The nine British species of this family belong to three genera. Two of them are very common on the flowers of nettles and several others are frequently encountered. They are very small species and will require a good stereomicroscope to identify as in the first couplet you are being asked to find a tooth at the base of the claws. If you have good equipment and lighting, the key below should separate them. The family has been treated in various ways in the past but is closely related to Nitidulidae.
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: Kateretidae, free
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377>)
+- Wayback link: [https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL to the identification guide for British Kateretidae on Mike Hackston's updated site, replacing the broken link provided.
+- Verified at: 2026-10-26T19:47:44.742841+00:00
+
+## key-identification-british-laemophloeidae.html
+
+- Title: Key for the identification of British Laemophloeidae
+- Submitted: Anonymous (not verified); 2020-06-16T13:18:00
+- Description: Twelve species from this family are on the British list. Seven of these are in genus Cryptolestes and include some pests of stored products. The key below should allow the identification of the British fauna.
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: Laemophloeidae lined flat bark beetles Cucujoidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044049922740](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044049922740>)
+- Wayback link: [https://web.archive.org/web/20201103040500/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae](<https://web.archive.org/web/20201103040500/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
+- Verified at: 2026-10-26T19:47:45.861927+00:00
 
 ## key-identification-british-laemophloeidae-0.html
 
@@ -4719,18 +6368,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/la...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
-
-## key-identification-british-laemophloeidae.html
-
-- Title: Key for the identification of British Laemophloeidae
-- Submitted: Anonymous (not verified); 2020-06-16T13:18:00
-- Description: Twelve species from this family are on the British list. Seven of these are in genus Cryptolestes and include some pests of stored products. The key below should allow the identification of the British fauna.
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/la...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
-- Keywords: Laemophloeidae lined flat bark beetles Cucujoidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044049922740](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044049922740>)
+- Wayback link: [https://web.archive.org/web/20201103040500/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae](<https://web.archive.org/web/20201103040500/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/laemophloeidae>)
+- Verified at: 2026-10-26T19:47:45.861592+00:00
 
 ## key-identification-british-lampyridae.html
 
@@ -4740,8 +6383,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/la...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae>)
 - Keywords: glow worms Firefly Animalia Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044050298422](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044050298422>)
+- Wayback link: [https://web.archive.org/web/20201103040441/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae](<https://web.archive.org/web/20201103040441/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lampyridae>)
+- Verified at: 2026-10-26T19:47:49.274334+00:00
 
 ## key-identification-british-latridiidae.html
 
@@ -4761,8 +6409,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/la...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae>)
 - Keywords: minute brown scavenger beetles fungus beetle Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044050784322](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-113423071:1793044050784322>)
+- Wayback link: [https://web.archive.org/web/20201103040319/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae](<https://web.archive.org/web/20201103040319/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/latridiidae>)
+- Verified at: 2026-10-26T19:47:48.709685+00:00
 
 ## key-identification-british-leiodidae.html
 
@@ -4772,8 +6425,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae>)
 - Keywords: Leiodidae Agathidium Choleva Colon Round fungus beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S990983878:1793044052490838](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S990983878:1793044052490838>)
+- Wayback link: [https://web.archive.org/web/20201103040537/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae](<https://web.archive.org/web/20201103040537/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-identify-the-british-species-of-leiodidae>)
+- Verified at: 2026-10-26T19:47:41.384195+00:00
 
 ## key-identification-british-lucanidae.html
 
@@ -4783,8 +6441,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lu...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae>)
 - Keywords: Lucanidae Stag beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044056178995](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044056178995>)
+- Wayback link: [https://web.archive.org/web/20201103040456/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae](<https://web.archive.org/web/20201103040456/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lucanidae>)
+- Verified at: 2026-10-26T19:47:57.374278+00:00
 
 ## key-identification-british-lycidae.html
 
@@ -4794,8 +6457,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ly...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae>)
 - Keywords: Net-winged beetles Coleoptera Elateroidea
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044059160585](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793044059160585>)
+- Wayback link: [https://web.archive.org/web/20201103040450/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae](<https://web.archive.org/web/20201103040450/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lycidae>)
+- Verified at: 2026-10-26T19:48:00.365065+00:00
 
 ## key-identification-british-lymexylidae.html
 
@@ -4805,8 +6473,29 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ly...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae>)
 - Keywords: ship-timber beetles wood-boring beetles Polyphaga
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044059119744](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044059119744>)
+- Wayback link: [https://web.archive.org/web/20201103040453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae](<https://web.archive.org/web/20201103040453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/lymexylidae>)
+- Verified at: 2026-10-26T19:47:57.398036+00:00
+
+## key-identification-british-malachiidae.html
+
+- Title: Key for the identification of British Malachiidae
+- Submitted: Anonymous (not verified); 2020-06-16T13:33:00
+- Description: The current check list has 17 species in 11 genera. Some are very rare and as a family the species are more frequent to the south and then become rarer further north.
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: soft-wing flower beetle Melyridae Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044059506197](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044059506197>)
+- Wayback link: [https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae](<https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
+- Verified at: 2026-10-26T19:47:59.604584+00:00
 
 ## key-identification-british-malachiidae-0.html
 
@@ -4818,19 +6507,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
 - Keywords: Beetles, Coleoptera
-
-## key-identification-british-malachiidae.html
-
-- Title: Key for the identification of British Malachiidae
-- Submitted: Anonymous (not verified); 2020-06-16T13:33:00
-- Description: The current check list has 17 species in 11 genera. Some are very rare and as a family the species are more frequent to the south and then become rarer further north.
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
-- Keywords: soft-wing flower beetle Melyridae Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044059506197](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044059506197>)
+- Wayback link: [https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae](<https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-malachiidae>)
+- Verified at: 2026-10-26T19:47:59.604386+00:00
 
 ## key-identification-british-megalopodidae.html
 
@@ -4840,8 +6523,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/me...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae>)
 - Keywords: leaf beetle Chrysomelidae Zeugophorinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044062286794](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044062286794>)
+- Wayback link: [https://web.archive.org/web/20201103040451/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae](<https://web.archive.org/web/20201103040451/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/megalopodidae>)
+- Verified at: 2026-10-26T19:48:00.019583+00:00
 
 ## key-identification-british-melandryidae.html
 
@@ -4861,8 +6549,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/me...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae>)
 - Keywords: false darkling beetles Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044064763584](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044064763584>)
+- Wayback link: [https://web.archive.org/web/20201103040448/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae](<https://web.archive.org/web/20201103040448/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/melandryidae>)
+- Verified at: 2026-10-26T19:48:05.441062+00:00
 
 ## key-identification-british-meloidae.html
 
@@ -4872,8 +6565,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/me...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae>)
 - Keywords: Blister beetles Meloidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044065378287](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044065378287>)
+- Wayback link: [https://web.archive.org/web/20220324084828/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae](<https://web.archive.org/web/20220324084828/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/meloidae>)
+- Verified at: 2026-10-26T19:48:04.132364+00:00
 
 ## key-identification-british-monotomidae.html
 
@@ -4883,8 +6581,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mo...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae>)
 - Keywords: Polyphaga Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2128399413:1793044066485490](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2128399413:1793044066485490>)
+- Wayback link: [https://web.archive.org/web/20201103040444/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae](<https://web.archive.org/web/20201103040444/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/monotomidae>)
+- Verified at: 2026-10-26T19:48:04.665250+00:00
 
 ## key-identification-british-mordellidae.html
 
@@ -4894,8 +6597,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mo...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae>)
 - Keywords: tumbling flower beetles Mordellidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044069262993](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S674742166:1793044069262993>)
+- Wayback link: [https://web.archive.org/web/20201103040457/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae](<https://web.archive.org/web/20201103040457/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mordellidae>)
+- Verified at: 2026-10-26T19:48:06.582527+00:00
 
 ## key-identification-british-mycetophagidae.html
 
@@ -4905,8 +6613,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/my...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae>)
 - Keywords: hairy fungus beetles Polyphaga fungi Mycetophagidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044070204391](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044070204391>)
+- Wayback link: [https://web.archive.org/web/20201103040451/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae](<https://web.archive.org/web/20201103040451/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/mycetophagidae>)
+- Verified at: 2026-10-26T19:48:09.011721+00:00
 
 ## key-identification-british-nanophyidae.html
 
@@ -4918,8 +6631,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/na...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae>)
 - Keywords: Apionidae Nanophyes marmoratus Goeze Dieckmanniellus gracilis Redtenbacher
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044078489574](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044078489574>)
+- Wayback link: [https://web.archive.org/web/20201103040456/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae](<https://web.archive.org/web/20201103040456/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nanophyidae>)
+- Verified at: 2026-10-26T19:48:05.759134+00:00
 
 ## key-identification-british-noteridae.html
 
@@ -4929,8 +6647,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/no...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae>)
 - Keywords: water beetles Dytiscidae,
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044078511508](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044078511508>)
+- Wayback link: [https://web.archive.org/web/20201103040441/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae](<https://web.archive.org/web/20201103040441/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/noteridae>)
+- Verified at: 2026-10-26T19:48:09.802636+00:00
 
 ## key-identification-british-oedemeridae.html
 
@@ -4947,8 +6670,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oe...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae>)
 - Keywords: Oedemeridae false blister beetles pollen-feeding beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-885819488:1793044080182588](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-885819488:1793044080182588>)
+- Wayback link: [https://web.archive.org/web/20220909123811/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae](<https://web.archive.org/web/20220909123811/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/oedemeridae>)
+- Verified at: 2026-10-26T19:48:12.155922+00:00
 
 ## key-identification-british-orsodacnidae.html
 
@@ -4958,8 +6686,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/or...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae>)
 - Keywords: leaf beetles Chrysomelidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044080585793](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044080585793>)
+- Wayback link: [https://web.archive.org/web/20201103040442/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae](<https://web.archive.org/web/20201103040442/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/orsodacnidae>)
+- Verified at: 2026-10-26T19:48:13.509266+00:00
 
 ## key-identification-british-ptinidae.html
 
@@ -4969,8 +6702,16 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae>)
 - Keywords: Spider beetles Ptininae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044080910198](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044080910198>)
+- Wayback link: [https://web.archive.org/web/20201103040453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae](<https://web.archive.org/web/20201103040453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-to-the-british-species-of-family-ptinidae>)
+- Alternative link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is a direct Google Docs viewer link for the Ptinidae key PDF, which has been cited in ecological reports as a valid access point for the document.
+- Verified at: 2026-10-26T19:48:15.881130+00:00
 
 ## key-identification-british-pyrochroidae.html
 
@@ -4980,8 +6721,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/py...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae>)
 - Keywords: Fire-coloured beetle eyelash bugs
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-885819488:1793044094221644](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-885819488:1793044094221644>)
+- Wayback link: [https://web.archive.org/web/20201103040450/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae](<https://web.archive.org/web/20201103040450/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/pyrochroidae>)
+- Verified at: 2026-10-26T19:48:32.334571+00:00
 
 ## key-identification-british-rhynchitidae.html
 
@@ -4991,8 +6737,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rh...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae>)
 - Keywords: tooth-nosed snout weevils
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044085583538](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044085583538>)
+- Wayback link: [https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae](<https://web.archive.org/web/20201103040455/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/rhychitidae>)
+- Verified at: 2026-10-26T19:48:25.448834+00:00
 
 ## key-identification-british-salpingidae.html
 
@@ -5002,8 +6753,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sa...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae>)
 - Keywords: narrow waisted bark beetles Polyphaga
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044085931194](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044085931194>)
+- Wayback link: [https://web.archive.org/web/20201103040444/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae](<https://web.archive.org/web/20201103040444/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/salpingidae>)
+- Verified at: 2026-10-26T19:48:16.874836+00:00
 
 ## key-identification-british-scirtidae.html
 
@@ -5015,8 +6771,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sc...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae>)
 - Keywords: marsh beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044086523715](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044086523715>)
+- Wayback link: [https://web.archive.org/web/20201103040554/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae](<https://web.archive.org/web/20201103040554/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scirtidae>)
+- Verified at: 2026-10-26T19:48:19.438832+00:00
 
 ## key-identification-british-scraptiidae.html
 
@@ -5026,8 +6787,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sc...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae>)
 - Keywords: false flower beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S990983878:1793044087232420](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S990983878:1793044087232420>)
+- Wayback link: [https://web.archive.org/web/20201103040442/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae](<https://web.archive.org/web/20201103040442/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/scraptiidae>)
+- Verified at: 2026-10-26T19:48:21.162464+00:00
 
 ## key-identification-british-silphidae.html
 
@@ -5037,8 +6803,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/si...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae>)
 - Keywords: Carrion beetles Carrion beetles Silphinae and Nicrophorinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044089727641](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044089727641>)
+- Wayback link: [https://web.archive.org/web/20210416105913/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae](<https://web.archive.org/web/20210416105913/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silphidae>)
+- Verified at: 2026-10-26T19:48:28.034512+00:00
 
 ## key-identification-british-silvanidae.html
 
@@ -5052,8 +6823,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/si...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae>)
 - Keywords: silvan flat bark beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044090325944](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1591982927:1793044090325944>)
+- Wayback link: [https://web.archive.org/web/20201103040310/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae](<https://web.archive.org/web/20201103040310/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/silvanidae>)
+- Verified at: 2026-10-26T19:48:30.477473+00:00
 
 ## key-identification-british-species-erirhinidae.html
 
@@ -5061,8 +6837,13 @@
 - Submitted: Anonymous (not verified); 2020-06-16T10:27:00
 - Description: The species of this family are weevils and were formerly treated as a subfamily of Curculionidae. There are 13 British species placed in seven genera.
 - Free: No
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae>)
 - Keywords: weevils Curculionidae Erirhinidae Brachyceridae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044092717269](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044092717269>)
+- Wayback link: [https://web.archive.org/web/20201103040316/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae](<https://web.archive.org/web/20201103040316/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/key-for-the-identification-of-british-species-of-erirhinidae>)
+- Verified at: 2026-10-26T19:48:31.173190+00:00
 
 ## key-identification-british-sphindidae.html
 
@@ -5072,8 +6853,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sp...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae>)
 - Keywords: Polyphaga Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044094769271](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1809256967:1793044094769271>)
+- Wayback link: [https://web.archive.org/web/20201103040445/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae](<https://web.archive.org/web/20201103040445/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/sphindidae>)
+- Verified at: 2026-10-26T19:48:24.258474+00:00
 
 ## key-identification-british-tenebrionidae.html
 
@@ -5083,8 +6869,11 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/te...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
 - Keywords: Darkling beetle Tenebrionidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae](<https://web.archive.org/web/20201103040551/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tenebrionidae>)
 
 ## key-identification-british-tetratomidae.html
 
@@ -5094,8 +6883,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/te...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae>)
 - Keywords: polypore fungus beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044097933956](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044097933956>)
+- Wayback link: [https://web.archive.org/web/20201103040452/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae](<https://web.archive.org/web/20201103040452/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tetratomidae>)
+- Verified at: 2026-10-26T19:48:31.803747+00:00
 
 ## key-identification-british-throscidae.html
 
@@ -5105,8 +6899,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/th...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae>)
 - Keywords: false click beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044100122356](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044100122356>)
+- Wayback link: [https://web.archive.org/web/20201103040454/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae](<https://web.archive.org/web/20201103040454/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/throscidae>)
+- Verified at: 2026-10-26T19:48:35.462540+00:00
 
 ## key-identification-british-trogidae.html
 
@@ -5116,8 +6915,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tr...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae>)
 - Keywords: hide beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044101698483](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S891702338:1793044101698483>)
+- Wayback link: [https://web.archive.org/web/20210416105914/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae](<https://web.archive.org/web/20210416105914/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogidae>)
+- Verified at: 2026-10-26T19:48:34.513030+00:00
 
 ## key-identification-british-trogossitidae.html
 
@@ -5127,8 +6931,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/tr...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae>)
 - Keywords: bark-gnawing beetles Polyphaga
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044104851860](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/trogossitidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044104851860>)
+- Verified at: 2026-10-26T19:48:35.811655+00:00
 
 ## key-land-snails-flatford-area-suffolk.html
 
@@ -5140,8 +6948,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies 1 (1959), 57-71
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.283949+00:00
 
 ## key-major-groups-british-freshwater-invertebrates.html
 
@@ -5151,8 +6963,12 @@
 - Author(s): Croft
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-inver...](<https://www.field-studies-council.org/shop/publications/freshwater-invertebrates-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/freshwater-invertebrates-aidgap/](<https://www.field-studies-council.org/shop/publications/freshwater-invertebrates-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250915004350/https://www.field-studies-council.org/shop/publications/freshwater-invertebrates-aidgap/](<https://web.archive.org/web/20250915004350/https://www.field-studies-council.org/shop/publications/freshwater-invertebrates-aidgap/>)
+- Verified at: 2026-10-26T19:48:27.218190+00:00
 
 ## key-major-groups-terrestrial-invertebrates.html
 
@@ -5162,8 +6978,12 @@
 - Author(s): Tilling
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/terrestrial-inve...](<https://www.field-studies-council.org/shop/publications/terrestrial-invertebrates-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/terrestrial-invertebrates-aidgap/](<https://www.field-studies-council.org/shop/publications/terrestrial-invertebrates-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250915003412/https://www.field-studies-council.org/shop/publications/terrestrial-invertebrates-aidgap/](<https://web.archive.org/web/20250915003412/https://www.field-studies-council.org/shop/publications/terrestrial-invertebrates-aidgap/>)
+- Verified at: 2026-10-26T19:48:30.774941+00:00
 
 ## key-soil-mites-britain-and-ireland.html
 
@@ -5174,12 +6994,7 @@
 - Free: No
 - Available as: PDF
 - Comment Body:
-  Hi Rich,
-  Can I ask how one obtains a copy of the Key to the Soil Mites of Britain and Ireland please ??
-  Many thanks
-  Steve J. McWilliam
-- Comment Body:
-  Hi Steve. It's still a work in progress, but if you email Matthew Shepherd he may be willing to send you the latest PDF in return for your feedback. Contact him here: [[email protected]](../cdn-cgi/l/email-protection.html)
+  Hi Steve. It's still a work in progress, but if you email Matthew Shepherd he may be willing to send you the latest PDF in return for your feedback. Contact him here: [[email protected]](https://www.fscbiodiversity.uk/cdn-cgi/l/email-protection.html)
   Rich
 
 ## key-wild-and-introduced-daffodils-great-britain.html
@@ -5192,8 +7007,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf](<http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf>)
 - Keywords: Narcissus
+- Web link: [http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf](<http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230301124944/http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf](<https://web.archive.org/web/20230301124944/http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf>)
 
 ## key-woodlice-britain-and-ireland.html
 
@@ -5203,8 +7021,12 @@
 - Author(s): Hopkin
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodlice-aidgap/](<https://www.field-studies-council.org/shop/publications/woodlice-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/woodlice-aidgap/](<https://www.field-studies-council.org/shop/publications/woodlice-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008214940/https://www.field-studies-council.org/shop/publications/woodlice-aidgap/](<https://web.archive.org/web/20251008214940/https://www.field-studies-council.org/shop/publications/woodlice-aidgap/>)
+- Verified at: 2026-10-26T19:48:31.831342+00:00
 
 ## keys-adults-water-beetles-britain-and-ireland-part-2.html
 
@@ -5214,8 +7036,15 @@
 - Author(s): Foster, Bilton & Friday
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/water-beetles-2/](<https://www.field-studies-council.org/shop/publications/water-beetles-2/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/water-beetles-2/](<https://www.field-studies-council.org/shop/publications/water-beetles-2/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230924030139/https://www.field-studies-council.org/shop/publications/water-beetles-2/](<https://web.archive.org/web/20230924030139/https://www.field-studies-council.org/shop/publications/water-beetles-2/>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/handbooks/coleoptera/keys-to-adults-of-the-water-beetles-of-britain-and-ireland-part-2/](<https://www.royensoc.co.uk/shop/publications/handbooks/coleoptera/keys-to-adults-of-the-water-beetles-of-britain-and-ireland-part-2/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society publication page for the handbook, which is the primary source for this identification guide.
+- Verified at: 2026-10-26T19:48:40.708251+00:00
 
 ## keys-british-genera-and-species-anthicidae-flower-beetles.html
 
@@ -5225,8 +7054,12 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NmVmM2U5ZGZmNDIwZmI4ZA>)
 - Keywords: Flower beetles Ant
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NmVmM2U5ZGZmNDIwZmI4ZA](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NmVmM2U5ZGZmNDIwZmI4ZA>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019012541/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NmVmM2U5ZGZmNDIwZmI4ZA](<https://web.archive.org/web/20261019012541/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6NmVmM2U5ZGZmNDIwZmI4ZA>)
+- Verified at: 2026-10-26T19:48:32.556319+00:00
 
 ## keys-families-british-spiders.html
 
@@ -5236,8 +7069,27 @@
 - Author(s): Jones-Walters
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/spiders-aidgap/](<https://www.field-studies-council.org/shop/publications/spiders-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/spiders-aidgap/](<https://www.field-studies-council.org/shop/publications/spiders-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250716183105/https://www.field-studies-council.org/shop/publications/spiders-aidgap/](<https://web.archive.org/web/20250716183105/https://www.field-studies-council.org/shop/publications/spiders-aidgap/>)
+- Verified at: 2026-10-26T19:48:33.508147+00:00
+
+## keys-identification-british-apionidae.html
+
+- Title: Keys for the identification of British Apionidae
+- Submitted: Anonymous (not verified); 2020-06-15T10:55:00
+- Description: This family was covered by Morris (1990) in Orthocerous Weevils: Coleoptera Curculionoidea. This key is to genus in the British fauna and includes the considerable changes in naming of the genera since Morris' work
+- Author(s): Mike Hackston
+- Free: Yes
+- Available as: Online
+- Keywords: weevils Brentidae Apioninae Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445>)
+- Verified at: 2026-10-26T19:48:46.153977+00:00
 
 ## keys-identification-british-apionidae-0.html
 
@@ -5249,19 +7101,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ap...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae>)
 - Keywords: Coleoptera, Apionidae, Beetles
-
-## keys-identification-british-apionidae.html
-
-- Title: Keys for the identification of British Apionidae
-- Submitted: Anonymous (not verified); 2020-06-15T10:55:00
-- Description: This family was covered by Morris (1990) in Orthocerous Weevils: Coleoptera Curculionoidea. This key is to genus in the British fauna and includes the considerable changes in naming of the genera since Morris' work
-- Author(s): Mike Hackston
-- Free: Yes
-- Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ap...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae>)
-- Keywords: weevils Brentidae Apioninae Coleoptera
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae>)
+- Alternative probability: 0.90
+- Alternative reasoning: This URL follows the updated naming convention for the 'Mikes Insect Keys' site and hosts the specific identification guide for British Apionidae.
+- Verified at: 2026-10-26T19:48:46.153719+00:00
 
 ## keys-identification-british-cantharidae.html
 
@@ -5271,8 +7119,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ca...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae>)
 - Keywords: Soldier beetles sailor beetles Podabrus alpinus Cantharinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044113114787](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044113114787>)
+- Wayback link: [https://web.archive.org/web/20130911052909/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae](<https://web.archive.org/web/20130911052909/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae>)
+- Verified at: 2026-10-26T19:48:48.436408+00:00
 
 ## keys-identification-british-carabidae.html
 
@@ -5282,8 +7135,16 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ca...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae>)
 - Keywords: Agonum Bembidion Demetrias Lebia Syntomus
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044114082860](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-552173235:1793044114082860>)
+- Wayback link: [https://web.archive.org/web/20160120214312/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae](<https://web.archive.org/web/20160120214312/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae>)
+- Alternative probability: 0.95
+- Alternative reasoning: This URL is the direct, updated location for the guide, as cited in academic literature and research repositories.
+- Verified at: 2026-10-26T19:48:51.258937+00:00
 
 ## keys-identification-british-chrysomelidae.html
 
@@ -5293,8 +7154,16 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ch...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae>)
 - Keywords: leaf beetles Bruchinae Donaciinae Criocerinae Cryptocepahalinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044113074142](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044113074142>)
+- Wayback link: [https://web.archive.org/web/20191121113922/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae](<https://web.archive.org/web/20191121113922/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the updated, active URL for the identification guide, as cited in recent academic literature and research publications.
+- Verified at: 2026-10-26T19:48:46.988326+00:00
 
 ## keys-identification-british-cryptophagidae.html
 
@@ -5304,8 +7173,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cr...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae>)
 - Keywords: Cryptophagidae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044114812346](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044114812346>)
+- Wayback link: [https://web.archive.org/web/20160120201158/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae](<https://web.archive.org/web/20160120201158/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cryptophagidae>)
+- Verified at: 2026-10-26T19:48:41.762994+00:00
 
 ## keys-identification-british-curculionidae.html
 
@@ -5317,8 +7191,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae>)
 - Keywords: Curculionidae weevils morphology Entiminae Baridinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044114580677](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-65911926:1793044114580677>)
+- Wayback link: [https://web.archive.org/web/20220414231453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae](<https://web.archive.org/web/20220414231453/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-to-british-species-of-family-curculionidae>)
+- Verified at: 2026-10-26T19:48:51.136213+00:00
 
 ## keys-identification-british-elateridae.html
 
@@ -5328,8 +7207,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-...](<https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae>)
 - Keywords: ELATERIDAE DENTICOLLINAE Click beetles spring beetles Arthropoda
+- Web link: [https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae](<https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae&followup=https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044115219099](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae&followup=https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044115219099>)
+- Wayback link: [https://web.archive.org/web/20201016140203/https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae](<https://web.archive.org/web/20201016140203/https://sites.google.com/site/mikesinsectkeys2/home/nematocera/keys-for-the-identification-of-british-elateridae>)
+- Verified at: 2026-10-26T19:48:51.849280+00:00
 
 ## keys-identification-british-helophoridae.html
 
@@ -5339,8 +7223,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae>)
 - Keywords: Helophoridae Water scavenger beetles Helophorus
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044116062971](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044116062971>)
+- Wayback link: [https://web.archive.org/web/20201103040512/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae](<https://web.archive.org/web/20201103040512/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-helophoridae>)
+- Verified at: 2026-10-26T19:48:54.041450+00:00
 
 ## keys-identification-british-hydrophilidae.html
 
@@ -5350,8 +7239,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hy...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae>)
 - Keywords: Hydrophilidae Cercyon Enochrus
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044116450713](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044116450713>)
+- Wayback link: [https://web.archive.org/web/20201103040607/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae](<https://web.archive.org/web/20201103040607/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/hydrophilidae>)
+- Verified at: 2026-10-26T19:48:54.479756+00:00
 
 ## keys-identification-british-nitidulidae-pollen-beetles.html
 
@@ -5367,8 +7261,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ni...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae>)
 - Keywords: Epuraea Nitidulidae Meligethinae Sap beetle
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044121330495](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044121330495>)
+- Wayback link: [https://web.archive.org/web/20220315231923/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae](<https://web.archive.org/web/20220315231923/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/nitidulidae>)
+- Verified at: 2026-10-26T19:48:57.470691+00:00
 
 ## keys-identification-british-ptiliidae.html
 
@@ -5380,8 +7279,13 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae>)
 - Keywords: Featherwing beetles
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044122484473](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S320887727:1793044122484473>)
+- Wayback link: [https://web.archive.org/web/20201103040302/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae](<https://web.archive.org/web/20201103040302/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-ptiliidae>)
+- Verified at: 2026-10-26T19:48:58.891750+00:00
 
 ## keys-identification-british-scarabaeidae.html
 
@@ -5396,8 +7300,15 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/ke...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
 - Keywords: scarabs scarab beetles Aphodius
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044127073172](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/keys-for-the-identification-of-british-scarabaeidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2027226862:1793044127073172>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the updated URL structure for Mike Hackston's insect keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' domain.
+- Verified at: 2026-10-26T19:49:13.799513+00:00
 
 ## keys-identification-british-staphylinidae.html
 
@@ -5414,8 +7325,16 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/st...](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae>)
 - Keywords: Euaesthetinae Habrocerinae Habrocerus capillaricornis Micropeplinae Micropeplus Omaliinae
+- Web link: [https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae](<https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044127573576](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S807272705:1793044127573576>)
+- Wayback link: [https://web.archive.org/web/20210304233909/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae](<https://web.archive.org/web/20210304233909/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/staphylinidae>)
+- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae>)
+- Alternative probability: 0.95
+- Alternative reasoning: This URL is the updated, functional location for Mike Hackston's keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' address.
+- Verified at: 2026-10-26T19:49:07.247034+00:00
 
 ## know-your-chats.html
 
@@ -5425,8 +7344,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/know-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-chats>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-chats](<https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-chats>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/chats](<https://www.bto.org/learn/skills/bird-identification/videos/chats>)
+- Wayback link: [https://web.archive.org/web/20250420054858/https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-chats](<https://web.archive.org/web/20250420054858/https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-chats>)
+- Verified at: 2026-10-26T19:48:50.099276+00:00
 
 ## know-your-thrushes-song-and-mistle.html
 
@@ -5436,8 +7360,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/know-...](<https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-thrushes-song-and-mistle>)
 - Keywords: video, film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-thrushes-song-and-mistle](<https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-thrushes-song-and-mistle>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/thrushes-song-and-mistle](<https://www.bto.org/learn/skills/bird-identification/videos/thrushes-song-and-mistle>)
+- Wayback link: [https://web.archive.org/web/20250515071002/https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-thrushes-song-and-mistle](<https://web.archive.org/web/20250515071002/https://www.bto.org/develop-your-skills/bird-identification/videos/know-your-thrushes-song-and-mistle>)
+- Verified at: 2026-10-26T19:48:51.708002+00:00
 
 ## ladybird-larvae.html
 
@@ -5447,19 +7376,12 @@
 - Author(s): Brown et al.
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ladybird-larvae-...](<https://www.field-studies-council.org/shop/publications/ladybird-larvae-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council, invertebrates
-
-## ladybirds-coccinellidae-britain-and-ireland.html
-
-- Title: Ladybirds (Coccinellidae) of Britain and Ireland
-- Submitted: rich burkmar; 2015-06-16T12:16:00
-- Description: This atlas describes the distribution of ladybirds in Britain, Ireland, the Isle of Man and the Channel Islands, using data collected through the Biological Records Centre Coccinellidae Recording Scheme (including the UK Ladybird Survey) since 1964. There are 47 species of Coccinellidae resident in Britain and Ireland. Species accounts include distribution maps, photos of adults, larvae and pupae, and details of identification and ecology. Additional guidance is provided on collecting and recording.
-- Author(s): Roy, Brown, Frost & Poland
-- Free: No
-- Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/ladybirds-atlas/](<https://www.field-studies-council.org/shop/publications/ladybirds-atlas/>)
-- Keywords: BRC Biological Records Centre FSC Field Studies Council CEH
+- Web link: [https://www.field-studies-council.org/shop/publications/ladybird-larvae-guide/](<https://www.field-studies-council.org/shop/publications/ladybird-larvae-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250809130008/https://www.field-studies-council.org/shop/publications/ladybird-larvae-guide/](<https://web.archive.org/web/20250809130008/https://www.field-studies-council.org/shop/publications/ladybird-larvae-guide/>)
+- Verified at: 2026-10-26T19:48:52.123970+00:00
 
 ## ladybirds.html
 
@@ -5471,8 +7393,27 @@
 - Author(s): Helen E Roy, Peter MJ Brown, Richard F Comont, Remy L Poland, John J Sloggett, Sophie Allington, Chris Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/ladybirds-book-2](<https://www.nhbs.com/ladybirds-book-2>)
 - Keywords: coleoptera
+- Web link: [https://www.nhbs.com/ladybirds-book-2](<https://www.nhbs.com/ladybirds-book-2>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260121005758/https://www.nhbs.com/ladybirds-book-2](<https://web.archive.org/web/20260121005758/https://www.nhbs.com/ladybirds-book-2>)
+- Verified at: 2026-10-26T19:48:53.597352+00:00
+
+## ladybirds-coccinellidae-britain-and-ireland.html
+
+- Title: Ladybirds (Coccinellidae) of Britain and Ireland
+- Submitted: rich burkmar; 2015-06-16T12:16:00
+- Description: This atlas describes the distribution of ladybirds in Britain, Ireland, the Isle of Man and the Channel Islands, using data collected through the Biological Records Centre Coccinellidae Recording Scheme (including the UK Ladybird Survey) since 1964. There are 47 species of Coccinellidae resident in Britain and Ireland. Species accounts include distribution maps, photos of adults, larvae and pupae, and details of identification and ecology. Additional guidance is provided on collecting and recording.
+- Author(s): Roy, Brown, Frost & Poland
+- Free: No
+- Available as: Publication
+- Keywords: BRC Biological Records Centre FSC Field Studies Council CEH
+- Web link: [https://www.field-studies-council.org/shop/publications/ladybirds-atlas/](<https://www.field-studies-council.org/shop/publications/ladybirds-atlas/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250811055818/https://www.field-studies-council.org/shop/publications/ladybirds-atlas/](<https://web.archive.org/web/20250811055818/https://www.field-studies-council.org/shop/publications/ladybirds-atlas/>)
+- Verified at: 2026-10-26T19:48:52.737514+00:00
 
 ## land-mammals-britain.html
 
@@ -5482,8 +7423,12 @@
 - Author(s): Farley-Brown & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/land-mammals-guide/](<https://www.field-studies-council.org/shop/publications/land-mammals-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/land-mammals-guide/](<https://www.field-studies-council.org/shop/publications/land-mammals-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251020031735/https://www.field-studies-council.org/shop/publications/land-mammals-guide/](<https://web.archive.org/web/20251020031735/https://www.field-studies-council.org/shop/publications/land-mammals-guide/>)
+- Verified at: 2026-10-26T19:48:53.225030+00:00
 
 ## land-snails-british-isles-2nd-edition.html
 
@@ -5493,8 +7438,12 @@
 - Author(s): Cameron and Riley
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/land-snails-aidgap/](<https://www.field-studies-council.org/shop/publications/land-snails-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/land-snails-aidgap/](<https://www.field-studies-council.org/shop/publications/land-snails-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909200543/https://www.field-studies-council.org/shop/publications/land-snails-aidgap/](<https://web.archive.org/web/20250909200543/https://www.field-studies-council.org/shop/publications/land-snails-aidgap/>)
+- Verified at: 2026-10-26T19:48:53.635605+00:00
 
 ## lawn-wildflowers.html
 
@@ -5507,6 +7456,10 @@
   - Online
   - PDF
 - Web link: [https://www.plantlife.org.uk/download_file/force/1396/311/](<https://www.plantlife.org.uk/download_file/force/1396/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422203922/http://www.plantlife.org.uk:80/download_file/force/1396/311](<https://web.archive.org/web/20180422203922/http://www.plantlife.org.uk:80/download_file/force/1396/311>)
+- Verified at: 2026-10-26T19:49:08.089421+00:00
 
 ## leafwatch.html
 
@@ -5521,8 +7474,12 @@
 - Author(s): Natural Apptitude Ltd.
 - Free: Yes
 - Available as: App
-- Web link: [https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&...](<https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&hl=en_GB>)
-- Additional web link: [iOS](<https://apps.apple.com/gb/app/conker-tree-science-leaf-watch/id445371129>)
+- Web link: [https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&hl=en_GB](<https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&hl=en_GB>)
+- Additional web link: [https://apps.apple.com/gb/app/conker-tree-science-leaf-watch/id445371129](<https://apps.apple.com/gb/app/conker-tree-science-leaf-watch/id445371129>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20190823014801/https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&hl=en_GB](<https://web.archive.org/web/20190823014801/https://play.google.com/store/apps/details?id=uk.ac.bris.ilrt.leafwatch&hl=en_GB>)
+- Verified at: 2026-10-26T19:49:00.646717+00:00
 
 ## lepidoptera-dissection-group-website.html
 
@@ -5532,19 +7489,11 @@
 - Author(s): Lepidoptera Dissection Group
 - Free: Yes
 - Available as: Online
-- Web link: [http://123-reg-suspended.co.uk/](<http://123-reg-suspended.co.uk/>)
 - Keywords: moth, moths
-
-## les-araignées-de-belgique-et-de-france-spiders-belgium-and-france-2.html
-
-- Title: Les araignées de Belgique et de France (Spiders of Belgium and France)
-- Submitted: rich burkmar; 2015-06-16T12:55:00
-- Description: An excellent photographic resource - particularly for quality photographs of genitalia. Covers many species found in the UK.
-- Author(s): Pierre Oger
-- Free: Yes
-- Available as: Online
-- Web link: [https://arachno.piwigo.com/](<https://arachno.piwigo.com/>)
-- Keywords: araneae
+- Web link: [http://123-reg-suspended.co.uk/](<http://123-reg-suspended.co.uk/>)
+- Web link status: 504
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20240221115142/http://123-reg-suspended.co.uk/](<https://web.archive.org/web/20240221115142/http://123-reg-suspended.co.uk/>)
 
 ## les-araignées-de-belgique-et-de-france-spiders-belgium-and-france.html
 
@@ -5554,24 +7503,27 @@
 - Author(s): Pierre Oger
 - Free: Yes
 - Available as: Online
-- Web link: [https://arachno.piwigo.com/](<https://arachno.piwigo.com/>)
 - Keywords: araneae
+- Web link: [https://arachno.piwigo.com/](<https://arachno.piwigo.com/>)
+- Web link status: 489
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20261007202439/https://arachno.piwigo.com/](<https://web.archive.org/web/20261007202439/https://arachno.piwigo.com/>)
+- Verified at: 2026-10-26T19:48:54.732518+00:00
 
-## les-myxomycètes-2.html
+## les-araignées-de-belgique-et-de-france-spiders-belgium-and-france-2.html
 
-- Title: Les myxomycètes
-- Submitted: rich burkmar; 2015-06-26T17:55:00
-- Description:
-  Information on 853 taxa of myxomycetes (530 of them illustrated by colour photographs) in two complementary volumes, one providing the text and the other the plates. French text , with bilingual keys (French / English).
-
-  A section on the general biology and ecology of myxomycetes is followed by species keys, and descriptions - these include macroscopic and microscopic characters cross referenced to the plates. Nomenclature follows the latest version of Nomenmyx. A new genus Meriderma, is proposed and detailed in an addendum where the spores of its species are illustrated.
-
-  There is also a glossary of terms, index of taxa, and bibliographical references. The plate volume shows each species in the form of an index card, with scientific name, one or more macro- photographs illustrating the habit of the species, and line drawings of relevant microscopic characters (e.g.spore type, ornamen - tation, etc.). There is extensive coverage of the nivicolous species, a group of which the authors are well-known specialists.
-- Author(s): Poulain, Michel, Marianne Meyer et Jean Bozonnet
-- Free: No
-- Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
-- Keywords: slime moulds slimemoulds
+- Title: Les araignées de Belgique et de France (Spiders of Belgium and France)
+- Submitted: rich burkmar; 2015-06-16T12:55:00
+- Description: An excellent photographic resource - particularly for quality photographs of genitalia. Covers many species found in the UK.
+- Author(s): Pierre Oger
+- Free: Yes
+- Available as: Online
+- Keywords: araneae
+- Web link: [https://arachno.piwigo.com/](<https://arachno.piwigo.com/>)
+- Web link status: 489
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20261007202439/https://arachno.piwigo.com/](<https://web.archive.org/web/20261007202439/https://arachno.piwigo.com/>)
+- Verified at: 2026-10-26T19:48:54.732041+00:00
 
 ## les-myxomycètes.html
 
@@ -5579,15 +7531,33 @@
 - Submitted: rich burkmar; 2015-06-26T17:55:00
 - Description:
   Information on 853 taxa of myxomycetes (530 of them illustrated by colour photographs) in two complementary volumes, one providing the text and the other the plates. French text , with bilingual keys (French / English).
-
   A section on the general biology and ecology of myxomycetes is followed by species keys, and descriptions - these include macroscopic and microscopic characters cross referenced to the plates. Nomenclature follows the latest version of Nomenmyx. A new genus Meriderma, is proposed and detailed in an addendum where the spores of its species are illustrated.
-
   There is also a glossary of terms, index of taxa, and bibliographical references. The plate volume shows each species in the form of an index card, with scientific name, one or more macro- photographs illustrating the habit of the species, and line drawings of relevant microscopic characters (e.g.spore type, ornamen - tation, etc.). There is extensive coverage of the nivicolous species, a group of which the authors are well-known specialists.
 - Author(s): Poulain, Michel, Marianne Meyer et Jean Bozonnet
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/les-myxomycètes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
 - Keywords: slime moulds slimemoulds
+- Web link: [https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:15.718550+00:00
+
+## les-myxomycètes-2.html
+
+- Title: Les myxomycètes
+- Submitted: rich burkmar; 2015-06-26T17:55:00
+- Description:
+  Information on 853 taxa of myxomycetes (530 of them illustrated by colour photographs) in two complementary volumes, one providing the text and the other the plates. French text , with bilingual keys (French / English).
+  A section on the general biology and ecology of myxomycetes is followed by species keys, and descriptions - these include macroscopic and microscopic characters cross referenced to the plates. Nomenclature follows the latest version of Nomenmyx. A new genus Meriderma, is proposed and detailed in an addendum where the spores of its species are illustrated.
+  There is also a glossary of terms, index of taxa, and bibliographical references. The plate volume shows each species in the form of an index card, with scientific name, one or more macro- photographs illustrating the habit of the species, and line drawings of relevant microscopic characters (e.g.spore type, ornamen - tation, etc.). There is extensive coverage of the nivicolous species, a group of which the authors are well-known specialists.
+- Author(s): Poulain, Michel, Marianne Meyer et Jean Bozonnet
+- Free: No
+- Available as: Publication
+- Keywords: slime moulds slimemoulds
+- Web link: [https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341](<https://www.summerfieldbooks.com/les-myxomyc%C3%A8tes~3341>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:15.718220+00:00
 
 ## lichen-app-assessing-nitrogen-pollution.html
 
@@ -5600,6 +7570,13 @@
   - Online
   - App
 - Web link: [https://www.apis.ac.uk/lichen-app/main](<https://www.apis.ac.uk/lichen-app/main>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20250315081128/https://www.apis.ac.uk/lichen-app/main](<https://web.archive.org/web/20250315081128/https://www.apis.ac.uk/lichen-app/main>)
+- Alternative link: [https://www.apis.ac.uk/nitrogen-lichen-field-manual](<https://www.apis.ac.uk/nitrogen-lichen-field-manual>)
+- Alternative probability: 0.90
+- Alternative reasoning: This URL is explicitly cited in official documentation as the location for the field manual and guide for the lichen-based nitrogen assessment tool.
+- Verified at: 2026-10-26T19:49:05.443179+00:00
 
 ## lichens-heaths-and-moors.html
 
@@ -5609,8 +7586,30 @@
 - Author(s): Dobson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lichens-of-heath...](<https://www.field-studies-council.org/shop/publications/lichens-of-heaths-and-moors-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/lichens-of-heaths-and-moors-guide/](<https://www.field-studies-council.org/shop/publications/lichens-of-heaths-and-moors-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909192420/https://www.field-studies-council.org/shop/publications/lichens-of-heaths-and-moors-guide/](<https://web.archive.org/web/20250909192420/https://www.field-studies-council.org/shop/publications/lichens-of-heaths-and-moors-guide/>)
+- Verified at: 2026-10-26T19:48:56.601534+00:00
+
+## lichens-twigs.html
+
+- Title: Lichens on twigs
+- Submitted: Anonymous (not verified); 2015-06-16T09:44:00
+- Description:
+  This 8-panel fold-out chart is designed to enable you to identify lichens found on twigs and use them to assess local atmospheric conditions. Lichens are highly sensitive to subtle changes in environmental conditions, so are natural indicators of the health of our environment.
+
+  This key indicates which lichens are acid-tolerant and nitrogen-tolerant and also indicates lichens that are associated with unpolluted sites.
+- Author(s): Wolseley, James & Alexander
+- Free: No
+- Available as: Publication
+- Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/lichens-on-twigs-guide/](<https://www.field-studies-council.org/shop/publications/lichens-on-twigs-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815161011/https://www.field-studies-council.org/shop/publications/lichens-on-twigs-guide/](<https://web.archive.org/web/20250815161011/https://www.field-studies-council.org/shop/publications/lichens-on-twigs-guide/>)
+- Verified at: 2026-10-26T19:48:58.350617+00:00
 
 ## lichens-twigs-0.html
 
@@ -5628,20 +7627,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://doi.org/10.5519/homkz3ty](<https://doi.org/10.5519/homkz3ty>)
-
-## lichens-twigs.html
-
-- Title: Lichens on twigs
-- Submitted: Anonymous (not verified); 2015-06-16T09:44:00
-- Description:
-  This 8-panel fold-out chart is designed to enable you to identify lichens found on twigs and use them to assess local atmospheric conditions. Lichens are highly sensitive to subtle changes in environmental conditions, so are natural indicators of the health of our environment.
-
-  This key indicates which lichens are acid-tolerant and nitrogen-tolerant and also indicates lichens that are associated with unpolluted sites.
-- Author(s): Wolseley, James & Alexander
-- Free: No
-- Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lichens-on-twigs...](<https://www.field-studies-council.org/shop/publications/lichens-on-twigs-guide/>)
-- Keywords: fold-out, fold out, FSC
+- Web link status: 403
+- Web link state: unverified
+- Web link resolved: [https://data.nhm.ac.uk/dataset/6239e9d2-4332-42f8-8cb2-c1acb21982e1](<https://data.nhm.ac.uk/dataset/6239e9d2-4332-42f8-8cb2-c1acb21982e1>)
+- Verified at: 2026-10-26T19:49:00.089204+00:00
 
 ## lifestages-british-shieldbugs.html
 
@@ -5652,6 +7641,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.britishbugs.org.uk/heteroptera/idcards/life_stages.html](<http://www.britishbugs.org.uk/heteroptera/idcards/life_stages.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260817180110/https://britishbugs.org.uk/heteroptera/idcards/life_stages.html](<https://web.archive.org/web/20260817180110/https://britishbugs.org.uk/heteroptera/idcards/life_stages.html>)
+- Verified at: 2026-10-26T19:48:59.358595+00:00
 
 ## list-british-species-their-food-plants.html
 
@@ -5661,8 +7654,11 @@
 - Author(s): Mike Hackston
 - Free: Yes
 - Available as: Online
-- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxta...](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA>)
 - Keywords: British species Food Plants
+- Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:49:01.151925+00:00
 
 ## littoral-pycnogonids-british-isles.html
 
@@ -5674,8 +7670,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1971), 3, 455-480
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.284033+00:00
 
 ## lobsters-mud-shrimps-and-anomuran-crabs.html
 
@@ -5685,8 +7685,16 @@
 - Author(s): Ingle & Christiansen
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/lobsters-mud-shr...](<https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/](<https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
+- Wayback link: [https://web.archive.org/web/20241104140555/https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/](<https://web.archive.org/web/20241104140555/https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/>)
+- Alternative link: [https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582](<https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582>)
+- Alternative probability: 0.70
+- Alternative reasoning: Pemberley Books is a specialized natural history bookseller that explicitly lists this specific volume for sale.
+- Verified at: 2026-10-26T19:49:20.394321+00:00
 
 ## longhorn-beetles-identification-chart.html
 
@@ -5696,8 +7704,12 @@
 - Author(s): Wil j. Heeney; Katy Potts; Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/longhorn-beetles...](<https://www.field-studies-council.org/shop/publications/longhorn-beetles-guide/>)
 - Keywords: Longhorn beetles ‎Cerambycidae
+- Web link: [https://www.field-studies-council.org/shop/publications/longhorn-beetles-guide/](<https://www.field-studies-council.org/shop/publications/longhorn-beetles-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013032927/https://www.field-studies-council.org/shop/publications/longhorn-beetles-guide/](<https://web.archive.org/web/20251013032927/https://www.field-studies-council.org/shop/publications/longhorn-beetles-guide/>)
+- Verified at: 2026-10-26T19:49:01.155810+00:00
 
 ## makaques.html
 
@@ -5707,22 +7719,13 @@
 - Author(s): C J Dixon
 - Free: No
 - Available as: App
-- Web link: [http://www.makaques.com/](<http://www.makaques.com/>)
-- Additional web link: [MAKAQueS at Google Play Store](<https://play.google.com/store/apps/details?id=com.makaques.makaques>)
 - Keywords: Flora, key, identification, vascular plants, flowering plants, trees, flowers, multiaccess
-
-## march-wildflowers-spotter’s-sheet-2.html
-
-- Title: March Wildflowers Spotter’s Sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:23:00
-- Description: Photo guide to the most commonly seen wildflowers in March.
-- Author(s): Plantlife
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1245/311/](<https://www.plantlife.org.uk/download_file/force/1245/311/>)
-- Keywords: season, seasonal, spring, winter
+- Web link: [http://www.makaques.com/](<http://www.makaques.com/>)
+- Additional web link: [https://play.google.com/store/apps/details?id=com.makaques.makaques](<https://play.google.com/store/apps/details?id=com.makaques.makaques>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250620041049/http://www.makaques.com/](<https://web.archive.org/web/20250620041049/http://www.makaques.com/>)
+- Verified at: 2026-10-26T19:49:03.743947+00:00
 
 ## march-wildflowers-spotter’s-sheet.html
 
@@ -5734,8 +7737,32 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1245/311/](<https://www.plantlife.org.uk/download_file/force/1245/311/>)
 - Keywords: season, seasonal, spring, winter
+- Web link: [https://www.plantlife.org.uk/download_file/force/1245/311/](<https://www.plantlife.org.uk/download_file/force/1245/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311](<https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311>)
+- Verified at: 2026-10-26T19:49:14.428534+00:00
+
+## march-wildflowers-spotter’s-sheet-2.html
+
+- Title: March Wildflowers Spotter’s Sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:23:00
+- Description: Photo guide to the most commonly seen wildflowers in March.
+- Author(s): Plantlife
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: season, seasonal, spring, winter
+- Web link: [https://www.plantlife.org.uk/download_file/force/1245/311/](<https://www.plantlife.org.uk/download_file/force/1245/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311](<https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311>)
+- Alternative link: [https://www.plantlife.org.uk/get-involved/explore-the-outdoors/](<https://www.plantlife.org.uk/get-involved/explore-the-outdoors/>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is the official Plantlife page that hosts their collection of downloadable spotter sheets, including seasonal wildflower guides.
+- Verified at: 2026-10-26T19:49:14.428107+00:00
 
 ## marine-and-brackish-water-harpacticoid-copepods-part-1.html
 
@@ -5745,8 +7772,12 @@
 - Author(s): Huys et al
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/harpacticoid-cop...](<https://www.field-studies-council.org/shop/publications/harpacticoid-copepods-1/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/harpacticoid-copepods-1/](<https://www.field-studies-council.org/shop/publications/harpacticoid-copepods-1/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815140054/https://www.field-studies-council.org/shop/publications/harpacticoid-copepods-1/](<https://web.archive.org/web/20250815140054/https://www.field-studies-council.org/shop/publications/harpacticoid-copepods-1/>)
+- Verified at: 2026-10-26T19:49:08.051854+00:00
 
 ## marine-planktonic-ostracods.html
 
@@ -5756,8 +7787,12 @@
 - Author(s): Angel
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/marine-planktoni...](<https://www.field-studies-council.org/shop/publications/marine-planktonic-ostracods/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/marine-planktonic-ostracods/](<https://www.field-studies-council.org/shop/publications/marine-planktonic-ostracods/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008044915/https://www.field-studies-council.org/shop/publications/marine-planktonic-ostracods/](<https://web.archive.org/web/20251008044915/https://www.field-studies-council.org/shop/publications/marine-planktonic-ostracods/>)
+- Verified at: 2026-10-26T19:49:07.672981+00:00
 
 ## marsh-horsetail-id-video.html
 
@@ -5768,19 +7803,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=bYwNalYALUY](<https://www.youtube.com/watch?v=bYwNalYALUY>)
-
-## may-wildflowers-spotter’s-sheet-2.html
-
-- Title: May Wildflowers Spotter’s Sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:21:00
-- Description: Photo guide to the most commonly seen wildflowers in May
-- Author(s): Plantlife
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1244/311/](<https://www.plantlife.org.uk/download_file/force/1244/311/>)
-- Keywords: season, seasonal, spring
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20251207195928/https://www.youtube.com/watch?v=bYwNalYALUY](<https://web.archive.org/web/20251207195928/https://www.youtube.com/watch?v=bYwNalYALUY>)
 
 ## may-wildflowers-spotter’s-sheet.html
 
@@ -5792,8 +7817,29 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1244/311/](<https://www.plantlife.org.uk/download_file/force/1244/311/>)
 - Keywords: season, seasonal, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1244/311/](<https://www.plantlife.org.uk/download_file/force/1244/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210416214021/https://www.plantlife.org.uk/download_file/force/1244/311](<https://web.archive.org/web/20210416214021/https://www.plantlife.org.uk/download_file/force/1244/311>)
+- Verified at: 2026-10-26T19:49:16.298350+00:00
+
+## may-wildflowers-spotter’s-sheet-2.html
+
+- Title: May Wildflowers Spotter’s Sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:21:00
+- Description: Photo guide to the most commonly seen wildflowers in May
+- Author(s): Plantlife
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: season, seasonal, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1244/311/](<https://www.plantlife.org.uk/download_file/force/1244/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210416214021/https://www.plantlife.org.uk/download_file/force/1244/311](<https://web.archive.org/web/20210416214021/https://www.plantlife.org.uk/download_file/force/1244/311>)
+- Verified at: 2026-10-26T19:49:16.298154+00:00
 
 ## mcs-jellyfish-guide.html
 
@@ -5805,8 +7851,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf](<https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf>)
 - Keywords: beach strandings Cnidaria Scyphozoa Hydrozoa
+- Web link: [https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf](<https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20201126161321/https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf](<https://web.archive.org/web/20201126161321/https://www.mcsuk.org/downloads/wildlife/Jellyfishguide.pdf>)
+- Verified at: 2026-10-26T19:49:18.318935+00:00
 
 ## meres-and-mosses.html
 
@@ -5816,8 +7866,12 @@
 - Author(s): Boardman & Daniels
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/meres-and-mosses/](<https://www.field-studies-council.org/shop/publications/meres-and-mosses/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/meres-and-mosses/](<https://www.field-studies-council.org/shop/publications/meres-and-mosses/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814113110/https://www.field-studies-council.org/shop/publications/meres-and-mosses/](<https://web.archive.org/web/20250814113110/https://www.field-studies-council.org/shop/publications/meres-and-mosses/>)
+- Verified at: 2026-10-26T19:49:08.852832+00:00
 
 ## moorland-plants.html
 
@@ -5830,8 +7884,11 @@
 - Author(s): Jones & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/moorland-plants-...](<https://www.field-studies-council.org/shop/publications/moorland-plants-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/moorland-plants-guide/](<https://www.field-studies-council.org/shop/publications/moorland-plants-guide/>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:18.906813+00:00
 
 ## moormoss-app.html
 
@@ -5841,8 +7898,11 @@
 - Author(s): Moors for the Future, Natural Apptitude Ltd
 - Free: Yes
 - Available as: App
-- Web link: [https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moor...](<https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps>)
-- Additional web link: [iOS](<https://apps.apple.com/us/app/moormoss/id965179918>)
+- Web link: [https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps](<https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps>)
+- Additional web link: [https://apps.apple.com/us/app/moormoss/id965179918](<https://apps.apple.com/us/app/moormoss/id965179918>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20250812221727/https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps](<https://web.archive.org/web/20250812221727/https://www.moorsforthefuture.org.uk/our-work/our-projects/moorlife/moorapps/moorapps>)
 
 ## moorplants-pdf.html
 
@@ -5854,7 +7914,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.moorsforthefuture.org.uk/\_\_data/assets/pdf\_file/0008/1459547...](<https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0008/1459547/MoorPlants.pdf>)
+- Web link: [https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0008/1459547/MoorPlants.pdf](<https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0008/1459547/MoorPlants.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:20.920697+00:00
 
 ## moorwild-pdf.html
 
@@ -5870,6 +7933,10 @@
   - Online
   - PDF
 - Web link: [https://www.moorsforthefuture.org.uk/our-resources/file-preview?id=1421604](<https://www.moorsforthefuture.org.uk/our-resources/file-preview?id=1421604>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250418164849/https://www.moorsforthefuture.org.uk/our-resources/file-preview?id=1421604](<https://web.archive.org/web/20250418164849/https://www.moorsforthefuture.org.uk/our-resources/file-preview?id=1421604>)
+- Verified at: 2026-10-26T19:49:15.687824+00:00
 
 ## mosses-and-liverworts-britain-and-ireland-field-guide.html
 
@@ -5882,6 +7949,11 @@
 - Free: No
 - Available as: Publication
 - Web link: [http://rbg-web2.rbge.org.uk/bbs/Activities/Field_Guide_order.htm](<http://rbg-web2.rbge.org.uk/bbs/Activities/Field_Guide_order.htm>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.bibsbryology.org/](<https://www.bibsbryology.org/>)
+- Wayback link: [https://web.archive.org/web/20200225135650/https://rbg-web2.rbge.org.uk/bbs/Activities/Field_Guide_order.htm](<https://web.archive.org/web/20200225135650/https://rbg-web2.rbge.org.uk/bbs/Activities/Field_Guide_order.htm>)
+- Verified at: 2026-10-26T19:49:35.654044+00:00
 
 ## moths-butterflies-britain-ireland.html
 
@@ -5891,8 +7963,11 @@
 - Author(s): Nature Guides Ltd
 - Free: No
 - Available as: App
-- Web link: [https://apps.apple.com/gb/app/moths-butterflies-britain/id401118010](<https://apps.apple.com/gb/app/moths-butterflies-britain/id401118010>)
 - Keywords: caterpillar
+- Web link: [https://apps.apple.com/gb/app/moths-butterflies-britain/id401118010](<https://apps.apple.com/gb/app/moths-butterflies-britain/id401118010>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:25.514137+00:00
 
 ## mydiptera-leif-karlsson-online-diptera-keys.html
 
@@ -5905,8 +7980,10 @@
 - Author(s): Leif Karlsson
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.000webhost.com/migrate?utm\_source=000&utm\_medium=rdr&...](<https://www.000webhost.com/migrate?utm_source=000&utm_medium=rdr&utm_campaign=old_panel_off&static=true>)
 - Comment Body: The link for this site is not working (at November 2017) and I can't find a replacement link anywhere.
+- Web link: [https://www.000webhost.com/migrate?static=true](<https://www.000webhost.com/migrate?static=true>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## myxomycetes-britain-and-ireland-identification-handbook.html
 
@@ -5916,8 +7993,15 @@
 - Author(s): Bruce Ing
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/myxomycetes-of-britain-and-ireland:-an-...](<https://www.summerfieldbooks.com/myxomycetes-of-britain-and-ireland:-an-identification-handbook~504>)
 - Keywords: slime moulds slimemoulds
+- Web link: [https://www.summerfieldbooks.com/myxomycetes-of-britain-and-ireland:-an-identification-handbook~504](<https://www.summerfieldbooks.com/myxomycetes-of-britain-and-ireland:-an-identification-handbook~504>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20170316075910/http://summerfieldbooks.com/myxomycetes%2Dof%2Dbritain%2Dand%2Direland%3A%2Dan%2Didentification%2Dhandbook%7E504](<https://web.archive.org/web/20170316075910/http://summerfieldbooks.com/myxomycetes%2Dof%2Dbritain%2Dand%2Direland%3A%2Dan%2Didentification%2Dhandbook%7E504>)
+- Alternative link: [https://storefront.chester.ac.uk/index.php?main_page=product_info&cPath=6&products_id=113](<https://storefront.chester.ac.uk/index.php?main_page=product_info&cPath=6&products_id=113>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official publisher's product page for the book, which offers it for purchase.
+- Verified at: 2026-10-26T19:49:26.026757+00:00
 
 ## naamlijst-en-determinatiesleutel-tot-de-pseudoschorpioenen-van-nederland-arachnida.html
 
@@ -5929,8 +8013,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://repository.naturalis.nl/document/94041](<https://repository.naturalis.nl/document/94041>)
 - Keywords: false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://repository.naturalis.nl/document/94041](<https://repository.naturalis.nl/document/94041>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://repository.naturalis.nl/pub/262197/NFM23_091-102.pdf](<https://repository.naturalis.nl/pub/262197/NFM23_091-102.pdf>)
+- Wayback link: [https://web.archive.org/web/20160406124537/http://www.repository.naturalis.nl/document/94041](<https://web.archive.org/web/20160406124537/http://www.repository.naturalis.nl/document/94041>)
+- Verified at: 2026-10-26T19:49:20.418054+00:00
 
 ## new-flora-british-isles.html
 
@@ -5938,13 +8027,18 @@
 - Submitted: Anonymous (not verified); 2015-06-10T11:02:00
 - Description:
   Description
-
   Since its first publication in 1991, New Flora of the British Isles has become established as the standard work on the identification of the wild vascular plants of the British Isles. The Flora remains unique in many features, including its full coverage of all British wild plants. It is a technical authoritative book which has become the 'industry standard' with up to date taxonomy. It is a meaty tome with over 1200 pages, few whole plant illustrations and no colour pictures - not for the faint hearted. 4,800 taxa are now covered in varying degrees of detail. It also incorporates the new molecular system of classification based on DNA sequences. Furthermore, it includes 1600 species illustrations, rewritten distributions and an overhaul of the designation of degrees of rarity, with the introduction of a third, less rare, category. It is often on offer at Summerfield books - who offer a discount to BSBI members.
 - Author(s): Clive Stace
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/new-flora-of-the-british-isle...](<https://www.summerfieldbooks.com/new-flora-of-the-british-isles-4th-edition~6595>)
 - Keywords: Botany, keys, identification, comprehensive
+- Web link: [https://www.summerfieldbooks.com/new-flora-of-the-british-isles-4th-edition~6595](<https://www.summerfieldbooks.com/new-flora-of-the-british-isles-4th-edition~6595>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/](<https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the direct product page on the Summerfield Books website, which is the primary retailer mentioned in the description for this specific identification guide.
+- Verified at: 2026-10-26T19:49:28.718178+00:00
 
 ## non-shell-marine-wildlife.html
 
@@ -5954,9 +8048,14 @@
 - Author(s): Ian Wallace
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.record-lrc.co.uk/Downloads/Other than shells identifica...](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
-- Additional web link: [Guide to Life on Sandy Shores between C](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
 - Keywords: shore seaweeds, bryozoans, barnacles, Liverpool seashore Crabs and mobile Crustacea, Barnacles, Tube worms, Oysters, Hydroids and Bryozoa, Sponges, Urchins, Brittle Starfish, seaweeds, eggs aegg capsules, Sea Squirts Sea Slugs borers
+- Web link: [http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
+- Additional web link: [http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf](<http://www.record-lrc.co.uk/Downloads/Complete%20Beach%20Guide%20March%202012%20compressed2%5B18042012%5D.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://www.record-lrc.co.uk/downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5b18042012%5d.pdf](<https://www.record-lrc.co.uk/downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5b18042012%5d.pdf>)
+- Wayback link: [https://web.archive.org/web/20231206201316/https://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf](<https://web.archive.org/web/20231206201316/https://www.record-lrc.co.uk/Downloads/Other%20than%20shells%20identification%20version%20Feb%202012_2%5B18042012%5D.pdf>)
+- Verified at: 2026-10-26T19:49:29.763174+00:00
 
 ## north-west-european-thecate-hydroids-and-their-medusae-part-1.html
 
@@ -5966,8 +8065,12 @@
 - Author(s): Cornelius
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/thecate-hydroids...](<https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-1/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-1/](<https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-1/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250812220208/https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-1/](<https://web.archive.org/web/20250812220208/https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-1/>)
+- Verified at: 2026-10-26T19:49:23.001173+00:00
 
 ## north-west-european-thecate-hydroids-and-their-medusae-part-2.html
 
@@ -5977,8 +8080,12 @@
 - Author(s): Cornelius
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/thecate-hydroids...](<https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-2/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-2/](<https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-2/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250818133219/https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-2/](<https://web.archive.org/web/20250818133219/https://www.field-studies-council.org/shop/publications/thecate-hydroids-and-their-medusae-2/>)
+- Verified at: 2026-10-26T19:49:21.309485+00:00
 
 ## nottinghamshire-shieldbugs.html
 
@@ -5988,19 +8095,12 @@
 - Author(s): Trevor and Dilys Pendleton
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm](<http://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm>)
 - Keywords: hemiptera
-
-## october-fungi-spotter’s-sheet-2.html
-
-- Title: October Fungi Spotter’s Sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:18:00
-- Description: Photo guide to the most common autumnal fungi.
-- Author(s): Plantlife
-- Free: Yes
-- Available as: PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1243/311/](<https://www.plantlife.org.uk/download_file/force/1243/311/>)
-- Keywords: mushroooms, toadstools, fungus, seasons, seasonal, autumn, toadstools
+- Web link: [http://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm](<http://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250214205236/https://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm](<https://web.archive.org/web/20250214205236/https://www.eakringbirds.com/eakringbirds2/insectsshieldbugs.htm>)
+- Verified at: 2026-10-26T19:49:21.515276+00:00
 
 ## october-fungi-spotter’s-sheet.html
 
@@ -6010,8 +8110,27 @@
 - Author(s): Plantlife
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1243/311/](<https://www.plantlife.org.uk/download_file/force/1243/311/>)
 - Keywords: mushroooms, toadstools, fungus, seasons, seasonal, autumn, toadstools
+- Web link: [https://www.plantlife.org.uk/download_file/force/1243/311/](<https://www.plantlife.org.uk/download_file/force/1243/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422211341/http://www.plantlife.org.uk:80/download_file/force/1243/311](<https://web.archive.org/web/20180422211341/http://www.plantlife.org.uk:80/download_file/force/1243/311>)
+- Verified at: 2026-10-26T19:49:35.175073+00:00
+
+## october-fungi-spotter’s-sheet-2.html
+
+- Title: October Fungi Spotter’s Sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:18:00
+- Description: Photo guide to the most common autumnal fungi.
+- Author(s): Plantlife
+- Free: Yes
+- Available as: PDF
+- Keywords: mushroooms, toadstools, fungus, seasons, seasonal, autumn, toadstools
+- Web link: [https://www.plantlife.org.uk/download_file/force/1243/311/](<https://www.plantlife.org.uk/download_file/force/1243/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422211341/http://www.plantlife.org.uk:80/download_file/force/1243/311](<https://web.archive.org/web/20180422211341/http://www.plantlife.org.uk:80/download_file/force/1243/311>)
+- Verified at: 2026-10-26T19:49:35.174877+00:00
 
 ## online-identification-guide-birds-britain-and-europe.html
 
@@ -6022,6 +8141,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.surfbirds.com/ukbirdid.html](<http://www.surfbirds.com/ukbirdid.html>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20230407203154/http://surfbirds.com/ukbirdid.html](<https://web.archive.org/web/20230407203154/http://surfbirds.com/ukbirdid.html>)
+- Verified at: 2026-10-26T19:49:22.651943+00:00
 
 ## online-key-bee-flies-bombyliidae-north-west-europe.html
 
@@ -6031,8 +8154,13 @@
 - Author(s): Mark van Veen
 - Free: Yes
 - Available as: Online
-- Web link: [http://home.hccnet.nl/mp.van.veen/bombyliidae/index.html](<http://home.hccnet.nl/mp.van.veen/bombyliidae/index.html>)
 - Keywords: beefly beeflies
+- Web link: [http://home.hccnet.nl/mp.van.veen/bombyliidae/index.html](<http://home.hccnet.nl/mp.van.veen/bombyliidae/index.html>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://home.hccnet.nl/mp.van.veen/bombyliidae/index.html](<https://home.hccnet.nl/mp.van.veen/bombyliidae/index.html>)
+- Wayback link: [https://web.archive.org/web/20241102124028/https://home.hccnet.nl/mp.van.veen/bombyliidae/index.html](<https://web.archive.org/web/20241102124028/https://home.hccnet.nl/mp.van.veen/bombyliidae/index.html>)
+- Verified at: 2026-10-26T19:49:36.259496+00:00
 
 ## online-key-common-lichens-trees-england.html
 
@@ -6043,6 +8171,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351](<http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351>)
+- Web link status: 504
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221129052107/http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351](<https://web.archive.org/web/20221129052107/http://dbiodbs.univ.trieste.it/carso/chiavi_pub21?sc=351>)
 
 ## opal-key-common-british-earthworms.html
 
@@ -6059,7 +8190,11 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
-- Additional web link: [Limitations of the OPAL Earthworm Guide](<https://www.earthwormsoc.org.uk/OPALkey>)
+- Additional web link: [https://www.earthwormsoc.org.uk/OPALkey](<https://www.earthwormsoc.org.uk/OPALkey>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.638007+00:00
 
 ## opal-tree-guide.html
 
@@ -6073,6 +8208,10 @@
   - PDF
   - Publication
 - Web link: [https://www.imperial.ac.uk/opal/](<https://www.imperial.ac.uk/opal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/](<https://web.archive.org/web/20260825162519/https://www.imperial.ac.uk/opal/>)
+- Verified at: 2026-10-26T19:42:31.638081+00:00
 
 ## opiliones-uk-and-continental-europe.html
 
@@ -6083,6 +8222,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://sites.google.com/site/opilionesuk/](<https://sites.google.com/site/opilionesuk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260115015651/https://sites.google.com/site/opilionesuk/](<https://web.archive.org/web/20260115015651/https://sites.google.com/site/opilionesuk/>)
+- Verified at: 2026-10-26T19:49:23.940300+00:00
 
 ## opiliones-wiki.html
 
@@ -6092,8 +8235,11 @@
 - Author(s): Wikia
 - Free: Yes
 - Available as: Online
-- Web link: [https://opiliones.fandom.com/wiki/Special:Images](<https://opiliones.fandom.com/wiki/Special:Images>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://opiliones.fandom.com/wiki/Special:Images](<https://opiliones.fandom.com/wiki/Special:Images>)
+- Web link status: 403
+- Web link state: unverified
+- Verified at: 2026-10-26T19:49:25.065084+00:00
 
 ## orchid-id-british-orchid-identification-guide.html
 
@@ -6104,6 +8250,13 @@
 - Free: No
 - Available as: App
 - Web link: [https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888](<https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220626024303/https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888](<https://web.archive.org/web/20220626024303/https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888>)
+- Alternative link: [https://sunbird.tv/apps/orchid-id-british-orchids/](<https://sunbird.tv/apps/orchid-id-british-orchids/>)
+- Alternative probability: 0.90
+- Alternative reasoning: Sunbird Images is the developer/publisher of the 'Orchid Id - British Orchids' app, and this URL is the specific product page for the guide.
+- Verified at: 2026-10-26T19:49:37.518694+00:00
 
 ## orthosia-quaker-moth-identification.html
 
@@ -6117,6 +8270,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [http://www.eakringbirds.com/eakringbirds4/quakermothid.htm](<http://www.eakringbirds.com/eakringbirds4/quakermothid.htm>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250826192054/http://www.eakringbirds.com/eakringbirds4/quakermothid.htm](<https://web.archive.org/web/20250826192054/http://www.eakringbirds.com/eakringbirds4/quakermothid.htm>)
+- Verified at: 2026-10-26T19:49:26.051531+00:00
 
 ## our-guide-newts-found-uk.html
 
@@ -6126,8 +8283,12 @@
 - Author(s): The Wild Outside
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.domainmarket.com/buynow/thewildoutside.com](<https://www.domainmarket.com/buynow/thewildoutside.com>)
 - Keywords: amphibians
+- Web link: [https://www.domainmarket.com/buynow/thewildoutside.com](<https://www.domainmarket.com/buynow/thewildoutside.com>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20251106104250/https://www.domainmarket.com/buynow/thewildoutside.com](<https://web.archive.org/web/20251106104250/https://www.domainmarket.com/buynow/thewildoutside.com>)
+- Verified at: 2026-10-26T19:49:32.452630+00:00
 
 ## owls-and-owl-pellets.html
 
@@ -6142,8 +8303,12 @@
 - Author(s): Thomas & Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/owls-and-owl-pel...](<https://www.field-studies-council.org/shop/publications/owls-and-owl-pellets-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/owls-and-owl-pellets-guide/](<https://www.field-studies-council.org/shop/publications/owls-and-owl-pellets-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261013213434/https://www.field-studies-council.org/shop/publications/owls-and-owl-pellets-guide/](<https://web.archive.org/web/20261013213434/https://www.field-studies-council.org/shop/publications/owls-and-owl-pellets-guide/>)
+- Verified at: 2026-10-26T19:49:26.963146+00:00
 
 ## oxfordshire-grasses.html
 
@@ -6153,8 +8318,13 @@
 - Author(s): Ruth Ripley and Camilla Lambrick
 - Free: Yes
 - Available as: Online
-- Web link: [http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses....](<http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html>)
 - Keywords: poaceae gramineae grasses fsc identikit
+- Web link: [http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html](<http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html](<https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html>)
+- Wayback link: [https://web.archive.org/web/20260214221955/https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html](<https://web.archive.org/web/20260214221955/https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/grasses.html>)
+- Verified at: 2026-10-26T19:49:29.314824+00:00
 
 ## oxfordshire-sedges.html
 
@@ -6164,8 +8334,13 @@
 - Author(s): Ruth Ripley and Camilla Lambrick
 - Free: Yes
 - Available as: Online
-- Web link: [http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html](<http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html>)
 - Keywords: Cyperaceae sedges fsc identikit
+- Web link: [http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html](<http://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html](<https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html>)
+- Wayback link: [https://web.archive.org/web/20260210160843/https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html](<https://web.archive.org/web/20260210160843/https://portal.stats.ox.ac.uk/userdata/ruth/tombiovis-1.3.2ruths/sedges.html>)
+- Verified at: 2026-10-26T19:49:31.279733+00:00
 
 ## pdf-key-british-silphidae.html
 
@@ -6175,9 +8350,14 @@
 - Author(s): Silphidae recording Scheme
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae...](<http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf>)
-- Additional web link: [Silphidae recording scheme](<http://www.coleoptera.org.uk/silphidae/home>)
 - Keywords: carrion
+- Web link: [http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf](<http://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf>)
+- Additional web link: [http://www.coleoptera.org.uk/silphidae/home](<http://www.coleoptera.org.uk/silphidae/home>)
+- Web link status: 404
+- Web link state: broken
+- Web link resolved: [https://coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf](<https://coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf>)
+- Wayback link: [https://web.archive.org/web/20210401130839/https://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf](<https://web.archive.org/web/20210401130839/https://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf>)
+- Verified at: 2026-10-26T19:49:43.458695+00:00
 
 ## phase-1-survey-guide-grassland-and-marsh.html
 
@@ -6187,8 +8367,12 @@
 - Author(s): Wallace, Duffell & Harper
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/phase-1-survey-g...](<https://www.field-studies-council.org/shop/publications/phase-1-survey-guide-grassland-and-marsh/>)
 - Keywords: botany
+- Web link: [https://www.field-studies-council.org/shop/publications/phase-1-survey-guide-grassland-and-marsh/](<https://www.field-studies-council.org/shop/publications/phase-1-survey-guide-grassland-and-marsh/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815221815/https://www.field-studies-council.org/shop/publications/phase-1-survey-guide-grassland-and-marsh/](<https://web.archive.org/web/20250815221815/https://www.field-studies-council.org/shop/publications/phase-1-survey-guide-grassland-and-marsh/>)
+- Verified at: 2026-10-26T19:49:35.710416+00:00
 
 ## photo-gallery-sciomyzidae-snail-killing-or-marsh-flies.html
 
@@ -6198,8 +8382,12 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/](<https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/>)
 - Keywords: diptera flies snails
+- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/](<https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20210520003820/https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/](<https://web.archive.org/web/20210520003820/https://www.flickr.com/photos/63075200@N07/collections/72157679787840986/>)
+- Verified at: 2026-10-26T19:49:36.482390+00:00
 
 ## photo-key-great-diving-beetles.html
 
@@ -6207,13 +8395,16 @@
 - Submitted: Anonymous (not verified); 2016-10-06T12:50:00
 - Description:
   It is generally known that Great Diving Beetles are some of our largest freshwater insects and most naturalists
-
   will know the name Dytiscus marginalis, but there are in fact 6 species of Dytiscus in Britain and Ireland as well as two other beetles which can potentially be confused with them. The object of this photo guide is to explain that confusion and allow accurate identification so that the average naturalist can record them.
 - Author(s): Adrian Chalkley
 - Free: Yes
 - Available as: PDF
-- Web link: [https://sns.org.uk/files/Downloads/Dytiscus key 3.pdf](<https://sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf>)
 - Keywords: aquatic freshwater ponds rivers streams coleoptera
+- Web link: [https://sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf](<https://sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20240714195219/http://www.sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf](<https://web.archive.org/web/20240714195219/http://www.sns.org.uk/files/Downloads/Dytiscus%20key%203.pdf>)
+- Verified at: 2026-10-26T19:49:42.937522+00:00
 
 ## photo-key-large-aquatic-bugs.html
 
@@ -6223,9 +8414,13 @@
 - Author(s): Adrian Chalkley
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.fscbiodiversity.uk/photokeysand paddling](<https://www.fscbiodiversity.uk/photokeysand%20paddling.html>)
 - Keywords: aquatic freshwater ponds rivers streams hemiptera heteroptera
 - Comment Body: What an excellent couple of guides from Adrian Chalkey. Looking forward to yet more - well done to all
+- Web link: [https://www.fscbiodiversity.uk/photokeysand%20paddling.html](<https://www.fscbiodiversity.uk/photokeysand%20paddling.html>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/photokeysand%20paddling](<https://www.fscbiodiversity.uk/photokeysand%20paddling>)
+- Verified at: 2026-10-26T19:49:37.020782+00:00
 
 ## photographic-atlas-and-identification-key-robber-flies-germany.html
 
@@ -6235,8 +8430,12 @@
 - Author(s): Fritz Geller-Grimm
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.robberflies.info/keyger/htmle/vorwort.html](<https://www.robberflies.info/keyger/htmle/vorwort.html>)
 - Keywords: robberflies robberfly
+- Web link: [https://www.robberflies.info/keyger/htmle/vorwort.html](<https://www.robberflies.info/keyger/htmle/vorwort.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250120093038/https://robberflies.info/keyger/htmle/vorwort.html](<https://web.archive.org/web/20250120093038/https://robberflies.info/keyger/htmle/vorwort.html>)
+- Verified at: 2026-10-26T19:49:39.097744+00:00
 
 ## pictorial-guide-british-ephemeroptera.html
 
@@ -6246,21 +8445,12 @@
 - Author(s): Macadam & Bennett
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/mayflies-aidgap/](<https://www.field-studies-council.org/shop/publications/mayflies-aidgap/>)
 - Keywords: fsc aidgap
-
-## plant-crib-conifers.html
-
-- Title: The Plant Crib: Conifers
-- Submitted: rich burkmar; 2015-07-02T09:48:00
-- Description: From the PDF: "There are large number of conifers to be found in plantations, Woodland, shelter belts, hedgerows, copses, parks, cemeteries and churchyards throughout our islands (a provisional checklist is given by C. Crook (1997) BSBI News 75: 42-47). They are found in important areas for conservation and should be properly recorded. The following key includes all those species I think are most likely to be found in these places. It can be used in conjunction with Mitchell (1978). It has been written aﬁer I have spent the winter looking at living specimens of many of the species."
-- Author(s): P. D. Sell
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://bsbi.org/download/2265](<https://bsbi.org/download/2265>)
-- Keywords: BSBI difficult vascular plants
+- Web link: [https://www.field-studies-council.org/shop/publications/mayflies-aidgap/](<https://www.field-studies-council.org/shop/publications/mayflies-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250820000829/https://www.field-studies-council.org/shop/publications/mayflies-aidgap/](<https://web.archive.org/web/20250820000829/https://www.field-studies-council.org/shop/publications/mayflies-aidgap/>)
+- Verified at: 2026-10-26T19:49:38.425655+00:00
 
 ## plant-crib.html
 
@@ -6273,8 +8463,28 @@
   - Online
   - PDF
   - Publication
-- Web link: [https://bsbi.org/](<https://bsbi.org/>)
 - Keywords: BSBI difficult vascular plants
+- Web link: [https://bsbi.org/](<https://bsbi.org/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261013162854/https://bsbi.org/](<https://web.archive.org/web/20261013162854/https://bsbi.org/>)
+- Verified at: 2026-10-26T19:49:39.547536+00:00
+
+## plant-crib-conifers.html
+
+- Title: The Plant Crib: Conifers
+- Submitted: rich burkmar; 2015-07-02T09:48:00
+- Description: From the PDF: "There are large number of conifers to be found in plantations, Woodland, shelter belts, hedgerows, copses, parks, cemeteries and churchyards throughout our islands (a provisional checklist is given by C. Crook (1997) BSBI News 75: 42-47). They are found in important areas for conservation and should be properly recorded. The following key includes all those species I think are most likely to be found in these places. It can be used in conjunction with Mitchell (1978). It has been written aﬁer I have spent the winter looking at living specimens of many of the species."
+- Author(s): P. D. Sell
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: BSBI difficult vascular plants
+- Web link: [https://bsbi.org/download/2265](<https://bsbi.org/download/2265>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:49:45.075244+00:00
 
 ## plant-fungi-species.html
 
@@ -6284,8 +8494,13 @@
 - Author(s): Plantlife
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-...](<https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-species>)
 - Keywords: flowers, mushrooms, toadstools, fungus
+- Web link: [https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-species](<https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-species>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.plantlife.org.uk/advice-learning/plants-and-fungi/](<https://www.plantlife.org.uk/advice-learning/plants-and-fungi/>)
+- Wayback link: [https://web.archive.org/web/20220617205340/https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-species](<https://web.archive.org/web/20220617205340/https://www.plantlife.org.uk/uk/discover-wild-plants-nature/plant-fungi-species>)
+- Verified at: 2026-10-26T19:49:44.095298+00:00
 
 ## planthoppers-and-leafhoppers-britain-and-ireland.html
 
@@ -6295,8 +8510,12 @@
 - Author(s): Wilson, M., Stewart, A., Biederman, R., Nickel, H., Niedringhaus, R.
 - Free: No
 - Available as: Publication
-- Web link: [https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-...](<https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-of-britain-and-ireland-identification-keys-to-all-families-and-genera-and-all-british-and-irish-species-not-recorded-from-germany/23335/>)
 - Keywords: Fulgoromorpha Cicadellidae bugs hemiptera
+- Web link: [https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-of-britain-and-ireland-identification-keys-to-all-families-and-genera-and-all-british-and-irish-species-not-recorded-from-germany/23335/](<https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-of-britain-and-ireland-identification-keys-to-all-families-and-genera-and-all-british-and-irish-species-not-recorded-from-germany/23335/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251211035657/https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-of-britain-and-ireland-identification-keys-to-all-families-and-genera-and-all-british-and-irish-species-not-recorded-from-germany/23335/](<https://web.archive.org/web/20251211035657/https://www.pemberleybooks.com/product/the-planthoppers-and-leafhoppers-of-britain-and-ireland-identification-keys-to-all-families-and-genera-and-all-british-and-irish-species-not-recorded-from-germany/23335/>)
+- Verified at: 2026-10-26T19:49:40.166132+00:00
 
 ## plants-common-sand-dunes.html
 
@@ -6309,8 +8528,15 @@
 - Author(s): Edmondson & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/sand-dune-guide/](<https://www.field-studies-council.org/shop/publications/sand-dune-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/sand-dune-guide/](<https://www.field-studies-council.org/shop/publications/sand-dune-guide/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220525064004/https://www.field-studies-council.org/shop/publications/sand-dune-guide/](<https://web.archive.org/web/20220525064004/https://www.field-studies-council.org/shop/publications/sand-dune-guide/>)
+- Alternative link: [https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349](<https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349>)
+- Alternative probability: 0.80
+- Alternative reasoning: This site provides a dedicated product page for the identification chart, confirming its status as a publication, and includes the specific title and author details.
+- Verified at: 2026-10-26T19:49:45.434685+00:00
 
 ## planttracker.html
 
@@ -6323,6 +8549,9 @@
   - Online
   - App
 - Web link: [https://www.planttracker.org.uk/](<https://www.planttracker.org.uk/>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260424003223/https://www.planttracker.org.uk/](<https://web.archive.org/web/20260424003223/https://www.planttracker.org.uk/>)
 
 ## playing-field-plants.html
 
@@ -6337,8 +8566,12 @@
 - Author(s): Farley & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/playing-field-pl...](<https://www.field-studies-council.org/shop/publications/playing-field-plants-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/playing-field-plants-guide/](<https://www.field-studies-council.org/shop/publications/playing-field-plants-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251009043920/https://www.field-studies-council.org/shop/publications/playing-field-plants-guide/](<https://web.archive.org/web/20251009043920/https://www.field-studies-council.org/shop/publications/playing-field-plants-guide/>)
+- Verified at: 2026-10-26T19:49:44.477091+00:00
 
 ## pocket-guide-butterflies-great-britain-and-ireland-2nd-edition.html
 
@@ -6348,8 +8581,12 @@
 - Author(s): Richard Lewington
 - Free: No
 - Available as: Publication
-- Web link: [https://www.britishwildlife.com/shop/?bookid=33](<https://www.britishwildlife.com/shop/?bookid=33>)
 - Keywords: BWP Briitish Wildlife Publishing Lepidoptera
+- Web link: [https://www.britishwildlife.com/shop/?bookid=33](<https://www.britishwildlife.com/shop/?bookid=33>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251209043539/https://www.britishwildlife.com/shop/?bookid=33](<https://web.archive.org/web/20251209043539/https://www.britishwildlife.com/shop/?bookid=33>)
+- Verified at: 2026-10-26T19:49:45.047623+00:00
 
 ## polychaetes-british-amphinomida-spintherida-and-eunicida.html
 
@@ -6359,8 +8596,15 @@
 - Author(s): George & Hartmann-Schröder
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/polychaetes-brit...](<https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/](<https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20200809084710/https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/](<https://web.archive.org/web/20200809084710/https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/>)
+- Alternative link: [https://brill.com/display/title/26806](<https://brill.com/display/title/26806>)
+- Alternative probability: 0.85
+- Alternative reasoning: This is the official publisher's page for the Synopses of the British Fauna series, which hosts the specific volume.
+- Verified at: 2026-10-26T19:49:46.144335+00:00
 
 ## polychaetes-interstitial-families-2nd-ed.html
 
@@ -6370,8 +8614,12 @@
 - Author(s): Westheide
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/polychaetes-inte...](<https://www.field-studies-council.org/shop/publications/polychaetes-interstitial-families/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/polychaetes-interstitial-families/](<https://www.field-studies-council.org/shop/publications/polychaetes-interstitial-families/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250805074944/https://www.field-studies-council.org/shop/publications/polychaetes-interstitial-families/](<https://web.archive.org/web/20250805074944/https://www.field-studies-council.org/shop/publications/polychaetes-interstitial-families/>)
+- Verified at: 2026-10-26T19:49:45.508888+00:00
 
 ## poppies-video-id-key.html
 
@@ -6382,6 +8630,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be](<https://www.youtube.com/watch?v=Dg75zA2dH10&feature=youtu.be>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:49:50.897499+00:00
 
 ## provisional-atlas-bees-wasps-and-ants-shropshire.html
 
@@ -6396,8 +8647,14 @@
 - Author(s): Nigel Jones and Ian Cheeseborough
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-bees-...](<https://www.field-studies-council.org/shop/publications/shropshire-bees-wasps-ants/>)
 - Keywords: Aculeate hymenoptera, distribution maps, Shropshire, Invertebrate Challenge, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-bees-wasps-ants/](<https://www.field-studies-council.org/shop/publications/shropshire-bees-wasps-ants/>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published](<https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published>)
+- Alternative probability: 0.60
+- Alternative reasoning: This BWARS page provides the official announcement and details regarding the publication of the atlas by the authors.
+- Verified at: 2026-10-26T19:49:51.291997+00:00
 
 ## provisional-atlas-ptychopterid-craneflies-diptera-ptychopteridae-britain-and-ireland.html
 
@@ -6409,8 +8666,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf](<http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf>)
 - Keywords: Ptychoptera true flies
+- Web link: [http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf](<http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [http://nora.nerc.ac.uk/id/eprint/7509/1/Ptychopterid_Craneflies.pdf](<http://nora.nerc.ac.uk/id/eprint/7509/1/Ptychopterid_Craneflies.pdf>)
+- Wayback link: [https://web.archive.org/web/20140428120641/http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf](<https://web.archive.org/web/20140428120641/http://nora.nerc.ac.uk/7509/1/Ptychopterid_Craneflies.pdf>)
+- Verified at: 2026-10-26T19:49:47.007968+00:00
 
 ## provisional-atlas-shieldbugs-and-alies-shropshire.html
 
@@ -6425,8 +8687,12 @@
 - Author(s): Pete Boardman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/shieldbugs-shiel...](<https://www.field-studies-council.org/shop/publications/shieldbugs-shieldbugs/>)
 - Keywords: Distribution maps, invertebrate challenge, FSC, Shropshire
+- Web link: [https://www.field-studies-council.org/shop/publications/shieldbugs-shieldbugs/](<https://www.field-studies-council.org/shop/publications/shieldbugs-shieldbugs/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250814110153/https://www.field-studies-council.org/shop/publications/shieldbugs-shieldbugs/](<https://web.archive.org/web/20250814110153/https://www.field-studies-council.org/shop/publications/shieldbugs-shieldbugs/>)
+- Verified at: 2026-10-26T19:49:48.232112+00:00
 
 ## pseudoscorpion-uk.html
 
@@ -6436,8 +8702,11 @@
 - Author(s): Liam Andrews
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.facebook.com/groups/479900348856287/](<https://www.facebook.com/groups/479900348856287/>)
 - Keywords: false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://www.facebook.com/groups/479900348856287/](<https://www.facebook.com/groups/479900348856287/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:49:48.834964+00:00
 
 ## pseudoscorpions-arthropoda-arachnida-keys-and-notes-identification-species.html
 
@@ -6457,8 +8726,12 @@
 - Author(s): Jørgen Lissner
 - Free: Yes
 - Available as: Online
-- Web link: [https://jorgenlissner.dk/pseudoscorpions.aspx](<https://jorgenlissner.dk/pseudoscorpions.aspx>)
 - Keywords: photographs Pseudoscorpionida Pseudoscorpiones Chelonethida false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://jorgenlissner.dk/pseudoscorpions.aspx](<https://jorgenlissner.dk/pseudoscorpions.aspx>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20210119215222/http://www.jorgenlissner.dk/pseudoscorpions.aspx](<https://web.archive.org/web/20210119215222/http://www.jorgenlissner.dk/pseudoscorpions.aspx>)
+- Verified at: 2026-10-26T19:49:49.377394+00:00
 
 ## pseudoscorpions-world.html
 
@@ -6468,8 +8741,12 @@
 - Author(s): Western Australian Museum
 - Free: Yes
 - Available as: Online
-- Web link: [https://museum.wa.gov.au/catalogues/pseudoscorpions](<https://museum.wa.gov.au/catalogues/pseudoscorpions>)
 - Keywords: false scorpions pseudoscorpiones pseudoscorpion pseudoscorpions
+- Web link: [https://museum.wa.gov.au/catalogues/pseudoscorpions](<https://museum.wa.gov.au/catalogues/pseudoscorpions>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20261004190930/https://museum.wa.gov.au/catalogues/pseudoscorpions](<https://web.archive.org/web/20261004190930/https://museum.wa.gov.au/catalogues/pseudoscorpions>)
+- Verified at: 2026-10-26T19:49:51.965918+00:00
 
 ## psocids-psocoptera-booklice-and-barklice.html
 
@@ -6479,8 +8756,12 @@
 - Author(s): New
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/psocoptera/](<https://www.field-studies-council.org/shop/publications/psocoptera/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/psocoptera/](<https://www.field-studies-council.org/shop/publications/psocoptera/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230927084941/https://www.field-studies-council.org/shop/publications/psocoptera/](<https://web.archive.org/web/20230927084941/https://www.field-studies-council.org/shop/publications/psocoptera/>)
+- Verified at: 2026-10-26T19:49:53.134391+00:00
 
 ## quick-ant-guide.html
 
@@ -6492,8 +8773,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickID...](<https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickIDchart_V1.pdf>)
 - Keywords: hymenoptera aculeates
+- Web link: [https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickIDchart_V1.pdf](<https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickIDchart_V1.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20220428140616/https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickIDchart_V1.pdf](<https://web.archive.org/web/20220428140616/https://s3.eu-west-2.amazonaws.com/richard-becker-photography/AntquickIDchart_V1.pdf>)
+- Verified at: 2026-10-26T19:49:50.247753+00:00
 
 ## quizlet-waders-britain-and-ireland.html
 
@@ -6503,8 +8788,12 @@
 - Author(s): Stephen Docker
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
 - Keywords: Birds Charadriiformes Docker Shore Waders
+- Web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/](<https://web.archive.org/web/20260711014539/https://www.eclectic-ecologist.com/>)
+- Verified at: 2026-10-26T19:46:26.612432+00:00
 
 ## reptiles-and-amphibians-britain-and-ireland.html
 
@@ -6514,8 +8803,12 @@
 - Author(s): Roberts, Froglife & Ovenden
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/reptiles-and-amp...](<https://www.field-studies-council.org/shop/publications/reptiles-and-amphibians-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/reptiles-and-amphibians-guide/](<https://www.field-studies-council.org/shop/publications/reptiles-and-amphibians-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250711095147/https://www.field-studies-council.org/shop/publications/reptiles-and-amphibians-guide/](<https://web.archive.org/web/20250711095147/https://www.field-studies-council.org/shop/publications/reptiles-and-amphibians-guide/>)
+- Verified at: 2026-10-26T19:49:51.455784+00:00
 
 ## res-handbook-vol-1-part-10-odonata.html
 
@@ -6527,8 +8820,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf>)
 - Keywords: res handbooks out of print dragonflies damselflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-11-thysanoptera.html
 
@@ -6540,8 +8835,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf>)
 - Keywords: res handbooks out of print thrips
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-14a-trichoptera-hydroptilidae.html
 
@@ -6553,8 +8850,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf>)
 - Keywords: caddisflies res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part14a.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-16-siphonaptera.html
 
@@ -6566,8 +8865,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-2-thysanura-and-diplura.html
 
@@ -6579,8 +8880,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf>)
 - Keywords: res handbooks out of print silverfish bristletails
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part02.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Screenshot-2021-12-01-at-17.49.37.png>)
+- Alternative probability: 0.70
+- Alternative reasoning: This URL is associated with the Royal Entomological Society's official page for the handbook, which provides access to the publication details and download options.
+- Verified at: 2026-10-26T19:50:18.338301+00:00
 
 ## res-handbook-vol-1-part-5-dermaptera-and-orthoptera.html
 
@@ -6592,8 +8899,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
 - Keywords: res handbooks out of print grasshoppers earwigs
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on this dedicated publications page for direct download.
+- Verified at: 2026-10-26T19:50:24.237433+00:00
 
 ## res-handbook-vol-1-part-6-plecoptera.html
 
@@ -6605,8 +8918,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf>)
 - Keywords: res handbooks out of print stoneflies stonefly
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part06.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-7-psocoptera.html
 
@@ -6618,8 +8933,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol01\_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf>)
 - Keywords: booklice barklice barkflies res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol01_Part07.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-part-9-ephemeroptera.html
 
@@ -6631,8 +8948,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf>)
 - Keywords: res handbooks out of print Mayflies Dayflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part09.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-1-parts-12-13-mecoptera-megaloptera-neuroptera.html
 
@@ -6644,8 +8963,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf>)
 - Keywords: scorpionflies alderflies lacewings res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol01_Part12+13.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society hosts its out-of-print handbooks, including this volume, on its official publications page.
+- Verified at: 2026-10-26T19:50:38.262068+00:00
 
 ## res-handbook-vol-10-part-1-diptera-syrphidae.html
 
@@ -6657,21 +8982,10 @@
 - Available as:
   - Online
   - PDF
+- Keywords: res handbooks out of print
 - Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part01.pdf>)
-- Keywords: res handbooks out of print
-
-## res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae-0.html
-
-- Title: RES Handbook Vol 10 Part 14. An introduction to the immature stages of British Flies. Diptera Larvae, with notes on eggs, puparia and pupae. Figures index
-- Submitted: rich burkmar; 2015-06-15T14:26:00
-- Description: This is just the figures and index for the volume of the same name.
-- Author(s): K. G. V. Smith
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf>)
-- Keywords: res handbooks out of print
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae.html
 
@@ -6683,8 +8997,33 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_MainText.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society hosts the official collection of out-of-print handbooks, including this specific volume, which are available for download as PDFs.
+- Verified at: 2026-10-26T19:50:45.868775+00:00
+
+## res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae-0.html
+
+- Title: RES Handbook Vol 10 Part 14. An introduction to the immature stages of British Flies. Diptera Larvae, with notes on eggs, puparia and pupae. Figures index
+- Submitted: rich burkmar; 2015-06-15T14:26:00
+- Description: This is just the figures and index for the volume of the same name.
+- Author(s): K. G. V. Smith
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part14_FigsIndex.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.70
+- Alternative reasoning: This is the official Royal Entomological Society archive page where the out-of-print handbooks, including this volume, are hosted for free download.
+- Verified at: 2026-10-26T19:50:39.780462+00:00
 
 ## res-handbook-vol-10-part-2c-diptera-pipunculidae.html
 
@@ -6696,8 +9035,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf>)
 - Keywords: big-headed flies big headed flies res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part02c.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-10-part-3a-diptera-conopidae.html
 
@@ -6709,8 +9050,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf>)
 - Keywords: res handbooks out of print thick-headed flies thick headed flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part03a.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-10-part-4a-i-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and.html
 
@@ -6722,8 +9065,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10\_Part04a\_1\_Tachinida...](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_1_Tachinidae.pdf>)
+- Web link status: 404
+- Web link state: broken
 
 ## res-handbook-vol-10-part-4a-ii-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and.html
 
@@ -6735,8 +9080,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10\_Part04a\_2\_Calliphor...](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf>)
 - Keywords: res handbooks out of print blow flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part04a_2_Calliphoridae.pdf>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## res-handbook-vol-10-part-4b-diptera-cyclorrhapha-calyptrata-section-b-muscidae.html
 
@@ -6748,8 +9095,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol10\_Part04b...](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
 - Keywords: res handbooks out of print house flies stable flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society (RES) hosts its out-of-print handbooks, including the Muscidae volume, for free download on this dedicated page.
+- Verified at: 2026-10-26T19:51:08.862668+00:00
 
 ## res-handbook-vol-10-part-5a-diptera-tephritidae.html
 
@@ -6761,8 +9114,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf>)
 - Keywords: res handbooks out of print picture winged flies picture-winged flies fruit flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part05a_White.pdf>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## res-handbook-vol-10-part-7-diptera-hippoboscidae-and-nycteribiidae-keds-flat-flies-and.html
 
@@ -6774,8 +9129,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf>)
 - Keywords: res handbooks out of print blood-feeding flies parasitic flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol10_Part07_Hutson.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:51:06.691603+00:00
 
 ## res-handbook-vol-2-part-2a-hemiptera-cicadomorpha-excluding-deltocephalinae-and.html
 
@@ -6787,8 +9145,14 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf>)
 - Keywords: Homoptera cicadas leafhoppers treehoppers spittlebugs res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.80
+- Alternative reasoning: The Royal Entomological Society hosts a dedicated page for out-of-print handbooks where many of these titles are provided as free downloadable PDFs.
+- Verified at: 2026-10-26T19:51:21.166751+00:00
 
 ## res-handbook-vol-2-part-2b-hemiptera-cicadomorpha-deltocephalinae.html
 
@@ -6800,8 +9164,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf>)
 - Keywords: res handbooks out of print leafhoppers
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:51:22.916421+00:00
 
 ## res-handbook-vol-2-part-2c-cicadellidae-typhlocybinae-checklist-british-auchenorhyncha.html
 
@@ -6813,8 +9180,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf>)
 - Keywords: res handbooks out of print leafhoppers
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20210712213938/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf](<https://web.archive.org/web/20210712213938/https://www.royensoc.co.uk/sites/default/files/Vol02_Part02c.pdf>)
 
 ## res-handbook-vol-2-part-3-hemiptera-fulgoromorpha.html
 
@@ -6826,8 +9196,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf>)
 - Keywords: res handbooks out of print Planthoppers
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210713124423/https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf](<https://web.archive.org/web/20210713124423/https://www.royensoc.co.uk/sites/default/files/Vol02_Part03.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.90
+- Alternative reasoning: The Royal Entomological Society (RES) hosts its out-of-print handbooks as free downloadable PDFs on this page, which is the official source for the requested guide.
+- Verified at: 2026-10-26T19:51:30.666941+00:00
 
 ## res-handbook-vol-2-part-4a-homoptera-aphidoidea-part-chaitophoridae-callaphididae.html
 
@@ -6836,8 +9213,12 @@
 - Description: For a number of years there has been no single and comprehensive work available for the identification of the aphid species occurring in the British Isles. The books of Buckton and Theobald, for many years the standard reference works on the British fauna, are now of mainly historical interest, and their use leads only to frustration because of the great advances made in the study of aphid systematics and nomenclature over the last 45 years, mainly as a result of improved techniques for the handling of aphids as subjects for microscopy. The treatment now offered is intended as the first part of a handbook for the determination of the British aphid fauna by means of dichotomous keys illustrated by black and white figures.
 - Author(s): H. L. G. Stroyan
 - Free: No
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf>)
 - Keywords: res handbooks out of print aphids
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711165238/https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf](<https://web.archive.org/web/20210711165238/https://www.royensoc.co.uk/sites/default/files/Vol02_Part04a.pdf>)
+- Verified at: 2026-10-26T19:51:31.397547+00:00
 
 ## res-handbook-vol-2-part-5a-homoptera-psylloidea.html
 
@@ -6849,8 +9230,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 4/Vol02\_Part05a...](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711071313/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf](<https://web.archive.org/web/20210711071313/https://www.royensoc.co.uk/sites/default/files/Archive%204/Vol02_Part05a.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol2part5a.jpg](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol2part5a.jpg>)
+- Alternative probability: 0.50
+- Alternative reasoning: This URL points directly to the image asset for the specific handbook on the official Royal Entomological Society website, confirming its presence in their digital repository.
+- Verified at: 2026-10-26T19:51:31.899149+00:00
 
 ## res-handbook-vol-4-part-1-coleoptera-introduction-and-keys-families.html
 
@@ -6862,8 +9250,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf>)
 - Keywords: res handbooks out of print beetles families key
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712184555/https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf](<https://web.archive.org/web/20210712184555/https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.
+- Verified at: 2026-10-26T19:51:32.789471+00:00
 
 ## res-handbook-vol-4-part-10-coleoptera-histeroidea.html
 
@@ -6875,8 +9270,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf>)
 - Keywords: Clown Beetles Hister Beetles res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210713115142/https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf](<https://web.archive.org/web/20210713115142/https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-histeroidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-histeroidea/>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is the specific product page on the Royal Entomological Society website that provides a download link for the Coleoptera: Histeroidea handbook.
+- Verified at: 2026-10-26T19:51:33.999710+00:00
 
 ## res-handbook-vol-4-part-2-coleoptera-carabidae.html
 
@@ -6888,8 +9290,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol04\_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf>)
 - Keywords: res handbooks out of print ground beetles tiger
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210709190411/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf](<https://web.archive.org/web/20210709190411/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol04_Part02.pdf>)
+- Verified at: 2026-10-26T19:51:32.469150+00:00
 
 ## res-handbook-vol-4-part-3-coleoptera-hydradephaga.html
 
@@ -6901,8 +9307,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712013612/https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf](<https://web.archive.org/web/20210712013612/https://www.royensoc.co.uk/sites/default/files/Vol04_Part03.pdf>)
+- Verified at: 2026-10-26T19:51:34.093997+00:00
 
 ## res-handbook-vol-4-part-8a-coleoptera-staphylinidae-section-piestinae-euaesthetinae.html
 
@@ -6914,8 +9324,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf>)
 - Keywords: res handbooks out of print rove beetles
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210917200819/https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf](<https://web.archive.org/web/20210917200819/https://www.royensoc.co.uk/sites/default/files/Vol04_Part08a.pdf>)
+- Verified at: 2026-10-26T19:51:38.857730+00:00
 
 ## res-handbook-vol-4-part-9-coleoptera-pselaphidae.html
 
@@ -6927,8 +9341,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf>)
 - Keywords: Pselaphina rove beetles res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711213929/https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf](<https://web.archive.org/web/20210711213929/https://www.royensoc.co.uk/sites/default/files/Vol04_Part09.pdf>)
+- Verified at: 2026-10-26T19:51:34.796406+00:00
 
 ## res-handbook-vol-5-part-10-coleoptera-tenebrionidae.html
 
@@ -6940,8 +9358,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210917195306/https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf](<https://web.archive.org/web/20210917195306/https://www.royensoc.co.uk/sites/default/files/Vol05_Part10.pdf>)
+- Verified at: 2026-10-26T19:51:35.748181+00:00
 
 ## res-handbook-vol-5-part-11-dung-beetles-chafers-coleoptera-scarabaeoidea.html
 
@@ -6953,8 +9375,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711141740/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf](<https://web.archive.org/web/20210711141740/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides access to the publication.
+- Verified at: 2026-10-26T19:51:46.469871+00:00
 
 ## res-handbook-vol-5-part-11-ed1-coleoptera-scarabaeoidea-lucanidae-trogidae-geotrupidae.html
 
@@ -6966,8 +9395,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712023415/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf](<https://web.archive.org/web/20210712023415/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11_ed1.pdf>)
+- Verified at: 2026-10-26T19:51:39.951698+00:00
 
 ## res-handbook-vol-5-part-12-coleoptera-cerambycidae.html
 
@@ -6979,8 +9412,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714110324/https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf](<https://web.archive.org/web/20210714110324/https://www.royensoc.co.uk/sites/default/files/Vol05_Part12.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a download link for the PDF.
+- Verified at: 2026-10-26T19:51:46.904311+00:00
 
 ## res-handbook-vol-5-part-15-coleoptera-scolytidae-and-platypodidae.html
 
@@ -6992,8 +9432,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf>)
 - Keywords: res handbooks out of print bark beetles
+- Web link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240522062541/https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf](<https://web.archive.org/web/20240522062541/https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol05_Part15.pdf>)
+- Verified at: 2026-10-26T19:51:35.239687+00:00
 
 ## res-handbook-vol-5-part-1b-coleoptera-buprestidae.html
 
@@ -7005,8 +9449,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf>)
 - Keywords: res handbooks out of print jewel beetles metallic wood-boring beetles
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210713043119/https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf](<https://web.archive.org/web/20210713043119/https://www.royensoc.co.uk/sites/default/files/Vol05_Part01b.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society product page for the out-of-print handbook, which historically hosted the PDF download link.
+- Verified at: 2026-10-26T19:51:51.307777+00:00
 
 ## res-handbook-vol-5-part-2c-coleoptera-heteroceridae.html
 
@@ -7018,8 +9469,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf>)
 - Keywords: res handbooks out of print water beetles
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210715151527/https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf](<https://web.archive.org/web/20210715151527/https://www.royensoc.co.uk/sites/default/files/Vol05_Part02c.pdf>)
+- Verified at: 2026-10-26T19:51:50.888153+00:00
 
 ## res-handbook-vol-5-part-3-adults-and-larvae-hide-larder-and-carpet-beetles-and-their.html
 
@@ -7031,8 +9486,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
+- Web link status: timeout
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf](<https://web.archive.org/web/20210712220803/https://www.royensoc.co.uk/sites/default/files/Vol05_Part03_MainText.pdf>)
 
 ## res-handbook-vol-5-part-5a-coleoptera-rhizophagidae.html
 
@@ -7044,8 +9502,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf>)
 - Keywords: res handbooks out of print Rhizophagid beetles
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801051110/https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf](<https://web.archive.org/web/20210801051110/https://www.royensoc.co.uk/sites/default/files/Vol05_Part05a.pdf>)
+- Verified at: 2026-10-26T19:51:52.552002+00:00
 
 ## res-handbook-vol-5-part-5b-coleoptera-phalacridae.html
 
@@ -7057,8 +9519,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf>)
 - Keywords: res handbooks out of print shining flower beetles
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714102856/https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf](<https://web.archive.org/web/20210714102856/https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf>)
+- Verified at: 2026-10-26T19:51:54.207447+00:00
 
 ## res-handbook-vol-5-part-7-coleoptera-coccinellidae-sphindidae.html
 
@@ -7070,8 +9536,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf>)
 - Keywords: ladybirds cryptic slime mold beetles res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210713042652/https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf](<https://web.archive.org/web/20210713042652/https://www.royensoc.co.uk/sites/default/files/Vol05_Part07.pdf>)
+- Verified at: 2026-10-26T19:51:58.643112+00:00
 
 ## res-handbook-vol-5-part-9-coleoptera.html
 
@@ -7083,8 +9553,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210715003428/https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf](<https://web.archive.org/web/20210715003428/https://www.royensoc.co.uk/sites/default/files/Vol05_Part09.pdf>)
+- Verified at: 2026-10-26T19:51:58.822392+00:00
 
 ## res-handbook-vol-6-part-1-hymenoptera-introduction-and-key-families-2nd-edition.html
 
@@ -7096,8 +9570,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf>)
 - Keywords: res handbooks out of print ants bees wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211203125814/https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf](<https://web.archive.org/web/20211203125814/https://www.royensoc.co.uk/sites/default/files/Vol06_Part01_ed2.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official Royal Entomological Society page that hosts the digital archives and direct download links for their handbooks.
+- Verified at: 2026-10-26T19:51:59.178749+00:00
 
 ## res-handbook-vol-6-part-2a-hymenoptera-symphyta.html
 
@@ -7109,8 +9590,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf>)
 - Keywords: res handbooks out of print sawflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210917200351/https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf](<https://web.archive.org/web/20210917200351/https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf>)
+- Verified at: 2026-10-26T19:52:04.587019+00:00
 
 ## res-handbook-vol-6-part-2b-hymenoptera-symphyta.html
 
@@ -7122,8 +9607,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol06\_Part02b...](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf>)
 - Keywords: res handbooks out of print sawflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211203185253/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf](<https://web.archive.org/web/20211203185253/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol06_Part02b.pdf>)
+- Verified at: 2026-10-26T19:52:07.290357+00:00
 
 ## res-handbook-vol-6-part-2c-hymenoptera-symphyta.html
 
@@ -7135,8 +9624,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf>)
 - Keywords: res handbooks out of print sawflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210709183733/https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf](<https://web.archive.org/web/20210709183733/https://www.royensoc.co.uk/sites/default/files/Vol06_Part02c.pdf>)
+- Verified at: 2026-10-26T19:52:05.829007+00:00
 
 ## res-handbook-vol-6-part-3a-hymenoptera-bethyloidea-excluding-chrysididae.html
 
@@ -7148,8 +9641,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801051723/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf](<https://web.archive.org/web/20210801051723/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03a.pdf>)
+- Verified at: 2026-10-26T19:52:10.369727+00:00
 
 ## res-handbook-vol-6-part-3b-hymenoptera-aculeata-scolioidea-vespoidea-and-sphecoidea.html
 
@@ -7161,8 +9658,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf>)
 - Keywords: scoliid wasps digger wasps mud daubers thread-waisted wasps res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712000239/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf](<https://web.archive.org/web/20210712000239/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03b_Richards.pdf>)
+- Verified at: 2026-10-26T19:52:07.450894+00:00
 
 ## res-handbook-vol-6-part-3c-hymenoptera-formicidae.html
 
@@ -7174,8 +9675,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf>)
 - Keywords: res handbooks out of print ants
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210715193210/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf](<https://web.archive.org/web/20210715193210/https://www.royensoc.co.uk/sites/default/files/Vol06_Part03c.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official Royal Entomological Society page that hosts the download for the Hymenoptera - Formicidae handbook.
+- Verified at: 2026-10-26T19:52:17.875642+00:00
 
 ## res-handbook-vol-6-part-4-hymenoptera-pompilidae.html
 
@@ -7187,8 +9695,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf>)
 - Keywords: res handbooks out of print spider-hunting wasps spider hunting wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf](<https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol6part4.jpg](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/vol6part4.jpg>)
+- Alternative probability: 0.40
+- Alternative reasoning: This URL points directly to the image resource for the specific handbook volume, which is often associated with the page hosting the download link on the official site.
+- Verified at: 2026-10-26T19:52:13.497536+00:00
 
 ## res-handbook-vol-6-part-5-cuckoo-wasps-hymenoptera-chrysididae.html
 
@@ -7200,8 +9715,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714233912/https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf](<https://web.archive.org/web/20210714233912/https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides access to the publication details and typically hosts the digital version of their out-of-print handbooks.
+- Verified at: 2026-10-26T19:52:18.634007+00:00
 
 ## res-handbook-vol-7-part-1-hymenoptera-ichneumonoidea-pimplinae.html
 
@@ -7213,8 +9735,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf](<https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/publications/out-of-print-handbooks/](<https://www.royensoc.co.uk/publications/out-of-print-handbooks/>)
+- Alternative probability: 0.80
+- Alternative reasoning: The Royal Entomological Society (RES) hosts the official product page for their out-of-print handbooks, including this specific volume, which serves as the primary source for the identification guide.
+- Verified at: 2026-10-26T19:52:17.224754+00:00
 
 ## res-handbook-vol-7-part-11-classification-biology-braconid-wasps-hymenoptera-braconidae.html
 
@@ -7226,8 +9755,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210925155845/https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf](<https://web.archive.org/web/20210925155845/https://www.royensoc.co.uk/sites/default/files/Vol07_Part11.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their out-of-print publications.
+- Verified at: 2026-10-26T19:52:19.279472+00:00
 
 ## res-handbook-vol-7-part-2a-i-hymenoptera-ichneumonoidea.html
 
@@ -7239,8 +9775,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf>)
 - Keywords: res handbooks out of print ichneumonid wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210501034059/https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf](<https://web.archive.org/web/20210501034059/https://www.royensoc.co.uk/sites/default/files/Vol07_Part02a_i.pdf>)
+- Verified at: 2026-10-26T19:52:26.639431+00:00
 
 ## res-handbook-vol-7-part-2a-ii-hymenoptera-ichneumonoidea.html
 
@@ -7252,8 +9792,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 3/Vol07\_Part02a...](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf>)
 - Keywords: res handbooks out of print ichneumonid wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211204172540/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf](<https://web.archive.org/web/20211204172540/https://www.royensoc.co.uk/sites/default/files/Archive%203/Vol07_Part02a_ii.pdf>)
+- Verified at: 2026-10-26T19:52:27.410332+00:00
 
 ## res-handbook-vol-7-part-2b-ichneumonidae-orthopelmatinae-anomaloninae.html
 
@@ -7265,8 +9809,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf>)
 - Keywords: res handbooks out of print ichneumonid wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211106125044/https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf](<https://web.archive.org/web/20211106125044/https://www.royensoc.co.uk/sites/default/files/Vol07_Part02b.pdf>)
+- Verified at: 2026-10-26T19:52:27.411258+00:00
 
 ## res-handbook-vol-8-part-1a-hymenoptera-cynipoidea-key-families-and-subfamilies-and.html
 
@@ -7278,8 +9826,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf>)
 - Keywords: res handbooks out of print gall wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714233403/https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf](<https://web.archive.org/web/20210714233403/https://www.royensoc.co.uk/sites/default/files/Vol08_Part01a.pdf>)
+- Verified at: 2026-10-26T19:52:32.728322+00:00
 
 ## res-handbook-vol-8-part-1b-hymenoptera-cynipoidea-eucoilidae.html
 
@@ -7291,8 +9843,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801032356/https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf](<https://web.archive.org/web/20210801032356/https://www.royensoc.co.uk/sites/default/files/Vol08_Part01b.pdf>)
+- Verified at: 2026-10-26T19:52:39.815753+00:00
 
 ## res-handbook-vol-8-part-2a-hymenoptera-2-chalcidoidea-section.html
 
@@ -7304,8 +9860,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf>)
 - Keywords: res handbooks out of print chalcid wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714133310/https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf](<https://web.archive.org/web/20210714133310/https://www.royensoc.co.uk/sites/default/files/Vol08_Part02a.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society page for the publication, which provides access to the handbook.
+- Verified at: 2026-10-26T19:52:41.477466+00:00
 
 ## res-handbook-vol-8-part-2b-hymenoptera-2-chalcidoidea-section-b.html
 
@@ -7317,8 +9880,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf>)
 - Keywords: res handbooks out of print wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801033253/https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf](<https://web.archive.org/web/20210801033253/https://www.royensoc.co.uk/sites/default/files/Vol08_Part02b.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct, corrected URL for the PDF version of the RES Handbook Vol 8 Part 2b, as cited in academic literature.
+- Verified at: 2026-10-26T19:52:44.641905+00:00
 
 ## res-handbook-vol-8-part-3d-i-hymenoptera-proctotrupoidea-diapriidae-subfamily-diapriinae.html
 
@@ -7330,8 +9900,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf>)
 - Keywords: res handbooks out of print wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801045829/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf](<https://web.archive.org/web/20210801045829/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf>)
+- Verified at: 2026-10-26T19:52:41.454524+00:00
 
 ## res-handbook-vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae.html
 
@@ -7343,8 +9917,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf>)
 - Keywords: res handbooks out of print wasps
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210801041207/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf](<https://web.archive.org/web/20210801041207/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society shop page for the out-of-print handbook, which serves as the primary source for the publication.
+- Verified at: 2026-10-26T19:52:49.571382+00:00
 
 ## res-handbook-vol-9-part-1-diptera-1-introduction-and-key-families.html
 
@@ -7356,8 +9937,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf>)
 - Keywords: true flies res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211102095455/https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf](<https://web.archive.org/web/20211102095455/https://www.royensoc.co.uk/sites/default/files/Vol09_Part01.pdf>)
+- Verified at: 2026-10-26T19:52:49.092415+00:00
 
 ## res-handbook-vol-9-part-2-i-diptera-2-nematocera-families-tipulidae-chironomidae.html
 
@@ -7369,8 +9954,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf>)
 - Keywords: res handbooks out of print craneflies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210711213843/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf](<https://web.archive.org/web/20210711213843/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_1_Tipulidae.pdf>)
+- Verified at: 2026-10-26T19:52:51.303601+00:00
 
 ## res-handbook-vol-9-part-2-ii-diptera-2-nematocera-families-tipulidae-chironomidae.html
 
@@ -7382,8 +9971,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09\_Part02\_2\_Trichoceri...](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_2_Trichoceridae-Culicidae.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_2_Trichoceridae-Culicidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_2_Trichoceridae-Culicidae.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210714110349/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_2_Trichoceridae-Culicidae.pdf](<https://web.archive.org/web/20210714110349/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_2_Trichoceridae-Culicidae.pdf>)
+- Verified at: 2026-10-26T19:52:55.270121+00:00
 
 ## res-handbook-vol-9-part-2-iii-diptera-2-nematocera-families-tipulidae-chironomidae.html
 
@@ -7395,8 +9988,15 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09\_Part02\_3\_Chironomid...](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_3_Chironomidae.pdf>)
 - Keywords: res handbooks out of print
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_3_Chironomidae.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_3_Chironomidae.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210712000316/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_3_Chironomidae.pdf](<https://web.archive.org/web/20210712000316/https://www.royensoc.co.uk/sites/default/files/Vol09_Part02_3_Chironomidae.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL to the PDF of the RES Handbook Vol 9 Part 2 iii, as referenced in academic and identification resource documentation.
+- Verified at: 2026-10-26T19:52:53.505453+00:00
 
 ## res-handbook-vol-9-part-3-diptera-nematocera-mycetophilidae-bolitophilinae-ditomyiinae.html
 
@@ -7408,8 +10008,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf>)
 - Keywords: res handbooks out of print fungus gnats
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210715153251/https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf](<https://web.archive.org/web/20210715153251/https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf>)
+- Verified at: 2026-10-26T19:52:58.030697+00:00
 
 ## res-handbook-vol-9-part-4a-diptera-brachycera-tabanoidea-and-asiloidea.html
 
@@ -7421,9 +10025,16 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive 2/Vol09\_Part04a...](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf>)
 - Keywords: res handbooks out of print
-- Comment Body: Some useful information in this 1969 key, but it is known to contain some errors and there are more accurate recent keys available. For information on identifying this group of flies see: [http://www.brc.ac.uk/soldierflies-and-allies/resources](<http://www.brc.ac.uk/soldierflies-and-allies/resources>)
+- Comment Body: Some useful information in this 1969 key, but it is known to contain some errors and there are more accurate recent keys available. For information on identifying this group of flies see: <http://www.brc.ac.uk/soldierflies-and-allies/resources>
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf](<https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210709190436/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf](<https://web.archive.org/web/20210709190436/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol09_Part04a.pdf>)
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a description and download options for the publication.
+- Verified at: 2026-10-26T19:52:58.458200+00:00
 
 ## res-handbook-vol-9-part-5-diptera-orthorrhapha-brachycera-dolichopodidae.html
 
@@ -7435,8 +10046,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf>)
 - Keywords: res handbooks out of print long-legged flies long legged flies
+- Web link: [https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf](<https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210426111210/https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf](<https://web.archive.org/web/20210426111210/https://www.royensoc.co.uk/sites/default/files/Vol09_Part05.pdf>)
+- Verified at: 2026-10-26T19:53:05.603287+00:00
 
 ## revised-field-key-invertebrate-fauna-stony-hill-streams.html
 
@@ -7448,8 +10063,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies (1975), 4, 105—115 freshwater invertebrates
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.284086+00:00
 
 ## rocks.html
 
@@ -7459,8 +10078,12 @@
 - Author(s): Pellant & Pellant
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/rocks-guide/](<https://www.field-studies-council.org/shop/publications/rocks-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/rocks-guide/](<https://www.field-studies-council.org/shop/publications/rocks-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909195107/https://www.field-studies-council.org/shop/publications/rocks-guide/](<https://web.archive.org/web/20250909195107/https://www.field-studies-council.org/shop/publications/rocks-guide/>)
+- Verified at: 2026-10-26T19:52:44.334793+00:00
 
 ## rocky-shore-lichens.html
 
@@ -7470,8 +10093,12 @@
 - Author(s): Dobson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/rocky-shore-lich...](<https://www.field-studies-council.org/shop/publications/rocky-shore-lichens-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/rocky-shore-lichens-guide/](<https://www.field-studies-council.org/shop/publications/rocky-shore-lichens-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250910110026/https://www.field-studies-council.org/shop/publications/rocky-shore-lichens-guide/](<https://web.archive.org/web/20250910110026/https://www.field-studies-council.org/shop/publications/rocky-shore-lichens-guide/>)
+- Verified at: 2026-10-26T19:52:45.381756+00:00
 
 ## rocky-shore-name-trail.html
 
@@ -7481,8 +10108,12 @@
 - Author(s): Simms, Cremona & Ward
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/rocky-shore-name...](<https://www.field-studies-council.org/shop/publications/rocky-shore-name-trail/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/rocky-shore-name-trail/](<https://www.field-studies-council.org/shop/publications/rocky-shore-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250808083649/https://www.field-studies-council.org/shop/publications/rocky-shore-name-trail/](<https://web.archive.org/web/20250808083649/https://www.field-studies-council.org/shop/publications/rocky-shore-name-trail/>)
+- Verified at: 2026-10-26T19:52:46.287487+00:00
 
 ## rocky-shore-snails-material-projects-key-their-identification.html
 
@@ -7490,21 +10121,21 @@
 - Submitted: rich burkmar; 2015-06-12T10:22:00
 - Description:
   Rocky sea shores are amongst the best habitats in which to carry out biological field projects.
-
   In that habitat, marine snails (prosobranchs) offer the most opportunities for individual
-
   investigations, being easy to find, to identify, to count and to measure and beng sufficiently
-
   robust to survive the experience. A key is provided for the identification of the larger species
-
   and suggestions are made for investigations to exploit selected features of individual species.
 - Author(s): J. H. Crothers
 - Free: Yes
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/stay-with-us/](<https://www.field-studies-council.org/stay-with-us/>)
 - Keywords: FSC Field Studies, 10 , (2003) 601 - 634
+- Web link: [https://www.field-studies-council.org/stay-with-us/](<https://www.field-studies-council.org/stay-with-us/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251007033703/https://www.field-studies-council.org/stay-with-us/](<https://web.archive.org/web/20251007033703/https://www.field-studies-council.org/stay-with-us/>)
+- Verified at: 2026-10-26T19:42:23.451804+00:00
 
 ## rogers-mushrooms.html
 
@@ -7514,7 +10145,10 @@
 - Author(s): Roger Phillips
 - Free: Yes
 - Available as: Online
-- Web link: [https://server4.ghostly.top](<https://server4.ghostly.top/>)
+- Web link: [https://server4.ghostly.top/](<https://server4.ghostly.top/>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260512190026/https://server4.ghostly.top/](<https://web.archive.org/web/20260512190026/https://server4.ghostly.top/>)
 
 ## rosewildflower-key.html
 
@@ -7524,8 +10158,14 @@
 - Author(s): Francis Rose and Clare O'Reilly
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/the-wild-flower-key:-how-to...](<https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578>)
 - Keywords: Vascular Plants, Botanical Keys
+- Web link: [https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578](<https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750](<https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official publisher's product page for the book, providing comprehensive details and purchase links.
+- Verified at: 2026-10-26T19:53:01.267243+00:00
 
 ## saltmarsh-plants-britain.html
 
@@ -7538,8 +10178,12 @@
 - Author(s): Oldham & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/saltmarsh-guide/](<https://www.field-studies-council.org/shop/publications/saltmarsh-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/saltmarsh-guide/](<https://www.field-studies-council.org/shop/publications/saltmarsh-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815143406/https://www.field-studies-council.org/shop/publications/saltmarsh-guide/](<https://web.archive.org/web/20250815143406/https://www.field-studies-council.org/shop/publications/saltmarsh-guide/>)
+- Verified at: 2026-10-26T19:52:48.380368+00:00
 
 ## scottish-lichens.html
 
@@ -7549,8 +10193,12 @@
 - Author(s): Petra Vergunst
 - Free: Yes
 - Available as: Online
-- Web link: [https://scottishlichens.co.uk/species-descriptions/](<https://scottishlichens.co.uk/species-descriptions/>)
 - Keywords: Lichen, photo gallery
+- Web link: [https://scottishlichens.co.uk/species-descriptions/](<https://scottishlichens.co.uk/species-descriptions/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240403233936/https://scottishlichens.co.uk/species-descriptions/](<https://web.archive.org/web/20240403233936/https://scottishlichens.co.uk/species-descriptions/>)
+- Verified at: 2026-10-26T19:52:50.185595+00:00
 
 ## scutellinia-eyelash-fungi.html
 
@@ -7560,8 +10208,12 @@
 - Author(s): Malcolm Greaves
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html](<https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html>)
 - Keywords: eyelash fungi fsc identikit
+- Web link: [https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html](<https://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20220817103301/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html](<https://web.archive.org/web/20220817103301/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/scutellinia.html>)
+- Verified at: 2026-10-26T19:53:06.760469+00:00
 
 ## sea-spiders-pycnogonida-north-east-atlantic.html
 
@@ -7571,8 +10223,12 @@
 - Author(s): Bamber
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/sea-spiders/](<https://www.field-studies-council.org/shop/publications/sea-spiders/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/sea-spiders/](<https://www.field-studies-council.org/shop/publications/sea-spiders/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250821205348/https://www.field-studies-council.org/shop/publications/sea-spiders/](<https://web.archive.org/web/20250821205348/https://www.field-studies-council.org/shop/publications/sea-spiders/>)
+- Verified at: 2026-10-26T19:52:56.976780+00:00
 
 ## sea-spiders-revised-key-adults-pycnogonida-british-littoral-isles.html
 
@@ -7584,8 +10240,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
 - Keywords: FSC Field Studies 6 (1986), 493-516 AIDGAP
+- Web link: [https://www.field-studies-council.org/resources/field-studies-journal/](<https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/](<https://web.archive.org/web/20261011175314/https://www.field-studies-council.org/resources/field-studies-journal/>)
+- Verified at: 2026-10-26T19:42:34.284154+00:00
 
 ## seasearch-guide-bryozoans-and-hydroids-britain-and-ireland.html
 
@@ -7599,23 +10259,25 @@
   This book has been produced as a part of the Seasearch project, which offers training in the identification of marine life and habitats and encourages recording by volunteers. Our aim is to improve your recognition of bryozoans and hydroids and thus improve the quantity and quality of records we receive.
 
   Features of the book include:
-
   - Over 120 species described in detail using photographs and text, with information on size, habitat and distribution.
-
   - Both scientific and common names used where they exist
-
   - Species grouped by form wherever possible, to aid identification
-
   - Additional information on features, classification, feeding, reproduction and ecology of both groups
-
   - A glossary of terms used to describe each group.
 
   The author, Dr Joanne Porter, is a Senior Lecturer at Heriot-Watt University in Edinburgh and her research speciality is bryozoans. She is a regular Seasearch recorder and has tutored both general Seasearch courses and specialist courses in bryozoan and hydroid identification. The great majority of the photographs and drawings in the guide have also been provided by regular Seasearch participants.
 - Author(s): Dr Joanne Porter
 - Free: No
 - Available as: Publication
-- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&a...](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53>)
-- Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
+- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53>)
+- Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20160418134524/http://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53](<https://web.archive.org/web/20160418134524/http://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53>)
+- Alternative link: [https://seasearchireland.ie/species-identification/](<https://seasearchireland.ie/species-identification/>)
+- Alternative probability: 0.70
+- Alternative reasoning: This page hosts a list of identification resources, including the guide, and provides context on its utility for recorders.
+- Verified at: 2026-10-26T19:53:07.392034+00:00
 
 ## seasearch-guide-sea-anemones-and-corals-britain-and-ireland-2nd-edition.html
 
@@ -7628,9 +10290,13 @@
 - Author(s): Chris Wood
 - Free: No
 - Available as: Publication
-- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&a...](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=69>)
-- Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
 - Keywords: Cnidaria Anthozoa
+- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=69](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=69>)
+- Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210122171257/https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=69](<https://web.archive.org/web/20210122171257/https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=69>)
+- Verified at: 2026-10-26T19:53:08.207419+00:00
 
 ## seasearch-guide-seaweeds-britain-and-ireland.html
 
@@ -7640,9 +10306,13 @@
 - Author(s): Francis Bunker, Juliet Brodie, Christine Maggs, Anne Bunker
 - Free: No
 - Available as: Publication
-- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&a...](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60>)
-- Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
 - Keywords: Macroalgae
+- Web link: [https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60](<https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60>)
+- Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20190722042007/https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60](<https://web.archive.org/web/20190722042007/https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60>)
+- Verified at: 2026-10-26T19:53:10.781483+00:00
 
 ## seasearch-identifications-facebook-group.html
 
@@ -7652,9 +10322,13 @@
 - Author(s): Seasearch
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.facebook.com/groups/seasearch.identifications/](<https://www.facebook.com/groups/seasearch.identifications/>)
-- Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
 - Keywords: marine
+- Web link: [https://www.facebook.com/groups/seasearch.identifications/](<https://www.facebook.com/groups/seasearch.identifications/>)
+- Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20221207011626/https://www.facebook.com/groups/seasearch.identifications/](<https://web.archive.org/web/20221207011626/https://www.facebook.com/groups/seasearch.identifications/>)
+- Verified at: 2026-10-26T19:52:57.387465+00:00
 
 ## seasearch-observers-guide-marine-life-britain-and-ireland.html
 
@@ -7664,8 +10338,11 @@
 - Author(s): Chris Wood
 - Free: No
 - Available as: Publication
-- Web link: [https://www.summerfieldbooks.com/seasearch,-observer's-guide-to-mari...](<https://www.summerfieldbooks.com/seasearch%2C-observer%27s-guide-to-marine-life-of-britain-and-ireland%2C--2nd-edition~5960>)
-- Additional web link: [Seasearch website](<https://www.seasearch.org.uk/>)
+- Web link: [https://www.summerfieldbooks.com/seasearch%2C-observer%27s-guide-to-marine-life-of-britain-and-ireland%2C--2nd-edition~5960](<https://www.summerfieldbooks.com/seasearch%2C-observer%27s-guide-to-marine-life-of-britain-and-ireland%2C--2nd-edition~5960>)
+- Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:53:13.341022+00:00
 
 ## seasons.html
 
@@ -7675,8 +10352,15 @@
 - Author(s): Farley-Brown & Norman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/seasons-guide/](<https://www.field-studies-council.org/shop/publications/seasons-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/seasons-guide/](<https://www.field-studies-council.org/shop/publications/seasons-guide/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20240527132459/https://www.field-studies-council.org/shop/publications/seasons-guide/](<https://web.archive.org/web/20240527132459/https://www.field-studies-council.org/shop/publications/seasons-guide/>)
+- Alternative link: [https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/](<https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/>)
+- Alternative probability: 0.60
+- Alternative reasoning: This is a direct product page for the 'Guide to the Seasons' fold-out chart on a specialized natural history bookstore website.
+- Verified at: 2026-10-26T19:53:16.201553+00:00
 
 ## seed-and-leaf-beetles.html
 
@@ -7686,8 +10370,12 @@
 - Author(s): Hubble
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/seed-and-leaf-be...](<https://www.field-studies-council.org/shop/publications/seed-and-leaf-beetles-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/seed-and-leaf-beetles-aidgap/](<https://www.field-studies-council.org/shop/publications/seed-and-leaf-beetles-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909190250/https://www.field-studies-council.org/shop/publications/seed-and-leaf-beetles-aidgap/](<https://web.archive.org/web/20250909190250/https://www.field-studies-council.org/shop/publications/seed-and-leaf-beetles-aidgap/>)
+- Verified at: 2026-10-26T19:53:00.084730+00:00
 
 ## shieldbugs-british-isles.html
 
@@ -7701,6 +10389,10 @@
 - Free: No
 - Available as: Publication
 - Web link: [https://www.field-studies-council.org/shop/publications/shieldbugs-guide/](<https://www.field-studies-council.org/shop/publications/shieldbugs-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250815215743/https://www.field-studies-council.org/shop/publications/shieldbugs-guide/](<https://web.archive.org/web/20250815215743/https://www.field-studies-council.org/shop/publications/shieldbugs-guide/>)
+- Verified at: 2026-10-26T19:53:00.195863+00:00
 
 ## shropshire-craneflies.html
 
@@ -7710,8 +10402,12 @@
 - Author(s): P Boardman
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-crane...](<https://www.field-studies-council.org/shop/publications/shropshire-craneflies/>)
 - Keywords: FSC cranefly Tipulidae Diptera
+- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-craneflies/](<https://www.field-studies-council.org/shop/publications/shropshire-craneflies/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250908132829/https://www.field-studies-council.org/shop/publications/shropshire-craneflies/](<https://web.archive.org/web/20250908132829/https://www.field-studies-council.org/shop/publications/shropshire-craneflies/>)
+- Verified at: 2026-10-26T19:53:02.077591+00:00
 
 ## shropshire-earwig-species.html
 
@@ -7721,7 +10417,11 @@
 - Author(s): David W. Williams
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.fscbiodiversity.uk/](<https://www.fscbiodiversity.uk/index.html>)
+- Web link: [https://www.fscbiodiversity.uk/index.html](<https://www.fscbiodiversity.uk/index.html>)
+- Web link status: redirect_mismatch
+- Web link state: broken
+- Web link resolved: [https://www.fscbiodiversity.uk/](<https://www.fscbiodiversity.uk/>)
+- Verified at: 2026-10-26T19:53:17.859879+00:00
 
 ## shropshire-weevils-associated-conifers.html
 
@@ -7733,8 +10433,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [www.tombio.uk/sites/default/files/resources/Shropshire Weevils PDF2.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf](<https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF2.pdf>)
+- Verified at: 2026-10-26T19:53:15.118895+00:00
 
 ## shropshire-weevils-associated-deadwood-fungi-and-rotting-timbers.html
 
@@ -7746,8 +10450,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf](<https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF3.pdf>)
+- Verified at: 2026-10-26T19:53:13.576232+00:00
 
 ## shropshire-weevils-associated-elms-and-oaks.html
 
@@ -7759,8 +10467,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF4.pdf>)
+- Web link status: connect_error
+- Web link state: broken
 
 ## shropshire-weevils-associated-rosaceous-trees-and-shrubs.html
 
@@ -7772,8 +10482,10 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF5.pdf>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## shropshire-weevils-associated-sycamore-beech-alder-birch-and-hazel.html
 
@@ -7785,8 +10497,13 @@
 - Available as:
   - Online
   - PDF
-- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire Weevils%...](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf>)
 - Keywords: weevil coleptera beetles weevils Curculionoidea
+- Web link: [http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf](<http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf](<https://www.fscbiodiversity.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf>)
+- Wayback link: [https://web.archive.org/web/20250126015400/http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf](<https://web.archive.org/web/20250126015400/http://www.tombio.uk/sites/default/files/resources/Shropshire%20Weevils%20PDF1.pdf>)
+- Verified at: 2026-10-26T19:53:15.815610+00:00
 
 ## simple-key-caddis-larvae.html
 
@@ -7796,8 +10513,12 @@
 - Author(s): Ian Wallace
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/caddis-larvae-ai...](<https://www.field-studies-council.org/shop/publications/caddis-larvae-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/caddis-larvae-aidgap/](<https://www.field-studies-council.org/shop/publications/caddis-larvae-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250909195625/https://www.field-studies-council.org/shop/publications/caddis-larvae-aidgap/](<https://web.archive.org/web/20250909195625/https://www.field-studies-council.org/shop/publications/caddis-larvae-aidgap/>)
+- Verified at: 2026-10-26T19:53:09.797101+00:00
 
 ## siphonophores-and-velellids.html
 
@@ -7807,8 +10528,12 @@
 - Author(s): Kirkpatrick & Pugh
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/siphonophores-an...](<https://www.field-studies-council.org/shop/publications/siphonophores-and-velellids/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/siphonophores-and-velellids/](<https://www.field-studies-council.org/shop/publications/siphonophores-and-velellids/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250915003711/https://www.field-studies-council.org/shop/publications/siphonophores-and-velellids/](<https://web.archive.org/web/20250915003711/https://www.field-studies-council.org/shop/publications/siphonophores-and-velellids/>)
+- Verified at: 2026-10-26T19:53:11.782320+00:00
 
 ## sipunculans.html
 
@@ -7818,8 +10543,12 @@
 - Author(s): Gibbs
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/sipunculans/](<https://www.field-studies-council.org/shop/publications/sipunculans/>)
 - Keywords: Synopses of the British Fauna linsoc Linnean Society FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/sipunculans/](<https://www.field-studies-council.org/shop/publications/sipunculans/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250809124004/https://www.field-studies-council.org/shop/publications/sipunculans/](<https://web.archive.org/web/20250809124004/https://www.field-studies-council.org/shop/publications/sipunculans/>)
+- Verified at: 2026-10-26T19:53:16.060341+00:00
 
 ## slugs-britain-and-ireland.html
 
@@ -7829,8 +10558,12 @@
 - Author(s): Rowson, Turner, Anderson & Symondson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/slugs-aidgap/](<https://www.field-studies-council.org/shop/publications/slugs-aidgap/>)
 - Keywords: Gastropod gastropoda fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/slugs-aidgap/](<https://www.field-studies-council.org/shop/publications/slugs-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260606123920/https://www.field-studies-council.org/shop/publications/slugs-aidgap/](<https://web.archive.org/web/20260606123920/https://www.field-studies-council.org/shop/publications/slugs-aidgap/>)
+- Verified at: 2026-10-26T19:53:15.115800+00:00
 
 ## smaller-moths-shropshire.html
 
@@ -7847,8 +10580,12 @@
 - Author(s): Godfrey Blunt
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-small...](<https://www.field-studies-council.org/shop/publications/shropshire-smaller-moths/>)
 - Keywords: Atlas, Invertebrate Challenge, lepidoptera, moths, distibution maps, status, ecology, FSC, Shropshire
+- Web link: [https://www.field-studies-council.org/shop/publications/shropshire-smaller-moths/](<https://www.field-studies-council.org/shop/publications/shropshire-smaller-moths/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251013024135/https://www.field-studies-council.org/shop/publications/shropshire-smaller-moths/](<https://web.archive.org/web/20251013024135/https://www.field-studies-council.org/shop/publications/shropshire-smaller-moths/>)
+- Verified at: 2026-10-26T19:53:16.479348+00:00
 
 ## soil-biodiversity-uk.html
 
@@ -7858,8 +10595,11 @@
 - Author(s): Matthew Shepherd
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.facebook.com/groups/438740999565613/?fref=nf](<https://www.facebook.com/groups/438740999565613/?fref=nf>)
 - Keywords: collembola acari
+- Web link: [https://www.facebook.com/groups/438740999565613/?fref=nf](<https://www.facebook.com/groups/438740999565613/?fref=nf>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:53:17.059667+00:00
 
 ## soil-types-field-identification-guide.html
 
@@ -7869,8 +10609,12 @@
 - Author(s): Trudgill
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/soil-types-aidgap/](<https://www.field-studies-council.org/shop/publications/soil-types-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/soil-types-aidgap/](<https://www.field-studies-council.org/shop/publications/soil-types-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.field-studies-council.org/shop/publications/soil-types-aidgap-ebook/](<https://www.field-studies-council.org/shop/publications/soil-types-aidgap-ebook/>)
+- Verified at: 2026-10-26T19:53:23.306556+00:00
 
 ## solitary-bees-identification-and-nesting-ecology.html
 
@@ -7884,6 +10628,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://youtu.be/Yh5eoqdMlAE](<https://youtu.be/Yh5eoqdMlAE>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.youtube.com/watch?v=Yh5eoqdMlAE&feature=youtu.be](<https://www.youtube.com/watch?v=Yh5eoqdMlAE&feature=youtu.be>)
+- Verified at: 2026-10-26T19:53:19.630750+00:00
 
 ## solitary-wasps.html
 
@@ -7895,8 +10643,12 @@
 - Author(s): Peter F Yeo, Sarah A Corbet, Anthony J Hopkins
 - Free: No
 - Available as: Publication
-- Web link: [https://www.nhbs.com/solitary-wasps-book-2](<https://www.nhbs.com/solitary-wasps-book-2>)
 - Keywords: aculeates aculeate hymenoptera
+- Web link: [https://www.nhbs.com/solitary-wasps-book-2](<https://www.nhbs.com/solitary-wasps-book-2>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260306084400/https://www.nhbs.com/solitary-wasps-book-2](<https://web.archive.org/web/20260306084400/https://www.nhbs.com/solitary-wasps-book-2>)
+- Verified at: 2026-10-26T19:53:17.798295+00:00
 
 ## sorting-short-eared-and-long-eared-owls.html
 
@@ -7906,8 +10658,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/sorti...](<https://www.bto.org/develop-your-skills/bird-identification/videos/sorting-short-eared-and-long-eared-owls>)
 - Keywords: film, raptor, birds of prey
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/sorting-short-eared-and-long-eared-owls](<https://www.bto.org/develop-your-skills/bird-identification/videos/sorting-short-eared-and-long-eared-owls>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/short-eared-and-long-eared-owls](<https://www.bto.org/learn/skills/bird-identification/videos/short-eared-and-long-eared-owls>)
+- Wayback link: [https://web.archive.org/web/20250328093501/https://www.bto.org/develop-your-skills/bird-identification/videos/sorting-short-eared-and-long-eared-owls](<https://web.archive.org/web/20250328093501/https://www.bto.org/develop-your-skills/bird-identification/videos/sorting-short-eared-and-long-eared-owls>)
+- Verified at: 2026-10-26T19:53:22.370573+00:00
 
 ## species-checklist-uk-hoverflies.html
 
@@ -7917,8 +10674,11 @@
 - Author(s): Hoverfly Recording Scheme
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.hoverfly.org.uk/portal.php/?page=5](<http://www.hoverfly.org.uk/portal.php/?page=5>)
 - Keywords: syrphidae
+- Web link: [http://www.hoverfly.org.uk/portal.php/?page=5](<http://www.hoverfly.org.uk/portal.php/?page=5>)
+- Web link status: 503
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20250424004158/http://www.hoverfly.org.uk/portal.php/?page=5](<https://web.archive.org/web/20250424004158/http://www.hoverfly.org.uk/portal.php/?page=5>)
 
 ## sphagnum-id-guide.html
 
@@ -7930,7 +10690,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.moorsforthefuture.org.uk/\_\_data/assets/pdf\_file/0028/87436/S...](<https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0028/87436/Sphagnum-guide-MoorMOSS-Factsheet.pdf>)
+- Web link: [https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0028/87436/Sphagnum-guide-MoorMOSS-Factsheet.pdf](<https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0028/87436/Sphagnum-guide-MoorMOSS-Factsheet.pdf>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20231202142455/https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0028/87436/Sphagnum-guide-MoorMOSS-Factsheet.pdf](<https://web.archive.org/web/20231202142455/https://www.moorsforthefuture.org.uk/__data/assets/pdf_file/0028/87436/Sphagnum-guide-MoorMOSS-Factsheet.pdf>)
+- Verified at: 2026-10-26T19:53:20.462933+00:00
 
 ## spiders-britain-and-northern-europe.html
 
@@ -7960,8 +10724,12 @@
 - Author(s): Jørgen Lissner
 - Free: Yes
 - Available as: Online
-- Web link: [https://jorgenlissner.dk/](<https://jorgenlissner.dk/>)
 - Keywords: photographs
+- Web link: [https://jorgenlissner.dk/](<https://jorgenlissner.dk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251216121820/https://jorgenlissner.dk/](<https://web.archive.org/web/20251216121820/https://jorgenlissner.dk/>)
+- Verified at: 2026-10-26T19:53:21.306507+00:00
 
 ## spiders-great-britain-and-ireland.html
 
@@ -7981,8 +10749,12 @@
 - Author(s): Anon
 - Free: Yes
 - Available as: Online
-- Web link: [https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm](<https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm>)
 - Keywords: araneae
+- Web link: [https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm](<https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260713182051/https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm](<https://web.archive.org/web/20260713182051/https://ednieuw.home.xs4all.nl/Spiders/spidhome.htm>)
+- Verified at: 2026-10-26T19:53:24.010387+00:00
 
 ## spiders-you-can-id-and-record-during-lockdown.html
 
@@ -7995,6 +10767,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://youtu.be/aN9I_fDme6k](<https://youtu.be/aN9I_fDme6k>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.youtube.com/watch?v=aN9I_fDme6k&feature=youtu.be](<https://www.youtube.com/watch?v=aN9I_fDme6k&feature=youtu.be>)
+- Verified at: 2026-10-26T19:53:24.547832+00:00
 
 ## spiders-your-home.html
 
@@ -8004,8 +10780,15 @@
 - Author(s): Natural History Museum & OPAL
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spide...](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spiders-in-your-home-id-guide.pdf>)
 - Keywords: arachnids urban
+- Web link: [https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spiders-in-your-home-id-guide.pdf](<https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spiders-in-your-home-id-guide.pdf>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20240813125107/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spiders-in-your-home-id-guide.pdf](<https://web.archive.org/web/20240813125107/https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/spiders-in-your-home-id-guide.pdf>)
+- Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html](<https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html>)
+- Alternative probability: 0.80
+- Alternative reasoning: While the direct PDF link is broken, the Natural History Museum hosts the guide on their 'Identify Nature' section, which is the standard location for these resources.
+- Verified at: 2026-10-26T19:53:25.585294+00:00
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-1.html
 
@@ -8015,8 +10798,11 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20200606184600/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf](<https://web.archive.org/web/20200606184600/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-2.html
 
@@ -8026,8 +10812,11 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20200606184605/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf](<https://web.archive.org/web/20200606184605/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-3.html
 
@@ -8037,8 +10826,11 @@
 - Author(s): Jochen Martens
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20200606184621/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf](<https://web.archive.org/web/20200606184621/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
 
 ## sponges-britain-and-ireland.html
 
@@ -8050,9 +10842,14 @@
 - Author(s): Ackers, R.G., Moss, D. & Picton, B. E.
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.habitas.org.uk/marinelife/sponge_guide/](<http://www.habitas.org.uk/marinelife/sponge_guide/>)
-- Additional web link: [Habitas website](<http://www.habitas.org.uk/>)
 - Keywords: Porifera sponges
+- Web link: [http://www.habitas.org.uk/marinelife/sponge_guide/](<http://www.habitas.org.uk/marinelife/sponge_guide/>)
+- Additional web link: [http://www.habitas.org.uk/](<http://www.habitas.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.habitas.org.uk/marinelife/sponge_guide/](<https://www.habitas.org.uk/marinelife/sponge_guide/>)
+- Wayback link: [https://web.archive.org/web/20260811080236/https://www.habitas.org.uk/marinelife/sponge_guide/](<https://web.archive.org/web/20260811080236/https://www.habitas.org.uk/marinelife/sponge_guide/>)
+- Verified at: 2026-10-26T19:53:26.168881+00:00
 
 ## sponges-british-isles-sponge-v.html
 
@@ -8062,9 +10859,14 @@
 - Author(s): Ackers, R.G., Moss, D. & Picton, B. E.
 - Free: Yes
 - Available as: PDF
-- Web link: [http://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf](<http://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf>)
-- Additional web link: [Habitas website](<http://www.habitas.org.uk/>)
 - Keywords: Porifera
+- Web link: [http://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf](<http://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf>)
+- Additional web link: [http://www.habitas.org.uk/](<http://www.habitas.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf](<https://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf>)
+- Wayback link: [https://web.archive.org/web/20260711213031/https://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf](<https://web.archive.org/web/20260711213031/https://www.habitas.org.uk/marinelife/sponge_guide/sponge5.pdf>)
+- Verified at: 2026-10-26T19:53:26.871957+00:00
 
 ## spring-moths-identikit.html
 
@@ -8074,8 +10876,10 @@
 - Author(s): Paul Palmer
 - Free: Yes
 - Available as: Online
-- Web link: [https://kb-moths.tech-trends.co.uk/index.html](<https://kb-moths.tech-trends.co.uk/index.html>)
 - Keywords: moths spring
+- Web link: [https://kb-moths.tech-trends.co.uk/index.html](<https://kb-moths.tech-trends.co.uk/index.html>)
+- Web link status: connect_error
+- Web link state: broken
 
 ## spring-snowdrop-identification.html
 
@@ -8085,8 +10889,10 @@
 - Author(s): M. J. Crawley
 - Free: Yes
 - Available as: PDF
-- Web link: [https://bsbi.org/download/1613](<https://bsbi.org/download/1613>)
 - Keywords: winter spring season Galanthus snowdrops
+- Web link: [https://bsbi.org/download/1613](<https://bsbi.org/download/1613>)
+- Web link status: timeout
+- Web link state: unverified
 
 ## staphylinidae-rove-beetles-britain-and-ireland-part-5.html
 
@@ -8096,8 +10902,12 @@
 - Author(s): Lott
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/staphylinidae-ro...](<https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-part-5/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-part-5/](<https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-part-5/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230926234054/https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-part-5/](<https://web.archive.org/web/20230926234054/https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-part-5/>)
+- Verified at: 2026-10-26T19:53:34.986333+00:00
 
 ## staphylinidae-rove-beetles-britain-and-ireland-parts-7-and-8.html
 
@@ -8107,8 +10917,12 @@
 - Author(s): Lott & Anderson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/staphylinidae-ro...](<https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-parts-7-and-8/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-parts-7-and-8/](<https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-parts-7-and-8/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230925102140/https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-parts-7-and-8/](<https://web.archive.org/web/20230925102140/https://www.field-studies-council.org/shop/publications/staphylinidae-rove-beetles-parts-7-and-8/>)
+- Verified at: 2026-10-26T19:53:38.588782+00:00
 
 ## steven-falks-flickr-collection-amphibians.html
 
@@ -8118,7 +10932,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629273458864/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629273458864/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629273458864/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20220313211415/https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/](<https://web.archive.org/web/20220313211415/https://www.flickr.com/photos/63075200@N07/collections/72157629273458864/>)
+- Verified at: 2026-10-26T19:53:27.641036+00:00
 
 ## steven-falks-flickr-collection-araneae.html
 
@@ -8128,7 +10946,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631875078693/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157631875078693/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631875078693/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240714212920/https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/](<https://web.archive.org/web/20240714212920/https://www.flickr.com/photos/63075200@N07/collections/72157631875078693/>)
+- Verified at: 2026-10-26T19:53:29.349990+00:00
 
 ## steven-falks-flickr-collection-birds.html
 
@@ -8138,7 +10960,10 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/](<https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/](<https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:53:28.200833+00:00
 
 ## steven-falks-flickr-collection-diptera.html
 
@@ -8148,8 +10973,12 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629586945825/>)
 - Keywords: true flies two-winged flies
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629586945825/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629586945825/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250115082016/https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/](<https://web.archive.org/web/20250115082016/https://www.flickr.com/photos/63075200@N07/collections/72157629586945825/>)
+- Verified at: 2026-10-26T19:53:29.429913+00:00
 
 ## steven-falks-flickr-collection-hemiptera.html
 
@@ -8159,7 +10988,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631681890925/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157631681890925/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631681890925/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260418011540/https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/](<https://web.archive.org/web/20260418011540/https://www.flickr.com/photos/63075200@N07/collections/72157631681890925/>)
+- Verified at: 2026-10-26T19:53:28.884070+00:00
 
 ## steven-falks-flickr-collection-hymenoptera.html
 
@@ -8169,7 +11002,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629294459686/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629294459686/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629294459686/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250912204844/https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/](<https://web.archive.org/web/20250912204844/https://www.flickr.com/photos/63075200@N07/collections/72157629294459686/>)
+- Verified at: 2026-10-26T19:53:30.218334+00:00
 
 ## steven-falks-flickr-collection-mammals.html
 
@@ -8179,7 +11016,10 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:53:33.092852+00:00
 
 ## steven-falks-flickr-collection-molluscs.html
 
@@ -8189,8 +11029,12 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/](<https://www.flickr.com/photos/63075200%40N07/collections/72157632294575034/>)
 - Keywords: snails slugs bivalves
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157632294575034/](<https://www.flickr.com/photos/63075200%40N07/collections/72157632294575034/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250426224054/https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/](<https://web.archive.org/web/20250426224054/https://www.flickr.com/photos/63075200@N07/collections/72157632294575034/>)
+- Verified at: 2026-10-26T19:53:30.718679+00:00
 
 ## steven-falks-flickr-collection-odonata.html
 
@@ -8200,7 +11044,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587472171/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629587472171/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587472171/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260105170509/https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/](<https://web.archive.org/web/20260105170509/https://www.flickr.com/photos/63075200@N07/collections/72157629587472171/>)
+- Verified at: 2026-10-26T19:53:31.846598+00:00
 
 ## steven-falks-flickr-collection-opiliones.html
 
@@ -8210,7 +11058,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631637889685/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157631637889685/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631637889685/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240308220625/https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/](<https://web.archive.org/web/20240308220625/https://www.flickr.com/photos/63075200@N07/collections/72157631637889685/>)
+- Verified at: 2026-10-26T19:53:32.289282+00:00
 
 ## steven-falks-flickr-collection-orthoptera.html
 
@@ -8220,7 +11072,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157631291968800/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631291968800/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157631291968800/](<https://www.flickr.com/photos/63075200%40N07/collections/72157631291968800/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260930125153/https://www.flickr.com/photos/63075200@N07/collections/72157631291968800](<https://web.archive.org/web/20260930125153/https://www.flickr.com/photos/63075200@N07/collections/72157631291968800>)
+- Verified at: 2026-10-26T19:53:34.346938+00:00
 
 ## steven-falks-flickr-collection-reptiles.html
 
@@ -8230,7 +11086,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629207224086/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629207224086/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629207224086/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260417225638/https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/](<https://web.archive.org/web/20260417225638/https://www.flickr.com/photos/63075200@N07/collections/72157629207224086/>)
+- Verified at: 2026-10-26T19:53:34.055076+00:00
 
 ## steven-falks-flickr-collections-coleoptera.html
 
@@ -8240,7 +11100,11 @@
 - Author(s): Steven Falk
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587478333/>)
+- Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629587478333/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629587478333/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240616054614/https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/](<https://web.archive.org/web/20240616054614/https://www.flickr.com/photos/63075200@N07/collections/72157629587478333/>)
+- Verified at: 2026-10-26T19:53:34.514125+00:00
 
 ## synopsis-british-fauna-no-4-2nd-edn-harvestmen.html
 
@@ -8250,8 +11114,11 @@
 - Author(s): Hillyard & Sankey
 - Free: Yes
 - Available as: PDF
-- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyar...](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf](<https://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf>)
+- Web link status: connect_error
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20210119113811/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf](<https://web.archive.org/web/20210119113811/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf>)
 
 ## tachinid-recording-scheme.html
 
@@ -8262,6 +11129,9 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/people/Tachinid-Recording-Scheme/100064520626926/](<https://www.facebook.com/people/Tachinid-Recording-Scheme/100064520626926/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:53:35.582291+00:00
 
 ## taking-look-terns-roseate-sandwich-and-little-tern.html
 
@@ -8271,8 +11141,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/rosea...](<https://www.bto.org/develop-your-skills/bird-identification/videos/roseate-sandwich-and-little-tern>)
 - Keywords: film, seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/roseate-sandwich-and-little-tern](<https://www.bto.org/develop-your-skills/bird-identification/videos/roseate-sandwich-and-little-tern>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/roseate-sandwich-and-little-tern](<https://www.bto.org/learn/skills/bird-identification/videos/roseate-sandwich-and-little-tern>)
+- Wayback link: [https://web.archive.org/web/20250420233335/https://www.bto.org/develop-your-skills/bird-identification/videos/roseate-sandwich-and-little-tern](<https://web.archive.org/web/20250420233335/https://www.bto.org/develop-your-skills/bird-identification/videos/roseate-sandwich-and-little-tern>)
+- Verified at: 2026-10-26T19:53:37.709284+00:00
 
 ## taking-look-terns-video-common-and-arctic-tern.html
 
@@ -8282,8 +11157,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/commo...](<https://www.bto.org/develop-your-skills/bird-identification/videos/common-and-arctic-tern>)
 - Keywords: seabirds
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/common-and-arctic-tern](<https://www.bto.org/develop-your-skills/bird-identification/videos/common-and-arctic-tern>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/common-and-arctic-tern](<https://www.bto.org/learn/skills/bird-identification/videos/common-and-arctic-tern>)
+- Wayback link: [https://web.archive.org/web/20250327192737/https://www.bto.org/develop-your-skills/bird-identification/videos/common-and-arctic-tern](<https://web.archive.org/web/20250327192737/https://www.bto.org/develop-your-skills/bird-identification/videos/common-and-arctic-tern>)
+- Verified at: 2026-10-26T19:53:37.688526+00:00
 
 ## tasselweeds-id-video.html
 
@@ -8294,6 +11174,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=8md0RMkPhV4](<https://www.youtube.com/watch?v=8md0RMkPhV4>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251209121414/https://www.youtube.com/watch?v=8md0RMkPhV4](<https://web.archive.org/web/20251209121414/https://www.youtube.com/watch?v=8md0RMkPhV4>)
+- Verified at: 2026-10-26T19:53:38.176428+00:00
 
 ## telling-apart-marsh-and-willow-tits.html
 
@@ -8303,8 +11187,13 @@
 - Author(s): BTO
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/telli...](<https://www.bto.org/develop-your-skills/bird-identification/videos/telling-apart-marsh-and-willow-tits>)
 - Keywords: film
+- Web link: [https://www.bto.org/develop-your-skills/bird-identification/videos/telling-apart-marsh-and-willow-tits](<https://www.bto.org/develop-your-skills/bird-identification/videos/telling-apart-marsh-and-willow-tits>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://www.bto.org/learn/skills/bird-identification/videos/marsh-and-willow-tits](<https://www.bto.org/learn/skills/bird-identification/videos/marsh-and-willow-tits>)
+- Wayback link: [https://web.archive.org/web/20250424171617/https://www.bto.org/develop-your-skills/bird-identification/videos/telling-apart-marsh-and-willow-tits](<https://web.archive.org/web/20250424171617/https://www.bto.org/develop-your-skills/bird-identification/videos/telling-apart-marsh-and-willow-tits>)
+- Verified at: 2026-10-26T19:53:40.389191+00:00
 
 ## tep-files.html
 
@@ -8316,8 +11205,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://bsbi.org/](<https://bsbi.org/>)
 - Keywords: Poaceae
+- Web link: [https://bsbi.org/](<https://bsbi.org/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261013162854/https://bsbi.org/](<https://web.archive.org/web/20261013162854/https://bsbi.org/>)
+- Verified at: 2026-10-26T19:49:39.548260+00:00
 
 ## thysanoptera-britannica-et-hibernica-thrips-british-isles.html
 
@@ -8328,6 +11221,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://keys.lucidcentral.org/keys/v3/british_thrips/authors.html](<https://keys.lucidcentral.org/keys/v3/british_thrips/authors.html>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20230927012159/https://keys.lucidcentral.org/keys/v3/british_thrips/authors.html](<https://web.archive.org/web/20230927012159/https://keys.lucidcentral.org/keys/v3/british_thrips/authors.html>)
+- Verified at: 2026-10-26T19:53:38.623391+00:00
 
 ## top-50-garden-birds-british-garden-bird-identification.html
 
@@ -8340,8 +11237,12 @@
 - Author(s): Jackson, Simms & Shields
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/park-and-garden-...](<https://www.field-studies-council.org/shop/publications/park-and-garden-birds/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/park-and-garden-birds/](<https://www.field-studies-council.org/shop/publications/park-and-garden-birds/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261005212248/https://www.field-studies-council.org/shop/publications/park-and-garden-birds/](<https://web.archive.org/web/20261005212248/https://www.field-studies-council.org/shop/publications/park-and-garden-birds/>)
+- Verified at: 2026-10-26T19:53:39.610454+00:00
 
 ## tree-name-trail.html
 
@@ -8354,8 +11255,12 @@
 - Author(s): Oldham & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/tree-name-trail/](<https://www.field-studies-council.org/shop/publications/tree-name-trail/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/tree-name-trail/](<https://www.field-studies-council.org/shop/publications/tree-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250915003847/https://www.field-studies-council.org/shop/publications/tree-name-trail/](<https://web.archive.org/web/20250915003847/https://www.field-studies-council.org/shop/publications/tree-name-trail/>)
+- Verified at: 2026-10-26T19:53:40.121409+00:00
 
 ## trees-britain-and-europe.html
 
@@ -8365,8 +11270,11 @@
 - Author(s): Keith Rushforth
 - Free: No
 - Available as: Publication
-- Web link: [https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and...](<https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA>)
 - Keywords: conifers
+- Web link: [https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA](<https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:53:40.681054+00:00
 
 ## trees-britain-and-northern-europe.html
 
@@ -8376,8 +11284,11 @@
 - Author(s): Alan Mitchell
 - Free: No
 - Available as: Publication
-- Web link: [https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and...](<https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ>)
 - Keywords: conifers
+- Web link: [https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ](<https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ>)
+- Web link status: 200
+- Web link state: ok
+- Verified at: 2026-10-26T19:53:41.096837+00:00
 
 ## true-weevils-part-1-coleoptera-curculionidae.html
 
@@ -8387,8 +11298,12 @@
 - Author(s): Morris
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-1/](<https://www.field-studies-council.org/shop/publications/true-weevils-1/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-1/](<https://www.field-studies-council.org/shop/publications/true-weevils-1/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230921231849/https://www.field-studies-council.org/shop/publications/true-weevils-1/](<https://web.archive.org/web/20230921231849/https://www.field-studies-council.org/shop/publications/true-weevils-1/>)
+- Verified at: 2026-10-26T19:53:56.651793+00:00
 
 ## true-weevils-part-2-coleoptera-curculionidae-ceutorhynchinae.html
 
@@ -8398,8 +11313,12 @@
 - Author(s): Morris
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-ii/](<https://www.field-studies-council.org/shop/publications/true-weevils-ii/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-ii/](<https://www.field-studies-council.org/shop/publications/true-weevils-ii/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230922060528/https://www.field-studies-council.org/shop/publications/true-weevils-ii/](<https://web.archive.org/web/20230922060528/https://www.field-studies-council.org/shop/publications/true-weevils-ii/>)
+- Verified at: 2026-10-26T19:53:53.664586+00:00
 
 ## true-weevils-part-iii.html
 
@@ -8409,8 +11328,11 @@
 - Author(s): Morris
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-3/](<https://www.field-studies-council.org/shop/publications/true-weevils-3/>)
 - Keywords: Royal Entomological Society of London FSC entsoc curculionidae
+- Web link: [https://www.field-studies-council.org/shop/publications/true-weevils-3/](<https://www.field-studies-council.org/shop/publications/true-weevils-3/>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:53:53.031202+00:00
 
 ## tufted-forget-me-not-id-video.html
 
@@ -8421,6 +11343,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=rnSR1biwwTs](<https://www.youtube.com/watch?v=rnSR1biwwTs>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251011042828/https://www.youtube.com/watch?v=rnSR1biwwTs](<https://web.archive.org/web/20251011042828/https://www.youtube.com/watch?v=rnSR1biwwTs>)
+- Verified at: 2026-10-26T19:53:41.726868+00:00
 
 ## uk-bees-wasps-and-ants.html
 
@@ -8431,6 +11357,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/1590641777855221/](<https://www.facebook.com/groups/1590641777855221/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20230522001247/http://www.facebook.com/groups/1590641777855221/](<https://web.archive.org/web/20230522001247/http://www.facebook.com/groups/1590641777855221/>)
+- Verified at: 2026-10-26T19:53:41.733014+00:00
 
 ## uk-butterflies.html
 
@@ -8441,8 +11371,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.ukbutterflies.co.uk/identification.php](<https://www.ukbutterflies.co.uk/identification.php>)
 - Keywords: Butterfly Butterflies
+- Web link: [https://www.ukbutterflies.co.uk/identification.php](<https://www.ukbutterflies.co.uk/identification.php>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240114104258/https://www.ukbutterflies.co.uk/identification.php](<https://web.archive.org/web/20240114104258/https://www.ukbutterflies.co.uk/identification.php>)
+- Verified at: 2026-10-26T19:53:42.521918+00:00
 
 ## uk-dragonflies-damselflies.html
 
@@ -8452,6 +11386,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.facebook.com/groups/561222590593478/](<https://www.facebook.com/groups/561222590593478/>)
+- Web link status: 400
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20230521060040/https://www.facebook.com/groups/561222590593478/](<https://web.archive.org/web/20230521060040/https://www.facebook.com/groups/561222590593478/>)
+- Verified at: 2026-10-26T19:53:42.467193+00:00
 
 ## uk-harvestmen-opiliones-facebook-group.html
 
@@ -8461,8 +11399,11 @@
 - Author(s): Various
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.facebook.com/groups/1460150090961032/](<https://www.facebook.com/groups/1460150090961032/>)
 - Keywords: Opiliones harvestman daddy long-legs
+- Web link: [https://www.facebook.com/groups/1460150090961032/](<https://www.facebook.com/groups/1460150090961032/>)
+- Web link status: 400
+- Web link state: unverified
+- Verified at: 2026-10-26T19:53:47.806788+00:00
 
 ## uk-harvetmen-flickr-album.html
 
@@ -8472,8 +11413,12 @@
 - Author(s): Paul Richards
 - Free: Yes
 - Available as: Online
-- Web link: [https://www.flickr.com/photos/invertimages/albums/72157632884119929](<https://www.flickr.com/photos/invertimages/albums/72157632884119929>)
 - Keywords: Opiliones harvestman daddy long-legs photos
+- Web link: [https://www.flickr.com/photos/invertimages/albums/72157632884119929](<https://www.flickr.com/photos/invertimages/albums/72157632884119929>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250818093835/https://www.flickr.com/photos/invertimages/albums/72157632884119929](<https://web.archive.org/web/20250818093835/https://www.flickr.com/photos/invertimages/albums/72157632884119929>)
+- Verified at: 2026-10-26T19:53:44.034370+00:00
 
 ## uk-moths.html
 
@@ -8484,6 +11429,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.ukmoths.org.uk/](<https://www.ukmoths.org.uk/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261011223828/https://www.ukmoths.org.uk/](<https://web.archive.org/web/20261011223828/https://www.ukmoths.org.uk/>)
+- Verified at: 2026-10-26T19:53:43.023201+00:00
 
 ## understanding-ecology-fieldwork-1-rocky-shore-communities.html
 
@@ -8496,8 +11445,12 @@
 - Author(s): Cremona
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/product-category/publications/](<https://www.field-studies-council.org/product-category/publications/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/](<https://web.archive.org/web/20260801065836/https://www.field-studies-council.org/product-category/publications/>)
+- Verified at: 2026-10-26T19:44:24.590694+00:00
 
 ## understanding-geography-fieldwork-1-statistics-geographers.html
 
@@ -8512,8 +11465,12 @@
 - Author(s): Sutton
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/resources/16-18-geography/route-to...](<https://www.field-studies-council.org/resources/16-18-geography/route-to-enquiry/data-analysis/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/resources/16-18-geography/route-to-enquiry/data-analysis/](<https://www.field-studies-council.org/resources/16-18-geography/route-to-enquiry/data-analysis/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250916130348/https://www.field-studies-council.org/resources/16-18-geography/route-to-enquiry/data-analysis/](<https://web.archive.org/web/20250916130348/https://www.field-studies-council.org/resources/16-18-geography/route-to-enquiry/data-analysis/>)
+- Verified at: 2026-10-26T19:53:44.530899+00:00
 
 ## understanding-geography-fieldwork-2-central-business-district.html
 
@@ -8523,8 +11480,12 @@
 - Author(s): Warn & Holmes
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/central-business...](<https://www.field-studies-council.org/shop/publications/central-business-district/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/central-business-district/](<https://www.field-studies-council.org/shop/publications/central-business-district/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251008234312/https://www.field-studies-council.org/shop/publications/central-business-district/](<https://web.archive.org/web/20251008234312/https://www.field-studies-council.org/shop/publications/central-business-district/>)
+- Verified at: 2026-10-26T19:53:45.109823+00:00
 
 ## understanding-geography-fieldwork-3-river-environment.html
 
@@ -8537,8 +11498,12 @@
 - Author(s): Holmes & Warn
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/river-environment/](<https://www.field-studies-council.org/shop/publications/river-environment/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/river-environment/](<https://www.field-studies-council.org/shop/publications/river-environment/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251010215015/https://www.field-studies-council.org/shop/publications/river-environment/](<https://web.archive.org/web/20251010215015/https://www.field-studies-council.org/shop/publications/river-environment/>)
+- Verified at: 2026-10-26T19:53:46.461293+00:00
 
 ## united-kingdom-turtle-code.html
 
@@ -8550,7 +11515,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK\_Turtle\_C...](<https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK_Turtle_Code_2024.pdf>)
+- Web link: [https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK_Turtle_Code_2024.pdf](<https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK_Turtle_Code_2024.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20241126220212/https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK_Turtle_Code_2024.pdf](<https://web.archive.org/web/20241126220212/https://s3.eu-west-1.amazonaws.com/media.mcsuk.org/documents/UK_Turtle_Code_2024.pdf>)
+- Verified at: 2026-10-26T19:53:48.347899+00:00
 
 ## urban-lichens-1-trees-and-wood.html
 
@@ -8563,8 +11532,12 @@
 - Author(s): Dobson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/urban-lichens-1-...](<https://www.field-studies-council.org/shop/publications/urban-lichens-1-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/urban-lichens-1-guide/](<https://www.field-studies-council.org/shop/publications/urban-lichens-1-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251123083748/https://www.field-studies-council.org/shop/publications/urban-lichens-1-guide/](<https://web.archive.org/web/20251123083748/https://www.field-studies-council.org/shop/publications/urban-lichens-1-guide/>)
+- Verified at: 2026-10-26T19:53:48.751702+00:00
 
 ## urban-lichens-2-stone-and-soil.html
 
@@ -8577,8 +11550,12 @@
 - Author(s): Dobson
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/urban-lichens-2-...](<https://www.field-studies-council.org/shop/publications/urban-lichens-2-guide/>)
 - Keywords: fold-out, fold out, FSC, field studies council
+- Web link: [https://www.field-studies-council.org/shop/publications/urban-lichens-2-guide/](<https://www.field-studies-council.org/shop/publications/urban-lichens-2-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251123084027/https://www.field-studies-council.org/shop/publications/urban-lichens-2-guide/](<https://web.archive.org/web/20251123084027/https://www.field-studies-council.org/shop/publications/urban-lichens-2-guide/>)
+- Verified at: 2026-10-26T19:53:50.184538+00:00
 
 ## various-keys-robberflies.html
 
@@ -8589,6 +11566,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.geller-grimm.de/key.htm](<https://www.geller-grimm.de/key.htm>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20251211031003/https://www.geller-grimm.de/key.htm](<https://web.archive.org/web/20251211031003/https://www.geller-grimm.de/key.htm>)
+- Verified at: 2026-10-26T19:53:49.551158+00:00
 
 ## vegetative-identification-keys-selected-woody-plant-genera-western-european-cultivation.html
 
@@ -8600,8 +11581,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.arboretumwespelaar.be/EN/Identification\_keys\_and\_illustratio...](<https://www.arboretumwespelaar.be/EN/Identification_keys_and_illustrations/Identification_keys/>)
 - Keywords: Trees
+- Web link: [https://www.arboretumwespelaar.be/EN/Identification_keys_and_illustrations/Identification_keys/](<https://www.arboretumwespelaar.be/EN/Identification_keys_and_illustrations/Identification_keys/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260503135028/https://www.arboretumwespelaar.be/EN/Identification_keys_and_illustrations/Identification_keys/](<https://web.archive.org/web/20260503135028/https://www.arboretumwespelaar.be/EN/Identification_keys_and_illustrations/Identification_keys/>)
+- Verified at: 2026-10-26T19:53:53.086233+00:00
 
 ## vespoid-wasps.html
 
@@ -8611,8 +11596,15 @@
 - Author(s): Archer
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/vespoid-wasps/](<https://www.field-studies-council.org/shop/publications/vespoid-wasps/>)
 - Keywords: Royal Entomological Society of London FSC entsoc
+- Web link: [https://www.field-studies-council.org/shop/publications/vespoid-wasps/](<https://www.field-studies-council.org/shop/publications/vespoid-wasps/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20230924011734/https://www.field-studies-council.org/shop/publications/vespoid-wasps/](<https://web.archive.org/web/20230924011734/https://www.field-studies-council.org/shop/publications/vespoid-wasps/>)
+- Alternative link: [https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002](<https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002>)
+- Alternative probability: 0.60
+- Alternative reasoning: Pemberley Books is a specialized entomological bookseller that hosts a dedicated product page for this specific identification guide.
+- Verified at: 2026-10-26T19:54:00.626080+00:00
 
 ## water-beetle-adults-and-larvae.html
 
@@ -8625,6 +11617,13 @@
   - Online
   - PDF
 - Web link: [https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor](<https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20211203151215/https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor](<https://web.archive.org/web/20211203151215/https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor>)
+- Alternative link: [https://journals.openedition.org/bmsll/4151](<https://journals.openedition.org/bmsll/4151>)
+- Alternative probability: 0.80
+- Alternative reasoning: The guide 'Coléoptères aquatiques (genres : adultes et larves)' by Philippe Richoux was published in the Bulletin mensuel de la Société linnéenne de Lyon (1982, Vol 51, issues 4, 8, and 9), which is hosted on the OpenEdition Journals platform.
+- Verified at: 2026-10-26T19:53:58.277630+00:00
 
 ## water-horsetail-id-video.html
 
@@ -8635,6 +11634,10 @@
 - Free: Yes
 - Available as: Online
 - Web link: [https://www.youtube.com/watch?v=qNhqgqYLxCs](<https://www.youtube.com/watch?v=qNhqgqYLxCs>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260930131811/https://www.youtube.com/watch?v=qNhqgqYLxCs](<https://web.archive.org/web/20260930131811/https://www.youtube.com/watch?v=qNhqgqYLxCs>)
+- Verified at: 2026-10-26T19:53:56.741338+00:00
 
 ## watford-coleoptera-group.html
 
@@ -8644,23 +11647,31 @@
 - Author(s): Watford Coleoptera Group
 - Free: Yes
 - Available as: Online
-- Web link: [http://www.thewcg.org.uk/](<http://www.thewcg.org.uk/>)
 - Keywords: beetle, beetles
+- Web link: [http://www.thewcg.org.uk/](<http://www.thewcg.org.uk/>)
+- Web link status: 403
+- Web link state: unverified
+- Wayback link: [https://web.archive.org/web/20260416082647/https://www.thewcg.org.uk/](<https://web.archive.org/web/20260416082647/https://www.thewcg.org.uk/>)
+- Verified at: 2026-10-26T19:53:57.698580+00:00
 
 ## weevil-guides.html
 
 - Title: Weevil Guides
 - Submitted: Anonymous (not verified); 2016-03-16T09:14:00
 - Description:
-  These are draft guides to genera or species groups of weevils. It is being tested; if you have any ideas for improving the design or content, please send them to [[email protected]](../cdn-cgi/l/email-protection.html) or @MarkGurn on Twitter.
+  These are draft guides to genera or species groups of weevils. It is being tested; if you have any ideas for improving the design or content, please send them to [[email protected]](https://www.fscbiodiversity.uk/cdn-cgi/l/email-protection.html) or @MarkGurn on Twitter.
   This is a guide to the genera or groups of weevils of Britain and Ireland.
 - Author(s): Mark Gurney
 - Free: Yes
 - Available as:
   - Online
   - PDF
-- Web link: [https://drive.google.com/folderview?id=0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1...](<https://drive.google.com/folderview?id=0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1bWtJZWZJb1JxM2JLM0djMi1Ea2RWUzluMHNGVGc&usp=drive_web>)
 - Keywords: beetles weevil weevils
+- Web link: [https://drive.google.com/folderview?id=0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1bWtJZWZJb1JxM2JLM0djMi1Ea2RWUzluMHNGVGc&usp=drive_web](<https://drive.google.com/folderview?id=0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1bWtJZWZJb1JxM2JLM0djMi1Ea2RWUzluMHNGVGc&usp=drive_web>)
+- Web link status: 200
+- Web link state: ok
+- Web link resolved: [https://drive.google.com/drive/folders/0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1bWtJZWZJb1JxM2JLM0djMi1Ea2RWUzluMHNGVGc?usp=drive_web](<https://drive.google.com/drive/folders/0B008cp9g-Pm8fmx2aE5JUXpkX0czQ2F1bWtJZWZJb1JxM2JLM0djMi1Ea2RWUzluMHNGVGc?usp=drive_web>)
+- Verified at: 2026-10-26T19:53:57.372220+00:00
 
 ## what-look-out-july.html
 
@@ -8672,21 +11683,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1238/311/](<https://www.plantlife.org.uk/download_file/force/1238/311/>)
 - Keywords: season, seasonal, summer
-
-## what’s-bloom-june-2.html
-
-- Title: What’s in bloom in June?
-- Submitted: Anonymous (not verified); 2015-06-25T14:33:00
-- Description: Photo guide to the most commonly seen wildflowers in June (alternate version).
-- Author(s): Plantlife
-- Free: Yes
-- Available as:
-  - Online
-  - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
-- Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1238/311/](<https://www.plantlife.org.uk/download_file/force/1238/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422211322/http://www.plantlife.org.uk:80/download_file/force/1238/311](<https://web.archive.org/web/20180422211322/http://www.plantlife.org.uk:80/download_file/force/1238/311>)
+- Verified at: 2026-10-26T19:46:37.037022+00:00
 
 ## what’s-bloom-june.html
 
@@ -8698,20 +11700,29 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
 - Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311](<https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311>)
+- Verified at: 2026-10-26T19:46:40.232295+00:00
 
-## wild-berry-other-fruit-spotter’s-sheet-2.html
+## what’s-bloom-june-2.html
 
-- Title: Wild berry (& other fruit) spotter’s sheet
-- Submitted: Anonymous (not verified); 2015-06-25T14:28:00
-- Description: Photo guide to the most commonly seen berries and fruiting trees and shrubs in hedgerows.
+- Title: What’s in bloom in June?
+- Submitted: Anonymous (not verified); 2015-06-25T14:33:00
+- Description: Photo guide to the most commonly seen wildflowers in June (alternate version).
+- Author(s): Plantlife
 - Free: Yes
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1248/311/](<https://www.plantlife.org.uk/download_file/force/1248/311/>)
-- Keywords: hedge, hedges
+- Keywords: season, seasonal, summer, spring
+- Web link: [https://www.plantlife.org.uk/download_file/force/1237/311/](<https://www.plantlife.org.uk/download_file/force/1237/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311](<https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311>)
+- Verified at: 2026-10-26T19:46:40.232009+00:00
 
 ## wild-berry-other-fruit-spotter’s-sheet.html
 
@@ -8722,8 +11733,28 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1248/311/](<https://www.plantlife.org.uk/download_file/force/1248/311/>)
 - Keywords: hedge, hedges
+- Web link: [https://www.plantlife.org.uk/download_file/force/1248/311/](<https://www.plantlife.org.uk/download_file/force/1248/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422203444/http://www.plantlife.org.uk:80/download_file/force/1248/311](<https://web.archive.org/web/20180422203444/http://www.plantlife.org.uk:80/download_file/force/1248/311>)
+- Verified at: 2026-10-26T19:54:03.880540+00:00
+
+## wild-berry-other-fruit-spotter’s-sheet-2.html
+
+- Title: Wild berry (& other fruit) spotter’s sheet
+- Submitted: Anonymous (not verified); 2015-06-25T14:28:00
+- Description: Photo guide to the most commonly seen berries and fruiting trees and shrubs in hedgerows.
+- Free: Yes
+- Available as:
+  - Online
+  - PDF
+- Keywords: hedge, hedges
+- Web link: [https://www.plantlife.org.uk/download_file/force/1248/311/](<https://www.plantlife.org.uk/download_file/force/1248/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422203444/http://www.plantlife.org.uk:80/download_file/force/1248/311](<https://web.archive.org/web/20180422203444/http://www.plantlife.org.uk:80/download_file/force/1248/311>)
+- Verified at: 2026-10-26T19:54:03.876576+00:00
 
 ## wild-flower-id-british-identification-guide-wild-flowers.html
 
@@ -8733,8 +11764,12 @@
 - Author(s): Isoperla
 - Free: No
 - Available as: App
-- Web link: [https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368](<https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368>)
 - Keywords: vascular plants
+- Web link: [https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368](<https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260209223651/https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368](<https://web.archive.org/web/20260209223651/https://apps.apple.com/gb/app/wild-flower-id-british-isles/id671592368>)
+- Verified at: 2026-10-26T19:53:58.337015+00:00
 
 ## wild-flower-key-corrigenda.html
 
@@ -8746,8 +11781,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://bsbi.org/download/2875](<https://bsbi.org/download/2875>)
 - Keywords: corrections addenda Rose
+- Web link: [https://bsbi.org/download/2875](<https://bsbi.org/download/2875>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:53:59.363494+00:00
 
 ## wild-plants-woods.html
 
@@ -8759,8 +11797,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1246/311/](<https://www.plantlife.org.uk/download_file/force/1246/311/>)
 - Keywords: woods, shaded
+- Web link: [https://www.plantlife.org.uk/download_file/force/1246/311/](<https://www.plantlife.org.uk/download_file/force/1246/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180421052821/http://www.plantlife.org.uk:80/download_file/force/1246/311](<https://web.archive.org/web/20180421052821/http://www.plantlife.org.uk:80/download_file/force/1246/311>)
+- Verified at: 2026-10-26T19:54:12.206350+00:00
 
 ## wildflowers-look-august.html
 
@@ -8772,8 +11814,11 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1239/311/](<https://www.plantlife.org.uk/download_file/force/1239/311/>)
 - Keywords: season, seasonal, summer
+- Web link: [https://www.plantlife.org.uk/download_file/force/1239/311/](<https://www.plantlife.org.uk/download_file/force/1239/311/>)
+- Web link status: 404
+- Web link state: broken
+- Verified at: 2026-10-26T19:54:08.068244+00:00
 
 ## wildflowers-look-september.html
 
@@ -8785,8 +11830,12 @@
 - Available as:
   - Online
   - PDF
-- Web link: [https://www.plantlife.org.uk/download_file/force/1241/311/](<https://www.plantlife.org.uk/download_file/force/1241/311/>)
 - Keywords: season, seasonal, summer, autumn
+- Web link: [https://www.plantlife.org.uk/download_file/force/1241/311/](<https://www.plantlife.org.uk/download_file/force/1241/311/>)
+- Web link status: 404
+- Web link state: broken
+- Wayback link: [https://web.archive.org/web/20180422210745/http://www.plantlife.org.uk:80/download_file/force/1241/311](<https://web.archive.org/web/20180422210745/http://www.plantlife.org.uk:80/download_file/force/1241/311>)
+- Verified at: 2026-10-26T19:54:08.554954+00:00
 
 ## wildid-waders-britain-and-ireland.html
 
@@ -8796,9 +11845,13 @@
 - Author(s): Stephen Docker and Keith Offord
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/product-category/publications/?fwp...](<https://www.field-studies-council.org/product-category/publications/?fwp_publication_type=fold-out-guide>)
-- Additional web link: [Eclectic Ecologist](<https://www.eclectic-ecologist.com/>)
 - Keywords: Birds Charadriiformes Docker Shore Waders
+- Web link: [https://www.field-studies-council.org/product-category/publications/?fwp_publication_type=fold-out-guide](<https://www.field-studies-council.org/product-category/publications/?fwp_publication_type=fold-out-guide>)
+- Additional web link: [https://www.eclectic-ecologist.com/](<https://www.eclectic-ecologist.com/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20260627231716/https://www.field-studies-council.org/product-category/publications/?fwp_publication_type=fold-out-guide](<https://web.archive.org/web/20260627231716/https://www.field-studies-council.org/product-category/publications/?fwp_publication_type=fold-out-guide>)
+- Verified at: 2026-10-26T19:53:58.848162+00:00
 
 ## winter-trees-photographic-guide-common-trees-and-shrubs.html
 
@@ -8808,8 +11861,12 @@
 - Author(s): Price & Bersweden
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/winter-trees-aid...](<https://www.field-studies-council.org/shop/publications/winter-trees-aidgap/>)
 - Keywords: fsc
+- Web link: [https://www.field-studies-council.org/shop/publications/winter-trees-aidgap/](<https://www.field-studies-council.org/shop/publications/winter-trees-aidgap/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250712033006/https://www.field-studies-council.org/shop/publications/winter-trees-aidgap/](<https://web.archive.org/web/20250712033006/https://www.field-studies-council.org/shop/publications/winter-trees-aidgap/>)
+- Verified at: 2026-10-26T19:53:59.730900+00:00
 
 ## winter-webs.html
 
@@ -8820,6 +11877,10 @@
 - Free: Yes
 - Available as: PDF
 - Web link: [https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf](<https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20240722144025/https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf](<https://web.archive.org/web/20240722144025/https://www.fscbiodiversity.uk/sites/default/files/winter-webs.pdf>)
+- Verified at: 2026-10-26T19:54:02.760579+00:00
 
 ## woodland-name-trail-mini-beasts.html
 
@@ -8829,7 +11890,13 @@
 - Author(s): Bebbington et al
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodland-name-tr...](<https://www.field-studies-council.org/shop/publications/woodland-name-trail-minibeasts-class-set/>)
+- Web link: [https://www.field-studies-council.org/shop/publications/woodland-name-trail-minibeasts-class-set/](<https://www.field-studies-council.org/shop/publications/woodland-name-trail-minibeasts-class-set/>)
+- Web link status: 404
+- Web link state: broken
+- Alternative link: [https://www.field-studies-council.org/shop/publications/woodland-name-trail/](<https://www.field-studies-council.org/shop/publications/woodland-name-trail/>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the official product page for the Woodland Name Trail on the Field Studies Council website, which is the primary publisher of the guide.
+- Verified at: 2026-10-26T19:54:11.659799+00:00
 
 ## woodland-plants.html
 
@@ -8839,8 +11906,12 @@
 - Author(s): Gulliver, Gulliver & Roberts
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodland-plants-...](<https://www.field-studies-council.org/shop/publications/woodland-plants-guide/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/woodland-plants-guide/](<https://www.field-studies-council.org/shop/publications/woodland-plants-guide/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250808072301/https://www.field-studies-council.org/shop/publications/woodland-plants-guide/](<https://web.archive.org/web/20250808072301/https://www.field-studies-council.org/shop/publications/woodland-plants-guide/>)
+- Verified at: 2026-10-26T19:54:06.789058+00:00
 
 ## woodlice-and-waterlice-isopoda-oniscidea-asellota-britain-and-ireland.html
 
@@ -8850,8 +11921,12 @@
 - Author(s): Gregory
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodlice-waterli...](<https://www.field-studies-council.org/shop/publications/woodlice-waterlice-atlas/>)
 - Keywords: BRC Biological Records Centre FSC Field Studies Council CEH
+- Web link: [https://www.field-studies-council.org/shop/publications/woodlice-waterlice-atlas/](<https://www.field-studies-council.org/shop/publications/woodlice-waterlice-atlas/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250805075944/https://www.field-studies-council.org/shop/publications/woodlice-waterlice-atlas/](<https://web.archive.org/web/20250805075944/https://www.field-studies-council.org/shop/publications/woodlice-waterlice-atlas/>)
+- Verified at: 2026-10-26T19:54:07.271516+00:00
 
 ## woodlouse-name-trail.html
 
@@ -8861,8 +11936,12 @@
 - Author(s): Hopkin
 - Free: No
 - Available as: Publication
-- Web link: [https://www.field-studies-council.org/shop/publications/woodlouse-name-t...](<https://www.field-studies-council.org/shop/publications/woodlouse-name-trail/>)
 - Keywords: fold-out, fold out, FSC
+- Web link: [https://www.field-studies-council.org/shop/publications/woodlouse-name-trail/](<https://www.field-studies-council.org/shop/publications/woodlouse-name-trail/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20250910120903/https://www.field-studies-council.org/shop/publications/woodlouse-name-trail/](<https://web.archive.org/web/20250910120903/https://www.field-studies-council.org/shop/publications/woodlouse-name-trail/>)
+- Verified at: 2026-10-26T19:54:04.302221+00:00
 
 ## world-spider-catalog.html
 
@@ -8872,8 +11951,12 @@
 - Author(s): Natural History Museum of Bern
 - Free: Yes
 - Available as: Online
-- Web link: [https://wsc.nmbe.ch/](<https://wsc.nmbe.ch/>)
 - Keywords: spiders
+- Web link: [https://wsc.nmbe.ch/](<https://wsc.nmbe.ch/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019161603/https://wsc.nmbe.ch/](<https://web.archive.org/web/20261019161603/https://wsc.nmbe.ch/>)
+- Verified at: 2026-10-26T19:54:08.093195+00:00
 
 ## xeno-canto.html
 
@@ -8883,5 +11966,9 @@
 - Author(s): Citizen Science
 - Free: Yes
 - Available as: Online
-- Web link: [https://xeno-canto.org/](<https://xeno-canto.org/>)
 - Keywords: Bioacoustic Soundscape Sound Call Birdsong Vocalisation Acoustic Docker
+- Web link: [https://xeno-canto.org/](<https://xeno-canto.org/>)
+- Web link status: 200
+- Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261017115725/https://xeno-canto.org/](<https://web.archive.org/web/20261017115725/https://xeno-canto.org/>)
+- Verified at: 2026-10-26T19:54:11.271328+00:00
