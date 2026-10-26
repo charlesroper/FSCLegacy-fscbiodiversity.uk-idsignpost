@@ -8,7 +8,9 @@ from idsignpost.models import CatalogEntry
 from idsignpost.sampler import get_stratified_sample
 
 
-def make_entry(entry_id: str, state: str | None = None, **overrides: object) -> CatalogEntry:
+def make_entry(
+    entry_id: str, state: str | None = None, **overrides: object
+) -> CatalogEntry:
     data: dict[str, object] = {
         "id": entry_id,
         "filename": f"{entry_id}.html",
