@@ -9,6 +9,7 @@ Instructions and standards for agents working on this repository.
 - **Code formatting and linting:** Run `uv run ruff check --fix .` and `uv run ruff format .` after modifying Python files.
 - **Type checking:** Check static types using `uv run ty check`.
 - **Testing:** Run tests using `uv run pytest`. Keep tests fast and offline by default, mocking network calls with `respx`.
+- **Code and text search:** Use `rg` (ripgrep) exclusively for searching files and prose across the repository. Do not invoke raw grep.
 
 ## Prose and documentation style
 
