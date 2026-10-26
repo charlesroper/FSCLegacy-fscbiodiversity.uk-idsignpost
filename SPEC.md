@@ -223,14 +223,15 @@ flowchart TD
 - Prompt with `title`, `authors`, `description`, `available_as`, `keywords`, and the broken `web_link`, requesting up to 3 ranked candidates (`url`, `probability`, `reasoning`).
 - Use a 30 second request timeout and retry 429/5xx up to 3 times with backoff. Request JSON output, parse tolerantly, retry once on malformed JSON, then return no candidates.
 - Filter and verify candidates in rank order:
-  1. Reject blocked hosts (`fscbiodiversity.uk`, `tombio.uk`, `archive.org`, `web.archive.org`, `ebay.co.uk`, `ebay.com`, `zvab.com`) by exact host or dot-suffix, not substring.
+  1. Reject blocked hosts (`fscbiodiversity.uk`, `tombio.uk`, `archive.org`, `web.archive.org`, `ebay.co.uk`, `ebay.com`, `zvab.com`, `scribd.com`) by exact host or dot-suffix, not substring.
   2. Reject URLs identical to the broken `web_link`.
   3. Accept only `http` and `https`, reject userinfo, and reject loopback, private, link-local, and reserved addresses after DNS resolution and after redirects.
   4. Strip tracking parameters and fragments.
-  5. Reject site root candidates (empty path or `/`): a directly linked homepage returns 200, so the redirect heuristics never see it as suspicious.
+  5. Reject direct image files and site root candidates (empty path or `/`). A linked image or homepage returns 200, so the redirect heuristics never see it as suspicious.
   6. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
   7. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   8. Pick the first live candidate in rank order with `probability >= min_probability` (default `0.40`).
+- After the run, drop any alternative URL assigned to three or more entries and cache a negative verdict. Such a URL is a category page, not a specific guide.
 - Cache the verdict, including negative verdicts, in the entry-tier cache. Do not cache transient Gemini or HTTP errors.
 
 #### Step 2d: Wayback Lookup and Save Page Now (`wayback.py`)

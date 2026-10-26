@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Any, Protocol
@@ -18,6 +19,9 @@ DEFAULT_TIMEOUT = 30.0
 DEFAULT_MIN_PROBABILITY = 0.40
 MAX_ATTEMPTS = 4
 BACKOFF = (1.0, 2.0, 4.0)
+IMAGE_URL = re.compile(
+    r"\.(?:jpe?g|png|gif|webp|svg|bmp|tiff?)(?:$|[?&#])", re.IGNORECASE
+)
 
 BLOCKED_HOSTS = (
     "fscbiodiversity.uk",
@@ -27,6 +31,7 @@ BLOCKED_HOSTS = (
     "ebay.co.uk",
     "ebay.com",
     "zvab.com",
+    "scribd.com",
 )
 
 
@@ -70,6 +75,11 @@ def is_blocked_host(url: str) -> bool:
     return any(
         host == blocked or host.endswith(f".{blocked}") for blocked in BLOCKED_HOSTS
     )
+
+
+def is_unusable_alternative(url: str) -> bool:
+    """Reject blocked hosts and direct image files as replacement pages."""
+    return is_blocked_host(url) or bool(IMAGE_URL.search(url))
 
 
 def _load_json(text: str) -> Any:
@@ -283,10 +293,10 @@ class GeminiFinder:
                 continue
             if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
                 continue
+            if is_unusable_alternative(candidate.url):
+                continue
             cleaned = cache_key(candidate.url)
             if urlsplit(cleaned).path in {"", "/"}:
-                continue
-            if is_blocked_host(cleaned):
                 continue
             if urls_equal(cleaned, entry.web_link):
                 continue

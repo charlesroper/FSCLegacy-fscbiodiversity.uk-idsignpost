@@ -6,7 +6,7 @@ from datetime import UTC, datetime
 
 import pytest
 
-from idsignpost.cache import CatalogCache
+from idsignpost.cache import CatalogCache, EntryRecord
 from idsignpost.gemini_finder import Alternative, DiscoveryOutcome, RedirectVerdict
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry
@@ -380,3 +380,76 @@ def test_merge_clears_verification_when_the_link_changed() -> None:
     assert merged[0].web_link_state is None
     assert merged[0].web_link_status is None
     assert merged[0].verified_at is None
+
+
+async def test_alternative_shared_by_three_entries_is_dropped(tmp_path: object) -> None:
+    entries = [
+        entry(f"guide-{index}", web_link=f"https://example.org/{index}")
+        for index in range(3)
+    ]
+    checker = FakeChecker(
+        {item.web_link or "": CheckResult("404", "broken") for item in entries}
+    )
+    shared = Alternative("https://hub.example/list", 0.8)
+    finder = FakeFinder(
+        discoveries={item.id: DiscoveryOutcome(shared) for item in entries}
+    )
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+
+    result = await verifier.verify(entries)
+
+    assert all(item.alternative_link is None for item in result)
+    record = verifier.cache.get_entry("guide-0", entries[0].web_link or "")
+    assert record is not None
+    assert record.alternative_url is None
+    assert record.alternative_checked is True
+
+
+async def test_alternative_shared_by_two_entries_is_kept(tmp_path: object) -> None:
+    entries = [
+        entry(f"guide-{index}", web_link=f"https://example.org/{index}")
+        for index in range(2)
+    ]
+    checker = FakeChecker(
+        {item.web_link or "": CheckResult("404", "broken") for item in entries}
+    )
+    shared = Alternative("https://publisher.example/guide", 0.9)
+    finder = FakeFinder(
+        discoveries={item.id: DiscoveryOutcome(shared) for item in entries}
+    )
+
+    result = await make_verifier(tmp_path, checker, finder=finder).verify(entries)
+
+    assert [item.alternative_link for item in result] == [
+        "https://publisher.example/guide",
+        "https://publisher.example/guide",
+    ]
+
+
+async def test_cached_image_alternative_is_cleared(tmp_path: object) -> None:
+    url = "https://example.org/guide"
+    cache = CatalogCache(
+        path=tmp_path / "cache.json",  # type: ignore[operator]
+        now=lambda: NOW,
+    )
+    cache.put_entry(
+        "guide",
+        url,
+        EntryRecord(
+            alternative_url="https://example.org/scan.jpg",
+            alternative_probability=0.8,
+            alternative_checked=True,
+        ),
+    )
+    checker = FakeChecker({url: CheckResult("404", "broken")})
+    verifier = make_verifier(tmp_path, checker, cache=cache)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_link is None
+    assert updated.alternative_probability is None
+    record = cache.get_entry("guide", url)
+    assert record is not None
+    assert record.alternative_url is None
+    assert record.alternative_checked is True
+    assert checker.checked == [url]

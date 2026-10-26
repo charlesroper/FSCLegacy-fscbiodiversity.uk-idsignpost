@@ -13,6 +13,7 @@ from idsignpost.gemini_finder import (
     Alternative,
     DiscoveryOutcome,
     RedirectVerdict,
+    is_unusable_alternative,
 )
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry, LinkState, ensure_unique_ids
@@ -20,6 +21,7 @@ from idsignpost.urls import cache_key
 
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
+SHARED_ALTERNATIVE_LIMIT = 3
 VERIFICATION_FIELDS = (
     "web_link_status",
     "web_link_state",
@@ -165,12 +167,52 @@ class Verifier:
                     updated[entry.id] = entry
 
         result = [updated.get(entry.id, entry) for entry in entries]
+        result = self._drop_shared_alternatives(result)
         counts = Counter(entry.web_link_state or "unverified" for entry in result)
         self.stats.states = dict(counts)
         self.stats.alternatives = sum(
             1 for entry in result if entry.alternative_link is not None
         )
         return result
+
+    def _drop_shared_alternatives(
+        self, entries: list[CatalogEntry]
+    ) -> list[CatalogEntry]:
+        """Reject a URL handed to three or more entries as a category hub."""
+        counts = Counter(
+            entry.alternative_link for entry in entries if entry.alternative_link
+        )
+        shared = {
+            url for url, count in counts.items() if count >= SHARED_ALTERNATIVE_LIMIT
+        }
+        if not shared:
+            return entries
+
+        cleaned: list[CatalogEntry] = []
+        for entry in entries:
+            if entry.alternative_link not in shared:
+                cleaned.append(entry)
+                continue
+            entry = entry.model_copy(
+                update={
+                    "alternative_link": None,
+                    "alternative_probability": None,
+                    "alternative_reasoning": None,
+                }
+            )
+            record = (
+                self.cache.get_entry(entry.id, entry.web_link)
+                if entry.web_link
+                else None
+            )
+            if record is not None:
+                record.alternative_url = None
+                record.alternative_probability = None
+                record.alternative_reasoning = None
+                record.alternative_checked = True
+                self.cache.put_entry(entry.id, entry.web_link or "", record)
+            cleaned.append(entry)
+        return cleaned
 
     async def _verify_group(self, members: list[CatalogEntry]) -> list[CatalogEntry]:
         entry = members[0]
@@ -280,17 +322,23 @@ class Verifier:
         alternative = previous
         discovered = False
         discovery_transient = False
+        cached_rejected = False
         if state == "broken":
             if record is not None and record.alternative_checked:
-                alternative = (
-                    Alternative(
-                        record.alternative_url,
-                        record.alternative_probability or 0.0,
-                        record.alternative_reasoning,
+                cached_url = record.alternative_url
+                if cached_url and is_unusable_alternative(cached_url):
+                    alternative = None
+                    cached_rejected = True
+                else:
+                    alternative = (
+                        Alternative(
+                            cached_url,
+                            record.alternative_probability or 0.0,
+                            record.alternative_reasoning,
+                        )
+                        if cached_url
+                        else None
                     )
-                    if record.alternative_url
-                    else None
-                )
             else:
                 discovered = True
                 outcome = await self._discover(entry)
@@ -305,6 +353,8 @@ class Verifier:
 
         write_entry = discovered and not discovery_transient
         if verdict is not None and not verdict_cached:
+            write_entry = True
+        if cached_rejected:
             write_entry = True
         if (
             state != "broken"

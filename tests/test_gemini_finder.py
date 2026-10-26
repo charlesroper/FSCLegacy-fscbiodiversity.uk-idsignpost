@@ -242,6 +242,7 @@ async def test_discover_prompt_asks_for_the_exact_page() -> None:
         ("https://archive.org/details/x", True),
         ("https://tombio.uk/idsignpost/", True),
         ("https://zvab.com/books", True),
+        ("https://www.scribd.com/document/123", True),
         ("https://fscbiodiversity.uk/idsignpost/", True),
     ],
 )
@@ -298,6 +299,26 @@ async def test_find_alternative_rejects_site_homepages() -> None:
         ['{"candidates": [{"url": "https://example.org/", "probability": 0.9}]}']
     )
     checker = FakeChecker({"https://example.org/": live("https://example.org/")})
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative is None
+    assert checker.checked == []
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://example.org/guide.jpg",
+        "https://example.org/image.aspx?File=guide.jpg&Size=400",
+        "https://example.org/scan.PNG",
+    ],
+)
+async def test_find_alternative_rejects_image_urls(url: str) -> None:
+    finder, _, _ = make_finder(
+        [f'{{"candidates": [{{"url": "{url}", "probability": 0.9}}]}}']
+    )
+    checker = FakeChecker({url: live(url)})
 
     outcome = await finder.find_alternative(entry(), checker=checker)
 
