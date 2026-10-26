@@ -86,3 +86,16 @@ Three rules keep the output trustworthy:
 CSV uses Python's `csv` module with `newline=""` and joins list fields with `"; "`. Markdown renders each entry under `## <filename>` with the verification fields that the legacy Markdown export never carried: status, state, resolved URL, Wayback link, alternative link, confidence, and reasoning. Multi-line values stay indented two spaces so they remain inside the bullet.
 
 `pyarrow` is imported inside the Parquet writer rather than at module import. Extraction and CSV runs should not pay a heavy import cost for a format they do not touch.
+
+---
+
+## 6. Two-tier cache: separate facts from verdicts
+
+Verification is the expensive part of the pipeline. A single URL can serve several guides, and the old cache keyed everything by URL, so an alternative-link search for one entry could overwrite the search for another. `src/idsignpost/cache.py` splits the cache into two tiers:
+
+- **URL tier** holds facts that belong to the address itself: HTTP status, link state, resolved URL, whether the redirect looked suspicious, the destination page title and heading, and the Wayback snapshot. One record per sanitized URL.
+- **Entry tier** holds judgement calls that depend on the guide, not the address: whether a redirect still matches that guide, the alternative URL, its confidence score, and the reasoning. Keys are `"{entry_id}::{url}"`, so shared URLs keep separate verdicts.
+
+Both tiers work the same way. `get_*` returns a record only when it is younger than `ttl_days`, so a stale verdict is simply a miss and the pipeline refreshes it. `put_*` refuses transient results: a timeout or a `503` must not erase a good `200` from an earlier run. Failures that are stable, such as a confirmed `404` or a rejected redirect, are cached, because otherwise every run would pay to rediscover them.
+
+The file carries `schema_version: 2`. Any other version, malformed JSON, or a record without a usable timestamp is discarded rather than partially trusted. Saves go through the same atomic temp-and-replace writer as the catalog, sorted by key for stable diffs, and drop expired records on the way out. Writes trigger a save every 25 changes, and the pipeline saves again on normal exit or interrupt.

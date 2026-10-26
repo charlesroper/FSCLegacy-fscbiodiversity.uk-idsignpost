@@ -31,7 +31,7 @@ def _default_file_mode() -> int:
     return 0o666 & ~mask
 
 
-def _atomic_write(
+def atomic_write(
     path: str | Path,
     write: Callable[[IO[Any]], None],
     *,
@@ -58,7 +58,7 @@ def _atomic_write(
 
 
 def _write_text(path: str | Path, text: str) -> Path:
-    return _atomic_write(path, lambda handle: handle.write(text))
+    return atomic_write(path, lambda handle: handle.write(text))
 
 
 def catalog_json(entries: Iterable[CatalogEntry]) -> str:
@@ -91,7 +91,7 @@ def write_csv(entries: Iterable[CatalogEntry], path: str | Path) -> Path:
         for entry in _sorted(entries):
             writer.writerow(_csv_cell(name, getattr(entry, name)) for name in COLUMNS)
 
-    return _atomic_write(path, write)
+    return atomic_write(path, write)
 
 
 def _arrow_type(name: str) -> Any:
@@ -128,7 +128,7 @@ def write_parquet(entries: Iterable[CatalogEntry], path: str | Path) -> Path:
     import pyarrow.parquet as pq
 
     table = parquet_table(list(entries))
-    return _atomic_write(
+    return atomic_write(
         path, lambda handle: pq.write_table(table, handle), binary=True
     )
 
