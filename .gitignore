@@ -38,3 +38,7 @@ test_sample*
 .coverage
 htmlcov/
 
+.projectmem/events.jsonl
+.projectmem/watch.pid
+.projectmem/watch.log
+.projectmem/structure.json
