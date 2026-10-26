@@ -119,3 +119,15 @@ Redirects need interpretation, not just following. A cross-domain move, a deep p
 Two operational guards matter more than they look. Redirect comparisons use the same normalization as the cache, so a trailing slash or a `www.` prefix does not count as a move and does not clear verification results. And the checker counts network-level failures; after ten checks with no successful response at all, the run stops instead of rewriting the catalog with outage data. The pipeline enforces that abort before saving anything.
 
 One subtlety cost a test failure: `httpx.InvalidURL` does not inherit from `httpx.HTTPError`. The check catches both, otherwise a malformed legacy URL would abort a run instead of being recorded as `invalid_url`.
+
+---
+
+## 8. Sampling a cross-section, not a prefix
+
+Testing against the live web is slow and rate limited, so `verify --sample N` needs a slice that represents the catalogue rather than the first N files alphabetically. `src/idsignpost/sampler.py` draws that slice.
+
+Eligibility is simple: an entry must have a `web_link`, because nothing else can be verified. The rest are bucketed by link state, `ok`, `broken`, and `blocked`. Freshly extracted entries have no state yet, so they fall into a fourth `unverified` bucket; without that, the first run on a new catalogue would sample from nothing.
+
+Quotas start as an even split across the non-empty buckets, then any bucket too small to fill its share returns the surplus to the others. Within a bucket, entries are ordered by format list, keywords, and id before drawing, which keeps the result reproducible and spreads media types a little when the bucket is large. The seed makes the whole draw deterministic, and the final list is sorted by id so the run summary is readable.
+
+One repository bug surfaced here: `.gitignore` contained `test_sample*`, meant for scratch catalog files, and that pattern also matched `tests/test_sampler.py`. The rule is now anchored to the repository root.

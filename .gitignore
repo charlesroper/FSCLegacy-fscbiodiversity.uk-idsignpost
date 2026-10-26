@@ -27,7 +27,7 @@ env/
 idsignpost.md.bak
 *.bak
 .url_cache.json
-test_sample*
+/test_sample*
 
 
 # uv
