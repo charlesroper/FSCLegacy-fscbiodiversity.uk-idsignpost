@@ -9,6 +9,13 @@ Instructions and standards for agents working on this repository.
 - **Code formatting and linting:** Run `uv run ruff check --fix .` and `uv run ruff format .` after modifying Python files.
 - **Type checking:** Check static types using `uv run ty check`.
 - **Testing:** Run tests using `uv run pytest`. Keep tests fast and offline by default, mocking network calls with `respx`.
+- **Virtual environment on filesystems without symlinks:** If `uv sync` fails with `Permission denied` while creating `.venv/bin/python` or `.venv/lib64`, the workspace does not support symlinks. Put the environment outside the repo and use copy mode:
+  ```bash
+  export TMPDIR=/tmp/opencode
+  export UV_PROJECT_ENVIRONMENT=/tmp/opencode/idsignpost-venv
+  uv sync --link-mode copy
+  ```
+  If a cached wheel extracts incompletely, reinstall with `uv sync --reinstall --no-cache --link-mode copy`. Keep `TMPDIR` set for `uv run` commands. Do not commit the external environment path.
 - **Code and text search:** Use `rg` (ripgrep) exclusively for searching files and prose across the repository. Do not invoke raw grep.
 
 ## Prose and documentation style
