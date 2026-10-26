@@ -243,8 +243,9 @@ class GeminiFinder:
         if not entry.web_link:
             return None
         prompt = (
-            "Find the current official home of this identification guide. "
-            "Return at most three candidate URLs, most likely first.\n"
+            "Find the exact page that hosts or offers this identification guide. "
+            "Return at most three candidate URLs, most likely first. "
+            "Do not return a site homepage, search page, or general category page.\n"
             f"Title: {entry.title}\n"
             f"Authors: {entry.authors or 'unknown'}\n"
             f"Description: {entry.description or 'unknown'}\n"
@@ -283,6 +284,8 @@ class GeminiFinder:
             if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
                 continue
             cleaned = cache_key(candidate.url)
+            if urlsplit(cleaned).path in {"", "/"}:
+                continue
             if is_blocked_host(cleaned):
                 continue
             if urls_equal(cleaned, entry.web_link):

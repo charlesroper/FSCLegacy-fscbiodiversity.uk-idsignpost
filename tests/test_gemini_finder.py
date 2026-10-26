@@ -222,6 +222,16 @@ async def test_discover_returns_none_after_repeated_malformed_json() -> None:
     assert await finder.discover(entry()) is None
 
 
+async def test_discover_prompt_asks_for_the_exact_page() -> None:
+    finder, client, _ = make_finder(['{"candidates": []}'])
+
+    await finder.discover(entry())
+
+    contents = client.models.calls[0]["contents"]
+    assert "exact page" in contents
+    assert "homepage" in contents
+
+
 @pytest.mark.parametrize(
     ("url", "blocked"),
     [
@@ -280,6 +290,18 @@ async def test_find_alternative_rejects_private_addresses_without_checking() -> 
     checker = FakeChecker({"http://127.0.0.1/guide": live("http://127.0.0.1/guide")})
 
     assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
+    assert checker.checked == []
+
+
+async def test_find_alternative_rejects_site_homepages() -> None:
+    finder, _, _ = make_finder(
+        ['{"candidates": [{"url": "https://example.org/", "probability": 0.9}]}']
+    )
+    checker = FakeChecker({"https://example.org/": live("https://example.org/")})
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative is None
     assert checker.checked == []
 
 
