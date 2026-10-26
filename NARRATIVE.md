@@ -99,3 +99,23 @@ Verification is the expensive part of the pipeline. A single URL can serve sever
 Both tiers work the same way. `get_*` returns a record only when it is younger than `ttl_days`, so a stale verdict is simply a miss and the pipeline refreshes it. `put_*` refuses transient results: a timeout or a `503` must not erase a good `200` from an earlier run. Failures that are stable, such as a confirmed `404` or a rejected redirect, are cached, because otherwise every run would pay to rediscover them.
 
 The file carries `schema_version: 2`. Any other version, malformed JSON, or a record without a usable timestamp is discarded rather than partially trusted. Saves go through the same atomic temp-and-replace writer as the catalog, sorted by key for stable diffs, and drop expired records on the way out. Writes trigger a save every 25 changes, and the pipeline saves again on normal exit or interrupt.
+
+---
+
+## 7. HTTP checks: liveness without downloading the library
+
+`src/idsignpost/http_checker.py` decides whether a link still works. It sends a streaming `GET` with ordinary browser headers, follows at most ten redirects, and reads at most 16 KB of the response, and only when the content type is HTML. A PDF guide or a large image never enters memory, but the check still sees the page title and first heading that the redirect analysis needs.
+
+Status codes fall into three groups, and the group decides whether the result may be cached:
+
+- `2xx` and `3xx` are `ok`, `404` and `410` are `broken`, and `400`, `401`, `403`, `405`, and `451` are `blocked`. These verdicts are stable enough to keep.
+- `429`, `500`, `502`, `503`, and `504` are `blocked` but transient, as are timeouts and generic protocol failures. Caching them would turn a bad afternoon at one server into permanent link rot.
+- A connection failure is `broken` for this run but not cacheable, because the fault is usually ours or the network's, not the site's.
+
+A `400` or `403` gets one plain retry. Bot filters often answer a streaming request with `403` and then serve the same page to an ordinary `GET`, so the first refusal is not a verdict.
+
+Redirects need interpretation, not just following. A cross-domain move, a deep path collapsing to the site root, a soft-404 phrase in the path or title, a landing on a generic shop or search hub when the entry names a specific guide, or a login and consent page all raise `is_suspicious_redirect`. The pipeline passes those cases to Gemini instead of trusting the `200`.
+
+Two operational guards matter more than they look. Redirect comparisons use the same normalization as the cache, so a trailing slash or a `www.` prefix does not count as a move and does not clear verification results. And the checker counts network-level failures; after ten checks with no successful response at all, the run stops instead of rewriting the catalog with outage data. The pipeline enforces that abort before saving anything.
+
+One subtlety cost a test failure: `httpx.InvalidURL` does not inherit from `httpx.HTTPError`. The check catches both, otherwise a malformed legacy URL would abort a run instead of being recorded as `invalid_url`.
