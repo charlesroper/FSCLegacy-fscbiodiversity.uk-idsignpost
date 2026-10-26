@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import html
-import json
 import re
 import unicodedata
 from collections.abc import Iterable, Sequence
@@ -274,14 +273,3 @@ def extract_catalog(
     ]
     ensure_unique_ids(entries)
     return entries
-
-
-def catalog_json(entries: Iterable[CatalogEntry]) -> str:
-    """Serialize entries as deterministic, human-readable JSON."""
-    payload = [entry.model_dump() for entry in entries]
-    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
-
-
-def write_catalog(entries: Iterable[CatalogEntry], path: str | Path) -> None:
-    """Write entries to a catalog JSON file."""
-    Path(path).write_text(catalog_json(entries), encoding="utf-8")

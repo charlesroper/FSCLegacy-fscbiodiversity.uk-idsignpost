@@ -6,13 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from idsignpost.extract import (
-    catalog_json,
-    extract_catalog,
-    merge_verification,
-    parse_entry,
-    slugify,
-)
+from idsignpost.export import catalog_json
+from idsignpost.extract import extract_catalog, merge_verification, parse_entry, slugify
 from idsignpost.models import CatalogEntry, load_catalog
 
 FIXTURES = Path(__file__).parent / "fixtures"

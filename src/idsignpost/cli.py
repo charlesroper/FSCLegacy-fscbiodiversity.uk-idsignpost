@@ -7,12 +7,14 @@ import sys
 from pathlib import Path
 
 from idsignpost import __version__
-from idsignpost.extract import (
+from idsignpost.export import (
     catalog_json,
-    extract_catalog,
-    merge_verification,
-    write_catalog,
+    write_csv,
+    write_json,
+    write_markdown,
+    write_parquet,
 )
+from idsignpost.extract import extract_catalog, merge_verification
 from idsignpost.models import load_catalog
 
 COMMANDS = {
@@ -41,9 +43,22 @@ def _cmd_extract(args: argparse.Namespace) -> int:
     output = Path(args.output or "idsignpost.json")
     if output.exists():
         entries = merge_verification(entries, load_catalog(output))
-    write_catalog(entries, output)
+    write_json(entries, output)
     print(
         f"idsignpost extract: wrote {len(entries)} entries to {output}", file=sys.stderr
+    )
+    return 0
+
+
+def _cmd_export(args: argparse.Namespace) -> int:
+    entries = load_catalog(args.input)
+    write_csv(entries, args.csv)
+    write_parquet(entries, args.parquet)
+    write_markdown(entries, args.md)
+    print(
+        f"idsignpost export: wrote {len(entries)} entries to "
+        f"{args.csv}, {args.parquet}, {args.md}",
+        file=sys.stderr,
     )
     return 0
 
@@ -76,7 +91,16 @@ def build_parser() -> argparse.ArgumentParser:
     )
     extract_parser.set_defaults(handler=_cmd_extract)
 
-    for name in ("verify", "export", "run"):
+    export_parser = subparsers.add_parser(
+        "export", help=COMMANDS["export"], description=COMMANDS["export"]
+    )
+    export_parser.add_argument("--input", default="idsignpost.json")
+    export_parser.add_argument("--csv", default="idsignpost.csv")
+    export_parser.add_argument("--parquet", default="idsignpost.parquet")
+    export_parser.add_argument("--md", default="idsignpost.md")
+    export_parser.set_defaults(handler=_cmd_export)
+
+    for name in ("verify", "run"):
         subparser = subparsers.add_parser(
             name, help=COMMANDS[name], description=COMMANDS[name]
         )

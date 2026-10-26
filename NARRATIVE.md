@@ -70,3 +70,19 @@ The full corpus and the legacy `idsignpost.json` provide a useful audit. All 736
 Sanitization also had to stay stable. The legacy page for the BTO video guides carries `%2C` inside a query string, and re-encoding every query value rewrote it as a comma, which would have invalidated the stored verification for those entries. `sanitize_url` now keeps the original query bytes when no tracking parameter is present and only rebuilds the query when something must be removed.
 
 `uv run idsignpost extract --limit 5` prints a sample to stdout, which keeps the canonical file safe during exploration. A full run writes 736 entries to `idsignpost.json`.
+
+---
+
+## 5. Exporters: one catalog, four shapes
+
+`src/idsignpost/export.py` renders the canonical JSON into CSV, Parquet, and Markdown. Every writer runs from the same validated `list[CatalogEntry]`, so no format can drift from the others.
+
+Three rules keep the output trustworthy:
+
+- **Atomic replacement.** Each writer builds a temporary file in the destination directory and replaces the target with `Path.replace`. A crash mid-write cannot leave a half-written catalog, and a reader never sees a partial file. The temporary file is resized to the caller's umask before the move, because `mkstemp` creates files as owner-only and exports should be readable like any other project file.
+- **Stable ordering.** Entries are sorted by `id` in all four formats. The same input always produces the same bytes, which makes diffs meaningful and regeneration cheap to review.
+- **Schema truth.** JSON keeps the canonical values, including `blocked` for bot-detection responses. The human-facing CSV, Parquet, and Markdown outputs label that state `unverified`, because a blocked link is unknown rather than dead. Parquet writes native types, `bool` for `is_free`, `list<string>` for the two link lists, and `double` for the alternative score, so downstream analytics do not need to parse strings.
+
+CSV uses Python's `csv` module with `newline=""` and joins list fields with `"; "`. Markdown renders each entry under `## <filename>` with the verification fields that the legacy Markdown export never carried: status, state, resolved URL, Wayback link, alternative link, confidence, and reasoning. Multi-line values stay indented two spaces so they remain inside the bullet.
+
+`pyarrow` is imported inside the Parquet writer rather than at module import. Extraction and CSV runs should not pay a heavy import cost for a format they do not touch.

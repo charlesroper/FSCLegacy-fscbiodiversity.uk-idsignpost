@@ -10,7 +10,7 @@ import pytest
 from idsignpost.cli import main
 
 FIXTURES = Path(__file__).parent / "fixtures"
-STUB_COMMANDS = ("verify", "export", "run")
+STUB_COMMANDS = ("verify", "run")
 
 
 def test_help_lists_commands(capsys: pytest.CaptureFixture[str]) -> None:
@@ -54,3 +54,33 @@ def test_extract_limit_zero_is_usage_error(
 ) -> None:
     assert main(["extract", "--html-dir", str(FIXTURES), "--limit", "0"]) == 2
     assert "--limit must be at least 1" in capsys.readouterr().err
+
+
+def test_export_renders_three_formats_from_catalog(tmp_path: Path) -> None:
+    catalog = tmp_path / "idsignpost.json"
+    assert main(["extract", "--html-dir", str(FIXTURES), "--output", str(catalog)]) == 0
+
+    csv_path = tmp_path / "idsignpost.csv"
+    parquet_path = tmp_path / "idsignpost.parquet"
+    md_path = tmp_path / "idsignpost.md"
+    assert (
+        main(
+            [
+                "export",
+                "--input",
+                str(catalog),
+                "--csv",
+                str(csv_path),
+                "--parquet",
+                str(parquet_path),
+                "--md",
+                str(md_path),
+            ]
+        )
+        == 0
+    )
+
+    header = csv_path.read_text(encoding="utf-8").splitlines()[0]
+    assert header.startswith("id,filename,title,")
+    assert md_path.read_text(encoding="utf-8").startswith("## flickr-split.html\n")
+    assert parquet_path.stat().st_size > 0
