@@ -131,3 +131,15 @@ Eligibility is simple: an entry must have a `web_link`, because nothing else can
 Quotas start as an even split across the non-empty buckets, then any bucket too small to fill its share returns the surplus to the others. Within a bucket, entries are ordered by format list, keywords, and id before drawing, which keeps the result reproducible and spreads media types a little when the bucket is large. The seed makes the whole draw deterministic, and the final list is sorted by id so the run summary is readable.
 
 One repository bug surfaced here: `.gitignore` contained `test_sample*`, meant for scratch catalog files, and that pattern also matched `tests/test_sampler.py`. The rule is now anchored to the repository root.
+
+---
+
+## 9. Wayback lookups: preserving what still works
+
+`src/idsignpost/wayback.py` answers two questions: does a snapshot already exist, and can we create one when it does not.
+
+The Availability API is small and occasionally flaky. Lookups run under a semaphore of two workers, with three attempts and two- and four-second backoff on transport errors or non-2xx responses. A successful response with no snapshot is not a failure: it means the page was never archived, so the client returns immediately instead of retrying. Only a `closest.status` of `200` counts as usable; redirect and error snapshots are ignored because they represent a dead capture. Snapshot URLs are upgraded from `http` to `https` so the catalogue does not carry mixed schemes.
+
+New captures are opt-in. When `--save-archive` is active, a live URL without a snapshot triggers Save Page Now with a 60 second timeout and a hard cap of two concurrent captures, independent of the lookup concurrency. If the archive answers `429`, the capture is skipped for this run rather than retried into a longer block. The resulting snapshot comes from the final redirect URL or the `Content-Location` header, whichever carries the `/web/` path.
+
+Blocked links still get a read-only lookup. They cannot be checked for liveness, so a snapshot may be the only durable copy the catalogue can offer.
