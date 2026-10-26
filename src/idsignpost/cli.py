@@ -39,6 +39,22 @@ COMMANDS = {
 }
 
 
+def _merge_previous(
+    entries: list[CatalogEntry], output: Path, command: str
+) -> list[CatalogEntry]:
+    if not output.exists():
+        return entries
+    try:
+        return merge_verification(entries, load_catalog(output))
+    except ValueError:
+        print(
+            f"idsignpost {command}: {output} is not a canonical catalog; "
+            "verification fields will be reset",
+            file=sys.stderr,
+        )
+        return entries
+
+
 def _cmd_extract(args: argparse.Namespace) -> int:
     if args.limit is not None and args.limit < 1:
         print("idsignpost extract: --limit must be at least 1", file=sys.stderr)
@@ -50,15 +66,7 @@ def _cmd_extract(args: argparse.Namespace) -> int:
         return 0
 
     output = Path(args.output or "idsignpost.json")
-    if output.exists():
-        try:
-            entries = merge_verification(entries, load_catalog(output))
-        except ValueError:
-            print(
-                f"idsignpost extract: {output} is not a canonical catalog; "
-                "verification fields will be reset",
-                file=sys.stderr,
-            )
+    entries = _merge_previous(entries, output, "extract")
     write_json(entries, output)
     print(
         f"idsignpost extract: wrote {len(entries)} entries to {output}", file=sys.stderr
@@ -224,9 +232,7 @@ def _cmd_run(args: argparse.Namespace) -> int:
 
     try:
         entries = extract_catalog(Path(args.html_dir))
-        output = Path(args.output)
-        if output.exists():
-            entries = merge_verification(entries, load_catalog(output))
+        entries = _merge_previous(entries, Path(args.output), "run")
     except (OSError, ValueError) as exc:
         print(f"idsignpost run: cannot build the catalog: {exc}", file=sys.stderr)
         return 1

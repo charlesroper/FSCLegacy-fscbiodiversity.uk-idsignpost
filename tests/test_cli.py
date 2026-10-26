@@ -319,3 +319,37 @@ def test_extract_replaces_a_legacy_catalog(
     assert "not a canonical catalog" in capsys.readouterr().err
     entries = read_catalog(output)
     assert [entry.id for entry in entries] == ["flickr-split", "full-entry"]
+
+
+def test_run_replaces_a_legacy_catalog(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    fake_verification(monkeypatch)
+    output = tmp_path / "idsignpost.json"
+    output.write_text(json.dumps([{"Title": "legacy"}]), encoding="utf-8")
+
+    assert (
+        main(
+            [
+                "run",
+                "--html-dir",
+                str(FIXTURES),
+                "--output",
+                str(output),
+                "--csv",
+                str(tmp_path / "out.csv"),
+                "--parquet",
+                str(tmp_path / "out.parquet"),
+                "--md",
+                str(tmp_path / "out.md"),
+            ]
+        )
+        == 0
+    )
+
+    assert "not a canonical catalog" in capsys.readouterr().err
+    assert [entry.id for entry in read_catalog(output)] == [
+        "flickr-split",
+        "full-entry",
+    ]
