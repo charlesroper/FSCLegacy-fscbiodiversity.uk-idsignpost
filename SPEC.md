@@ -70,6 +70,7 @@ idsignpost/
 └── tests/
     ├── conftest.py
     ├── fixtures/                # Small HTML fixtures for extraction and URL edge cases
+    ├── test_models.py           # Schema validation, status values, and duplicate id rejection
     ├── test_urls.py
     ├── test_extract.py
     ├── test_http_checker.py
