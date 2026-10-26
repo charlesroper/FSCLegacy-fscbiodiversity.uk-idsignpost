@@ -158,6 +158,8 @@ Transient failures follow the usual pattern: four total attempts with one, two, 
 
 One signature changed during implementation. `find_alternative` accepts a narrow `Checker` protocol instead of the concrete `HTTPChecker`, which lets the tests supply a fake that records calls without mocking HTTP. The blocklist is worth calling out too: matching is exact host or dot suffix, so `notebay.co.uk` passes while `www.ebay.co.uk` does not.
 
+A live 40-entry sample exposed a gap in candidate filtering. One replacement was the publisher's homepage, not the guide. It passed every check because a directly linked homepage answers 200, never redirects, and so never trips the suspicious-redirect heuristics. The prompt now asks for the exact page and rejects homepages, search pages, and category pages, and the finder drops root-path candidates before the live check. The same entry then produced no alternative, which is the honest result.
+
 ---
 
 ## 11. One state machine over three network services

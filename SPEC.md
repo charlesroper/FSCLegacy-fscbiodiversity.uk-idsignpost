@@ -227,9 +227,10 @@ flowchart TD
   2. Reject URLs identical to the broken `web_link`.
   3. Accept only `http` and `https`, reject userinfo, and reject loopback, private, link-local, and reserved addresses after DNS resolution and after redirects.
   4. Strip tracking parameters and fragments.
-  5. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
-  6. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
-  7. Pick the first live candidate in rank order with `probability >= min_probability` (default `0.40`).
+  5. Reject site root candidates (empty path or `/`): a directly linked homepage returns 200, so the redirect heuristics never see it as suspicious.
+  6. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
+  7. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
+  8. Pick the first live candidate in rank order with `probability >= min_probability` (default `0.40`).
 - Cache the verdict, including negative verdicts, in the entry-tier cache. Do not cache transient Gemini or HTTP errors.
 
 #### Step 2d: Wayback Lookup and Save Page Now (`wayback.py`)
