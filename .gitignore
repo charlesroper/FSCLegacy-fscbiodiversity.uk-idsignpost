@@ -42,3 +42,5 @@ htmlcov/
 .projectmem/watch.pid
 .projectmem/watch.log
 .projectmem/structure.json
+
+.env
