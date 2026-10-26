@@ -14,7 +14,7 @@ Instructions and standards for agents working on this repository.
 
 - **No em-dashes:** Do not use em-dashes anywhere in prose (Markdown documents, docstrings, commit messages, code comments). Rewrite sentences with commas, colons, parentheses, periods, or conjunctions.
 - **Clear technical writing:** Follow William Zinsser principles (see `.agents/skills/on-writing-well`). Lead with the core message, use short familiar words, choose active verbs, and cut filler adjectives.
-- **Running narrative:** Maintain `NARRATIVE.md` as an ongoing blog-style record of architecture choices, milestones, and design rationale. Update this document after completing major features or refactoring work.
+- **Running narrative:** Maintain `NARRATIVE.md` as an ongoing blog-style record of architecture choices, milestones, and design rationale. Update this document after completing major features or refactoring work. Include the "why" as well as the "what".
 - **Technical specification:** Consult `SPEC.md` for the verification pipeline architecture, data schemas, caching rules, and test requirements before modifying pipeline code.
 - **AI model:** Use `gemini-3.1-flash-lite` as the default model for discovery and verification tasks.
 

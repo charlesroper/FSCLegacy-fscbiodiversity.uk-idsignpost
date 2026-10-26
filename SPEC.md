@@ -29,7 +29,7 @@ To eliminate this brittleness, we discard the `scripts/` directory and `ddgs` de
 flowchart LR
     HTML["idsignpost/*.html\n(Raw legacy HTML)"] --> EXTRACT["1. idsignpost extract\n(Direct HTML -> Pydantic parser)"]
     EXTRACT --> JSON[("idsignpost.json\n(Canonical typed catalog)")]
-    JSON --> VERIFY["2. idsignpost verify\n(HTTP + Gemini Flash Lite + Wayback)"]
+    JSON --> VERIFY["2. idsignpost verify\n(HTTP + Gemini 3.1 Flash Lite + Wayback)"]
     VERIFY --> JSON
     JSON --> EXPORT["3. idsignpost export\n(Renderers)"]
     EXPORT --> CSV["idsignpost.csv"]
@@ -60,7 +60,7 @@ idsignpost/
 │       ├── urls.py              # RFC 3986 sanitization, tracking-param stripping, host normalization
 │       ├── extract.py           # Direct HTML -> CatalogEntry parser (replaces extract_idsignpost & md_to_json)
 │       ├── http_checker.py      # Async HTTP liveness, redirect analysis, and HTML <title>/<h1> extraction
-│       ├── gemini_finder.py     # Gemini 2.0 Flash Lite client with Google Search grounding
+│       ├── gemini_finder.py     # Gemini 3.1 Flash Lite client with Google Search grounding
 │       ├── wayback.py           # Wayback Availability API lookup and Save Page Now capture
 │       ├── cache.py             # Two-tier atomic JSON cache (URL-level and entry-level)
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
@@ -216,7 +216,7 @@ flowchart TD
 All output formats are rendered directly from the validated `list[CatalogEntry]` in `idsignpost.json`:
 
 1. **`idsignpost.json`:** Pretty-printed (2-space indent) array of `CatalogEntry` objects.
-2. **`idsignpost.csv`:** UTF-8 CSV using the canonical ` snake_case` column order, joining list fields (`available_as`, `additional_web_links`) with `"; "`.
+2. **`idsignpost.csv`:** UTF-8 CSV using the canonical `snake_case` column order, joining list fields (`available_as`, `additional_web_links`) with `"; "`.
 3. **`idsignpost.parquet`:** Apache Parquet table written via `pyarrow` with native column types:
    - `is_free`: `pa.bool_()`
    - `available_as`, `additional_web_links`: `pa.list_(pa.string())`
@@ -312,7 +312,7 @@ uv run idsignpost run [VERIFY_OPTIONS]
 
 ## 8. Testing Specification (`tests/`)
 
-All unit and integration tests reside in `tests/` and run offline in milliseconds via `uv run pytest`:
+All unit and integration tests reside in `tests/` and run offline in milliseconds via `uv run pytest` (with `addopts = "-m 'not live'"` configured in `pyproject.toml`):
 
 1. **`tests/test_urls.py`:** Tests RFC 3986 sanitization, relative URL resolution, tracking parameter removal, and split Flickr URL repair.
 2. **`tests/test_extract.py`:** Tests direct HTML-to-`CatalogEntry` extraction against sample legacy HTML fixtures, verifying boolean conversion (`is_free`), list normalization (`available_as`), and ISO date parsing.
