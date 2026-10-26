@@ -143,3 +143,17 @@ The Availability API is small and occasionally flaky. Lookups run under a semaph
 New captures are opt-in. When `--save-archive` is active, a live URL without a snapshot triggers Save Page Now with a 60 second timeout and a hard cap of two concurrent captures, independent of the lookup concurrency. If the archive answers `429`, the capture is skipped for this run rather than retried into a longer block. The resulting snapshot comes from the final redirect URL or the `Content-Location` header, whichever carries the `/web/` path.
 
 Blocked links still get a read-only lookup. They cannot be checked for liveness, so a snapshot may be the only durable copy the catalogue can offer.
+
+---
+
+## 10. Gemini: judging redirects and hunting replacements
+
+`src/idsignpost/gemini_finder.py` covers the two places where a model earns its cost. The first is a suspicious redirect: the HTTP checker can see that a hop crossed a host or collapsed to the site root, but it cannot tell whether the destination still sells the same guide. The finder sends the entry metadata, both URLs, and the final page title and heading, and asks for a single boolean plus one sentence of reasoning.
+
+The second is discovery. A broken link prompts for at most three ranked candidates with probabilities, using Google Search grounding so answers come from indexed pages rather than model memory. Candidates are then treated as untrusted input. Each one is rejected if its host is on the blocklist, if it repeats the broken URL, or if DNS resolution lands on a private or reserved address. Tracking parameters and fragments are stripped before the liveness check, and the stored alternative is the final resolved URL, not the URL Gemini suggested.
+
+Model responses are parsed tolerantly because a wrong brace should not lose a usable answer. The parser accepts fenced JSON, then falls back to slicing the outermost object or array out of surrounding prose. Individual candidates with a missing URL or an out of range probability are dropped rather than failing the batch. A malformed discovery response is retried once; a malformed verdict simply counts as no verdict.
+
+Transient failures follow the usual pattern: four total attempts with one, two, and four second backoff on 429, 5xx, and timeouts, then give up and let the pipeline keep the previous state. Nothing here caches. Negative verdicts are stored by the pipeline in the entry tier so a broken link is not re-queried on every run.
+
+One signature changed during implementation. `find_alternative` accepts a narrow `Checker` protocol instead of the concrete `HTTPChecker`, which lets the tests supply a fake that records calls without mocking HTTP. The blocklist is worth calling out too: matching is exact host or dot suffix, so `notebay.co.uk` passes while `www.ebay.co.uk` does not.
