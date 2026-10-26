@@ -157,3 +157,21 @@ Model responses are parsed tolerantly because a wrong brace should not lose a us
 Transient failures follow the usual pattern: four total attempts with one, two, and four second backoff on 429, 5xx, and timeouts, then give up and let the pipeline keep the previous state. Nothing here caches. Negative verdicts are stored by the pipeline in the entry tier so a broken link is not re-queried on every run.
 
 One signature changed during implementation. `find_alternative` accepts a narrow `Checker` protocol instead of the concrete `HTTPChecker`, which lets the tests supply a fake that records calls without mocking HTTP. The blocklist is worth calling out too: matching is exact host or dot suffix, so `notebay.co.uk` passes while `www.ebay.co.uk` does not.
+
+---
+
+## 11. One state machine over three network services
+
+`src/idsignpost/pipeline.py` joins the checker, Gemini, and Wayback into a single pass over the catalog. The shape follows the spec flowchart, but two details keep the run honest.
+
+First, work is grouped by URL rather than by entry. Two catalog entries can point at the same page, and checking it twice wastes a request and risks divergent verdicts. Each group checks the URL once, then every entry in the group runs its own Gemini verdict and discovery. The URL tier of the cache is written before the group finishes, and the entry tier is keyed by catalog id plus URL, so shared links stay isolated where the answers differ.
+
+Second, transient failures are separated from durable ones. A timeout, connect error, 429, or 5xx is never written to either cache tier. If the entry already has a state, all four verification fields survive untouched; if it has none, the blocked or broken state from the checker is recorded so the export still shows it. A Gemini timeout during a suspicious redirect leaves the entry exactly as it was, because a guess is worse than a stale answer. A discovery timeout leaves the broken state in place but does not record a negative result.
+
+Negative results need a marker the cache schema did not have. An entry record carrying only a redirect verdict looks the same as one where discovery ran and found nothing: both have no alternative URL. Without a distinction the pipeline would either re-query Gemini forever or skip discovery after a confirmed redirect later rots. Entry records now carry `alternative_checked`, and the spec example documents it.
+
+Wayback lookups run per URL after the entry verdicts settle, because the save decision depends on the final state. Only a live, non-transient entry triggers Save Page Now, and captures are counted from the lookup then save sequence rather than from a combined call.
+
+`verify` writes the full catalog, not just the sample. `merge_verified` applies updated entries by id and refuses duplicates or unknown ids. If an entry's `web_link` changed while verification was running, its stale verification fields are cleared instead of copied onto the new link.
+
+The CLI wires the same path for `verify` and `run`, validates the mutually exclusive selectors before any work, and fails fast when `GEMINI_API_KEY` is missing. `run` extracts the whole catalog, verifies only the selected slice, and exports only after verification returns without aborting.

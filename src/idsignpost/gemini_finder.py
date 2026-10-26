@@ -50,6 +50,14 @@ class Alternative:
     reasoning: str | None = None
 
 
+@dataclass(frozen=True, slots=True)
+class DiscoveryOutcome:
+    """Result of an alternative search, flagging transient failures."""
+
+    alternative: Alternative | None = None
+    transient: bool = False
+
+
 class Checker(Protocol):
     async def check(
         self, url: str, *, entry_title: str | None = None
@@ -260,14 +268,15 @@ class GeminiFinder:
 
     async def find_alternative(
         self, entry: CatalogEntry, *, checker: Checker
-    ) -> Alternative | None:
+    ) -> DiscoveryOutcome:
         """Return the first verified live candidate at or above the threshold."""
         if not entry.web_link:
-            return None
+            return DiscoveryOutcome()
         candidates = await self.discover(entry)
-        if not candidates:
-            return None
+        if candidates is None:
+            return DiscoveryOutcome(transient=True)
 
+        transient = False
         for candidate in candidates:
             if candidate.probability < self.min_probability:
                 continue
@@ -281,14 +290,19 @@ class GeminiFinder:
             if not is_public_http_url(cleaned, **self._resolver_kwargs()):
                 continue
             result = await checker.check(cleaned, entry_title=entry.title)
+            if not result.cacheable:
+                transient = True
+                continue
             if result.state != "ok" or result.is_suspicious_redirect:
                 continue
-            return Alternative(
-                url=result.resolved_url or cleaned,
-                probability=candidate.probability,
-                reasoning=candidate.reasoning,
+            return DiscoveryOutcome(
+                alternative=Alternative(
+                    url=result.resolved_url or cleaned,
+                    probability=candidate.probability,
+                    reasoning=candidate.reasoning,
+                )
             )
-        return None
+        return DiscoveryOutcome(transient=transient)
 
     def _resolver_kwargs(self) -> dict[str, Any]:
         return {"resolver": self._resolver} if self._resolver is not None else {}

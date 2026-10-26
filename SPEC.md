@@ -285,6 +285,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
       "alternative_url": "https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html",
       "alternative_probability": 0.92,
       "alternative_reasoning": "Official Natural History Museum identification guide page for Bats in flight.",
+      "alternative_checked": true,
       "checked_at": "2026-10-26T00:00:00+00:00"
     }
   }
@@ -297,7 +298,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
 - **TTL expiration:** Cached records older than `cache_ttl_days` (default `30` days) are automatically refreshed.
 - **Schema mismatch:** A cache file whose `schema_version` is not `2` is discarded.
 - **Timestamps:** On a cache hit, preserve the existing `verified_at`; update it only when a new check runs.
-- **Negative verdicts:** Entry-tier records store failed alternative searches and redirect mismatch verdicts, so a broken entry does not re-query Gemini on every run. Transient Gemini errors are not cached.
+- **Negative verdicts:** Entry-tier records store failed alternative searches and redirect mismatch verdicts, so a broken entry does not re-query Gemini on every run. Transient Gemini errors are not cached. The `alternative_checked` flag distinguishes a completed search that found nothing from a record that only holds a redirect verdict.
 - **Save cadence:** Save the cache every 25 checks and on normal exit or `KeyboardInterrupt`.
 
 ---

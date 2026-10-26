@@ -10,6 +10,7 @@ import pytest
 from idsignpost.gemini_finder import (
     Alternative,
     Candidate,
+    DiscoveryOutcome,
     GeminiFinder,
     RedirectVerdict,
     is_blocked_host,
@@ -251,9 +252,9 @@ async def test_find_alternative_falls_back_when_first_candidate_is_dead() -> Non
         {"https://live.example/guide": live("https://live.example/guide")}
     )
 
-    alternative = await finder.find_alternative(entry(), checker=checker)
+    outcome = await finder.find_alternative(entry(), checker=checker)
 
-    assert alternative == Alternative("https://live.example/guide", 0.8)
+    assert outcome == DiscoveryOutcome(Alternative("https://live.example/guide", 0.8))
     assert checker.checked == [
         "https://dead.example/guide",
         "https://live.example/guide",
@@ -268,7 +269,7 @@ async def test_find_alternative_skips_candidates_below_threshold() -> None:
         {"https://weak.example/guide": live("https://weak.example/guide")}
     )
 
-    assert await finder.find_alternative(entry(), checker=checker) is None
+    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
     assert checker.checked == []
 
 
@@ -278,7 +279,7 @@ async def test_find_alternative_rejects_private_addresses_without_checking() -> 
     )
     checker = FakeChecker({"http://127.0.0.1/guide": live("http://127.0.0.1/guide")})
 
-    assert await finder.find_alternative(entry(), checker=checker) is None
+    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
     assert checker.checked == []
 
 
@@ -296,7 +297,7 @@ async def test_find_alternative_rejects_unsafe_or_identical_urls(url: str) -> No
     )
     checker = FakeChecker({url: live(url)})
 
-    assert await finder.find_alternative(entry(), checker=checker) is None
+    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
     assert checker.checked == []
 
 
@@ -315,10 +316,10 @@ async def test_find_alternative_strips_tracking_and_uses_resolved_url() -> None:
         }
     )
 
-    alternative = await finder.find_alternative(entry(), checker=checker)
+    outcome = await finder.find_alternative(entry(), checker=checker)
 
-    assert alternative == Alternative(
-        "https://example.org/final", 0.9, "Official page."
+    assert outcome == DiscoveryOutcome(
+        Alternative("https://example.org/final", 0.9, "Official page.")
     )
     assert checker.checked == ["https://example.org/new"]
 
@@ -344,23 +345,49 @@ async def test_find_alternative_rejects_suspicious_redirects() -> None:
         }
     )
 
-    alternative = await finder.find_alternative(entry(), checker=checker)
+    outcome = await finder.find_alternative(entry(), checker=checker)
 
-    assert alternative == Alternative("https://example.org/real", 0.6)
+    assert outcome == DiscoveryOutcome(Alternative("https://example.org/real", 0.6))
 
 
 async def test_find_alternative_requires_web_link() -> None:
     finder, _, _ = make_finder([])
     checker = FakeChecker({})
 
-    assert (
-        await finder.find_alternative(
-            entry().model_copy(update={"web_link": None}), checker=checker
-        )
-        is None
+    outcome = await finder.find_alternative(
+        entry().model_copy(update={"web_link": None}), checker=checker
     )
+
+    assert outcome.alternative is None
+    assert outcome.transient is False
 
 
 def test_missing_api_key_fails_fast() -> None:
     with pytest.raises(ValueError, match="GEMINI_API_KEY"):
         GeminiFinder(api_key=None)
+
+
+async def test_find_alternative_flags_transient_gemini_failure() -> None:
+    finder, _, _ = make_finder([RuntimeError("503 unavailable")] * 4)
+
+    outcome = await finder.find_alternative(entry(), checker=FakeChecker({}))
+
+    assert outcome.alternative is None
+    assert outcome.transient is True
+
+
+async def test_find_alternative_flags_transient_candidate_checks() -> None:
+    finder, _, _ = make_finder(
+        ['{"candidates": [{"url": "https://slow.example/guide", "probability": 0.9}]}']
+    )
+
+    class TransientChecker:
+        async def check(
+            self, url: str, *, entry_title: str | None = None
+        ) -> CheckResult:
+            return CheckResult("503", "blocked", cacheable=False)
+
+    outcome = await finder.find_alternative(entry(), checker=TransientChecker())
+
+    assert outcome.alternative is None
+    assert outcome.transient is True
