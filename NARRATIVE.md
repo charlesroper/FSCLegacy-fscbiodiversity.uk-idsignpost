@@ -246,3 +246,18 @@ A two-axis review of the branch against the coding standards and specification s
 - **Shared verification field list.** `VERIFICATION_FIELDS` lived in both `extract.py` and `pipeline.py`. When `alternative_note` was added to `pipeline.py`, `extract.py` missed the update, which meant a fresh `extract` would have wiped `alternative_note` across unchanged entries. Defining `VERIFICATION_FIELDS` once in `models.py` and preserving `alternative_note` on transient discovery failures closed both paths.
 - **Post-redirect candidate policy.** Candidate URLs were checked for blocked hosts, image extensions, homepage paths, and private IP addresses before `HTTPChecker.check`, but not after a redirect. Running the same `_policy_note` gate on `resolved_url` ensures a candidate cannot redirect onto a blocked host or private address.
 - **Removing dead code and legacy scripts.** `extract.py` now shares one `_field_markdown` helper, `gemini_finder.py` uses `DiscoveryOutcome` directly instead of a duplicate `_Attempt` class, cache record mutations live on `EntryRecord` and `CatalogCache`, and the unused `WaybackClient.find` method and obsolete `scripts/` directory are gone.
+
+---
+
+## 15. Wayback snapshots for alternative links
+
+The catalog records historical Wayback Machine snapshots in `wayback_link`. For most broken links, that snapshot preserves the original resource from before it died. But eighteen broken entries with confirmed alternatives had no historical snapshot at all, leaving `wayback_link` empty even though a working replacement page exists.
+
+The pipeline now uses confirmed alternative links as a Wayback fallback:
+
+1. When a broken link has no Wayback snapshot of its own and discovery confirms an `alternative_link`, the pipeline queries the Wayback Availability API for that alternative.
+2. If the alternative has no snapshot and `--save-archive` is active, the pipeline triggers Save Page Now on the alternative URL.
+3. The resulting snapshot URL is saved to `wayback_link` and cached in the URL tier under the alternative URL, leaving the original broken URL cache record accurate.
+4. If an alternative is later dropped because it was shared across three or more entries, `wayback_link` resets to whatever snapshot the original link had.
+
+Running `idsignpost run --save-archive` exercises this path alongside the existing verification checks. Network retries and transport failures at `archive.org` gracefully fall back to keeping existing cache records without failing the pipeline run.
