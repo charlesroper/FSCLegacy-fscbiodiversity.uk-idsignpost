@@ -226,11 +226,14 @@ class CatalogCache:
         self._changed()
         return True
 
-    def set_wayback(self, url: str, snapshot: str) -> bool:
-        """Attach a Wayback snapshot to an existing cached URL record."""
+    def get_wayback(self, url: str) -> str | None:
+        """Return a fresh cached Wayback snapshot for a URL, if any."""
         record = self.get_url(url)
-        if record is None:
-            return False
+        return record.wayback_url if record is not None else None
+
+    def set_wayback(self, url: str, snapshot: str) -> bool:
+        """Store a Wayback snapshot on the URL record, creating one if needed."""
+        record = self.get_url(url) or UrlRecord()
         record.wayback_url = snapshot
         return self.put_url(url, record)
 

@@ -247,3 +247,22 @@ def test_save_leaves_no_temporary_files(tmp_path: Path) -> None:
     cache.save()
 
     assert sorted(path.name for path in tmp_path.iterdir()) == [".url_cache.json"]
+
+
+def test_get_and_set_wayback_on_new_and_existing_url(tmp_path: Path) -> None:
+    cache = make_cache(tmp_path)
+    snapshot = "https://web.archive.org/web/2026/https://example.org/new"
+
+    assert cache.get_wayback("https://example.org/new") is None
+    cache.set_wayback("https://example.org/new", snapshot)
+    assert cache.get_wayback("https://example.org/new") == snapshot
+
+    cache.put_url("https://example.org/existing", UrlRecord(status="200", state="ok"))
+    cache.set_wayback(
+        "https://example.org/existing",
+        "https://web.archive.org/web/2026/https://example.org/existing",
+    )
+    assert (
+        cache.get_wayback("https://example.org/existing")
+        == "https://web.archive.org/web/2026/https://example.org/existing"
+    )

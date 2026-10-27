@@ -90,7 +90,9 @@ class FakeFinder:
 
 class FakeArchive:
     def __init__(
-        self, snapshots: dict[str, str] | None = None, save_result: str | None = None
+        self,
+        snapshots: dict[str, str | None] | None = None,
+        save_result: str | None = None,
     ) -> None:
         self.snapshots = snapshots or {}
         self.save_result = save_result
@@ -197,7 +199,7 @@ async def test_redirect_mismatch_becomes_broken_with_alternative(
     assert updated.alternative_link == "https://new.example/guide"
     assert updated.alternative_probability == 0.8
     assert updated.alternative_reasoning == "Moved here."
-    assert archive.saves == []
+    assert archive.saves == ["https://new.example/guide"]
     assert verifier.stats.alternatives == 1
 
 
@@ -637,3 +639,92 @@ async def test_transient_discovery_preserves_existing_note(tmp_path: object) -> 
     assert updated.alternative_note == "confirmed: official product page"
     assert updated.verified_at == "2026-01-01T00:00:00+00:00"
     assert verifier.cache.get_entry("guide", URL) is None
+
+
+async def test_broken_link_with_alternative_falls_back_to_alternative_snapshot(
+    tmp_path: object,
+) -> None:
+    alt_url = "https://new.example/guide"
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder(
+        discoveries={
+            "guide": DiscoveryOutcome(
+                Alternative(alt_url, 0.9), confirmed=True, note="confirmed"
+            )
+        }
+    )
+    archive = FakeArchive(
+        {
+            URL: None,  # no original snapshot
+            alt_url: "https://web.archive.org/web/2026/https://new.example/guide",
+        }
+    )
+    verifier = make_verifier(tmp_path, checker, finder=finder, archive=archive)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.web_link_state == "broken"
+    assert updated.alternative_link == alt_url
+    assert (
+        updated.wayback_link
+        == "https://web.archive.org/web/2026/https://new.example/guide"
+    )
+    assert verifier.cache.get_wayback(alt_url) == updated.wayback_link
+    assert verifier.cache.get_wayback(URL) is None
+
+
+async def test_broken_link_with_original_snapshot_keeps_original_wayback(
+    tmp_path: object,
+) -> None:
+    alt_url = "https://new.example/guide"
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder(
+        discoveries={
+            "guide": DiscoveryOutcome(
+                Alternative(alt_url, 0.9), confirmed=True, note="confirmed"
+            )
+        }
+    )
+    archive = FakeArchive(
+        {
+            URL: "https://web.archive.org/web/2020/https://example.org/guide",
+            alt_url: "https://web.archive.org/web/2026/https://new.example/guide",
+        }
+    )
+    verifier = make_verifier(tmp_path, checker, finder=finder, archive=archive)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert (
+        updated.wayback_link
+        == "https://web.archive.org/web/2020/https://example.org/guide"
+    )
+    assert alt_url not in archive.lookups
+
+
+async def test_save_archive_captures_unarchived_alternative_link(
+    tmp_path: object,
+) -> None:
+    alt_url = "https://new.example/guide"
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder(
+        discoveries={
+            "guide": DiscoveryOutcome(
+                Alternative(alt_url, 0.9), confirmed=True, note="confirmed"
+            )
+        }
+    )
+    archive = FakeArchive(
+        snapshots={URL: None, alt_url: None},
+        save_result="https://web.archive.org/web/20261027/https://new.example/guide",
+    )
+    verifier = make_verifier(
+        tmp_path, checker, finder=finder, archive=archive, save_archive=True
+    )
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.wayback_link == archive.save_result
+    assert archive.saves == [alt_url]
+    assert verifier.stats.wayback_captures == 1
+    assert verifier.cache.get_wayback(alt_url) == archive.save_result

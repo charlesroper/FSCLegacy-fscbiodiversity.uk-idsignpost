@@ -203,6 +203,9 @@ class Verifier:
             if entry.alternative_link not in shared:
                 cleaned.append(entry)
                 continue
+            orig_wayback = (
+                self.cache.get_wayback(entry.web_link) if entry.web_link else None
+            )
             entry = entry.model_copy(
                 update={
                     "alternative_link": None,
@@ -211,6 +214,7 @@ class Verifier:
                     "alternative_note": (
                         "dropped: URL shared by three or more entries"
                     ),
+                    "wayback_link": orig_wayback,
                 }
             )
             record = (
@@ -233,19 +237,29 @@ class Verifier:
                 *(self._verdict(member, facts) for member in members)
             )
             wayback_link = await self._wayback(url, facts, verdicts)
+            wayback_links = [
+                wayback_link
+                if wayback_link is not None
+                or verdict.alternative is None
+                or verdict.transient
+                else await self._alternative_wayback(verdict.alternative.url)
+                for verdict in verdicts
+            ]
         return [
-            self._apply(member, verdict, facts, wayback_link)
-            for member, verdict in zip(members, verdicts, strict=True)
+            self._apply(member, verdict, facts, member_wayback)
+            for member, verdict, member_wayback in zip(
+                members, verdicts, wayback_links, strict=True
+            )
         ]
 
     async def _facts(self, url: str, title: str) -> _UrlFacts:
         record = None if self.refresh else self.cache.get_url(url)
-        if record is not None:
+        if record is not None and record.state is not None:
             self.stats.cache_hits += 1
             return _UrlFacts(
                 result=CheckResult(
                     status=record.status or "",
-                    state=record.state or "blocked",
+                    state=record.state,
                     resolved_url=record.resolved_url,
                     is_suspicious_redirect=record.is_suspicious_redirect,
                     page_title=record.page_title,
@@ -273,10 +287,16 @@ class Verifier:
                 page_title=result.page_title,
                 page_h1=result.page_h1,
                 page_snippet=result.page_snippet,
+                wayback_url=record.wayback_url if record else None,
             ),
             cacheable=result.cacheable,
         )
-        return _UrlFacts(result=result, transient=not result.cacheable, checked=True)
+        return _UrlFacts(
+            result=result,
+            transient=not result.cacheable,
+            checked=True,
+            wayback=record.wayback_url if record else None,
+        )
 
     async def _verdict(self, entry: CatalogEntry, facts: _UrlFacts) -> _Verdict:
         result = facts.result
@@ -520,6 +540,19 @@ class Verifier:
         if snapshot is None:
             return None
         self.cache.set_wayback(url, snapshot)
+        return snapshot
+
+    async def _alternative_wayback(self, url: str) -> str | None:
+        cached = None if self.refresh else self.cache.get_wayback(url)
+        if cached is not None:
+            return cached
+        snapshot = await self.wayback.lookup(url)
+        if snapshot is None and self.save_archive:
+            snapshot = await self.wayback.save(url)
+            if snapshot is not None:
+                self.stats.wayback_captures += 1
+        if snapshot is not None:
+            self.cache.set_wayback(url, snapshot)
         return snapshot
 
     def _apply(
