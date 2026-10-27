@@ -1,5 +1,18 @@
 # idsignpost
 
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
+[![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![pytest](https://img.shields.io/badge/tests-265%20passed-0A9EDC.svg)](https://docs.pytest.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+[![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#output)
+[![Working Links](https://img.shields.io/badge/links-386%20live-brightgreen.svg)](#how-verification-decides)
+[![Recovered Alternatives](https://img.shields.io/badge/alternatives-93%20recovered-informational.svg)](#how-verification-decides)
+[![Archived Rate](https://img.shields.io/badge/wayback-91%25%20preserved-blue.svg)](#how-verification-decides)
+[![Gemini 3.1 Flash Lite](https://img.shields.io/badge/grounded%20with-Gemini%203.1%20Flash%20Lite-8E75B2.svg)](https://ai.google.dev/)
+
 Build and verify a catalog of biodiversity identification resources from the legacy FSC ID Signpost pages.
 
 The package turns the HTML pages in `idsignpost/` into one validated catalog, checks every link, archives what still works, and finds replacements for guides that have moved. Outputs are JSON, CSV, Parquet, and Markdown rendered from the same canonical records.
@@ -71,7 +84,7 @@ Each entry with a `web_link` passes through the same stages:
 1. An HTTP GET classifies the link as `ok`, `broken`, or `blocked`. `blocked` means unverified: the server refused the request or answered with a temporary error.
 2. A suspicious redirect (host change, collapse to the site root, soft-404 page, login wall) goes to Gemini for a second opinion. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
 3. A broken entry asks Gemini, with Google Search grounding, for up to three ranked replacements. Candidates are blocked against known dead hosts, private addresses, the original URL, and a live check before one is stored.
-4. The Wayback Machine is queried for a snapshot. Only a live entry can trigger a new capture.
+4. The Wayback Machine is queried for a snapshot. When a broken link has no historical snapshot of its own, the pipeline checks the confirmed replacement link and captures it via Save Page Now when `--save-archive` is active.
 5. When the final state is not `broken`, any old alternative fields are cleared.
 
 Temporary failures never overwrite a good result. A timeout or 5xx leaves the previous state in place and is retried on the next run, and the cache does not store it.
@@ -113,8 +126,4 @@ Tests run offline by default and mock network calls with `respx`. The live smoke
 uv run pytest -m live
 ```
 
-`SPEC.md` describes the pipeline, schemas, and cache rules in full. `NARRATIVE.md` records why the implementation took the shape it did.
-
-## Legacy scripts
-
-`scripts/` holds the original extractor and verification scripts. The package replaces them for new work. The HTML corpus in `idsignpost/` remains the input for `extract`.
+`SPEC.md` describes the pipeline, schemas, and cache rules in full. `NARRATIVE.md` records why the implementation took the shape it did. `EXPLAINER.md` provides a layperson overview of the catalog.

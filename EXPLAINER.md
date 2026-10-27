@@ -10,7 +10,7 @@ If you need to find an identification key, chart or guide for plants, insects, f
 
 Over many years, the Field Studies Council collected recommendations for identification resources. Contributors submitted links to field keys, book handbooks, recording schemes and scientific papers covering groups from caddisflies and beetles to lichens, wildflowers and sea anemones.
 
-When the original website was retired, the live pages disappeared. Even before that, many linked websites had moved or vanished – a common problem known as link rot. 
+When the original website was retired, the live pages disappeared. Even before that, many linked websites had moved or vanished, a common problem known as link rot. 
 
 This project solves two problems:
 1. **Preservation:** it recovers every entry from the archived website files and formats them into clean, portable documents.
@@ -29,7 +29,7 @@ The catalogue contains **736 entries**. Each entry describes an identification r
   - `ok`: the link works and responds directly.
   - `broken`: the link is confirmed dead (such as a 404 Not Found error).
   - `blocked`: the server blocked automated checks (often due to anti-bot protection).
-- **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. More than 500 entries include a working snapshot.
+- **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. Over 660 entries (more than 90%) include a working snapshot.
 - **Alternative link and score:** for confirmed broken links, a working replacement found by searching publisher and museum archives, paired with a confidence score between 0.0 and 1.0.
 - **Alternative note:** the reason the replacement was accepted or rejected. Accepted pages carry a confirmation sentence from the model, and failed searches record why each candidate was dropped.
 
@@ -70,21 +70,22 @@ If a link has a `broken` state in **Web link state**:
 
 ## How the update pipeline works
 
-The repository contains automated tools that maintain the catalogue. You can run the entire pipeline or individual steps using Python.
+The repository contains an automated package (`src/idsignpost`) that maintains the catalogue. You can run the entire pipeline or individual steps using `uv`.
 
 ```mermaid
 flowchart LR
-    HTML["1. idsignpost/*.html\n(Raw source files)"] --> MD["2. idsignpost.md\n(Clean Markdown)"]
-    MD --> JSON["3. idsignpost.json\n(Structured catalog)"]
-    JSON --> VERIFY["4. scripts/verify_urls.py\n(Check links & snapshots)"]
-    VERIFY --> EXPORTS["5. idsignpost.csv\n& idsignpost.parquet"]
+    HTML["1. idsignpost/*.html\n(Raw source files)"] --> EXTRACT["2. idsignpost extract\n(Direct HTML parser)"]
+    EXTRACT --> JSON[("idsignpost.json\n(Canonical catalog)")]
+    JSON --> VERIFY["3. idsignpost verify\n(HTTP, Gemini, Wayback)"]
+    VERIFY --> JSON
+    JSON --> EXPORT["4. idsignpost export\n(Renderers)"]
+    EXPORT --> EXPORTS["idsignpost.csv, .parquet, .md"]
 ```
 
-1. **Extract text (`extract_idsignpost.py`):** reads the original HTML files in `idsignpost/`, strips website clutter, formats links and generates `idsignpost.md`.
-2. **Convert to JSON (`md_to_json.py`):** parses the Markdown catalogue into structured records with distinct fields for titles, authors, descriptions and tags.
-3. **Verify links (`verify_urls.py`):** 
-   - Tests each link for reachability.
-   - Queries the Internet Archive for the closest historical snapshot.
-   - For broken links, queries DuckDuckGo for live replacements on recognised natural history domains and scores the candidate.
+1. **Extract records (`uv run idsignpost extract`):** reads the original HTML files in `idsignpost/`, strips website clutter, formats links and generates canonical `CatalogEntry` records in `idsignpost.json`.
+2. **Verify links (`uv run idsignpost verify`):** 
+   - Tests each link for reachability and evaluates redirects.
+   - For dead links, queries `gemini-3.1-flash-lite` with Google Search grounding for live replacements on recognised natural history domains, then verifies and confirms the candidate.
+   - Queries the Internet Archive for historical snapshots, falling back to confirmed replacements and optionally triggering Save Page Now for unarchived links.
    - Caches results in `.url_cache.json` so repeat runs complete in seconds.
-4. **Export to CSV and Parquet (`json_to_csv.py`, `json_to_parquet.py`):** generates `idsignpost.csv` and `idsignpost.parquet` with consistent column orders and typed values.
+3. **Export to CSV, Parquet, and Markdown (`uv run idsignpost export`):** generates `idsignpost.csv`, `idsignpost.parquet`, and readable `idsignpost.md` directly from the verified catalog.
