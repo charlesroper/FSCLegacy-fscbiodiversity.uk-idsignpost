@@ -196,3 +196,15 @@ A second pass retried the transient failures and filled in what the first run co
 The first full run gave the candidate filter a real workload and exposed three more shapes that pass a naive liveness test: a product image, two Scribd uploads, and a category page handed to ten different entries. Images and Scribd now fail the same policy check as blocked hosts, and cached alternatives are rechecked against it so an old cache cannot smuggle them back in. A URL reused by three or more entries is treated as a hub: the alternative is cleared and the negative verdict cached. Bookseller pages with an exact product listing stay, because out-of-print guides are often only available there.
 
 Replaying the cache through the new policy removed eighteen alternatives in about a minute: one image, two Scribd uploads, and fifteen hub URLs. The ten entries that had shared the Royal Entomological Society out-of-print index now carry per-title product pages instead, which is the result the filter was meant to force. The catalogue holds 386 live links, 288 broken, 40 blocked, 22 without a link, and 74 alternatives. No URL is reused by three entries, and four are shared by exactly two.
+
+---
+
+## 13. Checking what the replacement page actually is
+
+A live link is not the same as the right link. To find out how far apart those are, I fetched all 74 alternatives and compared each page title and first heading with the entry. The comparison caught what liveness could not: two Brill pages for wholly different books, a Chester storefront error page that still answered 200, and seven category indexes standing in for specific guides. Sixteen of the rest were exact product pages, mostly for out-of-print handbooks, which is the honest answer when a book has no web edition.
+
+The fix is one more question at discovery time. Before a candidate is accepted, the model compares the entry with the resolved URL and the page title and heading, and rejects a different publication, an index, or an error page. A failed confirmation request does not reject a live candidate, because the liveness check already passed; only an explicit mismatch moves on to the next candidate.
+
+Re-running discovery for the 74 entries under the new gate produced 37 accepted alternatives, not 74. Some of that is the gate working. The rest is discovery variance: the same entries, asked again, returned different candidates, and the gate rejected the weaker set. Notably, 26 of the discarded URLs were correct, which an independent confirmation run showed before I put them back. The catalog now holds 62 alternatives: 37 from the new pass, 26 confirmed and restored, and one WoRMS bibliography record removed by hand because it lists a publication rather than offering it.
+
+Two lessons. The confirmation step should run before a candidate is cached, not only during a fresh search, so a bad URL never enters the entry tier. And discovery needs a stable input, either the previous candidate or a deterministic prompt, before a full re-run can be trusted as an improvement.

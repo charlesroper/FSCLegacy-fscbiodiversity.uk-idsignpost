@@ -100,8 +100,8 @@
 - Wayback link: [https://web.archive.org/web/20230926221415/https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/](<https://web.archive.org/web/20230926221415/https://www.field-studies-council.org/shop/publications/aphids-aphidinae-macrosiphini/>)
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/](<https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/>)
 - Alternative probability: 0.85
-- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, providing detailed information and purchasing options.
-- Verified at: 2026-10-26T19:42:49.815206+00:00
+- Alternative reasoning: This is the direct product page on the Royal Entomological Society website, which is the publisher of the handbook series.
+- Verified at: 2026-10-27T00:32:41.381069+00:00
 
 ## apples-field-guide.html
 
@@ -212,10 +212,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20250910105220/https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/](<https://web.archive.org/web/20250910105220/https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/>)
-- Alternative link: [https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535](<https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535>)
-- Alternative probability: 0.80
-- Alternative reasoning: This page is a dedicated product page for the specific publication, providing bibliographic details and status, which is the most direct alternative to the broken Field Studies Council link.
-- Verified at: 2026-10-26T19:42:33.537523+00:00
+- Verified at: 2026-10-27T00:32:41.809113+00:00
 
 ## atlas-dragonflies-britain-and-ireland.html
 
@@ -363,7 +360,7 @@
 - Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html](<https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html>)
 - Alternative probability: 0.70
 - Alternative reasoning: This appears to be the landing page or HTML version of the guide hosted on the Natural History Museum website.
-- Verified at: 2026-10-26T19:42:34.146990+00:00
+- Verified at: 2026-10-27T00:32:36.084846+00:00
 
 ## bbs-field-guide-online-pages.html
 
@@ -470,7 +467,7 @@
 - Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html](<https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html>)
 - Alternative probability: 0.80
 - Alternative reasoning: This is the most likely location for the guide, as the broken link provided follows the standard NHM URL structure for such resources, and the guide is officially attributed to the Natural History Museum.
-- Verified at: 2026-10-26T19:42:38.443949+00:00
+- Verified at: 2026-10-27T00:32:38.061263+00:00
 
 ## beginner’s-vegetative-guide-orchids-british-isles.html
 
@@ -919,7 +916,7 @@
 - Alternative link: [https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/](<https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/>)
 - Alternative probability: 0.80
 - Alternative reasoning: This is a direct product page for the specific handbook from a reputable natural history bookseller.
-- Verified at: 2026-10-26T19:42:52.699985+00:00
+- Verified at: 2026-10-27T00:32:44.898058+00:00
 
 ## british-spider-identification.html
 
@@ -1000,9 +997,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20170316060150/http://summerfieldbooks.com/sea%2Dbeans%2Dand%2Dnickar%2Dnuts%7E263](<https://web.archive.org/web/20170316060150/http://summerfieldbooks.com/sea%2Dbeans%2Dand%2Dnickar%2Dnuts%7E263>)
 - Alternative link: [https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022](<https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022>)
-- Alternative probability: 0.60
-- Alternative reasoning: Pemberley Books provides a specific product page for this handbook, including bibliographic details and its current out-of-print status.
-- Verified at: 2026-10-26T19:42:55.043768+00:00
+- Alternative probability: 0.80
+- Alternative reasoning: This is a direct product page for the book, providing bibliographic details and status, which is the most specific available resource for this publication.
+- Verified at: 2026-10-27T00:32:45.553752+00:00
 
 ## bsbi-handbook-no-11-water-starworts-callitriche-europe.html
 
@@ -1139,10 +1136,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20170316062202/http://summerfieldbooks.com/roses%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E233](<https://web.archive.org/web/20170316062202/http://summerfieldbooks.com/roses%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E233>)
-- Alternative link: [https://bsbi.org/learn/publications](<https://bsbi.org/learn/publications>)
-- Alternative probability: 0.40
-- Alternative reasoning: The Botanical Society of Britain and Ireland (BSBI) is the publisher and maintains a list of their handbooks, though it may redirect to external sellers.
-- Verified at: 2026-10-26T19:43:29.823242+00:00
+- Verified at: 2026-10-27T00:32:48.484748+00:00
 
 ## bsbi-handbook-no-8-pondweeds-great-britain-and-ireland.html
 
@@ -1172,9 +1166,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20160813030255/http://summerfieldbooks.com/dandelions%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E232](<https://web.archive.org/web/20160813030255/http://summerfieldbooks.com/dandelions%2Dof%2Dgreat%2Dbritain%2Dand%2Direland%7E232>)
 - Alternative link: [https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595](<https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595>)
-- Alternative probability: 0.90
-- Alternative reasoning: This page provides specific bibliographic details, status (out of print), and information about the publication, serving as a direct reference for the book.
-- Verified at: 2026-10-26T19:43:38.470481+00:00
+- Alternative probability: 0.80
+- Alternative reasoning: This is a dedicated product page for the book, confirming it is out of print and providing bibliographic details.
+- Verified at: 2026-10-27T00:32:49.225387+00:00
 
 ## bsbi-species-accounts.html
 
@@ -2068,10 +2062,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf](<https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf>)
-- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/occasional-publications/](<https://norfolknaturalists.org.uk/wp/publications/occasional-publications/>)
-- Alternative probability: 0.70
-- Alternative reasoning: This is the official publications page of the Norfolk & Norwich Naturalists' Society, which hosts and distributes the society's occasional publications including the Bumblebees of Norfolk guide.
-- Verified at: 2026-10-26T19:44:27.646515+00:00
+- Verified at: 2026-10-27T00:32:50.062254+00:00
 
 ## butterflies-britain.html
 
@@ -2135,10 +2126,7 @@
 - Web link: [https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf>)
 - Web link status: 404
 - Web link state: broken
-- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/species-guides/](<https://norfolknaturalists.org.uk/wp/publications/species-guides/>)
-- Alternative probability: 0.90
-- Alternative reasoning: This is the official Norfolk & Norwich Naturalists' Society page that hosts their collection of downloadable species guides, including 'Butterflies of Norfolk'.
-- Verified at: 2026-10-26T19:44:29.535286+00:00
+- Verified at: 2026-10-27T00:33:09.157486+00:00
 
 ## butterfly-id-europe-ispiny-pocket-guide-butterflies-and-day-flying-moths.html
 
@@ -2487,7 +2475,7 @@
 - Alternative link: [https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html](<https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the updated, secure URL for the Collembola Taxonomy guide originally hosted at the broken link provided.
-- Verified at: 2026-10-26T19:44:37.684869+00:00
+- Verified at: 2026-10-27T00:32:53.264036+00:00
 
 ## collins-tree-guide.html
 
@@ -2503,10 +2491,10 @@
 - Web link: [https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969](<https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969>)
 - Web link status: 404
 - Web link state: broken
-- Alternative link: [https://woodland-ways.co.uk/products/collins-tree-guide-hardback](<https://woodland-ways.co.uk/products/collins-tree-guide-hardback>)
-- Alternative probability: 0.70
-- Alternative reasoning: This is a direct product page for the book, offering a detailed description and purchase option.
-- Verified at: 2026-10-26T19:44:45.363029+00:00
+- Alternative link: [https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson](<https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the official publisher's product page for the Collins Tree Guide, providing comprehensive details about the book.
+- Verified at: 2026-10-27T00:33:17.178130+00:00
 
 ## colour-identification-guide-grasses-sedges-rushes-and-ferns.html
 
@@ -2523,7 +2511,7 @@
 - Alternative link: [https://www.summerfieldbooks.com/product/colour-identification-guide-to-grasses-sedges-rushes-and-ferns/](<https://www.summerfieldbooks.com/product/colour-identification-guide-to-grasses-sedges-rushes-and-ferns/>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the specific product page for the book on the publisher/retailer's website, which replaces the broken link provided.
-- Verified at: 2026-10-26T19:44:41.706988+00:00
+- Verified at: 2026-10-27T00:32:54.881875+00:00
 
 ## commensal-and-parasitic-copepods-associated-marine-invertebrates-2nd-ed.html
 
@@ -2786,10 +2774,7 @@
 - Web link state: broken
 - Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
 - Wayback link: [https://web.archive.org/web/20240916020321/https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/](<https://web.archive.org/web/20240916020321/https://www.field-studies-council.org/shop/publications/cyclostome-bryozoans/>)
-- Alternative link: [https://brill.com/display/title/15779](<https://brill.com/display/title/15779>)
-- Alternative probability: 0.60
-- Alternative reasoning: Brill is the original publisher of this specific volume (No. 34) in the series and maintains a dedicated page for the book's bibliographic details.
-- Verified at: 2026-10-26T19:44:48.336321+00:00
+- Verified at: 2026-10-27T00:32:57.328806+00:00
 
 ## dandelions-taraxacum-britain-and-ireland.html
 
@@ -3073,10 +3058,10 @@
 - Web link state: broken
 - Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
 - Wayback link: [https://web.archive.org/web/20240912093143/https://www.field-studies-council.org/shop/publications/echinoderms/](<https://web.archive.org/web/20240912093143/https://www.field-studies-council.org/shop/publications/echinoderms/>)
-- Alternative link: [https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616](<https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616>)
-- Alternative probability: 0.85
-- Alternative reasoning: This is a direct product page for the specific publication mentioned, which is a common source for purchasing such identification guides.
-- Verified at: 2026-10-26T19:45:00.181661+00:00
+- Alternative link: [https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616/](<https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616/>)
+- Alternative probability: 0.90
+- Alternative reasoning: Pemberley Books is a specialized natural history bookseller that frequently hosts and sells specific volumes of the 'Synopses of the British Fauna' series, including this title.
+- Verified at: 2026-10-27T00:32:59.524732+00:00
 
 ## elateridae-british-isles.html
 
@@ -3195,9 +3180,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220703090425/https://www.field-studies-council.org/shop/publications/pennine-way/](<https://web.archive.org/web/20220703090425/https://www.field-studies-council.org/shop/publications/pennine-way/>)
 - Alternative link: [https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/](<https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/>)
-- Alternative probability: 0.90
-- Alternative reasoning: This site is a specialist retailer that currently lists the 'Features of the Pennine Way' fold-out chart as in stock and available for purchase.
-- Verified at: 2026-10-26T19:45:09.236840+00:00
+- Alternative probability: 0.80
+- Alternative reasoning: This is a specific product page from a bookseller that hosts and offers the identification guide for sale.
+- Verified at: 2026-10-27T00:33:01.771336+00:00
 
 ## features-serpent-trail.html
 
@@ -3249,7 +3234,7 @@
 - Alternative link: [https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/](<https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/>)
 - Alternative probability: 0.90
 - Alternative reasoning: Summerfield Books is a primary retailer for Field Studies Council publications and currently lists this specific fold-out chart as in stock.
-- Verified at: 2026-10-26T19:45:09.982232+00:00
+- Verified at: 2026-10-27T00:33:03.685860+00:00
 
 ## fern-guide-3rd-edition.html
 
@@ -3478,7 +3463,7 @@
 - Alternative link: [https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965](<https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965>)
 - Alternative probability: 0.70
 - Alternative reasoning: This is a direct product page for the physical book, although it is currently listed as out of print.
-- Verified at: 2026-10-26T19:45:26.305425+00:00
+- Verified at: 2026-10-27T00:33:06.055437+00:00
 
 ## fleas-siphonaptera-2nd-ed-0.html
 
@@ -3562,8 +3547,8 @@
 - Web link state: broken
 - Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the original, intended URL for the Fossil Explorer app hosted by the Natural History Museum, as referenced in multiple external documents and the user's broken link.
-- Verified at: 2026-10-26T19:45:25.329482+00:00
+- Alternative reasoning: This is the official Natural History Museum URL for the Fossil Explorer app, which is widely cited as the primary source despite the link provided in the prompt being broken.
+- Verified at: 2026-10-27T00:33:30.679342+00:00
 
 ## free-living-marine-nematodes-part-2-british-chromadorids.html
 
@@ -3702,9 +3687,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html](<https://web.archive.org/web/20210505165831/http://www.myfg.org.uk/tombiovis/tombiovis-1.7.2/geoglossum.html>)
 - Alternative link: [https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html](<https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html>)
-- Alternative probability: 1.00
-- Alternative reasoning: This is the direct, active URL for the interactive Geoglossum identification key created by Malcolm Greaves, as referenced by multiple reliable sources.
-- Verified at: 2026-10-26T20:00:03.510153+00:00
+- Alternative probability: 0.95
+- Alternative reasoning: This is the most recent and frequently cited version of the interactive key developed by Malcolm Greaves for the genus Geoglossum.
+- Verified at: 2026-10-27T00:33:10.053030+00:00
 
 ## geotrupidae-key-british-species.html
 
@@ -3838,10 +3823,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf](<https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf>)
-- Alternative link: [https://norfolknaturalists.org.uk/wp/publications/species-guides/](<https://norfolknaturalists.org.uk/wp/publications/species-guides/>)
-- Alternative probability: 0.90
-- Alternative reasoning: This page is the official 'Species Guides' section of the Norfolk & Norwich Naturalists' Society, which hosts the downloadable PDF guide for 'Grasshoppers of Norfolk' by David Richmond.
-- Verified at: 2026-10-26T19:45:35.247427+00:00
+- Verified at: 2026-10-27T00:33:11.532718+00:00
 
 ## great-horsetail-id-video.html
 
@@ -4010,8 +3992,8 @@
 - Web link resolved: [https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf](<https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf>)
 - Alternative link: [https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/](<https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/>)
 - Alternative probability: 1.00
-- Alternative reasoning: This is the primary webpage provided in the description that hosts the identification guide and links to the PDF.
-- Verified at: 2026-10-26T19:45:48.368997+00:00
+- Alternative reasoning: This is the official project webpage that hosts the identification guide and provides the link to the PDF.
+- Verified at: 2026-10-27T00:33:42.722876+00:00
 
 ## guide-british-dung-beetles-onthophagus.html
 
@@ -4675,8 +4657,8 @@
 - Wayback link: [https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/](<https://web.archive.org/web/20220828122913/https://www.field-studies-council.org/shop/publications/harvestmen-guide/>)
 - Alternative link: [https://www.field-studies-council.org/shop/publications/harvestmen/](<https://www.field-studies-council.org/shop/publications/harvestmen/>)
 - Alternative probability: 0.95
-- Alternative reasoning: This is the direct product page for the Harvestmen fold-out guide on the Field Studies Council website, which replaces the broken link provided.
-- Verified at: 2026-10-26T19:46:10.032924+00:00
+- Alternative reasoning: This is the direct product page for the current 2nd edition of the FSC Harvestmen fold-out guide, which replaces the broken link provided.
+- Verified at: 2026-10-27T00:33:13.770328+00:00
 
 ## harvestmen-fold-out-chart.html
 
@@ -4824,8 +4806,8 @@
 - Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D3355](<https://www.discoverwildlife.com/index.php%3Fp%3D3355>)
 - Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds>)
 - Alternative probability: 1.00
-- Alternative reasoning: This is the direct URL for the article titled 'How to identify autumn seeds' on the Discover Wildlife website, which matches the authors and content description provided.
-- Verified at: 2026-10-26T20:00:14.305630+00:00
+- Alternative reasoning: This is the direct URL for the article 'How to identify autumn seeds' on the Discover Wildlife website, which features the illustrations by Felicity Rose Cole and text by Peter Marren.
+- Verified at: 2026-10-27T00:33:44.815924+00:00
 
 ## how-identify-hoverflies.html
 
@@ -4842,8 +4824,8 @@
 - Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D2990](<https://www.discoverwildlife.com/index.php%3Fp%3D2990>)
 - Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/>)
 - Alternative probability: 1.00
-- Alternative reasoning: This is the direct URL for the BBC Wildlife Magazine guide on identifying hoverflies, as confirmed by multiple external references and user discussions.
-- Verified at: 2026-10-26T19:46:19.604014+00:00
+- Alternative reasoning: This is the direct, active URL for the guide, confirmed by multiple external references and user discussions as the location of the pictorial hoverfly identification article.
+- Verified at: 2026-10-27T00:33:50.049592+00:00
 
 ## hybrid-flora-british-isles.html
 
@@ -4857,10 +4839,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20171227101623/https://www.summerfieldbooks.com/hybrid%2Dflora%2Dof%2Dthe%2Dbritish%2Disles%2E%7E4789](<https://web.archive.org/web/20171227101623/https://www.summerfieldbooks.com/hybrid%2Dflora%2Dof%2Dthe%2Dbritish%2Disles%2E%7E4789>)
-- Alternative link: [https://nora.nerc.ac.uk/id/eprint/511029](<https://nora.nerc.ac.uk/id/eprint/511029>)
+- Alternative link: [https://summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/](<https://summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the official repository page for the publication, providing detailed bibliographic information and an abstract for the book.
-- Verified at: 2026-10-26T19:46:15.586382+00:00
+- Alternative reasoning: Summerfield Books is a primary distributor for BSBI publications and hosts the specific product page for this book.
+- Verified at: 2026-10-27T00:33:24.216930+00:00
 
 ## id-guide-pines-grown-uk-pinus.html
 
@@ -4968,8 +4950,8 @@
 - Web link resolved: [https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf](<https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
 - Alternative link: [https://plymsea.ac.uk/id/eprint/9076](<https://plymsea.ac.uk/id/eprint/9076>)
 - Alternative probability: 1.00
-- Alternative reasoning: This is the official repository page for the Plymouth Marine Science Electronic Archive (PlyMSEA) which hosts the high and low resolution PDF versions of the guide.
-- Verified at: 2026-10-26T19:46:22.431700+00:00
+- Alternative reasoning: This is the official repository page (PlyMSEA) that hosts the guide, providing direct links to both high and low-resolution PDF versions.
+- Verified at: 2026-10-27T00:33:58.379940+00:00
 
 ## identification-key-subfamilies-ichneumonidae-hymenoptera.html
 
@@ -5321,8 +5303,8 @@
 - Wayback link: [https://web.archive.org/web/20210122224738/https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice](<https://web.archive.org/web/20210122224738/https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice>)
 - Alternative link: [https://bmig.org.uk/page/keys-identification-guides](<https://bmig.org.uk/page/keys-identification-guides>)
 - Alternative probability: 0.95
-- Alternative reasoning: This is the official British Myriapod and Isopod Group (BMIG) page that hosts the free PDF downloads for Paul Richards' identification guides.
-- Verified at: 2026-10-26T19:46:31.905837+00:00
+- Alternative reasoning: This is the official British Myriapod and Isopod Group (BMIG) page that hosts the free downloadable PDF files for Paul Richards' 'An Introduction to Centipedes, Millipedes and Woodlice'.
+- Verified at: 2026-10-27T00:33:54.297822+00:00
 
 ## irecord-butterflies.html
 
@@ -5422,10 +5404,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311](<https://web.archive.org/web/20180422205329/http://www.plantlife.org.uk:80/download_file/force/1237/311>)
-- Alternative link: [https://www.plantlife.org.uk/get-involved/explore-the-outdoors/](<https://www.plantlife.org.uk/get-involved/explore-the-outdoors/>)
-- Alternative probability: 0.50
-- Alternative reasoning: While this is a category page, it is the primary location where Plantlife hosts its collection of downloadable spotter sheets, including the June guide.
-- Verified at: 2026-10-26T19:46:40.231703+00:00
+- Verified at: 2026-10-27T00:34:02.084944+00:00
 
 ## june-wildflowers-spotter’s-sheet-2.html
 
@@ -5627,10 +5606,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf](<https://web.archive.org/web/20231206204029/https://www.record-lrc.co.uk/Downloads/KeytotheBritishspeciesofgenusNicrophorus%5B07052011%5D.pdf>)
-- Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera>)
-- Alternative probability: 0.90
-- Alternative reasoning: This is the current primary hosting site for Mike Hackston's collection of insect identification keys, which includes his work on British Coleoptera.
-- Verified at: 2026-10-26T20:00:18.516724+00:00
+- Verified at: 2026-10-27T00:34:01.464472+00:00
 
 ## key-british-species-phalacridae.html
 
@@ -5987,7 +5963,7 @@
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct, active URL for the identification guide, as confirmed by recent community discussions and updated site navigation.
-- Verified at: 2026-10-26T19:47:07.112598+00:00
+- Verified at: 2026-10-27T00:34:16.384505+00:00
 
 ## key-identification-british-cerylonidae.html
 
@@ -6128,9 +6104,9 @@
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae>)
-- Alternative probability: 1.00
-- Alternative reasoning: This is the direct URL for the identification guide, as cited in academic literature and search results as the location for Mike Hackston's Dermestidae key.
-- Verified at: 2026-10-26T19:47:18.911008+00:00
+- Alternative probability: 0.95
+- Alternative reasoning: This is the updated URL for Mike Hackston's identification keys, which hosts the specific guide for British Dermestidae.
+- Verified at: 2026-10-27T00:34:56.066692+00:00
 
 ## key-identification-british-dryophthoridae.html
 
@@ -6356,9 +6332,9 @@
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S302327244:1793044047344377>)
 - Wayback link: [https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae>)
-- Alternative probability: 1.00
-- Alternative reasoning: This URL is the direct, updated location for the identification guide previously hosted on the broken sites.google.com/site/mikesinsectkeys/ domain.
-- Verified at: 2026-10-26T19:47:44.742999+00:00
+- Alternative probability: 0.95
+- Alternative reasoning: This URL is the updated, active location for Mike Hackston's identification keys, replacing the broken 'sites.google.com/site' address.
+- Verified at: 2026-10-27T00:34:31.473032+00:00
 
 ## key-identification-british-kateretidae-0.html
 
@@ -6376,8 +6352,8 @@
 - Wayback link: [https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae](<https://web.archive.org/web/20201103040557/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/kateretidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae>)
 - Alternative probability: 1.00
-- Alternative reasoning: This is the direct URL to the identification guide for British Kateretidae on Mike Hackston's updated site, replacing the broken link provided.
-- Verified at: 2026-10-26T19:47:44.742841+00:00
+- Alternative reasoning: This is the updated, direct URL for the specific identification key hosted on Mike Hackston's site.
+- Verified at: 2026-10-27T00:34:31.479257+00:00
 
 ## key-identification-british-laemophloeidae.html
 
@@ -6748,7 +6724,7 @@
 - Alternative link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ>)
 - Alternative probability: 0.70
 - Alternative reasoning: This is a direct Google Docs viewer link for the Ptinidae key PDF, which has been cited in ecological reports as a valid access point for the document.
-- Verified at: 2026-10-26T19:48:15.881130+00:00
+- Verified at: 2026-10-27T00:34:35.277838+00:00
 
 ## key-identification-british-pyrochroidae.html
 
@@ -7080,10 +7056,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20230924030139/https://www.field-studies-council.org/shop/publications/water-beetles-2/](<https://web.archive.org/web/20230924030139/https://www.field-studies-council.org/shop/publications/water-beetles-2/>)
-- Alternative link: [https://www.royensoc.co.uk/shop/publications/handbooks/coleoptera/keys-to-adults-of-the-water-beetles-of-britain-and-ireland-part-2/](<https://www.royensoc.co.uk/shop/publications/handbooks/coleoptera/keys-to-adults-of-the-water-beetles-of-britain-and-ireland-part-2/>)
-- Alternative probability: 0.90
-- Alternative reasoning: This is the official Royal Entomological Society publication page for the handbook, which is the primary source for this identification guide.
-- Verified at: 2026-10-26T19:48:40.708251+00:00
+- Alternative link: [https://www.pemberleybooks.com/product/keys-to-adults-of-the-water-beetles-of-britain-and-ireland.-part-2-coleoptera-hydrophiloidea-handbooks-for-the-identification-of-british-insects-4-5b/26099/](<https://www.pemberleybooks.com/product/keys-to-adults-of-the-water-beetles-of-britain-and-ireland.-part-2-coleoptera-hydrophiloidea-handbooks-for-the-identification-of-british-insects-4-5b/26099/>)
+- Alternative probability: 0.80
+- Alternative reasoning: This is a direct product page from a specialist bookseller that offers the publication for purchase.
+- Verified at: 2026-10-27T00:34:41.090379+00:00
 
 ## keys-british-genera-and-species-anthicidae-flower-beetles.html
 
@@ -7148,7 +7124,7 @@
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae>)
 - Alternative probability: 0.90
 - Alternative reasoning: This URL follows the updated naming convention for the 'Mikes Insect Keys' site and hosts the specific identification guide for British Apionidae.
-- Verified at: 2026-10-26T19:48:46.153719+00:00
+- Verified at: 2026-10-27T00:34:58.233588+00:00
 
 ## keys-identification-british-cantharidae.html
 
@@ -7182,8 +7158,8 @@
 - Wayback link: [https://web.archive.org/web/20160120214312/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae](<https://web.archive.org/web/20160120214312/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/carabidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae>)
 - Alternative probability: 0.95
-- Alternative reasoning: This URL is the direct, updated location for the guide, as cited in academic literature and research repositories.
-- Verified at: 2026-10-26T19:48:51.258937+00:00
+- Alternative reasoning: This URL is the updated, functional location for Mike Hackston's insect keys, replacing the broken sites.google.com/site/mikesinsectkeys/ address.
+- Verified at: 2026-10-27T00:34:45.328602+00:00
 
 ## keys-identification-british-chrysomelidae.html
 
@@ -7201,8 +7177,8 @@
 - Wayback link: [https://web.archive.org/web/20191121113922/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae](<https://web.archive.org/web/20191121113922/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/chrysomelidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae>)
 - Alternative probability: 0.95
-- Alternative reasoning: This is the updated, active URL for the identification guide, as cited in recent academic literature and research publications.
-- Verified at: 2026-10-26T19:48:46.988326+00:00
+- Alternative reasoning: This URL is the updated location for Mike Hackston's keys, as referenced in academic and biodiversity literature, replacing the broken sites.google.com/site link.
+- Verified at: 2026-10-27T00:34:45.419667+00:00
 
 ## keys-identification-british-cryptophagidae.html
 
@@ -7348,7 +7324,7 @@
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the updated URL structure for Mike Hackston's insect keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' domain.
-- Verified at: 2026-10-26T19:49:13.799513+00:00
+- Verified at: 2026-10-27T00:34:49.374765+00:00
 
 ## keys-identification-british-staphylinidae.html
 
@@ -7374,7 +7350,7 @@
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae>)
 - Alternative probability: 0.95
 - Alternative reasoning: This URL is the updated, functional location for Mike Hackston's keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' address.
-- Verified at: 2026-10-26T19:49:07.247034+00:00
+- Verified at: 2026-10-27T00:34:49.318107+00:00
 
 ## know-your-chats.html
 
@@ -7616,7 +7592,7 @@
 - Alternative link: [https://www.apis.ac.uk/nitrogen-lichen-field-manual](<https://www.apis.ac.uk/nitrogen-lichen-field-manual>)
 - Alternative probability: 0.90
 - Alternative reasoning: This URL is explicitly cited in official documentation as the location for the field manual and guide for the lichen-based nitrogen assessment tool.
-- Verified at: 2026-10-26T19:49:05.443179+00:00
+- Verified at: 2026-10-27T00:34:53.120147+00:00
 
 ## lichens-heaths-and-moors.html
 
@@ -7732,9 +7708,9 @@
 - Web link resolved: [https://www.field-studies-council.org/shop/](<https://www.field-studies-council.org/shop/>)
 - Wayback link: [https://web.archive.org/web/20241104140555/https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/](<https://web.archive.org/web/20241104140555/https://www.field-studies-council.org/shop/publications/lobsters-mud-shrimps-and-anomuran-crabs/>)
 - Alternative link: [https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582](<https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582>)
-- Alternative probability: 0.70
-- Alternative reasoning: Pemberley Books is a specialized natural history bookseller that explicitly lists this specific volume for sale.
-- Verified at: 2026-10-26T19:49:20.394321+00:00
+- Alternative probability: 0.60
+- Alternative reasoning: Pemberley Books is a specialized natural history bookseller that frequently stocks and hosts product pages for the Synopses of the British Fauna series.
+- Verified at: 2026-10-27T00:34:58.772569+00:00
 
 ## longhorn-beetles-identification-chart.html
 
@@ -7799,10 +7775,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311](<https://web.archive.org/web/20180421052326/http://www.plantlife.org.uk:80/download_file/force/1245/311>)
-- Alternative link: [https://www.plantlife.org.uk/get-involved/explore-the-outdoors/](<https://www.plantlife.org.uk/get-involved/explore-the-outdoors/>)
-- Alternative probability: 0.80
-- Alternative reasoning: This is the official Plantlife page that hosts their collection of downloadable spotter sheets, including seasonal wildflower guides.
-- Verified at: 2026-10-26T19:49:14.428107+00:00
+- Verified at: 2026-10-27T00:35:02.094932+00:00
 
 ## marine-and-brackish-water-harpacticoid-copepods-part-1.html
 
@@ -8042,10 +8015,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20170316075910/http://summerfieldbooks.com/myxomycetes%2Dof%2Dbritain%2Dand%2Direland%3A%2Dan%2Didentification%2Dhandbook%7E504](<https://web.archive.org/web/20170316075910/http://summerfieldbooks.com/myxomycetes%2Dof%2Dbritain%2Dand%2Direland%3A%2Dan%2Didentification%2Dhandbook%7E504>)
-- Alternative link: [https://storefront.chester.ac.uk/index.php?main_page=product_info&cPath=6&products_id=113](<https://storefront.chester.ac.uk/index.php?main_page=product_info&cPath=6&products_id=113>)
-- Alternative probability: 0.95
-- Alternative reasoning: This is the official publisher's product page for the book, which offers it for purchase.
-- Verified at: 2026-10-26T19:49:26.026757+00:00
+- Verified at: 2026-10-27T00:35:03.232216+00:00
 
 ## naamlijst-en-determinatiesleutel-tot-de-pseudoschorpioenen-van-nederland-arachnida.html
 
@@ -8081,8 +8051,8 @@
 - Web link state: broken
 - Alternative link: [https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/](<https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the direct product page on the Summerfield Books website, which is the primary retailer mentioned in the description for this specific identification guide.
-- Verified at: 2026-10-26T19:49:28.718178+00:00
+- Alternative reasoning: Summerfield Books is the primary specialist retailer identified in the description as the standard source for this book, and they maintain a specific product page for the 4th edition.
+- Verified at: 2026-10-27T00:35:05.804150+00:00
 
 ## non-shell-marine-wildlife.html
 
@@ -8298,9 +8268,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220626024303/https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888](<https://web.archive.org/web/20220626024303/https://apps.apple.com/gb/app/orchid-id-british-orchids/id436218888>)
 - Alternative link: [https://sunbird.tv/apps/orchid-id-british-orchids/](<https://sunbird.tv/apps/orchid-id-british-orchids/>)
-- Alternative probability: 0.90
-- Alternative reasoning: Sunbird Images is the developer/publisher of the 'Orchid Id - British Orchids' app, and this URL is the specific product page for the guide.
-- Verified at: 2026-10-26T19:49:37.518694+00:00
+- Alternative probability: 0.80
+- Alternative reasoning: This is the direct product page for the 'Orchid Id - British Orchids' app on the developer's website.
+- Verified at: 2026-10-27T00:35:14.339236+00:00
 
 ## orthosia-quaker-moth-identification.html
 
@@ -8578,9 +8548,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220525064004/https://www.field-studies-council.org/shop/publications/sand-dune-guide/](<https://web.archive.org/web/20220525064004/https://www.field-studies-council.org/shop/publications/sand-dune-guide/>)
 - Alternative link: [https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349](<https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349>)
-- Alternative probability: 0.80
-- Alternative reasoning: This site provides a dedicated product page for the identification chart, confirming its status as a publication, and includes the specific title and author details.
-- Verified at: 2026-10-26T19:49:45.434685+00:00
+- Alternative probability: 0.50
+- Alternative reasoning: Pemberley Books is a specialist natural history bookseller that lists this specific identification chart, providing details on its availability and bibliographic information.
+- Verified at: 2026-10-27T00:35:07.782194+00:00
 
 ## planttracker.html
 
@@ -8646,10 +8616,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20200809084710/https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/](<https://web.archive.org/web/20200809084710/https://www.field-studies-council.org/shop/publications/polychaetes-british-amphinomida-spintherida-and-eunicida/>)
-- Alternative link: [https://brill.com/display/title/26806](<https://brill.com/display/title/26806>)
-- Alternative probability: 0.85
-- Alternative reasoning: This is the official publisher's page for the Synopses of the British Fauna series, which hosts the specific volume.
-- Verified at: 2026-10-26T19:49:46.144335+00:00
+- Verified at: 2026-10-27T00:35:09.949526+00:00
 
 ## polychaetes-interstitial-families-2nd-ed.html
 
@@ -8699,8 +8666,8 @@
 - Web link state: broken
 - Alternative link: [https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published](<https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published>)
 - Alternative probability: 0.60
-- Alternative reasoning: This BWARS page provides the official announcement and details regarding the publication of the atlas by the authors.
-- Verified at: 2026-10-26T19:49:51.291997+00:00
+- Alternative reasoning: This BWARS page provides the official announcement and context for the publication, serving as a primary source for information about the atlas.
+- Verified at: 2026-10-27T00:35:13.634694+00:00
 
 ## provisional-atlas-ptychopterid-craneflies-diptera-ptychopteridae-britain-and-ireland.html
 
@@ -9095,7 +9062,7 @@
 - Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct, functional PDF link for the R. L. Coe Pipunculidae handbook hosted on the Royal Entomological Society's official website.
-- Verified at: 2026-10-26T20:00:59.523526+00:00
+- Verified at: 2026-10-27T00:35:15.745957+00:00
 
 ## res-handbook-vol-10-part-3a-diptera-conopidae.html
 
@@ -9183,7 +9150,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/>)
 - Alternative probability: 0.95
 - Alternative reasoning: This is the official Royal Entomological Society page that hosts the PDF download for the specified handbook.
-- Verified at: 2026-10-26T20:01:21.018858+00:00
+- Verified at: 2026-10-27T00:35:12.820737+00:00
 
 ## res-handbook-vol-10-part-7-diptera-hippoboscidae-and-nycteribiidae-keds-flat-flies-and.html
 
@@ -9317,9 +9284,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210712184555/https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf](<https://web.archive.org/web/20210712184555/https://www.royensoc.co.uk/sites/default/files/Vol04_Part01.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/>)
-- Alternative probability: 0.95
+- Alternative probability: 0.90
 - Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.
-- Verified at: 2026-10-26T19:51:32.789471+00:00
+- Verified at: 2026-10-27T00:35:17.691415+00:00
 
 ## res-handbook-vol-4-part-10-coleoptera-histeroidea.html
 
@@ -9336,10 +9303,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210713115142/https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf](<https://web.archive.org/web/20210713115142/https://www.royensoc.co.uk/sites/default/files/Vol04_Part10.pdf>)
-- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-histeroidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-histeroidea/>)
-- Alternative probability: 0.80
-- Alternative reasoning: This is the specific product page on the Royal Entomological Society website that provides a download link for the Coleoptera: Histeroidea handbook.
-- Verified at: 2026-10-26T19:51:33.999710+00:00
+- Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol04_Part10.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol04_Part10.pdf>)
+- Alternative probability: 1.00
+- Alternative reasoning: This is the direct URL for the PDF of the RES Handbook Vol 4 Part 10, as identified by the Royal Entomological Society's own resource documentation.
+- Verified at: 2026-10-27T00:35:18.018011+00:00
 
 ## res-handbook-vol-4-part-2-coleoptera-carabidae.html
 
@@ -9443,8 +9410,8 @@
 - Wayback link: [https://web.archive.org/web/20210711141740/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf](<https://web.archive.org/web/20210711141740/https://www.royensoc.co.uk/sites/default/files/Vol05_Part11.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides access to the publication.
-- Verified at: 2026-10-26T19:51:46.469871+00:00
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides information and access to the publication.
+- Verified at: 2026-10-27T00:35:20.750278+00:00
 
 ## res-handbook-vol-5-part-11-ed1-coleoptera-scarabaeoidea-lucanidae-trogidae-geotrupidae.html
 
@@ -9481,7 +9448,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/>)
 - Alternative probability: 0.80
 - Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a download link for the PDF.
-- Verified at: 2026-10-26T19:51:46.904311+00:00
+- Verified at: 2026-10-27T00:35:21.717389+00:00
 
 ## res-handbook-vol-5-part-15-coleoptera-scolytidae-and-platypodidae.html
 
@@ -9518,7 +9485,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official Royal Entomological Society product page for the out-of-print handbook, which historically hosted the PDF download link.
-- Verified at: 2026-10-26T19:51:51.307777+00:00
+- Verified at: 2026-10-27T00:35:23.774395+00:00
 
 ## res-handbook-vol-5-part-2c-coleoptera-heteroceridae.html
 
@@ -9640,7 +9607,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/>)
 - Alternative probability: 0.95
 - Alternative reasoning: This is the official Royal Entomological Society page that hosts the digital archives and direct download links for their handbooks.
-- Verified at: 2026-10-26T19:51:59.178749+00:00
+- Verified at: 2026-10-27T00:35:22.614436+00:00
 
 ## res-handbook-vol-6-part-2a-hymenoptera-symphyta.html
 
@@ -9745,7 +9712,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/>)
 - Alternative probability: 0.95
 - Alternative reasoning: This is the official Royal Entomological Society page that hosts the download for the Hymenoptera - Formicidae handbook.
-- Verified at: 2026-10-26T19:52:17.875642+00:00
+- Verified at: 2026-10-27T00:35:29.518050+00:00
 
 ## res-handbook-vol-6-part-4-hymenoptera-pompilidae.html
 
@@ -9781,8 +9748,8 @@
 - Wayback link: [https://web.archive.org/web/20210714233912/https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf](<https://web.archive.org/web/20210714233912/https://www.royensoc.co.uk/sites/default/files/Vol06_Part05.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides access to the publication details and typically hosts the digital version of their out-of-print handbooks.
-- Verified at: 2026-10-26T19:52:18.634007+00:00
+- Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their publications.
+- Verified at: 2026-10-27T00:35:32.194506+00:00
 
 ## res-handbook-vol-7-part-1-hymenoptera-ichneumonoidea-pimplinae.html
 
@@ -9819,7 +9786,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their out-of-print publications.
-- Verified at: 2026-10-26T19:52:19.279472+00:00
+- Verified at: 2026-10-27T00:35:32.125289+00:00
 
 ## res-handbook-vol-7-part-2a-i-hymenoptera-ichneumonoidea.html
 
@@ -9924,7 +9891,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official Royal Entomological Society page for the publication, which provides access to the handbook.
-- Verified at: 2026-10-26T19:52:41.477466+00:00
+- Verified at: 2026-10-27T00:35:34.799130+00:00
 
 ## res-handbook-vol-8-part-2b-hymenoptera-2-chalcidoidea-section-b.html
 
@@ -9944,7 +9911,7 @@
 - Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct, corrected URL for the PDF version of the RES Handbook Vol 8 Part 2b, as cited in academic literature.
-- Verified at: 2026-10-26T19:52:44.641905+00:00
+- Verified at: 2026-10-27T00:35:37.430989+00:00
 
 ## res-handbook-vol-8-part-3d-i-hymenoptera-proctotrupoidea-diapriidae-subfamily-diapriinae.html
 
@@ -9980,8 +9947,8 @@
 - Wayback link: [https://web.archive.org/web/20210801041207/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf](<https://web.archive.org/web/20210801041207/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_ii.pdf>)
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/>)
 - Alternative probability: 0.90
-- Alternative reasoning: This is the official Royal Entomological Society shop page for the out-of-print handbook, which serves as the primary source for the publication.
-- Verified at: 2026-10-26T19:52:49.571382+00:00
+- Alternative reasoning: This is the official Royal Entomological Society product page for the out-of-print handbook, which serves as the primary source for the publication.
+- Verified at: 2026-10-27T00:35:35.159468+00:00
 
 ## res-handbook-vol-9-part-1-diptera-1-introduction-and-key-families.html
 
@@ -10052,7 +10019,7 @@
 - Alternative link: [https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf](<https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct URL to the PDF of the RES Handbook Vol 9 Part 2 iii, as referenced in academic and identification resource documentation.
-- Verified at: 2026-10-26T19:52:53.505453+00:00
+- Verified at: 2026-10-27T00:35:38.501109+00:00
 
 ## res-handbook-vol-9-part-3-diptera-nematocera-mycetophilidae-bolitophilinae-ditomyiinae.html
 
@@ -10090,7 +10057,7 @@
 - Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official Royal Entomological Society product page for the handbook, which provides a description and download options for the publication.
-- Verified at: 2026-10-26T19:52:58.458200+00:00
+- Verified at: 2026-10-27T00:35:41.565089+00:00
 
 ## res-handbook-vol-9-part-5-diptera-orthorrhapha-brachycera-dolichopodidae.html
 
@@ -10221,7 +10188,7 @@
 - Alternative link: [https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750](<https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official publisher's product page for the book, providing comprehensive details and purchase links.
-- Verified at: 2026-10-26T19:53:01.267243+00:00
+- Verified at: 2026-10-27T00:35:45.520560+00:00
 
 ## saltmarsh-plants-britain.html
 
@@ -10416,7 +10383,7 @@
 - Alternative link: [https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/](<https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/>)
 - Alternative probability: 0.60
 - Alternative reasoning: This is a direct product page for the 'Guide to the Seasons' fold-out chart on a specialized natural history bookstore website.
-- Verified at: 2026-10-26T19:53:16.201553+00:00
+- Verified at: 2026-10-27T00:35:44.124199+00:00
 
 ## seed-and-leaf-beetles.html
 
@@ -10849,7 +10816,7 @@
 - Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html](<https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html>)
 - Alternative probability: 0.80
 - Alternative reasoning: While the direct PDF link is broken, the Natural History Museum hosts the guide on their 'Identify Nature' section, which is the standard location for these resources.
-- Verified at: 2026-10-26T19:53:25.585294+00:00
+- Verified at: 2026-10-27T00:35:43.958600+00:00
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-1.html
 
@@ -11667,9 +11634,9 @@
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20230924011734/https://www.field-studies-council.org/shop/publications/vespoid-wasps/](<https://web.archive.org/web/20230924011734/https://www.field-studies-council.org/shop/publications/vespoid-wasps/>)
 - Alternative link: [https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002](<https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002>)
-- Alternative probability: 0.60
-- Alternative reasoning: Pemberley Books is a specialized entomological bookseller that hosts a dedicated product page for this specific identification guide.
-- Verified at: 2026-10-26T19:54:00.626080+00:00
+- Alternative probability: 0.85
+- Alternative reasoning: Pemberley Books is a specialized entomological bookseller that hosts a direct product page for this specific identification guide.
+- Verified at: 2026-10-27T00:35:51.685651+00:00
 
 ## water-beetle-adults-and-larvae.html
 
@@ -11685,10 +11652,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211203151215/https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor](<https://web.archive.org/web/20211203151215/https://www.environmentjob.co.uk/jobs/84587-senior-land-advisor>)
-- Alternative link: [https://journals.openedition.org/bmsll/4151](<https://journals.openedition.org/bmsll/4151>)
-- Alternative probability: 0.80
-- Alternative reasoning: The guide 'Coléoptères aquatiques (genres : adultes et larves)' by Philippe Richoux was published in the Bulletin mensuel de la Société linnéenne de Lyon (1982, Vol 51, issues 4, 8, and 9), which is hosted on the OpenEdition Journals platform.
-- Verified at: 2026-10-26T19:53:58.277630+00:00
+- Verified at: 2026-10-27T00:35:45.919868+00:00
 
 ## water-horsetail-id-video.html
 
@@ -11961,8 +11925,8 @@
 - Web link state: broken
 - Alternative link: [https://www.field-studies-council.org/shop/publications/woodland-name-trail/](<https://www.field-studies-council.org/shop/publications/woodland-name-trail/>)
 - Alternative probability: 0.95
-- Alternative reasoning: This is the official product page for the Woodland Name Trail on the Field Studies Council website, which is the primary publisher of the guide.
-- Verified at: 2026-10-26T19:54:11.659799+00:00
+- Alternative reasoning: This is the official Field Studies Council product page for the 'Woodland name trail' guide, which replaces the broken link provided.
+- Verified at: 2026-10-27T00:35:48.717539+00:00
 
 ## woodland-plants.html
 

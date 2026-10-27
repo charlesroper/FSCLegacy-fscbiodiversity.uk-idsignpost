@@ -233,6 +233,7 @@ flowchart TD
   8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
 - After the run, drop any alternative URL assigned to three or more entries and cache a negative verdict. Such a URL is a category page, not a specific guide.
+- Confirmation runs once, when a candidate is discovered. An alternative read back from the entry-tier cache is reused without a second model call.
 - Cache the verdict, including negative verdicts, in the entry-tier cache. Do not cache transient Gemini or HTTP errors.
 
 #### Step 2d: Wayback Lookup and Save Page Now (`wayback.py`)
