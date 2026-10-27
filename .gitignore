@@ -38,9 +38,7 @@ idsignpost.md.bak
 .coverage
 htmlcov/
 
-.projectmem/events.jsonl
-.projectmem/watch.pid
-.projectmem/watch.log
-.projectmem/structure.json
+.projectmem/
+.codegraph/
 
 .env
