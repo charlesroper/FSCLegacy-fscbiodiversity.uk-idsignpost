@@ -2090,7 +2090,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf](<https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf>)
-- Alternative note: rejected: The candidate link is a general index page for multiple species guides rather than the specific guide for 'Bumblebees of Norfolk' described in the entry.; rejected: link returned 404
+- Alternative link: [https://norfolknaturalists.org.uk/wp/wp-content/uploads/2021/02/Bumblebees.pdf](<https://norfolknaturalists.org.uk/wp/wp-content/uploads/2021/02/Bumblebees.pdf>)
+- Alternative probability: 0.80
+- Alternative reasoning: PDF of the Norfolk bumblebee identification guide linked from the species guides index.
+- Alternative note: confirmed: The PDF document is a direct match for the described guide, as it is authored by David Richmond and provides the identification aid for Norfolk bumblebees categorized into the three specific groups mentioned.
 - Verified at: 2026-10-27T02:11:51.534390+00:00
 
 ## butterflies-britain.html
@@ -2155,7 +2158,10 @@
 - Web link: [https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf>)
 - Web link status: 404
 - Web link state: broken
-- Alternative note: rejected: The candidate link is a category or index page listing multiple guides rather than the specific publication 'Butterflies of Norfolk'.
+- Alternative link: [https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf>)
+- Alternative probability: 0.80
+- Alternative reasoning: PDF of the Norfolk butterfly identification guide linked from the species guides index.
+- Alternative note: confirmed: The PDF document is a direct match for the publication 'Butterflies of Norfolk' by the Norfolk & Norwich Naturalists' Society, which serves as a photographic guide to the species in that region.
 - Verified at: 2026-10-27T02:11:54.042130+00:00
 
 ## butterfly-id-europe-ispiny-pocket-guide-butterflies-and-day-flying-moths.html
@@ -3876,7 +3882,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf](<https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf>)
-- Alternative note: rejected: The candidate link is a general index page for multiple species guides rather than the specific publication 'Grasshoppers of Norfolk' by David Richmond.
+- Alternative link: [https://norfolknaturalists.org.uk/wp/wp-content/uploads/2025/09/Grasshoppers.pdf](<https://norfolknaturalists.org.uk/wp/wp-content/uploads/2025/09/Grasshoppers.pdf>)
+- Alternative probability: 0.80
+- Alternative reasoning: PDF of the Norfolk grasshopper identification guide linked from the species guides index.
+- Alternative note: confirmed: The candidate link is a direct PDF document that matches the title and subject matter of the guide described.
 - Verified at: 2026-10-27T02:12:14.122563+00:00
 
 ## great-horsetail-id-video.html
@@ -9061,7 +9070,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210716075334/https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf](<https://web.archive.org/web/20210716075334/https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf>)
-- Alternative note: rejected: The candidate link leads to a general category page for out-of-print handbooks rather than the specific publication page for the Thysanoptera handbook.; ignored: same as the broken link
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/thysanoptera/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/thysanoptera/>)
+- Alternative probability: 0.80
+- Alternative reasoning: Specific Royal Entomological Society product page for the Thysanoptera handbook.
+- Alternative note: confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Thysanoptera, which matches the title and authorship of the requested entry.
 - Verified at: 2026-10-27T02:14:22.133312+00:00
 
 ## res-handbook-vol-1-part-14a-trichoptera-hydroptilidae.html
@@ -9097,7 +9109,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf](<https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf>)
-- Alternative note: rejected: The candidate link is a general category page for out-of-print handbooks rather than the specific publication page for the RES Handbook on Siphonaptera.
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/siphonaptera/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/siphonaptera/>)
+- Alternative probability: 0.80
+- Alternative reasoning: Specific Royal Entomological Society product page for the Siphonaptera handbook.
+- Alternative note: confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Siphonaptera, which matches the title and subject matter of the original catalogue entry.
 - Verified at: 2026-10-27T02:14:23.167343+00:00
 
 ## res-handbook-vol-1-part-2-thysanura-and-diplura.html
@@ -9133,7 +9148,10 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf](<https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf>)
-- Alternative note: rejected: The candidate link is a general index page for out-of-print handbooks rather than the specific publication page for the RES Handbook Vol 1 Part 5.
+- Alternative link: [https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dermaptera-and-orthoptera/](<https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dermaptera-and-orthoptera/>)
+- Alternative probability: 0.80
+- Alternative reasoning: Specific Royal Entomological Society product page for the Dermaptera and Orthoptera handbook.
+- Alternative note: confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Dermaptera and Orthoptera authored by W. D. Hincks, matching the entry title and description.
 - Verified at: 2026-10-27T02:14:27.126138+00:00
 
 ## res-handbook-vol-1-part-6-plecoptera.html

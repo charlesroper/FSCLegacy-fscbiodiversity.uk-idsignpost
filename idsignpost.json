@@ -3426,10 +3426,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20201019210521/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Bumblebees.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link is a general index page for multiple species guides rather than the specific guide for 'Bumblebees of Norfolk' described in the entry.; rejected: link returned 404",
+    "alternative_link": "https://norfolknaturalists.org.uk/wp/wp-content/uploads/2021/02/Bumblebees.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "PDF of the Norfolk bumblebee identification guide linked from the species guides index.",
+    "alternative_note": "confirmed: The PDF document is a direct match for the described guide, as it is authored by David Richmond and provides the identification aid for Norfolk bumblebees categorized into the three specific groups mentioned.",
     "verified_at": "2026-10-27T02:11:51.534390+00:00"
   },
   {
@@ -3531,10 +3531,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link is a category or index page listing multiple guides rather than the specific publication 'Butterflies of Norfolk'.",
+    "alternative_link": "https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "PDF of the Norfolk butterfly identification guide linked from the species guides index.",
+    "alternative_note": "confirmed: The PDF document is a direct match for the publication 'Butterflies of Norfolk' by the Norfolk & Norwich Naturalists' Society, which serves as a photographic guide to the species in that region.",
     "verified_at": "2026-10-27T02:11:54.042130+00:00"
   },
   {
@@ -6311,10 +6311,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20201019204152/http://norfolknaturalists.org.uk/wp/wp-content/uploads/2016/12/Grasshoppers.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link is a general index page for multiple species guides rather than the specific publication 'Grasshoppers of Norfolk' by David Richmond.",
+    "alternative_link": "https://norfolknaturalists.org.uk/wp/wp-content/uploads/2025/09/Grasshoppers.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "PDF of the Norfolk grasshopper identification guide linked from the species guides index.",
+    "alternative_note": "confirmed: The candidate link is a direct PDF document that matches the title and subject matter of the guide described.",
     "verified_at": "2026-10-27T02:12:14.122563+00:00"
   },
   {
@@ -14293,10 +14293,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210716075334/https://www.royensoc.co.uk/sites/default/files/Vol01_Part11.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link leads to a general category page for out-of-print handbooks rather than the specific publication page for the Thysanoptera handbook.; ignored: same as the broken link",
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/thysanoptera/",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "Specific Royal Entomological Society product page for the Thysanoptera handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Thysanoptera, which matches the title and authorship of the requested entry.",
     "verified_at": "2026-10-27T02:14:22.133312+00:00"
   },
   {
@@ -14347,10 +14347,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210714143615/https://www.royensoc.co.uk/sites/default/files/Vol01_Part16.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link is a general category page for out-of-print handbooks rather than the specific publication page for the RES Handbook on Siphonaptera.",
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/siphonaptera/",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "Specific Royal Entomological Society product page for the Siphonaptera handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Siphonaptera, which matches the title and subject matter of the original catalogue entry.",
     "verified_at": "2026-10-27T02:14:23.167343+00:00"
   },
   {
@@ -14401,10 +14401,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211022104724/https://www.royensoc.co.uk/sites/default/files/Vol01_Part05.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": "rejected: The candidate link is a general index page for out-of-print handbooks rather than the specific publication page for the RES Handbook Vol 1 Part 5.",
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dermaptera-and-orthoptera/",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "Specific Royal Entomological Society product page for the Dermaptera and Orthoptera handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Dermaptera and Orthoptera authored by W. D. Hincks, matching the entry title and description.",
     "verified_at": "2026-10-27T02:14:27.126138+00:00"
   },
   {
