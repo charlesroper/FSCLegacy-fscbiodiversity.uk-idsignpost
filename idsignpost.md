@@ -3481,7 +3481,7 @@
 - Alternative link: [https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965](<https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965>)
 - Alternative probability: 0.70
 - Alternative reasoning: Pemberley Books is a specialized entomological bookseller that provides a dedicated product page for this specific RES Handbook title.
-- Verified at: 2026-10-26T19:45:26.305193+00:00
+- Verified at: 2026-10-27T01:47:36.209482+00:00
 
 ## flight-identification-european-passerines-and-select-landbirds-illustrated-and.html
 
@@ -10297,10 +10297,7 @@
 - Web link status: 404
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20160418134524/http://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53](<https://web.archive.org/web/20160418134524/http://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=53>)
-- Alternative link: [https://seasearchireland.ie/species-identification/](<https://seasearchireland.ie/species-identification/>)
-- Alternative probability: 0.70
-- Alternative reasoning: This page hosts a list of identification resources, including the guide, and provides context on its utility for recorders.
-- Verified at: 2026-10-26T19:53:07.392034+00:00
+- Verified at: 2026-10-27T01:52:59.379005+00:00
 
 ## seasearch-guide-sea-anemones-and-corals-britain-and-ireland-2nd-edition.html
 
