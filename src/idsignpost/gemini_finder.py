@@ -248,6 +248,31 @@ class GeminiFinder:
         text = await self._generate(prompt, json_mode=True)
         return parse_redirect_verdict(text) if text is not None else None
 
+    async def confirm_alternative(
+        self,
+        entry: CatalogEntry,
+        *,
+        url: str,
+        page_title: str | None,
+        page_h1: str | None,
+    ) -> bool | None:
+        """Decide whether a live candidate offers this guide, not something else."""
+        prompt = (
+            "A catalogue entry lost its link and a candidate replacement was found. "
+            "Decide whether the candidate page offers the same guide. Reject a "
+            "different publication, a category or index page, and an error page.\n"
+            f"Entry title: {entry.title}\n"
+            f"Authors: {entry.authors or 'unknown'}\n"
+            f"Description: {entry.description or 'unknown'}\n"
+            f"Candidate link: {url}\n"
+            f"Page title: {page_title or 'unknown'}\n"
+            f"Page heading: {page_h1 or 'unknown'}\n"
+            'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
+        )
+        text = await self._generate(prompt, json_mode=True)
+        verdict = parse_redirect_verdict(text) if text is not None else None
+        return None if verdict is None else verdict.is_match
+
     async def discover(self, entry: CatalogEntry) -> list[Candidate] | None:
         """Ask for up to three ranked replacement URLs for a broken link."""
         if not entry.web_link:
@@ -307,6 +332,14 @@ class GeminiFinder:
                 transient = True
                 continue
             if result.state != "ok" or result.is_suspicious_redirect:
+                continue
+            match = await self.confirm_alternative(
+                entry,
+                url=result.resolved_url or cleaned,
+                page_title=result.page_title,
+                page_h1=result.page_h1,
+            )
+            if match is False:
                 continue
             return DiscoveryOutcome(
                 alternative=Alternative(

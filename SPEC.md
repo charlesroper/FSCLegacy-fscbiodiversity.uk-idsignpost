@@ -229,8 +229,9 @@ flowchart TD
   4. Strip tracking parameters and fragments.
   5. Reject direct image files and site root candidates (empty path or `/`). A linked image or homepage returns 200, so the redirect heuristics never see it as suspicious.
   6. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
-  7. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
-  8. Pick the first live candidate in rank order with `probability >= min_probability` (default `0.40`).
+  7. Ask the model to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title and first heading. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
+  8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
+  9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
 - After the run, drop any alternative URL assigned to three or more entries and cache a negative verdict. Such a URL is a category page, not a specific guide.
 - Cache the verdict, including negative verdicts, in the entry-tier cache. Do not cache transient Gemini or HTTP errors.
 

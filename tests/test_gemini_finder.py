@@ -256,7 +256,8 @@ async def test_find_alternative_falls_back_when_first_candidate_is_dead() -> Non
             '{"candidates": ['
             '{"url": "https://dead.example/guide", "probability": 0.9},'
             '{"url": "https://live.example/guide", "probability": 0.8}'
-            "]}"
+            "]}",
+            '{"is_match": true, "reasoning": "same guide"}',
         ]
     )
     checker = FakeChecker(
@@ -304,6 +305,63 @@ async def test_find_alternative_rejects_site_homepages() -> None:
 
     assert outcome.alternative is None
     assert checker.checked == []
+
+
+async def test_find_alternative_rejects_a_page_for_a_different_book() -> None:
+    finder, _, _ = make_finder(
+        [
+            '{"candidates": ['
+            '{"url": "https://shop.example/wrong-book", "probability": 0.9},'
+            '{"url": "https://shop.example/right-book", "probability": 0.8}'
+            "]}",
+            '{"is_match": false, "reasoning": "different title"}',
+            '{"is_match": true, "reasoning": "same guide"}',
+        ]
+    )
+    checker = FakeChecker(
+        {
+            "https://shop.example/wrong-book": live("https://shop.example/wrong-book"),
+            "https://shop.example/right-book": live("https://shop.example/right-book"),
+        }
+    )
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative == Alternative("https://shop.example/right-book", 0.8)
+
+
+async def test_find_alternative_keeps_a_live_candidate_when_confirmation_fails() -> (
+    None
+):
+    finder, _, _ = make_finder(
+        [
+            '{"candidates": [{"url": "https://shop.example/guide", "probability": 0.9}]}',
+            "not json",
+        ]
+    )
+    checker = FakeChecker(
+        {"https://shop.example/guide": live("https://shop.example/guide")}
+    )
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative == Alternative("https://shop.example/guide", 0.9)
+
+
+async def test_confirmation_prompt_includes_the_page_metadata() -> None:
+    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
+
+    await finder.confirm_alternative(
+        entry(),
+        url="https://shop.example/guide",
+        page_title="Bats in flight",
+        page_h1="Bat guide",
+    )
+
+    contents = client.models.calls[0]["contents"]
+    assert "https://shop.example/guide" in contents
+    assert "Bats in flight" in contents
+    assert "Bat guide" in contents
 
 
 @pytest.mark.parametrize(
@@ -373,7 +431,8 @@ async def test_find_alternative_rejects_suspicious_redirects() -> None:
             '{"candidates": ['
             '{"url": "https://example.org/hub", "probability": 0.9},'
             '{"url": "https://example.org/real", "probability": 0.6}'
-            "]}"
+            "]}",
+            '{"is_match": true, "reasoning": "same guide"}',
         ]
     )
     checker = FakeChecker(
