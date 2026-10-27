@@ -38,3 +38,12 @@ This document records the five-stage plan used to resolve all findings from the 
   - Update `SPEC.md` Sections 2.2, 4.2, and 4.3 to match the tested behavior.
   - Document the review and cleanup milestone in `NARRATIVE.md` Section 14.
   - Record this plan in `PLAN.md`.
+
+## Stage 6: Wayback Fallback and Save Page Now for Alternatives
+
+- **Problem:** When an original `web_link` rots and has no historical Wayback snapshot, its confirmed live `alternative_link` was never checked for existing snapshots or captured via Save Page Now.
+- **Resolution:**
+  - Add `CatalogCache.get_wayback` and extend `CatalogCache.set_wayback` to create URL records on demand.
+  - When a broken entry has no original snapshot and a confirmed `alternative_link` exists, look up `alternative_link` and, when `--save-archive` is active, capture it with Save Page Now.
+  - Cache the alternative snapshot in the URL tier under the alternative URL and store it in `wayback_link`.
+  - Update `SPEC.md` and backfill the catalog via `uv run idsignpost run --save-archive`.

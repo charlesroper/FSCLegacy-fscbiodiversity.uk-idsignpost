@@ -123,7 +123,7 @@ class CatalogEntry(BaseModel):
     web_link_status: str | None = None           # Decimal HTTP code ("200", "404") or canonical error string ("connect_error", "timeout", "protocol_error", "too_many_redirects", "invalid_url", "http_error", "redirect_mismatch")
     web_link_state: LinkState | None = None      # "ok", "broken", "blocked", or None when no verification exists
     web_link_resolved: str | None = None         # Final destination URL if redirected to a different host or path
-    wayback_link: str | None = None              # Closest https://web.archive.org/web/... snapshot URL
+    wayback_link: str | None = None              # Closest https://web.archive.org/web/... snapshot URL (for web_link, or alternative_link fallback)
     alternative_link: str | None = None          # Verified live replacement URL (only when web_link_state == "broken")
     alternative_probability: float | None = Field(default=None, ge=0.0, le=1.0)  # Confidence score in [0.0, 1.0]
     alternative_reasoning: str | None = None     # One-sentence justification from Gemini for the chosen URL
@@ -245,6 +245,9 @@ flowchart TD
 - If no snapshot exists, `web_link_state == "ok"`, and `--save-archive` is enabled:
   - Trigger `https://web.archive.org/save/<url>` with a 60 second timeout, a hard cap of 2 concurrent captures independent of `--wayback-concurrency`, and 429 handling that skips the capture for this run.
   - Extract the new snapshot URL from the final redirect URL or `Content-Location` header and store it in `wayback_link`.
+- If an entry is `broken`, its original `web_link` has no Wayback snapshot, and a confirmed `alternative_link` exists:
+  - Query the Availability API for `alternative_link`. If found, store it in `wayback_link` and cache it under the alternative URL in the URL tier.
+  - If no snapshot exists for `alternative_link` and `--save-archive` is enabled, trigger Save Page Now for `alternative_link` and store the resulting snapshot in `wayback_link`.
 - `blocked` links get a read-only lookup. `blocked` entries do not get alternative discovery; this is a known blind spot.
 - If the final state is not `broken`, clear `alternative_link`, `alternative_probability`, `alternative_reasoning`, and `alternative_note`.
 
