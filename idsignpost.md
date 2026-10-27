@@ -611,6 +611,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20230307213655/http://www.botanicalkeys.co.uk/flora/](<https://web.archive.org/web/20230307213655/http://www.botanicalkeys.co.uk/flora/>)
+- Alternative note: ignored: same dead host as the broken link; ignored: same as the broken link
 
 ## brambles-rubus-britain-and-ireland.html
 
@@ -639,6 +640,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20211204155820/http://www.bristletail.net/index.html](<https://web.archive.org/web/20211204155820/http://www.bristletail.net/index.html>)
+- Alternative note: ignored: same dead host as the broken link
 
 ## bristol-university-tick-id.html
 
@@ -992,6 +994,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220929163938/http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP](<https://web.archive.org/web/20220929163938/http://www.botanicalkeys.co.uk/flora/content/SEARCH.ASP>)
+- Alternative note: ignored: same dead host as the broken link
 
 ## bsbi-handbook-no-1-sedges-british-isles.html
 
@@ -2983,6 +2986,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
+- Alternative note: ignored: same dead host as the broken link; rejected: link returned 403
 
 ## dreaded-scopariinae-–-some-notes-identification-2.html
 
@@ -2999,6 +3003,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf](<https://web.archive.org/web/20210627095224/http://bmg.b-i-s.org/upload/library/The_Scopariinae.pdf>)
+- Alternative note: ignored: same dead host as the broken link
 
 ## ducks-geese-and-swans.html
 
@@ -5067,6 +5072,10 @@
 - Web link: [http://sars.brc.ac.uk/resources](<http://sars.brc.ac.uk/resources>)
 - Web link status: connect_error
 - Web link state: broken
+- Alternative link: [https://dipterists.org.uk/soldierflies-allies-scheme/id-guides](<https://dipterists.org.uk/soldierflies-allies-scheme/id-guides>)
+- Alternative probability: 0.85
+- Alternative reasoning: Official Soldierflies and Allies Recording Scheme identification guides page.
+- Alternative note: confirmed: The candidate page is the official identification guide resource for the Soldierflies and Allies Recording Scheme, which directly matches the content and purpose of the original catalogue entry.
 
 ## identify-butterfly.html
 
@@ -5095,6 +5104,7 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20220831124338/http://www.botanicalkeys.co.uk/flora/euphrasia/EUcontent/EuSearch.ASP](<https://web.archive.org/web/20220831124338/http://www.botanicalkeys.co.uk/flora/euphrasia/EUcontent/EuSearch.ASP>)
+- Alternative note: ignored: same as the broken link
 
 ## identifying-beetles.html
 
@@ -7182,6 +7192,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20230301124944/http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf](<https://web.archive.org/web/20230301124944/http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf>)
+- Alternative link: [https://bsbi.org/learn/resources/identification-guides/daffodil-identification](<https://bsbi.org/learn/resources/identification-guides/daffodil-identification>)
+- Alternative probability: 0.85
+- Alternative reasoning: BSBI identification guide compiled by Mick Crawley.
+- Alternative note: confirmed: The candidate page provides the specific identification guide authored by Mick Crawley for wild and introduced daffodils in Great Britain, matching the catalogue entry.
 
 ## key-woodlice-britain-and-ireland.html
 
@@ -10486,6 +10500,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20260512190026/https://server4.ghostly.top/](<https://web.archive.org/web/20260512190026/https://server4.ghostly.top/>)
+- Alternative link: [https://rogersmushrooms.com/gallery/chooser.html](<https://rogersmushrooms.com/gallery/chooser.html>)
+- Alternative probability: 0.80
+- Alternative reasoning: Multi-access key on the Rogers Mushrooms site.
+- Alternative note: confirmed: The candidate page is the original Rogers Mushrooms website, which provides the exact mushroom identification guide and reference tool described in the entry.
 
 ## rosewildflower-key.html
 
@@ -11158,6 +11176,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20200606184600/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf](<https://web.archive.org/web/20200606184600/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
+- Alternative link: [https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf](<https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf>)
+- Alternative probability: 0.95
+- Alternative reasoning: This is the direct URL for the PDF file hosted on the Museu Nacional/UFRJ server, which is the source referenced in the broken link provided.
+- Alternative note: confirmed: The candidate link points directly to a PDF file that matches the author, publication year, and specific part (1) of the requested catalogue entry.
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-2.html
 
@@ -11172,6 +11194,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20200606184605/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf](<https://web.archive.org/web/20200606184605/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
+- Alternative link: [https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf](<https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the direct URL to the PDF file hosted by the Museu Nacional/UFRJ, which is the repository referenced in the user's broken link and associated with the author's literature collection.
+- Alternative note: confirmed: The candidate link points directly to the specific PDF document corresponding to the second part of Jochen Martens' 1978 publication on Opiliones, matching the title and description provided.
 
 ## spinnentiere-arachnida-weberknechte-opiliones-martens-1978-part-3.html
 
@@ -11186,6 +11212,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20200606184621/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf](<https://web.archive.org/web/20200606184621/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
+- Alternative link: [https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf](<https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf>)
+- Alternative probability: 0.80
+- Alternative reasoning: PDF of part 3 hosted on the updated Museu Nacional arachnology archive.
+- Alternative note: confirmed: The candidate link points directly to the specific PDF document corresponding to the title, author, and page range of the catalog entry.
 
 ## sponges-britain-and-ireland.html
 
@@ -11235,6 +11265,7 @@
 - Web link: [https://kb-moths.tech-trends.co.uk/index.html](<https://kb-moths.tech-trends.co.uk/index.html>)
 - Web link status: connect_error
 - Web link state: broken
+- Alternative note: ignored: blocked host or image file
 
 ## spring-snowdrop-identification.html
 
@@ -11478,6 +11509,10 @@
 - Web link status: connect_error
 - Web link state: broken
 - Wayback link: [https://web.archive.org/web/20210119113811/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf](<https://web.archive.org/web/20210119113811/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf>)
+- Alternative link: [https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Hillyard%20%26%20Sankey%201989%20British%20Opiliones.pdf](<https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Hillyard%20%26%20Sankey%201989%20British%20Opiliones.pdf>)
+- Alternative probability: 0.80
+- Alternative reasoning: PDF copy of the Hillyard and Sankey harvestmen synopsis.
+- Alternative note: confirmed: The candidate link points directly to a PDF copy of the 1989 Linnean Society publication 'British Opiliones' by Hillyard & Sankey, which matches the requested title and description.
 
 ## tachinid-recording-scheme.html
 

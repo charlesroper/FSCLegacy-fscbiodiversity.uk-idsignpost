@@ -953,7 +953,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same dead host as the broken link; ignored: same as the broken link",
     "verified_at": null
   },
   {
@@ -1005,7 +1005,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same dead host as the broken link",
     "verified_at": null
   },
   {
@@ -1607,7 +1607,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same dead host as the broken link",
     "verified_at": null
   },
   {
@@ -4873,7 +4873,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same dead host as the broken link; rejected: link returned 403",
     "verified_at": null
   },
   {
@@ -4899,7 +4899,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same dead host as the broken link",
     "verified_at": null
   },
   {
@@ -8162,10 +8162,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://dipterists.org.uk/soldierflies-allies-scheme/id-guides",
+    "alternative_probability": 0.85,
+    "alternative_reasoning": "Official Soldierflies and Allies Recording Scheme identification guides page.",
+    "alternative_note": "confirmed: The candidate page is the official identification guide resource for the Soldierflies and Allies Recording Scheme, which directly matches the content and purpose of the original catalogue entry.",
     "verified_at": null
   },
   {
@@ -8217,7 +8217,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: same as the broken link",
     "verified_at": null
   },
   {
@@ -11371,10 +11371,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20230301124944/http://www.botanicalkeys.co.uk/flora/content/daffodilkey.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://bsbi.org/learn/resources/identification-guides/daffodil-identification",
+    "alternative_probability": 0.85,
+    "alternative_reasoning": "BSBI identification guide compiled by Mick Crawley.",
+    "alternative_note": "confirmed: The candidate page provides the specific identification guide authored by Mick Crawley for wild and introduced daffodils in Great Britain, matching the catalogue entry.",
     "verified_at": null
   },
   {
@@ -16311,10 +16311,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20260512190026/https://server4.ghostly.top/",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://rogersmushrooms.com/gallery/chooser.html",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "Multi-access key on the Rogers Mushrooms site.",
+    "alternative_note": "confirmed: The candidate page is the original Rogers Mushrooms website, which provides the exact mushroom identification guide and reference tool described in the entry.",
     "verified_at": null
   },
   {
@@ -17394,10 +17394,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20200606184600/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%201%20-%20pag%201-229.pdf",
+    "alternative_probability": 0.95,
+    "alternative_reasoning": "This is the direct URL for the PDF file hosted on the Museu Nacional/UFRJ server, which is the source referenced in the broken link provided.",
+    "alternative_note": "confirmed: The candidate link points directly to a PDF file that matches the author, publication year, and specific part (1) of the requested catalogue entry.",
     "verified_at": null
   },
   {
@@ -17420,10 +17420,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20200606184605/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%202%20-%20pag%20228-321.pdf",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This is the direct URL to the PDF file hosted by the Museu Nacional/UFRJ, which is the repository referenced in the user's broken link and associated with the author's literature collection.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific PDF document corresponding to the second part of Jochen Martens' 1978 publication on Opiliones, matching the title and description provided.",
     "verified_at": null
   },
   {
@@ -17446,10 +17446,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20200606184621/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Martens/Martens%201978%20-%20part%203%20-%20pag%20322-464.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "PDF of part 3 hosted on the updated Museu Nacional arachnology archive.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific PDF document corresponding to the title, author, and page range of the catalog entry.",
     "verified_at": null
   },
   {
@@ -17531,7 +17531,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_note": "ignored: blocked host or image file",
     "verified_at": null
   },
   {
@@ -17970,10 +17970,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210119113811/http://www.museunacional.ufrj.br/mndi/Aracnologia/pdfliteratura/Hillyard%20&%20Sankey%201989%20British%20Opiliones.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
+    "alternative_link": "https://mndi.museunacional.ufrj.br/aracnologia/pdfliteratura/Hillyard%20%26%20Sankey%201989%20British%20Opiliones.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "PDF copy of the Hillyard and Sankey harvestmen synopsis.",
+    "alternative_note": "confirmed: The candidate link points directly to a PDF copy of the 1989 Linnean Society publication 'British Opiliones' by Hillyard & Sankey, which matches the requested title and description.",
     "verified_at": null
   },
   {
