@@ -94,7 +94,7 @@ Records expire after 30 days by default. Pass `--cache-ttl-days` to change that.
 
 The canonical state values are `ok`, `broken`, and `blocked`. CSV, Parquet, and Markdown label `blocked` as unverified so readers do not mistake it for a healthy link.
 
-Verification fields include `web_link_status`, `web_link_state`, `web_link_resolved`, `wayback_link`, `alternative_link`, `alternative_probability`, `alternative_reasoning`, and `verified_at`.
+Verification fields include `web_link_status`, `web_link_state`, `web_link_resolved`, `wayback_link`, `alternative_link`, `alternative_probability`, `alternative_reasoning`, `alternative_note`, and `verified_at`.
 
 ## Development
 

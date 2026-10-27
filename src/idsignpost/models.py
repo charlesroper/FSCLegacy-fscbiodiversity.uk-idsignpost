@@ -55,6 +55,7 @@ class CatalogEntry(BaseModel):
     alternative_link: str | None = None
     alternative_probability: float | None = Field(default=None, ge=0.0, le=1.0)
     alternative_reasoning: str | None = None
+    alternative_note: str | None = None
     verified_at: str | None = None
 
     @field_validator("web_link_status")

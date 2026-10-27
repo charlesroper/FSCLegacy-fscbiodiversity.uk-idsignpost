@@ -62,6 +62,7 @@ class DiscoveryOutcome:
     alternative: Alternative | None = None
     transient: bool = False
     confirmed: bool = False
+    note: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -71,6 +72,7 @@ class _Attempt:
     alternative: Alternative | None = None
     transient: bool = False
     confirmed: bool = False
+    note: str | None = None
 
 
 class Checker(Protocol):
@@ -90,6 +92,13 @@ def is_blocked_host(url: str) -> bool:
 def is_unusable_alternative(url: str) -> bool:
     """Reject blocked hosts and direct image files as replacement pages."""
     return is_blocked_host(url) or bool(IMAGE_URL.search(url))
+
+
+def _join_notes(notes: list[str], limit: int = 3) -> str | None:
+    """Join the first few candidate notes into one cacheable line."""
+    if not notes:
+        return None
+    return "; ".join(notes[:limit])
 
 
 def _load_json(text: str) -> Any:
@@ -265,7 +274,7 @@ class GeminiFinder:
         url: str,
         page_title: str | None,
         page_h1: str | None,
-    ) -> bool | None:
+    ) -> RedirectVerdict | None:
         """Decide whether a live candidate offers this guide, not something else."""
         prompt = (
             "A catalogue entry lost its link and a candidate replacement was found. "
@@ -280,8 +289,7 @@ class GeminiFinder:
             'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
         )
         text = await self._generate(prompt, json_mode=True)
-        verdict = parse_redirect_verdict(text) if text is not None else None
-        return None if verdict is None else verdict.is_match
+        return parse_redirect_verdict(text) if text is not None else None
 
     async def discover(self, entry: CatalogEntry) -> list[Candidate] | None:
         """Ask for up to three ranked replacement URLs for a broken link."""
@@ -325,6 +333,7 @@ class GeminiFinder:
 
         transient = False
         rejected = False
+        notes: list[str] = []
         if preferred is not None:
             candidate = Candidate(
                 preferred.url, preferred.probability, preferred.reasoning
@@ -332,55 +341,77 @@ class GeminiFinder:
             attempt = await self._try_candidate(entry, candidate, checker)
             transient = transient or attempt.transient
             rejected = attempt.alternative is None and not attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
             if attempt.alternative is not None:
                 return DiscoveryOutcome(
-                    alternative=attempt.alternative, confirmed=attempt.confirmed
+                    alternative=attempt.alternative,
+                    confirmed=attempt.confirmed,
+                    note=attempt.note,
                 )
 
         candidates = await self.discover(entry)
         if candidates is None:
-            return DiscoveryOutcome(transient=not rejected)
+            return DiscoveryOutcome(
+                transient=not rejected, note=_join_notes(notes) or "search failed"
+            )
 
         for candidate in candidates:
             if candidate.probability < self.min_probability:
                 continue
             attempt = await self._try_candidate(entry, candidate, checker)
             transient = transient or attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
             if attempt.alternative is not None:
                 return DiscoveryOutcome(
-                    alternative=attempt.alternative, confirmed=attempt.confirmed
+                    alternative=attempt.alternative,
+                    confirmed=attempt.confirmed,
+                    note=attempt.note,
                 )
-        return DiscoveryOutcome(transient=transient)
+        return DiscoveryOutcome(
+            transient=transient,
+            note=_join_notes(notes) or "no candidates returned",
+        )
 
     async def _try_candidate(
         self, entry: CatalogEntry, candidate: Candidate, checker: Checker
     ) -> _Attempt:
         """Apply policy, liveness, and confirmation to one candidate."""
         if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
-            return _Attempt()
+            return _Attempt(note="ignored: not an http link")
         if is_unusable_alternative(candidate.url):
-            return _Attempt()
+            return _Attempt(note="ignored: blocked host or image file")
         cleaned = cache_key(candidate.url)
         if urlsplit(cleaned).path in {"", "/"}:
-            return _Attempt()
+            return _Attempt(note="ignored: site homepage")
         if urls_equal(cleaned, entry.web_link or ""):
-            return _Attempt()
+            return _Attempt(note="ignored: same as the broken link")
         if not is_public_http_url(cleaned, **self._resolver_kwargs()):
-            return _Attempt()
+            return _Attempt(note="ignored: private address")
         result = await checker.check(cleaned, entry_title=entry.title)
         if not result.cacheable:
-            return _Attempt(transient=True)
+            return _Attempt(transient=True, note="retry: transient check failure")
         if result.state != "ok" or result.is_suspicious_redirect:
-            return _Attempt()
+            return _Attempt(
+                note=f"rejected: link returned {result.status or result.state}"
+            )
         url = result.resolved_url or cleaned
-        match = await self.confirm_alternative(
+        verdict = await self.confirm_alternative(
             entry, url=url, page_title=result.page_title, page_h1=result.page_h1
         )
-        if match is False:
-            return _Attempt()
+        if verdict is not None and not verdict.is_match:
+            reason = verdict.reasoning or "page did not match the entry"
+            return _Attempt(note=f"rejected: {reason}")
+        note = (
+            f"confirmed: {verdict.reasoning}"
+            if verdict is not None and verdict.reasoning
+            else None
+        )
         return _Attempt(
             alternative=Alternative(url, candidate.probability, candidate.reasoning),
-            confirmed=bool(match),
+            confirmed=verdict is not None,
+            note=note,
         )
 
     def _resolver_kwargs(self) -> dict[str, Any]:

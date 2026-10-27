@@ -127,7 +127,8 @@ class CatalogEntry(BaseModel):
     wayback_link: str | None = None              # Closest https://web.archive.org/web/... snapshot URL
     alternative_link: str | None = None          # Verified live replacement URL (only when web_link_state == "broken")
     alternative_probability: float | None = Field(default=None, ge=0.0, le=1.0)  # Confidence score in [0.0, 1.0]
-    alternative_reasoning: str | None = None     # One-sentence justification from Gemini
+    alternative_reasoning: str | None = None     # One-sentence justification from Gemini for the chosen URL
+    alternative_note: str | None = None          # Confirmation sentence, rejection summary, or negative search outcome
     verified_at: str | None = None               # ISO 8601 UTC timestamp of last verification
 ```
 
@@ -232,6 +233,7 @@ flowchart TD
   7. Ask the model to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title and first heading. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
   8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
+  10. Record a note for the outcome: `confirmed: <reasoning>` for an accepted page, or the first three `rejected:`, `ignored:`, and `dropped:` reasons for a failed search. Store it in `alternative_note`.
 - After the run, drop any alternative URL assigned to three or more entries and cache a negative verdict. Such a URL is a category page, not a specific guide.
 - Try a previously stored alternative before searching, so a rerun does not discard a valid result when the model returns different candidates. The stored URL still passes the policy, liveness, and confirmation checks. If that stored URL fails those checks, the negative verdict stands even when the follow-up search cannot run.
 - Confirmation runs once per candidate. The result is cached with the alternative, so a later run reuses a confirmed URL without another model call. A cached alternative that predates the flag is confirmed once on reuse.
@@ -245,7 +247,7 @@ flowchart TD
   - Trigger `https://web.archive.org/save/<url>` with a 60 second timeout, a hard cap of 2 concurrent captures independent of `--wayback-concurrency`, and 429 handling that skips the capture for this run.
   - Extract the new snapshot URL from the final redirect URL or `Content-Location` header and store it in `wayback_link`.
 - `blocked` links get a read-only lookup. `blocked` entries do not get alternative discovery; this is a known blind spot.
-- If the final state is not `broken`, clear `alternative_link`, `alternative_probability`, and `alternative_reasoning`.
+- If the final state is not `broken`, clear `alternative_link`, `alternative_probability`, `alternative_reasoning`, and `alternative_note`.
 
 ### 4.3 Stage 3: Multi-Format Exporters (`export.py`)
 
@@ -290,6 +292,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
       "alternative_url": "https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html",
       "alternative_probability": 0.92,
       "alternative_reasoning": "Official Natural History Museum identification guide page for Bats in flight.",
+      "alternative_note": "confirmed: official NHM guide page for this resource.",
       "alternative_checked": true,
       "alternative_confirmed": true,
       "checked_at": "2026-10-26T00:00:00+00:00"
@@ -305,6 +308,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
 - **Schema mismatch:** A cache file whose `schema_version` is not `2` is discarded.
 - **Timestamps:** On a cache hit, preserve the existing `verified_at`; update it only when a new check runs.
 - **Negative verdicts:** Entry-tier records store failed alternative searches and redirect mismatch verdicts, so a broken entry does not re-query Gemini on every run. Transient Gemini errors are not cached. The `alternative_checked` flag distinguishes a completed search that found nothing from a record that only holds a redirect verdict. The `alternative_confirmed` flag records that a model explicitly matched the page to the entry. A cached alternative without that flag is confirmed once on reuse, then kept or cleared.
+- **Search notes:** `alternative_note` records why a result was accepted or rejected. Accepted values start with `confirmed:` and carry the model's sentence. Negative searches carry the first three rejection reasons (`rejected:`, `ignored:`, `dropped:`) or `no candidates returned`. The note is cached with the entry and copied to the catalog.
 - **Save cadence:** Save the cache every 25 checks and on normal exit or `KeyboardInterrupt`.
 
 ---

@@ -128,9 +128,7 @@ def write_parquet(entries: Iterable[CatalogEntry], path: str | Path) -> Path:
     import pyarrow.parquet as pq
 
     table = parquet_table(list(entries))
-    return atomic_write(
-        path, lambda handle: pq.write_table(table, handle), binary=True
-    )
+    return atomic_write(path, lambda handle: pq.write_table(table, handle), binary=True)
 
 
 def _markdown_link(url: str) -> str:
@@ -195,6 +193,7 @@ def entry_markdown(entry: CatalogEntry) -> str:
             lines, "Alternative probability", f"{entry.alternative_probability:.2f}"
         )
     _bullet(lines, "Alternative reasoning", entry.alternative_reasoning)
+    _bullet(lines, "Alternative note", entry.alternative_note)
     _bullet(lines, "Verified at", entry.verified_at)
     return "\n".join(lines) + "\n"
 

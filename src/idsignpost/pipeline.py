@@ -30,6 +30,7 @@ VERIFICATION_FIELDS = (
     "alternative_link",
     "alternative_probability",
     "alternative_reasoning",
+    "alternative_note",
     "verified_at",
 )
 
@@ -74,7 +75,7 @@ class Finder(Protocol):
         url: str,
         page_title: str | None,
         page_h1: str | None,
-    ) -> bool | None: ...
+    ) -> RedirectVerdict | None: ...
 
 
 class Archive(Protocol):
@@ -110,6 +111,7 @@ class _Verdict:
     alternative: Alternative | None
     transient: bool = False
     keep: bool = False
+    note: str | None = None
     fresh: bool = False
     entry_record: EntryRecord | None = None
     write_entry: bool = False
@@ -211,6 +213,9 @@ class Verifier:
                     "alternative_link": None,
                     "alternative_probability": None,
                     "alternative_reasoning": None,
+                    "alternative_note": (
+                        "dropped: URL shared by three or more entries"
+                    ),
                 }
             )
             record = (
@@ -222,6 +227,7 @@ class Verifier:
                 record.alternative_url = None
                 record.alternative_probability = None
                 record.alternative_reasoning = None
+                record.alternative_note = "dropped: URL shared by three or more entries"
                 record.alternative_checked = True
                 record.alternative_confirmed = False
                 self.cache.put_entry(entry.id, entry.web_link or "", record)
@@ -335,6 +341,7 @@ class Verifier:
 
         alternative = previous
         alternative_confirmed = False
+        note: str | None = None
         discovered = False
         discovery_transient = False
         cached_rejected = False
@@ -345,8 +352,9 @@ class Verifier:
                 if cached_url and is_unusable_alternative(cached_url):
                     alternative = None
                     cached_rejected = True
+                    note = "dropped: blocked host or image file"
                 elif cached_url and not record.alternative_confirmed:
-                    alternative, alternative_confirmed = await self._reconfirm(
+                    alternative, alternative_confirmed, note = await self._reconfirm(
                         entry, record
                     )
                     cached_confirmed = alternative_confirmed
@@ -362,6 +370,7 @@ class Verifier:
                         else None
                     )
                     alternative_confirmed = bool(cached_url)
+                    note = record.alternative_note
             else:
                 discovered = True
                 outcome = await self._discover(entry)
@@ -371,6 +380,7 @@ class Verifier:
                 else:
                     alternative = outcome.alternative
                     alternative_confirmed = outcome.confirmed
+                    note = outcome.note
                     fresh = True
         else:
             alternative = None
@@ -405,6 +415,7 @@ class Verifier:
                     alternative.probability if alternative else None
                 ),
                 alternative_reasoning=(alternative.reasoning if alternative else None),
+                alternative_note=note,
                 alternative_checked=(
                     (record.alternative_checked if record else False) or discovered
                 ),
@@ -418,6 +429,7 @@ class Verifier:
             status=status,
             resolved_url=resolved,
             alternative=alternative,
+            note=note,
             fresh=fresh and not discovery_transient,
             entry_record=entry_record,
             write_entry=write_entry,
@@ -445,11 +457,11 @@ class Verifier:
 
     async def _reconfirm(
         self, entry: CatalogEntry, record: EntryRecord
-    ) -> tuple[Alternative | None, bool]:
+    ) -> tuple[Alternative | None, bool, str | None]:
         """Recheck a cached alternative that was stored before confirmation."""
         url = record.alternative_url
         if not url:
-            return None, False
+            return None, False, None
         cached = Alternative(
             url,
             record.alternative_probability or 0.0,
@@ -457,16 +469,26 @@ class Verifier:
         )
         facts = await self._facts(url, entry.title)
         if facts.transient:
-            return cached, False
+            return cached, False, record.alternative_note
         if facts.result.state != "ok" or facts.result.is_suspicious_redirect:
-            return None, False
+            return None, False, "dropped: stored alternative is no longer live"
         resolved = facts.result.resolved_url or url
-        match = await self._confirm(
+        verdict = await self._confirm(
             entry, resolved, facts.result.page_title, facts.result.page_h1
         )
-        if match is False:
-            return None, False
-        return Alternative(resolved, cached.probability, cached.reasoning), bool(match)
+        if verdict is not None and not verdict.is_match:
+            reason = verdict.reasoning or "page did not match the entry"
+            return None, False, f"rejected: {reason}"
+        note = (
+            f"confirmed: {verdict.reasoning}"
+            if verdict is not None and verdict.reasoning
+            else record.alternative_note
+        )
+        return (
+            Alternative(resolved, cached.probability, cached.reasoning),
+            verdict is not None,
+            note,
+        )
 
     async def _confirm(
         self,
@@ -474,7 +496,7 @@ class Verifier:
         url: str,
         page_title: str | None,
         page_h1: str | None,
-    ) -> bool | None:
+    ) -> RedirectVerdict | None:
         async with self._gemini:
             return await self.finder.confirm_alternative(
                 entry, url=url, page_title=page_title, page_h1=page_h1
@@ -539,6 +561,7 @@ class Verifier:
             "alternative_link": alternative.url if alternative else None,
             "alternative_probability": alternative.probability if alternative else None,
             "alternative_reasoning": alternative.reasoning if alternative else None,
+            "alternative_note": verdict.note,
         }
         if wayback_link is not None:
             updates["wayback_link"] = wayback_link

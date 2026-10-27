@@ -82,9 +82,9 @@ class FakeFinder:
         url: str,
         page_title: str | None,
         page_h1: str | None,
-    ) -> bool | None:
+    ) -> RedirectVerdict | None:
         self.confirm_calls.append((entry.id, url))
-        return self.confirmations.get(entry.id, True)
+        return RedirectVerdict(self.confirmations.get(entry.id, True), "model note")
 
 
 class FakeArchive:
@@ -575,3 +575,40 @@ async def test_confirmed_alternative_is_reused_without_another_call(
 
     assert updated.alternative_link == alt_url
     assert finder.confirm_calls == []
+
+
+async def test_discovery_note_is_stored_with_the_alternative(tmp_path: object) -> None:
+    note = "confirmed: official product page for this handbook"
+    finder = FakeFinder(
+        discoveries={
+            "guide": DiscoveryOutcome(
+                Alternative("https://publisher.example/guide", 0.8),
+                confirmed=True,
+                note=note,
+            )
+        }
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_note == note
+    record = verifier.cache.get_entry("guide", URL)
+    assert record is not None
+    assert record.alternative_note == note
+
+
+async def test_negative_search_note_is_stored(tmp_path: object) -> None:
+    note = "rejected: category index"
+    finder = FakeFinder(discoveries={"guide": DiscoveryOutcome(note=note)})
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_link is None
+    assert updated.alternative_note == note
+    record = verifier.cache.get_entry("guide", URL)
+    assert record is not None
+    assert record.alternative_note == note

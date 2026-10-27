@@ -267,7 +267,9 @@ async def test_find_alternative_falls_back_when_first_candidate_is_dead() -> Non
     outcome = await finder.find_alternative(entry(), checker=checker)
 
     assert outcome == DiscoveryOutcome(
-        Alternative("https://live.example/guide", 0.8), confirmed=True
+        Alternative("https://live.example/guide", 0.8),
+        confirmed=True,
+        note="confirmed: same guide",
     )
     assert checker.checked == [
         "https://dead.example/guide",
@@ -347,6 +349,7 @@ async def test_find_alternative_tries_the_preferred_url_first() -> None:
     assert outcome == DiscoveryOutcome(
         Alternative("https://known.example/guide", 0.7, "from the cache"),
         confirmed=True,
+        note="confirmed: same guide",
     )
     assert len(client.models.calls) == 1
 
@@ -495,7 +498,9 @@ async def test_find_alternative_rejects_suspicious_redirects() -> None:
     outcome = await finder.find_alternative(entry(), checker=checker)
 
     assert outcome == DiscoveryOutcome(
-        Alternative("https://example.org/real", 0.6), confirmed=True
+        Alternative("https://example.org/real", 0.6),
+        confirmed=True,
+        note="confirmed: same guide",
     )
 
 
@@ -560,4 +565,6 @@ async def test_a_rejected_preferred_url_is_not_hidden_by_a_failed_search() -> No
         preferred=Alternative("https://hub.example/list", 0.9),
     )
 
-    assert outcome == DiscoveryOutcome()
+    assert outcome.alternative is None
+    assert outcome.transient is False
+    assert outcome.note == "rejected: category index"

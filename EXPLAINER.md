@@ -31,6 +31,7 @@ The catalogue contains **736 entries**. Each entry describes an identification r
   - `blocked`: the server blocked automated checks (often due to anti-bot protection).
 - **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. More than 500 entries include a working snapshot.
 - **Alternative link and score:** for confirmed broken links, a working replacement found by searching publisher and museum archives, paired with a confidence score between 0.0 and 1.0.
+- **Alternative note:** the reason the replacement was accepted or rejected. Accepted pages carry a confirmation sentence from the model, and failed searches record why each candidate was dropped.
 
 ### Catalogue formats
 
