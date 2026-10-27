@@ -68,7 +68,6 @@ idsignpost/
 │       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, and Markdown
 │       └── cli.py               # Unified CLI (`uv run idsignpost <command>`)
 └── tests/
-    ├── conftest.py
     ├── fixtures/                # Small HTML fixtures for extraction and URL edge cases
     ├── test_models.py           # Schema validation, status values, and duplicate id rejection
     ├── test_urls.py
@@ -210,7 +209,7 @@ flowchart TD
   3. The destination path or HTML `<title>` contains soft-404 phrases (`"404"`, `"not found"`, `"page not found"`, `"error"`, `"expired"`).
   4. The destination path is a generic hub (`/shop`, `/shop/publications`, `/product-category`, `/resources`, `/search`, `/category`) while the entry `title` names a specific guide.
   5. The destination path or title contains `login`, `signin`, `register`, `subscribe`, `consent`, or `cookie`.
-- Transient results (`cacheable = False`) do not overwrite existing `web_link_state`, `web_link_status`, `web_link_resolved`, or `wayback_link`. They are retried on the next run.
+- Transient results (`cacheable = False`) do not overwrite existing `web_link_state`, `web_link_status`, `web_link_resolved`, or `wayback_link` on entries that already have a `web_link_state`. On an unverified entry (`web_link_state is None`), record the provisional `web_link_state`, `web_link_status`, and `web_link_resolved` (plus `wayback_link` if found) without setting `verified_at` or writing to the cache. Transient entries are retried on the next run.
 
 #### Step 2b: Gemini Redirect Verification (`gemini_finder.py`)
 - When a live link has `is_suspicious_redirect == True`, pass the entry metadata (`title`, `authors`, `description`), `web_link`, `web_link_resolved`, and extracted page `<title>` / `<h1>` to `gemini-3.1-flash-lite`.
@@ -221,7 +220,7 @@ flowchart TD
 #### Step 2c: Grounded Alternative Discovery (`gemini_finder.py`)
 - Executed **only** when `web_link_state == "broken"`.
 - Query `gemini-3.1-flash-lite` via `google-genai` with Google Search grounding enabled (`tools=[types.Tool(google_search=types.GoogleSearch())]`) under `gemini_concurrency` (default `3`).
-- Prompt with `title`, `authors`, `description`, `available_as`, `keywords`, and the broken `web_link`, requesting up to 3 ranked candidates (`url`, `probability`, `reasoning`).
+- Prompt with `title`, `authors`, `description`, `available_as`, `keywords`, and the broken `web_link`, requesting up to 3 ranked candidates (`url`, `probability`, `reasoning`). `discover` also accepts an optional `hint` URL naming a rejected index page so targeted passes can request the specific guide page inside that index.
 - Use a 30 second request timeout and retry 429/5xx up to 3 times with backoff. Request JSON output, parse tolerantly, retry once on malformed JSON, then return no candidates.
 - Filter and verify candidates in rank order:
   1. Reject blocked hosts (`fscbiodiversity.uk`, `tombio.uk`, `archive.org`, `web.archive.org`, `ebay.co.uk`, `ebay.com`, `zvab.com`, `scribd.com`) by exact host or dot-suffix, not substring.
@@ -262,7 +261,7 @@ All output formats are rendered directly from the validated `list[CatalogEntry]`
    - All other fields: `pa.string()`
 4. **`idsignpost.md`:** Human-readable Markdown catalog where each entry is rendered under `## <filename>` with clean bullet points, including `Web link`, `Web link state`, `Wayback link`, and `Alternative link` (when present).
 
-All exporters write through a temporary file and `Path.replace`. JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Every format labels `blocked` as unverified.
+All exporters write through a temporary file and `Path.replace`. JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Human-facing exports (`idsignpost.csv`, `idsignpost.parquet`, and `idsignpost.md`) label `blocked` as `unverified`, while `idsignpost.json` keeps the canonical `blocked` state.
 
 ---
 

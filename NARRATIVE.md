@@ -236,3 +236,13 @@ The last fourteen blank notes came from links the checker classified as `connect
 That second group produced four recoveries once the new host was used: all three parts of Martens 1978 on Opiliones and the Hillyard and Sankey harvestmen synopsis. Three more came from targeted searching: the Dipterists Forum identification guides page, the Rogers Mushrooms multi-access key, and the BSBI daffodil guide by Mick Crawley, which replaced a dead PDF. Seven searches ended negative and now carry notes, mostly because the only candidates were on the same dead host.
 
 The catalog holds 92 alternatives. All 196 broken entries without a replacement now have a note, so no search is silent. The count of blocked and unverified entries is unchanged, and the fourteen entries above no longer hide behind a transient label.
+
+---
+
+## 14. Post-run review and tightening
+
+A two-axis review of the branch against the coding standards and specification surfaced a handful of drift points that had crept in during the catalog backfill passes:
+
+- **Shared verification field list.** `VERIFICATION_FIELDS` lived in both `extract.py` and `pipeline.py`. When `alternative_note` was added to `pipeline.py`, `extract.py` missed the update, which meant a fresh `extract` would have wiped `alternative_note` across unchanged entries. Defining `VERIFICATION_FIELDS` once in `models.py` and preserving `alternative_note` on transient discovery failures closed both paths.
+- **Post-redirect candidate policy.** Candidate URLs were checked for blocked hosts, image extensions, homepage paths, and private IP addresses before `HTTPChecker.check`, but not after a redirect. Running the same `_policy_note` gate on `resolved_url` ensures a candidate cannot redirect onto a blocked host or private address.
+- **Removing dead code and legacy scripts.** `extract.py` now shares one `_field_markdown` helper, `gemini_finder.py` uses `DiscoveryOutcome` directly instead of a duplicate `_Attempt` class, cache record mutations live on `EntryRecord` and `CatalogCache`, and the unused `WaybackClient.find` method and obsolete `scripts/` directory are gone.
