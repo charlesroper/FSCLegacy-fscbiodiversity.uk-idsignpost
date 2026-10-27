@@ -583,3 +583,12 @@ async def test_confirmation_prompt_includes_page_text() -> None:
 
     contents = client.models.calls[0]["contents"]
     assert "Calorific values of plankton" in contents
+
+
+async def test_discover_hint_names_the_rejected_index() -> None:
+    finder, client, _ = make_finder(['{"candidates": []}'])
+
+    await finder.discover(entry(), hint="https://example.org/keys/")
+
+    contents = client.models.calls[0]["contents"]
+    assert "https://example.org/keys/ is an index" in contents

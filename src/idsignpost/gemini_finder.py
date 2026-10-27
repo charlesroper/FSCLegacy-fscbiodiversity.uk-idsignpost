@@ -293,7 +293,9 @@ class GeminiFinder:
         text = await self._generate(prompt, json_mode=True)
         return parse_redirect_verdict(text) if text is not None else None
 
-    async def discover(self, entry: CatalogEntry) -> list[Candidate] | None:
+    async def discover(
+        self, entry: CatalogEntry, *, hint: str | None = None
+    ) -> list[Candidate] | None:
         """Ask for up to three ranked replacement URLs for a broken link."""
         if not entry.web_link:
             return None
@@ -307,7 +309,13 @@ class GeminiFinder:
             f"Available as: {', '.join(entry.available_as) or 'unknown'}\n"
             f"Keywords: {entry.keywords or 'unknown'}\n"
             f"Broken link: {entry.web_link}\n"
-            'Reply as JSON: {"candidates": [{"url": "...", "probability": 0.0, '
+            + (
+                f"The page {hint} is an index. Return the specific page inside it "
+                "that matches the entry, not the index itself.\n"
+                if hint
+                else ""
+            )
+            + 'Reply as JSON: {"candidates": [{"url": "...", "probability": 0.0, '
             '"reasoning": "one sentence"}]}. '
             "Use a probability between 0 and 1 for each candidate."
         )
