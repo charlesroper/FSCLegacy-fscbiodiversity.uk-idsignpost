@@ -218,3 +218,9 @@ Every search now leaves a line behind. An accepted page stores the confirmation 
 That answers a question the earlier runs could not: what did the model actually decide? Previously a negative search and a rejected candidate looked identical from the outside, both just an absent link. Now the difference is written down, for example `confirmed: The candidate page refers to the exact same publication` or `rejected: category index`.
 
 The 61 current alternatives were confirmed again to backfill their notes. The 227 broken entries without a replacement still have empty notes, because their searches completed before the field existed and the cache correctly treats them as settled. They will fill in if those searches ever run again.
+
+Then came the backfill. I reopened the 227 broken entries that had no replacement and let discovery run again. It took five minutes and paid for itself: eighteen new alternatives appeared, mostly exact Royal Entomological Society product pages and PDFs, plus two bookseller listings for out-of-print volumes. Every one passed the policy, liveness, and confirmation checks, and every accepted or rejected search now carries a note. The catalog stands at 80 alternatives.
+
+The pass also produced a false positive worth remembering. A WoRMS source record for an unrelated plankton paper was accepted, because the page title is just "World Register of Marine Species" and the model only had that title and a missing heading to judge by. I cleared it by hand. The general fix is to send some page text with the confirmation request, not only the title and heading, which is the next change to make.
+
+Fifteen entries still have no note. Fourteen ended in `connect_error`, which the pipeline treats as transient and does not search, and one 404 hit a transient discovery failure on both passes. They will fill in when their links resolve or the search runs again.

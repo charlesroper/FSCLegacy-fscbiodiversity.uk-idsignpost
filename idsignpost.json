@@ -22,8 +22,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:31.264745+00:00"
+    "alternative_note": "rejected: link returned 403; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:29.410925+00:00"
   },
   {
     "id": "agromyzidae-great-britain-and-ireland",
@@ -208,8 +208,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:26.030344+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:30.540831+00:00"
   },
   {
     "id": "april-wildflowers-spotters-sheet-2",
@@ -235,8 +235,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:26.029115+00:00"
+    "alternative_note": "rejected: The candidate page is a general landing page for outdoor activities and does not provide the specific April Wildflowers Spotter’s Sheet guide described in the entry.",
+    "verified_at": "2026-10-27T02:11:30.540915+00:00"
   },
   {
     "id": "araneae-spiders-europe",
@@ -338,11 +338,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20250910105220/https://www.field-studies-council.org/shop/publications/athecate-hydroids-medusae/",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:32:41.809113+00:00"
+    "alternative_link": "https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "This is a direct product page for the specific publication, providing details on its availability and bibliographic information.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact book title, author, and series described in the catalogue entry.",
+    "verified_at": "2026-10-27T02:11:33.255742+00:00"
   },
   {
     "id": "atlas-dragonflies-britain-and-ireland",
@@ -447,8 +447,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:29.073338+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:34.276635+00:00"
   },
   {
     "id": "barnacles",
@@ -470,11 +470,11 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://www.field-studies-council.org/shop/",
     "wayback_link": "https://web.archive.org/web/20240912082355/https://www.field-studies-council.org/shop/publications/barnacles/",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": null
+    "alternative_link": "https://www.pemberleybooks.com/product/barnacles-synopses-of-the-british-fauna-57/14617",
+    "alternative_probability": 0.7,
+    "alternative_reasoning": "This is a direct product page for the specific book (Synopses of the British Fauna 57) from a reputable natural history bookseller.",
+    "alternative_note": "confirmed: The candidate page is the product page for the specific book described in the entry, matching both the title and the author.",
+    "verified_at": "2026-10-27T02:11:34.360447+00:00"
   },
   {
     "id": "bat-droppings-guide",
@@ -604,8 +604,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:19.046234+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:36.016052+00:00"
   },
   {
     "id": "bee-orchids-and-their-relatives",
@@ -767,8 +767,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:42.031840+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:11:39.080331+00:00"
   },
   {
     "id": "beginners-vegetative-guide-orchids-british-isles-2",
@@ -793,8 +793,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:42:42.031680+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:11:39.080417+00:00"
   },
   {
     "id": "big-seaweed-search",
@@ -1396,8 +1396,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:59:47.256585+00:00"
+    "alternative_note": "rejected: link returned 403; rejected: link returned 403",
+    "verified_at": "2026-10-27T02:11:40.395988+00:00"
   },
   {
     "id": "british-marine-mollusca-facebook-group",
@@ -1841,8 +1841,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:43:10.634318+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:42.092101+00:00"
   },
   {
     "id": "bsbi-handbook-no-5-charophytes-great-britain-and-ireland",
@@ -1867,8 +1867,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:59:53.549180+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 410; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:11:43.275718+00:00"
   },
   {
     "id": "bsbi-handbook-no-6-crucifers",
@@ -1893,8 +1893,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:43:17.493862+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404; rejected: The candidate page is for a book titled 'How to Walk into a Room' by Emily P. Freeman, which is completely different from the 'BSBI Handbook No 6 Crucifers' by T.C.G. Rich.",
+    "verified_at": "2026-10-27T02:11:46.928215+00:00"
   },
   {
     "id": "bsbi-handbook-no-7-roses-great-britain-and-ireland",
@@ -1919,8 +1919,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:32:48.484748+00:00"
+    "alternative_note": "rejected: link returned 410",
+    "verified_at": "2026-10-27T02:11:46.078775+00:00"
   },
   {
     "id": "bsbi-handbook-no-8-pondweeds-great-britain-and-ireland",
@@ -1945,8 +1945,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:43:43.546929+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:49.216727+00:00"
   },
   {
     "id": "bsbi-handbook-no-9-dandelions-great-britain-and-ireland",
@@ -3429,8 +3429,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:32:50.062254+00:00"
+    "alternative_note": "rejected: The candidate link is a general index page for multiple species guides rather than the specific guide for 'Bumblebees of Norfolk' described in the entry.; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:51.534390+00:00"
   },
   {
     "id": "butterflies-britain",
@@ -3534,8 +3534,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:33:09.157486+00:00"
+    "alternative_note": "rejected: The candidate link is a category or index page listing multiple guides rather than the specific publication 'Butterflies of Norfolk'.",
+    "verified_at": "2026-10-27T02:11:54.042130+00:00"
   },
   {
     "id": "butterfly-id-europe-ispiny-pocket-guide-butterflies-and-day-flying-moths",
@@ -3586,8 +3586,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:29.681876+00:00"
+    "alternative_note": "rejected: link returned 403; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:11:52.540079+00:00"
   },
   {
     "id": "caterpillars-butterflies-britain-and-ireland-identification-guide",
@@ -3739,11 +3739,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20231129074617/https://www.field-studies-council.org/shop/publications/lepidoptera-checklist/",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:37.996503+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/handbooks/lepidoptera/checklist-lepidoptera-british-isles/",
+    "alternative_probability": 0.7,
+    "alternative_reasoning": "This is the official Royal Entomological Society product page for the original 2013 edition of the handbook.",
+    "alternative_note": "confirmed: The candidate link is the official Royal Entomological Society product page for the exact publication described in the catalogue entry.",
+    "verified_at": "2026-10-27T02:12:02.899775+00:00"
   },
   {
     "id": "checklist-recorded-uk-millipede-species",
@@ -3768,8 +3768,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:30.992588+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:11:54.622761+00:00"
   },
   {
     "id": "cheilostomatous-bryozoa-part-1-aeteoidea-cribrilinoidea-2nd-ed",
@@ -3899,8 +3899,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:32.042310+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:11:55.144834+00:00"
   },
   {
     "id": "cladocera-key",
@@ -4031,8 +4031,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:36.458722+00:00"
+    "alternative_note": "rejected: link returned 403",
+    "verified_at": "2026-10-27T02:17:09.481796+00:00"
   },
   {
     "id": "coleoptera-family-keys",
@@ -4083,8 +4083,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:42.163702+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:08.376880+00:00"
   },
   {
     "id": "collembola-taxonomy",
@@ -4242,8 +4242,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:48.582854+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:12:05.419419+00:00"
   },
   {
     "id": "common-micro-moths-berkshire",
@@ -4609,8 +4609,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:32:57.328806+00:00"
+    "alternative_note": "rejected: The candidate page refers to a publication about Tang China, which is entirely unrelated to the biological subject of Cyclostome Bryozoans.; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:10.121232+00:00"
   },
   {
     "id": "dandelions-taraxacum-britain-and-ireland",
@@ -4769,8 +4769,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:44:47.451796+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:11.319780+00:00"
   },
   {
     "id": "draft-key-british-blowflies-calliphoridae-and-woodlouse-flies-rhinophoridae",
@@ -5137,8 +5137,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:45:07.313663+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:13.224516+00:00"
   },
   {
     "id": "entoprocts",
@@ -6314,8 +6314,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:33:11.532718+00:00"
+    "alternative_note": "rejected: The candidate link is a general index page for multiple species guides rather than the specific publication 'Grasshoppers of Norfolk' by David Richmond.",
+    "verified_at": "2026-10-27T02:12:14.122563+00:00"
   },
   {
     "id": "great-horsetail-id-video",
@@ -6418,8 +6418,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:45:45.408838+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: The candidate page is a category or informational page for an organization rather than the specific identification guide described in the entry.",
+    "verified_at": "2026-10-27T02:12:19.055659+00:00"
   },
   {
     "id": "guide-animals-wildlife-and-countryside-act",
@@ -6496,8 +6496,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:45:38.793177+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:12:14.723454+00:00"
   },
   {
     "id": "guide-british-bats",
@@ -6808,11 +6808,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:45:48.746744+00:00"
+    "alternative_link": "https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This URL is cited in academic and nature-related newsletters as the direct location for the online guide and its associated PDF downloads.",
+    "alternative_note": "confirmed: The candidate link is the official Butterfly Conservation page that hosts the PDF downloads for the specific publication described in the catalogue entry.",
+    "verified_at": "2026-10-27T02:12:18.424794+00:00"
   },
   {
     "id": "guide-dragonflies-and-damselflies",
@@ -7213,8 +7213,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:45:55.451988+00:00"
+    "alternative_note": "ignored: blocked host or image file; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:17.936214+00:00"
   },
   {
     "id": "guide-main-groups-pond-invertebrates",
@@ -7371,8 +7371,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:02.096296+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:24.244661+00:00"
   },
   {
     "id": "guide-reptiles-and-amphibians-found-uk",
@@ -7685,8 +7685,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:10.032753+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:20.632719+00:00"
   },
   {
     "id": "harvestmen-nottinghamshire",
@@ -7816,8 +7816,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:09.739418+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:22.479036+00:00"
   },
   {
     "id": "house-and-garden-spiders",
@@ -7999,8 +7999,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:21.836325+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:23.176348+00:00"
   },
   {
     "id": "identification-common-benthic-diatoms-rivers",
@@ -8052,8 +8052,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:17.770049+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:24.694329+00:00"
   },
   {
     "id": "identification-guide-inshore-fish-british-isles",
@@ -8137,8 +8137,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:20.611055+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:12:25.965784+00:00"
   },
   {
     "id": "identification-soldierflies-and-allies",
@@ -8785,8 +8785,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:34.015294+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:26.838095+00:00"
   },
   {
     "id": "july-wildflowers-spotters-sheet",
@@ -8811,8 +8811,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:37.035684+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:12:28.047353+00:00"
   },
   {
     "id": "june-wildflowers-spotters-sheet",
@@ -8838,8 +8838,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:34:02.084944+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:35.191903+00:00"
   },
   {
     "id": "june-wildflowers-spotters-sheet-2",
@@ -8865,8 +8865,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:40.230750+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:35.192129+00:00"
   },
   {
     "id": "keeping-frog-tadpoles",
@@ -8943,8 +8943,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:40.534543+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:38.313833+00:00"
   },
   {
     "id": "key-british-potter-and-mason-wasps",
@@ -8971,8 +8971,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:19.395403+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:35.422515+00:00"
   },
   {
     "id": "key-british-species-aderidae",
@@ -9024,8 +9024,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:45.920921+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:40.581329+00:00"
   },
   {
     "id": "key-british-species-family-buprestidae-coleoptera",
@@ -9053,8 +9053,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:48.572720+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:40.508904+00:00"
   },
   {
     "id": "key-british-species-family-eucnemidae",
@@ -9079,8 +9079,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:48.080337+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:42.216561+00:00"
   },
   {
     "id": "key-british-species-genus-perapion",
@@ -9157,8 +9157,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:34:01.464472+00:00"
+    "alternative_note": "rejected: link returned 200; ignored: site homepage",
+    "verified_at": "2026-10-27T02:12:43.655504+00:00"
   },
   {
     "id": "key-british-species-phalacridae",
@@ -9183,8 +9183,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:53.226286+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 401",
+    "verified_at": "2026-10-27T02:12:48.151998+00:00"
   },
   {
     "id": "key-collembola-springtails-britain-and-ireland",
@@ -9473,8 +9473,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:57.699233+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:46.514645+00:00"
   },
   {
     "id": "key-identification-british-attelabidae",
@@ -9499,8 +9499,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:05.411789+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:47.419996+00:00"
   },
   {
     "id": "key-identification-british-biphyllidae",
@@ -9551,8 +9551,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:58.840084+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:48.399714+00:00"
   },
   {
     "id": "key-identification-british-bothrideridae",
@@ -9577,8 +9577,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:59.269393+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:50.619002+00:00"
   },
   {
     "id": "key-identification-british-buprestidae",
@@ -9600,11 +9600,11 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S2114958435:1793043994981925",
     "wayback_link": "https://web.archive.org/web/20190818102006/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/buprestidae",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:48.573374+00:00"
+    "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-buprestidae",
+    "alternative_probability": 0.95,
+    "alternative_reasoning": "This URL is the updated, functional location for the identification guide previously hosted at the broken link.",
+    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the entry and is part of the author's identified collection of insect keys.",
+    "verified_at": "2026-10-27T02:12:40.509091+00:00"
   },
   {
     "id": "key-identification-british-byrrhidae",
@@ -9629,8 +9629,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:01.033435+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:51.934558+00:00"
   },
   {
     "id": "key-identification-british-byturidae",
@@ -9655,8 +9655,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:03.715851+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: private address",
+    "verified_at": "2026-10-27T02:12:50.365030+00:00"
   },
   {
     "id": "key-identification-british-centipedes",
@@ -9733,8 +9733,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:10.737949+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:53.377672+00:00"
   },
   {
     "id": "key-identification-british-ciidae",
@@ -9759,8 +9759,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:18.051860+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:52.656574+00:00"
   },
   {
     "id": "key-identification-british-clambidae",
@@ -9785,8 +9785,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:13.349452+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:55.122019+00:00"
   },
   {
     "id": "key-identification-british-cleridae",
@@ -9811,8 +9811,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:11.211505+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: private address",
+    "verified_at": "2026-10-27T02:12:54.650112+00:00"
   },
   {
     "id": "key-identification-british-coccinellidae",
@@ -9837,8 +9837,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:14.139740+00:00"
+    "alternative_note": "rejected: link returned 200; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:12:56.465357+00:00"
   },
   {
     "id": "key-identification-british-colydiidae",
@@ -9863,8 +9863,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:14.716786+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:12:58.245141+00:00"
   },
   {
     "id": "key-identification-british-cucujidae",
@@ -9889,8 +9889,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:14.515496+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: private address",
+    "verified_at": "2026-10-27T02:12:57.354029+00:00"
   },
   {
     "id": "key-identification-british-dasytidae",
@@ -9915,8 +9915,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:19.137559+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:12:59.967233+00:00"
   },
   {
     "id": "key-identification-british-dermestidae",
@@ -9967,8 +9967,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:22.639926+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:00.369991+00:00"
   },
   {
     "id": "key-identification-british-dryopidae",
@@ -9993,8 +9993,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:26.474976+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:02.078677+00:00"
   },
   {
     "id": "key-identification-british-dytiscidae",
@@ -10019,8 +10019,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:29.808308+00:00"
+    "alternative_note": "rejected: link returned 200; ignored: private address",
+    "verified_at": "2026-10-27T02:13:03.686697+00:00"
   },
   {
     "id": "key-identification-british-elmidae",
@@ -10045,8 +10045,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:25.885670+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:04.057304+00:00"
   },
   {
     "id": "key-identification-british-elmidae-0",
@@ -10072,8 +10072,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:25.885421+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:04.057387+00:00"
   },
   {
     "id": "key-identification-british-endomychidae",
@@ -10098,8 +10098,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:29.339886+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:06.798919+00:00"
   },
   {
     "id": "key-identification-british-erotylidae",
@@ -10124,8 +10124,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:29.762090+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: private address",
+    "verified_at": "2026-10-27T02:13:05.643250+00:00"
   },
   {
     "id": "key-identification-british-geotrupidae",
@@ -10150,8 +10150,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:38.355425+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:07.995984+00:00"
   },
   {
     "id": "key-identification-british-gyrinidae",
@@ -10176,8 +10176,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:35.423444+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:08.156415+00:00"
   },
   {
     "id": "key-identification-british-haliplidae",
@@ -10202,8 +10202,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:38.864083+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:10.348060+00:00"
   },
   {
     "id": "key-identification-british-heteroceridae",
@@ -10228,8 +10228,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:38.354419+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:11.488906+00:00"
   },
   {
     "id": "key-identification-british-histeridae",
@@ -10280,8 +10280,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:43.355694+00:00"
+    "alternative_note": "rejected: link returned 200; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:13:11.498446+00:00"
   },
   {
     "id": "key-identification-british-kateretidae",
@@ -10385,8 +10385,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:45.861592+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:12.366610+00:00"
   },
   {
     "id": "key-identification-british-lampyridae",
@@ -10411,8 +10411,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:49.274334+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:14.335004+00:00"
   },
   {
     "id": "key-identification-british-latridiidae",
@@ -10437,8 +10437,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:48.709685+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:14.498135+00:00"
   },
   {
     "id": "key-identification-british-leiodidae",
@@ -10489,8 +10489,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:57.374278+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:14.815896+00:00"
   },
   {
     "id": "key-identification-british-lycidae",
@@ -10515,8 +10515,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:00.365065+00:00"
+    "alternative_note": "rejected: link returned 200; ignored: private address",
+    "verified_at": "2026-10-27T02:13:17.893789+00:00"
   },
   {
     "id": "key-identification-british-lymexylidae",
@@ -10541,8 +10541,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:57.398036+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:17.487887+00:00"
   },
   {
     "id": "key-identification-british-malachiidae",
@@ -10594,8 +10594,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:47:59.604386+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:18.821997+00:00"
   },
   {
     "id": "key-identification-british-megalopodidae",
@@ -10620,8 +10620,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:00.019583+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:20.433663+00:00"
   },
   {
     "id": "key-identification-british-melandryidae",
@@ -10646,8 +10646,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:05.441062+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:20.928817+00:00"
   },
   {
     "id": "key-identification-british-meloidae",
@@ -10672,8 +10672,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:04.132364+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:22.233924+00:00"
   },
   {
     "id": "key-identification-british-monotomidae",
@@ -10698,8 +10698,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:04.665250+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:23.751090+00:00"
   },
   {
     "id": "key-identification-british-mordellidae",
@@ -10724,8 +10724,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:06.582527+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:23.731624+00:00"
   },
   {
     "id": "key-identification-british-mycetophagidae",
@@ -10750,8 +10750,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:09.011721+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:13:30.332510+00:00"
   },
   {
     "id": "key-identification-british-nanophyidae",
@@ -10802,8 +10802,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:09.802636+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:26.308907+00:00"
   },
   {
     "id": "key-identification-british-oedemeridae",
@@ -10828,8 +10828,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:12.155922+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: site homepage",
+    "verified_at": "2026-10-27T02:13:25.573043+00:00"
   },
   {
     "id": "key-identification-british-orsodacnidae",
@@ -10854,8 +10854,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:13.509266+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:29.169640+00:00"
   },
   {
     "id": "key-identification-british-ptinidae",
@@ -10906,8 +10906,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:32.334571+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:29.648961+00:00"
   },
   {
     "id": "key-identification-british-rhynchitidae",
@@ -10932,8 +10932,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:25.448834+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:34.153142+00:00"
   },
   {
     "id": "key-identification-british-salpingidae",
@@ -10958,8 +10958,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:16.874836+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: site homepage",
+    "verified_at": "2026-10-27T02:13:31.855904+00:00"
   },
   {
     "id": "key-identification-british-scirtidae",
@@ -10984,8 +10984,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:19.438832+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:32.364979+00:00"
   },
   {
     "id": "key-identification-british-scraptiidae",
@@ -11010,8 +11010,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:21.162464+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:33.510083+00:00"
   },
   {
     "id": "key-identification-british-silphidae",
@@ -11036,8 +11036,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:28.034512+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:34.833148+00:00"
   },
   {
     "id": "key-identification-british-silvanidae",
@@ -11062,8 +11062,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:30.477473+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:35.153349+00:00"
   },
   {
     "id": "key-identification-british-species-erirhinidae",
@@ -11086,8 +11086,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:31.173190+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:37.479118+00:00"
   },
   {
     "id": "key-identification-british-sphindidae",
@@ -11138,8 +11138,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:33.876459+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:13:36.838490+00:00"
   },
   {
     "id": "key-identification-british-tetratomidae",
@@ -11164,8 +11164,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:31.803747+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:37.461014+00:00"
   },
   {
     "id": "key-identification-british-throscidae",
@@ -11190,8 +11190,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:35.462540+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:40.472270+00:00"
   },
   {
     "id": "key-identification-british-trogidae",
@@ -11216,8 +11216,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:34.513030+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:39.487386+00:00"
   },
   {
     "id": "key-identification-british-trogossitidae",
@@ -11242,8 +11242,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:35.811655+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:40.728724+00:00"
   },
   {
     "id": "key-land-snails-flatford-area-suffolk",
@@ -11504,8 +11504,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:46.153977+00:00"
+    "alternative_note": "ignored: same as the broken link; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:13:41.962344+00:00"
   },
   {
     "id": "keys-identification-british-apionidae-0",
@@ -11554,11 +11554,11 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1539491250:1793044113114787",
     "wayback_link": "https://web.archive.org/web/20130911052909/https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/cantharidae",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:48.436408+00:00"
+    "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-cantharidae",
+    "alternative_probability": 1.0,
+    "alternative_reasoning": "This is the updated, active URL for Mike Hackston's identification keys for British Cantharidae, replacing the broken site.google.com/site/mikesinsectkeys/ link.",
+    "alternative_note": "confirmed: The candidate link explicitly matches the title and subject matter of the original entry, providing the specific identification keys for British Cantharidae authored by Mike Hackston.",
+    "verified_at": "2026-10-27T02:13:43.405269+00:00"
   },
   {
     "id": "keys-identification-british-carabidae",
@@ -11661,8 +11661,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:51.136213+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:43.230897+00:00"
   },
   {
     "id": "keys-identification-british-elateridae",
@@ -11687,8 +11687,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:51.849280+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:44.268597+00:00"
   },
   {
     "id": "keys-identification-british-helophoridae",
@@ -11713,8 +11713,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:54.041450+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:44.905367+00:00"
   },
   {
     "id": "keys-identification-british-hydrophilidae",
@@ -11739,8 +11739,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:54.479756+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:45.219287+00:00"
   },
   {
     "id": "keys-identification-british-nitidulidae-pollen-beetles",
@@ -11765,8 +11765,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:57.470691+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:46.148762+00:00"
   },
   {
     "id": "keys-identification-british-ptiliidae",
@@ -11791,8 +11791,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:48:58.891750+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:13:48.621248+00:00"
   },
   {
     "id": "keys-identification-british-scarabaeidae",
@@ -12052,8 +12052,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:08.089421+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:13:48.066698+00:00"
   },
   {
     "id": "leafwatch",
@@ -12080,8 +12080,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:00.646717+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:13:47.967015+00:00"
   },
   {
     "id": "lepidoptera-dissection-group-website",
@@ -12181,11 +12181,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:15.718550+00:00"
+    "alternative_link": "https://www.abebooks.com/servlet/BookDetailsPL?bi=32364423792",
+    "alternative_probability": 0.4,
+    "alternative_reasoning": "This is a direct product page for the two-volume set on a major book marketplace, providing bibliographic details and purchase options.",
+    "alternative_note": "confirmed: The candidate page refers to the exact two-volume work 'Les Myxomycètes' by the same authors, matching the description of the publication.",
+    "verified_at": "2026-10-27T02:13:53.962972+00:00"
   },
   {
     "id": "les-myxomycetes-2",
@@ -12210,8 +12210,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:15.718220+00:00"
+    "alternative_note": "rejected: link returned 200",
+    "verified_at": "2026-10-27T02:17:27.474333+00:00"
   },
   {
     "id": "lichen-app-assessing-nitrogen-pollution",
@@ -12501,8 +12501,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:14.428534+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:58.547087+00:00"
   },
   {
     "id": "march-wildflowers-spotters-sheet-2",
@@ -12528,8 +12528,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:35:02.094932+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:58.547303+00:00"
   },
   {
     "id": "marine-and-brackish-water-harpacticoid-copepods-part-1",
@@ -12633,8 +12633,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:16.298350+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:13:57.070480+00:00"
   },
   {
     "id": "may-wildflowers-spotters-sheet-2",
@@ -12660,8 +12660,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:16.298154+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:13:57.070737+00:00"
   },
   {
     "id": "mcs-jellyfish-guide",
@@ -12687,8 +12687,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:18.318935+00:00"
+    "alternative_note": "rejected: link returned 404; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:13:58.884270+00:00"
   },
   {
     "id": "meres-and-mosses",
@@ -12739,8 +12739,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:18.906813+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:13:59.862406+00:00"
   },
   {
     "id": "moormoss-app",
@@ -12794,8 +12794,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:20.920697+00:00"
+    "alternative_note": "rejected: link returned 403",
+    "verified_at": "2026-10-27T02:14:02.384482+00:00"
   },
   {
     "id": "moorwild-pdf",
@@ -12847,8 +12847,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:35.654044+00:00"
+    "alternative_note": "rejected: link returned 404; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:14:02.073710+00:00"
   },
   {
     "id": "moths-butterflies-britain-ireland",
@@ -12873,8 +12873,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:25.514137+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:06.336068+00:00"
   },
   {
     "id": "mydiptera-leif-karlsson-online-diptera-keys",
@@ -12925,8 +12925,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:35:03.232216+00:00"
+    "alternative_note": "rejected: The candidate link leads to an error page indicating the service is unavailable rather than the requested publication.; rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:06.380448+00:00"
   },
   {
     "id": "naamlijst-en-determinatiesleutel-tot-de-pseudoschorpioenen-van-nederland-arachnida",
@@ -13006,8 +13006,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:29.763174+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:14:04.216680+00:00"
   },
   {
     "id": "north-west-european-thecate-hydroids-and-their-medusae-part-1",
@@ -13110,8 +13110,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:35.175073+00:00"
+    "alternative_note": "rejected: link returned 403",
+    "verified_at": "2026-10-27T02:14:08.106357+00:00"
   },
   {
     "id": "october-fungi-spotters-sheet-2",
@@ -13136,8 +13136,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:35.174877+00:00"
+    "alternative_note": "rejected: link returned 403",
+    "verified_at": "2026-10-27T02:14:08.106592+00:00"
   },
   {
     "id": "online-identification-guide-birds-britain-and-europe",
@@ -13188,8 +13188,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:36.259496+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:09.768055+00:00"
   },
   {
     "id": "online-key-common-lichens-trees-england",
@@ -13505,11 +13505,11 @@
     "web_link_state": "broken",
     "web_link_resolved": "https://coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf",
     "wayback_link": "https://web.archive.org/web/20210401130839/https://www.coleoptera.org.uk/sites/www.coleoptera.org.uk/files/Silphidae%20Key_2019%20version.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:43.458695+00:00"
+    "alternative_link": "https://www.coleoptera.org.uk/sites/default/files/Silphidae%20Key_2019%20version.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "This is the likely direct file path for the 2019 version of the PDF key hosted on the official scheme's domain.",
+    "alternative_note": "confirmed: The candidate link directly points to the 2019 version of the Silphidae key produced by the Silphidae Recording Scheme, which matches the description provided in the catalogue entry.",
+    "verified_at": "2026-10-27T02:14:11.666645+00:00"
   },
   {
     "id": "phase-1-survey-guide-grassland-and-marsh",
@@ -13586,8 +13586,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:42.937522+00:00"
+    "alternative_note": "ignored: blocked host or image file; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:14:14.515265+00:00"
   },
   {
     "id": "photo-key-large-aquatic-bugs",
@@ -13716,11 +13716,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:45.075244+00:00"
+    "alternative_link": "https://bsbi.org/learn/resources/plant-crib",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "The BSBI official website hosts the 'Plant Crib' as a resource, and this URL is the standard location for accessing the various sections of the guide.",
+    "alternative_note": "confirmed: The candidate link leads to the official BSBI Plant Crib resource page, which hosts the specific publication 'The Plant Crib' by P. D. Sell as a collection of downloadable sections.",
+    "verified_at": "2026-10-27T02:14:15.861853+00:00"
   },
   {
     "id": "plant-fungi-species",
@@ -13902,8 +13902,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:35:09.949526+00:00"
+    "alternative_note": "dropped: WoRMS bibliography record for an unrelated paper",
+    "verified_at": "2026-10-27T02:14:17.248227+00:00"
   },
   {
     "id": "polychaetes-interstitial-families-2nd-ed",
@@ -14137,8 +14137,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:51.965918+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:14:15.658411+00:00"
   },
   {
     "id": "psocids-psocoptera-booklice-and-barklice",
@@ -14163,8 +14163,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:49:53.134391+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:19.918525+00:00"
   },
   {
     "id": "quick-ant-guide",
@@ -14266,11 +14266,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210917181923/https://www.royensoc.co.uk/sites/default/files/Vol01_Part10.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:09:25.255635+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol01_Part10.pdf",
+    "alternative_probability": 1.0,
+    "alternative_reasoning": "This is the direct PDF link for the RES Handbook Vol 1 Part 10 (Odonata) hosted on the official Royal Entomological Society website.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 1 Part 10 regarding Odonata, which matches the title and content of the catalogue entry.",
+    "verified_at": "2026-10-27T02:14:18.930509+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-11-thysanoptera",
@@ -14296,8 +14296,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:43.738556+00:00"
+    "alternative_note": "rejected: The candidate link leads to a general category page for out-of-print handbooks rather than the specific publication page for the Thysanoptera handbook.; ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:14:22.133312+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-14a-trichoptera-hydroptilidae",
@@ -14323,8 +14323,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:44.566645+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:24.642871+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-16-siphonaptera",
@@ -14350,8 +14350,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:09:26.317776+00:00"
+    "alternative_note": "rejected: The candidate link is a general category page for out-of-print handbooks rather than the specific publication page for the RES Handbook on Siphonaptera.",
+    "verified_at": "2026-10-27T02:14:23.167343+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-2-thysanura-and-diplura",
@@ -14377,8 +14377,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:50:18.338301+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:28.392631+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-5-dermaptera-and-orthoptera",
@@ -14404,8 +14404,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:50:24.237433+00:00"
+    "alternative_note": "rejected: The candidate link is a general index page for out-of-print handbooks rather than the specific publication page for the RES Handbook Vol 1 Part 5.",
+    "verified_at": "2026-10-27T02:14:27.126138+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-6-plecoptera",
@@ -14431,8 +14431,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:48.121348+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:29.906302+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-7-psocoptera",
@@ -14458,8 +14458,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:00:55.270891+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:31.930518+00:00"
   },
   {
     "id": "res-handbook-vol-1-part-9-ephemeroptera",
@@ -14485,8 +14485,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:09:27.402464+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:35.215124+00:00"
   },
   {
     "id": "res-handbook-vol-1-parts-12-13-mecoptera-megaloptera-neuroptera",
@@ -14512,8 +14512,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:50:38.262068+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:35.415643+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-1-diptera-syrphidae",
@@ -14539,8 +14539,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:00.380920+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:37.003181+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae",
@@ -14566,8 +14566,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:50:45.868775+00:00"
+    "alternative_note": "ignored: same as the broken link; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:37.719485+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-14-introduction-immature-stages-british-flies-diptera-larvae-0",
@@ -14593,8 +14593,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:50:39.780462+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:14:37.358922+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-2c-diptera-pipunculidae",
@@ -14647,8 +14647,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:08.656134+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:41.986583+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-4a-i-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and",
@@ -14674,8 +14674,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:11.729346+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 403",
+    "verified_at": "2026-10-27T02:14:41.569529+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-4a-ii-diptera-cyclorrhapha-calyptrata-1-section-tachinidae-and",
@@ -14701,8 +14701,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:16.448354+00:00"
+    "alternative_note": "rejected: The candidate link leads to a general list of out-of-print handbooks rather than the specific publication requested.",
+    "verified_at": "2026-10-27T02:14:42.799134+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-4b-diptera-cyclorrhapha-calyptrata-section-b-muscidae",
@@ -14725,11 +14725,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210901220148/https://www.royensoc.co.uk/sites/default/files/Archive%202/Vol10_Part04b.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:08.862668+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-cyclorrhapha-calyptrata-section-b-muscidae/",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This is the official Royal Entomological Society page for the publication, which provides access to the handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and subject matter described in the catalogue entry, confirming it is the correct resource.",
+    "verified_at": "2026-10-27T02:14:51.746366+00:00"
   },
   {
     "id": "res-handbook-vol-10-part-5a-diptera-tephritidae",
@@ -14782,8 +14782,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:06.691603+00:00"
+    "alternative_note": "rejected: link returned 404; ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:14:46.939201+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-2a-hemiptera-cicadomorpha-excluding-deltocephalinae-and",
@@ -14809,8 +14809,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:21.166751+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:47.243347+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-2b-hemiptera-cicadomorpha-deltocephalinae",
@@ -14836,8 +14836,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:22.916421+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:51.737727+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-2c-cicadellidae-typhlocybinae-checklist-british-auchenorhyncha",
@@ -14863,8 +14863,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:16.175669+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:49.585869+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-3-hemiptera-fulgoromorpha",
@@ -14890,8 +14890,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:30.666941+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 403",
+    "verified_at": "2026-10-27T02:14:54.091187+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-4a-homoptera-aphidoidea-part-chaitophoridae-callaphididae",
@@ -14914,8 +14914,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:31.397547+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:56.739688+00:00"
   },
   {
     "id": "res-handbook-vol-2-part-5a-homoptera-psylloidea",
@@ -14941,8 +14941,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:31.899149+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:56.464023+00:00"
   },
   {
     "id": "res-handbook-vol-4-part-1-coleoptera-introduction-and-keys-families",
@@ -15022,8 +15022,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:32.469150+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:14:58.786636+00:00"
   },
   {
     "id": "res-handbook-vol-4-part-3-coleoptera-hydradephaga",
@@ -15049,8 +15049,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:34.093997+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:02.739176+00:00"
   },
   {
     "id": "res-handbook-vol-4-part-8a-coleoptera-staphylinidae-section-piestinae-euaesthetinae",
@@ -15076,8 +15076,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:38.857730+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 403",
+    "verified_at": "2026-10-27T02:15:02.473936+00:00"
   },
   {
     "id": "res-handbook-vol-4-part-9-coleoptera-pselaphidae",
@@ -15103,8 +15103,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:34.796406+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:04.446091+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-10-coleoptera-tenebrionidae",
@@ -15130,8 +15130,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:35.748181+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:07.507619+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-11-dung-beetles-chafers-coleoptera-scarabaeoidea",
@@ -15184,8 +15184,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:39.951698+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:07.782409+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-12-coleoptera-cerambycidae",
@@ -15292,8 +15292,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:50.888153+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:15:06.620354+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-3-adults-and-larvae-hide-larder-and-carpet-beetles-and-their",
@@ -15319,8 +15319,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T20:01:19.951351+00:00"
+    "alternative_note": "rejected: link returned 404; ignored: site homepage",
+    "verified_at": "2026-10-27T02:15:12.864407+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-5a-coleoptera-rhizophagidae",
@@ -15346,8 +15346,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:52.552002+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:12.963849+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-5b-coleoptera-phalacridae",
@@ -15370,11 +15370,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210714102856/https://www.royensoc.co.uk/sites/default/files/Vol05_Part05b.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:54.207447+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-phalacridae/",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This is the official Royal Entomological Society page for the specific handbook, which provides a direct download link for the PDF.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Coleoptera: Phalacridae authored by R. T. Thompson, matching the entry title and description.",
+    "verified_at": "2026-10-27T02:15:21.754384+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-7-coleoptera-coccinellidae-sphindidae",
@@ -15400,8 +15400,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:58.643112+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:18.544441+00:00"
   },
   {
     "id": "res-handbook-vol-5-part-9-coleoptera",
@@ -15427,8 +15427,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:51:58.822392+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:19.389061+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-1-hymenoptera-introduction-and-key-families-2nd-edition",
@@ -15478,11 +15478,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210917200351/https://www.royensoc.co.uk/sites/default/files/Vol06_Part02a.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:04.587019+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-symphyta-2/",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This page is the official Royal Entomological Society resource page for the handbook, which provides a direct download link for the PDF.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume and part described in the entry.",
+    "verified_at": "2026-10-27T02:17:39.059218+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-2b-hymenoptera-symphyta",
@@ -15508,8 +15508,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:07.290357+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:26.546880+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-2c-hymenoptera-symphyta",
@@ -15535,8 +15535,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:05.829007+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:15:23.569778+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-3a-hymenoptera-bethyloidea-excluding-chrysididae",
@@ -15562,8 +15562,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:10.369727+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:15:25.760250+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-3b-hymenoptera-aculeata-scolioidea-vespoidea-and-sphecoidea",
@@ -15589,8 +15589,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:07.450894+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:17:29.015710+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-3c-hymenoptera-formicidae",
@@ -15640,11 +15640,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211204165207/https://www.royensoc.co.uk/sites/default/files/Vol06_Part04.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:13.497536+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol06_Part04.pdf",
+    "alternative_probability": 1.0,
+    "alternative_reasoning": "This is the direct URL to the PDF version of the RES Handbook Vol 6 Part 4, as identified in the library catalog and resource finder records.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Volume 6 Part 4, which matches the title and content of the requested entry.",
+    "verified_at": "2026-10-27T02:17:30.339726+00:00"
   },
   {
     "id": "res-handbook-vol-6-part-5-cuckoo-wasps-hymenoptera-chrysididae",
@@ -15694,11 +15694,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20211213233017/https://www.royensoc.co.uk/sites/default/files/Vol07_Part01.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:17.224754+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-ichneumonoidea-pimplinae/",
+    "alternative_probability": 0.95,
+    "alternative_reasoning": "This is the official Royal Entomological Society page for this specific handbook volume, which provides a direct link to the PDF version.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume described in the entry, confirming it is the correct publication.",
+    "verified_at": "2026-10-27T02:15:44.382839+00:00"
   },
   {
     "id": "res-handbook-vol-7-part-11-classification-biology-braconid-wasps-hymenoptera-braconidae",
@@ -15751,8 +15751,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:26.639431+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:46.173425+00:00"
   },
   {
     "id": "res-handbook-vol-7-part-2a-ii-hymenoptera-ichneumonoidea",
@@ -15778,8 +15778,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:27.410332+00:00"
+    "alternative_note": "ignored: blocked host or image file; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:47.233807+00:00"
   },
   {
     "id": "res-handbook-vol-7-part-2b-ichneumonidae-orthopelmatinae-anomaloninae",
@@ -15805,8 +15805,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:27.411258+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:50.204356+00:00"
   },
   {
     "id": "res-handbook-vol-8-part-1a-hymenoptera-cynipoidea-key-families-and-subfamilies-and",
@@ -15832,8 +15832,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:32.728322+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:15:47.899034+00:00"
   },
   {
     "id": "res-handbook-vol-8-part-1b-hymenoptera-cynipoidea-eucoilidae",
@@ -15859,8 +15859,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:39.815753+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:54.122557+00:00"
   },
   {
     "id": "res-handbook-vol-8-part-2a-hymenoptera-2-chalcidoidea-section",
@@ -15937,11 +15937,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210801045829/https://www.royensoc.co.uk/sites/default/files/Vol08_Part03d_i.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:41.454524+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part03d_i.pdf",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "This is the direct PDF link structure for the RES Handbooks, which replaces the broken link provided in the prompt.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 8 Part 3d i, which matches the title and content described in the entry.",
+    "verified_at": "2026-10-27T02:15:56.508692+00:00"
   },
   {
     "id": "res-handbook-vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae",
@@ -15994,8 +15994,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:49.092415+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:15:56.120040+00:00"
   },
   {
     "id": "res-handbook-vol-9-part-2-i-diptera-2-nematocera-families-tipulidae-chironomidae",
@@ -16021,8 +16021,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:51.303601+00:00"
+    "alternative_note": "ignored: private address",
+    "verified_at": "2026-10-27T02:15:56.409389+00:00"
   },
   {
     "id": "res-handbook-vol-9-part-2-ii-diptera-2-nematocera-families-tipulidae-chironomidae",
@@ -16048,8 +16048,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:55.270121+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:16:04.249499+00:00"
   },
   {
     "id": "res-handbook-vol-9-part-2-iii-diptera-2-nematocera-families-tipulidae-chironomidae",
@@ -16099,11 +16099,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210715153251/https://www.royensoc.co.uk/sites/default/files/Vol09_Part03.pdf",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:52:58.030697+00:00"
+    "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-nematocera-mycetophilidae-bolitophilinae-ditomyiinae-diadocidiinae-keroplatinae-sciophilinae-and-manotinae/",
+    "alternative_probability": 0.9,
+    "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and subject matter described in the catalogue entry, confirming it is the correct resource.",
+    "verified_at": "2026-10-27T02:16:11.093539+00:00"
   },
   {
     "id": "res-handbook-vol-9-part-4a-diptera-brachycera-tabanoidea-and-asiloidea",
@@ -16156,8 +16156,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:05.603287+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:15:58.261444+00:00"
   },
   {
     "id": "revised-field-key-invertebrate-fauna-stony-hill-streams",
@@ -16418,8 +16418,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:06.760469+00:00"
+    "alternative_note": "rejected: link returned 404; ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:16:03.578857+00:00"
   },
   {
     "id": "sea-spiders-pycnogonida-north-east-atlantic",
@@ -16499,8 +16499,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T01:52:59.379005+00:00"
+    "alternative_note": "ignored: blocked host or image file; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:17:32.690682+00:00"
   },
   {
     "id": "seasearch-guide-sea-anemones-and-corals-britain-and-ireland-2nd-edition",
@@ -16527,8 +16527,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:08.207419+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: The candidate link is a generic search page for AbeBooks rather than a specific product page for the requested book.",
+    "verified_at": "2026-10-27T02:16:10.156669+00:00"
   },
   {
     "id": "seasearch-guide-seaweeds-britain-and-ireland",
@@ -16552,11 +16552,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20190722042007/https://www.mcsuk.org/shop/index.php?route=product/product&path=60&product_id=60",
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:10.781483+00:00"
+    "alternative_link": "https://www.pemberleybooks.com/product/seaweeds-of-britain-and-ireland/32840",
+    "alternative_probability": 0.95,
+    "alternative_reasoning": "This is a direct product page for the second edition of the guide, providing purchase options and detailed bibliographic information.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title and authors specified in the entry, confirming it is the same publication.",
+    "verified_at": "2026-10-27T02:16:11.958625+00:00"
   },
   {
     "id": "seasearch-identifications-facebook-group",
@@ -16608,11 +16608,11 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": null,
-    "alternative_probability": null,
-    "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:13.341022+00:00"
+    "alternative_link": "https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/",
+    "alternative_probability": 0.8,
+    "alternative_reasoning": "This is the direct product page for the guide on the retailer's website, replacing the broken link provided.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title and author specified in the entry, representing the same publication.",
+    "verified_at": "2026-10-27T02:16:15.808518+00:00"
   },
   {
     "id": "seasons",
@@ -16741,8 +16741,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:17.859879+00:00"
+    "alternative_note": "ignored: blocked host or image file",
+    "verified_at": "2026-10-27T02:16:13.155748+00:00"
   },
   {
     "id": "shropshire-weevils-associated-conifers",
@@ -17319,8 +17319,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:24.010387+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:16:13.875278+00:00"
   },
   {
     "id": "spiders-you-can-id-and-record-during-lockdown",
@@ -17583,8 +17583,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:34.986333+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:16:17.124269+00:00"
   },
   {
     "id": "staphylinidae-rove-beetles-britain-and-ireland-parts-7-and-8",
@@ -17609,8 +17609,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:38.588782+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 403; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:16:22.063761+00:00"
   },
   {
     "id": "steven-falks-flickr-collection-amphibians",
@@ -18286,8 +18286,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:56.651793+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:16:21.055017+00:00"
   },
   {
     "id": "true-weevils-part-2-coleoptera-curculionidae-ceutorhynchinae",
@@ -18312,8 +18312,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:53.664586+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:16:22.251471+00:00"
   },
   {
     "id": "true-weevils-part-iii",
@@ -18338,8 +18338,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:53.031202+00:00"
+    "alternative_note": "rejected: link returned 403",
+    "verified_at": "2026-10-27T02:16:25.129481+00:00"
   },
   {
     "id": "tufted-forget-me-not-id-video",
@@ -18810,8 +18810,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-27T00:35:45.919868+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:16:26.361427+00:00"
   },
   {
     "id": "water-horsetail-id-video",
@@ -18916,8 +18916,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:37.037022+00:00"
+    "alternative_note": "no candidates returned",
+    "verified_at": "2026-10-27T02:12:28.047522+00:00"
   },
   {
     "id": "whats-bloom-june",
@@ -18970,8 +18970,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:40.232009+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:12:35.192306+00:00"
   },
   {
     "id": "wild-berry-other-fruit-spotters-sheet",
@@ -18997,8 +18997,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:54:03.880540+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:16:28.529945+00:00"
   },
   {
     "id": "wild-berry-other-fruit-spotters-sheet-2",
@@ -19024,8 +19024,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:54:03.876576+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:16:28.530530+00:00"
   },
   {
     "id": "wild-flower-id-british-identification-guide-wild-flowers",
@@ -19077,8 +19077,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:53:59.363494+00:00"
+    "alternative_note": "ignored: same as the broken link",
+    "verified_at": "2026-10-27T02:16:27.312888+00:00"
   },
   {
     "id": "wild-plants-woods",
@@ -19104,8 +19104,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:54:12.206350+00:00"
+    "alternative_note": "rejected: link returned 404; rejected: link returned 404",
+    "verified_at": "2026-10-27T02:17:34.548079+00:00"
   },
   {
     "id": "wildflowers-look-august",
@@ -19131,8 +19131,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:54:08.068244+00:00"
+    "alternative_note": "ignored: site homepage",
+    "verified_at": "2026-10-27T02:16:28.723034+00:00"
   },
   {
     "id": "wildflowers-look-september",
@@ -19158,8 +19158,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:54:08.554954+00:00"
+    "alternative_note": "rejected: link returned 200; rejected: link returned 200",
+    "verified_at": "2026-10-27T02:16:33.017613+00:00"
   },
   {
     "id": "wildid-waders-britain-and-ireland",
