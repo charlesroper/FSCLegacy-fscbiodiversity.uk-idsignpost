@@ -53,6 +53,15 @@ class EntryRecord:
     alternative_confirmed: bool = False
     checked_at: datetime | None = None
 
+    def drop_alternative(self, note: str) -> None:
+        """Clear a stored alternative and record the rejection note."""
+        self.alternative_url = None
+        self.alternative_probability = None
+        self.alternative_reasoning = None
+        self.alternative_note = note
+        self.alternative_checked = True
+        self.alternative_confirmed = False
+
 
 def _iso(value: datetime | None) -> str | None:
     return value.isoformat() if value is not None else None
@@ -216,6 +225,14 @@ class CatalogCache:
         self.urls[cache_key(url)] = record
         self._changed()
         return True
+
+    def set_wayback(self, url: str, snapshot: str) -> bool:
+        """Attach a Wayback snapshot to an existing cached URL record."""
+        record = self.get_url(url)
+        if record is None:
+            return False
+        record.wayback_url = snapshot
+        return self.put_url(url, record)
 
     def get_entry(self, entry_id: str, url: str) -> EntryRecord | None:
         """Return a fresh entry-tier record, or None when absent or expired."""

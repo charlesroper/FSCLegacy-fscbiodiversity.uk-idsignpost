@@ -112,39 +112,6 @@ async def test_malformed_availability_payload_is_ignored() -> None:
 
 
 @respx.mock
-async def test_find_does_not_capture_unless_requested() -> None:
-    respx.get(AVAILABILITY_URL).mock(return_value=availability(None))
-    save = respx.get(f"{SAVE_URL}{URL}").mock(return_value=httpx.Response(200))
-
-    assert await (await make_client()).find(URL) is None
-    assert save.call_count == 0
-
-
-@respx.mock
-async def test_find_captures_when_snapshot_is_missing() -> None:
-    respx.get(AVAILABILITY_URL).mock(return_value=availability(None))
-    respx.get(f"{SAVE_URL}{URL}").mock(
-        return_value=httpx.Response(302, headers={"location": SNAPSHOT})
-    )
-    respx.get(SNAPSHOT).mock(return_value=httpx.Response(200, text="archived"))
-
-    snapshot = await (await make_client()).find(URL, save_if_missing=True)
-
-    assert snapshot == SNAPSHOT
-
-
-@respx.mock
-async def test_find_skips_capture_when_snapshot_exists() -> None:
-    respx.get(AVAILABILITY_URL).mock(return_value=availability())
-    save = respx.get(f"{SAVE_URL}{URL}").mock(return_value=httpx.Response(200))
-
-    snapshot = await (await make_client()).find(URL, save_if_missing=True)
-
-    assert snapshot == SNAPSHOT
-    assert save.call_count == 0
-
-
-@respx.mock
 async def test_save_uses_sixty_second_timeout() -> None:
     route = respx.get(f"{SAVE_URL}{URL}").mock(
         return_value=httpx.Response(302, headers={"location": SNAPSHOT})

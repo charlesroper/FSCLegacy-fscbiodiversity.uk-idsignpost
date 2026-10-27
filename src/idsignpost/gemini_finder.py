@@ -65,16 +65,6 @@ class DiscoveryOutcome:
     note: str | None = None
 
 
-@dataclass(frozen=True, slots=True)
-class _Attempt:
-    """Outcome of checking one candidate URL."""
-
-    alternative: Alternative | None = None
-    transient: bool = False
-    confirmed: bool = False
-    note: str | None = None
-
-
 class Checker(Protocol):
     async def check(
         self, url: str, *, entry_title: str | None = None
@@ -354,11 +344,7 @@ class GeminiFinder:
             if attempt.note:
                 notes.append(attempt.note)
             if attempt.alternative is not None:
-                return DiscoveryOutcome(
-                    alternative=attempt.alternative,
-                    confirmed=attempt.confirmed,
-                    note=attempt.note,
-                )
+                return attempt
 
         candidates = await self.discover(entry)
         if candidates is None:
@@ -374,11 +360,7 @@ class GeminiFinder:
             if attempt.note:
                 notes.append(attempt.note)
             if attempt.alternative is not None:
-                return DiscoveryOutcome(
-                    alternative=attempt.alternative,
-                    confirmed=attempt.confirmed,
-                    note=attempt.note,
-                )
+                return attempt
         return DiscoveryOutcome(
             transient=transient,
             note=_join_notes(notes) or "no candidates returned",
@@ -400,24 +382,26 @@ class GeminiFinder:
 
     async def _try_candidate(
         self, entry: CatalogEntry, candidate: Candidate, checker: Checker
-    ) -> _Attempt:
+    ) -> DiscoveryOutcome:
         """Apply policy, liveness, and confirmation to one candidate."""
         broken_link = entry.web_link or ""
         policy_note = self._policy_note(candidate.url, broken_link)
         if policy_note is not None:
-            return _Attempt(note=policy_note)
+            return DiscoveryOutcome(note=policy_note)
         cleaned = cache_key(candidate.url)
         result = await checker.check(cleaned, entry_title=entry.title)
         if not result.cacheable:
-            return _Attempt(transient=True, note="retry: transient check failure")
+            return DiscoveryOutcome(
+                transient=True, note="retry: transient check failure"
+            )
         if result.state != "ok" or result.is_suspicious_redirect:
-            return _Attempt(
+            return DiscoveryOutcome(
                 note=f"rejected: link returned {result.status or result.state}"
             )
         if result.resolved_url:
             redirect_note = self._policy_note(result.resolved_url, broken_link)
             if redirect_note is not None:
-                return _Attempt(note=redirect_note)
+                return DiscoveryOutcome(note=redirect_note)
         url = result.resolved_url or cleaned
         verdict = await self.confirm_alternative(
             entry,
@@ -428,13 +412,13 @@ class GeminiFinder:
         )
         if verdict is not None and not verdict.is_match:
             reason = verdict.reasoning or "page did not match the entry"
-            return _Attempt(note=f"rejected: {reason}")
+            return DiscoveryOutcome(note=f"rejected: {reason}")
         note = (
             f"confirmed: {verdict.reasoning}"
             if verdict is not None and verdict.reasoning
             else None
         )
-        return _Attempt(
+        return DiscoveryOutcome(
             alternative=Alternative(url, candidate.probability, candidate.reasoning),
             confirmed=verdict is not None,
             note=note,

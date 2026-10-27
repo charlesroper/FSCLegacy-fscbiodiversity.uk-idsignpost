@@ -219,12 +219,7 @@ class Verifier:
                 else None
             )
             if record is not None:
-                record.alternative_url = None
-                record.alternative_probability = None
-                record.alternative_reasoning = None
-                record.alternative_note = "dropped: URL shared by three or more entries"
-                record.alternative_checked = True
-                record.alternative_confirmed = False
+                record.drop_alternative("dropped: URL shared by three or more entries")
                 self.cache.put_entry(entry.id, entry.web_link or "", record)
             cleaned.append(entry)
         return cleaned
@@ -524,10 +519,7 @@ class Verifier:
                 self.stats.wayback_captures += 1
         if snapshot is None:
             return None
-        record = self.cache.get_url(url)
-        if record is not None:
-            record.wayback_url = snapshot
-            self.cache.put_url(url, record)
+        self.cache.set_wayback(url, snapshot)
         return snapshot
 
     def _apply(

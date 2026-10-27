@@ -89,13 +89,6 @@ class WaybackClient:
             return None
         return self._snapshot_from_response(response)
 
-    async def find(self, url: str, *, save_if_missing: bool = False) -> str | None:
-        """Look up a snapshot, capturing one when allowed and none exists."""
-        snapshot = await self.lookup(url)
-        if snapshot is not None or not save_if_missing:
-            return snapshot
-        return await self.save(url)
-
     @staticmethod
     def _closest_snapshot(response: httpx.Response) -> str | None:
         try:

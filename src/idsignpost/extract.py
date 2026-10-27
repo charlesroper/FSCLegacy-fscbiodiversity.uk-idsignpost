@@ -105,6 +105,12 @@ def _first_item_text(field: Tag) -> str | None:
     return None
 
 
+def _field_markdown(field: Tag) -> str | None:
+    items = _field_items(field) or [field]
+    markdown = "\n\n".join(part for part in map(to_markdown, items) if part)
+    return markdown or None
+
+
 def _sanitize_href(href: str) -> str:
     """Sanitize a link target after the extra entity decode legacy pages need."""
     return sanitize_url(html.unescape(href))
@@ -189,13 +195,9 @@ def parse_entry(html_text: str, filename: str) -> CatalogEntry:
         elif name == "field-additional-web-link":
             additional_links.extend(_hrefs(field))
         elif name == "field-description":
-            items = _field_items(field) or [field]
-            markdown = "\n\n".join(part for part in map(to_markdown, items) if part)
-            description = markdown or None
+            description = _field_markdown(field)
         elif name == "body":
-            items = _field_items(field) or [field]
-            markdown = "\n\n".join(part for part in map(to_markdown, items) if part)
-            body_markdown = markdown or None
+            body_markdown = _field_markdown(field)
         elif name == "field-author-s":
             data["authors"] = _first_item_text(field)
         elif name == "field-free":
@@ -211,9 +213,7 @@ def parse_entry(html_text: str, filename: str) -> CatalogEntry:
         elif name == "field-taxa":
             data["keywords"] = _first_item_text(field)
         elif name == "comment-body":
-            items = _field_items(field) or [field]
-            markdown = "\n\n".join(part for part in map(to_markdown, items) if part)
-            data["comment_body"] = markdown or None
+            data["comment_body"] = _field_markdown(field)
 
     data["description"] = description or body_markdown
     data["available_as"] = available_as
