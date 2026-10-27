@@ -578,6 +578,7 @@
 - Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261018234914/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg](<https://web.archive.org/web/20261018234914/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ0ZDQ3YjM1ZTBhNDI4Yg>)
 - Verified at: 2026-10-26T19:42:35.783595+00:00
 
 ## botanical-keys-and-how-use-them-facebook-group.html
@@ -2161,6 +2162,7 @@
 - Web link: [https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/sites/nnns.org.uk/files/imce/user11/speciesguides/Butterflies.pdf>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20231130112633/https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf](<https://web.archive.org/web/20231130112633/https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf>)
 - Alternative link: [https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf](<https://norfolknaturalists.org.uk/wp/wp-content/uploads/2019/08/Butterflies.pdf>)
 - Alternative probability: 0.80
 - Alternative reasoning: PDF of the Norfolk butterfly identification guide linked from the species guides index.
@@ -2540,6 +2542,7 @@
 - Web link: [https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969](<https://www.summerfieldbooks.com/collins-tree-guide-paperback-version~969>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20240614175805/https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson](<https://web.archive.org/web/20240614175805/https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson>)
 - Alternative link: [https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson](<https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official publisher's product page for the Collins Tree Guide, providing comprehensive details about the book.
@@ -2901,8 +2904,8 @@
 - Available as: Online
 - Keywords: microscopic microorganism aquatic phytoplankton plankton algae algal
 - Web link: [http://naturalhistory.museumwales.ac.uk/Diatoms/](<http://naturalhistory.museumwales.ac.uk/Diatoms/>)
-- Web link status: 503
-- Web link state: unverified
+- Web link status: protocol_error
+- Web link state: broken
 - Wayback link: [https://web.archive.org/web/20260907235612/http://naturalhistory.museumwales.ac.uk/diatoms/](<https://web.archive.org/web/20260907235612/http://naturalhistory.museumwales.ac.uk/diatoms/>)
 
 ## difficult-seashell-identification-guide.html
@@ -3607,6 +3610,7 @@
 - Web link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html.html](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html.html>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260113055437/https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html](<https://web.archive.org/web/20260113055437/https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html>)
 - Alternative link: [https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html](<https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official Natural History Museum URL for the Fossil Explorer app, which is widely cited as the primary source despite the link provided in the prompt being broken.
@@ -4060,6 +4064,7 @@
 - Web link status: 404
 - Web link state: broken
 - Web link resolved: [https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf](<https://dungbeetlemap.wordpress.com/wp-content/uploads/2017/01/geotrupidae_lr_web.pdf>)
+- Wayback link: [https://web.archive.org/web/20260904012615/https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/](<https://web.archive.org/web/20260904012615/https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/>)
 - Alternative link: [https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/](<https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the official project webpage that hosts the identification guide and provides the link to the PDF.
@@ -4208,6 +4213,7 @@
 - Web link: [https://butterfly-conservation.org/moths/text/105/guide_to_difficult_species_online.html](<https://butterfly-conservation.org/moths/text/105/guide_to_difficult_species_online.html>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20250123184820/https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online](<https://web.archive.org/web/20250123184820/https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online>)
 - Alternative link: [https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online](<https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online>)
 - Alternative probability: 0.90
 - Alternative reasoning: This URL is cited in academic and nature-related newsletters as the direct location for the online guide and its associated PDF downloads.
@@ -4884,6 +4890,7 @@
 - Web link status: 404
 - Web link state: broken
 - Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D3355](<https://www.discoverwildlife.com/index.php%3Fp%3D3355>)
+- Wayback link: [https://web.archive.org/web/20260310192919/https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds](<https://web.archive.org/web/20260310192919/https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds>)
 - Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct URL for the article 'How to identify autumn seeds' on the Discover Wildlife website, which features the illustrations by Felicity Rose Cole and text by Peter Marren.
@@ -4903,6 +4910,7 @@
 - Web link status: 404
 - Web link state: broken
 - Web link resolved: [https://www.discoverwildlife.com/index.php%3Fp%3D2990](<https://www.discoverwildlife.com/index.php%3Fp%3D2990>)
+- Wayback link: [https://web.archive.org/web/20260713023602/https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies](<https://web.archive.org/web/20260713023602/https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies>)
 - Alternative link: [https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/](<https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the direct, active URL for the guide, confirmed by multiple external references and user discussions as the location of the pictorial hoverfly identification article.
@@ -5033,6 +5041,7 @@
 - Web link status: 404
 - Web link state: broken
 - Web link resolved: [https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf](<https://www.mba.ac.uk/sites/default/files/downloads/IDNNS%20English.pdf>)
+- Wayback link: [https://web.archive.org/web/20260307090451/https://plymsea.ac.uk/id/eprint/9076/](<https://web.archive.org/web/20260307090451/https://plymsea.ac.uk/id/eprint/9076/>)
 - Alternative link: [https://plymsea.ac.uk/id/eprint/9076](<https://plymsea.ac.uk/id/eprint/9076>)
 - Alternative probability: 1.00
 - Alternative reasoning: This is the official repository page (PlyMSEA) that hosts the guide, providing direct links to both high and low-resolution PDF versions.
@@ -5675,6 +5684,7 @@
 - Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019000955/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY](<https://web.archive.org/web/20261019000955/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXMzfGd4OjM3YjFjNTFmMTU5ZGQwNTY>)
 - Verified at: 2026-10-26T19:46:36.586064+00:00
 
 ## key-british-species-genus-protapion.html
@@ -6223,6 +6233,7 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/dermestidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S220586346:1793044026455441>)
+- Wayback link: [https://web.archive.org/web/20260212051841/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae](<https://web.archive.org/web/20260212051841/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae>)
 - Alternative probability: 0.95
 - Alternative reasoning: This is the updated URL for Mike Hackston's identification keys, which hosts the specific guide for British Dermestidae.
@@ -7292,6 +7303,7 @@
 - Web link status: redirect_mismatch
 - Web link state: broken
 - Web link resolved: [https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445](<https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&followup=https://sites.google.com/site/mikesinsectkeys/Home/keys-to-coleoptera/apionidae&osid=1&passive=1209600&service=wise&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1207345388:1793044112427445>)
+- Wayback link: [https://web.archive.org/web/20260204160744/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae](<https://web.archive.org/web/20260204160744/https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae>)
 - Alternative link: [https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae](<https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae>)
 - Alternative probability: 0.90
 - Alternative reasoning: This URL follows the updated naming convention for the 'Mikes Insect Keys' site and hosts the specific identification guide for British Apionidae.
@@ -7695,9 +7707,14 @@
 - Available as: Online
 - Keywords: moth, moths
 - Web link: [http://123-reg-suspended.co.uk/](<http://123-reg-suspended.co.uk/>)
-- Web link status: 504
-- Web link state: unverified
+- Web link status: protocol_error
+- Web link state: broken
 - Wayback link: [https://web.archive.org/web/20240221115142/http://123-reg-suspended.co.uk/](<https://web.archive.org/web/20240221115142/http://123-reg-suspended.co.uk/>)
+- Alternative link: [https://mothdissection.co.uk/index.php](<https://mothdissection.co.uk/index.php>)
+- Alternative probability: 0.90
+- Alternative reasoning: This is the direct index page for the Moth Dissection UK website, which is the functional host for the group's resources.
+- Alternative note: confirmed: The candidate link is the homepage for the Lepidoptera Dissection Group (Moth Dissection UK), which provides the dissection guides, technical diagrams, and high-magnification images described in the original entry.
+- Verified at: 2026-10-27T23:00:40.370993+00:00
 
 ## les-araignées-de-belgique-et-de-france-spiders-belgium-and-france.html
 
@@ -7868,6 +7885,7 @@
 - Web link: [https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA](<https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019002402/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA](<https://web.archive.org/web/20261019002402/https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MWQ2ZGE4NWIyNThlYTM5ZA>)
 - Verified at: 2026-10-26T19:49:01.151925+00:00
 
 ## littoral-pycnogonids-british-isles.html
@@ -8254,6 +8272,7 @@
 - Web link: [https://www.summerfieldbooks.com/new-flora-of-the-british-isles-4th-edition~6595](<https://www.summerfieldbooks.com/new-flora-of-the-british-isles-4th-edition~6595>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260724050024/https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/](<https://web.archive.org/web/20260724050024/https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/>)
 - Alternative link: [https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/](<https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/>)
 - Alternative probability: 0.90
 - Alternative reasoning: Summerfield Books is the primary specialist retailer identified in the description as the standard source for this book, and they maintain a specific product page for the 4th edition.
@@ -8886,6 +8905,7 @@
 - Web link: [https://www.field-studies-council.org/shop/publications/shropshire-bees-wasps-ants/](<https://www.field-studies-council.org/shop/publications/shropshire-bees-wasps-ants/>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260514215659/https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published](<https://web.archive.org/web/20260514215659/https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published>)
 - Alternative link: [https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published](<https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published>)
 - Alternative probability: 0.60
 - Alternative reasoning: This BWARS page provides the official announcement and context for the publication, serving as a primary source for information about the atlas.
@@ -10517,6 +10537,7 @@
 - Web link: [https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578](<https://www.summerfieldbooks.com/the-wild-flower-key%3A-how-to-identify-wild-flowers-trees-and-shrubs-in-britain-and-ireland~1578>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20260419144509/https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750](<https://web.archive.org/web/20260419144509/https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750>)
 - Alternative link: [https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750](<https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750>)
 - Alternative probability: 0.90
 - Alternative reasoning: This is the official publisher's product page for the book, providing comprehensive details and purchase links.
@@ -10702,6 +10723,7 @@
 - Additional web link: [https://www.seasearch.org.uk/](<https://www.seasearch.org.uk/>)
 - Web link status: 404
 - Web link state: broken
+- Wayback link: [https://web.archive.org/web/20241105064908/https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/](<https://web.archive.org/web/20241105064908/https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/>)
 - Alternative link: [https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/](<https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/>)
 - Alternative probability: 0.80
 - Alternative reasoning: This is the direct product page for the guide on the retailer's website, replacing the broken link provided.
@@ -11353,6 +11375,7 @@
 - Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/](<https://www.flickr.com/photos/63075200%40N07/collections/72157651936867957/>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019015902/https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/](<https://web.archive.org/web/20261019015902/https://www.flickr.com/photos/63075200@N07/collections/72157651936867957/>)
 - Verified at: 2026-10-26T19:53:28.200833+00:00
 
 ## steven-falks-flickr-collection-diptera.html
@@ -11409,6 +11432,7 @@
 - Web link: [https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/](<https://www.flickr.com/photos/63075200%40N07/collections/72157629545925335/>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019015924/https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/](<https://web.archive.org/web/20261019015924/https://www.flickr.com/photos/63075200@N07/collections/72157629545925335/>)
 - Verified at: 2026-10-26T19:53:33.092852+00:00
 
 ## steven-falks-flickr-collection-molluscs.html
@@ -11668,6 +11692,7 @@
 - Web link: [https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA](<https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019030007/https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA](<https://web.archive.org/web/20261019030007/https://books.google.co.uk/books?id=hBh0QgAACAAJ&dq=Trees+of+Britain+and+Europe&hl=en&sa=X&ei=qxGVVanSO6TA7AbdlbGgAw&ved=0CCoQ6AEwAA>)
 - Verified at: 2026-10-26T19:53:40.681054+00:00
 
 ## trees-britain-and-northern-europe.html
@@ -11682,6 +11707,7 @@
 - Web link: [https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ](<https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ>)
 - Web link status: 200
 - Web link state: ok
+- Wayback link: [https://web.archive.org/web/20261019020128/https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ](<https://web.archive.org/web/20261019020128/https://books.google.co.uk/books?id=-2b1GgAACAAJ&dq=Trees+of+Britain+and+Northern+Europe&hl=en&sa=X&ei=XQ6VVcOWNeKu7Aaklbn4Ag&ved=0CCcQ6AEwAQ>)
 - Verified at: 2026-10-26T19:53:41.096837+00:00
 
 ## true-weevils-part-1-coleoptera-curculionidae.html
