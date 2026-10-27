@@ -155,7 +155,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/",
     "alternative_probability": 0.85,
     "alternative_reasoning": "This is the direct product page on the Royal Entomological Society website, which is the publisher of the handbook series.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society Handbook volume described in the entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official Royal Entomological Society product page for the specific RES Handbook volume described in the entry.",
     "verified_at": "2026-10-27T00:32:41.381069+00:00"
   },
   {
@@ -341,7 +341,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/athecate-hydroids-and-their-medusae-synopses-of-the-british-fauna-59/23535",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page for the specific publication, providing details on its availability and bibliographic information.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact book title, author, and series described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and author described in the catalogue entry.",
     "verified_at": "2026-10-27T02:11:33.255742+00:00"
   },
   {
@@ -473,7 +473,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/barnacles-synopses-of-the-british-fauna-57/14617",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is a direct product page for the specific book (Synopses of the British Fauna 57) from a reputable natural history bookseller.",
-    "alternative_note": "confirmed: The candidate page is the product page for the specific book described in the entry, matching both the title and the author.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific book 'Barnacles' in the 'Synopses of the British Fauna' series by Southwood, which matches the title, author, and subject matter described in the entry.",
     "verified_at": "2026-10-27T02:11:34.360447+00:00"
   },
   {
@@ -577,7 +577,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This appears to be the landing page or HTML version of the guide hosted on the Natural History Museum website.",
-    "alternative_note": "confirmed: The candidate link matches the title and description of the original entry, as it is the specific identification guide provided by the Natural History Museum for bats in flight.",
+    "alternative_note": "confirmed: The candidate link title matches the entry title and originates from the same publisher, indicating it is the intended guide.",
     "verified_at": "2026-10-27T00:32:36.084846+00:00"
   },
   {
@@ -741,7 +741,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the most likely location for the guide, as the broken link provided follows the standard NHM URL structure for such resources, and the guide is officially attributed to the Natural History Museum.",
-    "alternative_note": "confirmed: The candidate link corresponds to the official Natural History Museum identification guide authored by the individuals listed and matches the description of the guide provided in the entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official Natural History Museum identification guide for British mammal bones, which matches the title and subject matter of the original catalogue entry.",
     "verified_at": "2026-10-27T00:32:38.061263+00:00"
   },
   {
@@ -1502,7 +1502,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page for the specific handbook from a reputable natural history bookseller.",
-    "alternative_note": "confirmed: The candidate page refers to the exact same publication, 'British Scraptiidae' by B. Levey, which is volume 5 part 18 of the Handbooks for the Identification of British Insects.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book described in the catalogue entry, matching the title, author, and series details.",
     "verified_at": "2026-10-27T00:32:44.898058+00:00"
   },
   {
@@ -1659,7 +1659,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page for the book, providing bibliographic details and status, which is the most specific available resource for this publication.",
-    "alternative_note": "confirmed: The candidate page matches the title, author, and subject matter of the original catalogue entry, confirming it is the same publication.",
+    "alternative_note": "confirmed: The candidate link corresponds to a product page for the exact book title and author specified in the entry.",
     "verified_at": "2026-10-27T00:32:45.553752+00:00"
   },
   {
@@ -3742,7 +3742,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/handbooks/lepidoptera/checklist-lepidoptera-british-isles/",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the original 2013 edition of the handbook.",
-    "alternative_note": "confirmed: The candidate link is the official Royal Entomological Society product page for the exact publication described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official Royal Entomological Society product page for the specific handbook described in the entry.",
     "verified_at": "2026-10-27T02:12:02.899775+00:00"
   },
   {
@@ -4109,7 +4109,7 @@
     "alternative_link": "https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the updated, secure URL for the Collembola Taxonomy guide originally hosted at the broken link provided.",
-    "alternative_note": "confirmed: The candidate URL is hosted by the University of Roehampton, which is associated with Peter Shaw, and the content matches the description of a taxonomic guide for UK Collembola.",
+    "alternative_note": "confirmed: The candidate page contains the exact description, authorship, and taxonomic content described in the catalogue entry, confirming it is the correct resource.",
     "verified_at": "2026-10-27T00:32:53.264036+00:00"
   },
   {
@@ -5081,7 +5081,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Pemberley Books is a specialized natural history bookseller that frequently hosts and sells specific volumes of the 'Synopses of the British Fauna' series, including this title.",
-    "alternative_note": "confirmed: The candidate page refers to the exact same publication, 'Echinoderms' in the 'Synopses of the British Fauna' series, authored by Southward and Campbell.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact book title, series, and authors described in the catalogue entry.",
     "verified_at": "2026-10-27T00:32:59.524732+00:00"
   },
   {
@@ -5267,7 +5267,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a specific product page from a bookseller that hosts and offers the identification guide for sale.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact same fold-out chart by the Field Studies Council described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact same fold-out chart by the Field Studies Council described in the entry.",
     "verified_at": "2026-10-27T00:33:01.771336+00:00"
   },
   {
@@ -5345,7 +5345,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is a primary retailer for Field Studies Council publications and currently lists this specific fold-out chart as in stock.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact same FSC fold-out chart described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is for the exact same FSC fold-out chart described in the catalogue entry, confirming it is the correct product.",
     "verified_at": "2026-10-27T00:33:03.685860+00:00"
   },
   {
@@ -5713,7 +5713,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is a direct product page for the physical book, although it is currently listed as out of print.",
-    "alternative_note": "confirmed: The candidate page refers to the same specific publication, 'Fleas (Siphonaptera)' by Whitaker, which is part of the Handbooks for the Identification of British Insects series (vol 1, part 16).",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title, author, and series (RES Handbook vol 1 part 16) described in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:06.055437+00:00"
   },
   {
@@ -5739,7 +5739,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965",
     "alternative_probability": 0.7,
     "alternative_reasoning": "Pemberley Books is a specialized entomological bookseller that provides a dedicated product page for this specific RES Handbook title.",
-    "alternative_note": "confirmed: The candidate page refers to the same specific publication, 'Fleas (Siphonaptera)' by Whitaker, which is part of the Handbooks for the Identification of British Insects series (vol 1, part 16).",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact same book, 'Fleas (Siphonaptera)' by Whitaker, which is part of the 'Handbooks for the Identification of British Insects' series (volume 1, part 16).",
     "verified_at": "2026-10-27T01:47:36.209482+00:00"
   },
   {
@@ -5843,7 +5843,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Natural History Museum URL for the Fossil Explorer app, which is widely cited as the primary source despite the link provided in the prompt being broken.",
-    "alternative_note": "confirmed: The candidate page is the official Natural History Museum page for the Fossil Explorer app, which matches the description, features, and purpose of the original catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is the official Natural History Museum page for the Fossil Explorer app, which matches the described field guide and its features.",
     "verified_at": "2026-10-27T00:33:30.679342+00:00"
   },
   {
@@ -6078,7 +6078,7 @@
     "alternative_link": "https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the most recent and frequently cited version of the interactive key developed by Malcolm Greaves for the genus Geoglossum.",
-    "alternative_note": "confirmed: The candidate link directly provides the interactive key for the genus Geoglossum described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link provides the interactive key to the genus Geoglossum described in the entry, confirming it is the intended resource despite the generic page heading.",
     "verified_at": "2026-10-27T00:33:10.053030+00:00"
   },
   {
@@ -6576,7 +6576,7 @@
     "alternative_link": "https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the official project webpage that hosts the identification guide and provides the link to the PDF.",
-    "alternative_note": "confirmed: The candidate link matches the URL provided in the description and serves as the dedicated page hosting the guide for the Geotrupidae family.",
+    "alternative_note": "confirmed: The candidate link matches the URL provided in the catalogue entry description and serves as the dedicated page for the Geotrupidae guide.",
     "verified_at": "2026-10-27T00:33:42.722876+00:00"
   },
   {
@@ -6811,7 +6811,7 @@
     "alternative_link": "https://butterfly-conservation.org/moths/moth-resources-and-downloads/guide-to-difficult-species-online",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This URL is cited in academic and nature-related newsletters as the direct location for the online guide and its associated PDF downloads.",
-    "alternative_note": "confirmed: The candidate link is the official Butterfly Conservation page that hosts the PDF downloads for the specific publication described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate URL is the official Butterfly Conservation page that hosts the downloadable PDFs for the 'Guide to difficult species online', matching the content and purpose described in the catalogue entry.",
     "verified_at": "2026-10-27T02:12:18.424794+00:00"
   },
   {
@@ -7659,7 +7659,7 @@
     "alternative_link": "https://www.field-studies-council.org/shop/publications/harvestmen/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the direct product page for the current 2nd edition of the FSC Harvestmen fold-out guide, which replaces the broken link provided.",
-    "alternative_note": "confirmed: The candidate link is the official product page for the 'Harvestmen' fold-out guide authored by Paul Richards, which matches the title, author, and description provided in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link leads to the official Field Studies Council product page for the 'Harvestmen' fold-out guide by Richards, which matches the description and title of the original catalogue entry.",
     "verified_at": "2026-10-27T00:33:13.770328+00:00"
   },
   {
@@ -7894,7 +7894,7 @@
     "alternative_link": "https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL for the article 'How to identify autumn seeds' on the Discover Wildlife website, which features the illustrations by Felicity Rose Cole and text by Peter Marren.",
-    "alternative_note": "confirmed: The candidate page title and URL directly correspond to the entry title, indicating it is the intended guide for identifying autumn seeds.",
+    "alternative_note": "confirmed: The candidate page title matches the entry title exactly and originates from a reputable wildlife publication, indicating it is the intended guide.",
     "verified_at": "2026-10-27T00:33:44.815924+00:00"
   },
   {
@@ -7920,7 +7920,7 @@
     "alternative_link": "https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, active URL for the guide, confirmed by multiple external references and user discussions as the location of the pictorial hoverfly identification article.",
-    "alternative_note": "confirmed: The candidate page is a direct match for the entry title and provides the pictorial guide for identifying hoverfly species as described.",
+    "alternative_note": "confirmed: The candidate link matches the entry title and originates from the same publication source, indicating it is the correct guide.",
     "verified_at": "2026-10-27T00:33:50.049592+00:00"
   },
   {
@@ -7946,7 +7946,7 @@
     "alternative_link": "https://summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is a primary distributor for BSBI publications and hosts the specific product page for this book.",
-    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and authors specified in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and authors specified in the entry, confirming it is the correct publication.",
     "verified_at": "2026-10-27T00:33:24.216930+00:00"
   },
   {
@@ -8110,7 +8110,7 @@
     "alternative_link": "https://plymsea.ac.uk/id/eprint/9076",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the official repository page (PlyMSEA) that hosts the guide, providing direct links to both high and low-resolution PDF versions.",
-    "alternative_note": "confirmed: The candidate page provides direct access to the specific identification guide described in the entry, matching both the title and the content.",
+    "alternative_note": "confirmed: The candidate page provides a direct download link for the specific identification guide described in the entry.",
     "verified_at": "2026-10-27T00:33:58.379940+00:00"
   },
   {
@@ -8674,10 +8674,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": "https://web.archive.org/web/20210122224738/https://www.naturebureau.co.uk/an-introduction-to-centipedes-millipedes-and-woodlice",
-    "alternative_link": "https://bmig.org.uk/page/keys-identification-guides",
-    "alternative_probability": 0.95,
-    "alternative_reasoning": "This is the official British Myriapod and Isopod Group (BMIG) page that hosts the free downloadable PDF files for Paul Richards' 'An Introduction to Centipedes, Millipedes and Woodlice'.",
-    "alternative_note": "confirmed: The candidate page serves as the primary repository for the BMIG's identification guides, which directly corresponds to the resource described in the catalogue entry.",
+    "alternative_link": null,
+    "alternative_probability": null,
+    "alternative_reasoning": null,
+    "alternative_note": "rejected: The candidate page is a general index or category page listing multiple resources rather than the specific guide described in the entry.",
     "verified_at": "2026-10-27T00:33:54.297822+00:00"
   },
   {
@@ -9603,7 +9603,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-buprestidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, functional location for the identification guide previously hosted at the broken link.",
-    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the entry and is part of the author's identified collection of insect keys.",
+    "alternative_note": "confirmed: The candidate link points to the specific page for the 'Key for the identification of British Buprestidae' by Mike Hackston, which matches the title and content description of the original catalogue entry.",
     "verified_at": "2026-10-27T02:12:40.509091+00:00"
   },
   {
@@ -9707,7 +9707,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, active URL for the identification guide, as confirmed by recent community discussions and updated site navigation.",
-    "alternative_note": "confirmed: The candidate link explicitly matches the title and subject matter of the original catalogue entry, which is a specific identification key for British Cerambycidae by Mike Hackston.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Cerambycidae authored by Mike Hackston, which matches the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:16.384505+00:00"
   },
   {
@@ -9941,7 +9941,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the updated URL for Mike Hackston's identification keys, which hosts the specific guide for British Dermestidae.",
-    "alternative_note": "confirmed: The candidate link directly corresponds to the specific identification key for British Dermestidae authored by Mike Hackston, matching the title and subject matter of the original entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Dermestidae by Mike Hackston, which matches the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:56.066692+00:00"
   },
   {
@@ -10306,7 +10306,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, active location for Mike Hackston's identification keys, replacing the broken 'sites.google.com/site' address.",
-    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the requested identification key and is hosted on the author's known site for insect keys.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Kateretidae authored by Mike Hackston, which matches the title and content of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:31.473032+00:00"
   },
   {
@@ -10332,7 +10332,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the updated, direct URL for the specific identification key hosted on Mike Hackston's site.",
-    "alternative_note": "confirmed: The candidate link directly corresponds to the specific identification key for British Kateretidae authored by Mike Hackston as described in the entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Kateretidae by Mike Hackston, which matches the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:31.479257+00:00"
   },
   {
@@ -10880,7 +10880,7 @@
     "alternative_link": "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is a direct Google Docs viewer link for the Ptinidae key PDF, which has been cited in ecological reports as a valid access point for the document.",
-    "alternative_note": "confirmed: The candidate link is a Google Docs viewer URL for a document hosted on the 'Mike's Insect Keys' site, which is the established source for Mike Hackston's 'Key for the identification of British Ptinidae'.",
+    "alternative_note": "confirmed: The candidate link is a Google Docs viewer URL for a document hosted on the 'mikesinsectkeys' site, which is the established repository for Mike Hackston's identification keys, including the 'Key for the identification of British Ptinidae'.",
     "verified_at": "2026-10-27T00:34:35.277838+00:00"
   },
   {
@@ -11426,7 +11426,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/keys-to-adults-of-the-water-beetles-of-britain-and-ireland.-part-2-coleoptera-hydrophiloidea-handbooks-for-the-identification-of-british-insects-4-5b/26099/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page from a specialist bookseller that offers the publication for purchase.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact same publication, matching the title, authors, and series details provided in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title, authors, and series volume (RES Handbook 4/5b) described in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:41.090379+00:00"
   },
   {
@@ -11531,7 +11531,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This URL follows the updated naming convention for the 'Mikes Insect Keys' site and hosts the specific identification guide for British Apionidae.",
-    "alternative_note": "confirmed: The candidate URL directly corresponds to the specific key for British Apionidae authored by Mike Hackston as described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate URL explicitly matches the title and subject matter of the original entry, which focuses on keys for the identification of British Apionidae by Mike Hackston.",
     "verified_at": "2026-10-27T00:34:58.233588+00:00"
   },
   {
@@ -11557,7 +11557,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-cantharidae",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the updated, active URL for Mike Hackston's identification keys for British Cantharidae, replacing the broken site.google.com/site/mikesinsectkeys/ link.",
-    "alternative_note": "confirmed: The candidate link explicitly matches the title and subject matter of the original entry, providing the specific identification keys for British Cantharidae authored by Mike Hackston.",
+    "alternative_note": "confirmed: The URL explicitly identifies the page as the keys for the identification of British Cantharidae, which matches the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T02:13:43.405269+00:00"
   },
   {
@@ -11583,7 +11583,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, functional location for Mike Hackston's insect keys, replacing the broken sites.google.com/site/mikesinsectkeys/ address.",
-    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Carabidae authored by Mike Hackston, which matches the title and description of the original catalogue entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific page for 'Keys for the identification of British Carabidae' by Mike Hackston, which contains the exact descriptive text provided in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:45.328602+00:00"
   },
   {
@@ -11609,7 +11609,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated location for Mike Hackston's keys, as referenced in academic and biodiversity literature, replacing the broken sites.google.com/site link.",
-    "alternative_note": "confirmed: The candidate link specifically points to the identification keys for British Chrysomelidae authored by Mike Hackston, which matches the title and description of the original entry.",
+    "alternative_note": "confirmed: The candidate URL explicitly references the identification keys for British Chrysomelidae, matching the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:45.419667+00:00"
   },
   {
@@ -11817,7 +11817,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the updated URL structure for Mike Hackston's insect keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' domain.",
-    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Scarabaeidae authored by Mike Hackston, which matches the content and purpose of the original catalogue entry.",
+    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the catalogue entry and is hosted on the author's known site for insect identification keys.",
     "verified_at": "2026-10-27T00:34:49.374765+00:00"
   },
   {
@@ -11843,7 +11843,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, functional location for Mike Hackston's keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' address.",
-    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the catalogue entry and corresponds to the specific page hosting the keys for British Staphylinidae authored by Mike Hackston.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific page for 'Keys for the identification of British Staphylinidae' by Mike Hackston, which matches the title and content of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:49.318107+00:00"
   },
   {
@@ -12184,7 +12184,7 @@
     "alternative_link": "https://www.abebooks.com/servlet/BookDetailsPL?bi=32364423792",
     "alternative_probability": 0.4,
     "alternative_reasoning": "This is a direct product page for the two-volume set on a major book marketplace, providing bibliographic details and purchase options.",
-    "alternative_note": "confirmed: The candidate page refers to the exact two-volume work 'Les Myxomycètes' by the same authors, matching the description of the publication.",
+    "alternative_note": "confirmed: The candidate page refers to the same two-volume work 'Les Myxomycètes' by the same authors, Michel Poulain, Marianne Meyer, and Jean Bozonnet.",
     "verified_at": "2026-10-27T02:13:53.962972+00:00"
   },
   {
@@ -12237,7 +12237,7 @@
     "alternative_link": "https://www.apis.ac.uk/nitrogen-lichen-field-manual",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This URL is explicitly cited in official documentation as the location for the field manual and guide for the lichen-based nitrogen assessment tool.",
-    "alternative_note": "confirmed: The candidate page provides the field guide and information for the same lichen-based nitrogen pollution assessment tool described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate page provides the official field guide and download links for the exact same CEH Lichen app described in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:53.120147+00:00"
   },
   {
@@ -12420,7 +12420,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582",
     "alternative_probability": 0.6,
     "alternative_reasoning": "Pemberley Books is a specialized natural history bookseller that frequently stocks and hosts product pages for the Synopses of the British Fauna series.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact book title, authors, and series mentioned in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title, authors, and series (Synopses of the British Fauna 55) described in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:58.772569+00:00"
   },
   {
@@ -12978,7 +12978,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is the primary specialist retailer identified in the description as the standard source for this book, and they maintain a specific product page for the 4th edition.",
-    "alternative_note": "confirmed: The candidate link points to the product page for the 4th edition of the exact book described in the entry, which is a valid replacement for the lost link.",
+    "alternative_note": "confirmed: The candidate link is a direct product page for the 'New Flora of the British Isles' by Clive Stace, which matches the title and subject of the catalogue entry.",
     "verified_at": "2026-10-27T00:35:05.804150+00:00"
   },
   {
@@ -13350,7 +13350,7 @@
     "alternative_link": "https://sunbird.tv/apps/orchid-id-british-orchids/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the direct product page for the 'Orchid Id - British Orchids' app on the developer's website.",
-    "alternative_note": "confirmed: The candidate page describes the Orchid Id app, which is the same digital identification guide for British orchids as specified in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate page describes the 'Orchid Id' app, which matches the title, author, and purpose of the original catalogue entry for identifying wild orchids of the British Isles.",
     "verified_at": "2026-10-27T00:35:14.339236+00:00"
   },
   {
@@ -13508,7 +13508,7 @@
     "alternative_link": "https://www.coleoptera.org.uk/sites/default/files/Silphidae%20Key_2019%20version.pdf",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the likely direct file path for the 2019 version of the PDF key hosted on the official scheme's domain.",
-    "alternative_note": "confirmed: The candidate link directly points to the 2019 version of the Silphidae key produced by the Silphidae Recording Scheme, which matches the description provided in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link directly points to the 2019 version of the Silphidae identification key produced by the Silphidae Recording Scheme, which matches the description provided in the catalogue entry.",
     "verified_at": "2026-10-27T02:14:11.666645+00:00"
   },
   {
@@ -13716,10 +13716,10 @@
     "web_link_state": "broken",
     "web_link_resolved": null,
     "wayback_link": null,
-    "alternative_link": "https://bsbi.org/learn/resources/plant-crib",
-    "alternative_probability": 0.9,
-    "alternative_reasoning": "The BSBI official website hosts the 'Plant Crib' as a resource, and this URL is the standard location for accessing the various sections of the guide.",
-    "alternative_note": "confirmed: The candidate link leads to the official BSBI Plant Crib resource page, which hosts the specific publication 'The Plant Crib' by P. D. Sell as a collection of downloadable sections.",
+    "alternative_link": "https://bsbi.org/learn/resources/plant-crib/conifers",
+    "alternative_probability": 0.7,
+    "alternative_reasoning": "BSBI Plant Crib section for conifers.",
+    "alternative_note": "confirmed: The candidate page contains the specific 'Key to taxa' and introductory text for conifers from The Plant Crib.",
     "verified_at": "2026-10-27T02:14:15.861853+00:00"
   },
   {
@@ -13797,7 +13797,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349",
     "alternative_probability": 0.5,
     "alternative_reasoning": "Pemberley Books is a specialist natural history bookseller that lists this specific identification chart, providing details on its availability and bibliographic information.",
-    "alternative_note": "confirmed: The candidate page refers to the same identification chart by the same authors, covering the same subject matter of plants common on sand dunes.",
+    "alternative_note": "confirmed: The candidate page identifies the exact same identification chart by Edmondson, matching the title and subject matter described in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:07.782194+00:00"
   },
   {
@@ -13980,7 +13980,7 @@
     "alternative_link": "https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published",
     "alternative_probability": 0.6,
     "alternative_reasoning": "This BWARS page provides the official announcement and context for the publication, serving as a primary source for information about the atlas.",
-    "alternative_note": "confirmed: The candidate page confirms the publication of the specific atlas described in the entry, matching both the title and the subject matter.",
+    "alternative_note": "confirmed: The candidate page title directly corresponds to the publication of the atlas described in the entry, confirming it is the same work.",
     "verified_at": "2026-10-27T00:35:13.634694+00:00"
   },
   {
@@ -14269,7 +14269,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol01_Part10.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct PDF link for the RES Handbook Vol 1 Part 10 (Odonata) hosted on the official Royal Entomological Society website.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 1 Part 10 regarding Odonata, which matches the title and content of the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF file for the RES Handbook Volume 1 Part 10, which matches the title and subject matter of the catalogue entry.",
     "verified_at": "2026-10-27T02:14:18.930509+00:00"
   },
   {
@@ -14620,7 +14620,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, functional PDF link for the R. L. Coe Pipunculidae handbook hosted on the Royal Entomological Society's official website.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 10 Part 2c, which matches the requested title and author.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 10 Part 2c, which matches the title and content of the requested entry.",
     "verified_at": "2026-10-27T00:35:15.745957+00:00"
   },
   {
@@ -14728,7 +14728,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-cyclorrhapha-calyptrata-section-b-muscidae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society page for the publication, which provides access to the handbook.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and subject matter described in the catalogue entry, confirming it is the correct resource.",
+    "alternative_note": "confirmed: The candidate link corresponds directly to the specific Royal Entomological Society handbook volume and title described in the entry.",
     "verified_at": "2026-10-27T02:14:51.746366+00:00"
   },
   {
@@ -14755,7 +14755,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the PDF download for the specified handbook.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume for Tephritidae authored by I. M. White, matching the entry title and content.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume for Tephritidae authored by I. M. White, matching the entry title and subject matter.",
     "verified_at": "2026-10-27T00:35:12.820737+00:00"
   },
   {
@@ -14968,7 +14968,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific publication 'Coleoptera, Introduction and keys to families' by the Royal Entomological Society, which matches the title and subject matter of the original catalogue entry.",
+    "alternative_note": "confirmed: The candidate link is the official Royal Entomological Society page for the specific publication 'Coleoptera, Introduction and keys to families' by R. A. Crowson, which matches the catalogue entry.",
     "verified_at": "2026-10-27T00:35:17.691415+00:00"
   },
   {
@@ -14995,7 +14995,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol04_Part10.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL for the PDF of the RES Handbook Vol 4 Part 10, as identified by the Royal Entomological Society's own resource documentation.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 4 Part 10, which matches the title and content described in the entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF file for the RES Handbook Volume 4 Part 10, which matches the title and content of the catalogue entry.",
     "verified_at": "2026-10-27T00:35:18.018011+00:00"
   },
   {
@@ -15157,7 +15157,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides information and access to the publication.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook title, author, and subject matter described in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook titled 'Dung Beetles & chafers - Coleoptera: Scarabaeoidea' by L. Jessop, which matches the entry title and author.",
     "verified_at": "2026-10-27T00:35:20.750278+00:00"
   },
   {
@@ -15211,7 +15211,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a download link for the PDF.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Coleoptera: Cerambycidae by E. A. J. Duffy, matching the title and subject matter of the original entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume and title described in the entry.",
     "verified_at": "2026-10-27T00:35:21.717389+00:00"
   },
   {
@@ -15265,7 +15265,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the out-of-print handbook, which historically hosted the PDF download link.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Buprestidae authored by Brian Levey, matching the entry title and description.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume and subject matter described in the entry.",
     "verified_at": "2026-10-27T00:35:23.774395+00:00"
   },
   {
@@ -15373,7 +15373,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-phalacridae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society page for the specific handbook, which provides a direct download link for the PDF.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Coleoptera: Phalacridae authored by R. T. Thompson, matching the entry title and description.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Coleoptera: Phalacridae, which matches the title and subject matter of the original catalogue entry.",
     "verified_at": "2026-10-27T02:15:21.754384+00:00"
   },
   {
@@ -15454,7 +15454,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the digital archives and direct download links for their handbooks.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title, edition, and author specified in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact title and edition of the RES Handbook described in the entry.",
     "verified_at": "2026-10-27T00:35:22.614436+00:00"
   },
   {
@@ -15481,7 +15481,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-symphyta-2/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This page is the official Royal Entomological Society resource page for the handbook, which provides a direct download link for the PDF.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume and part described in the entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the Royal Entomological Society's page for the Hymenoptera: Symphyta handbook series, which matches the title and subject matter of the original entry.",
     "verified_at": "2026-10-27T02:17:39.059218+00:00"
   },
   {
@@ -15616,7 +15616,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the download for the Hymenoptera - Formicidae handbook.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Hymenoptera: Formicidae authored by Bolton and Collingwood, matching the requested catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Hymenoptera - Formicidae authored by Bolton and Collingwood, matching the title and subject matter of the original entry.",
     "verified_at": "2026-10-27T00:35:29.518050+00:00"
   },
   {
@@ -15643,7 +15643,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol06_Part04.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL to the PDF version of the RES Handbook Vol 6 Part 4, as identified in the library catalog and resource finder records.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Volume 6 Part 4, which matches the title and content of the requested entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 6 Part 4, which matches the title and content of the requested publication.",
     "verified_at": "2026-10-27T02:17:30.339726+00:00"
   },
   {
@@ -15670,7 +15670,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their publications.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Cuckoo-Wasps (Chrysididae) authored by D. Morgan, matching the entry title and description.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Cuckoo-Wasps (Chrysididae) authored by D. Morgan, matching the entry title and subject matter.",
     "verified_at": "2026-10-27T00:35:32.194506+00:00"
   },
   {
@@ -15697,7 +15697,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-ichneumonoidea-pimplinae/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page for this specific handbook volume, which provides a direct link to the PDF version.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume described in the entry, confirming it is the correct publication.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume described in the entry, even though it is listed as out of print.",
     "verified_at": "2026-10-27T02:15:44.382839+00:00"
   },
   {
@@ -15724,7 +15724,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their out-of-print publications.",
-    "alternative_note": "confirmed: The candidate link corresponds directly to the specific publication title and authors listed in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds directly to the specific Royal Entomological Society handbook volume, part, and title described in the entry.",
     "verified_at": "2026-10-27T00:35:32.125289+00:00"
   },
   {
@@ -15886,7 +15886,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society page for the publication, which provides access to the handbook.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and series specified in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume and section described in the entry.",
     "verified_at": "2026-10-27T00:35:34.799130+00:00"
   },
   {
@@ -15913,7 +15913,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, corrected URL for the PDF version of the RES Handbook Vol 8 Part 2b, as cited in academic literature.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Volume 8 Part 2b, which matches the title and content described in the entry.",
+    "alternative_note": "confirmed: The candidate link points directly to a PDF file that matches the title, author, and content description of the RES Handbook Volume 8 Part 2b.",
     "verified_at": "2026-10-27T00:35:37.430989+00:00"
   },
   {
@@ -15940,7 +15940,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part03d_i.pdf",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the direct PDF link structure for the RES Handbooks, which replaces the broken link provided in the prompt.",
-    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 8 Part 3d i, which matches the title and content described in the entry.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF file for the RES Handbook Volume 8 Part 3d(i) by G. E. J. Nixon, which matches the title and content of the catalogue entry.",
     "verified_at": "2026-10-27T02:15:56.508692+00:00"
   },
   {
@@ -15967,7 +15967,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the out-of-print handbook, which serves as the primary source for the publication.",
-    "alternative_note": "confirmed: The candidate link corresponds directly to the specific Royal Entomological Society handbook volume and title described in the entry.",
+    "alternative_note": "confirmed: The candidate link matches the specific volume, part, and title of the requested Royal Entomological Society handbook entry.",
     "verified_at": "2026-10-27T00:35:35.159468+00:00"
   },
   {
@@ -16075,7 +16075,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL to the PDF of the RES Handbook Vol 9 Part 2 iii, as referenced in academic and identification resource documentation.",
-    "alternative_note": "confirmed: The candidate link is a direct PDF download of the specific RES Handbook volume and part described in the entry.",
+    "alternative_note": "confirmed: The candidate link is a direct PDF download of the specific RES Handbook volume, part, and section described in the entry.",
     "verified_at": "2026-10-27T00:35:38.501109+00:00"
   },
   {
@@ -16102,7 +16102,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-nematocera-mycetophilidae-bolitophilinae-ditomyiinae-diadocidiinae-keroplatinae-sciophilinae-and-manotinae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and subject matter described in the catalogue entry, confirming it is the correct resource.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook volume described in the entry, matching both the title and the taxonomic scope provided.",
     "verified_at": "2026-10-27T02:16:11.093539+00:00"
   },
   {
@@ -16129,7 +16129,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a description and download options for the publication.",
-    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook title and author described in the entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook volume and title described in the entry.",
     "verified_at": "2026-10-27T00:35:41.565089+00:00"
   },
   {
@@ -16340,7 +16340,7 @@
     "alternative_link": "https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official publisher's product page for the book, providing comprehensive details and purchase links.",
-    "alternative_note": "confirmed: The candidate page is for the same book, 'The Wild Flower Key' by Francis Rose, which matches the title and authorship of the original catalogue entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact book title and author mentioned in the catalogue entry, confirming it is the same publication.",
     "verified_at": "2026-10-27T00:35:45.520560+00:00"
   },
   {
@@ -16555,7 +16555,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/seaweeds-of-britain-and-ireland/32840",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is a direct product page for the second edition of the guide, providing purchase options and detailed bibliographic information.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact book title and authors specified in the entry, confirming it is the same publication.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title and authors specified in the entry.",
     "verified_at": "2026-10-27T02:16:11.958625+00:00"
   },
   {
@@ -16611,7 +16611,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/seasearch-observers-guide-to-marine-life-of-britain-and-ireland-2nd-edition/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the direct product page for the guide on the retailer's website, replacing the broken link provided.",
-    "alternative_note": "confirmed: The candidate page is a product page for the exact book title and author specified in the entry, representing the same publication.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and edition described in the entry.",
     "verified_at": "2026-10-27T02:16:15.808518+00:00"
   },
   {
@@ -16637,7 +16637,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/",
     "alternative_probability": 0.6,
     "alternative_reasoning": "This is a direct product page for the 'Guide to the Seasons' fold-out chart on a specialized natural history bookstore website.",
-    "alternative_note": "confirmed: The candidate page corresponds to the FSC fold-out chart titled 'Guide to the Seasons' by Farley-Brown & Norman, which matches the description and authors of the original entry.",
+    "alternative_note": "confirmed: The candidate page refers to the 'Guide to the seasons FSC fold-out chart', which matches the title, authors, and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:35:44.124199+00:00"
   },
   {
@@ -17371,7 +17371,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html",
     "alternative_probability": 0.8,
     "alternative_reasoning": "While the direct PDF link is broken, the Natural History Museum hosts the guide on their 'Identify Nature' section, which is the standard location for these resources.",
-    "alternative_note": "confirmed: The candidate link corresponds to the official Natural History Museum page for the 'Spiders in your home' guide, which matches the title and authorship provided.",
+    "alternative_note": "confirmed: The candidate link matches the title and source of the original catalogue entry, indicating it is the intended guide for identifying common house spiders.",
     "verified_at": "2026-10-27T00:35:43.958600+00:00"
   },
   {
@@ -18783,7 +18783,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002",
     "alternative_probability": 0.85,
     "alternative_reasoning": "Pemberley Books is a specialized entomological bookseller that hosts a direct product page for this specific identification guide.",
-    "alternative_note": "confirmed: The candidate link corresponds to the exact publication described, matching the title, author, and series details provided in the entry.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific publication 'The Vespoid Wasps' by M.E. Archer, which is the same work described in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:51.685651+00:00"
   },
   {
@@ -18943,8 +18943,8 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
-    "alternative_note": null,
-    "verified_at": "2026-10-26T19:46:40.232295+00:00"
+    "alternative_note": "rejected: link returned 404",
+    "verified_at": "2026-10-27T02:30:20.111791+00:00"
   },
   {
     "id": "whats-bloom-june-2",
@@ -19264,7 +19264,7 @@
     "alternative_link": "https://www.field-studies-council.org/shop/publications/woodland-name-trail/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Field Studies Council product page for the 'Woodland name trail' guide, which replaces the broken link provided.",
-    "alternative_note": "confirmed: The candidate link corresponds to the 'Woodland Name Trail' publication by the Field Studies Council, which matches the title, authors, and description provided in the catalogue entry.",
+    "alternative_note": "confirmed: The candidate link leads to the official Field Studies Council product page for the 'Woodland name trail', which matches the title, authors, and description provided in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:48.717539+00:00"
   },
   {
