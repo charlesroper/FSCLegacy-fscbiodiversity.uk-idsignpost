@@ -274,6 +274,7 @@ class GeminiFinder:
         url: str,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None = None,
     ) -> RedirectVerdict | None:
         """Decide whether a live candidate offers this guide, not something else."""
         prompt = (
@@ -286,6 +287,7 @@ class GeminiFinder:
             f"Candidate link: {url}\n"
             f"Page title: {page_title or 'unknown'}\n"
             f"Page heading: {page_h1 or 'unknown'}\n"
+            f"Page text: {page_snippet or 'unknown'}\n"
             'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
         )
         text = await self._generate(prompt, json_mode=True)
@@ -398,7 +400,11 @@ class GeminiFinder:
             )
         url = result.resolved_url or cleaned
         verdict = await self.confirm_alternative(
-            entry, url=url, page_title=result.page_title, page_h1=result.page_h1
+            entry,
+            url=url,
+            page_title=result.page_title,
+            page_h1=result.page_h1,
+            page_snippet=result.page_snippet,
         )
         if verdict is not None and not verdict.is_match:
             reason = verdict.reasoning or "page did not match the entry"

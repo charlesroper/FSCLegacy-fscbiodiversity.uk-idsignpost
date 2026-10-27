@@ -275,10 +275,17 @@ async def test_offline_guard_ignores_non_network_failures() -> None:
 @pytest.mark.parametrize(
     ("body", "expected"),
     [
-        (b"", (None, None)),
-        (b"<html><body>no head</body></html>", (None, None)),
-        (b"<title>  A   guide </title><h1>Bats</h1>", ("A guide", "Bats")),
+        (b"", (None, None, None)),
+        (b"<html><body>no head</body></html>", (None, None, "no head")),
+        (b"<title>  A   guide </title><h1>Bats</h1>", ("A guide", "Bats", None)),
+        (
+            b"<html><body><nav>menu</nav><main><h1>Bats</h1>"
+            b"<p>Identify bats.</p></main><footer>foot</footer></body></html>",
+            (None, "Bats", "Bats Identify bats."),
+        ),
     ],
 )
-def test_parse_page(body: bytes, expected: tuple[str | None, str | None]) -> None:
+def test_parse_page(
+    body: bytes, expected: tuple[str | None, str | None, str | None]
+) -> None:
     assert parse_page(body) == expected

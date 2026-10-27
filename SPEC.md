@@ -230,7 +230,7 @@ flowchart TD
   4. Strip tracking parameters and fragments.
   5. Reject direct image files and site root candidates (empty path or `/`). A linked image or homepage returns 200, so the redirect heuristics never see it as suspicious.
   6. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
-  7. Ask the model to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title and first heading. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
+  7. Ask the model to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title, first heading, and up to 800 characters of leading page text. The text matters when the title is generic, as on database and literature pages. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
   8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
   10. Record a note for the outcome: `confirmed: <reasoning>` for an accepted page, or the first three `rejected:`, `ignored:`, and `dropped:` reasons for a failed search. Store it in `alternative_note`.
@@ -281,6 +281,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
       "is_suspicious_redirect": false,
       "page_title": null,
       "page_h1": null,
+      "page_snippet": "Bats in flight identification guide. If you are lucky...",
       "wayback_url": "https://web.archive.org/web/20220101000000/https://example.org/guide.pdf",
       "checked_at": "2026-10-26T00:00:00+00:00"
     }

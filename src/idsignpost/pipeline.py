@@ -75,6 +75,7 @@ class Finder(Protocol):
         url: str,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None,
     ) -> RedirectVerdict | None: ...
 
 
@@ -260,6 +261,7 @@ class Verifier:
                     is_suspicious_redirect=record.is_suspicious_redirect,
                     page_title=record.page_title,
                     page_h1=record.page_h1,
+                    page_snippet=record.page_snippet,
                 ),
                 transient=False,
                 checked=False,
@@ -281,6 +283,7 @@ class Verifier:
                 is_suspicious_redirect=result.is_suspicious_redirect,
                 page_title=result.page_title,
                 page_h1=result.page_h1,
+                page_snippet=result.page_snippet,
             ),
             cacheable=result.cacheable,
         )
@@ -474,7 +477,11 @@ class Verifier:
             return None, False, "dropped: stored alternative is no longer live"
         resolved = facts.result.resolved_url or url
         verdict = await self._confirm(
-            entry, resolved, facts.result.page_title, facts.result.page_h1
+            entry,
+            resolved,
+            facts.result.page_title,
+            facts.result.page_h1,
+            facts.result.page_snippet,
         )
         if verdict is not None and not verdict.is_match:
             reason = verdict.reasoning or "page did not match the entry"
@@ -496,10 +503,15 @@ class Verifier:
         url: str,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None,
     ) -> RedirectVerdict | None:
         async with self._gemini:
             return await self.finder.confirm_alternative(
-                entry, url=url, page_title=page_title, page_h1=page_h1
+                entry,
+                url=url,
+                page_title=page_title,
+                page_h1=page_h1,
+                page_snippet=page_snippet,
             )
 
     async def _wayback(

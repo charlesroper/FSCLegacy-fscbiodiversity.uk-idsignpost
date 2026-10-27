@@ -34,6 +34,7 @@ class UrlRecord:
     is_suspicious_redirect: bool = False
     page_title: str | None = None
     page_h1: str | None = None
+    page_snippet: str | None = None
     wayback_url: str | None = None
     checked_at: datetime | None = None
 
@@ -96,6 +97,7 @@ def _url_record(raw: Any) -> UrlRecord | None:
         is_suspicious_redirect=bool(raw.get("is_suspicious_redirect", False)),
         page_title=_opt_str(raw.get("page_title")),
         page_h1=_opt_str(raw.get("page_h1")),
+        page_snippet=_opt_str(raw.get("page_snippet")),
         wayback_url=_opt_str(raw.get("wayback_url")),
         checked_at=_parse_time(raw.get("checked_at")),
     )
@@ -125,6 +127,7 @@ def _url_payload(record: UrlRecord) -> dict[str, Any]:
         "is_suspicious_redirect": record.is_suspicious_redirect,
         "page_title": record.page_title,
         "page_h1": record.page_h1,
+        "page_snippet": record.page_snippet,
         "wayback_url": record.wayback_url,
         "checked_at": _iso(record.checked_at),
     }

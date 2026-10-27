@@ -568,3 +568,18 @@ async def test_a_rejected_preferred_url_is_not_hidden_by_a_failed_search() -> No
     assert outcome.alternative is None
     assert outcome.transient is False
     assert outcome.note == "rejected: category index"
+
+
+async def test_confirmation_prompt_includes_page_text() -> None:
+    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
+
+    await finder.confirm_alternative(
+        entry(),
+        url="https://shop.example/guide",
+        page_title="World Register of Marine Species",
+        page_h1=None,
+        page_snippet="Renk, H. (1984). Calorific values of plankton.",
+    )
+
+    contents = client.models.calls[0]["contents"]
+    assert "Calorific values of plankton" in contents

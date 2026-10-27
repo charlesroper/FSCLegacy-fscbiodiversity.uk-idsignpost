@@ -82,6 +82,7 @@ class FakeFinder:
         url: str,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None,
     ) -> RedirectVerdict | None:
         self.confirm_calls.append((entry.id, url))
         return RedirectVerdict(self.confirmations.get(entry.id, True), "model note")

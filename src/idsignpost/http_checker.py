@@ -12,6 +12,7 @@ from idsignpost.models import LinkState
 from idsignpost.urls import clean_host, sanitize_url, urls_equal
 
 MAX_HTML_BYTES = 16 * 1024
+SNIPPET_CHARS = 800
 MAX_REDIRECTS = 10
 DEFAULT_TIMEOUT = 10.0
 OFFLINE_MIN_CHECKS = 10
@@ -57,6 +58,7 @@ class CheckResult:
     is_suspicious_redirect: bool = False
     page_title: str | None = None
     page_h1: str | None = None
+    page_snippet: str | None = None
     cacheable: bool = True
 
 
@@ -81,12 +83,19 @@ def _text(node: Tag | None) -> str | None:
     return text or None
 
 
-def parse_page(body: bytes) -> tuple[str | None, str | None]:
-    """Extract the page title and first heading from HTML bytes."""
+def parse_page(body: bytes) -> tuple[str | None, str | None, str | None]:
+    """Extract the page title, first heading, and leading text from HTML bytes."""
     if not body:
-        return None, None
+        return None, None, None
     soup = BeautifulSoup(body, "html.parser")
-    return _text(soup.find("title")), _text(soup.find("h1"))
+    title = _text(soup.find("title"))
+    h1 = _text(soup.find("h1"))
+    node = soup.find("main") or soup.find("article") or soup.body
+    if node is not None:
+        for tag in node.find_all(["script", "style", "nav", "header", "footer"]):
+            tag.decompose()
+    text = _text(node) if node is not None else None
+    return title, h1, text[:SNIPPET_CHARS] if text else None
 
 
 class HTTPChecker:
@@ -144,7 +153,7 @@ class HTTPChecker:
         state, cacheable = _classify_code(code)
         final_url = sanitize_url(str(response.url))
         resolved_url = None if urls_equal(url, final_url) else final_url
-        page_title, page_h1 = parse_page(body)
+        page_title, page_h1, page_snippet = parse_page(body)
         suspicious = resolved_url is not None and _is_suspicious(
             url, final_url, page_title, entry_title
         )
@@ -155,6 +164,7 @@ class HTTPChecker:
             is_suspicious_redirect=suspicious,
             page_title=page_title,
             page_h1=page_h1,
+            page_snippet=page_snippet,
             cacheable=cacheable,
         )
 
