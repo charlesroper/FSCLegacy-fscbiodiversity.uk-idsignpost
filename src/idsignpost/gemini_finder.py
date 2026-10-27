@@ -384,21 +384,29 @@ class GeminiFinder:
             note=_join_notes(notes) or "no candidates returned",
         )
 
+    def _policy_note(self, url: str, broken_link: str) -> str | None:
+        if urlsplit(url).scheme.lower() not in {"http", "https"}:
+            return "ignored: not an http link"
+        if is_unusable_alternative(url):
+            return "ignored: blocked host or image file"
+        cleaned = cache_key(url)
+        if urlsplit(cleaned).path in {"", "/"}:
+            return "ignored: site homepage"
+        if urls_equal(cleaned, broken_link):
+            return "ignored: same as the broken link"
+        if not is_public_http_url(cleaned, **self._resolver_kwargs()):
+            return "ignored: private address"
+        return None
+
     async def _try_candidate(
         self, entry: CatalogEntry, candidate: Candidate, checker: Checker
     ) -> _Attempt:
         """Apply policy, liveness, and confirmation to one candidate."""
-        if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
-            return _Attempt(note="ignored: not an http link")
-        if is_unusable_alternative(candidate.url):
-            return _Attempt(note="ignored: blocked host or image file")
+        broken_link = entry.web_link or ""
+        policy_note = self._policy_note(candidate.url, broken_link)
+        if policy_note is not None:
+            return _Attempt(note=policy_note)
         cleaned = cache_key(candidate.url)
-        if urlsplit(cleaned).path in {"", "/"}:
-            return _Attempt(note="ignored: site homepage")
-        if urls_equal(cleaned, entry.web_link or ""):
-            return _Attempt(note="ignored: same as the broken link")
-        if not is_public_http_url(cleaned, **self._resolver_kwargs()):
-            return _Attempt(note="ignored: private address")
         result = await checker.check(cleaned, entry_title=entry.title)
         if not result.cacheable:
             return _Attempt(transient=True, note="retry: transient check failure")
@@ -406,6 +414,10 @@ class GeminiFinder:
             return _Attempt(
                 note=f"rejected: link returned {result.status or result.state}"
             )
+        if result.resolved_url:
+            redirect_note = self._policy_note(result.resolved_url, broken_link)
+            if redirect_note is not None:
+                return _Attempt(note=redirect_note)
         url = result.resolved_url or cleaned
         verdict = await self.confirm_alternative(
             entry,

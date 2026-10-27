@@ -592,3 +592,39 @@ async def test_discover_hint_names_the_rejected_index() -> None:
 
     contents = client.models.calls[0]["contents"]
     assert "https://example.org/keys/ is an index" in contents
+
+
+async def test_find_alternative_rejects_redirect_to_private_address() -> None:
+    finder, _, _ = make_finder(
+        ['{"candidates": [{"url": "https://example.org/move", "probability": 0.9}]}']
+    )
+    checker = FakeChecker(
+        {
+            "https://example.org/move": CheckResult(
+                "200", "ok", resolved_url="http://127.0.0.1/internal"
+            )
+        }
+    )
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative is None
+    assert outcome.note == "ignored: private address"
+
+
+async def test_find_alternative_rejects_redirect_to_blocked_host() -> None:
+    finder, _, _ = make_finder(
+        ['{"candidates": [{"url": "https://example.org/move", "probability": 0.9}]}']
+    )
+    checker = FakeChecker(
+        {
+            "https://example.org/move": CheckResult(
+                "200", "ok", resolved_url="https://www.scribd.com/document/123"
+            )
+        }
+    )
+
+    outcome = await finder.find_alternative(entry(), checker=checker)
+
+    assert outcome.alternative is None
+    assert outcome.note == "ignored: blocked host or image file"
