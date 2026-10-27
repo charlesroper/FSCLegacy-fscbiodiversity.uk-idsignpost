@@ -22,6 +22,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.264745+00:00"
   },
   {
@@ -45,6 +46,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:25.479999+00:00"
   },
   {
@@ -74,6 +76,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:24.863888+00:00"
   },
   {
@@ -100,6 +103,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:23.451717+00:00"
   },
   {
@@ -125,6 +129,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:24.153555+00:00"
   },
   {
@@ -150,6 +155,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/handbooks/hemiptera/aphids-aphidinae-macrosiphini/",
     "alternative_probability": 0.85,
     "alternative_reasoning": "This is the direct product page on the Royal Entomological Society website, which is the publisher of the handbook series.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society Handbook volume described in the entry.",
     "verified_at": "2026-10-27T00:32:41.381069+00:00"
   },
   {
@@ -175,6 +181,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:22.797194+00:00"
   },
   {
@@ -201,6 +208,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:26.030344+00:00"
   },
   {
@@ -227,6 +235,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:26.029115+00:00"
   },
   {
@@ -252,6 +261,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:25.297827+00:00"
   },
   {
@@ -278,6 +288,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:24.117521+00:00"
   },
   {
@@ -304,6 +315,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -329,6 +341,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:32:41.809113+00:00"
   },
   {
@@ -354,6 +367,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:27.933888+00:00"
   },
   {
@@ -379,6 +393,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:28.922821+00:00"
   },
   {
@@ -404,6 +419,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:25.891199+00:00"
   },
   {
@@ -431,6 +447,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:29.073338+00:00"
   },
   {
@@ -456,6 +473,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -481,6 +499,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:27.626538+00:00"
   },
   {
@@ -506,6 +525,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:28.408628+00:00"
   },
   {
@@ -531,6 +551,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -556,6 +577,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This appears to be the landing page or HTML version of the guide hosted on the Natural History Museum website.",
+    "alternative_note": "confirmed: The candidate link matches the title and description of the original entry, as it is the specific identification guide provided by the Natural History Museum for bats in flight.",
     "verified_at": "2026-10-27T00:32:36.084846+00:00"
   },
   {
@@ -582,6 +604,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:19.046234+00:00"
   },
   {
@@ -609,6 +632,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637416+00:00"
   },
   {
@@ -637,6 +661,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:30.273750+00:00"
   },
   {
@@ -663,6 +688,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:30.706135+00:00"
   },
   {
@@ -688,6 +714,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:59:45.066844+00:00"
   },
   {
@@ -714,6 +741,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/british-mammal-bones-id-guide.html",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the most likely location for the guide, as the broken link provided follows the standard NHM URL structure for such resources, and the guide is officially attributed to the Natural History Museum.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official Natural History Museum identification guide authored by the individuals listed and matches the description of the guide provided in the entry.",
     "verified_at": "2026-10-27T00:32:38.061263+00:00"
   },
   {
@@ -739,6 +767,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:42.031840+00:00"
   },
   {
@@ -764,6 +793,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:42.031680+00:00"
   },
   {
@@ -791,6 +821,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637472+00:00"
   },
   {
@@ -817,6 +848,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283390+00:00"
   },
   {
@@ -842,6 +874,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:36.633337+00:00"
   },
   {
@@ -868,6 +901,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:35.783595+00:00"
   },
   {
@@ -893,6 +927,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:36.975096+00:00"
   },
   {
@@ -918,6 +953,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -943,6 +979,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:39.021632+00:00"
   },
   {
@@ -968,6 +1005,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -993,6 +1031,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:40.235298+00:00"
   },
   {
@@ -1018,6 +1057,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1043,6 +1083,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1068,6 +1109,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1093,6 +1135,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:40.589490+00:00"
   },
   {
@@ -1118,6 +1161,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:41.378468+00:00"
   },
   {
@@ -1143,6 +1187,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:41.590549+00:00"
   },
   {
@@ -1168,6 +1213,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1193,6 +1239,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:42.464423+00:00"
   },
   {
@@ -1219,6 +1266,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:42.543012+00:00"
   },
   {
@@ -1244,6 +1292,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:42.060443+00:00"
   },
   {
@@ -1269,6 +1318,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:44.335652+00:00"
   },
   {
@@ -1294,6 +1344,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:43.076140+00:00"
   },
   {
@@ -1319,6 +1370,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:43.098775+00:00"
   },
   {
@@ -1344,6 +1396,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:59:47.256585+00:00"
   },
   {
@@ -1371,6 +1424,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:44.705507+00:00"
   },
   {
@@ -1396,6 +1450,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:43.929764+00:00"
   },
   {
@@ -1421,6 +1476,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:46.624262+00:00"
   },
   {
@@ -1446,6 +1502,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/british-scraptiidae-coleoptera-handbooks-for-the-identification-of-british-insects-5-18/16603/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page for the specific handbook from a reputable natural history bookseller.",
+    "alternative_note": "confirmed: The candidate page refers to the exact same publication, 'British Scraptiidae' by B. Levey, which is volume 5 part 18 of the Handbooks for the Identification of British Insects.",
     "verified_at": "2026-10-27T00:32:44.898058+00:00"
   },
   {
@@ -1471,6 +1528,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:45.879772+00:00"
   },
   {
@@ -1497,6 +1555,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1522,6 +1581,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:45.288516+00:00"
   },
   {
@@ -1547,6 +1607,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1572,6 +1633,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1597,6 +1659,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/sea-beans-and-nickar-nuts/7022",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page for the book, providing bibliographic details and status, which is the most specific available resource for this publication.",
+    "alternative_note": "confirmed: The candidate page matches the title, author, and subject matter of the original catalogue entry, confirming it is the same publication.",
     "verified_at": "2026-10-27T00:32:45.553752+00:00"
   },
   {
@@ -1622,6 +1685,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1647,6 +1711,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1672,6 +1737,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1697,6 +1763,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1722,6 +1789,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1747,6 +1815,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -1772,6 +1841,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:10.634318+00:00"
   },
   {
@@ -1797,6 +1867,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:59:53.549180+00:00"
   },
   {
@@ -1822,6 +1893,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:17.493862+00:00"
   },
   {
@@ -1847,6 +1919,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:32:48.484748+00:00"
   },
   {
@@ -1872,6 +1945,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:43.546929+00:00"
   },
   {
@@ -1897,6 +1971,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/dandelions-of-great-britain-and-ireland/5595",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a dedicated product page for the book, confirming it is out of print and providing bibliographic details.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and authors specified in the entry, confirming it is the same publication.",
     "verified_at": "2026-10-27T00:32:49.225387+00:00"
   },
   {
@@ -1923,6 +1998,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:52.010221+00:00"
   },
   {
@@ -1948,6 +2024,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:53.403553+00:00"
   },
   {
@@ -1973,6 +2050,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:53.998368+00:00"
   },
   {
@@ -1998,6 +2076,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:55.104296+00:00"
   },
   {
@@ -2023,6 +2102,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:56.099528+00:00"
   },
   {
@@ -2048,6 +2128,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:01.085186+00:00"
   },
   {
@@ -2073,6 +2154,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:03.706574+00:00"
   },
   {
@@ -2098,6 +2180,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:08.099430+00:00"
   },
   {
@@ -2123,6 +2206,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:15.628616+00:00"
   },
   {
@@ -2148,6 +2232,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:22.690935+00:00"
   },
   {
@@ -2173,6 +2258,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:31.548956+00:00"
   },
   {
@@ -2198,6 +2284,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:36.736060+00:00"
   },
   {
@@ -2223,6 +2310,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:50.470022+00:00"
   },
   {
@@ -2248,6 +2336,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:52.798202+00:00"
   },
   {
@@ -2273,6 +2362,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:57.883387+00:00"
   },
   {
@@ -2298,6 +2388,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:43:59.727344+00:00"
   },
   {
@@ -2323,6 +2414,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:04.917435+00:00"
   },
   {
@@ -2348,6 +2440,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:06.557362+00:00"
   },
   {
@@ -2373,6 +2466,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:09.002817+00:00"
   },
   {
@@ -2398,6 +2492,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:09.883732+00:00"
   },
   {
@@ -2423,6 +2518,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:12.006598+00:00"
   },
   {
@@ -2448,6 +2544,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:10.787833+00:00"
   },
   {
@@ -2473,6 +2570,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:11.287579+00:00"
   },
   {
@@ -2498,6 +2596,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:15.750499+00:00"
   },
   {
@@ -2523,6 +2622,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:12.454544+00:00"
   },
   {
@@ -2548,6 +2648,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:12.958426+00:00"
   },
   {
@@ -2573,6 +2674,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:59:53.955650+00:00"
   },
   {
@@ -2598,6 +2700,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:13.355777+00:00"
   },
   {
@@ -2623,6 +2726,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:13.911989+00:00"
   },
   {
@@ -2648,6 +2752,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:14.360189+00:00"
   },
   {
@@ -2673,6 +2778,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:14.799258+00:00"
   },
   {
@@ -2698,6 +2804,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:15.239390+00:00"
   },
   {
@@ -2723,6 +2830,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:15.643733+00:00"
   },
   {
@@ -2748,6 +2856,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:16.214337+00:00"
   },
   {
@@ -2773,6 +2882,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:16.188556+00:00"
   },
   {
@@ -2798,6 +2908,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:16.590904+00:00"
   },
   {
@@ -2823,6 +2934,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:16.576062+00:00"
   },
   {
@@ -2848,6 +2960,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:17.053344+00:00"
   },
   {
@@ -2873,6 +2986,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:59:57.829928+00:00"
   },
   {
@@ -2898,6 +3012,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:17.959692+00:00"
   },
   {
@@ -2923,6 +3038,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:17.426566+00:00"
   },
   {
@@ -2948,6 +3064,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:17.797952+00:00"
   },
   {
@@ -2973,6 +3090,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:20.633231+00:00"
   },
   {
@@ -2998,6 +3116,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:18.412499+00:00"
   },
   {
@@ -3023,6 +3142,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:18.801331+00:00"
   },
   {
@@ -3048,6 +3168,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:18.685430+00:00"
   },
   {
@@ -3073,6 +3194,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:19.154464+00:00"
   },
   {
@@ -3098,6 +3220,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:20.496586+00:00"
   },
   {
@@ -3123,6 +3246,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:20.860046+00:00"
   },
   {
@@ -3148,6 +3272,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:21.479071+00:00"
   },
   {
@@ -3173,6 +3298,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:19.984490+00:00"
   },
   {
@@ -3198,6 +3324,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:21.072841+00:00"
   },
   {
@@ -3223,6 +3350,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:22.356050+00:00"
   },
   {
@@ -3248,6 +3376,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:21.889396+00:00"
   },
   {
@@ -3273,6 +3402,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:22.384432+00:00"
   },
   {
@@ -3299,6 +3429,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:32:50.062254+00:00"
   },
   {
@@ -3324,6 +3455,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:22.842461+00:00"
   },
   {
@@ -3349,6 +3481,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:22.928233+00:00"
   },
   {
@@ -3374,6 +3507,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:23.508849+00:00"
   },
   {
@@ -3400,6 +3534,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:33:09.157486+00:00"
   },
   {
@@ -3425,6 +3560,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:23.656352+00:00"
   },
   {
@@ -3450,6 +3586,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:29.681876+00:00"
   },
   {
@@ -3475,6 +3612,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:23.910632+00:00"
   },
   {
@@ -3500,6 +3638,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:24.543349+00:00"
   },
   {
@@ -3525,6 +3664,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:30.119166+00:00"
   },
   {
@@ -3550,6 +3690,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:24.590406+00:00"
   },
   {
@@ -3575,6 +3716,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:24.590561+00:00"
   },
   {
@@ -3600,6 +3742,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:37.996503+00:00"
   },
   {
@@ -3625,6 +3768,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:30.992588+00:00"
   },
   {
@@ -3650,6 +3794,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:25.029400+00:00"
   },
   {
@@ -3675,6 +3820,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:25.508121+00:00"
   },
   {
@@ -3700,6 +3846,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:28.935521+00:00"
   },
   {
@@ -3725,6 +3872,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:29.322799+00:00"
   },
   {
@@ -3751,6 +3899,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:32.042310+00:00"
   },
   {
@@ -3777,6 +3926,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:31.891474+00:00"
   },
   {
@@ -3803,6 +3953,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:30.407013+00:00"
   },
   {
@@ -3828,6 +3979,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:32.347047+00:00"
   },
   {
@@ -3853,6 +4005,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:24.590616+00:00"
   },
   {
@@ -3878,6 +4031,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:36.458722+00:00"
   },
   {
@@ -3903,6 +4057,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:32.690533+00:00"
   },
   {
@@ -3928,6 +4083,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:42.163702+00:00"
   },
   {
@@ -3953,6 +4109,7 @@
     "alternative_link": "https://ursecure.roehampton.ac.uk/collembola/taxonomy/index.html",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the updated, secure URL for the Collembola Taxonomy guide originally hosted at the broken link provided.",
+    "alternative_note": "confirmed: The candidate URL is hosted by the University of Roehampton, which is associated with Peter Shaw, and the content matches the description of a taxonomic guide for UK Collembola.",
     "verified_at": "2026-10-27T00:32:53.264036+00:00"
   },
   {
@@ -3978,6 +4135,7 @@
     "alternative_link": "https://harpercollins.co.uk/products/collins-tree-guide-owen-johnson",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official publisher's product page for the Collins Tree Guide, providing comprehensive details about the book.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official product page for the Collins Tree Guide by Owen Johnson, which matches the title, author, and description provided.",
     "verified_at": "2026-10-27T00:33:17.178130+00:00"
   },
   {
@@ -4003,6 +4161,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/colour-identification-guide-to-grasses-sedges-rushes-and-ferns/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the specific product page for the book on the publisher/retailer's website, which replaces the broken link provided.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and author specified in the catalogue entry.",
     "verified_at": "2026-10-27T00:32:54.881875+00:00"
   },
   {
@@ -4028,6 +4187,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:32.920114+00:00"
   },
   {
@@ -4053,6 +4213,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:33.323616+00:00"
   },
   {
@@ -4081,6 +4242,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:48.582854+00:00"
   },
   {
@@ -4106,6 +4268,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:33.844256+00:00"
   },
   {
@@ -4131,6 +4294,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:33.946644+00:00"
   },
   {
@@ -4156,6 +4320,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:34.312523+00:00"
   },
   {
@@ -4182,6 +4347,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283515+00:00"
   },
   {
@@ -4207,6 +4373,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:34.859991+00:00"
   },
   {
@@ -4234,6 +4401,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637489+00:00"
   },
   {
@@ -4259,6 +4427,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:35.333990+00:00"
   },
   {
@@ -4284,6 +4453,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:38.297462+00:00"
   },
   {
@@ -4309,6 +4479,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:36.020252+00:00"
   },
   {
@@ -4334,6 +4505,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -4359,6 +4531,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:39.325537+00:00"
   },
   {
@@ -4384,6 +4557,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:39.862291+00:00"
   },
   {
@@ -4409,6 +4583,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:40.614600+00:00"
   },
   {
@@ -4434,6 +4609,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:32:57.328806+00:00"
   },
   {
@@ -4459,6 +4635,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:40.366784+00:00"
   },
   {
@@ -4484,6 +4661,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:40.785786+00:00"
   },
   {
@@ -4511,6 +4689,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:44.202126+00:00"
   },
   {
@@ -4536,6 +4715,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:42.844133+00:00"
   },
   {
@@ -4561,6 +4741,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -4588,6 +4769,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:47.451796+00:00"
   },
   {
@@ -4613,6 +4795,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:45.112078+00:00"
   },
   {
@@ -4638,6 +4821,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:45.656119+00:00"
   },
   {
@@ -4663,6 +4847,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:45.894797+00:00"
   },
   {
@@ -4688,6 +4873,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -4713,6 +4899,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -4738,6 +4925,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:47.112486+00:00"
   },
   {
@@ -4763,6 +4951,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:48.052180+00:00"
   },
   {
@@ -4788,6 +4977,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:49.154890+00:00"
   },
   {
@@ -4813,6 +5003,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:49.023316+00:00"
   },
   {
@@ -4838,6 +5029,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:49.454171+00:00"
   },
   {
@@ -4863,6 +5055,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:33.324015+00:00"
   },
   {
@@ -4888,6 +5081,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/echinoderms-synopses-of-the-british-fauna-56/14616/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Pemberley Books is a specialized natural history bookseller that frequently hosts and sells specific volumes of the 'Synopses of the British Fauna' series, including this title.",
+    "alternative_note": "confirmed: The candidate page refers to the exact same publication, 'Echinoderms' in the 'Synopses of the British Fauna' series, authored by Southward and Campbell.",
     "verified_at": "2026-10-27T00:32:59.524732+00:00"
   },
   {
@@ -4913,6 +5107,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:49.630690+00:00"
   },
   {
@@ -4942,6 +5137,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:07.313663+00:00"
   },
   {
@@ -4967,6 +5163,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:55.494113+00:00"
   },
   {
@@ -4992,6 +5189,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:55.902962+00:00"
   },
   {
@@ -5017,6 +5215,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:52.757495+00:00"
   },
   {
@@ -5042,6 +5241,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:53.235036+00:00"
   },
   {
@@ -5067,6 +5267,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/features-of-the-pennine-way-field-studies-council-fold-out-chart/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a specific product page from a bookseller that hosts and offers the identification guide for sale.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact same fold-out chart by the Field Studies Council described in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:01.771336+00:00"
   },
   {
@@ -5092,6 +5293,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:59.732193+00:00"
   },
   {
@@ -5117,6 +5319,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:07.280785+00:00"
   },
   {
@@ -5142,6 +5345,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/features-of-the-south-downs-way-fsc-fold-out-chart/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is a primary retailer for Field Studies Council publications and currently lists this specific fold-out chart as in stock.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact same FSC fold-out chart described in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:03.685860+00:00"
   },
   {
@@ -5167,6 +5371,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:58.796927+00:00"
   },
   {
@@ -5192,6 +5397,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:00.343972+00:00"
   },
   {
@@ -5217,6 +5423,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:10.231298+00:00"
   },
   {
@@ -5242,6 +5449,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:08.777920+00:00"
   },
   {
@@ -5267,6 +5475,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:10.783512+00:00"
   },
   {
@@ -5292,6 +5501,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:10.803849+00:00"
   },
   {
@@ -5317,6 +5527,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:11.160918+00:00"
   },
   {
@@ -5342,6 +5553,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:15.641417+00:00"
   },
   {
@@ -5367,6 +5579,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:18.049801+00:00"
   },
   {
@@ -5393,6 +5606,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:16.054695+00:00"
   },
   {
@@ -5419,6 +5633,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283578+00:00"
   },
   {
@@ -5445,6 +5660,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283658+00:00"
   },
   {
@@ -5471,6 +5687,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283715+00:00"
   },
   {
@@ -5496,6 +5713,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is a direct product page for the physical book, although it is currently listed as out of print.",
+    "alternative_note": "confirmed: The candidate page refers to the same specific publication, 'Fleas (Siphonaptera)' by Whitaker, which is part of the Handbooks for the Identification of British Insects series (vol 1, part 16).",
     "verified_at": "2026-10-27T00:33:06.055437+00:00"
   },
   {
@@ -5521,6 +5739,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/fleas-siphonaptera-handbooks-for-the-identification-of-british-insects-1-16/12965",
     "alternative_probability": 0.7,
     "alternative_reasoning": "Pemberley Books is a specialized entomological bookseller that provides a dedicated product page for this specific RES Handbook title.",
+    "alternative_note": "confirmed: The candidate page refers to the same specific publication, 'Fleas (Siphonaptera)' by Whitaker, which is part of the Handbooks for the Identification of British Insects series (vol 1, part 16).",
     "verified_at": "2026-10-27T01:47:36.209482+00:00"
   },
   {
@@ -5546,6 +5765,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -5571,6 +5791,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:24.815505+00:00"
   },
   {
@@ -5596,6 +5817,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:16.729228+00:00"
   },
   {
@@ -5621,6 +5843,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/fossil-explorer-app.html",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Natural History Museum URL for the Fossil Explorer app, which is widely cited as the primary source despite the link provided in the prompt being broken.",
+    "alternative_note": "confirmed: The candidate page is the official Natural History Museum page for the Fossil Explorer app, which matches the description, features, and purpose of the original catalogue entry.",
     "verified_at": "2026-10-27T00:33:30.679342+00:00"
   },
   {
@@ -5646,6 +5869,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:25.593283+00:00"
   },
   {
@@ -5671,6 +5895,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:17.224208+00:00"
   },
   {
@@ -5696,6 +5921,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:17.647023+00:00"
   },
   {
@@ -5721,6 +5947,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:25.742766+00:00"
   },
   {
@@ -5746,6 +5973,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:30.173351+00:00"
   },
   {
@@ -5771,6 +5999,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:26.839262+00:00"
   },
   {
@@ -5796,6 +6025,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:27.277772+00:00"
   },
   {
@@ -5822,6 +6052,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:27.887051+00:00"
   },
   {
@@ -5847,6 +6078,7 @@
     "alternative_link": "https://interactivekeys.myfg.org.uk/tombiovis/tombiovis-1.10.0/identikit/geoglossum.html",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the most recent and frequently cited version of the interactive key developed by Malcolm Greaves for the genus Geoglossum.",
+    "alternative_note": "confirmed: The candidate link directly provides the interactive key for the genus Geoglossum described in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:10.053030+00:00"
   },
   {
@@ -5873,6 +6105,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:32.589733+00:00"
   },
   {
@@ -5898,6 +6131,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:33.018757+00:00"
   },
   {
@@ -5923,6 +6157,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:30.622499+00:00"
   },
   {
@@ -5948,6 +6183,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:34.309797+00:00"
   },
   {
@@ -5973,6 +6209,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:34.463852+00:00"
   },
   {
@@ -5998,6 +6235,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -6023,6 +6261,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -6048,6 +6287,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:33.824050+00:00"
   },
   {
@@ -6074,6 +6314,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:33:11.532718+00:00"
   },
   {
@@ -6099,6 +6340,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:34.815288+00:00"
   },
   {
@@ -6124,6 +6366,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:36.667913+00:00"
   },
   {
@@ -6149,6 +6392,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:34.830715+00:00"
   },
   {
@@ -6174,6 +6418,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:45.408838+00:00"
   },
   {
@@ -6199,6 +6444,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:35.611953+00:00"
   },
   {
@@ -6224,6 +6470,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:37.440905+00:00"
   },
   {
@@ -6249,6 +6496,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:38.793177+00:00"
   },
   {
@@ -6274,6 +6522,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:35.990004+00:00"
   },
   {
@@ -6300,6 +6549,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283778+00:00"
   },
   {
@@ -6326,6 +6576,7 @@
     "alternative_link": "https://dungbeetlemap.wordpress.com/dung-beetles/geotrupidae/",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the official project webpage that hosts the identification guide and provides the link to the PDF.",
+    "alternative_note": "confirmed: The candidate link matches the URL provided in the description and serves as the dedicated page hosting the guide for the Geotrupidae family.",
     "verified_at": "2026-10-27T00:33:42.722876+00:00"
   },
   {
@@ -6352,6 +6603,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:42.537196+00:00"
   },
   {
@@ -6377,6 +6629,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:36.461752+00:00"
   },
   {
@@ -6402,6 +6655,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:39.135732+00:00"
   },
   {
@@ -6427,6 +6681,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:36.905657+00:00"
   },
   {
@@ -6452,6 +6707,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:37.565750+00:00"
   },
   {
@@ -6477,6 +6733,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:38.380774+00:00"
   },
   {
@@ -6502,6 +6759,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:38.378016+00:00"
   },
   {
@@ -6527,6 +6785,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:45.432881+00:00"
   },
   {
@@ -6552,6 +6811,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:48.746744+00:00"
   },
   {
@@ -6579,6 +6839,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637618+00:00"
   },
   {
@@ -6606,6 +6867,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637705+00:00"
   },
   {
@@ -6633,6 +6895,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637739+00:00"
   },
   {
@@ -6660,6 +6923,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637821+00:00"
   },
   {
@@ -6685,6 +6949,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:41.575426+00:00"
   },
   {
@@ -6710,6 +6975,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:41.981252+00:00"
   },
   {
@@ -6735,6 +7001,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:44.893874+00:00"
   },
   {
@@ -6760,6 +7027,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:46.845078+00:00"
   },
   {
@@ -6785,6 +7053,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:47.782392+00:00"
   },
   {
@@ -6810,6 +7079,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:51.088504+00:00"
   },
   {
@@ -6835,6 +7105,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:48.191997+00:00"
   },
   {
@@ -6862,6 +7133,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637850+00:00"
   },
   {
@@ -6887,6 +7159,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:51.743422+00:00"
   },
   {
@@ -6912,6 +7185,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:51.746144+00:00"
   },
   {
@@ -6939,6 +7213,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:55.451988+00:00"
   },
   {
@@ -6966,6 +7241,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637885+00:00"
   },
   {
@@ -6991,6 +7267,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:52.473661+00:00"
   },
   {
@@ -7016,6 +7293,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:54.884937+00:00"
   },
   {
@@ -7041,6 +7319,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:57.375726+00:00"
   },
   {
@@ -7066,6 +7345,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:58.846353+00:00"
   },
   {
@@ -7091,6 +7371,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:02.096296+00:00"
   },
   {
@@ -7116,6 +7397,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:10.469563+00:00"
   },
   {
@@ -7142,6 +7424,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:01.031792+00:00"
   },
   {
@@ -7167,6 +7450,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:45:58.642909+00:00"
   },
   {
@@ -7192,6 +7476,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:01.428498+00:00"
   },
   {
@@ -7217,6 +7502,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:02.112037+00:00"
   },
   {
@@ -7242,6 +7528,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:02.610595+00:00"
   },
   {
@@ -7268,6 +7555,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:06.637158+00:00"
   },
   {
@@ -7293,6 +7581,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:03.095048+00:00"
   },
   {
@@ -7318,6 +7607,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:05.195798+00:00"
   },
   {
@@ -7343,6 +7633,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:05.712328+00:00"
   },
   {
@@ -7368,6 +7659,7 @@
     "alternative_link": "https://www.field-studies-council.org/shop/publications/harvestmen/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the direct product page for the current 2nd edition of the FSC Harvestmen fold-out guide, which replaces the broken link provided.",
+    "alternative_note": "confirmed: The candidate link is the official product page for the 'Harvestmen' fold-out guide authored by Paul Richards, which matches the title, author, and description provided in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:13.770328+00:00"
   },
   {
@@ -7393,6 +7685,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:10.032753+00:00"
   },
   {
@@ -7418,6 +7711,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:08.060546+00:00"
   },
   {
@@ -7443,6 +7737,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:07.062444+00:00"
   },
   {
@@ -7468,6 +7763,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:07.682851+00:00"
   },
   {
@@ -7494,6 +7790,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.637956+00:00"
   },
   {
@@ -7519,6 +7816,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:09.739418+00:00"
   },
   {
@@ -7544,6 +7842,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:08.349180+00:00"
   },
   {
@@ -7569,6 +7868,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:09.126845+00:00"
   },
   {
@@ -7594,6 +7894,7 @@
     "alternative_link": "https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-autumn-seeds",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL for the article 'How to identify autumn seeds' on the Discover Wildlife website, which features the illustrations by Felicity Rose Cole and text by Peter Marren.",
+    "alternative_note": "confirmed: The candidate page title and URL directly correspond to the entry title, indicating it is the intended guide for identifying autumn seeds.",
     "verified_at": "2026-10-27T00:33:44.815924+00:00"
   },
   {
@@ -7619,6 +7920,7 @@
     "alternative_link": "https://www.discoverwildlife.com/how-to/identify-wildlife/how-to-identify-hoverflies/",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, active URL for the guide, confirmed by multiple external references and user discussions as the location of the pictorial hoverfly identification article.",
+    "alternative_note": "confirmed: The candidate page is a direct match for the entry title and provides the pictorial guide for identifying hoverfly species as described.",
     "verified_at": "2026-10-27T00:33:50.049592+00:00"
   },
   {
@@ -7644,6 +7946,7 @@
     "alternative_link": "https://summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is a primary distributor for BSBI publications and hosts the specific product page for this book.",
+    "alternative_note": "confirmed: The candidate link is a product page for the exact book title and authors specified in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:24.216930+00:00"
   },
   {
@@ -7669,6 +7972,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:14.157539+00:00"
   },
   {
@@ -7695,6 +7999,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:21.836325+00:00"
   },
   {
@@ -7720,6 +8025,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:10.188909+00:00"
   },
   {
@@ -7746,6 +8052,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:17.770049+00:00"
   },
   {
@@ -7775,6 +8082,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:10.858162+00:00"
   },
   {
@@ -7802,6 +8110,7 @@
     "alternative_link": "https://plymsea.ac.uk/id/eprint/9076",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the official repository page (PlyMSEA) that hosts the guide, providing direct links to both high and low-resolution PDF versions.",
+    "alternative_note": "confirmed: The candidate page provides direct access to the specific identification guide described in the entry, matching both the title and the content.",
     "verified_at": "2026-10-27T00:33:58.379940+00:00"
   },
   {
@@ -7828,6 +8137,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:20.611055+00:00"
   },
   {
@@ -7855,6 +8165,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -7880,6 +8191,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:14.217473+00:00"
   },
   {
@@ -7905,6 +8217,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -7930,6 +8243,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -7958,6 +8272,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:31.268116+00:00"
   },
   {
@@ -7984,6 +8299,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:26.612303+00:00"
   },
   {
@@ -8010,6 +8326,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:26.612364+00:00"
   },
   {
@@ -8037,6 +8354,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:24.662629+00:00"
   },
   {
@@ -8063,6 +8381,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:26.612381+00:00"
   },
   {
@@ -8090,6 +8409,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:25.202120+00:00"
   },
   {
@@ -8118,6 +8438,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:26.612395+00:00"
   },
   {
@@ -8144,6 +8465,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283794+00:00"
   },
   {
@@ -8169,6 +8491,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:30.606374+00:00"
   },
   {
@@ -8195,6 +8518,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:27.082866+00:00"
   },
   {
@@ -8220,6 +8544,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:28.987840+00:00"
   },
   {
@@ -8246,6 +8571,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283806+00:00"
   },
   {
@@ -8271,6 +8597,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -8296,6 +8623,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:27.839831+00:00"
   },
   {
@@ -8321,6 +8649,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:28.604508+00:00"
   },
   {
@@ -8348,6 +8677,7 @@
     "alternative_link": "https://bmig.org.uk/page/keys-identification-guides",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official British Myriapod and Isopod Group (BMIG) page that hosts the free downloadable PDF files for Paul Richards' 'An Introduction to Centipedes, Millipedes and Woodlice'.",
+    "alternative_note": "confirmed: The candidate page serves as the primary repository for the BMIG's identification guides, which directly corresponds to the resource described in the catalogue entry.",
     "verified_at": "2026-10-27T00:33:54.297822+00:00"
   },
   {
@@ -8375,6 +8705,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:30.406131+00:00"
   },
   {
@@ -8402,6 +8733,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:31.107543+00:00"
   },
   {
@@ -8427,6 +8759,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:32.932289+00:00"
   },
   {
@@ -8452,6 +8785,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:34.015294+00:00"
   },
   {
@@ -8477,6 +8811,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:37.035684+00:00"
   },
   {
@@ -8503,6 +8838,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:34:02.084944+00:00"
   },
   {
@@ -8529,6 +8865,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:40.230750+00:00"
   },
   {
@@ -8554,6 +8891,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:38.257991+00:00"
   },
   {
@@ -8579,6 +8917,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:32.927403+00:00"
   },
   {
@@ -8604,6 +8943,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:40.534543+00:00"
   },
   {
@@ -8631,6 +8971,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:19.395403+00:00"
   },
   {
@@ -8656,6 +8997,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:34.990352+00:00"
   },
   {
@@ -8682,6 +9024,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:45.920921+00:00"
   },
   {
@@ -8710,6 +9053,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:48.572720+00:00"
   },
   {
@@ -8735,6 +9079,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:48.080337+00:00"
   },
   {
@@ -8760,6 +9105,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:36.586064+00:00"
   },
   {
@@ -8785,6 +9131,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:38.192480+00:00"
   },
   {
@@ -8810,6 +9157,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:34:01.464472+00:00"
   },
   {
@@ -8835,6 +9183,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:53.226286+00:00"
   },
   {
@@ -8860,6 +9209,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:39.889590+00:00"
   },
   {
@@ -8885,6 +9235,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:39.491760+00:00"
   },
   {
@@ -8910,6 +9261,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -8935,6 +9287,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:42.742253+00:00"
   },
   {
@@ -8962,6 +9315,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:43.762221+00:00"
   },
   {
@@ -8987,6 +9341,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -9012,6 +9367,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:42.273926+00:00"
   },
   {
@@ -9037,6 +9393,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:43.760526+00:00"
   },
   {
@@ -9063,6 +9420,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283885+00:00"
   },
   {
@@ -9089,6 +9447,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283910+00:00"
   },
   {
@@ -9114,6 +9473,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:57.699233+00:00"
   },
   {
@@ -9139,6 +9499,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:05.411789+00:00"
   },
   {
@@ -9164,6 +9525,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:44.635919+00:00"
   },
   {
@@ -9189,6 +9551,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:58.840084+00:00"
   },
   {
@@ -9214,6 +9577,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:59.269393+00:00"
   },
   {
@@ -9239,6 +9603,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:48.573374+00:00"
   },
   {
@@ -9264,6 +9629,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:01.033435+00:00"
   },
   {
@@ -9289,6 +9655,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:03.715851+00:00"
   },
   {
@@ -9314,6 +9681,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:54.700381+00:00"
   },
   {
@@ -9339,6 +9707,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-cerambycidae",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, active URL for the identification guide, as confirmed by recent community discussions and updated site navigation.",
+    "alternative_note": "confirmed: The candidate link explicitly matches the title and subject matter of the original catalogue entry, which is a specific identification key for British Cerambycidae by Mike Hackston.",
     "verified_at": "2026-10-27T00:34:16.384505+00:00"
   },
   {
@@ -9364,6 +9733,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:10.737949+00:00"
   },
   {
@@ -9389,6 +9759,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:18.051860+00:00"
   },
   {
@@ -9414,6 +9785,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:13.349452+00:00"
   },
   {
@@ -9439,6 +9811,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:11.211505+00:00"
   },
   {
@@ -9464,6 +9837,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:14.139740+00:00"
   },
   {
@@ -9489,6 +9863,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:14.716786+00:00"
   },
   {
@@ -9514,6 +9889,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:14.515496+00:00"
   },
   {
@@ -9539,6 +9915,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:19.137559+00:00"
   },
   {
@@ -9564,6 +9941,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-dermestidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the updated URL for Mike Hackston's identification keys, which hosts the specific guide for British Dermestidae.",
+    "alternative_note": "confirmed: The candidate link directly corresponds to the specific identification key for British Dermestidae authored by Mike Hackston, matching the title and subject matter of the original entry.",
     "verified_at": "2026-10-27T00:34:56.066692+00:00"
   },
   {
@@ -9589,6 +9967,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:22.639926+00:00"
   },
   {
@@ -9614,6 +9993,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:26.474976+00:00"
   },
   {
@@ -9639,6 +10019,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:29.808308+00:00"
   },
   {
@@ -9664,6 +10045,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:25.885670+00:00"
   },
   {
@@ -9690,6 +10072,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:25.885421+00:00"
   },
   {
@@ -9715,6 +10098,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:29.339886+00:00"
   },
   {
@@ -9740,6 +10124,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:29.762090+00:00"
   },
   {
@@ -9765,6 +10150,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:38.355425+00:00"
   },
   {
@@ -9790,6 +10176,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:35.423444+00:00"
   },
   {
@@ -9815,6 +10202,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:38.864083+00:00"
   },
   {
@@ -9840,6 +10228,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:38.354419+00:00"
   },
   {
@@ -9865,6 +10254,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:31.927558+00:00"
   },
   {
@@ -9890,6 +10280,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:43.355694+00:00"
   },
   {
@@ -9915,6 +10306,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, active location for Mike Hackston's identification keys, replacing the broken 'sites.google.com/site' address.",
+    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the requested identification key and is hosted on the author's known site for insect keys.",
     "verified_at": "2026-10-27T00:34:31.473032+00:00"
   },
   {
@@ -9940,6 +10332,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/key-for-the-identification-of-british-kateretidae",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the updated, direct URL for the specific identification key hosted on Mike Hackston's site.",
+    "alternative_note": "confirmed: The candidate link directly corresponds to the specific identification key for British Kateretidae authored by Mike Hackston as described in the entry.",
     "verified_at": "2026-10-27T00:34:31.479257+00:00"
   },
   {
@@ -9965,6 +10358,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:45.861927+00:00"
   },
   {
@@ -9991,6 +10385,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:45.861592+00:00"
   },
   {
@@ -10016,6 +10411,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:49.274334+00:00"
   },
   {
@@ -10041,6 +10437,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:48.709685+00:00"
   },
   {
@@ -10066,6 +10463,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:41.384195+00:00"
   },
   {
@@ -10091,6 +10489,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:57.374278+00:00"
   },
   {
@@ -10116,6 +10515,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:00.365065+00:00"
   },
   {
@@ -10141,6 +10541,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:57.398036+00:00"
   },
   {
@@ -10166,6 +10567,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:59.604584+00:00"
   },
   {
@@ -10192,6 +10594,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:47:59.604386+00:00"
   },
   {
@@ -10217,6 +10620,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:00.019583+00:00"
   },
   {
@@ -10242,6 +10646,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:05.441062+00:00"
   },
   {
@@ -10267,6 +10672,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:04.132364+00:00"
   },
   {
@@ -10292,6 +10698,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:04.665250+00:00"
   },
   {
@@ -10317,6 +10724,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:06.582527+00:00"
   },
   {
@@ -10342,6 +10750,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:09.011721+00:00"
   },
   {
@@ -10367,6 +10776,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:05.759134+00:00"
   },
   {
@@ -10392,6 +10802,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:09.802636+00:00"
   },
   {
@@ -10417,6 +10828,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:12.155922+00:00"
   },
   {
@@ -10442,6 +10854,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:13.509266+00:00"
   },
   {
@@ -10467,6 +10880,7 @@
     "alternative_link": "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxtaWtlc2luc2VjdGtleXN8Z3g6MjllYWY5YmNkYzE4N2QzYQ",
     "alternative_probability": 0.7,
     "alternative_reasoning": "This is a direct Google Docs viewer link for the Ptinidae key PDF, which has been cited in ecological reports as a valid access point for the document.",
+    "alternative_note": "confirmed: The candidate link is a Google Docs viewer URL for a document hosted on the 'Mike's Insect Keys' site, which is the established source for Mike Hackston's 'Key for the identification of British Ptinidae'.",
     "verified_at": "2026-10-27T00:34:35.277838+00:00"
   },
   {
@@ -10492,6 +10906,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:32.334571+00:00"
   },
   {
@@ -10517,6 +10932,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:25.448834+00:00"
   },
   {
@@ -10542,6 +10958,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:16.874836+00:00"
   },
   {
@@ -10567,6 +10984,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:19.438832+00:00"
   },
   {
@@ -10592,6 +11010,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:21.162464+00:00"
   },
   {
@@ -10617,6 +11036,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:28.034512+00:00"
   },
   {
@@ -10642,6 +11062,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:30.477473+00:00"
   },
   {
@@ -10665,6 +11086,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:31.173190+00:00"
   },
   {
@@ -10690,6 +11112,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:24.258474+00:00"
   },
   {
@@ -10715,6 +11138,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:33.876459+00:00"
   },
   {
@@ -10740,6 +11164,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:31.803747+00:00"
   },
   {
@@ -10765,6 +11190,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:35.462540+00:00"
   },
   {
@@ -10790,6 +11216,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:34.513030+00:00"
   },
   {
@@ -10815,6 +11242,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:35.811655+00:00"
   },
   {
@@ -10841,6 +11269,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.283949+00:00"
   },
   {
@@ -10866,6 +11295,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:27.218190+00:00"
   },
   {
@@ -10891,6 +11321,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:30.774941+00:00"
   },
   {
@@ -10916,6 +11347,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -10942,6 +11374,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -10967,6 +11400,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:31.831342+00:00"
   },
   {
@@ -10992,6 +11426,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/keys-to-adults-of-the-water-beetles-of-britain-and-ireland.-part-2-coleoptera-hydrophiloidea-handbooks-for-the-identification-of-british-insects-4-5b/26099/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is a direct product page from a specialist bookseller that offers the publication for purchase.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact same publication, matching the title, authors, and series details provided in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:41.090379+00:00"
   },
   {
@@ -11017,6 +11452,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:32.556319+00:00"
   },
   {
@@ -11042,6 +11478,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:33.508147+00:00"
   },
   {
@@ -11067,6 +11504,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:46.153977+00:00"
   },
   {
@@ -11093,6 +11531,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-apionidae",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This URL follows the updated naming convention for the 'Mikes Insect Keys' site and hosts the specific identification guide for British Apionidae.",
+    "alternative_note": "confirmed: The candidate URL directly corresponds to the specific key for British Apionidae authored by Mike Hackston as described in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:58.233588+00:00"
   },
   {
@@ -11118,6 +11557,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:48.436408+00:00"
   },
   {
@@ -11143,6 +11583,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-carabidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, functional location for Mike Hackston's insect keys, replacing the broken sites.google.com/site/mikesinsectkeys/ address.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Carabidae authored by Mike Hackston, which matches the title and description of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:45.328602+00:00"
   },
   {
@@ -11168,6 +11609,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-chrysomelidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated location for Mike Hackston's keys, as referenced in academic and biodiversity literature, replacing the broken sites.google.com/site link.",
+    "alternative_note": "confirmed: The candidate link specifically points to the identification keys for British Chrysomelidae authored by Mike Hackston, which matches the title and description of the original entry.",
     "verified_at": "2026-10-27T00:34:45.419667+00:00"
   },
   {
@@ -11193,6 +11635,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:41.762994+00:00"
   },
   {
@@ -11218,6 +11661,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:51.136213+00:00"
   },
   {
@@ -11243,6 +11687,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:51.849280+00:00"
   },
   {
@@ -11268,6 +11713,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:54.041450+00:00"
   },
   {
@@ -11293,6 +11739,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:54.479756+00:00"
   },
   {
@@ -11318,6 +11765,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:57.470691+00:00"
   },
   {
@@ -11343,6 +11791,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:58.891750+00:00"
   },
   {
@@ -11368,6 +11817,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-scarabaeidae",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the updated URL structure for Mike Hackston's insect keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' domain.",
+    "alternative_note": "confirmed: The candidate link points directly to the specific identification key for British Scarabaeidae authored by Mike Hackston, which matches the content and purpose of the original catalogue entry.",
     "verified_at": "2026-10-27T00:34:49.374765+00:00"
   },
   {
@@ -11393,6 +11843,7 @@
     "alternative_link": "https://sites.google.com/view/mikes-insect-keys/mikes-insect-keys/keys-for-the-identification-of-british-beetles-coleoptera/keys-for-the-identification-of-british-staphylinidae",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This URL is the updated, functional location for Mike Hackston's keys, replacing the broken 'sites.google.com/site/mikesinsectkeys' address.",
+    "alternative_note": "confirmed: The candidate URL explicitly matches the title of the catalogue entry and corresponds to the specific page hosting the keys for British Staphylinidae authored by Mike Hackston.",
     "verified_at": "2026-10-27T00:34:49.318107+00:00"
   },
   {
@@ -11418,6 +11869,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:50.099276+00:00"
   },
   {
@@ -11443,6 +11895,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:51.708002+00:00"
   },
   {
@@ -11468,6 +11921,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:52.123970+00:00"
   },
   {
@@ -11493,6 +11947,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:53.597352+00:00"
   },
   {
@@ -11518,6 +11973,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:52.737514+00:00"
   },
   {
@@ -11543,6 +11999,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:53.225030+00:00"
   },
   {
@@ -11568,6 +12025,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:53.635605+00:00"
   },
   {
@@ -11594,6 +12052,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:08.089421+00:00"
   },
   {
@@ -11621,6 +12080,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:00.646717+00:00"
   },
   {
@@ -11646,6 +12106,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -11671,6 +12132,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:54.732518+00:00"
   },
   {
@@ -11696,6 +12158,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:54.732041+00:00"
   },
   {
@@ -11721,6 +12184,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:15.718550+00:00"
   },
   {
@@ -11746,6 +12210,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:15.718220+00:00"
   },
   {
@@ -11772,6 +12237,7 @@
     "alternative_link": "https://www.apis.ac.uk/nitrogen-lichen-field-manual",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This URL is explicitly cited in official documentation as the location for the field manual and guide for the lichen-based nitrogen assessment tool.",
+    "alternative_note": "confirmed: The candidate page provides the field guide and information for the same lichen-based nitrogen pollution assessment tool described in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:53.120147+00:00"
   },
   {
@@ -11797,6 +12263,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:56.601534+00:00"
   },
   {
@@ -11822,6 +12289,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:58.350617+00:00"
   },
   {
@@ -11847,6 +12315,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:00.089204+00:00"
   },
   {
@@ -11872,6 +12341,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:48:59.358595+00:00"
   },
   {
@@ -11897,6 +12367,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:01.151925+00:00"
   },
   {
@@ -11923,6 +12394,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.284033+00:00"
   },
   {
@@ -11948,6 +12420,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/lobsters-mud-shrimps-and-anomuran-crabs-synopses-of-the-british-fauna-55/8582",
     "alternative_probability": 0.6,
     "alternative_reasoning": "Pemberley Books is a specialized natural history bookseller that frequently stocks and hosts product pages for the Synopses of the British Fauna series.",
+    "alternative_note": "confirmed: The candidate page is a product page for the exact book title, authors, and series mentioned in the catalogue entry.",
     "verified_at": "2026-10-27T00:34:58.772569+00:00"
   },
   {
@@ -11973,6 +12446,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:01.155810+00:00"
   },
   {
@@ -12000,6 +12474,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:03.743947+00:00"
   },
   {
@@ -12026,6 +12501,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:14.428534+00:00"
   },
   {
@@ -12052,6 +12528,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:35:02.094932+00:00"
   },
   {
@@ -12077,6 +12554,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:08.051854+00:00"
   },
   {
@@ -12102,6 +12580,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:07.672981+00:00"
   },
   {
@@ -12127,6 +12606,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:34.537239+00:00"
   },
   {
@@ -12153,6 +12633,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:16.298350+00:00"
   },
   {
@@ -12179,6 +12660,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:16.298154+00:00"
   },
   {
@@ -12205,6 +12687,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:18.318935+00:00"
   },
   {
@@ -12230,6 +12713,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:08.852832+00:00"
   },
   {
@@ -12255,6 +12739,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:18.906813+00:00"
   },
   {
@@ -12282,6 +12767,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:34.990049+00:00"
   },
   {
@@ -12308,6 +12794,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:20.920697+00:00"
   },
   {
@@ -12334,6 +12821,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:15.687824+00:00"
   },
   {
@@ -12359,6 +12847,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:35.654044+00:00"
   },
   {
@@ -12384,6 +12873,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:25.514137+00:00"
   },
   {
@@ -12409,6 +12899,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:36.491991+00:00"
   },
   {
@@ -12434,6 +12925,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:35:03.232216+00:00"
   },
   {
@@ -12460,6 +12952,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:20.418054+00:00"
   },
   {
@@ -12485,6 +12978,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/new-flora-of-the-british-isles-4th-edition/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "Summerfield Books is the primary specialist retailer identified in the description as the standard source for this book, and they maintain a specific product page for the 4th edition.",
+    "alternative_note": "confirmed: The candidate link points to the product page for the 4th edition of the exact book described in the entry, which is a valid replacement for the lost link.",
     "verified_at": "2026-10-27T00:35:05.804150+00:00"
   },
   {
@@ -12512,6 +13006,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:29.763174+00:00"
   },
   {
@@ -12537,6 +13032,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:23.001173+00:00"
   },
   {
@@ -12562,6 +13058,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:21.309485+00:00"
   },
   {
@@ -12587,6 +13084,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:21.515276+00:00"
   },
   {
@@ -12612,6 +13110,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:35.175073+00:00"
   },
   {
@@ -12637,6 +13136,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:35.174877+00:00"
   },
   {
@@ -12662,6 +13162,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:22.651943+00:00"
   },
   {
@@ -12687,6 +13188,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:36.259496+00:00"
   },
   {
@@ -12712,6 +13214,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -12741,6 +13244,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.638007+00:00"
   },
   {
@@ -12768,6 +13272,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:31.638081+00:00"
   },
   {
@@ -12793,6 +13298,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:23.940300+00:00"
   },
   {
@@ -12818,6 +13324,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:25.065084+00:00"
   },
   {
@@ -12843,6 +13350,7 @@
     "alternative_link": "https://sunbird.tv/apps/orchid-id-british-orchids/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the direct product page for the 'Orchid Id - British Orchids' app on the developer's website.",
+    "alternative_note": "confirmed: The candidate page describes the Orchid Id app, which is the same digital identification guide for British orchids as specified in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:14.339236+00:00"
   },
   {
@@ -12868,6 +13376,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:26.051531+00:00"
   },
   {
@@ -12893,6 +13402,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:32.452630+00:00"
   },
   {
@@ -12918,6 +13428,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:26.963146+00:00"
   },
   {
@@ -12943,6 +13454,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:29.314824+00:00"
   },
   {
@@ -12968,6 +13480,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:31.279733+00:00"
   },
   {
@@ -12995,6 +13508,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:43.458695+00:00"
   },
   {
@@ -13020,6 +13534,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:35.710416+00:00"
   },
   {
@@ -13045,6 +13560,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:36.482390+00:00"
   },
   {
@@ -13070,6 +13586,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:42.937522+00:00"
   },
   {
@@ -13095,6 +13612,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:37.020782+00:00"
   },
   {
@@ -13120,6 +13638,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:39.097744+00:00"
   },
   {
@@ -13145,6 +13664,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:38.425655+00:00"
   },
   {
@@ -13172,6 +13692,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:39.547536+00:00"
   },
   {
@@ -13198,6 +13719,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:45.075244+00:00"
   },
   {
@@ -13223,6 +13745,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:44.095298+00:00"
   },
   {
@@ -13248,6 +13771,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:40.166132+00:00"
   },
   {
@@ -13273,6 +13797,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/a-key-to-plants-common-on-sand-dunes-identification-chart/9349",
     "alternative_probability": 0.5,
     "alternative_reasoning": "Pemberley Books is a specialist natural history bookseller that lists this specific identification chart, providing details on its availability and bibliographic information.",
+    "alternative_note": "confirmed: The candidate page refers to the same identification chart by the same authors, covering the same subject matter of plants common on sand dunes.",
     "verified_at": "2026-10-27T00:35:07.782194+00:00"
   },
   {
@@ -13299,6 +13824,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:40.088480+00:00"
   },
   {
@@ -13324,6 +13850,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:44.477091+00:00"
   },
   {
@@ -13349,6 +13876,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:45.047623+00:00"
   },
   {
@@ -13374,6 +13902,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:35:09.949526+00:00"
   },
   {
@@ -13399,6 +13928,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:45.508888+00:00"
   },
   {
@@ -13424,6 +13954,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:50.897499+00:00"
   },
   {
@@ -13449,6 +13980,7 @@
     "alternative_link": "https://bwars.com/content/atlas-bees-wasps-ants-shropshire-published",
     "alternative_probability": 0.6,
     "alternative_reasoning": "This BWARS page provides the official announcement and context for the publication, serving as a primary source for information about the atlas.",
+    "alternative_note": "confirmed: The candidate page confirms the publication of the specific atlas described in the entry, matching both the title and the subject matter.",
     "verified_at": "2026-10-27T00:35:13.634694+00:00"
   },
   {
@@ -13475,6 +14007,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:47.007968+00:00"
   },
   {
@@ -13500,6 +14033,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:48.232112+00:00"
   },
   {
@@ -13525,6 +14059,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:48.834964+00:00"
   },
   {
@@ -13550,6 +14085,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -13575,6 +14111,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:49.377394+00:00"
   },
   {
@@ -13600,6 +14137,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:51.965918+00:00"
   },
   {
@@ -13625,6 +14163,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:53.134391+00:00"
   },
   {
@@ -13651,6 +14190,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:50.247753+00:00"
   },
   {
@@ -13676,6 +14216,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:26.612432+00:00"
   },
   {
@@ -13701,6 +14242,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:51.455784+00:00"
   },
   {
@@ -13727,6 +14269,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:09:25.255635+00:00"
   },
   {
@@ -13753,6 +14296,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:43.738556+00:00"
   },
   {
@@ -13779,6 +14323,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:44.566645+00:00"
   },
   {
@@ -13805,6 +14350,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:09:26.317776+00:00"
   },
   {
@@ -13831,6 +14377,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:50:18.338301+00:00"
   },
   {
@@ -13857,6 +14404,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:50:24.237433+00:00"
   },
   {
@@ -13883,6 +14431,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:48.121348+00:00"
   },
   {
@@ -13909,6 +14458,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:00:55.270891+00:00"
   },
   {
@@ -13935,6 +14485,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:09:27.402464+00:00"
   },
   {
@@ -13961,6 +14512,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:50:38.262068+00:00"
   },
   {
@@ -13987,6 +14539,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:00.380920+00:00"
   },
   {
@@ -14013,6 +14566,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:50:45.868775+00:00"
   },
   {
@@ -14039,6 +14593,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:50:39.780462+00:00"
   },
   {
@@ -14065,6 +14620,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol10_Part02c.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, functional PDF link for the R. L. Coe Pipunculidae handbook hosted on the Royal Entomological Society's official website.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 10 Part 2c, which matches the requested title and author.",
     "verified_at": "2026-10-27T00:35:15.745957+00:00"
   },
   {
@@ -14091,6 +14647,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:08.656134+00:00"
   },
   {
@@ -14117,6 +14674,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:11.729346+00:00"
   },
   {
@@ -14143,6 +14701,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:16.448354+00:00"
   },
   {
@@ -14169,6 +14728,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:08.862668+00:00"
   },
   {
@@ -14195,6 +14755,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-tephritidae/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the PDF download for the specified handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook volume for Tephritidae authored by I. M. White, matching the entry title and content.",
     "verified_at": "2026-10-27T00:35:12.820737+00:00"
   },
   {
@@ -14221,6 +14782,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:06.691603+00:00"
   },
   {
@@ -14247,6 +14809,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:21.166751+00:00"
   },
   {
@@ -14273,6 +14836,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:22.916421+00:00"
   },
   {
@@ -14299,6 +14863,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:16.175669+00:00"
   },
   {
@@ -14325,6 +14890,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:30.666941+00:00"
   },
   {
@@ -14348,6 +14914,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:31.397547+00:00"
   },
   {
@@ -14374,6 +14941,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:31.899149+00:00"
   },
   {
@@ -14400,6 +14968,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-introduction-and-keys-to-families/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a direct download link for the PDF.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific publication 'Coleoptera, Introduction and keys to families' by the Royal Entomological Society, which matches the title and subject matter of the original catalogue entry.",
     "verified_at": "2026-10-27T00:35:17.691415+00:00"
   },
   {
@@ -14426,6 +14995,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2021/12/Vol04_Part10.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL for the PDF of the RES Handbook Vol 4 Part 10, as identified by the Royal Entomological Society's own resource documentation.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Vol 4 Part 10, which matches the title and content described in the entry.",
     "verified_at": "2026-10-27T00:35:18.018011+00:00"
   },
   {
@@ -14452,6 +15022,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:32.469150+00:00"
   },
   {
@@ -14478,6 +15049,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:34.093997+00:00"
   },
   {
@@ -14504,6 +15076,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:38.857730+00:00"
   },
   {
@@ -14530,6 +15103,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:34.796406+00:00"
   },
   {
@@ -14556,6 +15130,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:35.748181+00:00"
   },
   {
@@ -14582,6 +15157,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/dung-beetles-chafers-coleoptera-scarabaeoidea/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides information and access to the publication.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook title, author, and subject matter described in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:20.750278+00:00"
   },
   {
@@ -14608,6 +15184,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:39.951698+00:00"
   },
   {
@@ -14634,6 +15211,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-cerambycidae/",
     "alternative_probability": 0.8,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a download link for the PDF.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Coleoptera: Cerambycidae by E. A. J. Duffy, matching the title and subject matter of the original entry.",
     "verified_at": "2026-10-27T00:35:21.717389+00:00"
   },
   {
@@ -14660,6 +15238,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:35.239687+00:00"
   },
   {
@@ -14686,6 +15265,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/coleoptera-buprestidae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the out-of-print handbook, which historically hosted the PDF download link.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Buprestidae authored by Brian Levey, matching the entry title and description.",
     "verified_at": "2026-10-27T00:35:23.774395+00:00"
   },
   {
@@ -14712,6 +15292,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:50.888153+00:00"
   },
   {
@@ -14738,6 +15319,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:19.951351+00:00"
   },
   {
@@ -14764,6 +15346,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:52.552002+00:00"
   },
   {
@@ -14790,6 +15373,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:54.207447+00:00"
   },
   {
@@ -14816,6 +15400,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:58.643112+00:00"
   },
   {
@@ -14842,6 +15427,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:51:58.822392+00:00"
   },
   {
@@ -14868,6 +15454,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-introduction-and-key-to-families-2nd-edition/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the digital archives and direct download links for their handbooks.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title, edition, and author specified in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:22.614436+00:00"
   },
   {
@@ -14894,6 +15481,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:04.587019+00:00"
   },
   {
@@ -14920,6 +15508,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:07.290357+00:00"
   },
   {
@@ -14946,6 +15535,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:05.829007+00:00"
   },
   {
@@ -14972,6 +15562,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:10.369727+00:00"
   },
   {
@@ -14998,6 +15589,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:07.450894+00:00"
   },
   {
@@ -15024,6 +15616,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-formicidae/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Royal Entomological Society page that hosts the download for the Hymenoptera - Formicidae handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Hymenoptera: Formicidae authored by Bolton and Collingwood, matching the requested catalogue entry.",
     "verified_at": "2026-10-27T00:35:29.518050+00:00"
   },
   {
@@ -15050,6 +15643,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:13.497536+00:00"
   },
   {
@@ -15076,6 +15670,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/cuckoo-wasps-hymenoptera-chrysididae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their publications.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific Royal Entomological Society handbook for Cuckoo-Wasps (Chrysididae) authored by D. Morgan, matching the entry title and description.",
     "verified_at": "2026-10-27T00:35:32.194506+00:00"
   },
   {
@@ -15102,6 +15697,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:17.224754+00:00"
   },
   {
@@ -15128,6 +15724,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-7-part-11-classification-biology-of-braconid-wasps-hymenoptera-braconidae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which serves as the primary source for their out-of-print publications.",
+    "alternative_note": "confirmed: The candidate link corresponds directly to the specific publication title and authors listed in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:32.125289+00:00"
   },
   {
@@ -15154,6 +15751,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:26.639431+00:00"
   },
   {
@@ -15180,6 +15778,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:27.410332+00:00"
   },
   {
@@ -15206,6 +15805,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:27.411258+00:00"
   },
   {
@@ -15232,6 +15832,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:32.728322+00:00"
   },
   {
@@ -15258,6 +15859,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:39.815753+00:00"
   },
   {
@@ -15284,6 +15886,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/hymenoptera-2-chalcidoidea-section-a/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society page for the publication, which provides access to the handbook.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact publication title and series specified in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:34.799130+00:00"
   },
   {
@@ -15310,6 +15913,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol08_Part02b.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct, corrected URL for the PDF version of the RES Handbook Vol 8 Part 2b, as cited in academic literature.",
+    "alternative_note": "confirmed: The candidate link points directly to the PDF of the RES Handbook Volume 8 Part 2b, which matches the title and content described in the entry.",
     "verified_at": "2026-10-27T00:35:37.430989+00:00"
   },
   {
@@ -15336,6 +15940,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:41.454524+00:00"
   },
   {
@@ -15362,6 +15967,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/vol-8-part-3d-ii-hymenoptera-proctotrupoidea-diapriidae-subfamily-belytinae/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the out-of-print handbook, which serves as the primary source for the publication.",
+    "alternative_note": "confirmed: The candidate link corresponds directly to the specific Royal Entomological Society handbook volume and title described in the entry.",
     "verified_at": "2026-10-27T00:35:35.159468+00:00"
   },
   {
@@ -15388,6 +15994,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:49.092415+00:00"
   },
   {
@@ -15414,6 +16021,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:51.303601+00:00"
   },
   {
@@ -15440,6 +16048,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:55.270121+00:00"
   },
   {
@@ -15466,6 +16075,7 @@
     "alternative_link": "https://www.royensoc.co.uk/wp-content/uploads/2022/01/Vol09_Part02_3_Chironomidae.pdf",
     "alternative_probability": 1.0,
     "alternative_reasoning": "This is the direct URL to the PDF of the RES Handbook Vol 9 Part 2 iii, as referenced in academic and identification resource documentation.",
+    "alternative_note": "confirmed: The candidate link is a direct PDF download of the specific RES Handbook volume and part described in the entry.",
     "verified_at": "2026-10-27T00:35:38.501109+00:00"
   },
   {
@@ -15492,6 +16102,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:58.030697+00:00"
   },
   {
@@ -15518,6 +16129,7 @@
     "alternative_link": "https://www.royensoc.co.uk/shop/publications/out-of-print-handbooks/diptera-brachycera-tabanoidea-and-asiloidea/",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official Royal Entomological Society product page for the handbook, which provides a description and download options for the publication.",
+    "alternative_note": "confirmed: The candidate link corresponds to the specific out-of-print handbook title and author described in the entry.",
     "verified_at": "2026-10-27T00:35:41.565089+00:00"
   },
   {
@@ -15544,6 +16156,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:05.603287+00:00"
   },
   {
@@ -15570,6 +16183,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.284086+00:00"
   },
   {
@@ -15595,6 +16209,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:44.334793+00:00"
   },
   {
@@ -15620,6 +16235,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:45.381756+00:00"
   },
   {
@@ -15645,6 +16261,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:46.287487+00:00"
   },
   {
@@ -15671,6 +16288,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:23.451804+00:00"
   },
   {
@@ -15696,6 +16314,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -15721,6 +16340,7 @@
     "alternative_link": "https://www.penguin.co.uk/books/121729/the-wild-flower-key-by-francis-rose/9780723251750",
     "alternative_probability": 0.9,
     "alternative_reasoning": "This is the official publisher's product page for the book, providing comprehensive details and purchase links.",
+    "alternative_note": "confirmed: The candidate page is for the same book, 'The Wild Flower Key' by Francis Rose, which matches the title and authorship of the original catalogue entry.",
     "verified_at": "2026-10-27T00:35:45.520560+00:00"
   },
   {
@@ -15746,6 +16366,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:48.380368+00:00"
   },
   {
@@ -15771,6 +16392,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:50.185595+00:00"
   },
   {
@@ -15796,6 +16418,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:06.760469+00:00"
   },
   {
@@ -15821,6 +16444,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:56.976780+00:00"
   },
   {
@@ -15847,6 +16471,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:42:34.284154+00:00"
   },
   {
@@ -15874,6 +16499,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T01:52:59.379005+00:00"
   },
   {
@@ -15901,6 +16527,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:08.207419+00:00"
   },
   {
@@ -15928,6 +16555,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:10.781483+00:00"
   },
   {
@@ -15955,6 +16583,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:52:57.387465+00:00"
   },
   {
@@ -15982,6 +16611,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:13.341022+00:00"
   },
   {
@@ -16007,6 +16637,7 @@
     "alternative_link": "https://www.summerfieldbooks.com/product/guide-to-the-seasons-fsc-fold-out-chart/",
     "alternative_probability": 0.6,
     "alternative_reasoning": "This is a direct product page for the 'Guide to the Seasons' fold-out chart on a specialized natural history bookstore website.",
+    "alternative_note": "confirmed: The candidate page corresponds to the FSC fold-out chart titled 'Guide to the Seasons' by Farley-Brown & Norman, which matches the description and authors of the original entry.",
     "verified_at": "2026-10-27T00:35:44.124199+00:00"
   },
   {
@@ -16032,6 +16663,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:00.084730+00:00"
   },
   {
@@ -16057,6 +16689,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:00.195863+00:00"
   },
   {
@@ -16082,6 +16715,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:02.077591+00:00"
   },
   {
@@ -16107,6 +16741,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:17.859879+00:00"
   },
   {
@@ -16133,6 +16768,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:15.118895+00:00"
   },
   {
@@ -16159,6 +16795,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:13.576232+00:00"
   },
   {
@@ -16185,6 +16822,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:18.622402+00:00"
   },
   {
@@ -16211,6 +16849,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:22.620003+00:00"
   },
   {
@@ -16237,6 +16876,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:15.815610+00:00"
   },
   {
@@ -16262,6 +16902,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:09.797101+00:00"
   },
   {
@@ -16287,6 +16928,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:11.782320+00:00"
   },
   {
@@ -16312,6 +16954,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:16.060341+00:00"
   },
   {
@@ -16337,6 +16980,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:15.115800+00:00"
   },
   {
@@ -16362,6 +17006,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:16.479348+00:00"
   },
   {
@@ -16387,6 +17032,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:17.059667+00:00"
   },
   {
@@ -16412,6 +17058,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:23.306556+00:00"
   },
   {
@@ -16437,6 +17084,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:19.630750+00:00"
   },
   {
@@ -16462,6 +17110,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:17.798295+00:00"
   },
   {
@@ -16487,6 +17136,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:22.370573+00:00"
   },
   {
@@ -16512,6 +17162,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16538,6 +17189,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:20.462933+00:00"
   },
   {
@@ -16563,6 +17215,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16588,6 +17241,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16613,6 +17267,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:21.306507+00:00"
   },
   {
@@ -16638,6 +17293,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16663,6 +17319,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:24.010387+00:00"
   },
   {
@@ -16688,6 +17345,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:24.547832+00:00"
   },
   {
@@ -16713,6 +17371,7 @@
     "alternative_link": "https://www.nhm.ac.uk/take-part/identify-nature/spiders-in-your-home.html",
     "alternative_probability": 0.8,
     "alternative_reasoning": "While the direct PDF link is broken, the Natural History Museum hosts the guide on their 'Identify Nature' section, which is the standard location for these resources.",
+    "alternative_note": "confirmed: The candidate link corresponds to the official Natural History Museum page for the 'Spiders in your home' guide, which matches the title and authorship provided.",
     "verified_at": "2026-10-27T00:35:43.958600+00:00"
   },
   {
@@ -16738,6 +17397,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16763,6 +17423,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16788,6 +17449,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16815,6 +17477,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:26.168881+00:00"
   },
   {
@@ -16842,6 +17505,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:26.871957+00:00"
   },
   {
@@ -16867,6 +17531,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -16892,6 +17557,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T20:01:11.310511+00:00"
   },
   {
@@ -16917,6 +17583,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:34.986333+00:00"
   },
   {
@@ -16942,6 +17609,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:38.588782+00:00"
   },
   {
@@ -16967,6 +17635,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:27.641036+00:00"
   },
   {
@@ -16992,6 +17661,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:29.349990+00:00"
   },
   {
@@ -17017,6 +17687,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:28.200833+00:00"
   },
   {
@@ -17042,6 +17713,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:29.429913+00:00"
   },
   {
@@ -17067,6 +17739,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:28.884070+00:00"
   },
   {
@@ -17092,6 +17765,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:30.218334+00:00"
   },
   {
@@ -17117,6 +17791,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:33.092852+00:00"
   },
   {
@@ -17142,6 +17817,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:30.718679+00:00"
   },
   {
@@ -17167,6 +17843,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:31.846598+00:00"
   },
   {
@@ -17192,6 +17869,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:32.289282+00:00"
   },
   {
@@ -17217,6 +17895,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:34.346938+00:00"
   },
   {
@@ -17242,6 +17921,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:34.055076+00:00"
   },
   {
@@ -17267,6 +17947,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:34.514125+00:00"
   },
   {
@@ -17292,6 +17973,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": null
   },
   {
@@ -17317,6 +17999,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:35.582291+00:00"
   },
   {
@@ -17342,6 +18025,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:37.709284+00:00"
   },
   {
@@ -17367,6 +18051,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:37.688526+00:00"
   },
   {
@@ -17392,6 +18077,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:38.176428+00:00"
   },
   {
@@ -17417,6 +18103,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:40.389191+00:00"
   },
   {
@@ -17443,6 +18130,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:49:39.548260+00:00"
   },
   {
@@ -17468,6 +18156,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:38.623391+00:00"
   },
   {
@@ -17493,6 +18182,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:39.610454+00:00"
   },
   {
@@ -17518,6 +18208,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:40.121409+00:00"
   },
   {
@@ -17543,6 +18234,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:40.681054+00:00"
   },
   {
@@ -17568,6 +18260,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:41.096837+00:00"
   },
   {
@@ -17593,6 +18286,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:56.651793+00:00"
   },
   {
@@ -17618,6 +18312,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:53.664586+00:00"
   },
   {
@@ -17643,6 +18338,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:53.031202+00:00"
   },
   {
@@ -17668,6 +18364,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:41.726868+00:00"
   },
   {
@@ -17693,6 +18390,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:41.733014+00:00"
   },
   {
@@ -17719,6 +18417,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:42.521918+00:00"
   },
   {
@@ -17744,6 +18443,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:42.467193+00:00"
   },
   {
@@ -17769,6 +18469,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:47.806788+00:00"
   },
   {
@@ -17794,6 +18495,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:44.034370+00:00"
   },
   {
@@ -17819,6 +18521,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:43.023201+00:00"
   },
   {
@@ -17844,6 +18547,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:44:24.590694+00:00"
   },
   {
@@ -17869,6 +18573,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:44.530899+00:00"
   },
   {
@@ -17894,6 +18599,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:45.109823+00:00"
   },
   {
@@ -17919,6 +18625,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:46.461293+00:00"
   },
   {
@@ -17945,6 +18652,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:48.347899+00:00"
   },
   {
@@ -17970,6 +18678,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:48.751702+00:00"
   },
   {
@@ -17995,6 +18704,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:50.184538+00:00"
   },
   {
@@ -18020,6 +18730,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:49.551158+00:00"
   },
   {
@@ -18046,6 +18757,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:53.086233+00:00"
   },
   {
@@ -18071,6 +18783,7 @@
     "alternative_link": "https://www.pemberleybooks.com/product/the-vespoid-wasps-tiphiidae-mutillidae-sapygidae-scoliidae-and-vespidae-of-the-british-isles-handbooks-for-the-identification-of-british-insects-6-6/27002",
     "alternative_probability": 0.85,
     "alternative_reasoning": "Pemberley Books is a specialized entomological bookseller that hosts a direct product page for this specific identification guide.",
+    "alternative_note": "confirmed: The candidate link corresponds to the exact publication described, matching the title, author, and series details provided in the entry.",
     "verified_at": "2026-10-27T00:35:51.685651+00:00"
   },
   {
@@ -18097,6 +18810,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-27T00:35:45.919868+00:00"
   },
   {
@@ -18122,6 +18836,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:56.741338+00:00"
   },
   {
@@ -18147,6 +18862,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:57.698580+00:00"
   },
   {
@@ -18173,6 +18889,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:57.372220+00:00"
   },
   {
@@ -18199,6 +18916,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:37.037022+00:00"
   },
   {
@@ -18225,6 +18943,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:40.232295+00:00"
   },
   {
@@ -18251,6 +18970,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:46:40.232009+00:00"
   },
   {
@@ -18277,6 +18997,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:03.880540+00:00"
   },
   {
@@ -18303,6 +19024,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:03.876576+00:00"
   },
   {
@@ -18328,6 +19050,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:58.337015+00:00"
   },
   {
@@ -18354,6 +19077,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:59.363494+00:00"
   },
   {
@@ -18380,6 +19104,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:12.206350+00:00"
   },
   {
@@ -18406,6 +19131,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:08.068244+00:00"
   },
   {
@@ -18432,6 +19158,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:08.554954+00:00"
   },
   {
@@ -18459,6 +19186,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:58.848162+00:00"
   },
   {
@@ -18484,6 +19212,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:53:59.730900+00:00"
   },
   {
@@ -18509,6 +19238,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:02.760579+00:00"
   },
   {
@@ -18534,6 +19264,7 @@
     "alternative_link": "https://www.field-studies-council.org/shop/publications/woodland-name-trail/",
     "alternative_probability": 0.95,
     "alternative_reasoning": "This is the official Field Studies Council product page for the 'Woodland name trail' guide, which replaces the broken link provided.",
+    "alternative_note": "confirmed: The candidate link corresponds to the 'Woodland Name Trail' publication by the Field Studies Council, which matches the title, authors, and description provided in the catalogue entry.",
     "verified_at": "2026-10-27T00:35:48.717539+00:00"
   },
   {
@@ -18559,6 +19290,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:06.789058+00:00"
   },
   {
@@ -18584,6 +19316,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:07.271516+00:00"
   },
   {
@@ -18609,6 +19342,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:04.302221+00:00"
   },
   {
@@ -18634,6 +19368,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:08.093195+00:00"
   },
   {
@@ -18659,6 +19394,7 @@
     "alternative_link": null,
     "alternative_probability": null,
     "alternative_reasoning": null,
+    "alternative_note": null,
     "verified_at": "2026-10-26T19:54:11.271328+00:00"
   }
 ]
