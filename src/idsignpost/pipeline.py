@@ -60,8 +60,21 @@ class Finder(Protocol):
     ) -> RedirectVerdict | None: ...
 
     async def find_alternative(
-        self, entry: CatalogEntry, *, checker: Checker
+        self,
+        entry: CatalogEntry,
+        *,
+        checker: Checker,
+        preferred: Alternative | None = None,
     ) -> DiscoveryOutcome: ...
+
+    async def confirm_alternative(
+        self,
+        entry: CatalogEntry,
+        *,
+        url: str,
+        page_title: str | None,
+        page_h1: str | None,
+    ) -> bool | None: ...
 
 
 class Archive(Protocol):
@@ -210,6 +223,7 @@ class Verifier:
                 record.alternative_probability = None
                 record.alternative_reasoning = None
                 record.alternative_checked = True
+                record.alternative_confirmed = False
                 self.cache.put_entry(entry.id, entry.web_link or "", record)
             cleaned.append(entry)
         return cleaned
@@ -320,15 +334,23 @@ class Verifier:
                 state, status = "broken", "redirect_mismatch"
 
         alternative = previous
+        alternative_confirmed = False
         discovered = False
         discovery_transient = False
         cached_rejected = False
+        cached_confirmed = False
         if state == "broken":
             if record is not None and record.alternative_checked:
                 cached_url = record.alternative_url
                 if cached_url and is_unusable_alternative(cached_url):
                     alternative = None
                     cached_rejected = True
+                elif cached_url and not record.alternative_confirmed:
+                    alternative, alternative_confirmed = await self._reconfirm(
+                        entry, record
+                    )
+                    cached_confirmed = alternative_confirmed
+                    cached_rejected = alternative is None
                 else:
                     alternative = (
                         Alternative(
@@ -339,6 +361,7 @@ class Verifier:
                         if cached_url
                         else None
                     )
+                    alternative_confirmed = bool(cached_url)
             else:
                 discovered = True
                 outcome = await self._discover(entry)
@@ -347,6 +370,7 @@ class Verifier:
                     alternative = previous
                 else:
                     alternative = outcome.alternative
+                    alternative_confirmed = outcome.confirmed
                     fresh = True
         else:
             alternative = None
@@ -354,7 +378,7 @@ class Verifier:
         write_entry = discovered and not discovery_transient
         if verdict is not None and not verdict_cached:
             write_entry = True
-        if cached_rejected:
+        if cached_rejected or cached_confirmed:
             write_entry = True
         if (
             state != "broken"
@@ -384,6 +408,9 @@ class Verifier:
                 alternative_checked=(
                     (record.alternative_checked if record else False) or discovered
                 ),
+                alternative_confirmed=(
+                    alternative_confirmed if alternative is not None else False
+                ),
             )
 
         return _Verdict(
@@ -412,7 +439,46 @@ class Verifier:
 
     async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:
         async with self._gemini:
-            return await self.finder.find_alternative(entry, checker=self.checker)
+            return await self.finder.find_alternative(
+                entry, checker=self.checker, preferred=_alternative_fields(entry)
+            )
+
+    async def _reconfirm(
+        self, entry: CatalogEntry, record: EntryRecord
+    ) -> tuple[Alternative | None, bool]:
+        """Recheck a cached alternative that was stored before confirmation."""
+        url = record.alternative_url
+        if not url:
+            return None, False
+        cached = Alternative(
+            url,
+            record.alternative_probability or 0.0,
+            record.alternative_reasoning,
+        )
+        facts = await self._facts(url, entry.title)
+        if facts.transient:
+            return cached, False
+        if facts.result.state != "ok" or facts.result.is_suspicious_redirect:
+            return None, False
+        resolved = facts.result.resolved_url or url
+        match = await self._confirm(
+            entry, resolved, facts.result.page_title, facts.result.page_h1
+        )
+        if match is False:
+            return None, False
+        return Alternative(resolved, cached.probability, cached.reasoning), bool(match)
+
+    async def _confirm(
+        self,
+        entry: CatalogEntry,
+        url: str,
+        page_title: str | None,
+        page_h1: str | None,
+    ) -> bool | None:
+        async with self._gemini:
+            return await self.finder.confirm_alternative(
+                entry, url=url, page_title=page_title, page_h1=page_h1
+            )
 
     async def _wayback(
         self, url: str, facts: _UrlFacts, verdicts: list[_Verdict]

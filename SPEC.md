@@ -233,7 +233,8 @@ flowchart TD
   8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
 - After the run, drop any alternative URL assigned to three or more entries and cache a negative verdict. Such a URL is a category page, not a specific guide.
-- Confirmation runs once, when a candidate is discovered. An alternative read back from the entry-tier cache is reused without a second model call.
+- Try a previously stored alternative before searching, so a rerun does not discard a valid result when the model returns different candidates. The stored URL still passes the policy, liveness, and confirmation checks. If that stored URL fails those checks, the negative verdict stands even when the follow-up search cannot run.
+- Confirmation runs once per candidate. The result is cached with the alternative, so a later run reuses a confirmed URL without another model call. A cached alternative that predates the flag is confirmed once on reuse.
 - Cache the verdict, including negative verdicts, in the entry-tier cache. Do not cache transient Gemini or HTTP errors.
 
 #### Step 2d: Wayback Lookup and Save Page Now (`wayback.py`)
@@ -290,6 +291,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
       "alternative_probability": 0.92,
       "alternative_reasoning": "Official Natural History Museum identification guide page for Bats in flight.",
       "alternative_checked": true,
+      "alternative_confirmed": true,
       "checked_at": "2026-10-26T00:00:00+00:00"
     }
   }
@@ -302,7 +304,7 @@ All exporters write through a temporary file and `Path.replace`. JSON entries ar
 - **TTL expiration:** Cached records older than `cache_ttl_days` (default `30` days) are automatically refreshed.
 - **Schema mismatch:** A cache file whose `schema_version` is not `2` is discarded.
 - **Timestamps:** On a cache hit, preserve the existing `verified_at`; update it only when a new check runs.
-- **Negative verdicts:** Entry-tier records store failed alternative searches and redirect mismatch verdicts, so a broken entry does not re-query Gemini on every run. Transient Gemini errors are not cached. The `alternative_checked` flag distinguishes a completed search that found nothing from a record that only holds a redirect verdict.
+- **Negative verdicts:** Entry-tier records store failed alternative searches and redirect mismatch verdicts, so a broken entry does not re-query Gemini on every run. Transient Gemini errors are not cached. The `alternative_checked` flag distinguishes a completed search that found nothing from a record that only holds a redirect verdict. The `alternative_confirmed` flag records that a model explicitly matched the page to the entry. A cached alternative without that flag is confirmed once on reuse, then kept or cleared.
 - **Save cadence:** Save the cache every 25 checks and on normal exit or `KeyboardInterrupt`.
 
 ---

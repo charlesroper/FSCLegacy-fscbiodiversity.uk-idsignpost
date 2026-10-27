@@ -48,6 +48,7 @@ class EntryRecord:
     alternative_probability: float | None = None
     alternative_reasoning: str | None = None
     alternative_checked: bool = False
+    alternative_confirmed: bool = False
     checked_at: datetime | None = None
 
 
@@ -109,6 +110,7 @@ def _entry_record(raw: Any) -> EntryRecord | None:
         alternative_probability=_opt_float(raw.get("alternative_probability")),
         alternative_reasoning=_opt_str(raw.get("alternative_reasoning")),
         alternative_checked=bool(raw.get("alternative_checked", False)),
+        alternative_confirmed=bool(raw.get("alternative_confirmed", False)),
         checked_at=_parse_time(raw.get("checked_at")),
     )
 
@@ -134,6 +136,7 @@ def _entry_payload(record: EntryRecord) -> dict[str, Any]:
         "alternative_probability": record.alternative_probability,
         "alternative_reasoning": record.alternative_reasoning,
         "alternative_checked": record.alternative_checked,
+        "alternative_confirmed": record.alternative_confirmed,
         "checked_at": _iso(record.checked_at),
     }
 

@@ -56,16 +56,35 @@ class FakeFinder:
         self.discoveries = discoveries or {}
         self.redirect_calls: list[dict[str, object]] = []
         self.discovery_calls: list[str] = []
+        self.preferred_calls: list[Alternative | None] = []
+        self.confirm_calls: list[tuple[str, str]] = []
+        self.confirmations: dict[str, bool] = {}
 
     async def verify_redirect(self, **kwargs: object) -> RedirectVerdict | None:
         self.redirect_calls.append(kwargs)
         return self.redirects.pop(0) if self.redirects else None
 
     async def find_alternative(
-        self, entry: CatalogEntry, *, checker: object
+        self,
+        entry: CatalogEntry,
+        *,
+        checker: object,
+        preferred: Alternative | None = None,
     ) -> DiscoveryOutcome:
         self.discovery_calls.append(entry.id)
+        self.preferred_calls.append(preferred)
         return self.discoveries.get(entry.id, DiscoveryOutcome())
+
+    async def confirm_alternative(
+        self,
+        entry: CatalogEntry,
+        *,
+        url: str,
+        page_title: str | None,
+        page_h1: str | None,
+    ) -> bool | None:
+        self.confirm_calls.append((entry.id, url))
+        return self.confirmations.get(entry.id, True)
 
 
 class FakeArchive:
@@ -453,3 +472,106 @@ async def test_cached_image_alternative_is_cleared(tmp_path: object) -> None:
     assert record.alternative_url is None
     assert record.alternative_checked is True
     assert checker.checked == [url]
+
+
+async def test_discovery_receives_the_previous_alternative(tmp_path: object) -> None:
+    previous = Alternative("https://publisher.example/guide", 0.7, "older result")
+    cached = entry(
+        alternative_link=previous.url,
+        alternative_probability=previous.probability,
+        alternative_reasoning=previous.reasoning,
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder()
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+
+    await verifier.verify([cached])
+
+    assert finder.preferred_calls == [previous]
+
+
+async def test_cached_alternative_is_confirmed_before_reuse(tmp_path: object) -> None:
+    alt_url = "https://publisher.example/guide"
+    cache = CatalogCache(
+        path=tmp_path / "cache.json",  # type: ignore[operator]
+        now=lambda: NOW,
+    )
+    cache.put_entry(
+        "guide",
+        URL,
+        EntryRecord(
+            alternative_url=alt_url,
+            alternative_probability=0.9,
+            alternative_checked=True,
+        ),
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken"), alt_url: live(alt_url)})
+    finder = FakeFinder()
+    verifier = make_verifier(tmp_path, checker, finder=finder, cache=cache)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_link == alt_url
+    assert finder.confirm_calls == [("guide", alt_url)]
+    record = cache.get_entry("guide", URL)
+    assert record is not None
+    assert record.alternative_confirmed is True
+
+
+async def test_cached_alternative_is_dropped_when_confirmation_fails(
+    tmp_path: object,
+) -> None:
+    alt_url = "https://publisher.example/guide"
+    cache = CatalogCache(
+        path=tmp_path / "cache.json",  # type: ignore[operator]
+        now=lambda: NOW,
+    )
+    cache.put_entry(
+        "guide",
+        URL,
+        EntryRecord(
+            alternative_url=alt_url,
+            alternative_probability=0.9,
+            alternative_checked=True,
+        ),
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken"), alt_url: live(alt_url)})
+    finder = FakeFinder()
+    finder.confirmations["guide"] = False
+    verifier = make_verifier(tmp_path, checker, finder=finder, cache=cache)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_link is None
+    record = cache.get_entry("guide", URL)
+    assert record is not None
+    assert record.alternative_url is None
+    assert record.alternative_confirmed is False
+
+
+async def test_confirmed_alternative_is_reused_without_another_call(
+    tmp_path: object,
+) -> None:
+    alt_url = "https://publisher.example/guide"
+    cache = CatalogCache(
+        path=tmp_path / "cache.json",  # type: ignore[operator]
+        now=lambda: NOW,
+    )
+    cache.put_entry(
+        "guide",
+        URL,
+        EntryRecord(
+            alternative_url=alt_url,
+            alternative_probability=0.9,
+            alternative_checked=True,
+            alternative_confirmed=True,
+        ),
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder()
+    verifier = make_verifier(tmp_path, checker, finder=finder, cache=cache)
+
+    updated = (await verifier.verify([entry()]))[0]
+
+    assert updated.alternative_link == alt_url
+    assert finder.confirm_calls == []

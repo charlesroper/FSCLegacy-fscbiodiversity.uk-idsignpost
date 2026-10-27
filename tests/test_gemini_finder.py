@@ -266,7 +266,9 @@ async def test_find_alternative_falls_back_when_first_candidate_is_dead() -> Non
 
     outcome = await finder.find_alternative(entry(), checker=checker)
 
-    assert outcome == DiscoveryOutcome(Alternative("https://live.example/guide", 0.8))
+    assert outcome == DiscoveryOutcome(
+        Alternative("https://live.example/guide", 0.8), confirmed=True
+    )
     assert checker.checked == [
         "https://dead.example/guide",
         "https://live.example/guide",
@@ -328,6 +330,49 @@ async def test_find_alternative_rejects_a_page_for_a_different_book() -> None:
     outcome = await finder.find_alternative(entry(), checker=checker)
 
     assert outcome.alternative == Alternative("https://shop.example/right-book", 0.8)
+
+
+async def test_find_alternative_tries_the_preferred_url_first() -> None:
+    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same guide"}'])
+    checker = FakeChecker(
+        {"https://known.example/guide": live("https://known.example/guide")}
+    )
+
+    outcome = await finder.find_alternative(
+        entry(),
+        checker=checker,
+        preferred=Alternative("https://known.example/guide", 0.7, "from the cache"),
+    )
+
+    assert outcome == DiscoveryOutcome(
+        Alternative("https://known.example/guide", 0.7, "from the cache"),
+        confirmed=True,
+    )
+    assert len(client.models.calls) == 1
+
+
+async def test_find_alternative_falls_back_when_preferred_is_rejected() -> None:
+    finder, _, _ = make_finder(
+        [
+            '{"is_match": false, "reasoning": "different page"}',
+            '{"candidates": [{"url": "https://new.example/guide", "probability": 0.8}]}',
+            '{"is_match": true, "reasoning": "same guide"}',
+        ]
+    )
+    checker = FakeChecker(
+        {
+            "https://old.example/guide": live("https://old.example/guide"),
+            "https://new.example/guide": live("https://new.example/guide"),
+        }
+    )
+
+    outcome = await finder.find_alternative(
+        entry(),
+        checker=checker,
+        preferred=Alternative("https://old.example/guide", 0.9),
+    )
+
+    assert outcome.alternative == Alternative("https://new.example/guide", 0.8)
 
 
 async def test_find_alternative_keeps_a_live_candidate_when_confirmation_fails() -> (
@@ -449,7 +494,9 @@ async def test_find_alternative_rejects_suspicious_redirects() -> None:
 
     outcome = await finder.find_alternative(entry(), checker=checker)
 
-    assert outcome == DiscoveryOutcome(Alternative("https://example.org/real", 0.6))
+    assert outcome == DiscoveryOutcome(
+        Alternative("https://example.org/real", 0.6), confirmed=True
+    )
 
 
 async def test_find_alternative_requires_web_link() -> None:
@@ -493,3 +540,24 @@ async def test_find_alternative_flags_transient_candidate_checks() -> None:
 
     assert outcome.alternative is None
     assert outcome.transient is True
+
+
+async def test_a_rejected_preferred_url_is_not_hidden_by_a_failed_search() -> None:
+    finder, _, _ = make_finder(
+        [
+            '{"is_match": false, "reasoning": "category index"}',
+            "not json",
+            "not json",
+        ]
+    )
+    checker = FakeChecker(
+        {"https://hub.example/list": live("https://hub.example/list")}
+    )
+
+    outcome = await finder.find_alternative(
+        entry(),
+        checker=checker,
+        preferred=Alternative("https://hub.example/list", 0.9),
+    )
+
+    assert outcome == DiscoveryOutcome()

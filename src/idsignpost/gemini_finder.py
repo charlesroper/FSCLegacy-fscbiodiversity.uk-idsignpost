@@ -61,6 +61,16 @@ class DiscoveryOutcome:
 
     alternative: Alternative | None = None
     transient: bool = False
+    confirmed: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class _Attempt:
+    """Outcome of checking one candidate URL."""
+
+    alternative: Alternative | None = None
+    transient: bool = False
+    confirmed: bool = False
 
 
 class Checker(Protocol):
@@ -303,52 +313,75 @@ class GeminiFinder:
         return None
 
     async def find_alternative(
-        self, entry: CatalogEntry, *, checker: Checker
+        self,
+        entry: CatalogEntry,
+        *,
+        checker: Checker,
+        preferred: Alternative | None = None,
     ) -> DiscoveryOutcome:
-        """Return the first verified live candidate at or above the threshold."""
+        """Return the first verified candidate, trying a known one first."""
         if not entry.web_link:
             return DiscoveryOutcome()
-        candidates = await self.discover(entry)
-        if candidates is None:
-            return DiscoveryOutcome(transient=True)
 
         transient = False
+        rejected = False
+        if preferred is not None:
+            candidate = Candidate(
+                preferred.url, preferred.probability, preferred.reasoning
+            )
+            attempt = await self._try_candidate(entry, candidate, checker)
+            transient = transient or attempt.transient
+            rejected = attempt.alternative is None and not attempt.transient
+            if attempt.alternative is not None:
+                return DiscoveryOutcome(
+                    alternative=attempt.alternative, confirmed=attempt.confirmed
+                )
+
+        candidates = await self.discover(entry)
+        if candidates is None:
+            return DiscoveryOutcome(transient=not rejected)
+
         for candidate in candidates:
             if candidate.probability < self.min_probability:
                 continue
-            if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
-                continue
-            if is_unusable_alternative(candidate.url):
-                continue
-            cleaned = cache_key(candidate.url)
-            if urlsplit(cleaned).path in {"", "/"}:
-                continue
-            if urls_equal(cleaned, entry.web_link):
-                continue
-            if not is_public_http_url(cleaned, **self._resolver_kwargs()):
-                continue
-            result = await checker.check(cleaned, entry_title=entry.title)
-            if not result.cacheable:
-                transient = True
-                continue
-            if result.state != "ok" or result.is_suspicious_redirect:
-                continue
-            match = await self.confirm_alternative(
-                entry,
-                url=result.resolved_url or cleaned,
-                page_title=result.page_title,
-                page_h1=result.page_h1,
-            )
-            if match is False:
-                continue
-            return DiscoveryOutcome(
-                alternative=Alternative(
-                    url=result.resolved_url or cleaned,
-                    probability=candidate.probability,
-                    reasoning=candidate.reasoning,
+            attempt = await self._try_candidate(entry, candidate, checker)
+            transient = transient or attempt.transient
+            if attempt.alternative is not None:
+                return DiscoveryOutcome(
+                    alternative=attempt.alternative, confirmed=attempt.confirmed
                 )
-            )
         return DiscoveryOutcome(transient=transient)
+
+    async def _try_candidate(
+        self, entry: CatalogEntry, candidate: Candidate, checker: Checker
+    ) -> _Attempt:
+        """Apply policy, liveness, and confirmation to one candidate."""
+        if urlsplit(candidate.url).scheme.lower() not in {"http", "https"}:
+            return _Attempt()
+        if is_unusable_alternative(candidate.url):
+            return _Attempt()
+        cleaned = cache_key(candidate.url)
+        if urlsplit(cleaned).path in {"", "/"}:
+            return _Attempt()
+        if urls_equal(cleaned, entry.web_link or ""):
+            return _Attempt()
+        if not is_public_http_url(cleaned, **self._resolver_kwargs()):
+            return _Attempt()
+        result = await checker.check(cleaned, entry_title=entry.title)
+        if not result.cacheable:
+            return _Attempt(transient=True)
+        if result.state != "ok" or result.is_suspicious_redirect:
+            return _Attempt()
+        url = result.resolved_url or cleaned
+        match = await self.confirm_alternative(
+            entry, url=url, page_title=result.page_title, page_h1=result.page_h1
+        )
+        if match is False:
+            return _Attempt()
+        return _Attempt(
+            alternative=Alternative(url, candidate.probability, candidate.reasoning),
+            confirmed=bool(match),
+        )
 
     def _resolver_kwargs(self) -> dict[str, Any]:
         return {"resolver": self._resolver} if self._resolver is not None else {}
