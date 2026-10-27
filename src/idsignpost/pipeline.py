@@ -16,23 +16,17 @@ from idsignpost.gemini_finder import (
     is_unusable_alternative,
 )
 from idsignpost.http_checker import CheckResult
-from idsignpost.models import CatalogEntry, LinkState, ensure_unique_ids
+from idsignpost.models import (
+    VERIFICATION_FIELDS,
+    CatalogEntry,
+    LinkState,
+    ensure_unique_ids,
+)
 from idsignpost.urls import cache_key
 
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
 SHARED_ALTERNATIVE_LIMIT = 3
-VERIFICATION_FIELDS = (
-    "web_link_status",
-    "web_link_state",
-    "web_link_resolved",
-    "wayback_link",
-    "alternative_link",
-    "alternative_probability",
-    "alternative_reasoning",
-    "alternative_note",
-    "verified_at",
-)
 
 
 class OfflineRunError(RuntimeError):
@@ -380,6 +374,7 @@ class Verifier:
                 if outcome.transient:
                     discovery_transient = True
                     alternative = previous
+                    note = entry.alternative_note
                 else:
                     alternative = outcome.alternative
                     alternative_confirmed = outcome.confirmed

@@ -12,6 +12,18 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 LinkState = Literal["ok", "broken", "blocked"]
 
+VERIFICATION_FIELDS = (
+    "web_link_status",
+    "web_link_state",
+    "web_link_resolved",
+    "wayback_link",
+    "alternative_link",
+    "alternative_probability",
+    "alternative_reasoning",
+    "alternative_note",
+    "verified_at",
+)
+
 CANONICAL_STATUS_ERRORS = frozenset(
     {
         "connect_error",

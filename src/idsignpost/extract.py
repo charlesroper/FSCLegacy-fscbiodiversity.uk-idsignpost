@@ -12,21 +12,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup, NavigableString, Tag
 from markdownify import markdownify
 
-from idsignpost.models import CatalogEntry, ensure_unique_ids
+from idsignpost.models import VERIFICATION_FIELDS, CatalogEntry, ensure_unique_ids
 from idsignpost.urls import sanitize_url
 
 FIELD_PREFIX = "field-name-"
-
-VERIFICATION_FIELDS = (
-    "web_link_status",
-    "web_link_state",
-    "web_link_resolved",
-    "wayback_link",
-    "alternative_link",
-    "alternative_probability",
-    "alternative_reasoning",
-    "verified_at",
-)
 
 _SUBMITTED = re.compile(
     r"^Submitted by\s+(?P<name>.+?)\s+on\s+"

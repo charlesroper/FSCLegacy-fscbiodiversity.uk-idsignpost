@@ -613,3 +613,27 @@ async def test_negative_search_note_is_stored(tmp_path: object) -> None:
     record = verifier.cache.get_entry("guide", URL)
     assert record is not None
     assert record.alternative_note == note
+
+
+async def test_transient_discovery_preserves_existing_note(tmp_path: object) -> None:
+    existing = entry(
+        web_link_state="broken",
+        web_link_status="404",
+        alternative_link="https://publisher.example/guide",
+        alternative_probability=0.8,
+        alternative_reasoning="Official guide.",
+        alternative_note="confirmed: official product page",
+        verified_at="2026-01-01T00:00:00+00:00",
+    )
+    finder = FakeFinder(
+        discoveries={"guide": DiscoveryOutcome(transient=True, note="search failed")}
+    )
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+
+    updated = (await verifier.verify([existing]))[0]
+
+    assert updated.alternative_link == "https://publisher.example/guide"
+    assert updated.alternative_note == "confirmed: official product page"
+    assert updated.verified_at == "2026-01-01T00:00:00+00:00"
+    assert verifier.cache.get_entry("guide", URL) is None

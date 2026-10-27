@@ -144,6 +144,10 @@ def make_verified(web_link: str | None = "https://example.org/a") -> CatalogEntr
             "web_link_state": "ok",
             "web_link_resolved": "https://example.org/b",
             "wayback_link": "https://web.archive.org/web/2020/https://example.org/a",
+            "alternative_link": "https://example.org/alt",
+            "alternative_probability": 0.85,
+            "alternative_reasoning": "Moved to new host.",
+            "alternative_note": "confirmed: official guide page",
             "verified_at": "2026-01-01T00:00:00+00:00",
         }
     )
@@ -158,6 +162,10 @@ def test_merge_verification_preserves_unchanged_link() -> None:
     assert merged.web_link_status == "200"
     assert merged.web_link_state == "ok"
     assert merged.wayback_link == old.wayback_link
+    assert merged.alternative_link == "https://example.org/alt"
+    assert merged.alternative_probability == 0.85
+    assert merged.alternative_reasoning == "Moved to new host."
+    assert merged.alternative_note == "confirmed: official guide page"
     assert merged.verified_at == "2026-01-01T00:00:00+00:00"
 
 
@@ -170,6 +178,8 @@ def test_merge_verification_clears_when_link_changes() -> None:
     assert merged.web_link_status is None
     assert merged.web_link_state is None
     assert merged.wayback_link is None
+    assert merged.alternative_link is None
+    assert merged.alternative_note is None
     assert merged.verified_at is None
 
 
