@@ -261,3 +261,16 @@ The pipeline now uses confirmed alternative links as a Wayback fallback:
 4. If an alternative is later dropped because it was shared across three or more entries, `wayback_link` resets to whatever snapshot the original link had.
 
 Running `idsignpost run --save-archive` exercises this path alongside the existing verification checks. Network retries and transport failures at `archive.org` gracefully fall back to keeping existing cache records without failing the pipeline run.
+
+---
+
+## 16. Unified documentation and install context
+
+Documentation was previously split across two files: `README.md` contained the developer CLI and verification mechanics, while `EXPLAINER.md` contained the natural history backstory, the format breakdown, and guide usage instructions.
+
+This split created duplication and forced readers to toggle between files to understand both the catalog contents and the tooling. The explainer content has now been folded directly into `README.md`:
+
+1. **Mission and context:** The document leads with the Field Studies Council background, the link rot problem, and the preservation mission.
+2. **Format guide and usage:** Readers see the format comparison table (`idsignpost.csv`, `.md`, `.json`, `.parquet`) and practical filtering instructions upfront.
+3. **Installation clarity:** The install section now details prerequisites (Python 3.12+ and `uv`), provides cross-platform install commands for `uv`, and explicitly distinguishes offline tasks (parsing, exporting, testing) from online link verification requiring `GEMINI_API_KEY`.
+4. **Single source of truth:** `EXPLAINER.md` is removed, leaving `README.md` as the unified project documentation.

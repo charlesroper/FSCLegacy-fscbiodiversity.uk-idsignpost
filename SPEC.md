@@ -46,8 +46,7 @@ idsignpost/
 ├── AGENTS.md                    # Agent engineering and prose rules
 ├── SPEC.md                      # This technical specification
 ├── NARRATIVE.md                 # Running engineering journal
-├── README.md                    # Technical documentation
-├── EXPLAINER.md                 # Layperson guide to the catalog
+├── README.md                    # Project documentation and guide
 ├── idsignpost/                  # Raw scraped legacy HTML files (input source)
 ├── idsignpost.json              # Canonical structured catalog (generated & enriched)
 ├── idsignpost.csv               # Tabular export for spreadsheets (generated)
