@@ -38,3 +38,9 @@ Instructions and standards for agents working on this repository.
 - **No em-dashes in commits:** Use commas, colons, parentheses, or periods instead of em-dashes in commit subjects and bodies.
 - **Pre-commit quality gate:** Before committing, ensure the working tree passes `uv run ruff check --fix .`, `uv run ruff format .`, `uv run ty check`, and `uv run pytest`.
 - **Atomic milestones:** Keep commits focused on a single logical change. Do not squash unrelated stages into monolithic commits.
+
+## Planning and plan lifecycle
+
+- **Active plans:** Use `PLAN.md` at the repository root exclusively for active, multi-stage tasks. Keep checkboxes and stage resolutions updated as work proceeds.
+- **Archiving completed plans:** When a plan is complete, do not leave it at the repository root. Archive it to `plans/archive/YYYY-MM-DD-<slug>.md` with metadata (title, date, status, commit range, narrative sections), record an entry in `plans/README.md`, and delete the root `PLAN.md`.
+- **Preserving context:** Summarize the architectural reasons and milestone outcomes in `NARRATIVE.md` and update `SPEC.md` if schemas or behaviors changed.

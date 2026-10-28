@@ -47,6 +47,7 @@ idsignpost/
 ├── SPEC.md                      # This technical specification
 ├── NARRATIVE.md                 # Running engineering journal
 ├── README.md                    # Project documentation and guide
+├── plans/                       # Milestone blueprints and archive
 ├── idsignpost/                  # Raw scraped legacy HTML files (input source)
 ├── idsignpost.json              # Canonical structured catalog (generated & enriched)
 ├── idsignpost.csv               # Tabular export for spreadsheets (generated)

@@ -234,3 +234,4 @@ uv run pytest -m live
 
 - [`SPEC.md`](SPEC.md): Full technical specification covering pipeline architecture, Pydantic schemas, and caching rules.
 - [`NARRATIVE.md`](NARRATIVE.md): Engineering journal documenting design choices, milestones, and implementation history.
+- [`plans/`](plans/README.md): Archive of staged execution blueprints and milestone plans.

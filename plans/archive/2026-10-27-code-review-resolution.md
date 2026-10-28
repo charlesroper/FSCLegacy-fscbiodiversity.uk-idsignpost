@@ -1,6 +1,14 @@
+---
+title: Staged Resolution Plan for Code Review Findings
+date: 2026-10-27
+status: completed
+commit_range: 791f554..e9a0323
+narrative_section: "14, 15"
+---
+
 # Staged Resolution Plan for Code Review Findings
 
-This document records the five-stage plan used to resolve all findings from the Standards and Spec code review of `origin/main...HEAD`.
+This document records the staged plan used to resolve findings from the Standards and Spec code review of `origin/main...HEAD`.
 
 ## Stage 1: Preserve `alternative_note` on Extract and Verify
 

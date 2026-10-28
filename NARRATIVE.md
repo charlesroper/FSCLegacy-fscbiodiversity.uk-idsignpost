@@ -274,3 +274,4 @@ This split created duplication and forced readers to toggle between files to und
 2. **Format guide and usage:** Readers see the format comparison table (`idsignpost.csv`, `.md`, `.json`, `.parquet`) and practical filtering instructions upfront.
 3. **Installation clarity:** The install section now details prerequisites (Python 3.12+ and `uv`), provides cross-platform install commands for `uv`, and explicitly distinguishes offline tasks (parsing, exporting, testing) from online link verification requiring `GEMINI_API_KEY`.
 4. **Single source of truth:** `EXPLAINER.md` is removed, leaving `README.md` as the unified project documentation.
+5. **Plan archiving:** Completed execution blueprints move from root `PLAN.md` into `plans/archive/` with metadata headers and an index in `plans/README.md`, preserving milestone context without cluttering root context for future agents.
