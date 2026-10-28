@@ -110,6 +110,12 @@ flowchart LR
    # macOS via Homebrew
    brew install uv
 
+   # Windows via winget
+   winget install --id=astral-sh.uv
+
+   # Windows via Scoop
+   scoop install uv
+
    # Windows via PowerShell
    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
