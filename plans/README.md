@@ -20,3 +20,4 @@ To keep the workspace clean and avoid confusing agents with stale task lists:
 | Plan | Date | Status | Commits | Summary |
 |---|---|---|---|---|
 | [Code Review Resolution](archive/2026-10-27-code-review-resolution.md) | 2026-10-27 | Completed | `791f554..e9a0323` | Fix candidate redirect validation, deduplicate verification fields, remove scripts, add Wayback fallback |
+| [Gemini Model Optimisation and Cost Tracking](archive/2026-10-29-gemini-model-optimisation-and-cost-tracking.md) | 2026-10-29 | Completed | Pending | Scope search grounding to discovery, split models, add session cost tracking and on-demand cost command |

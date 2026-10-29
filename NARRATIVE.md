@@ -275,3 +275,15 @@ This split created duplication and forced readers to toggle between files to und
 3. **Installation clarity:** The install section now details prerequisites (Python 3.12+ and `uv`), provides cross-platform install commands for `uv`, and explicitly distinguishes offline tasks (parsing, exporting, testing) from online link verification requiring `GEMINI_API_KEY`.
 4. **Single source of truth:** `EXPLAINER.md` is removed, leaving `README.md` as the unified project documentation.
 5. **Plan archiving:** Completed execution blueprints move from root `PLAN.md` into `plans/archive/` with metadata headers and an index in `plans/README.md`, preserving milestone context without cluttering root context for future agents.
+
+---
+
+## 17. Gemini model optimisation and session cost tracking
+
+Auditing the verification pipeline revealed why using Gemini 3.1 Flash Lite had proven surprisingly expensive during full runs:
+
+1. **Google Search grounding tool leak:** In `gemini_finder.py`, `types.Tool(google_search=types.GoogleSearch())` was attached unconditionally to every call. While input and output tokens on Flash Lite cost only fractions of a cent ($0.25 and $1.50 per million tokens), Google Search grounding charges $14.00 per 1,000 queries ($35.00 on Gemini 2.5). Every redirect check and candidate confirmation was triggering web search queries for pages already fetched over HTTP.
+2. **Scoping search tools to discovery:** Google Search grounding is now enabled strictly during broken-link candidate discovery (`discover`). Redirect verification and candidate confirmation evaluate catalog metadata against fetched page titles, headings, and body snippets without search tools, incurring only minimal token costs.
+3. **Model specialisation:** The pipeline supports separate `--verification-model` and `--discovery-model` options, both defaulting to `gemini-3.1-flash-lite`, with `--model` setting both when supplied. A new `--max-searches` ceiling caps Google Search queries per run to prevent unexpected costs.
+4. **Local session cost tracking:** A dedicated cost module (`src/idsignpost/cost.py`) calculates token and search costs from response metadata. Verification runs print an itemised cost breakdown categorised by operation type (redirect checks, discoveries, confirmations) alongside the running session total.
+5. **Local storage and on-demand inspection:** Session records persist in `.idsignpost_costs.json` (gitignored), auto-expiring after 24 hours of inactivity. The `idsignpost cost` command displays an aligned terminal table of run line items, supporting `--reset` to clear session history and `--json` for programmatic export.

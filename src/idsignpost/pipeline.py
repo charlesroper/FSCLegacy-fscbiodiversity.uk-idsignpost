@@ -52,6 +52,7 @@ class Finder(Protocol):
         resolved_url: str | None,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None = None,
     ) -> RedirectVerdict | None: ...
 
     async def find_alternative(
@@ -88,6 +89,7 @@ class VerifyStats:
     alternatives: int = 0
     wayback_captures: int = 0
     states: dict[str, int] = field(default_factory=dict)
+    cost_summary: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -460,6 +462,7 @@ class Verifier:
                 resolved_url=resolved,
                 page_title=facts.result.page_title,
                 page_h1=facts.result.page_h1,
+                page_snippet=facts.result.page_snippet,
             )
 
     async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:

@@ -179,11 +179,15 @@ class GeminiFinder:
     def __init__(
         self,
         *,
-        model: str = DEFAULT_MODEL,
+        model: str | None = None,
+        verification_model: str = DEFAULT_MODEL,
+        discovery_model: str = DEFAULT_MODEL,
         api_key: str | None = None,
         client: Any = None,
         timeout: float = DEFAULT_TIMEOUT,
         min_probability: float = DEFAULT_MIN_PROBABILITY,
+        max_searches: int | None = None,
+        tracker: Any | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
         resolver: Callable[..., Any] | None = None,
     ) -> None:
@@ -194,38 +198,92 @@ class GeminiFinder:
 
             client = genai.Client(api_key=api_key)
         self._client = client
-        self.model = model
+        if model is not None:
+            verification_model = model
+            discovery_model = model
+        self.model = verification_model
+        self.verification_model = verification_model
+        self.discovery_model = discovery_model
         self.timeout = timeout
         self.min_probability = min_probability
+        self.max_searches = max_searches
+        self.total_searches = 0
+        self.tracker = tracker
         self._sleep = sleep
         self._resolver = resolver
 
-    async def _generate(self, prompt: str, *, json_mode: bool) -> str | None:
+    async def _generate(
+        self,
+        prompt: str,
+        *,
+        model: str,
+        operation: str,
+        json_mode: bool,
+        search: bool = False,
+    ) -> str | None:
         for attempt in range(MAX_ATTEMPTS):
             try:
                 response = await asyncio.wait_for(
                     self._client.aio.models.generate_content(
-                        model=self.model,
+                        model=model,
                         contents=prompt,
-                        config=self._config(json_mode),
+                        config=self._config(json_mode, search=search),
                     ),
                     timeout=self.timeout,
                 )
-                return response.text or ""
+                self._record_usage(
+                    response, model=model, operation=operation, search=search
+                )
+                return getattr(response, "text", "") or ""
             except Exception as exc:
                 if not _retryable(exc) or attempt == MAX_ATTEMPTS - 1:
                     return None
                 await self._sleep(BACKOFF[attempt])
         return None
 
+    def _record_usage(
+        self,
+        response: Any,
+        *,
+        model: str,
+        operation: str,
+        search: bool,
+    ) -> None:
+        usage = getattr(response, "usage_metadata", None)
+        prompt_tokens = getattr(usage, "prompt_token_count", 0) or 0
+        output_tokens = getattr(usage, "candidates_token_count", 0) or 0
+        cached_tokens = getattr(usage, "cached_content_token_count", 0) or 0
+
+        search_queries = 0
+        if search:
+            candidates = getattr(response, "candidates", None)
+            if candidates and len(candidates) > 0:
+                first = candidates[0]
+                grounding = getattr(first, "grounding_metadata", None)
+                web_queries = getattr(grounding, "web_search_queries", None)
+                if web_queries and isinstance(web_queries, list):
+                    search_queries = len(web_queries)
+            self.total_searches += search_queries
+
+        if self.tracker is not None:
+            self.tracker.record_call(
+                operation=operation,
+                model=model,
+                prompt_tokens=prompt_tokens,
+                output_tokens=output_tokens,
+                cached_tokens=cached_tokens,
+                search_queries=search_queries,
+            )
+
     @staticmethod
-    def _config(json_mode: bool) -> Any:
+    def _config(json_mode: bool, search: bool = False) -> Any:
         from google.genai import types
 
         options: dict[str, Any] = {
             "temperature": 0.2,
-            "tools": [types.Tool(google_search=types.GoogleSearch())],
         }
+        if search:
+            options["tools"] = [types.Tool(google_search=types.GoogleSearch())]
         if json_mode:
             options["response_mime_type"] = "application/json"
         return types.GenerateContentConfig(**options)
@@ -240,6 +298,7 @@ class GeminiFinder:
         resolved_url: str | None,
         page_title: str | None,
         page_h1: str | None,
+        page_snippet: str | None = None,
     ) -> RedirectVerdict | None:
         """Decide whether a suspicious redirect still hosts the guide."""
         prompt = (
@@ -252,9 +311,16 @@ class GeminiFinder:
             f"Final link: {resolved_url or web_link}\n"
             f"Final page title: {page_title or 'unknown'}\n"
             f"Final page heading: {page_h1 or 'unknown'}\n"
-            'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
+            + (f"Final page snippet: {page_snippet}\n" if page_snippet else "")
+            + 'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
         )
-        text = await self._generate(prompt, json_mode=True)
+        text = await self._generate(
+            prompt,
+            model=self.verification_model,
+            operation="redirect_verification",
+            json_mode=True,
+            search=False,
+        )
         return parse_redirect_verdict(text) if text is not None else None
 
     async def confirm_alternative(
@@ -280,7 +346,13 @@ class GeminiFinder:
             f"Page text: {page_snippet or 'unknown'}\n"
             'Reply as JSON: {"is_match": true or false, "reasoning": "one sentence"}.'
         )
-        text = await self._generate(prompt, json_mode=True)
+        text = await self._generate(
+            prompt,
+            model=self.verification_model,
+            operation="candidate_confirmation",
+            json_mode=True,
+            search=False,
+        )
         return parse_redirect_verdict(text) if text is not None else None
 
     async def discover(
@@ -288,6 +360,8 @@ class GeminiFinder:
     ) -> list[Candidate] | None:
         """Ask for up to three ranked replacement URLs for a broken link."""
         if not entry.web_link:
+            return None
+        if self.max_searches is not None and self.total_searches >= self.max_searches:
             return None
         prompt = (
             "Find the exact page that hosts or offers this identification guide. "
@@ -310,7 +384,18 @@ class GeminiFinder:
             "Use a probability between 0 and 1 for each candidate."
         )
         for attempt in range(2):
-            text = await self._generate(prompt, json_mode=True)
+            if (
+                self.max_searches is not None
+                and self.total_searches >= self.max_searches
+            ):
+                return None
+            text = await self._generate(
+                prompt,
+                model=self.discovery_model,
+                operation="candidate_discovery",
+                json_mode=True,
+                search=True,
+            )
             if text is None:
                 return None
             candidates = parse_candidates(text)

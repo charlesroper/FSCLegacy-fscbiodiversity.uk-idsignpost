@@ -27,6 +27,7 @@ env/
 idsignpost.md.bak
 *.bak
 .url_cache.json
+.idsignpost_costs.json
 /test_sample*
 
 

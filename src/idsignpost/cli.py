@@ -11,6 +11,7 @@ from pathlib import Path
 
 from idsignpost import __version__
 from idsignpost.cache import CatalogCache
+from idsignpost.cost import SessionCostTracker
 from idsignpost.export import (
     catalog_json,
     write_csv,
@@ -36,6 +37,7 @@ COMMANDS = {
     "verify": "Check links, archives, and alternatives.",
     "export": "Render CSV, Parquet, and Markdown.",
     "run": "Extract, verify, and export in one pass.",
+    "cost": "Inspect local session costs and run history.",
 }
 
 
@@ -87,6 +89,19 @@ def _cmd_export(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_cost(args: argparse.Namespace) -> int:
+    tracker = SessionCostTracker.load(args.cost_file)
+    if args.reset:
+        tracker.reset()
+        print("idsignpost cost: session history reset", file=sys.stderr)
+        return 0
+    if args.json:
+        print(tracker.to_json())
+        return 0
+    print(tracker.format_session_table())
+    return 0
+
+
 def _usage_error(args: argparse.Namespace) -> str | None:
     if args.sample is not None and args.limit is not None:
         return "--sample and --limit are mutually exclusive"
@@ -107,6 +122,8 @@ def _usage_error(args: argparse.Namespace) -> str | None:
         return "--timeout must be positive"
     if args.cache_ttl_days < 0:
         return "--cache-ttl-days must not be negative"
+    if getattr(args, "max_searches", None) is not None and args.max_searches < 0:
+        return "--max-searches must not be negative"
     return None
 
 
@@ -131,10 +148,18 @@ async def _verify_async(
 ) -> tuple[list[CatalogEntry], VerifyStats]:
     checker = HTTPChecker(timeout=args.timeout)
     wayback = WaybackClient(timeout=args.timeout, concurrency=args.wayback_concurrency)
+    cost_file = getattr(args, "cost_file", ".idsignpost_costs.json")
+    tracker = SessionCostTracker.load(cost_file)
+    v_model = getattr(args, "verification_model", None) or args.model
+    d_model = getattr(args, "discovery_model", None) or args.model
+    max_searches = getattr(args, "max_searches", None)
     finder = GeminiFinder(
-        model=args.model,
+        verification_model=v_model,
+        discovery_model=d_model,
         api_key=os.environ.get("GEMINI_API_KEY"),
         min_probability=args.min_prob,
+        max_searches=max_searches,
+        tracker=tracker,
     )
     cache = CatalogCache.load(args.cache_file, ttl_days=args.cache_ttl_days)
     verifier = Verifier(
@@ -156,6 +181,8 @@ async def _verify_async(
         await checker.aclose()
         await wayback.aclose()
     cache.save()
+    run_record = tracker.finish_run(command=args.command)
+    verifier.stats.cost_summary = tracker.format_run_summary(run_record)
     return updated, verifier.stats
 
 
@@ -177,6 +204,8 @@ def _print_summary(stats: VerifyStats) -> None:
         f"{stats.wayback_captures} captures, {stats.cache_hits} cache hits",
         file=sys.stderr,
     )
+    if stats.cost_summary:
+        print(stats.cost_summary, file=sys.stderr)
 
 
 def _verify_entries(
@@ -256,6 +285,7 @@ def _add_verify_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--output", default="idsignpost.json")
     parser.add_argument("--cache-file", default=".url_cache.json")
     parser.add_argument("--cache-ttl-days", type=int, default=30)
+    parser.add_argument("--cost-file", default=".idsignpost_costs.json")
     parser.add_argument("--sample", type=int)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--limit", type=int)
@@ -268,6 +298,19 @@ def _add_verify_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--timeout", type=float, default=10.0)
     parser.add_argument("--min-prob", type=float, default=0.40)
     parser.add_argument("--model", default="gemini-3.1-flash-lite")
+    parser.add_argument(
+        "--verification-model",
+        help="Gemini model for redirect and confirmation checks (default: matches --model).",
+    )
+    parser.add_argument(
+        "--discovery-model",
+        help="Gemini model for grounded candidate discovery (default: matches --model).",
+    )
+    parser.add_argument(
+        "--max-searches",
+        type=int,
+        help="Maximum Google Search grounding queries allowed across the run.",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
 
 
@@ -326,10 +369,50 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--parquet", default="idsignpost.parquet")
     run_parser.add_argument("--md", default="idsignpost.md")
     run_parser.set_defaults(handler=_cmd_run)
+
+    cost_parser = subparsers.add_parser(
+        "cost", help=COMMANDS["cost"], description=COMMANDS["cost"]
+    )
+    cost_parser.add_argument(
+        "--cost-file",
+        default=".idsignpost_costs.json",
+        help="Local cost tracking file path (default: .idsignpost_costs.json).",
+    )
+    cost_parser.add_argument(
+        "--reset",
+        action="store_true",
+        help="Reset running session costs and start a fresh session.",
+    )
+    cost_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Output session history in machine-readable JSON format.",
+    )
+    cost_parser.set_defaults(handler=_cmd_cost)
     return parser
 
 
+def _load_env_file() -> None:
+    env_path = Path(".env")
+    if not env_path.is_file():
+        return
+    try:
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            cleaned = line.strip()
+            if not cleaned or cleaned.startswith("#") or "=" not in cleaned:
+                continue
+            key, val = cleaned.split("=", 1)
+            key = key.strip()
+            val = val.strip().strip("'\"")
+            if key and key not in os.environ:
+                os.environ[key] = val
+    except OSError:
+        pass
+
+
 def main(argv: list[str] | None = None) -> int:
+    if "PYTEST_CURRENT_TEST" not in os.environ:
+        _load_env_file()
     args = build_parser().parse_args(argv)
     if getattr(args, "verbose", False):
         logging.basicConfig(level=logging.DEBUG)

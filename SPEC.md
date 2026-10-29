@@ -60,7 +60,8 @@ idsignpost/
 │       ├── urls.py              # RFC 3986 sanitization, tracking-param stripping, host normalization
 │       ├── extract.py           # Direct HTML -> CatalogEntry parser (replaces extract_idsignpost & md_to_json)
 │       ├── http_checker.py      # Async HTTP liveness, redirect analysis, and HTML <title>/<h1> extraction
-│       ├── gemini_finder.py     # Gemini 3.1 Flash Lite client with Google Search grounding
+│       ├── gemini_finder.py     # Gemini client for redirect checks, discovery, and confirmations
+│       ├── cost.py              # Local session cost tracking and pricing table
 │       ├── wayback.py           # Wayback Availability API lookup and Save Page Now capture
 │       ├── cache.py             # Two-tier atomic JSON cache (URL-level and entry-level)
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
@@ -74,6 +75,7 @@ idsignpost/
     ├── test_extract.py
     ├── test_http_checker.py
     ├── test_gemini_finder.py
+    ├── test_cost.py
     ├── test_wayback.py
     ├── test_cache.py
     ├── test_sampler.py
@@ -212,14 +214,16 @@ flowchart TD
 - Transient results (`cacheable = False`) do not overwrite existing `web_link_state`, `web_link_status`, `web_link_resolved`, or `wayback_link` on entries that already have a `web_link_state`. On an unverified entry (`web_link_state is None`), record the provisional `web_link_state`, `web_link_status`, and `web_link_resolved` (plus `wayback_link` if found) without setting `verified_at` or writing to the cache. Transient entries are retried on the next run.
 
 #### Step 2b: Gemini Redirect Verification (`gemini_finder.py`)
-- When a live link has `is_suspicious_redirect == True`, pass the entry metadata (`title`, `authors`, `description`), `web_link`, `web_link_resolved`, and extracted page `<title>` / `<h1>` to `gemini-3.1-flash-lite`.
+- When a live link has `is_suspicious_redirect == True`, pass the entry metadata (`title`, `authors`, `description`), `web_link`, `web_link_resolved`, and extracted page `<title>`, `<h1>`, and body snippet to `verification_model` (default: `gemini-3.1-flash-lite`).
+- Google Search grounding is disabled for redirect verification. The check evaluates the fetched destination text directly, incurring token-only costs.
 - If Gemini confirms the page still hosts or offers the guide, keep `web_link_state = "ok"`.
 - If Gemini determines the redirect landed on an unrelated page or generic homepage, set `web_link_state = "broken"` and `web_link_status = "redirect_mismatch"`, then proceed to alternative discovery.
 - Cache the verdict in the entry-tier cache. If Gemini fails transiently, keep the previous state and retry on the next run.
 
 #### Step 2c: Grounded Alternative Discovery (`gemini_finder.py`)
 - Executed **only** when `web_link_state == "broken"`.
-- Query `gemini-3.1-flash-lite` via `google-genai` with Google Search grounding enabled (`tools=[types.Tool(google_search=types.GoogleSearch())]`) under `gemini_concurrency` (default `3`).
+- Query `discovery_model` (default: `gemini-3.1-flash-lite`) via `google-genai` with Google Search grounding enabled (`tools=[types.Tool(google_search=types.GoogleSearch())]`) under `gemini_concurrency` (default `3`).
+- Bound search queries across the run with `--max-searches` to prevent unexpected grounding charges. When the limit is reached, discovery skips further search queries.
 - Prompt with `title`, `authors`, `description`, `available_as`, `keywords`, and the broken `web_link`, requesting up to 3 ranked candidates (`url`, `probability`, `reasoning`). `discover` also accepts an optional `hint` URL naming a rejected index page so targeted passes can request the specific guide page inside that index.
 - Use a 30 second request timeout and retry 429/5xx up to 3 times with backoff. Request JSON output, parse tolerantly, retry once on malformed JSON, then return no candidates.
 - Filter and verify candidates in rank order:
@@ -229,7 +233,7 @@ flowchart TD
   4. Strip tracking parameters and fragments.
   5. Reject direct image files and site root candidates (empty path or `/`). A linked image or homepage returns 200, so the redirect heuristics never see it as suspicious.
   6. Run `HTTPChecker.check` on the candidate URL; require `state == "ok"` and not a suspicious homepage redirect.
-  7. Ask the model to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title, first heading, and up to 800 characters of leading page text. The text matters when the title is generic, as on database and literature pages. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
+  7. Ask `verification_model` (without Google Search grounding) to confirm the page offers this guide, passing the entry fields, the resolved URL, and the page title, first heading, and up to 800 characters of leading page text. The text matters when the title is generic, as on database and literature pages. Reject a different publication, a category or index page, and an error page such as `Service Unavailable`. A failed confirmation request does not reject a live candidate.
   8. Store the final resolved URL as `alternative_link`, not the pre-redirect candidate.
   9. Pick the first confirmed candidate in rank order with `probability >= min_probability` (default `0.40`).
   10. Record a note for the outcome: `confirmed: <reasoning>` for an accepted page, or the first three `rejected:`, `ignored:`, and `dropped:` reasons for a failed search. Store it in `alternative_note`.
@@ -352,7 +356,11 @@ uv run idsignpost verify [OPTIONS]
   --gemini-concurrency INT    Concurrent Gemini workers (default: 3)
   --timeout FLOAT             HTTP and Wayback timeout in seconds (default: 10.0; Save Page Now uses 60.0)
   --min-prob FLOAT            Minimum alternative confidence score (default: 0.40, range 0.0 to 1.0)
-  --model NAME                Gemini model (default: gemini-3.1-flash-lite)
+  --model NAME                Default Gemini model (default: gemini-3.1-flash-lite)
+  --verification-model NAME   Gemini model for redirect and confirmation checks (default: matches --model)
+  --discovery-model NAME      Gemini model for candidate discovery (default: matches --model)
+  --max-searches INT          Maximum Google Search grounding queries allowed across the run
+  --cost-file PATH            Cost tracking file path (default: .idsignpost_costs.json)
   -v, --verbose               Enable debug logging
 
 # 3. Export canonical idsignpost.json to CSV, Parquet, and Markdown
@@ -360,6 +368,9 @@ uv run idsignpost export [--input idsignpost.json] [--csv idsignpost.csv] [--par
 
 # 4. Run full pipeline (extract -> verify -> export)
 uv run idsignpost run [VERIFY_OPTIONS]
+
+# 5. Inspect local session costs and run history
+uv run idsignpost cost [--cost-file .idsignpost_costs.json] [--reset] [--json]
 ```
 
 `GEMINI_API_KEY` is required for `verify` and `run`. Fail fast at startup with a clear message if it is missing. Never log the key.

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import socket
+from pathlib import Path
 from typing import Any
 
 import pytest
@@ -52,7 +53,7 @@ class FakeModels:
 
 
 class FakeAio:
-    def __init__(self, models: FakeModels) -> None:
+    def __init__(self, models: Any) -> None:
         self.models = models
 
 
@@ -628,3 +629,144 @@ async def test_find_alternative_rejects_redirect_to_blocked_host() -> None:
 
     assert outcome.alternative is None
     assert outcome.note == "ignored: blocked host or image file"
+
+
+async def test_distinct_models_and_search_tool_scoping() -> None:
+    client = FakeClient(
+        [
+            '{"is_match": true, "reasoning": "matched"}',
+            '{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
+            '{"is_match": true, "reasoning": "confirmed"}',
+        ]
+    )
+    finder = GeminiFinder(
+        client=client,
+        verification_model="gemini-3.1-flash-lite",
+        discovery_model="gemini-3.8-flash",
+        resolver=public_resolver,
+    )
+
+    # 1. verify_redirect: should use verification_model and have no search tools
+    await finder.verify_redirect(
+        title="Bats in flight",
+        authors="NHM",
+        description="Bat guide",
+        web_link="https://example.org/old",
+        resolved_url="https://example.org/new",
+        page_title="Bats in flight",
+        page_h1="Bats in flight",
+        page_snippet="Comprehensive guide to bats in flight.",
+    )
+    call1 = client.models.calls[0]
+    assert call1["model"] == "gemini-3.1-flash-lite"
+    assert getattr(call1["config"], "tools", None) is None
+    assert "Comprehensive guide to bats in flight." in call1["contents"]
+
+    # 2. discover: should use discovery_model and attach Google Search tool
+    await finder.discover(entry())
+    call2 = client.models.calls[1]
+    assert call2["model"] == "gemini-3.8-flash"
+    assert call2["config"].tools is not None
+    assert len(call2["config"].tools) == 1
+
+    # 3. confirm_alternative: should use verification_model and have no search tools
+    await finder.confirm_alternative(
+        entry(),
+        url="https://example.org/found",
+        page_title="Bats in flight",
+        page_h1="Bats in flight",
+    )
+    call3 = client.models.calls[2]
+    assert call3["model"] == "gemini-3.1-flash-lite"
+    assert getattr(call3["config"], "tools", None) is None
+
+
+async def test_max_searches_ceiling_stops_discovery() -> None:
+    class FakeGroundingMetadata:
+        web_search_queries = ["query 1", "query 2"]
+
+    class FakeCandidate:
+        grounding_metadata = FakeGroundingMetadata()
+
+    class SearchResponse:
+        text = (
+            '{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}'
+        )
+        usage_metadata = None
+        candidates = [FakeCandidate()]
+
+    class SearchModels:
+        def __init__(self) -> None:
+            self.calls: list[dict[str, Any]] = []
+
+        async def generate_content(self, **kwargs: Any) -> SearchResponse:
+            self.calls.append(kwargs)
+            return SearchResponse()
+
+    class SearchClient:
+        def __init__(self) -> None:
+            self.models = SearchModels()
+            self.aio = FakeAio(self.models)
+
+    client = SearchClient()
+    finder = GeminiFinder(
+        client=client,
+        max_searches=2,
+        resolver=public_resolver,
+    )
+
+    # First discover executes 2 searches, hitting the limit
+    candidates1 = await finder.discover(entry())
+    assert candidates1 is not None
+    assert finder.total_searches == 2
+
+    # Second discover aborts early because max_searches is reached
+    candidates2 = await finder.discover(entry())
+    assert candidates2 is None
+    assert len(client.models.calls) == 1
+
+
+async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
+    from idsignpost.cost import SessionCostTracker
+
+    class FakeUsage:
+        prompt_token_count = 120
+        candidates_token_count = 30
+        cached_content_token_count = 20
+
+    class UsageResponse:
+        text = '{"is_match": true, "reasoning": "matched"}'
+        usage_metadata = FakeUsage()
+        candidates = None
+
+    class UsageModels:
+        async def generate_content(self, **kwargs: Any) -> UsageResponse:
+            return UsageResponse()
+
+    class UsageClient:
+        def __init__(self) -> None:
+            self.aio = FakeAio(UsageModels())
+
+    tracker = SessionCostTracker(path=tmp_path / "costs.json")
+    finder = GeminiFinder(
+        client=UsageClient(),
+        tracker=tracker,
+        resolver=public_resolver,
+    )
+
+    await finder.verify_redirect(
+        title="Bats",
+        authors="NHM",
+        description="Bats",
+        web_link="https://example.org/old",
+        resolved_url="https://example.org/new",
+        page_title="Bats",
+        page_h1="Bats",
+    )
+
+    run = tracker.finish_run(command="test")
+    assert run.calls == 1
+    assert run.prompt_tokens == 120
+    assert run.output_tokens == 30
+    assert run.cached_tokens == 20
+    assert "redirect_verification" in run.by_operation

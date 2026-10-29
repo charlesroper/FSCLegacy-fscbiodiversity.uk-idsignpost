@@ -137,7 +137,7 @@ def test_verify_requires_the_api_key(
     catalog = tmp_path / "idsignpost.json"
     write_catalog(catalog, [make_entry("a")])
 
-    assert main(["verify", "--input", str(catalog)]) == 1
+    assert main(["verify", "--input", str(catalog), "--output", str(catalog)]) == 1
     assert "GEMINI_API_KEY" in capsys.readouterr().err
 
 
@@ -267,7 +267,7 @@ def test_verify_rejects_a_legacy_catalog(
     catalog = tmp_path / "idsignpost.json"
     catalog.write_text(json.dumps([{"title": "legacy"}]), encoding="utf-8")
 
-    assert main(["verify", "--input", str(catalog)]) == 1
+    assert main(["verify", "--input", str(catalog), "--output", str(catalog)]) == 1
     assert "cannot load" in capsys.readouterr().err
 
 
@@ -353,3 +353,117 @@ def test_run_replaces_a_legacy_catalog(
         "flickr-split",
         "full-entry",
     ]
+
+
+def test_cost_command_empty(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    cost_file = tmp_path / "costs.json"
+    assert main(["cost", "--cost-file", str(cost_file)]) == 0
+    assert "No recorded runs in the current session." in capsys.readouterr().out
+
+
+def test_cost_command_with_runs_and_json(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    from idsignpost.cost import SessionCostTracker
+
+    cost_file = tmp_path / "costs.json"
+    tracker = SessionCostTracker(path=cost_file)
+    tracker.record_call(
+        operation="candidate_discovery",
+        model="gemini-3.1-flash-lite",
+        prompt_tokens=800,
+        output_tokens=150,
+        search_queries=1,
+    )
+    tracker.finish_run(command="verify")
+
+    # Aligned table output
+    assert main(["cost", "--cost-file", str(cost_file)]) == 0
+    table_out = capsys.readouterr().out
+    assert "Session started:" in table_out
+    assert "verify" in table_out
+
+    # JSON export output
+    assert main(["cost", "--cost-file", str(cost_file), "--json"]) == 0
+    json_out = capsys.readouterr().out
+    data = json.loads(json_out)
+    assert data["version"] == 1
+    assert len(data["runs"]) == 1
+    assert data["runs"][0]["command"] == "verify"
+
+
+def test_cost_command_reset(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    from idsignpost.cost import SessionCostTracker
+
+    cost_file = tmp_path / "costs.json"
+    tracker = SessionCostTracker(path=cost_file)
+    tracker.record_call(
+        operation="redirect_verification",
+        model="gemini-3.1-flash-lite",
+        prompt_tokens=400,
+        output_tokens=40,
+    )
+    tracker.finish_run(command="verify")
+
+    assert main(["cost", "--cost-file", str(cost_file), "--reset"]) == 0
+    assert "session history reset" in capsys.readouterr().err
+
+    # Table is now empty
+    assert main(["cost", "--cost-file", str(cost_file)]) == 0
+    assert "No recorded runs in the current session." in capsys.readouterr().out
+
+
+def test_verify_max_searches_negative_returns_two(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    catalog = tmp_path / "idsignpost.json"
+    write_catalog(catalog, [make_entry("a")])
+
+    assert (
+        main(
+            [
+                "verify",
+                "--input",
+                str(catalog),
+                "--output",
+                str(catalog),
+                "--cost-file",
+                str(tmp_path / "costs.json"),
+                "--max-searches",
+                "-1",
+            ]
+        )
+        == 2
+    )
+    assert "--max-searches must not be negative" in capsys.readouterr().err
+
+
+def test_verify_model_arguments_accepted(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    catalog = tmp_path / "idsignpost.json"
+    write_catalog(catalog, [make_entry("a")])
+    fake_verification(monkeypatch)
+
+    assert (
+        main(
+            [
+                "verify",
+                "--input",
+                str(catalog),
+                "--output",
+                str(catalog),
+                "--cost-file",
+                str(tmp_path / "costs.json"),
+                "--verification-model",
+                "gemini-3.1-flash-lite",
+                "--discovery-model",
+                "gemini-3.8-flash",
+                "--max-searches",
+                "10",
+            ]
+        )
+        == 0
+    )
