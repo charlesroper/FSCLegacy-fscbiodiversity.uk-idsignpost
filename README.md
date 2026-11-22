@@ -4,7 +4,7 @@
 [![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
 [![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pytest](https://img.shields.io/badge/tests-265%20passed-0A9EDC.svg)](https://docs.pytest.org/)
+[![pytest](https://img.shields.io/badge/tests-357%20passed-0A9EDC.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#what-is-inside-the-catalogue)
@@ -38,7 +38,7 @@ The catalogue contains **736 entries**. Each entry describes an identification r
 - **Web link and status:** the original web link, along with its health status:
   - `ok`: the link works and responds directly.
   - `broken`: the link is confirmed dead (such as a 404 Not Found error).
-  - `blocked`: unverified link (the server blocked automated checks or answered with a temporary error).
+  - `blocked`: unverified link (the server blocked automated checks or answered with a temporary error). Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) relabel this state as `unverified`, while `idsignpost.json` keeps `blocked`.
 - **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. Over 660 entries (more than 91%) include a working snapshot.
 - **Alternative link and score:** for confirmed broken links, a working replacement found by searching publisher and museum archives, paired with a confidence score between 0.0 and 1.0.
 - **Alternative note:** the reason the replacement was accepted or rejected. Accepted pages carry a confirmation sentence from the model, and failed searches record why each candidate was dropped.
@@ -59,20 +59,20 @@ The catalogue is generated from canonical records in `idsignpost.json` and expor
 #### Browse in a spreadsheet
 1. Open `idsignpost.csv` in Excel or Google Sheets.
 2. Turn on filters (**Data** → **Filter**).
-3. Filter the **Keywords** or **Title** column by the group you are studying (for example, "spiders", "lichens", or "grasses").
-4. Filter **Free** to show only free resources.
-5. Click the URL in the **Web link** column to open the resource.
+3. Filter the `keywords` or `title` column by the group you are studying (for example, "spiders", "lichens" or "grasses").
+4. Filter `is_free` to `True` to show only free resources.
+5. Click the URL in the `web_link` column to open the resource.
 
 #### Open archived copies
-If a link in **Web link** does not open or shows an error:
-1. Check the **Wayback link** column.
+If a link in `web_link` does not open or fails:
+1. Check the `wayback_link` column.
 2. Click the link to open an archived snapshot from the Internet Archive.
 
 #### Use suggested alternatives
-If a link has a `broken` state in **Web link state**:
-1. Look at the **Alternative link** column.
-2. Check the **Alternative probability** score. A score above 0.6 indicates a strong match where titles, author names, and reputable domains align.
-3. Click the alternative link to view the relocated guide or modern publisher listing.
+If `web_link_state` shows `broken`:
+1. Look at the `alternative_link` column.
+2. Check the `alternative_probability` score (accepted links meet the `0.40` default minimum, and higher scores indicate stronger matches).
+3. Click the URL in `alternative_link` to view the relocated guide or modern publisher listing.
 
 ## How the update pipeline works
 
@@ -128,8 +128,8 @@ flowchart LR
 Clone the repository and run `uv sync` to set up the local virtual environment:
 
 ```bash
-git clone https://github.com/your-username/idsignpost.git
-cd idsignpost
+git clone https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost.git
+cd FSCLegacy-fscbiodiversity.uk-idsignpost
 uv sync
 ```
 
@@ -137,14 +137,16 @@ uv sync
 
 ### API key configuration
 
-The verification pipeline uses Google Gemini (`gemini-3.1-flash-lite` with Google Search grounding) to inspect ambiguous redirects and discover working replacements for dead links.
+The verification pipeline uses Google Gemini (`gemini-3.1-flash-lite` with Grounded Search) to inspect ambiguous redirects and find replacements for broken links.
 
-- **Offline tasks:** Parsing HTML (`extract`), rendering outputs (`export`), inspecting datasets, and running the test suite work completely offline without an API key.
-- **Online verification:** If you run `verify` or `run`, get an API key from [Google AI Studio](https://ai.google.dev/) and set it in your environment:
+- **Offline tasks:** Extracting HTML (`extract`), rendering exports (`export`), inspecting cost history (`cost`) and running tests (`pytest`) work offline without an API key.
+- **Online verification:** To run `verify` or `run`, obtain an API key from [Google AI Studio](https://ai.google.dev/) and set `GEMINI_API_KEY` in your shell or in a local `.env` file:
 
 ```bash
 export GEMINI_API_KEY="your-api-key-here"
 ```
+
+On startup (outside `pytest`), `idsignpost` reads `.env` from the working directory automatically. The loader ignores blank lines and `#` comments, strips optional `export ` prefixes and leaves existing environment variables unchanged. It also parses single-quoted or double-quoted values and strips inline `#` comments from unquoted values.
 
 ## Quick start
 
@@ -188,21 +190,44 @@ uv run idsignpost verify --only-broken
 Additional options:
 
 - `--refresh`: ignores the cache and rechecks the selected entries.
-- `--save-archive`: asks the Wayback Machine to capture live pages that lack a snapshot (using two workers and a 60 second timeout).
-- `--min-prob 0.6`: sets the confidence threshold required before accepting an AI-discovered replacement link.
-- `--model`, `--concurrency`, `--wayback-concurrency`, and `--gemini-concurrency`: tune client models and network concurrency limits.
+- `--save-archive`: asks the Wayback Machine to capture live pages that lack a snapshot (using two workers and a 60-second timeout).
+- `--min-prob 0.40`: sets the minimum probability threshold for discovered Candidate URLs (default: `0.40`, range `0.0` to `1.0`).
+- `--model`, `--verification-model` and `--discovery-model`: set the default Gemini model (`gemini-3.1-flash-lite`) or assign separate models to verification checks and Grounded Search discovery.
+- `--max-searches`: caps Google Search grounding queries across a run to limit search charges.
+- `--cost-file`: sets the local session cost ledger path (default: `.idsignpost_costs.json`).
+- `--concurrency`, `--wayback-concurrency` and `--gemini-concurrency`: tune HTTP, Wayback and Gemini worker limits.
+
+## Inspecting Gemini costs
+
+`verify` and `run` log token counts and Grounded Search queries to `.idsignpost_costs.json` (gitignored; rolls over after 24 hours of inactivity) and print an itemised cost breakdown when a run finishes.
+
+Inspect or clear the local session ledger with `idsignpost cost`:
+
+```bash
+# Show an aligned table of runs and the session total
+uv run idsignpost cost
+
+# Output session history as JSON
+uv run idsignpost cost --json
+
+# Clear the current session and start fresh
+uv run idsignpost cost --reset
+
+# Inspect or reset a custom ledger path
+uv run idsignpost cost --cost-file path/to/costs.json
+```
 
 ## How verification decides
 
 Each entry with a `web_link` passes through five stages:
 
-1. **HTTP status check:** An HTTP GET classifies the link as `ok`, `broken`, or `blocked`. `blocked` means unverified: the server refused the request or returned a temporary network error.
-2. **Redirect inspection:** A suspicious redirect (host change, collapse to site root, soft-404 page, or login wall) is evaluated by Gemini. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
-3. **Alternative discovery:** For broken links, the pipeline queries Gemini with Google Search grounding for up to three ranked replacements. Candidates are filtered against known dead hosts, private network addresses, the original URL, and live reachability before an alternative is accepted.
+1. **HTTP status check:** An HTTP GET classifies the link as `ok`, `broken` or `blocked`. `blocked` means unverified (exported as `unverified` in CSV, Parquet and Markdown): the server refused the request or answered with a temporary error.
+2. **Redirect and soft-404 inspection:** A suspicious redirect (host change, collapse to site root, soft-404 page or login wall) or a non-redirecting `200 OK` page with a soft-404 title or heading is evaluated by Gemini. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
+3. **Alternative discovery:** For broken links, the pipeline queries Gemini with Grounded Search for up to three ranked Candidate URLs. The verifier filters Candidates against blocked hosts, image extensions, site homepages, the broken URL and private IP addresses before and after redirects, checks live reachability and asks Gemini to confirm the destination page.
 4. **Wayback preservation:** The pipeline queries the Wayback Machine for a snapshot. If a broken link has no historical snapshot, the pipeline checks the confirmed replacement link and captures it via Save Page Now when `--save-archive` is active.
 5. **State cleanup:** When the final link state is not `broken`, any obsolete alternative fields are cleared.
 
-Temporary failures never overwrite good results. A network timeout or server error (5xx) preserves the previous state for retry on a subsequent run and is not stored in the cache.
+Temporary failures never overwrite good results. A network timeout, server error (`429` or `5xx`) or model timeout preserves the previous state for retry on the next run and is omitted from the cache. Pressing `Ctrl+C` during a run flushes `.url_cache.json` and exits with status `130`.
 
 ## Two-tier cache
 
