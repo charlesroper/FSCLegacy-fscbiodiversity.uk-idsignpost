@@ -27,14 +27,7 @@ Instructions and standards for agents working on this repository.
 
 ## Git workflow and commit conventions
 
-- **Commit style:** Follow Chris Beams' seven rules for all commit messages:
-  1. Separate subject from body with a blank line.
-  2. Limit the subject line to 50 characters (72 is the hard ceiling).
-  3. Capitalize the subject line.
-  4. Do not end the subject line with a period.
-  5. Use the imperative mood in the subject line (e.g. "Add", "Fix", "Refactor", "Implement").
-  6. Wrap the body at 72 characters.
-  7. Use the body to explain what and why instead of how.
+- **Commit policy:** For every commit, read and follow `/root/.config/agent/commit-policy.md`.
 - **No em-dashes in commits:** Use commas, colons, parentheses, or periods instead of em-dashes in commit subjects and bodies.
 - **Pre-commit quality gate:** Before committing, ensure the working tree passes `uv run ruff check --fix .`, `uv run ruff format .`, `uv run ty check`, and `uv run pytest`.
 - **Atomic milestones:** Keep commits focused on a single logical change. Do not squash unrelated stages into monolithic commits.
@@ -44,3 +37,37 @@ Instructions and standards for agents working on this repository.
 - **Active plans:** Use `PLAN.md` at the repository root exclusively for active, multi-stage tasks. Keep checkboxes and stage resolutions updated as work proceeds.
 - **Archiving completed plans:** When a plan is complete, do not leave it at the repository root. Archive it to `plans/archive/YYYY-MM-DD-<slug>.md` with metadata (title, date, status, commit range, narrative sections), record an entry in `plans/README.md`, and delete the root `PLAN.md`.
 - **Preserving context:** Summarize the architectural reasons and milestone outcomes in `NARRATIVE.md` and update `SPEC.md` if schemas or behaviors changed.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues on `charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost` via `gh`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default canonical triage labels (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context (`GLOSSARY.md` and `docs/adr/` at repo root). See `docs/agents/domain.md`.
+
+## Writing framework
+
+Two-stage Editorial Pipeline for authored documentation, copy and commit messages:
+
+### Stage 1: Drafting
+
+Route drafting to the active specialist skill based on Surface and Reader Job:
+- `on-writing-well`: Human-centred prose, conceptual overviews, developer guides, README introductions, web content design and interface microcopy.
+- `ste-80`: Operational software documentation, runbooks, deployment procedures, CLI flag and command specifications, API guides and troubleshooting steps.
+- `project-narrative`: Evidence-linked project narrative and historical milestone posts (`NARRATIVE.md`).
+- `cbeams-git-commit-messages`: Git commit subject lines and bodies.
+
+### Stage 2: Sub-Editor Gate
+
+Run all drafted prose, documentation and copy through `guardian-style-guide` before delivery (commit messages are exempt):
+- Enforce British English spelling (`-ise`, `-our`), down-style capitalisation and Guardian house style.
+- Validate typography and punctuation: double quotation marks for speech, straight quotes in Markdown, zero unspaced em-dashes. Spaced en-dashes (` - ` or commas/colons/parentheses per repository rules) are permitted for parenthetical pauses.
+- Run trope check against AI writing cliches and brochure adjectives.
+- Preserve authorial voice, structural design and verbatim quotations.
