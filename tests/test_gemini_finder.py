@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import socket
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -13,6 +14,7 @@ from idsignpost.gemini_finder import (
     Candidate,
     DiscoveryOutcome,
     GeminiFinder,
+    GenerationResult,
     RedirectVerdict,
     is_blocked_host,
     parse_candidates,
@@ -34,33 +36,36 @@ ENTRY_DATA: dict[str, Any] = {
 BROKEN_URL = ENTRY_DATA["web_link"]
 
 
-class FakeResponse:
-    def __init__(self, text: str | None) -> None:
-        self.text = text
+@dataclass(frozen=True, slots=True)
+class RecordedCall:
+    prompt: str
+    model: str
+    json_mode: bool
+    search: bool
 
 
-class FakeModels:
-    def __init__(self, script: list[Any]) -> None:
-        self.script = script
-        self.calls: list[dict[str, Any]] = []
+class FakeGenerator:
+    def __init__(self, script: list[str | GenerationResult | BaseException]) -> None:
+        self.script = list(script)
+        self.calls: list[RecordedCall] = []
 
-    async def generate_content(self, **kwargs: Any) -> FakeResponse:
-        self.calls.append(kwargs)
+    async def generate(
+        self, prompt: str, *, model: str, json_mode: bool, search: bool
+    ) -> GenerationResult:
+        self.calls.append(
+            RecordedCall(
+                prompt=prompt,
+                model=model,
+                json_mode=json_mode,
+                search=search,
+            )
+        )
         item = self.script.pop(0)
         if isinstance(item, BaseException):
             raise item
-        return FakeResponse(item)
-
-
-class FakeAio:
-    def __init__(self, models: Any) -> None:
-        self.models = models
-
-
-class FakeClient:
-    def __init__(self, script: list[Any]) -> None:
-        self.models = FakeModels(script)
-        self.aio = FakeAio(self.models)
+        if isinstance(item, GenerationResult):
+            return item
+        return GenerationResult(text=item)
 
 
 class FakeChecker:
@@ -78,24 +83,24 @@ def public_resolver(host: str, port: Any) -> list[tuple[Any, ...]]:
 
 
 def make_finder(
-    script: list[Any],
+    script: list[str | GenerationResult | BaseException],
     *,
     min_probability: float = 0.4,
     sleep: Any = None,
-) -> tuple[GeminiFinder, FakeClient, list[float]]:
-    client = FakeClient(script)
+) -> tuple[GeminiFinder, FakeGenerator, list[float]]:
+    generator = FakeGenerator(script)
     sleeps: list[float] = []
 
     async def fake_sleep(seconds: float) -> None:
         sleeps.append(seconds)
 
     finder = GeminiFinder(
-        client=client,
+        generator=generator,
         min_probability=min_probability,
         sleep=sleep or fake_sleep,
         resolver=public_resolver,
     )
-    return finder, client, sleeps
+    return finder, generator, sleeps
 
 
 def entry() -> CatalogEntry:
@@ -148,7 +153,7 @@ def test_parse_redirect_verdict_rejects_missing_flag() -> None:
 
 
 async def test_verify_redirect_returns_verdict() -> None:
-    finder, client, _ = make_finder(
+    finder, generator, _ = make_finder(
         ['{"is_match": false, "reasoning": "Generic homepage."}']
     )
 
@@ -163,8 +168,8 @@ async def test_verify_redirect_returns_verdict() -> None:
     )
 
     assert verdict == RedirectVerdict(False, "Generic homepage.")
-    assert client.models.calls[0]["model"] == "gemini-3.1-flash-lite"
-    assert "Bats in flight" in client.models.calls[0]["contents"]
+    assert generator.calls[0].model == "gemini-3.1-flash-lite"
+    assert "Bats in flight" in generator.calls[0].prompt
 
 
 async def test_verify_redirect_returns_none_on_transient_failure() -> None:
@@ -185,26 +190,38 @@ async def test_verify_redirect_returns_none_on_transient_failure() -> None:
 
 async def test_generate_retries_on_429_with_backoff() -> None:
     error = RuntimeError("429 rate limited")
-    finder, client, sleeps = make_finder([error, '{"candidates": []}'])
+    finder, generator, sleeps = make_finder([error, '{"candidates": []}'])
 
     candidates = await finder.discover(entry())
 
     assert candidates == []
-    assert len(client.models.calls) == 2
+    assert len(generator.calls) == 2
+    assert sleeps == [1.0]
+
+
+async def test_generate_retries_on_timeout_with_backoff() -> None:
+    finder, generator, sleeps = make_finder(
+        [TimeoutError("request timed out"), '{"candidates": []}']
+    )
+
+    candidates = await finder.discover(entry())
+
+    assert candidates == []
+    assert len(generator.calls) == 2
     assert sleeps == [1.0]
 
 
 async def test_generate_gives_up_after_four_attempts() -> None:
     error = RuntimeError("503 unavailable")
-    finder, client, sleeps = make_finder([error] * 5)
+    finder, generator, sleeps = make_finder([error] * 5)
 
     assert await finder.discover(entry()) is None
-    assert len(client.models.calls) == 4
+    assert len(generator.calls) == 4
     assert sleeps == [1.0, 2.0, 4.0]
 
 
 async def test_discover_retries_once_on_malformed_json() -> None:
-    finder, client, _ = make_finder(
+    finder, generator, _ = make_finder(
         [
             "not json",
             '{"candidates": [{"url": "https://a.example", "probability": 0.7}]}',
@@ -214,7 +231,7 @@ async def test_discover_retries_once_on_malformed_json() -> None:
     candidates = await finder.discover(entry())
 
     assert candidates == [Candidate("https://a.example", 0.7)]
-    assert len(client.models.calls) == 2
+    assert len(generator.calls) == 2
 
 
 async def test_discover_returns_none_after_repeated_malformed_json() -> None:
@@ -224,13 +241,33 @@ async def test_discover_returns_none_after_repeated_malformed_json() -> None:
 
 
 async def test_discover_prompt_asks_for_the_exact_page() -> None:
-    finder, client, _ = make_finder(['{"candidates": []}'])
+    finder, generator, _ = make_finder(['{"candidates": []}'])
 
     await finder.discover(entry())
 
-    contents = client.models.calls[0]["contents"]
-    assert "exact page" in contents
-    assert "homepage" in contents
+    prompt = generator.calls[0].prompt
+    assert "exact page" in prompt
+    assert "homepage" in prompt
+
+
+async def test_discover_filters_candidates_below_min_probability() -> None:
+    finder, _, _ = make_finder(
+        [
+            '{"candidates": ['
+            '{"url": "https://strong.example/guide", "probability": 0.8},'
+            '{"url": "https://borderline.example/guide", "probability": 0.4},'
+            '{"url": "https://weak.example/guide", "probability": 0.39}'
+            "]}"
+        ],
+        min_probability=0.4,
+    )
+
+    candidates = await finder.discover(entry())
+
+    assert candidates == [
+        Candidate("https://strong.example/guide", 0.8),
+        Candidate("https://borderline.example/guide", 0.4),
+    ]
 
 
 @pytest.mark.parametrize(
@@ -336,7 +373,9 @@ async def test_find_alternative_rejects_a_page_for_a_different_book() -> None:
 
 
 async def test_find_alternative_tries_the_preferred_url_first() -> None:
-    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same guide"}'])
+    finder, generator, _ = make_finder(
+        ['{"is_match": true, "reasoning": "same guide"}']
+    )
     checker = FakeChecker(
         {"https://known.example/guide": live("https://known.example/guide")}
     )
@@ -352,7 +391,7 @@ async def test_find_alternative_tries_the_preferred_url_first() -> None:
         confirmed=True,
         note="confirmed: same guide",
     )
-    assert len(client.models.calls) == 1
+    assert len(generator.calls) == 1
 
 
 async def test_find_alternative_falls_back_when_preferred_is_rejected() -> None:
@@ -398,7 +437,7 @@ async def test_find_alternative_keeps_a_live_candidate_when_confirmation_fails()
 
 
 async def test_confirmation_prompt_includes_the_page_metadata() -> None:
-    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
+    finder, generator, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
 
     await finder.confirm_alternative(
         entry(),
@@ -407,10 +446,10 @@ async def test_confirmation_prompt_includes_the_page_metadata() -> None:
         page_h1="Bat guide",
     )
 
-    contents = client.models.calls[0]["contents"]
-    assert "https://shop.example/guide" in contents
-    assert "Bats in flight" in contents
-    assert "Bat guide" in contents
+    prompt = generator.calls[0].prompt
+    assert "https://shop.example/guide" in prompt
+    assert "Bats in flight" in prompt
+    assert "Bat guide" in prompt
 
 
 @pytest.mark.parametrize(
@@ -572,7 +611,7 @@ async def test_a_rejected_preferred_url_is_not_hidden_by_a_failed_search() -> No
 
 
 async def test_confirmation_prompt_includes_page_text() -> None:
-    finder, client, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
+    finder, generator, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
 
     await finder.confirm_alternative(
         entry(),
@@ -582,17 +621,17 @@ async def test_confirmation_prompt_includes_page_text() -> None:
         page_snippet="Renk, H. (1984). Calorific values of plankton.",
     )
 
-    contents = client.models.calls[0]["contents"]
-    assert "Calorific values of plankton" in contents
+    prompt = generator.calls[0].prompt
+    assert "Calorific values of plankton" in prompt
 
 
 async def test_discover_hint_names_the_rejected_index() -> None:
-    finder, client, _ = make_finder(['{"candidates": []}'])
+    finder, generator, _ = make_finder(['{"candidates": []}'])
 
     await finder.discover(entry(), hint="https://example.org/keys/")
 
-    contents = client.models.calls[0]["contents"]
-    assert "https://example.org/keys/ is an index" in contents
+    prompt = generator.calls[0].prompt
+    assert "https://example.org/keys/ is an index" in prompt
 
 
 async def test_find_alternative_rejects_redirect_to_private_address() -> None:
@@ -632,7 +671,7 @@ async def test_find_alternative_rejects_redirect_to_blocked_host() -> None:
 
 
 async def test_distinct_models_and_search_tool_scoping() -> None:
-    client = FakeClient(
+    generator = FakeGenerator(
         [
             '{"is_match": true, "reasoning": "matched"}',
             '{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
@@ -640,13 +679,13 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
         ]
     )
     finder = GeminiFinder(
-        client=client,
+        generator=generator,
         verification_model="gemini-3.1-flash-lite",
         discovery_model="gemini-3.8-flash",
         resolver=public_resolver,
     )
 
-    # 1. verify_redirect: should use verification_model and have no search tools
+    # 1. verify_redirect: should use verification_model and disable search
     await finder.verify_redirect(
         title="Bats in flight",
         authors="NHM",
@@ -657,60 +696,43 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
         page_h1="Bats in flight",
         page_snippet="Comprehensive guide to bats in flight.",
     )
-    call1 = client.models.calls[0]
-    assert call1["model"] == "gemini-3.1-flash-lite"
-    assert getattr(call1["config"], "tools", None) is None
-    assert "Comprehensive guide to bats in flight." in call1["contents"]
+    call1 = generator.calls[0]
+    assert call1.model == "gemini-3.1-flash-lite"
+    assert call1.search is False
+    assert call1.json_mode is True
+    assert "Comprehensive guide to bats in flight." in call1.prompt
 
-    # 2. discover: should use discovery_model and attach Google Search tool
+    # 2. discover: should use discovery_model and enable search
     await finder.discover(entry())
-    call2 = client.models.calls[1]
-    assert call2["model"] == "gemini-3.8-flash"
-    assert call2["config"].tools is not None
-    assert len(call2["config"].tools) == 1
+    call2 = generator.calls[1]
+    assert call2.model == "gemini-3.8-flash"
+    assert call2.search is True
+    assert call2.json_mode is True
 
-    # 3. confirm_alternative: should use verification_model and have no search tools
+    # 3. confirm_alternative: should use verification_model and disable search
     await finder.confirm_alternative(
         entry(),
         url="https://example.org/found",
         page_title="Bats in flight",
         page_h1="Bats in flight",
     )
-    call3 = client.models.calls[2]
-    assert call3["model"] == "gemini-3.1-flash-lite"
-    assert getattr(call3["config"], "tools", None) is None
+    call3 = generator.calls[2]
+    assert call3.model == "gemini-3.1-flash-lite"
+    assert call3.search is False
+    assert call3.json_mode is True
 
 
 async def test_max_searches_ceiling_stops_discovery() -> None:
-    class FakeGroundingMetadata:
-        web_search_queries = ["query 1", "query 2"]
-
-    class FakeCandidate:
-        grounding_metadata = FakeGroundingMetadata()
-
-    class SearchResponse:
-        text = (
-            '{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}'
-        )
-        usage_metadata = None
-        candidates = [FakeCandidate()]
-
-    class SearchModels:
-        def __init__(self) -> None:
-            self.calls: list[dict[str, Any]] = []
-
-        async def generate_content(self, **kwargs: Any) -> SearchResponse:
-            self.calls.append(kwargs)
-            return SearchResponse()
-
-    class SearchClient:
-        def __init__(self) -> None:
-            self.models = SearchModels()
-            self.aio = FakeAio(self.models)
-
-    client = SearchClient()
+    generator = FakeGenerator(
+        [
+            GenerationResult(
+                text='{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
+                search_queries=2,
+            )
+        ]
+    )
     finder = GeminiFinder(
-        client=client,
+        generator=generator,
         max_searches=2,
         resolver=public_resolver,
     )
@@ -723,33 +745,32 @@ async def test_max_searches_ceiling_stops_discovery() -> None:
     # Second discover aborts early because max_searches is reached
     candidates2 = await finder.discover(entry())
     assert candidates2 is None
-    assert len(client.models.calls) == 1
+    assert len(generator.calls) == 1
 
 
 async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
     from idsignpost.cost import SessionCostTracker
 
-    class FakeUsage:
-        prompt_token_count = 120
-        candidates_token_count = 30
-        cached_content_token_count = 20
-
-    class UsageResponse:
-        text = '{"is_match": true, "reasoning": "matched"}'
-        usage_metadata = FakeUsage()
-        candidates = None
-
-    class UsageModels:
-        async def generate_content(self, **kwargs: Any) -> UsageResponse:
-            return UsageResponse()
-
-    class UsageClient:
-        def __init__(self) -> None:
-            self.aio = FakeAio(UsageModels())
-
+    generator = FakeGenerator(
+        [
+            GenerationResult(
+                text='{"is_match": true, "reasoning": "matched"}',
+                prompt_tokens=120,
+                output_tokens=30,
+                cached_tokens=20,
+                search_queries=3,
+            ),
+            GenerationResult(
+                text='{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
+                prompt_tokens=200,
+                output_tokens=50,
+                search_queries=2,
+            ),
+        ]
+    )
     tracker = SessionCostTracker(path=tmp_path / "costs.json")
     finder = GeminiFinder(
-        client=UsageClient(),
+        generator=generator,
         tracker=tracker,
         resolver=public_resolver,
     )
@@ -763,10 +784,13 @@ async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
         page_title="Bats",
         page_h1="Bats",
     )
+    await finder.discover(entry())
 
     run = tracker.finish_run(command="test")
-    assert run.calls == 1
-    assert run.prompt_tokens == 120
-    assert run.output_tokens == 30
+    assert run.calls == 2
+    assert run.prompt_tokens == 320
+    assert run.output_tokens == 80
     assert run.cached_tokens == 20
+    assert run.search_queries == 2
     assert "redirect_verification" in run.by_operation
+    assert "candidate_discovery" in run.by_operation

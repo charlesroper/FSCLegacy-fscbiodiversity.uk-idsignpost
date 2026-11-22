@@ -6,14 +6,20 @@ import json
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from idsignpost.export import atomic_write
 
 DEFAULT_COST_FILE = ".idsignpost_costs.json"
 DEFAULT_SESSION_TTL_HOURS = 24.0
 
-OPERATION_LABELS: dict[str, str] = {
+GeminiOperation = Literal[
+    "redirect_verification",
+    "candidate_discovery",
+    "candidate_confirmation",
+]
+
+OPERATION_LABELS: dict[GeminiOperation, str] = {
     "redirect_verification": "Redirect checks",
     "candidate_discovery": "Discovery searches",
     "candidate_confirmation": "Confirmations",
@@ -73,7 +79,7 @@ def calculate_cost(
 class CallRecord:
     """Record of a single completed Gemini API call."""
 
-    operation: str
+    operation: GeminiOperation
     model: str
     prompt_tokens: int
     output_tokens: int
@@ -190,7 +196,7 @@ class SessionCostTracker:
     def record_call(
         self,
         *,
-        operation: str,
+        operation: GeminiOperation,
         model: str,
         prompt_tokens: int,
         output_tokens: int,
