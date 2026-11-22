@@ -4,14 +4,16 @@ from __future__ import annotations
 
 import asyncio
 from collections import Counter
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
-from typing import Protocol
+from typing import Any, Protocol
+from urllib.parse import urlsplit
 
-from idsignpost.cache import CatalogCache, EntryRecord, UrlRecord
+from idsignpost.cache import CatalogCache, EntryRecord
 from idsignpost.gemini_finder import (
-    Alternative,
-    DiscoveryOutcome,
+    Alternative as Alternative,
+    Candidate,
+    DiscoveryOutcome as DiscoveryOutcome,
     RedirectVerdict,
     is_unusable_alternative,
 )
@@ -22,7 +24,7 @@ from idsignpost.models import (
     ensure_unique_ids,
     merge_verified as merge_verified,
 )
-from idsignpost.urls import cache_key
+from idsignpost.urls import cache_key, is_public_http_url, urls_equal
 
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
@@ -55,13 +57,9 @@ class Finder(Protocol):
         page_snippet: str | None = None,
     ) -> RedirectVerdict | None: ...
 
-    async def find_alternative(
-        self,
-        entry: CatalogEntry,
-        *,
-        checker: Checker,
-        preferred: Alternative | None = None,
-    ) -> DiscoveryOutcome: ...
+    async def discover(
+        self, entry: CatalogEntry, *, hint: str | None = None
+    ) -> list[Candidate] | None: ...
 
     async def confirm_alternative(
         self,
@@ -70,7 +68,7 @@ class Finder(Protocol):
         url: str,
         page_title: str | None,
         page_h1: str | None,
-        page_snippet: str | None,
+        page_snippet: str | None = None,
     ) -> RedirectVerdict | None: ...
 
 
@@ -97,7 +95,6 @@ class _UrlFacts:
     result: CheckResult
     transient: bool
     checked: bool
-    wayback: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -110,8 +107,6 @@ class _Verdict:
     keep: bool = False
     note: str | None = None
     fresh: bool = False
-    entry_record: EntryRecord | None = None
-    write_entry: bool = False
 
 
 def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
@@ -122,6 +117,30 @@ def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
         probability=entry.alternative_probability or 0.0,
         reasoning=entry.alternative_reasoning,
     )
+
+
+def _join_notes(notes: list[str], limit: int = 3) -> str | None:
+    """Join the first few candidate notes into one cacheable line."""
+    if not notes:
+        return None
+    return "; ".join(notes[:limit])
+
+
+def _url_policy_note(url: str, broken_link: str) -> str | None:
+    """Apply pure URL policy checks without DNS or network I/O."""
+    try:
+        if urlsplit(url).scheme.lower() not in {"http", "https"}:
+            return "ignored: not an http link"
+        if is_unusable_alternative(url):
+            return "ignored: blocked host or image file"
+        cleaned = cache_key(url)
+        if urlsplit(cleaned).path in {"", "/"}:
+            return "ignored: site homepage"
+        if urls_equal(cleaned, broken_link):
+            return "ignored: same as the broken link"
+    except ValueError:
+        return "ignored: not an http link"
+    return None
 
 
 class Verifier:
@@ -138,6 +157,7 @@ class Verifier:
         gemini_concurrency: int = DEFAULT_GEMINI_CONCURRENCY,
         save_archive: bool = False,
         refresh: bool = False,
+        resolver: Callable[..., Any] | None = None,
     ) -> None:
         self.cache = cache
         self.checker = checker
@@ -145,6 +165,7 @@ class Verifier:
         self.wayback = wayback
         self.save_archive = save_archive
         self.refresh = refresh
+        self._resolver = resolver
         self.stats = VerifyStats()
         self._http = asyncio.Semaphore(concurrency)
         self._gemini = asyncio.Semaphore(gemini_concurrency)
@@ -200,6 +221,7 @@ class Verifier:
         if not shared:
             return entries
 
+        note = "dropped: URL shared by three or more entries"
         cleaned: list[CatalogEntry] = []
         for entry in entries:
             if entry.alternative_link not in shared:
@@ -213,20 +235,12 @@ class Verifier:
                     "alternative_link": None,
                     "alternative_probability": None,
                     "alternative_reasoning": None,
-                    "alternative_note": (
-                        "dropped: URL shared by three or more entries"
-                    ),
+                    "alternative_note": note,
                     "wayback_link": orig_wayback,
                 }
             )
-            record = (
-                self.cache.get_entry(entry.id, entry.web_link)
-                if entry.web_link
-                else None
-            )
-            if record is not None:
-                record.drop_alternative("dropped: URL shared by three or more entries")
-                self.cache.put_entry(entry.id, entry.web_link or "", record)
+            if entry.web_link:
+                self.cache.drop_alternative(entry.id, entry.web_link, note)
             cleaned.append(entry)
         return cleaned
 
@@ -238,40 +252,34 @@ class Verifier:
             verdicts = await asyncio.gather(
                 *(self._verdict(member, facts) for member in members)
             )
-            wayback_link = await self._wayback(url, facts, verdicts)
+            allow_primary_save = self.save_archive and any(
+                verdict.state == "ok" and not verdict.transient for verdict in verdicts
+            )
+            wayback_link = await self._resolve_wayback(
+                url, allow_save=allow_primary_save
+            )
             wayback_links = [
                 wayback_link
                 if wayback_link is not None
                 or verdict.alternative is None
                 or verdict.transient
-                else await self._alternative_wayback(verdict.alternative.url)
+                else await self._resolve_wayback(
+                    verdict.alternative.url, allow_save=self.save_archive
+                )
                 for verdict in verdicts
             ]
         return [
-            self._apply(member, verdict, facts, member_wayback)
+            self._apply(member, verdict, member_wayback)
             for member, verdict, member_wayback in zip(
                 members, verdicts, wayback_links, strict=True
             )
         ]
 
     async def _facts(self, url: str, title: str) -> _UrlFacts:
-        record = None if self.refresh else self.cache.get_url(url)
-        if record is not None and record.state is not None:
+        cached = None if self.refresh else self.cache.get_check(url)
+        if cached is not None:
             self.stats.cache_hits += 1
-            return _UrlFacts(
-                result=CheckResult(
-                    status=record.status or "",
-                    state=record.state,
-                    resolved_url=record.resolved_url,
-                    is_suspicious_redirect=record.is_suspicious_redirect,
-                    page_title=record.page_title,
-                    page_h1=record.page_h1,
-                    page_snippet=record.page_snippet,
-                ),
-                transient=False,
-                checked=False,
-                wayback=record.wayback_url,
-            )
+            return _UrlFacts(result=cached, transient=False, checked=False)
 
         result = await self.checker.check(url, entry_title=title)
         self.stats.checked += 1
@@ -279,49 +287,48 @@ class Verifier:
             raise OfflineRunError(
                 f"every check failed at the network level after {self.stats.checked} attempts"
             )
-        self.cache.put_url(
-            url,
-            UrlRecord(
-                status=result.status,
-                state=result.state,
-                resolved_url=result.resolved_url,
-                is_suspicious_redirect=result.is_suspicious_redirect,
-                page_title=result.page_title,
-                page_h1=result.page_h1,
-                page_snippet=result.page_snippet,
-                wayback_url=record.wayback_url if record else None,
-            ),
-            cacheable=result.cacheable,
-        )
+        self.cache.put_check(url, result)
         return _UrlFacts(
             result=result,
             transient=not result.cacheable,
             checked=True,
-            wayback=record.wayback_url if record else None,
         )
+
+    def _policy_note(self, url: str, broken_link: str) -> str | None:
+        note = _url_policy_note(url, broken_link)
+        if note is not None:
+            return note
+        cleaned = cache_key(url)
+        public = (
+            is_public_http_url(cleaned, resolver=self._resolver)
+            if self._resolver is not None
+            else is_public_http_url(cleaned)
+        )
+        if not public:
+            return "ignored: private address"
+        return None
 
     async def _verdict(self, entry: CatalogEntry, facts: _UrlFacts) -> _Verdict:
         result = facts.result
+        url = entry.web_link or ""
         record = (
-            None
-            if self.refresh or not entry.web_link
-            else self.cache.get_entry(entry.id, entry.web_link)
+            None if self.refresh or not url else self.cache.get_entry(entry.id, url)
         )
         previous = _alternative_fields(entry)
 
         if facts.transient:
-            if entry.web_link_state is not None:
-                return _Verdict(
-                    state=entry.web_link_state,
-                    status=entry.web_link_status,
-                    resolved_url=entry.web_link_resolved,
-                    alternative=previous,
-                    transient=True,
-                )
             return _Verdict(
-                state=result.state,
-                status=result.status,
-                resolved_url=result.resolved_url,
+                state=entry.web_link_state or result.state,
+                status=(
+                    entry.web_link_status
+                    if entry.web_link_state is not None
+                    else result.status
+                ),
+                resolved_url=(
+                    entry.web_link_resolved
+                    if entry.web_link_state is not None
+                    else result.resolved_url
+                ),
                 alternative=previous,
                 transient=True,
             )
@@ -329,19 +336,17 @@ class Verifier:
         state: LinkState | None = result.state
         status = result.status
         resolved = result.resolved_url
-        verdict: RedirectVerdict | None = None
-        verdict_cached = False
+        redirect_verdict: RedirectVerdict | None = None
         fresh = facts.checked
 
         if state == "ok" and result.is_suspicious_redirect:
             if record is not None and record.redirect_is_match is not None:
-                verdict = RedirectVerdict(
+                redirect_verdict = RedirectVerdict(
                     record.redirect_is_match, record.redirect_reason
                 )
-                verdict_cached = True
             else:
-                verdict = await self._verify_redirect(entry, facts, resolved)
-                if verdict is None:
+                redirect_verdict = await self._verify_redirect(entry, facts, resolved)
+                if redirect_verdict is None:
                     return _Verdict(
                         state=entry.web_link_state,
                         status=entry.web_link_status,
@@ -350,105 +355,147 @@ class Verifier:
                         keep=True,
                     )
                 fresh = True
-            if not verdict.is_match:
+            if not redirect_verdict.is_match:
                 state, status = "broken", "redirect_mismatch"
 
-        alternative = previous
-        alternative_confirmed = False
-        note: str | None = None
-        discovered = False
-        discovery_transient = False
-        cached_rejected = False
-        cached_confirmed = False
-        if state == "broken":
-            if record is not None and record.alternative_checked:
-                cached_url = record.alternative_url
-                if cached_url and is_unusable_alternative(cached_url):
-                    alternative = None
-                    cached_rejected = True
-                    note = "dropped: blocked host or image file"
-                elif cached_url and not record.alternative_confirmed:
-                    alternative, alternative_confirmed, note = await self._reconfirm(
-                        entry, record
-                    )
-                    cached_confirmed = alternative_confirmed
-                    cached_rejected = alternative is None
-                else:
-                    alternative = (
-                        Alternative(
-                            cached_url,
-                            record.alternative_probability or 0.0,
-                            record.alternative_reasoning,
-                        )
-                        if cached_url
-                        else None
-                    )
-                    alternative_confirmed = bool(cached_url)
-                    note = record.alternative_note
-            else:
-                discovered = True
-                outcome = await self._discover(entry)
-                if outcome.transient:
-                    discovery_transient = True
-                    alternative = previous
-                    note = entry.alternative_note
-                else:
-                    alternative = outcome.alternative
-                    alternative_confirmed = outcome.confirmed
-                    note = outcome.note
-                    fresh = True
-        else:
-            alternative = None
-
-        write_entry = discovered and not discovery_transient
-        if verdict is not None and not verdict_cached:
-            write_entry = True
-        if cached_rejected or cached_confirmed:
-            write_entry = True
-        if (
-            state != "broken"
-            and record is not None
-            and record.alternative_url is not None
-        ):
-            write_entry = True
-
-        entry_record = None
-        if write_entry:
-            entry_record = EntryRecord(
-                redirect_is_match=(
-                    verdict.is_match
-                    if verdict is not None
-                    else (record.redirect_is_match if record else None)
-                ),
-                redirect_reason=(
-                    verdict.reasoning
-                    if verdict is not None
-                    else (record.redirect_reason if record else None)
-                ),
-                alternative_url=alternative.url if alternative else None,
-                alternative_probability=(
-                    alternative.probability if alternative else None
-                ),
-                alternative_reasoning=(alternative.reasoning if alternative else None),
-                alternative_note=note,
-                alternative_checked=(
-                    (record.alternative_checked if record else False) or discovered
-                ),
-                alternative_confirmed=(
-                    alternative_confirmed if alternative is not None else False
-                ),
+        if state != "broken":
+            self._clear_recovered_entry(entry.id, url, redirect_verdict)
+            return _Verdict(
+                state=state,
+                status=status,
+                resolved_url=resolved,
+                alternative=None,
+                fresh=fresh,
             )
 
+        outcome, ran_discovery = await self._resolve_broken_alternative(
+            entry, url, record, previous
+        )
+        if outcome.transient:
+            self._store_redirect_only(entry.id, url, redirect_verdict, record)
+            return _Verdict(
+                state=state,
+                status=status,
+                resolved_url=resolved,
+                alternative=outcome.alternative,
+                note=outcome.note,
+                fresh=False,
+            )
+
+        if url:
+            self.cache.update_entry(
+                entry.id,
+                url,
+                redirect_is_match=(
+                    redirect_verdict.is_match if redirect_verdict is not None else None
+                ),
+                redirect_reason=(
+                    redirect_verdict.reasoning if redirect_verdict is not None else None
+                ),
+                alternative_url=outcome.alternative.url
+                if outcome.alternative
+                else None,
+                alternative_probability=(
+                    outcome.alternative.probability if outcome.alternative else None
+                ),
+                alternative_reasoning=(
+                    outcome.alternative.reasoning if outcome.alternative else None
+                ),
+                alternative_note=outcome.note,
+                alternative_checked=True,
+                alternative_confirmed=(
+                    outcome.confirmed if outcome.alternative is not None else False
+                ),
+            )
         return _Verdict(
             state=state,
             status=status,
             resolved_url=resolved,
-            alternative=alternative,
-            note=note,
-            fresh=fresh and not discovery_transient,
-            entry_record=entry_record,
-            write_entry=write_entry,
+            alternative=outcome.alternative,
+            note=outcome.note,
+            fresh=fresh or ran_discovery,
         )
+
+    def _clear_recovered_entry(
+        self, entry_id: str, url: str, redirect_verdict: RedirectVerdict | None
+    ) -> None:
+        if not url:
+            return
+        if redirect_verdict is not None:
+            self.cache.update_entry(
+                entry_id,
+                url,
+                redirect_is_match=redirect_verdict.is_match,
+                redirect_reason=redirect_verdict.reasoning,
+            )
+            return
+        existing = self.cache.get_entry(entry_id, url)
+        if existing is not None and existing.alternative_url is not None:
+            self.cache.update_entry(entry_id, url)
+
+    def _store_redirect_only(
+        self,
+        entry_id: str,
+        url: str,
+        redirect_verdict: RedirectVerdict | None,
+        record: EntryRecord | None,
+    ) -> None:
+        if redirect_verdict is None or not url:
+            return
+        self.cache.update_entry(
+            entry_id,
+            url,
+            redirect_is_match=redirect_verdict.is_match,
+            redirect_reason=redirect_verdict.reasoning,
+            alternative_url=record.alternative_url if record else None,
+            alternative_probability=record.alternative_probability if record else None,
+            alternative_reasoning=record.alternative_reasoning if record else None,
+            alternative_note=record.alternative_note if record else None,
+            alternative_checked=record.alternative_checked if record else False,
+            alternative_confirmed=record.alternative_confirmed if record else False,
+        )
+
+    async def _resolve_broken_alternative(
+        self,
+        entry: CatalogEntry,
+        url: str,
+        record: EntryRecord | None,
+        previous: Alternative | None,
+    ) -> tuple[DiscoveryOutcome, bool]:
+        if record is not None and record.alternative_checked:
+            cached_url = record.alternative_url
+            if not cached_url:
+                return DiscoveryOutcome(note=record.alternative_note), False
+            if record.alternative_confirmed:
+                policy_note = _url_policy_note(cached_url, url)
+                if policy_note is not None:
+                    return DiscoveryOutcome(note=policy_note), False
+                return (
+                    DiscoveryOutcome(
+                        alternative=Alternative(
+                            cached_url,
+                            record.alternative_probability or 0.0,
+                            record.alternative_reasoning,
+                        ),
+                        confirmed=True,
+                        note=record.alternative_note,
+                    ),
+                    False,
+                )
+            return await self._reconfirm(entry, record), False
+
+        outcome = await self._discover(entry)
+        if outcome.transient:
+            return (
+                DiscoveryOutcome(
+                    alternative=previous,
+                    transient=True,
+                    confirmed=False,
+                    note=entry.alternative_note or outcome.note,
+                ),
+                False,
+            )
+        return outcome, True
 
     async def _verify_redirect(
         self, entry: CatalogEntry, facts: _UrlFacts, resolved: str | None
@@ -465,50 +512,122 @@ class Verifier:
                 page_snippet=facts.result.page_snippet,
             )
 
-    async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:
-        async with self._gemini:
-            return await self.finder.find_alternative(
-                entry, checker=self.checker, preferred=_alternative_fields(entry)
+    async def _evaluate_candidate(
+        self, entry: CatalogEntry, candidate: Candidate
+    ) -> DiscoveryOutcome:
+        """Apply policy, cached HTTP liveness, and confirmation to one candidate."""
+        broken_link = entry.web_link or ""
+        policy_note = self._policy_note(candidate.url, broken_link)
+        if policy_note is not None:
+            return DiscoveryOutcome(note=policy_note)
+
+        cleaned = cache_key(candidate.url)
+        facts = await self._facts(cleaned, entry.title)
+        if facts.transient:
+            return DiscoveryOutcome(
+                transient=True, note="retry: transient check failure"
             )
+        result = facts.result
+        if result.state != "ok" or result.is_suspicious_redirect:
+            return DiscoveryOutcome(
+                note=f"rejected: link returned {result.status or result.state}"
+            )
+        if result.resolved_url:
+            redirect_note = self._policy_note(result.resolved_url, broken_link)
+            if redirect_note is not None:
+                return DiscoveryOutcome(note=redirect_note)
+
+        url = result.resolved_url or cleaned
+        verdict = await self._confirm(
+            entry,
+            url,
+            result.page_title,
+            result.page_h1,
+            result.page_snippet,
+        )
+        if verdict is not None and not verdict.is_match:
+            reason = verdict.reasoning or "page did not match the entry"
+            return DiscoveryOutcome(note=f"rejected: {reason}")
+        note = (
+            f"confirmed: {verdict.reasoning}"
+            if verdict is not None and verdict.reasoning
+            else None
+        )
+        return DiscoveryOutcome(
+            alternative=Alternative(url, candidate.probability, candidate.reasoning),
+            confirmed=verdict is not None,
+            note=note,
+        )
+
+    async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:
+        """Try any stored alternative first, then discover and evaluate candidates."""
+        if not entry.web_link:
+            return DiscoveryOutcome()
+
+        transient = False
+        rejected = False
+        notes: list[str] = []
+        preferred = _alternative_fields(entry)
+        if preferred is not None:
+            attempt = await self._evaluate_candidate(
+                entry,
+                Candidate(preferred.url, preferred.probability, preferred.reasoning),
+            )
+            transient = transient or attempt.transient
+            rejected = attempt.alternative is None and not attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
+            if attempt.alternative is not None:
+                return attempt
+
+        async with self._gemini:
+            candidates = await self.finder.discover(entry)
+        if candidates is None:
+            return DiscoveryOutcome(
+                transient=not rejected, note=_join_notes(notes) or "search failed"
+            )
+
+        for candidate in candidates:
+            attempt = await self._evaluate_candidate(entry, candidate)
+            transient = transient or attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
+            if attempt.alternative is not None:
+                return attempt
+        return DiscoveryOutcome(
+            transient=transient,
+            note=_join_notes(notes) or "no candidates returned",
+        )
 
     async def _reconfirm(
         self, entry: CatalogEntry, record: EntryRecord
-    ) -> tuple[Alternative | None, bool, str | None]:
+    ) -> DiscoveryOutcome:
         """Recheck a cached alternative that was stored before confirmation."""
         url = record.alternative_url
         if not url:
-            return None, False, None
-        cached = Alternative(
+            return DiscoveryOutcome(note=record.alternative_note)
+        candidate = Candidate(
             url,
             record.alternative_probability or 0.0,
             record.alternative_reasoning,
         )
-        facts = await self._facts(url, entry.title)
-        if facts.transient:
-            return cached, False, record.alternative_note
-        if facts.result.state != "ok" or facts.result.is_suspicious_redirect:
-            return None, False, "dropped: stored alternative is no longer live"
-        resolved = facts.result.resolved_url or url
-        verdict = await self._confirm(
-            entry,
-            resolved,
-            facts.result.page_title,
-            facts.result.page_h1,
-            facts.result.page_snippet,
-        )
-        if verdict is not None and not verdict.is_match:
-            reason = verdict.reasoning or "page did not match the entry"
-            return None, False, f"rejected: {reason}"
-        note = (
-            f"confirmed: {verdict.reasoning}"
-            if verdict is not None and verdict.reasoning
-            else record.alternative_note
-        )
-        return (
-            Alternative(resolved, cached.probability, cached.reasoning),
-            verdict is not None,
-            note,
-        )
+        outcome = await self._evaluate_candidate(entry, candidate)
+        if outcome.transient:
+            return DiscoveryOutcome(
+                alternative=Alternative(
+                    url, candidate.probability, candidate.reasoning
+                ),
+                transient=True,
+                confirmed=False,
+                note=record.alternative_note or entry.alternative_note or outcome.note,
+            )
+        if outcome.alternative is not None and outcome.note is None:
+            return DiscoveryOutcome(
+                alternative=outcome.alternative,
+                confirmed=outcome.confirmed,
+                note=record.alternative_note,
+            )
+        return outcome
 
     async def _confirm(
         self,
@@ -527,42 +646,25 @@ class Verifier:
                 page_snippet=page_snippet,
             )
 
-    async def _wayback(
-        self, url: str, facts: _UrlFacts, verdicts: list[_Verdict]
-    ) -> str | None:
-        if facts.wayback is not None:
-            return facts.wayback
-        save = self.save_archive and any(
-            verdict.state == "ok" and not verdict.transient for verdict in verdicts
-        )
+    async def _resolve_wayback(self, url: str, *, allow_save: bool) -> str | None:
+        """Return a cached or newly resolved Wayback snapshot for a URL."""
+        existing = self.cache.get_wayback(url)
+        if not self.refresh and existing is not None:
+            return existing
         snapshot = await self.wayback.lookup(url)
-        if snapshot is None and save:
-            snapshot = await self.wayback.save(url)
-            if snapshot is not None:
-                self.stats.wayback_captures += 1
-        if snapshot is None:
-            return None
-        self.cache.set_wayback(url, snapshot)
-        return snapshot
-
-    async def _alternative_wayback(self, url: str) -> str | None:
-        cached = None if self.refresh else self.cache.get_wayback(url)
-        if cached is not None:
-            return cached
-        snapshot = await self.wayback.lookup(url)
-        if snapshot is None and self.save_archive:
+        if snapshot is None and existing is None and allow_save:
             snapshot = await self.wayback.save(url)
             if snapshot is not None:
                 self.stats.wayback_captures += 1
         if snapshot is not None:
             self.cache.set_wayback(url, snapshot)
-        return snapshot
+            return snapshot
+        return existing
 
     def _apply(
         self,
         entry: CatalogEntry,
         verdict: _Verdict,
-        facts: _UrlFacts,
         wayback_link: str | None,
     ) -> CatalogEntry:
         if verdict.keep:
@@ -571,7 +673,7 @@ class Verifier:
         if verdict.transient:
             if entry.web_link_state is not None:
                 return entry
-            updates = {
+            updates: dict[str, Any] = {
                 "web_link_state": verdict.state,
                 "web_link_status": verdict.status,
                 "web_link_resolved": verdict.resolved_url,
@@ -579,14 +681,6 @@ class Verifier:
             if wayback_link is not None and entry.wayback_link is None:
                 updates["wayback_link"] = wayback_link
             return entry.model_copy(update=updates)
-
-        if verdict.write_entry:
-            self.cache.put_entry(
-                entry.id,
-                entry.web_link or "",
-                verdict.entry_record,
-                cacheable=not verdict.transient,
-            )
 
         alternative = verdict.alternative
         updates = {
