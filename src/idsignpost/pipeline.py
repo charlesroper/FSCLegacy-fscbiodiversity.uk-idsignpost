@@ -6,25 +6,41 @@ import asyncio
 from collections import Counter
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
+import inspect
+from pathlib import Path
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
-from idsignpost.cache import CatalogCache, EntryRecord
+from idsignpost.cache import DEFAULT_TTL_DAYS, CatalogCache, EntryRecord
+from idsignpost.cost import DEFAULT_COST_FILE, SessionCostTracker
 from idsignpost.gemini_finder import (
+    DEFAULT_MIN_PROBABILITY,
+    DEFAULT_MODEL,
     Alternative as Alternative,
     Candidate,
     DiscoveryOutcome as DiscoveryOutcome,
+    GeminiFinder,
+    Generator,
     RedirectVerdict,
     is_unusable_alternative,
 )
-from idsignpost.http_checker import CheckResult
+from idsignpost.http_checker import (
+    DEFAULT_TIMEOUT as DEFAULT_HTTP_TIMEOUT,
+    CheckResult,
+    HTTPChecker,
+)
 from idsignpost.models import (
     CatalogEntry,
     LinkState,
     ensure_unique_ids,
     merge_verified as merge_verified,
 )
+from idsignpost.sampler import get_stratified_sample
 from idsignpost.urls import cache_key, is_public_http_url, urls_equal
+from idsignpost.wayback import (
+    DEFAULT_CONCURRENCY as DEFAULT_WAYBACK_CONCURRENCY,
+    WaybackClient,
+)
 
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
@@ -88,6 +104,80 @@ class VerifyStats:
     wayback_captures: int = 0
     states: dict[str, int] = field(default_factory=dict)
     cost_summary: str | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class VerifyConfig:
+    """Typed options for a verification run."""
+
+    command: str = "verify"
+    cache_file: str | Path = ".url_cache.json"
+    cache_ttl_days: int = DEFAULT_TTL_DAYS
+    cost_file: str | Path = DEFAULT_COST_FILE
+    sample: int | None = None
+    seed: int = 42
+    limit: int | None = None
+    only_broken: bool = False
+    save_archive: bool = False
+    refresh: bool = False
+    concurrency: int = DEFAULT_CONCURRENCY
+    wayback_concurrency: int = DEFAULT_WAYBACK_CONCURRENCY
+    gemini_concurrency: int = DEFAULT_GEMINI_CONCURRENCY
+    timeout: float = DEFAULT_HTTP_TIMEOUT
+    min_prob: float = DEFAULT_MIN_PROBABILITY
+    model: str = DEFAULT_MODEL
+    verification_model: str | None = None
+    discovery_model: str | None = None
+    max_searches: int | None = None
+    api_key: str | None = None
+
+    @property
+    def verification_model_name(self) -> str:
+        """Return the model used for redirect and confirmation checks."""
+        return self.verification_model or self.model
+
+    @property
+    def discovery_model_name(self) -> str:
+        """Return the model used for grounded alternative discovery."""
+        return self.discovery_model or self.model
+
+    def validate(self) -> str | None:
+        """Return a usage error message when any run option is out of range."""
+        if self.sample is not None and self.limit is not None:
+            return "--sample and --limit are mutually exclusive"
+        if self.sample is not None and self.sample < 1:
+            return "--sample must be at least 1"
+        if self.limit is not None and self.limit < 1:
+            return "--limit must be at least 1"
+        if not 0.0 <= self.min_prob <= 1.0:
+            return "--min-prob must be between 0 and 1"
+        for value, label in (
+            (self.concurrency, "--concurrency"),
+            (self.wayback_concurrency, "--wayback-concurrency"),
+            (self.gemini_concurrency, "--gemini-concurrency"),
+        ):
+            if value < 1:
+                return f"{label} must be at least 1"
+        if not self.timeout > 0:
+            return "--timeout must be positive"
+        if self.cache_ttl_days < 0:
+            return "--cache-ttl-days must not be negative"
+        if self.max_searches is not None and self.max_searches < 0:
+            return "--max-searches must not be negative"
+        return None
+
+    def select_targets(self, entries: Sequence[CatalogEntry]) -> list[CatalogEntry]:
+        """Apply --only-broken, then --sample or --limit."""
+        pool = [
+            entry
+            for entry in entries
+            if not self.only_broken or entry.web_link_state == "broken"
+        ]
+        if self.sample is not None:
+            return get_stratified_sample(pool, self.sample, self.seed)
+        if self.limit is not None:
+            return pool[: self.limit]
+        return pool
 
 
 @dataclass(frozen=True, slots=True)
@@ -179,25 +269,42 @@ class Verifier:
             if entry.web_link:
                 groups.setdefault(cache_key(entry.web_link), []).append(entry)
 
+        interrupted: KeyboardInterrupt | None = None
+
+        async def run_group(members: list[CatalogEntry]) -> list[CatalogEntry]:
+            nonlocal interrupted
+            try:
+                return await self._verify_group(members)
+            except KeyboardInterrupt as exc:
+                interrupted = exc
+                return []
+
         updated: dict[str, CatalogEntry] = {}
-        tasks = [
-            asyncio.create_task(self._verify_group(members))
-            for members in groups.values()
-        ]
+        tasks = [asyncio.create_task(run_group(members)) for members in groups.values()]
         pending = set(tasks)
-        while pending:
-            done, pending = await asyncio.wait(
-                pending, return_when=asyncio.FIRST_COMPLETED
-            )
-            for task in done:
-                error = task.exception()
-                if error is not None:
-                    for other in pending:
-                        other.cancel()
-                    await asyncio.gather(*pending, return_exceptions=True)
-                    raise error
-                for entry in task.result():
-                    updated[entry.id] = entry
+        try:
+            while pending:
+                done, pending = await asyncio.wait(
+                    pending, return_when=asyncio.FIRST_COMPLETED
+                )
+                first_error: BaseException | None = None
+                for task in done:
+                    error = task.exception()
+                    if error is not None and first_error is None:
+                        first_error = error
+                if interrupted is not None:
+                    raise interrupted
+                if first_error is not None:
+                    raise first_error
+                for task in done:
+                    for entry in task.result():
+                        updated[entry.id] = entry
+        except BaseException:
+            for other in pending:
+                other.cancel()
+            if pending:
+                await asyncio.gather(*pending, return_exceptions=True)
+            raise
 
         result = [updated.get(entry.id, entry) for entry in entries]
         result = self._drop_shared_alternatives(result)
@@ -697,3 +804,82 @@ class Verifier:
         if verdict.fresh:
             updates["verified_at"] = self.cache.now().isoformat()
         return entry.model_copy(update=updates)
+
+
+async def _close_adapter(adapter: object) -> None:
+    aclose = getattr(adapter, "aclose", None)
+    if callable(aclose):
+        result = aclose()
+        if inspect.isawaitable(result):
+            await result
+
+
+async def run_verification(
+    entries: Sequence[CatalogEntry],
+    config: VerifyConfig,
+    *,
+    checker: Checker | None = None,
+    finder: Finder | None = None,
+    wayback: Archive | None = None,
+    generator: Generator | None = None,
+    resolver: Callable[..., Any] | None = None,
+) -> tuple[list[CatalogEntry], VerifyStats]:
+    """Validate options, run verification over selected targets, and merge results."""
+    error = config.validate()
+    if error is not None:
+        raise ValueError(error)
+    ensure_unique_ids(entries)
+
+    targets = config.select_targets(entries)
+    tracker = SessionCostTracker.load(config.cost_file)
+    cache = CatalogCache.load(config.cache_file, ttl_days=config.cache_ttl_days)
+
+    active_checker: Checker = (
+        checker if checker is not None else HTTPChecker(timeout=config.timeout)
+    )
+    active_wayback: Archive = (
+        wayback
+        if wayback is not None
+        else WaybackClient(
+            timeout=config.timeout, concurrency=config.wayback_concurrency
+        )
+    )
+    try:
+        active_finder: Finder = (
+            finder
+            if finder is not None
+            else GeminiFinder(
+                verification_model=config.verification_model_name,
+                discovery_model=config.discovery_model_name,
+                api_key=config.api_key,
+                generator=generator,
+                min_probability=config.min_prob,
+                max_searches=config.max_searches,
+                tracker=tracker,
+            )
+        )
+        verifier = Verifier(
+            cache=cache,
+            checker=active_checker,
+            finder=active_finder,
+            wayback=active_wayback,
+            concurrency=config.concurrency,
+            gemini_concurrency=config.gemini_concurrency,
+            save_archive=config.save_archive,
+            refresh=config.refresh,
+            resolver=resolver,
+        )
+        verified = await verifier.verify(targets)
+    except (KeyboardInterrupt, asyncio.CancelledError):
+        cache.save()
+        raise
+    finally:
+        try:
+            await _close_adapter(active_checker)
+        finally:
+            await _close_adapter(active_wayback)
+
+    cache.save()
+    run_record = tracker.finish_run(command=config.command)
+    verifier.stats.cost_summary = tracker.format_run_summary(run_record)
+    return merge_verified(entries, verified), verifier.stats
