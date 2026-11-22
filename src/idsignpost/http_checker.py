@@ -154,9 +154,12 @@ class HTTPChecker:
         final_url = sanitize_url(str(response.url))
         resolved_url = None if urls_equal(url, final_url) else final_url
         page_title, page_h1, page_snippet = parse_page(body)
-        suspicious = resolved_url is not None and _is_suspicious(
-            url, final_url, page_title, entry_title
-        )
+        if resolved_url is not None:
+            suspicious = _is_suspicious(url, final_url, page_title, entry_title)
+        elif state == "ok":
+            suspicious = _has_soft_404(f"{page_title or ''} {page_h1 or ''}")
+        else:
+            suspicious = False
         return CheckResult(
             status=str(code),
             state=state,
@@ -191,10 +194,7 @@ class HTTPChecker:
         return response, body
 
     async def _plain_get(self, url: str) -> tuple[httpx.Response, bytes]:
-        response = await self.client.get(url, headers=PLAIN_HEADERS)
-        content_type = response.headers.get("content-type", "").lower()
-        body = response.content[:MAX_HTML_BYTES] if "text/html" in content_type else b""
-        return response, body
+        return await self._streaming_get(url, PLAIN_HEADERS)
 
     @staticmethod
     async def _read_html(response: httpx.Response) -> bytes:
@@ -209,6 +209,12 @@ class HTTPChecker:
             if size >= MAX_HTML_BYTES:
                 break
         return b"".join(chunks)[:MAX_HTML_BYTES]
+
+
+def _has_soft_404(text: str) -> bool:
+    """Return True when text contains a known soft-404 indicator phrase."""
+    lowered = text.lower()
+    return any(phrase in lowered for phrase in SOFT_404_PHRASES)
 
 
 def _is_suspicious(
@@ -226,7 +232,7 @@ def _is_suspicious(
         return True
 
     haystack = f"{final_path} {page_title or ''}".lower()
-    if any(phrase in haystack for phrase in SOFT_404_PHRASES):
+    if _has_soft_404(haystack):
         return True
     if entry_title and final_path.rstrip("/").lower() in GENERIC_HUBS:
         return True

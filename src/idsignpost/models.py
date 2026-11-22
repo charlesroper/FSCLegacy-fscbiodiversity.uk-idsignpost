@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import json
 import re
+from collections.abc import Iterable, Sequence
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Iterable, Literal
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -121,3 +122,43 @@ def load_catalog(path: str | Path) -> list[CatalogEntry]:
     entries = [CatalogEntry.model_validate(item) for item in raw]
     ensure_unique_ids(entries)
     return entries
+
+
+def _apply_verification(target: CatalogEntry, source: CatalogEntry) -> CatalogEntry:
+    """Copy verification fields from source onto target, or clear on link change."""
+    if source.web_link != target.web_link:
+        return target.model_copy(update=dict.fromkeys(VERIFICATION_FIELDS))
+    return target.model_copy(
+        update={field: getattr(source, field) for field in VERIFICATION_FIELDS}
+    )
+
+
+def merge_verification(
+    entries: Iterable[CatalogEntry], previous: Sequence[CatalogEntry]
+) -> list[CatalogEntry]:
+    """Carry verification results forward for entries whose web_link is unchanged."""
+    by_id = {entry.id: entry for entry in previous}
+    merged: list[CatalogEntry] = []
+    for entry in entries:
+        old = by_id.get(entry.id)
+        if old is None:
+            merged.append(entry)
+        else:
+            merged.append(_apply_verification(entry, old))
+    return merged
+
+
+def merge_verified(
+    catalog: Sequence[CatalogEntry], verified: Sequence[CatalogEntry]
+) -> list[CatalogEntry]:
+    """Apply verified entries by id, clearing anything tied to an old link."""
+    current = {entry.id: entry for entry in catalog}
+    updates: dict[str, CatalogEntry] = {}
+    for entry in verified:
+        if entry.id in updates:
+            raise ValueError(f"duplicate verified id: {entry.id}")
+        original = current.get(entry.id)
+        if original is None:
+            raise ValueError(f"verified id not in catalog: {entry.id}")
+        updates[entry.id] = _apply_verification(original, entry)
+    return [updates.get(entry.id, entry) for entry in catalog]

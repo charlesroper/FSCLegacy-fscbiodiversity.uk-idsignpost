@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import AsyncIterator
+
 import httpx
 import pytest
 import respx
@@ -140,6 +142,47 @@ async def test_400_retry_keeps_the_second_verdict() -> None:
     assert result.state == "broken"
 
 
+class CountingHtmlStream(httpx.AsyncByteStream):
+    def __init__(self, chunks: list[bytes]) -> None:
+        self._chunks = chunks
+        self.bytes_read = 0
+
+    async def __aiter__(self) -> AsyncIterator[bytes]:
+        for chunk in self._chunks:
+            self.bytes_read += len(chunk)
+            yield chunk
+
+
+@pytest.mark.parametrize("status", [400, 403])
+@respx.mock
+async def test_400_and_403_retry_streams_at_most_sixteen_kilobytes(status: int) -> None:
+    chunk_size = 4096
+    chunks = [
+        b"<html>" + b"x" * (chunk_size - 6),
+        *[b"x" * chunk_size for _ in range(10)],
+        b"<title>Too late</title></html>",
+    ]
+    stream = CountingHtmlStream(chunks)
+    route = respx.get(URL).mock(
+        side_effect=[
+            html("", status=status),
+            httpx.Response(
+                200,
+                headers={"content-type": "text/html"},
+                stream=stream,
+            ),
+        ]
+    )
+
+    result = await check(route)
+
+    assert route.call_count == 2
+    assert result.status == "200"
+    assert result.state == "ok"
+    assert result.page_title is None
+    assert stream.bytes_read == MAX_HTML_BYTES
+
+
 @pytest.mark.parametrize(
     ("error", "status", "state", "cacheable"),
     [
@@ -233,6 +276,35 @@ async def test_soft_404_phrase_in_path_is_suspicious() -> None:
     result = await check(respx.routes[0])
 
     assert result.is_suspicious_redirect is True
+
+
+@pytest.mark.parametrize(
+    ("url", "status", "page", "suspicious"),
+    [
+        (URL, 200, "<title>404 Not Found</title><h1>Site</h1>", True),
+        (URL, 200, "<title>Example Site</title><h1>Page Not Found</h1>", True),
+        (URL, 200, "<title>Expired resource</title>", True),
+        (URL, 200, "<title>Example</title><h1>Unexpected error</h1>", True),
+        (
+            "https://example.org/error-guide",
+            200,
+            "<title>Bat guide</title><h1>Bats</h1>",
+            False,
+        ),
+        (URL, 404, "<title>404 Not Found</title><h1>Not Found</h1>", False),
+        (URL, 403, "<title>Error 403</title>", False),
+    ],
+)
+@respx.mock
+async def test_non_redirecting_soft_404_detection(
+    url: str, status: int, page: str, suspicious: bool
+) -> None:
+    route = respx.get(url).mock(return_value=html(page, status=status))
+
+    result = await check(route, url=url)
+
+    assert result.resolved_url is None
+    assert result.is_suspicious_redirect is suspicious
 
 
 @respx.mock

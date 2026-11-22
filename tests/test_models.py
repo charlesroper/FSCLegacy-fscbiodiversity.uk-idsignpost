@@ -10,9 +10,12 @@ from pydantic import ValidationError
 
 from idsignpost.models import (
     CANONICAL_STATUS_ERRORS,
+    VERIFICATION_FIELDS,
     CatalogEntry,
     ensure_unique_ids,
     load_catalog,
+    merge_verification,
+    merge_verified,
 )
 
 
@@ -120,3 +123,121 @@ def test_load_catalog_rejects_non_array(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="JSON array"):
         load_catalog(path)
+
+
+def test_merge_verification_copies_without_mutating_inputs() -> None:
+    fresh = make_entry("bats", web_link="https://example.org/bats")
+    previous = make_entry(
+        "bats",
+        web_link="https://example.org/bats",
+        web_link_status="200",
+        web_link_state="ok",
+        web_link_resolved="https://example.org/bats-new",
+        wayback_link="https://web.archive.org/web/2020/https://example.org/bats",
+        alternative_link="https://example.org/alt",
+        alternative_probability=0.9,
+        alternative_reasoning="Official guide.",
+        alternative_note="confirmed: official guide",
+        verified_at="2026-01-01T00:00:00+00:00",
+    )
+
+    merged = merge_verification([fresh], [previous])
+
+    assert len(merged) == 1
+    assert merged[0] is not fresh
+    assert fresh.web_link_state is None
+    assert fresh.web_link_status is None
+    for field in VERIFICATION_FIELDS:
+        assert getattr(merged[0], field) == getattr(previous, field)
+
+
+def test_merge_verification_clears_all_fields_when_web_link_changes() -> None:
+    fresh = make_entry(
+        "bats",
+        web_link="https://example.org/new",
+        web_link_status="200",
+        web_link_state="ok",
+        web_link_resolved="https://example.org/old-resolved",
+        wayback_link="https://web.archive.org/web/2020/https://example.org/old",
+        alternative_link="https://example.org/alt",
+        alternative_probability=0.8,
+        alternative_reasoning="Old reason.",
+        alternative_note="confirmed: old",
+        verified_at="2026-01-01T00:00:00+00:00",
+    )
+    previous = make_entry(
+        "bats",
+        web_link="https://example.org/old",
+        web_link_status="404",
+        web_link_state="broken",
+    )
+
+    merged = merge_verification([fresh], [previous])
+
+    assert merged[0] is not fresh
+    assert fresh.web_link_state == "ok"
+    for field in VERIFICATION_FIELDS:
+        assert getattr(merged[0], field) is None
+
+
+def test_merge_verified_updates_only_verified_entries_immutably() -> None:
+    catalog = [
+        make_entry("a", web_link="https://example.org/a"),
+        make_entry("b", web_link="https://example.org/b"),
+        make_entry("c", web_link="https://example.org/c", web_link_state="broken"),
+    ]
+    verified = [
+        make_entry(
+            "b",
+            web_link="https://example.org/b",
+            web_link_status="200",
+            web_link_state="ok",
+            verified_at="2026-01-01T00:00:00+00:00",
+        )
+    ]
+
+    merged = merge_verified(catalog, verified)
+
+    assert [item.web_link_state for item in merged] == [None, "ok", "broken"]
+    assert merged[1] is not catalog[1]
+    assert merged[1] is not verified[0]
+    assert catalog[1].web_link_state is None
+    assert merged[1].web_link_status == "200"
+
+
+def test_merge_verified_clears_fields_when_link_changed() -> None:
+    catalog = [
+        make_entry(
+            "a",
+            web_link="https://example.org/new",
+            web_link_state="ok",
+            web_link_status="200",
+            wayback_link="https://web.archive.org/web/2020/https://example.org/old",
+            verified_at="2026-01-01T00:00:00+00:00",
+        )
+    ]
+    verified = [
+        make_entry(
+            "a",
+            web_link="https://example.org/old",
+            web_link_state="broken",
+            web_link_status="404",
+        )
+    ]
+
+    merged = merge_verified(catalog, verified)
+
+    assert merged[0] is not catalog[0]
+    assert catalog[0].web_link_state == "ok"
+    for field in VERIFICATION_FIELDS:
+        assert getattr(merged[0], field) is None
+
+
+def test_merge_verified_rejects_unknown_and_duplicate_ids() -> None:
+    catalog = [make_entry("a")]
+
+    with pytest.raises(ValueError, match="not in catalog"):
+        merge_verified(catalog, [make_entry("missing")])
+
+    with pytest.raises(ValueError, match="duplicate"):
+        merge_verified(catalog, [make_entry("a"), make_entry("a")])

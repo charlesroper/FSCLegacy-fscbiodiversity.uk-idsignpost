@@ -39,6 +39,7 @@ def atomic_write(
 ) -> Path:
     """Write through a temporary file and atomically replace the target."""
     target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
     descriptor, temporary = tempfile.mkstemp(
         dir=target.parent or ".", prefix=f".{target.name}.", suffix=".tmp"
     )
