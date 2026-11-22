@@ -159,6 +159,8 @@ def test_merge_verification_preserves_unchanged_link() -> None:
 
     merged = merge_verification([fresh], [old])[0]
 
+    assert merged is not fresh
+    assert fresh.web_link_state is None
     assert merged.web_link_status == "200"
     assert merged.web_link_state == "ok"
     assert merged.wayback_link == old.wayback_link

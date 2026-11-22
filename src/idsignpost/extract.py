@@ -5,14 +5,17 @@ from __future__ import annotations
 import html
 import re
 import unicodedata
-from collections.abc import Iterable, Sequence
 from datetime import datetime
 from pathlib import Path
 
 from bs4 import BeautifulSoup, NavigableString, Tag
 from markdownify import markdownify
 
-from idsignpost.models import VERIFICATION_FIELDS, CatalogEntry, ensure_unique_ids
+from idsignpost.models import (
+    CatalogEntry,
+    ensure_unique_ids,
+    merge_verification as merge_verification,
+)
 from idsignpost.urls import sanitize_url
 
 FIELD_PREFIX = "field-name-"
@@ -225,21 +228,6 @@ def parse_entry(html_text: str, filename: str) -> CatalogEntry:
             data["comment_body"] = to_markdown(comment) or None
 
     return CatalogEntry.model_validate(data)
-
-
-def merge_verification(
-    entries: Iterable[CatalogEntry], previous: Sequence[CatalogEntry]
-) -> list[CatalogEntry]:
-    """Carry verification results forward for entries whose web_link is unchanged."""
-    by_id = {entry.id: entry for entry in previous}
-    merged = list(entries)
-    for entry in merged:
-        old = by_id.get(entry.id)
-        if old is None or old.web_link != entry.web_link:
-            continue
-        for field in VERIFICATION_FIELDS:
-            setattr(entry, field, getattr(old, field))
-    return merged
 
 
 def html_files(html_dir: str | Path, limit: int | None = None) -> list[Path]:

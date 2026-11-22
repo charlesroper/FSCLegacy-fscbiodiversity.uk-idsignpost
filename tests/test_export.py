@@ -13,6 +13,7 @@ import pytest
 
 from idsignpost.export import (
     COLUMNS,
+    atomic_write,
     catalog_json,
     catalog_markdown,
     write_csv,
@@ -215,3 +216,18 @@ def test_text_exports_are_deterministic(
     writer(list(reversed(entries)), second)
 
     assert first.read_bytes() == second.read_bytes()
+
+
+def test_atomic_write_creates_missing_parent_directories(
+    entries: list[CatalogEntry], tmp_path: Path
+) -> None:
+    nested_json = tmp_path / "dist" / "sub" / "idsignpost.json"
+    nested_bin = tmp_path / "other" / "deep" / "data.bin"
+
+    write_json(entries, nested_json)
+    atomic_write(nested_bin, lambda handle: handle.write(b"ok"), binary=True)
+
+    assert [
+        item["id"] for item in json.loads(nested_json.read_text(encoding="utf-8"))
+    ] == ["a-bats", "z-moth"]
+    assert nested_bin.read_bytes() == b"ok"

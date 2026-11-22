@@ -17,10 +17,10 @@ from idsignpost.gemini_finder import (
 )
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import (
-    VERIFICATION_FIELDS,
     CatalogEntry,
     LinkState,
     ensure_unique_ids,
+    merge_verified as merge_verified,
 )
 from idsignpost.urls import cache_key
 
@@ -603,24 +603,3 @@ class Verifier:
         if verdict.fresh:
             updates["verified_at"] = self.cache.now().isoformat()
         return entry.model_copy(update=updates)
-
-
-def merge_verified(
-    catalog: Sequence[CatalogEntry], verified: Sequence[CatalogEntry]
-) -> list[CatalogEntry]:
-    """Apply verified entries by id, clearing anything tied to an old link."""
-    current = {entry.id: entry for entry in catalog}
-    updates: dict[str, CatalogEntry] = {}
-    for entry in verified:
-        if entry.id in updates:
-            raise ValueError(f"duplicate verified id: {entry.id}")
-        original = current.get(entry.id)
-        if original is None:
-            raise ValueError(f"verified id not in catalog: {entry.id}")
-        if original.web_link != entry.web_link:
-            updates[entry.id] = original.model_copy(
-                update=dict.fromkeys(VERIFICATION_FIELDS)
-            )
-        else:
-            updates[entry.id] = entry
-    return [updates.get(entry.id, entry) for entry in catalog]
