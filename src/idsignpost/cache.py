@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from idsignpost.export import atomic_write
+from idsignpost.http_checker import CheckResult
 from idsignpost.models import LinkState
 from idsignpost.urls import cache_key
 
@@ -156,6 +157,30 @@ def _entry_payload(record: EntryRecord) -> dict[str, Any]:
     }
 
 
+def _entry_fields(
+    record: EntryRecord,
+) -> tuple[
+    bool | None,
+    str | None,
+    str | None,
+    float | None,
+    str | None,
+    str | None,
+    bool,
+    bool,
+]:
+    return (
+        record.redirect_is_match,
+        record.redirect_reason,
+        record.alternative_url,
+        record.alternative_probability,
+        record.alternative_reasoning,
+        record.alternative_note,
+        record.alternative_checked,
+        record.alternative_confirmed,
+    )
+
+
 @dataclass
 class CatalogCache:
     """URL-tier and entry-tier cache with TTL and atomic saves."""
@@ -226,6 +251,39 @@ class CatalogCache:
         self._changed()
         return True
 
+    def get_check(self, url: str) -> CheckResult | None:
+        """Return a fresh cached HTTP check result, or None when absent."""
+        record = self.get_url(url)
+        if record is None or record.state is None:
+            return None
+        return CheckResult(
+            status=record.status or "",
+            state=record.state,
+            resolved_url=record.resolved_url,
+            is_suspicious_redirect=record.is_suspicious_redirect,
+            page_title=record.page_title,
+            page_h1=record.page_h1,
+            page_snippet=record.page_snippet,
+            cacheable=True,
+        )
+
+    def put_check(self, url: str, result: CheckResult) -> bool:
+        """Store a cacheable HTTP check result, preserving any Wayback snapshot."""
+        if not result.cacheable:
+            return False
+        existing = self.get_url(url)
+        record = UrlRecord(
+            status=result.status,
+            state=result.state,
+            resolved_url=result.resolved_url,
+            is_suspicious_redirect=result.is_suspicious_redirect,
+            page_title=result.page_title,
+            page_h1=result.page_h1,
+            page_snippet=result.page_snippet,
+            wayback_url=existing.wayback_url if existing is not None else None,
+        )
+        return self.put_url(url, record, cacheable=result.cacheable)
+
     def get_wayback(self, url: str) -> str | None:
         """Return a fresh cached Wayback snapshot for a URL, if any."""
         record = self.get_url(url)
@@ -260,6 +318,49 @@ class CatalogCache:
         self.entries[self._entry_key(entry_id, url)] = record
         self._changed()
         return True
+
+    def drop_alternative(self, entry_id: str, url: str, note: str) -> bool:
+        """Clear a stored alternative for one entry and record the rejection note."""
+        record = self.get_entry(entry_id, url)
+        if record is None:
+            return False
+        record.drop_alternative(note)
+        return self.put_entry(entry_id, url, record)
+
+    def update_entry(
+        self,
+        entry_id: str,
+        url: str,
+        *,
+        redirect_is_match: bool | None = None,
+        redirect_reason: str | None = None,
+        alternative_url: str | None = None,
+        alternative_probability: float | None = None,
+        alternative_reasoning: str | None = None,
+        alternative_note: str | None = None,
+        alternative_checked: bool = False,
+        alternative_confirmed: bool = False,
+    ) -> EntryRecord:
+        """Build an entry-tier record, preserving prior redirect fields if omitted."""
+        existing = self.get_entry(entry_id, url)
+        if redirect_is_match is None and existing is not None:
+            redirect_is_match = existing.redirect_is_match
+            if redirect_reason is None:
+                redirect_reason = existing.redirect_reason
+        updated = EntryRecord(
+            redirect_is_match=redirect_is_match,
+            redirect_reason=redirect_reason,
+            alternative_url=alternative_url,
+            alternative_probability=alternative_probability,
+            alternative_reasoning=alternative_reasoning,
+            alternative_note=alternative_note,
+            alternative_checked=alternative_checked,
+            alternative_confirmed=alternative_confirmed,
+        )
+        if existing is not None and _entry_fields(updated) == _entry_fields(existing):
+            return existing
+        self.put_entry(entry_id, url, updated)
+        return updated
 
     @staticmethod
     def _entry_key(entry_id: str, url: str) -> str:
