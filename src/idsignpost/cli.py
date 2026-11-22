@@ -4,13 +4,14 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+from collections.abc import Callable
 import logging
 import os
-import sys
 from pathlib import Path
+import sys
+from typing import Any
 
 from idsignpost import __version__
-from idsignpost.cache import CatalogCache
 from idsignpost.cost import SessionCostTracker
 from idsignpost.export import (
     catalog_json,
@@ -20,17 +21,17 @@ from idsignpost.export import (
     write_parquet,
 )
 from idsignpost.extract import extract_catalog, merge_verification
-from idsignpost.gemini_finder import GeminiFinder
-from idsignpost.http_checker import HTTPChecker
+from idsignpost.gemini_finder import Generator
 from idsignpost.models import CatalogEntry, load_catalog
 from idsignpost.pipeline import (
+    Archive,
+    Checker,
+    Finder,
     OfflineRunError,
+    VerifyConfig,
     VerifyStats,
-    Verifier,
-    merge_verified,
+    run_verification,
 )
-from idsignpost.sampler import get_stratified_sample
-from idsignpost.wayback import WaybackClient
 
 COMMANDS = {
     "extract": "Parse legacy HTML into the canonical catalog.",
@@ -77,10 +78,14 @@ def _cmd_extract(args: argparse.Namespace) -> int:
 
 
 def _cmd_export(args: argparse.Namespace) -> int:
-    entries = load_catalog(args.input)
-    write_csv(entries, args.csv)
-    write_parquet(entries, args.parquet)
-    write_markdown(entries, args.md)
+    try:
+        entries = load_catalog(args.input)
+        write_csv(entries, args.csv)
+        write_parquet(entries, args.parquet)
+        write_markdown(entries, args.md)
+    except (OSError, ValueError) as exc:
+        print(f"idsignpost export: {exc}", file=sys.stderr)
+        return 1
     print(
         f"idsignpost export: wrote {len(entries)} entries to "
         f"{args.csv}, {args.parquet}, {args.md}",
@@ -90,107 +95,45 @@ def _cmd_export(args: argparse.Namespace) -> int:
 
 
 def _cmd_cost(args: argparse.Namespace) -> int:
-    tracker = SessionCostTracker.load(args.cost_file)
-    if args.reset:
-        tracker.reset()
-        print("idsignpost cost: session history reset", file=sys.stderr)
+    try:
+        tracker = SessionCostTracker.load(args.cost_file)
+        if args.reset:
+            tracker.reset()
+            print("idsignpost cost: session history reset", file=sys.stderr)
+            return 0
+        if args.json:
+            print(tracker.to_json())
+            return 0
+        print(tracker.format_session_table())
         return 0
-    if args.json:
-        print(tracker.to_json())
-        return 0
-    print(tracker.format_session_table())
-    return 0
+    except (OSError, ValueError) as exc:
+        print(f"idsignpost cost: {exc}", file=sys.stderr)
+        return 1
 
 
-def _usage_error(args: argparse.Namespace) -> str | None:
-    if args.sample is not None and args.limit is not None:
-        return "--sample and --limit are mutually exclusive"
-    if args.sample is not None and args.sample < 1:
-        return "--sample must be at least 1"
-    if args.limit is not None and args.limit < 1:
-        return "--limit must be at least 1"
-    if not 0.0 <= args.min_prob <= 1.0:
-        return "--min-prob must be between 0 and 1"
-    for name, label in (
-        ("concurrency", "--concurrency"),
-        ("wayback_concurrency", "--wayback-concurrency"),
-        ("gemini_concurrency", "--gemini-concurrency"),
-    ):
-        if getattr(args, name) < 1:
-            return f"{label} must be at least 1"
-    if args.timeout <= 0:
-        return "--timeout must be positive"
-    if args.cache_ttl_days < 0:
-        return "--cache-ttl-days must not be negative"
-    if getattr(args, "max_searches", None) is not None and args.max_searches < 0:
-        return "--max-searches must not be negative"
-    return None
-
-
-def select_targets(
-    entries: list[CatalogEntry], args: argparse.Namespace
-) -> list[CatalogEntry]:
-    """Apply only-broken, then sample or limit."""
-    pool = [
-        entry
-        for entry in entries
-        if not args.only_broken or entry.web_link_state == "broken"
-    ]
-    if args.sample is not None:
-        return get_stratified_sample(pool, args.sample, args.seed)
-    if args.limit is not None:
-        return pool[: args.limit]
-    return pool
-
-
-async def _verify_async(
-    args: argparse.Namespace, targets: list[CatalogEntry]
-) -> tuple[list[CatalogEntry], VerifyStats]:
-    checker = HTTPChecker(timeout=args.timeout)
-    wayback = WaybackClient(timeout=args.timeout, concurrency=args.wayback_concurrency)
-    cost_file = getattr(args, "cost_file", ".idsignpost_costs.json")
-    tracker = SessionCostTracker.load(cost_file)
-    v_model = getattr(args, "verification_model", None) or args.model
-    d_model = getattr(args, "discovery_model", None) or args.model
-    max_searches = getattr(args, "max_searches", None)
-    finder = GeminiFinder(
-        verification_model=v_model,
-        discovery_model=d_model,
-        api_key=os.environ.get("GEMINI_API_KEY"),
-        min_probability=args.min_prob,
-        max_searches=max_searches,
-        tracker=tracker,
-    )
-    cache = CatalogCache.load(args.cache_file, ttl_days=args.cache_ttl_days)
-    verifier = Verifier(
-        cache=cache,
-        checker=checker,
-        finder=finder,
-        wayback=wayback,
-        concurrency=args.concurrency,
-        gemini_concurrency=args.gemini_concurrency,
+def _verify_config(args: argparse.Namespace) -> VerifyConfig:
+    return VerifyConfig(
+        command=args.command,
+        cache_file=args.cache_file,
+        cache_ttl_days=args.cache_ttl_days,
+        cost_file=args.cost_file,
+        sample=args.sample,
+        seed=args.seed,
+        limit=args.limit,
+        only_broken=args.only_broken,
         save_archive=args.save_archive,
         refresh=args.refresh,
+        concurrency=args.concurrency,
+        wayback_concurrency=args.wayback_concurrency,
+        gemini_concurrency=args.gemini_concurrency,
+        timeout=args.timeout,
+        min_prob=args.min_prob,
+        model=args.model,
+        verification_model=args.verification_model,
+        discovery_model=args.discovery_model,
+        max_searches=args.max_searches,
+        api_key=os.environ.get("GEMINI_API_KEY"),
     )
-    try:
-        updated = await verifier.verify(targets)
-    except KeyboardInterrupt:
-        cache.save()
-        raise
-    finally:
-        await checker.aclose()
-        await wayback.aclose()
-    cache.save()
-    run_record = tracker.finish_run(command=args.command)
-    verifier.stats.cost_summary = tracker.format_run_summary(run_record)
-    return updated, verifier.stats
-
-
-def _verify_catalog(
-    args: argparse.Namespace, targets: list[CatalogEntry]
-) -> tuple[list[CatalogEntry], VerifyStats]:
-    """Run verification; tests replace this hook."""
-    return asyncio.run(_verify_async(args, targets))
 
 
 def _print_summary(stats: VerifyStats) -> None:
@@ -208,22 +151,44 @@ def _print_summary(stats: VerifyStats) -> None:
         print(stats.cost_summary, file=sys.stderr)
 
 
-def _verify_entries(
-    args: argparse.Namespace, entries: list[CatalogEntry]
-) -> tuple[list[CatalogEntry], VerifyStats] | None:
-    targets = select_targets(entries, args)
+def _run_verify_stage(
+    args: argparse.Namespace,
+    entries: list[CatalogEntry],
+    config: VerifyConfig,
+    *,
+    checker: Checker | None = None,
+    finder: Finder | None = None,
+    wayback: Archive | None = None,
+    generator: Generator | None = None,
+    resolver: Callable[..., Any] | None = None,
+) -> tuple[list[CatalogEntry] | None, int]:
     try:
-        verified, stats = _verify_catalog(args, targets)
-        merged = merge_verified(entries, verified)
+        merged, stats = asyncio.run(
+            run_verification(
+                entries,
+                config,
+                checker=checker,
+                finder=finder,
+                wayback=wayback,
+                generator=generator,
+                resolver=resolver,
+            )
+        )
+    except KeyboardInterrupt:
+        print(
+            f"idsignpost {args.command}: interrupted, URL cache saved",
+            file=sys.stderr,
+        )
+        return None, 130
     except OfflineRunError as exc:
         print(f"idsignpost {args.command}: aborted, {exc}", file=sys.stderr)
-        return None
+        return None, 1
     except ValueError as exc:
         print(f"idsignpost {args.command}: {exc}", file=sys.stderr)
-        return None
+        return None, 1
     write_json(merged, args.output)
     _print_summary(stats)
-    return merged, stats
+    return merged, 0
 
 
 def _missing_key(command: str) -> bool:
@@ -236,8 +201,17 @@ def _missing_key(command: str) -> bool:
     return True
 
 
-def _cmd_verify(args: argparse.Namespace) -> int:
-    error = _usage_error(args)
+def _cmd_verify(
+    args: argparse.Namespace,
+    *,
+    checker: Checker | None = None,
+    finder: Finder | None = None,
+    wayback: Archive | None = None,
+    generator: Generator | None = None,
+    resolver: Callable[..., Any] | None = None,
+) -> int:
+    config = _verify_config(args)
+    error = config.validate()
     if error is not None:
         print(f"idsignpost verify: {error}", file=sys.stderr)
         return 2
@@ -248,11 +222,30 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     except (OSError, ValueError) as exc:
         print(f"idsignpost verify: cannot load {args.input}: {exc}", file=sys.stderr)
         return 1
-    return 0 if _verify_entries(args, entries) is not None else 1
+    _, code = _run_verify_stage(
+        args,
+        entries,
+        config,
+        checker=checker,
+        finder=finder,
+        wayback=wayback,
+        generator=generator,
+        resolver=resolver,
+    )
+    return code
 
 
-def _cmd_run(args: argparse.Namespace) -> int:
-    error = _usage_error(args)
+def _cmd_run(
+    args: argparse.Namespace,
+    *,
+    checker: Checker | None = None,
+    finder: Finder | None = None,
+    wayback: Archive | None = None,
+    generator: Generator | None = None,
+    resolver: Callable[..., Any] | None = None,
+) -> int:
+    config = _verify_config(args)
+    error = config.validate()
     if error is not None:
         print(f"idsignpost run: {error}", file=sys.stderr)
         return 2
@@ -266,10 +259,18 @@ def _cmd_run(args: argparse.Namespace) -> int:
         print(f"idsignpost run: cannot build the catalog: {exc}", file=sys.stderr)
         return 1
 
-    verified = _verify_entries(args, entries)
-    if verified is None:
-        return 1
-    merged, _ = verified
+    merged, code = _run_verify_stage(
+        args,
+        entries,
+        config,
+        checker=checker,
+        finder=finder,
+        wayback=wayback,
+        generator=generator,
+        resolver=resolver,
+    )
+    if merged is None:
+        return code
     write_csv(merged, args.csv)
     write_parquet(merged, args.parquet)
     write_markdown(merged, args.md)
@@ -282,22 +283,93 @@ def _cmd_run(args: argparse.Namespace) -> int:
 
 
 def _add_verify_options(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--output", default="idsignpost.json")
-    parser.add_argument("--cache-file", default=".url_cache.json")
-    parser.add_argument("--cache-ttl-days", type=int, default=30)
-    parser.add_argument("--cost-file", default=".idsignpost_costs.json")
-    parser.add_argument("--sample", type=int)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--limit", type=int)
-    parser.add_argument("--only-broken", action="store_true")
-    parser.add_argument("--save-archive", action="store_true")
-    parser.add_argument("--refresh", action="store_true")
-    parser.add_argument("--concurrency", type=int, default=10)
-    parser.add_argument("--wayback-concurrency", type=int, default=2)
-    parser.add_argument("--gemini-concurrency", type=int, default=3)
-    parser.add_argument("--timeout", type=float, default=10.0)
-    parser.add_argument("--min-prob", type=float, default=0.40)
-    parser.add_argument("--model", default="gemini-3.1-flash-lite")
+    parser.add_argument(
+        "--output",
+        default="idsignpost.json",
+        help="Output catalog JSON path (default: idsignpost.json).",
+    )
+    parser.add_argument(
+        "--cache-file",
+        default=".url_cache.json",
+        help="URL and entry cache file path (default: .url_cache.json).",
+    )
+    parser.add_argument(
+        "--cache-ttl-days",
+        type=int,
+        default=30,
+        help="Cache time-to-live in days (default: 30).",
+    )
+    parser.add_argument(
+        "--cost-file",
+        default=".idsignpost_costs.json",
+        help="Local cost tracking file path (default: .idsignpost_costs.json).",
+    )
+    parser.add_argument(
+        "--sample",
+        type=int,
+        help="Verify a stratified cross-section sample of N entries.",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=42,
+        help="Random seed for stratified sampling (default: 42).",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        help="Verify only the first N entries.",
+    )
+    parser.add_argument(
+        "--only-broken",
+        action="store_true",
+        help="Verify only entries currently marked broken.",
+    )
+    parser.add_argument(
+        "--save-archive",
+        action="store_true",
+        help="Trigger Wayback Save Page Now for unarchived live URLs.",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Ignore cached results and force re-verification.",
+    )
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=10,
+        help="Maximum concurrent HTTP workers (default: 10).",
+    )
+    parser.add_argument(
+        "--wayback-concurrency",
+        type=int,
+        default=2,
+        help="Maximum concurrent Wayback workers (default: 2).",
+    )
+    parser.add_argument(
+        "--gemini-concurrency",
+        type=int,
+        default=3,
+        help="Maximum concurrent Gemini workers (default: 3).",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=float,
+        default=10.0,
+        help="HTTP and Wayback timeout in seconds (default: 10.0).",
+    )
+    parser.add_argument(
+        "--min-prob",
+        type=float,
+        default=0.40,
+        help="Minimum alternative probability score from 0.0 to 1.0 (default: 0.40).",
+    )
+    parser.add_argument(
+        "--model",
+        default="gemini-3.1-flash-lite",
+        help="Default Gemini model name (default: gemini-3.1-flash-lite).",
+    )
     parser.add_argument(
         "--verification-model",
         help="Gemini model for redirect and confirmation checks (default: matches --model).",
@@ -311,7 +383,30 @@ def _add_verify_options(parser: argparse.ArgumentParser) -> None:
         type=int,
         help="Maximum Google Search grounding queries allowed across the run.",
     )
-    parser.add_argument("-v", "--verbose", action="store_true")
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Enable debug logging.",
+    )
+
+
+def _add_export_options(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--csv",
+        default="idsignpost.csv",
+        help="Output CSV file path (default: idsignpost.csv).",
+    )
+    parser.add_argument(
+        "--parquet",
+        default="idsignpost.parquet",
+        help="Output Apache Parquet file path (default: idsignpost.parquet).",
+    )
+    parser.add_argument(
+        "--md",
+        default="idsignpost.md",
+        help="Output Markdown file path (default: idsignpost.md).",
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -345,17 +440,23 @@ def build_parser() -> argparse.ArgumentParser:
     verify_parser = subparsers.add_parser(
         "verify", help=COMMANDS["verify"], description=COMMANDS["verify"]
     )
-    verify_parser.add_argument("--input", default="idsignpost.json")
+    verify_parser.add_argument(
+        "--input",
+        default="idsignpost.json",
+        help="Input catalog JSON path (default: idsignpost.json).",
+    )
     _add_verify_options(verify_parser)
     verify_parser.set_defaults(handler=_cmd_verify)
 
     export_parser = subparsers.add_parser(
         "export", help=COMMANDS["export"], description=COMMANDS["export"]
     )
-    export_parser.add_argument("--input", default="idsignpost.json")
-    export_parser.add_argument("--csv", default="idsignpost.csv")
-    export_parser.add_argument("--parquet", default="idsignpost.parquet")
-    export_parser.add_argument("--md", default="idsignpost.md")
+    export_parser.add_argument(
+        "--input",
+        default="idsignpost.json",
+        help="Input catalog JSON path (default: idsignpost.json).",
+    )
+    _add_export_options(export_parser)
     export_parser.set_defaults(handler=_cmd_export)
 
     run_parser = subparsers.add_parser(
@@ -365,9 +466,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--html-dir", default="idsignpost", help="Directory of legacy HTML pages."
     )
     _add_verify_options(run_parser)
-    run_parser.add_argument("--csv", default="idsignpost.csv")
-    run_parser.add_argument("--parquet", default="idsignpost.parquet")
-    run_parser.add_argument("--md", default="idsignpost.md")
+    _add_export_options(run_parser)
     run_parser.set_defaults(handler=_cmd_run)
 
     cost_parser = subparsers.add_parser(
@@ -392,6 +491,18 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def _parse_env_value(raw_value: str) -> str:
+    stripped = raw_value.strip()
+    if not stripped:
+        return ""
+    if stripped[0] in {"'", '"'}:
+        quote = stripped[0]
+        closing = stripped.find(quote, 1)
+        if closing != -1:
+            return stripped[1:closing]
+    return stripped.split("#", 1)[0].strip()
+
+
 def _load_env_file() -> None:
     env_path = Path(".env")
     if not env_path.is_file():
@@ -399,23 +510,50 @@ def _load_env_file() -> None:
     try:
         for line in env_path.read_text(encoding="utf-8").splitlines():
             cleaned = line.strip()
-            if not cleaned or cleaned.startswith("#") or "=" not in cleaned:
+            if not cleaned or cleaned.startswith("#"):
+                continue
+            if (
+                cleaned.startswith("export")
+                and len(cleaned) > 6
+                and cleaned[6].isspace()
+            ):
+                cleaned = cleaned[6:].lstrip()
+            if "=" not in cleaned:
                 continue
             key, val = cleaned.split("=", 1)
             key = key.strip()
-            val = val.strip().strip("'\"")
+            parsed = _parse_env_value(val)
             if key and key not in os.environ:
-                os.environ[key] = val
+                os.environ[key] = parsed
     except OSError:
         pass
 
 
-def main(argv: list[str] | None = None) -> int:
+def main(
+    argv: list[str] | None = None,
+    *,
+    checker: Checker | None = None,
+    finder: Finder | None = None,
+    wayback: Archive | None = None,
+    generator: Generator | None = None,
+    resolver: Callable[..., Any] | None = None,
+) -> int:
     if "PYTEST_CURRENT_TEST" not in os.environ:
         _load_env_file()
     args = build_parser().parse_args(argv)
     if getattr(args, "verbose", False):
         logging.basicConfig(level=logging.DEBUG)
+    if args.command in {"verify", "run"}:
+        return int(
+            args.handler(
+                args,
+                checker=checker,
+                finder=finder,
+                wayback=wayback,
+                generator=generator,
+                resolver=resolver,
+            )
+        )
     return int(args.handler(args))
 
 

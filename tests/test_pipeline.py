@@ -5,19 +5,23 @@ from __future__ import annotations
 from collections.abc import Callable
 from datetime import UTC, datetime
 import asyncio
+import json
+from pathlib import Path
 import socket
 from typing import Any
 
 import pytest
 
 from idsignpost.cache import CatalogCache
-from idsignpost.gemini_finder import Candidate, RedirectVerdict
+from idsignpost.gemini_finder import Candidate, GenerationResult, RedirectVerdict
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry
 from idsignpost.pipeline import (
     OfflineRunError,
     Verifier,
+    VerifyConfig,
     merge_verified,
+    run_verification,
 )
 
 NOW = datetime(2026, 10, 26, 12, 0, tzinfo=UTC)
@@ -1595,3 +1599,301 @@ async def test_gemini_semaphore_is_not_held_during_candidate_http_checks(
 
     assert [item.web_link_state for item in result] == ["broken", "ok"]
     assert result[0].alternative_link == candidate_url
+
+
+def test_verify_config_resolves_model_names() -> None:
+    default = VerifyConfig()
+    assert default.verification_model_name == "gemini-3.1-flash-lite"
+    assert default.discovery_model_name == "gemini-3.1-flash-lite"
+
+    shared = VerifyConfig(model="gemini-3.5-flash")
+    assert shared.verification_model_name == "gemini-3.5-flash"
+    assert shared.discovery_model_name == "gemini-3.5-flash"
+
+    split = VerifyConfig(
+        model="gemini-3.5-flash",
+        verification_model="gemini-3.1-flash-lite",
+        discovery_model="gemini-3.8-flash",
+    )
+    assert split.verification_model_name == "gemini-3.1-flash-lite"
+    assert split.discovery_model_name == "gemini-3.8-flash"
+
+
+@pytest.mark.parametrize(
+    ("overrides", "expected"),
+    [
+        ({"sample": 2, "limit": 1}, "--sample and --limit are mutually exclusive"),
+        ({"sample": 0}, "--sample must be at least 1"),
+        ({"limit": 0}, "--limit must be at least 1"),
+        ({"min_prob": -0.1}, "--min-prob must be between 0 and 1"),
+        ({"min_prob": 1.1}, "--min-prob must be between 0 and 1"),
+        ({"concurrency": 0}, "--concurrency must be at least 1"),
+        ({"wayback_concurrency": 0}, "--wayback-concurrency must be at least 1"),
+        ({"gemini_concurrency": 0}, "--gemini-concurrency must be at least 1"),
+        ({"timeout": 0.0}, "--timeout must be positive"),
+        ({"timeout": -5.0}, "--timeout must be positive"),
+        ({"cache_ttl_days": -1}, "--cache-ttl-days must not be negative"),
+        ({"max_searches": -1}, "--max-searches must not be negative"),
+    ],
+)
+def test_verify_config_validate_rejects_invalid_options(
+    overrides: dict[str, Any], expected: str
+) -> None:
+    config = VerifyConfig(**overrides)
+    assert config.validate() == expected
+
+
+def test_verify_config_validate_accepts_boundary_values() -> None:
+    config = VerifyConfig(min_prob=0.0, cache_ttl_days=0, max_searches=0, timeout=0.1)
+    assert config.validate() is None
+
+
+def test_verify_config_select_targets_filters_broken_before_limit_and_sample() -> None:
+    entries = [
+        entry("ok-1", web_link_state="ok"),
+        entry("broken-1", web_link_state="broken"),
+        entry("broken-2", web_link_state="broken"),
+        entry("broken-3", web_link_state="broken"),
+    ]
+
+    limited = VerifyConfig(only_broken=True, limit=2).select_targets(entries)
+    assert [item.id for item in limited] == ["broken-1", "broken-2"]
+
+    sampled = VerifyConfig(only_broken=True, sample=2, seed=7).select_targets(entries)
+    assert len(sampled) == 2
+    assert all(item.web_link_state == "broken" for item in sampled)
+
+
+class CloseableChecker(FakeChecker):
+    def __init__(self, results: dict[str, CheckResult], *, abort: bool = False) -> None:
+        super().__init__(results, abort=abort)
+        self.closed = False
+
+    async def aclose(self) -> None:
+        self.closed = True
+
+
+class CloseableArchive(FakeArchive):
+    def __init__(self, snapshots: dict[str, str | None] | None = None) -> None:
+        super().__init__(snapshots)
+        self.closed = False
+
+    async def aclose(self) -> None:
+        self.closed = True
+
+
+class RunFakeGenerator:
+    def __init__(self, script: list[GenerationResult]) -> None:
+        self.script = list(script)
+        self.calls: list[tuple[str, bool]] = []
+
+    async def generate(
+        self, prompt: str, *, model: str, json_mode: bool, search: bool
+    ) -> GenerationResult:
+        self.calls.append((model, search))
+        return self.script.pop(0)
+
+
+async def test_run_verification_rejects_invalid_config(tmp_path: Path) -> None:
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    config = VerifyConfig(sample=2, limit=1, cache_file=cache_file, cost_file=cost_file)
+
+    with pytest.raises(ValueError, match="mutually exclusive"):
+        await run_verification([entry()], config)
+
+    assert not cache_file.exists()
+    assert not cost_file.exists()
+
+
+async def test_run_verification_selects_merges_saves_cache_closes_and_tracks_cost(
+    tmp_path: Path,
+) -> None:
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    entries = [
+        entry("a", web_link="https://example.org/a"),
+        entry("b", web_link="https://example.org/b"),
+        entry("c", web_link="https://example.org/c"),
+    ]
+    checker = CloseableChecker(
+        {
+            "https://example.org/a": live(),
+            "https://example.org/b": live(),
+        }
+    )
+    archive = CloseableArchive()
+    config = VerifyConfig(
+        command="verify",
+        limit=2,
+        cache_file=cache_file,
+        cost_file=cost_file,
+    )
+
+    merged, stats = await run_verification(
+        entries, config, checker=checker, finder=FakeFinder(), wayback=archive
+    )
+
+    assert [item.web_link_state for item in merged] == ["ok", "ok", None]
+    assert stats.checked == 2
+    assert stats.cost_summary is not None
+    assert "idsignpost verify cost breakdown:" in stats.cost_summary
+    assert checker.closed is True
+    assert archive.closed is True
+    assert cache_file.exists()
+    assert len(CatalogCache.load(cache_file).urls) == 2
+    cost_payload = json.loads(cost_file.read_text(encoding="utf-8"))
+    assert len(cost_payload["runs"]) == 1
+    assert cost_payload["runs"][0]["command"] == "verify"
+
+
+async def test_run_verification_saves_cache_and_closes_on_keyboard_interrupt(
+    tmp_path: Path,
+) -> None:
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    first_url = "https://example.org/first"
+    second_url = "https://example.org/second"
+
+    class InterruptingChecker(CloseableChecker):
+        async def check(
+            self, url: str, *, entry_title: str | None = None
+        ) -> CheckResult:
+            self.checked.append(url)
+            if url == second_url:
+                raise KeyboardInterrupt
+            return live()
+
+    checker = InterruptingChecker({})
+    archive = CloseableArchive()
+    config = VerifyConfig(
+        concurrency=1,
+        cache_file=cache_file,
+        cost_file=cost_file,
+    )
+
+    with pytest.raises(KeyboardInterrupt):
+        await run_verification(
+            [
+                entry("first", web_link=first_url),
+                entry("second", web_link=second_url),
+            ],
+            config,
+            checker=checker,
+            finder=FakeFinder(),
+            wayback=archive,
+        )
+
+    assert checker.closed is True
+    assert archive.closed is True
+    assert cache_file.exists()
+    assert CatalogCache.load(cache_file).get_check(first_url) is not None
+    assert not cost_file.exists()
+
+
+async def test_run_verification_skips_cache_save_on_offline_abort(
+    tmp_path: Path,
+) -> None:
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    checker = CloseableChecker({}, abort=True)
+    archive = CloseableArchive()
+    config = VerifyConfig(cache_file=cache_file, cost_file=cost_file)
+
+    with pytest.raises(OfflineRunError):
+        await run_verification(
+            [entry()], config, checker=checker, finder=FakeFinder(), wayback=archive
+        )
+
+    assert checker.closed is True
+    assert archive.closed is True
+    assert not cache_file.exists()
+    assert not cost_file.exists()
+
+
+async def test_run_verification_wires_models_and_max_searches_to_gemini_finder(
+    tmp_path: Path,
+) -> None:
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    redirect_url = "https://example.org/moved"
+    broken_one = "https://example.org/broken-1"
+    broken_two = "https://example.org/broken-2"
+    alt_url = "https://replacement.example/guide"
+
+    checker = CloseableChecker(
+        {
+            redirect_url: live("https://other.example/guide", suspicious=True),
+            broken_one: CheckResult("404", "broken"),
+            broken_two: CheckResult("404", "broken"),
+            alt_url: live(),
+        }
+    )
+    generator = RunFakeGenerator(
+        [
+            GenerationResult(
+                text='{"is_match": true, "reasoning": "Moved host."}',
+                prompt_tokens=100,
+                output_tokens=20,
+            ),
+            GenerationResult(
+                text=json.dumps(
+                    {
+                        "candidates": [
+                            {
+                                "url": alt_url,
+                                "probability": 0.9,
+                                "reasoning": "Official page.",
+                            }
+                        ]
+                    }
+                ),
+                prompt_tokens=200,
+                output_tokens=50,
+                search_queries=1,
+            ),
+            GenerationResult(
+                text='{"is_match": true, "reasoning": "Matches guide."}',
+                prompt_tokens=150,
+                output_tokens=25,
+            ),
+        ]
+    )
+    config = VerifyConfig(
+        command="run",
+        concurrency=1,
+        cache_file=cache_file,
+        cost_file=cost_file,
+        model="gemini-3.5-flash",
+        verification_model="gemini-3.1-flash-lite",
+        discovery_model="gemini-3.8-flash",
+        max_searches=1,
+    )
+
+    merged, stats = await run_verification(
+        [
+            entry("redir", web_link=redirect_url),
+            entry("b1", web_link=broken_one),
+            entry("b2", web_link=broken_two),
+        ],
+        config,
+        checker=checker,
+        wayback=CloseableArchive(),
+        generator=generator,
+        resolver=public_resolver,
+    )
+
+    assert generator.calls == [
+        ("gemini-3.1-flash-lite", False),
+        ("gemini-3.8-flash", True),
+        ("gemini-3.1-flash-lite", False),
+    ]
+    assert merged[0].web_link_state == "ok"
+    assert merged[1].alternative_link == alt_url
+    assert merged[2].alternative_link is None
+    assert merged[2].alternative_note == "search failed"
+    assert stats.cost_summary is not None
+    assert "idsignpost run cost breakdown:" in stats.cost_summary
+    cost_payload = json.loads(cost_file.read_text(encoding="utf-8"))
+    assert cost_payload["runs"][0]["calls"] == 3
+    assert cost_payload["runs"][0]["search_queries"] == 1
