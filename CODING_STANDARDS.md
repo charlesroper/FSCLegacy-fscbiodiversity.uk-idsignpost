@@ -23,6 +23,6 @@ Judgement-call standards for `/code-review` and contributors in this repository.
 
 ## Editorial and prose standards
 
-- Follow `/root/.config/agent/writing-policy.md` and `AGENTS.md`: route each documentation section by reader job (`on-writing-well`, `ste-80` or `project-narrative`), then pass prose through `guardian-style-guide`.
+- Follow `docs/agents/writing-policy.md` and `AGENTS.md`: route each documentation section by reader job (`on-writing-well`, `ste-80` or `project-narrative`), then pass prose through `guardian-style-guide`.
 - Use British English (`-ise`, `-our`), down-style headings and zero Oxford commas unless needed to prevent ambiguity.
 - Never include em-dashes (`\u2014`) anywhere in prose, docstrings, comments or commit messages.

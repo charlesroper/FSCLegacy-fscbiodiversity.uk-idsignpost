@@ -26,14 +26,14 @@ Instructions and standards for agents working on this repository.
 ## Prose and documentation style
 
 - **No em-dashes:** Do not use em-dashes anywhere in prose (Markdown documents, docstrings, commit messages, code comments). Rewrite sentences with commas, colons, parentheses, periods, or conjunctions.
-- **Clear technical writing:** Follow William Zinsser principles (see `.agents/skills/on-writing-well`). Lead with the core message, use short familiar words, choose active verbs, and cut filler adjectives.
+- **Clear technical writing:** Follow William Zinsser principles (`on-writing-well`). Lead with the core message, use short familiar words, choose active verbs, and cut filler adjectives.
 - **Running narrative:** Maintain `NARRATIVE.md` as an ongoing blog-style record of architecture choices, milestones, and design rationale. Update this document after completing major features or refactoring work. Include the "why" as well as the "what".
 - **Technical specification:** Consult `SPEC.md` for the verification pipeline architecture, data schemas, caching rules, and test requirements before modifying pipeline code.
 - **AI model:** Use `gemini-3.1-flash-lite` as the default model for discovery and verification tasks.
 
 ## Git workflow and commit conventions
 
-- **Commit policy:** For every commit, read and follow `/root/.config/agent/commit-policy.md`.
+- **Commit policy:** For every commit, read and follow `docs/agents/commit-policy.md`.
 - **No em-dashes in commits:** Use commas, colons, parentheses, or periods instead of em-dashes in commit subjects and bodies.
 - **Pre-commit quality gate:** Before committing, ensure the working tree passes `uv run ruff check --fix .`, `uv run ruff format .`, `uv run ty check`, and `uv run pytest`.
 - **Atomic milestones:** Keep commits focused on a single logical change. Do not squash unrelated stages into monolithic commits.
@@ -58,9 +58,19 @@ Default canonical triage labels (`needs-triage`, `needs-info`, `ready-for-agent`
 
 Single-context (`GLOSSARY.md` and `docs/adr/` at repo root). See `docs/agents/domain.md`.
 
+### Public skill packs
+
+Install the public skills referenced by this repository with:
+
+```bash
+npx skills add charlesroper/skills
+npx skills add github/awesome-copilot --skill git-commit
+npx skills add mattpocock/skills
+```
+
 ## Writing framework
 
-Follow `/root/.config/agent/writing-policy.md` for section-level Stage 1 routing across `on-writing-well` (`Longform Prose`, `Technical Docs & READMEs`, `Web & Content Design`, `UX & Microcopy`), `ste-80` and `project-narrative`, followed by the Stage 2 `guardian-style-guide` sub-editor gate (commit messages follow `/root/.config/agent/commit-policy.md`). See `CODING_STANDARDS.md` for review-time judgement standards.
+Follow `docs/agents/writing-policy.md` for section-level Stage 1 routing across `on-writing-well` (`Longform Prose`, `Technical Docs & READMEs`, `Web & Content Design`, `UX & Microcopy`), `ste-80` and `project-narrative`, followed by the Stage 2 `guardian-style-guide` sub-editor gate (commit messages follow `docs/agents/commit-policy.md`). See `CODING_STANDARDS.md` for review-time judgement standards.
 
 Two-stage Editorial Pipeline for authored documentation, copy and commit messages:
 
