@@ -4,7 +4,7 @@
 [![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
 [![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pytest](https://img.shields.io/badge/tests-365%20passed-0A9EDC.svg)](https://docs.pytest.org/)
+[![pytest](https://img.shields.io/badge/tests-366%20passed-0A9EDC.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#what-is-inside-the-catalogue)
@@ -140,10 +140,26 @@ uv sync
 The verification pipeline uses Google Gemini (`gemini-3.1-flash-lite` with Grounded Search) to inspect ambiguous redirects and find replacements for broken links.
 
 - **Offline tasks:** Extracting HTML (`extract`), rendering exports (`export`), inspecting cost history (`cost`) and running tests (`pytest`) work offline without an API key.
-- **Online verification:** To run `verify` or `run`, obtain an API key from [Google AI Studio](https://ai.google.dev/) and set `GEMINI_API_KEY` in your shell or in a local `.env` file:
+- **Online verification:** To run `verify` or `run`, obtain an API key from [Google AI Studio](https://ai.google.dev/) and set `GEMINI_API_KEY` in a local `.env` file (recommended across shells) or in your current shell session:
+
+```dotenv
+# .env (cross-platform, loaded automatically outside pytest)
+GEMINI_API_KEY="your-api-key-here"
+```
 
 ```bash
+# Bash / Zsh (Ubuntu, macOS, Linux)
 export GEMINI_API_KEY="your-api-key-here"
+```
+
+```fish
+# Fish (Arch, Linux)
+set -gx GEMINI_API_KEY "your-api-key-here"
+```
+
+```powershell
+# PowerShell (Windows)
+$env:GEMINI_API_KEY = "your-api-key-here"
 ```
 
 On startup (outside `pytest`), `idsignpost` reads `.env` from the working directory automatically. The loader ignores blank lines and `#` comments, strips optional `export ` prefixes and leaves existing environment variables unchanged. It also parses single-quoted or double-quoted values and strips inline `#` comments from unquoted values.

@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: uv sync --frozen
+      - name: Lint with Ruff
+        run: uv run ruff check .
+      - name: Check formatting with Ruff
+        run: uv run ruff format --check .
+      - name: Check types with ty
+        run: uv run ty check
+      - name: Run offline test suite
+        run: uv run pytest

@@ -241,3 +241,20 @@ def test_merge_verified_rejects_unknown_and_duplicate_ids() -> None:
 
     with pytest.raises(ValueError, match="duplicate"):
         merge_verified(catalog, [make_entry("a"), make_entry("a")])
+
+
+def test_repository_prose_and_code_contain_no_em_dashes() -> None:
+    root = Path(__file__).resolve().parent.parent
+    candidates = [
+        *root.glob("*.md"),
+        *root.glob("src/**/*.py"),
+        *root.glob("tests/**/*.py"),
+        *root.glob("docs/**/*.md"),
+        *root.glob("plans/**/*.md"),
+    ]
+    offenders = [
+        str(path.relative_to(root))
+        for path in sorted(set(candidates))
+        if path.name != "idsignpost.md" and "\u2014" in path.read_text(encoding="utf-8")
+    ]
+    assert offenders == []
