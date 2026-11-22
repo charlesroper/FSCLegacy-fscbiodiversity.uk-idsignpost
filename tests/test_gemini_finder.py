@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import socket
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -10,9 +9,7 @@ from typing import Any
 import pytest
 
 from idsignpost.gemini_finder import (
-    Alternative,
     Candidate,
-    DiscoveryOutcome,
     GeminiFinder,
     GenerationResult,
     RedirectVerdict,
@@ -20,7 +17,6 @@ from idsignpost.gemini_finder import (
     parse_candidates,
     parse_redirect_verdict,
 )
-from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry
 
 ENTRY_DATA: dict[str, Any] = {
@@ -68,20 +64,6 @@ class FakeGenerator:
         return GenerationResult(text=item)
 
 
-class FakeChecker:
-    def __init__(self, results: dict[str, CheckResult]) -> None:
-        self.results = results
-        self.checked: list[str] = []
-
-    async def check(self, url: str, *, entry_title: str | None = None) -> CheckResult:
-        self.checked.append(url)
-        return self.results.get(url, CheckResult("404", "broken"))
-
-
-def public_resolver(host: str, port: Any) -> list[tuple[Any, ...]]:
-    return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", ("93.184.216.34", 0))]
-
-
 def make_finder(
     script: list[str | GenerationResult | BaseException],
     *,
@@ -98,17 +80,12 @@ def make_finder(
         generator=generator,
         min_probability=min_probability,
         sleep=sleep or fake_sleep,
-        resolver=public_resolver,
     )
     return finder, generator, sleeps
 
 
 def entry() -> CatalogEntry:
     return CatalogEntry.model_validate(ENTRY_DATA)
-
-
-def live(url: str) -> CheckResult:
-    return CheckResult("200", "ok", resolved_url=None)
 
 
 def test_parse_candidates_accepts_fenced_json() -> None:
@@ -288,154 +265,6 @@ def test_blocklist_uses_host_suffix_not_substring(url: str, blocked: bool) -> No
     assert is_blocked_host(url) is blocked
 
 
-async def test_find_alternative_falls_back_when_first_candidate_is_dead() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"candidates": ['
-            '{"url": "https://dead.example/guide", "probability": 0.9},'
-            '{"url": "https://live.example/guide", "probability": 0.8}'
-            "]}",
-            '{"is_match": true, "reasoning": "same guide"}',
-        ]
-    )
-    checker = FakeChecker(
-        {"https://live.example/guide": live("https://live.example/guide")}
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome == DiscoveryOutcome(
-        Alternative("https://live.example/guide", 0.8),
-        confirmed=True,
-        note="confirmed: same guide",
-    )
-    assert checker.checked == [
-        "https://dead.example/guide",
-        "https://live.example/guide",
-    ]
-
-
-async def test_find_alternative_skips_candidates_below_threshold() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "https://weak.example/guide", "probability": 0.2}]}']
-    )
-    checker = FakeChecker(
-        {"https://weak.example/guide": live("https://weak.example/guide")}
-    )
-
-    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
-    assert checker.checked == []
-
-
-async def test_find_alternative_rejects_private_addresses_without_checking() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "http://127.0.0.1/guide", "probability": 0.9}]}']
-    )
-    checker = FakeChecker({"http://127.0.0.1/guide": live("http://127.0.0.1/guide")})
-
-    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
-    assert checker.checked == []
-
-
-async def test_find_alternative_rejects_site_homepages() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "https://example.org/", "probability": 0.9}]}']
-    )
-    checker = FakeChecker({"https://example.org/": live("https://example.org/")})
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative is None
-    assert checker.checked == []
-
-
-async def test_find_alternative_rejects_a_page_for_a_different_book() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"candidates": ['
-            '{"url": "https://shop.example/wrong-book", "probability": 0.9},'
-            '{"url": "https://shop.example/right-book", "probability": 0.8}'
-            "]}",
-            '{"is_match": false, "reasoning": "different title"}',
-            '{"is_match": true, "reasoning": "same guide"}',
-        ]
-    )
-    checker = FakeChecker(
-        {
-            "https://shop.example/wrong-book": live("https://shop.example/wrong-book"),
-            "https://shop.example/right-book": live("https://shop.example/right-book"),
-        }
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative == Alternative("https://shop.example/right-book", 0.8)
-
-
-async def test_find_alternative_tries_the_preferred_url_first() -> None:
-    finder, generator, _ = make_finder(
-        ['{"is_match": true, "reasoning": "same guide"}']
-    )
-    checker = FakeChecker(
-        {"https://known.example/guide": live("https://known.example/guide")}
-    )
-
-    outcome = await finder.find_alternative(
-        entry(),
-        checker=checker,
-        preferred=Alternative("https://known.example/guide", 0.7, "from the cache"),
-    )
-
-    assert outcome == DiscoveryOutcome(
-        Alternative("https://known.example/guide", 0.7, "from the cache"),
-        confirmed=True,
-        note="confirmed: same guide",
-    )
-    assert len(generator.calls) == 1
-
-
-async def test_find_alternative_falls_back_when_preferred_is_rejected() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"is_match": false, "reasoning": "different page"}',
-            '{"candidates": [{"url": "https://new.example/guide", "probability": 0.8}]}',
-            '{"is_match": true, "reasoning": "same guide"}',
-        ]
-    )
-    checker = FakeChecker(
-        {
-            "https://old.example/guide": live("https://old.example/guide"),
-            "https://new.example/guide": live("https://new.example/guide"),
-        }
-    )
-
-    outcome = await finder.find_alternative(
-        entry(),
-        checker=checker,
-        preferred=Alternative("https://old.example/guide", 0.9),
-    )
-
-    assert outcome.alternative == Alternative("https://new.example/guide", 0.8)
-
-
-async def test_find_alternative_keeps_a_live_candidate_when_confirmation_fails() -> (
-    None
-):
-    finder, _, _ = make_finder(
-        [
-            '{"candidates": [{"url": "https://shop.example/guide", "probability": 0.9}]}',
-            "not json",
-        ]
-    )
-    checker = FakeChecker(
-        {"https://shop.example/guide": live("https://shop.example/guide")}
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative == Alternative("https://shop.example/guide", 0.9)
-
-
 async def test_confirmation_prompt_includes_the_page_metadata() -> None:
     finder, generator, _ = make_finder(['{"is_match": true, "reasoning": "same"}'])
 
@@ -452,162 +281,9 @@ async def test_confirmation_prompt_includes_the_page_metadata() -> None:
     assert "Bat guide" in prompt
 
 
-@pytest.mark.parametrize(
-    "url",
-    [
-        "https://example.org/guide.jpg",
-        "https://example.org/image.aspx?File=guide.jpg&Size=400",
-        "https://example.org/scan.PNG",
-    ],
-)
-async def test_find_alternative_rejects_image_urls(url: str) -> None:
-    finder, _, _ = make_finder(
-        [f'{{"candidates": [{{"url": "{url}", "probability": 0.9}}]}}']
-    )
-    checker = FakeChecker({url: live(url)})
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative is None
-    assert checker.checked == []
-
-
-@pytest.mark.parametrize(
-    "url",
-    [
-        "https://user:secret@example.org/guide",
-        BROKEN_URL,
-        "ftp://example.org/guide",
-    ],
-)
-async def test_find_alternative_rejects_unsafe_or_identical_urls(url: str) -> None:
-    finder, _, _ = make_finder(
-        [f'{{"candidates": [{{"url": "{url}", "probability": 0.9}}]}}']
-    )
-    checker = FakeChecker({url: live(url)})
-
-    assert (await finder.find_alternative(entry(), checker=checker)).alternative is None
-    assert checker.checked == []
-
-
-async def test_find_alternative_strips_tracking_and_uses_resolved_url() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"candidates": [{"url": "https://example.org/new?utm_source=gemini#top", '
-            '"probability": 0.9, "reasoning": "Official page."}]}'
-        ]
-    )
-    checker = FakeChecker(
-        {
-            "https://example.org/new": CheckResult(
-                "200", "ok", resolved_url="https://example.org/final"
-            )
-        }
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome == DiscoveryOutcome(
-        Alternative("https://example.org/final", 0.9, "Official page.")
-    )
-    assert checker.checked == ["https://example.org/new"]
-
-
-async def test_find_alternative_rejects_suspicious_redirects() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"candidates": ['
-            '{"url": "https://example.org/hub", "probability": 0.9},'
-            '{"url": "https://example.org/real", "probability": 0.6}'
-            "]}",
-            '{"is_match": true, "reasoning": "same guide"}',
-        ]
-    )
-    checker = FakeChecker(
-        {
-            "https://example.org/hub": CheckResult(
-                "200",
-                "ok",
-                resolved_url="https://example.org/shop",
-                is_suspicious_redirect=True,
-            ),
-            "https://example.org/real": live("https://example.org/real"),
-        }
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome == DiscoveryOutcome(
-        Alternative("https://example.org/real", 0.6),
-        confirmed=True,
-        note="confirmed: same guide",
-    )
-
-
-async def test_find_alternative_requires_web_link() -> None:
-    finder, _, _ = make_finder([])
-    checker = FakeChecker({})
-
-    outcome = await finder.find_alternative(
-        entry().model_copy(update={"web_link": None}), checker=checker
-    )
-
-    assert outcome.alternative is None
-    assert outcome.transient is False
-
-
 def test_missing_api_key_fails_fast() -> None:
     with pytest.raises(ValueError, match="GEMINI_API_KEY"):
         GeminiFinder(api_key=None)
-
-
-async def test_find_alternative_flags_transient_gemini_failure() -> None:
-    finder, _, _ = make_finder([RuntimeError("503 unavailable")] * 4)
-
-    outcome = await finder.find_alternative(entry(), checker=FakeChecker({}))
-
-    assert outcome.alternative is None
-    assert outcome.transient is True
-
-
-async def test_find_alternative_flags_transient_candidate_checks() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "https://slow.example/guide", "probability": 0.9}]}']
-    )
-
-    class TransientChecker:
-        async def check(
-            self, url: str, *, entry_title: str | None = None
-        ) -> CheckResult:
-            return CheckResult("503", "blocked", cacheable=False)
-
-    outcome = await finder.find_alternative(entry(), checker=TransientChecker())
-
-    assert outcome.alternative is None
-    assert outcome.transient is True
-
-
-async def test_a_rejected_preferred_url_is_not_hidden_by_a_failed_search() -> None:
-    finder, _, _ = make_finder(
-        [
-            '{"is_match": false, "reasoning": "category index"}',
-            "not json",
-            "not json",
-        ]
-    )
-    checker = FakeChecker(
-        {"https://hub.example/list": live("https://hub.example/list")}
-    )
-
-    outcome = await finder.find_alternative(
-        entry(),
-        checker=checker,
-        preferred=Alternative("https://hub.example/list", 0.9),
-    )
-
-    assert outcome.alternative is None
-    assert outcome.transient is False
-    assert outcome.note == "rejected: category index"
 
 
 async def test_confirmation_prompt_includes_page_text() -> None:
@@ -634,42 +310,6 @@ async def test_discover_hint_names_the_rejected_index() -> None:
     assert "https://example.org/keys/ is an index" in prompt
 
 
-async def test_find_alternative_rejects_redirect_to_private_address() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "https://example.org/move", "probability": 0.9}]}']
-    )
-    checker = FakeChecker(
-        {
-            "https://example.org/move": CheckResult(
-                "200", "ok", resolved_url="http://127.0.0.1/internal"
-            )
-        }
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative is None
-    assert outcome.note == "ignored: private address"
-
-
-async def test_find_alternative_rejects_redirect_to_blocked_host() -> None:
-    finder, _, _ = make_finder(
-        ['{"candidates": [{"url": "https://example.org/move", "probability": 0.9}]}']
-    )
-    checker = FakeChecker(
-        {
-            "https://example.org/move": CheckResult(
-                "200", "ok", resolved_url="https://www.scribd.com/document/123"
-            )
-        }
-    )
-
-    outcome = await finder.find_alternative(entry(), checker=checker)
-
-    assert outcome.alternative is None
-    assert outcome.note == "ignored: blocked host or image file"
-
-
 async def test_distinct_models_and_search_tool_scoping() -> None:
     generator = FakeGenerator(
         [
@@ -682,7 +322,6 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
         generator=generator,
         verification_model="gemini-3.1-flash-lite",
         discovery_model="gemini-3.8-flash",
-        resolver=public_resolver,
     )
 
     # 1. verify_redirect: should use verification_model and disable search
@@ -734,7 +373,6 @@ async def test_max_searches_ceiling_stops_discovery() -> None:
     finder = GeminiFinder(
         generator=generator,
         max_searches=2,
-        resolver=public_resolver,
     )
 
     # First discover executes 2 searches, hitting the limit
@@ -772,7 +410,6 @@ async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
     finder = GeminiFinder(
         generator=generator,
         tracker=tracker,
-        resolver=public_resolver,
     )
 
     await finder.verify_redirect(
