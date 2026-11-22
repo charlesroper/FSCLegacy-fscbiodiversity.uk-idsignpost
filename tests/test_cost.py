@@ -198,3 +198,33 @@ def test_session_reset(tmp_path: Path) -> None:
     assert len(tracker.runs) == 0
     loaded = SessionCostTracker.load(path=cost_file)
     assert len(loaded.runs) == 0
+
+
+def test_load_strict_handles_missing_corrupt_and_directory(tmp_path: Path) -> None:
+    import pytest
+
+    missing = tmp_path / "missing.json"
+    fresh = SessionCostTracker.load(missing, strict=True)
+    assert fresh.runs == []
+
+    corrupt = tmp_path / "corrupt.json"
+    corrupt.write_text("{not json", encoding="utf-8")
+    assert SessionCostTracker.load(corrupt).runs == []
+    with pytest.raises(ValueError):
+        SessionCostTracker.load(corrupt, strict=True)
+
+    non_dict = tmp_path / "list.json"
+    non_dict.write_text('["not", "an", "object"]', encoding="utf-8")
+    with pytest.raises(ValueError):
+        SessionCostTracker.load(non_dict, strict=True)
+
+    bad_fields = tmp_path / "bad_fields.json"
+    bad_fields.write_text('{"updated_at": 123}', encoding="utf-8")
+    with pytest.raises(ValueError):
+        SessionCostTracker.load(bad_fields, strict=True)
+
+    directory = tmp_path / "cost_dir"
+    directory.mkdir()
+    assert SessionCostTracker.load(directory).runs == []
+    with pytest.raises(OSError):
+        SessionCostTracker.load(directory, strict=True)

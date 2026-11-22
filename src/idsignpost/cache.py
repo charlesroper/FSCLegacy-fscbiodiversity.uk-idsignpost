@@ -327,6 +327,55 @@ class CatalogCache:
         record.drop_alternative(note)
         return self.put_entry(entry_id, url, record)
 
+    def clear_entry(self, entry_id: str, url: str) -> bool:
+        """Remove any entry-tier record for one entry and URL."""
+        if self.entries.pop(self._entry_key(entry_id, url), None) is None:
+            return False
+        self._changed()
+        return True
+
+    def record_redirect(
+        self,
+        entry_id: str,
+        url: str,
+        *,
+        is_match: bool | None,
+        reason: str | None = None,
+    ) -> EntryRecord | None:
+        """Update redirect verdict fields while preserving any cached alternative."""
+        existing = self.get_entry(entry_id, url)
+        if is_match is None:
+            reason = None
+            if existing is None:
+                return None
+            if not existing.alternative_checked and existing.alternative_url is None:
+                self.clear_entry(entry_id, url)
+                return None
+        if (
+            existing is not None
+            and existing.redirect_is_match == is_match
+            and existing.redirect_reason == reason
+        ):
+            return existing
+        updated = EntryRecord(
+            redirect_is_match=is_match,
+            redirect_reason=reason,
+            alternative_url=existing.alternative_url if existing else None,
+            alternative_probability=(
+                existing.alternative_probability if existing else None
+            ),
+            alternative_reasoning=(
+                existing.alternative_reasoning if existing else None
+            ),
+            alternative_note=existing.alternative_note if existing else None,
+            alternative_checked=existing.alternative_checked if existing else False,
+            alternative_confirmed=(
+                existing.alternative_confirmed if existing else False
+            ),
+        )
+        self.put_entry(entry_id, url, updated)
+        return updated
+
     def update_entry(
         self,
         entry_id: str,
@@ -341,12 +390,8 @@ class CatalogCache:
         alternative_checked: bool = False,
         alternative_confirmed: bool = False,
     ) -> EntryRecord:
-        """Build an entry-tier record, preserving prior redirect fields if omitted."""
+        """Build and store an explicit entry-tier record, skipping unchanged writes."""
         existing = self.get_entry(entry_id, url)
-        if redirect_is_match is None and existing is not None:
-            redirect_is_match = existing.redirect_is_match
-            if redirect_reason is None:
-                redirect_reason = existing.redirect_reason
         updated = EntryRecord(
             redirect_is_match=redirect_is_match,
             redirect_reason=redirect_reason,

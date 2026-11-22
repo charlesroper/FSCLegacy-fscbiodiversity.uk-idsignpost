@@ -14,6 +14,7 @@ from idsignpost.cli import _load_env_file, build_parser, main
 from idsignpost.gemini_finder import Candidate, GenerationResult, RedirectVerdict
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry
+from idsignpost.pipeline import VerifyDeps
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -214,9 +215,11 @@ def test_verify_merges_results_into_the_full_catalog(
                 "--cost-file",
                 str(cost_file),
             ],
-            checker=FakeChecker(),
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=FakeChecker(),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 0
     )
@@ -254,9 +257,11 @@ def test_sample_verifies_a_subset_and_keeps_the_rest(
                 "--sample",
                 "2",
             ],
-            checker=checker,
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=checker,
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 0
     )
@@ -296,9 +301,11 @@ def test_only_broken_is_applied_before_limit(
                 "--limit",
                 "1",
             ],
-            checker=checker,
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=checker,
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 0
     )
@@ -352,9 +359,11 @@ def test_verify_offline_abort_returns_one(
                 "--cost-file",
                 str(cost_file),
             ],
-            checker=FakeChecker(abort=True),
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=FakeChecker(abort=True),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 1
     )
@@ -404,9 +413,11 @@ def test_run_extracts_verifies_and_exports(
                 "--limit",
                 "1",
             ],
-            checker=FakeChecker(),
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=FakeChecker(),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 0
     )
@@ -456,9 +467,11 @@ def test_run_replaces_a_legacy_catalog(
                 "--md",
                 str(tmp_path / "out.md"),
             ],
-            checker=FakeChecker(),
-            finder=FakeFinder(),
-            wayback=FakeArchive(),
+            deps=VerifyDeps(
+                checker=FakeChecker(),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
         )
         == 0
     )
@@ -635,10 +648,12 @@ def test_verify_wires_models_max_searches_cache_and_costs(
                 "--max-searches",
                 "1",
             ],
-            checker=checker,
-            wayback=FakeArchive(),
-            generator=generator,
-            resolver=public_resolver,
+            deps=VerifyDeps(
+                checker=checker,
+                wayback=FakeArchive(),
+                generator=generator,
+                resolver=public_resolver,
+            ),
         )
         == 0
     )
@@ -690,9 +705,11 @@ def test_verify_keyboard_interrupt_saves_cache_and_returns_130(
             "--concurrency",
             "1",
         ],
-        checker=checker,
-        finder=FakeFinder(),
-        wayback=FakeArchive(),
+        deps=VerifyDeps(
+            checker=checker,
+            finder=FakeFinder(),
+            wayback=FakeArchive(),
+        ),
     )
 
     assert code == 130
@@ -738,9 +755,11 @@ def test_run_keyboard_interrupt_saves_cache_and_returns_130(
             "--concurrency",
             "1",
         ],
-        checker=checker,
-        finder=FakeFinder(),
-        wayback=FakeArchive(),
+        deps=VerifyDeps(
+            checker=checker,
+            finder=FakeFinder(),
+            wayback=FakeArchive(),
+        ),
     )
 
     assert code == 130
@@ -800,6 +819,31 @@ def test_cost_reset_oserror_returns_one(
 
     assert code == 1
     assert "idsignpost cost:" in capsys.readouterr().err
+
+
+def test_cost_inspect_corrupt_and_directory_files_return_one(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    corrupt = tmp_path / "corrupt.json"
+    corrupt.write_text("{not valid json", encoding="utf-8")
+    assert main(["cost", "--cost-file", str(corrupt)]) == 1
+    assert "idsignpost cost:" in capsys.readouterr().err
+
+    assert main(["cost", "--cost-file", str(corrupt), "--json"]) == 1
+    assert "idsignpost cost:" in capsys.readouterr().err
+
+    non_dict = tmp_path / "non_dict.json"
+    non_dict.write_text("[1, 2, 3]", encoding="utf-8")
+    assert main(["cost", "--cost-file", str(non_dict)]) == 1
+    assert "idsignpost cost:" in capsys.readouterr().err
+
+    existing_dir = tmp_path / "cost_dir"
+    existing_dir.mkdir()
+    assert main(["cost", "--cost-file", str(existing_dir)]) == 1
+    assert "idsignpost cost:" in capsys.readouterr().err
+
+    assert main(["cost", "--cost-file", str(corrupt), "--reset"]) == 0
+    assert "session history reset" in capsys.readouterr().err
 
 
 def test_load_env_file_supports_export_and_inline_comments(

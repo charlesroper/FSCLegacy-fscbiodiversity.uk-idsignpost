@@ -4,7 +4,7 @@
 [![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
 [![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pytest](https://img.shields.io/badge/tests-357%20passed-0A9EDC.svg)](https://docs.pytest.org/)
+[![pytest](https://img.shields.io/badge/tests-365%20passed-0A9EDC.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#what-is-inside-the-catalogue)
@@ -38,7 +38,7 @@ The catalogue contains **736 entries**. Each entry describes an identification r
 - **Web link and status:** the original web link, along with its health status:
   - `ok`: the link works and responds directly.
   - `broken`: the link is confirmed dead (such as a 404 Not Found error).
-  - `blocked`: unverified link (the server blocked automated checks or answered with a temporary error). Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) relabel this state as `unverified`, while `idsignpost.json` keeps `blocked`.
+  - `blocked`: unverified link (the server blocked automated checks or failed with a Transient Failure). Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) relabel this state as `unverified`, while `idsignpost.json` keeps `blocked`.
 - **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. Over 660 entries (more than 91%) include a working snapshot.
 - **Alternative link and score:** for confirmed broken links, a working replacement found by searching publisher and museum archives, paired with a confidence score between 0.0 and 1.0.
 - **Alternative note:** the reason the replacement was accepted or rejected. Accepted pages carry a confirmation sentence from the model, and failed searches record why each candidate was dropped.
@@ -221,13 +221,13 @@ uv run idsignpost cost --cost-file path/to/costs.json
 
 Each entry with a `web_link` passes through five stages:
 
-1. **HTTP status check:** An HTTP GET classifies the link as `ok`, `broken` or `blocked`. `blocked` means unverified (exported as `unverified` in CSV, Parquet and Markdown): the server refused the request or answered with a temporary error.
+1. **HTTP status check:** An HTTP GET classifies the link as `ok`, `broken` or `blocked`. `blocked` means unverified (exported as `unverified` in CSV, Parquet and Markdown): the server refused the request or failed with a Transient Failure.
 2. **Redirect and soft-404 inspection:** A suspicious redirect (host change, collapse to site root, soft-404 page or login wall) or a non-redirecting `200 OK` page with a soft-404 title or heading is evaluated by Gemini. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
 3. **Alternative discovery:** For broken links, the pipeline queries Gemini with Grounded Search for up to three ranked Candidate URLs. The verifier filters Candidates against blocked hosts, image extensions, site homepages, the broken URL and private IP addresses before and after redirects, checks live reachability and asks Gemini to confirm the destination page.
 4. **Wayback preservation:** The pipeline queries the Wayback Machine for a snapshot. If a broken link has no historical snapshot, the pipeline checks the confirmed replacement link and captures it via Save Page Now when `--save-archive` is active.
 5. **State cleanup:** When the final link state is not `broken`, any obsolete alternative fields are cleared.
 
-Temporary failures never overwrite good results. A network timeout, server error (`429` or `5xx`) or model timeout preserves the previous state for retry on the next run and is omitted from the cache. Pressing `Ctrl+C` during a run flushes `.url_cache.json` and exits with status `130`.
+Transient Failures never overwrite good results. A network timeout, server error (`429` or `5xx`) or model timeout preserves the previous state for retry on the next run and is omitted from the cache. Pressing `Ctrl+C` during a run flushes `.url_cache.json` and exits with status `130`.
 
 ## Two-tier cache
 

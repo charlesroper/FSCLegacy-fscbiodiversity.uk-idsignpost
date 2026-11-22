@@ -16,9 +16,9 @@ from idsignpost.cost import DEFAULT_COST_FILE, SessionCostTracker
 from idsignpost.gemini_finder import (
     DEFAULT_MIN_PROBABILITY,
     DEFAULT_MODEL,
-    Alternative as Alternative,
+    Alternative,
     Candidate,
-    DiscoveryOutcome as DiscoveryOutcome,
+    DiscoveryOutcome,
     GeminiFinder,
     Generator,
     RedirectVerdict,
@@ -178,6 +178,17 @@ class VerifyConfig:
         if self.limit is not None:
             return pool[: self.limit]
         return pool
+
+
+@dataclass(frozen=True, slots=True)
+class VerifyDeps:
+    """Optional adapter overrides for verification runs and tests."""
+
+    checker: Checker | None = None
+    finder: Finder | None = None
+    wayback: Archive | None = None
+    generator: Generator | None = None
+    resolver: Callable[..., Any] | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -479,7 +490,21 @@ class Verifier:
             entry, url, record, previous
         )
         if outcome.transient:
-            self._store_redirect_only(entry.id, url, redirect_verdict, record)
+            if url:
+                self.cache.record_redirect(
+                    entry.id,
+                    url,
+                    is_match=(
+                        redirect_verdict.is_match
+                        if redirect_verdict is not None
+                        else None
+                    ),
+                    reason=(
+                        redirect_verdict.reasoning
+                        if redirect_verdict is not None
+                        else None
+                    ),
+                )
             return _Verdict(
                 state=state,
                 status=status,
@@ -536,31 +561,7 @@ class Verifier:
                 redirect_reason=redirect_verdict.reasoning,
             )
             return
-        existing = self.cache.get_entry(entry_id, url)
-        if existing is not None and existing.alternative_url is not None:
-            self.cache.update_entry(entry_id, url)
-
-    def _store_redirect_only(
-        self,
-        entry_id: str,
-        url: str,
-        redirect_verdict: RedirectVerdict | None,
-        record: EntryRecord | None,
-    ) -> None:
-        if redirect_verdict is None or not url:
-            return
-        self.cache.update_entry(
-            entry_id,
-            url,
-            redirect_is_match=redirect_verdict.is_match,
-            redirect_reason=redirect_verdict.reasoning,
-            alternative_url=record.alternative_url if record else None,
-            alternative_probability=record.alternative_probability if record else None,
-            alternative_reasoning=record.alternative_reasoning if record else None,
-            alternative_note=record.alternative_note if record else None,
-            alternative_checked=record.alternative_checked if record else False,
-            alternative_confirmed=record.alternative_confirmed if record else False,
-        )
+        self.cache.clear_entry(entry_id, url)
 
     async def _resolve_broken_alternative(
         self,
@@ -818,11 +819,7 @@ async def run_verification(
     entries: Sequence[CatalogEntry],
     config: VerifyConfig,
     *,
-    checker: Checker | None = None,
-    finder: Finder | None = None,
-    wayback: Archive | None = None,
-    generator: Generator | None = None,
-    resolver: Callable[..., Any] | None = None,
+    deps: VerifyDeps | None = None,
 ) -> tuple[list[CatalogEntry], VerifyStats]:
     """Validate options, run verification over selected targets, and merge results."""
     error = config.validate()
@@ -830,29 +827,32 @@ async def run_verification(
         raise ValueError(error)
     ensure_unique_ids(entries)
 
+    active_deps = deps or VerifyDeps()
     targets = config.select_targets(entries)
     tracker = SessionCostTracker.load(config.cost_file)
     cache = CatalogCache.load(config.cache_file, ttl_days=config.cache_ttl_days)
 
     active_checker: Checker = (
-        checker if checker is not None else HTTPChecker(timeout=config.timeout)
+        active_deps.checker
+        if active_deps.checker is not None
+        else HTTPChecker(timeout=config.timeout)
     )
     active_wayback: Archive = (
-        wayback
-        if wayback is not None
+        active_deps.wayback
+        if active_deps.wayback is not None
         else WaybackClient(
             timeout=config.timeout, concurrency=config.wayback_concurrency
         )
     )
     try:
         active_finder: Finder = (
-            finder
-            if finder is not None
+            active_deps.finder
+            if active_deps.finder is not None
             else GeminiFinder(
                 verification_model=config.verification_model_name,
                 discovery_model=config.discovery_model_name,
                 api_key=config.api_key,
-                generator=generator,
+                generator=active_deps.generator,
                 min_probability=config.min_prob,
                 max_searches=config.max_searches,
                 tracker=tracker,
@@ -867,7 +867,7 @@ async def run_verification(
             gemini_concurrency=config.gemini_concurrency,
             save_archive=config.save_archive,
             refresh=config.refresh,
-            resolver=resolver,
+            resolver=active_deps.resolver,
         )
         verified = await verifier.verify(targets)
     except (KeyboardInterrupt, asyncio.CancelledError):

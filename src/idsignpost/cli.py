@@ -4,12 +4,10 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-from collections.abc import Callable
 import logging
 import os
 from pathlib import Path
 import sys
-from typing import Any
 
 from idsignpost import __version__
 from idsignpost.cost import SessionCostTracker
@@ -21,14 +19,11 @@ from idsignpost.export import (
     write_parquet,
 )
 from idsignpost.extract import extract_catalog, merge_verification
-from idsignpost.gemini_finder import Generator
 from idsignpost.models import CatalogEntry, load_catalog
 from idsignpost.pipeline import (
-    Archive,
-    Checker,
-    Finder,
     OfflineRunError,
     VerifyConfig,
+    VerifyDeps,
     VerifyStats,
     run_verification,
 )
@@ -96,7 +91,7 @@ def _cmd_export(args: argparse.Namespace) -> int:
 
 def _cmd_cost(args: argparse.Namespace) -> int:
     try:
-        tracker = SessionCostTracker.load(args.cost_file)
+        tracker = SessionCostTracker.load(args.cost_file, strict=not args.reset)
         if args.reset:
             tracker.reset()
             print("idsignpost cost: session history reset", file=sys.stderr)
@@ -156,24 +151,10 @@ def _run_verify_stage(
     entries: list[CatalogEntry],
     config: VerifyConfig,
     *,
-    checker: Checker | None = None,
-    finder: Finder | None = None,
-    wayback: Archive | None = None,
-    generator: Generator | None = None,
-    resolver: Callable[..., Any] | None = None,
+    deps: VerifyDeps | None = None,
 ) -> tuple[list[CatalogEntry] | None, int]:
     try:
-        merged, stats = asyncio.run(
-            run_verification(
-                entries,
-                config,
-                checker=checker,
-                finder=finder,
-                wayback=wayback,
-                generator=generator,
-                resolver=resolver,
-            )
-        )
+        merged, stats = asyncio.run(run_verification(entries, config, deps=deps))
     except KeyboardInterrupt:
         print(
             f"idsignpost {args.command}: interrupted, URL cache saved",
@@ -201,56 +182,44 @@ def _missing_key(command: str) -> bool:
     return True
 
 
-def _cmd_verify(
-    args: argparse.Namespace,
-    *,
-    checker: Checker | None = None,
-    finder: Finder | None = None,
-    wayback: Archive | None = None,
-    generator: Generator | None = None,
-    resolver: Callable[..., Any] | None = None,
-) -> int:
+def _prepare_verify(
+    args: argparse.Namespace, command: str
+) -> tuple[VerifyConfig | None, int]:
     config = _verify_config(args)
     error = config.validate()
     if error is not None:
-        print(f"idsignpost verify: {error}", file=sys.stderr)
-        return 2
-    if _missing_key("verify"):
-        return 1
+        print(f"idsignpost {command}: {error}", file=sys.stderr)
+        return None, 2
+    if _missing_key(command):
+        return None, 1
+    return config, 0
+
+
+def _cmd_verify(
+    args: argparse.Namespace,
+    *,
+    deps: VerifyDeps | None = None,
+) -> int:
+    config, code = _prepare_verify(args, "verify")
+    if config is None:
+        return code
     try:
         entries = load_catalog(args.input)
     except (OSError, ValueError) as exc:
         print(f"idsignpost verify: cannot load {args.input}: {exc}", file=sys.stderr)
         return 1
-    _, code = _run_verify_stage(
-        args,
-        entries,
-        config,
-        checker=checker,
-        finder=finder,
-        wayback=wayback,
-        generator=generator,
-        resolver=resolver,
-    )
+    _, code = _run_verify_stage(args, entries, config, deps=deps)
     return code
 
 
 def _cmd_run(
     args: argparse.Namespace,
     *,
-    checker: Checker | None = None,
-    finder: Finder | None = None,
-    wayback: Archive | None = None,
-    generator: Generator | None = None,
-    resolver: Callable[..., Any] | None = None,
+    deps: VerifyDeps | None = None,
 ) -> int:
-    config = _verify_config(args)
-    error = config.validate()
-    if error is not None:
-        print(f"idsignpost run: {error}", file=sys.stderr)
-        return 2
-    if _missing_key("run"):
-        return 1
+    config, code = _prepare_verify(args, "run")
+    if config is None:
+        return code
 
     try:
         entries = extract_catalog(Path(args.html_dir))
@@ -259,16 +228,7 @@ def _cmd_run(
         print(f"idsignpost run: cannot build the catalog: {exc}", file=sys.stderr)
         return 1
 
-    merged, code = _run_verify_stage(
-        args,
-        entries,
-        config,
-        checker=checker,
-        finder=finder,
-        wayback=wayback,
-        generator=generator,
-        resolver=resolver,
-    )
+    merged, code = _run_verify_stage(args, entries, config, deps=deps)
     if merged is None:
         return code
     write_csv(merged, args.csv)
@@ -532,11 +492,7 @@ def _load_env_file() -> None:
 def main(
     argv: list[str] | None = None,
     *,
-    checker: Checker | None = None,
-    finder: Finder | None = None,
-    wayback: Archive | None = None,
-    generator: Generator | None = None,
-    resolver: Callable[..., Any] | None = None,
+    deps: VerifyDeps | None = None,
 ) -> int:
     if "PYTEST_CURRENT_TEST" not in os.environ:
         _load_env_file()
@@ -544,16 +500,7 @@ def main(
     if getattr(args, "verbose", False):
         logging.basicConfig(level=logging.DEBUG)
     if args.command in {"verify", "run"}:
-        return int(
-            args.handler(
-                args,
-                checker=checker,
-                finder=finder,
-                wayback=wayback,
-                generator=generator,
-                resolver=resolver,
-            )
-        )
+        return int(args.handler(args, deps=deps))
     return int(args.handler(args))
 
 

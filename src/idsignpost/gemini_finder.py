@@ -84,14 +84,12 @@ class Generator(Protocol):
 class _GenAIGenerator:
     """Google GenAI SDK adapter producing GenerationResult payloads."""
 
-    def __init__(self, client: Any = None, *, api_key: str | None = None) -> None:
-        if client is None:
-            if not api_key:
-                raise ValueError("GEMINI_API_KEY is required for Gemini lookups")
-            from google import genai
+    def __init__(self, *, api_key: str | None = None) -> None:
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY is required for Gemini lookups")
+        from google import genai
 
-            client = genai.Client(api_key=api_key)
-        self._client = client
+        self._client = genai.Client(api_key=api_key)
 
     @staticmethod
     def _config(json_mode: bool, search: bool = False) -> Any:
@@ -246,7 +244,6 @@ class GeminiFinder:
         verification_model: str = DEFAULT_MODEL,
         discovery_model: str = DEFAULT_MODEL,
         api_key: str | None = None,
-        client: Any = None,
         generator: Generator | None = None,
         timeout: float = DEFAULT_TIMEOUT,
         min_probability: float = DEFAULT_MIN_PROBABILITY,
@@ -255,7 +252,7 @@ class GeminiFinder:
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
     ) -> None:
         if generator is None:
-            generator = _GenAIGenerator(client=client, api_key=api_key)
+            generator = _GenAIGenerator(api_key=api_key)
         self._generator: Generator = generator
         if model is not None:
             verification_model = model

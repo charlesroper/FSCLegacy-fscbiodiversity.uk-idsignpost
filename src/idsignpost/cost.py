@@ -370,36 +370,60 @@ class SessionCostTracker:
         path: Path | str = DEFAULT_COST_FILE,
         *,
         ttl_hours: float = DEFAULT_SESSION_TTL_HOURS,
+        strict: bool = False,
     ) -> SessionCostTracker:
         """Load session records from file, rolling over if expired."""
         target = Path(path)
-        if not target.is_file():
+        try:
+            raw_text = target.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            if strict and target.is_symlink():
+                raise
+            return cls(path=target)
+        except OSError:
+            if strict:
+                raise
             return cls(path=target)
 
         try:
-            payload = json.loads(target.read_text(encoding="utf-8"))
+            payload = json.loads(raw_text)
             if not isinstance(payload, dict):
-                return cls(path=target)
+                raise ValueError("cost file must contain a JSON object")
+
+            started_at = payload.get("started_at")
+            if started_at is not None and not isinstance(started_at, str):
+                raise ValueError("started_at must be a string")
 
             updated_raw = payload.get("updated_at")
+            if updated_raw is not None and not isinstance(updated_raw, str):
+                raise ValueError("updated_at must be a string")
             if updated_raw:
                 updated_dt = datetime.fromisoformat(updated_raw)
+                if updated_dt.tzinfo is None:
+                    updated_dt = updated_dt.replace(tzinfo=UTC)
                 if utcnow() - updated_dt > timedelta(hours=ttl_hours):
                     # Inactivity limit exceeded, start fresh session
                     return cls(path=target)
 
-            runs = [
-                RunRecord.from_dict(r)
-                for r in payload.get("runs", [])
-                if isinstance(r, dict)
-            ]
+            runs_raw = payload.get("runs", [])
+            if not isinstance(runs_raw, list):
+                raise ValueError("runs must be a list")
+            runs: list[RunRecord] = []
+            for item in runs_raw:
+                if not isinstance(item, dict):
+                    raise ValueError("each run entry must be a JSON object")
+                runs.append(RunRecord.from_dict(item))
             return cls(
                 path=target,
-                started_at=payload.get("started_at"),
-                updated_at=payload.get("updated_at"),
+                started_at=started_at,
+                updated_at=updated_raw,
                 runs=runs,
             )
-        except Exception:
+        except (ValueError, TypeError, AttributeError) as exc:
+            if strict:
+                if isinstance(exc, ValueError):
+                    raise
+                raise ValueError(f"invalid cost file: {exc}") from exc
             return cls(path=target)
 
     def reset(self) -> None:

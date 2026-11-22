@@ -407,7 +407,7 @@ def test_drop_alternative_returns_false_when_absent_or_expired(
     assert cache.pending_writes == writes_before
 
 
-def test_update_entry_stores_new_record_and_carries_redirect_verdict(
+def test_update_entry_stores_new_record_without_carrying_stale_redirect(
     tmp_path: Path,
 ) -> None:
     cache = make_cache(tmp_path)
@@ -432,8 +432,8 @@ def test_update_entry_stores_new_record_and_carries_redirect_verdict(
         alternative_checked=True,
         alternative_confirmed=True,
     )
-    assert updated.redirect_is_match is False
-    assert updated.redirect_reason == "Generic homepage."
+    assert updated.redirect_is_match is None
+    assert updated.redirect_reason is None
     assert updated.alternative_url == "https://alt.example/guide"
 
     cache.save()
@@ -443,14 +443,87 @@ def test_update_entry_stores_new_record_and_carries_redirect_verdict(
 
     reloaded = make_cache(tmp_path).get_entry("a-bats", URL)
     assert reloaded is not None
-    assert reloaded.redirect_is_match is False
-    assert reloaded.redirect_reason == "Generic homepage."
+    assert reloaded.redirect_is_match is None
+    assert reloaded.redirect_reason is None
     assert reloaded.alternative_url == "https://alt.example/guide"
     assert reloaded.alternative_probability == pytest.approx(0.92)
     assert reloaded.alternative_reasoning == "Direct guide."
     assert reloaded.alternative_note == "confirmed: official guide"
     assert reloaded.alternative_checked is True
     assert reloaded.alternative_confirmed is True
+
+
+def test_record_redirect_preserves_alternative_and_skips_unchanged(
+    tmp_path: Path,
+) -> None:
+    t0 = NOW - timedelta(days=2)
+    current = t0
+    cache = CatalogCache.load(tmp_path / ".url_cache.json", now=lambda: current)
+    cache.update_entry(
+        "a-bats",
+        URL,
+        alternative_url="https://alt.example/guide",
+        alternative_probability=0.85,
+        alternative_reasoning="Moved.",
+        alternative_note="confirmed: matches guide",
+        alternative_checked=True,
+        alternative_confirmed=True,
+    )
+    cache.save()
+    assert cache.pending_writes == 0
+
+    current = NOW
+    recorded = cache.record_redirect(
+        "a-bats", f"{URL}#frag", is_match=False, reason="Generic homepage."
+    )
+    assert recorded is not None
+    assert cache.pending_writes == 1
+    assert recorded.redirect_is_match is False
+    assert recorded.redirect_reason == "Generic homepage."
+    assert recorded.alternative_url == "https://alt.example/guide"
+    assert recorded.alternative_confirmed is True
+    assert recorded.checked_at == NOW
+
+    cache.save()
+    current = NOW + timedelta(hours=1)
+    unchanged = cache.record_redirect(
+        "a-bats", URL, is_match=False, reason="Generic homepage."
+    )
+    assert unchanged is not None
+    assert cache.pending_writes == 0
+    assert unchanged.checked_at == NOW
+
+    cleared = cache.record_redirect("a-bats", URL, is_match=None)
+    assert cleared is not None
+    assert cleared.redirect_is_match is None
+    assert cleared.redirect_reason is None
+    assert cleared.alternative_url == "https://alt.example/guide"
+    assert cache.pending_writes == 1
+
+
+def test_clear_entry_removes_stale_redirect_and_alternative_state(
+    tmp_path: Path,
+) -> None:
+    cache = make_cache(tmp_path)
+    assert cache.clear_entry("missing", URL) is False
+    assert cache.pending_writes == 0
+
+    cache.update_entry(
+        "a-bats",
+        URL,
+        redirect_is_match=False,
+        redirect_reason="Generic homepage.",
+        alternative_note="no candidates returned",
+        alternative_checked=True,
+    )
+    cache.save()
+
+    assert cache.clear_entry("a-bats", f"{URL}#frag") is True
+    assert cache.pending_writes == 1
+    assert cache.get_entry("a-bats", URL) is None
+    cache.save()
+
+    assert read_payload(tmp_path)["entries"] == {}
 
 
 def test_update_entry_replaces_redirect_verdict_and_clears_alternative(
@@ -545,22 +618,11 @@ def test_update_entry_skips_write_when_semantic_fields_are_unchanged(
     assert cache.pending_writes == 0
     assert unchanged_explicit.checked_at == t0
 
-    unchanged_carried = cache.update_entry(
-        "a-bats",
-        URL,
-        alternative_url="https://alt.example/guide",
-        alternative_probability=0.85,
-        alternative_reasoning="Moved.",
-        alternative_note="confirmed: matches guide",
-        alternative_checked=True,
-        alternative_confirmed=True,
-    )
-    assert cache.pending_writes == 0
-    assert unchanged_carried.checked_at == t0
-
     changed = cache.update_entry(
         "a-bats",
         URL,
+        redirect_is_match=False,
+        redirect_reason="Generic homepage.",
         alternative_url="https://alt.example/guide",
         alternative_probability=0.85,
         alternative_reasoning="Moved.",

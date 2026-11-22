@@ -56,7 +56,7 @@ idsignpost/
 ├── src/
 │   └── idsignpost/
 │       ├── __init__.py
-│       ├── models.py            # Pydantic schemas, validation, and immutable verification merge helpers
+│       ├── models.py            # Pydantic schemas, validation and immutable verification merge helpers
 │       ├── urls.py              # RFC 3986 sanitization, tracking-param stripping, host normalization
 │       ├── extract.py           # Direct HTML -> CatalogEntry parser (replaces extract_idsignpost & md_to_json)
 │       ├── http_checker.py      # Async HTTP liveness, redirect analysis, and HTML <title>/<h1> extraction
@@ -65,7 +65,7 @@ idsignpost/
 │       ├── wayback.py           # Wayback Availability API lookup and Save Page Now capture
 │       ├── cache.py             # Two-tier atomic JSON cache (UrlRecord, EntryRecord, CheckResult adapter)
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
-│       ├── pipeline.py          # Async Verifier, VerifyConfig, run_verification, and Candidate evaluation
+│       ├── pipeline.py          # Async Verifier, VerifyConfig, VerifyDeps, run_verification and Candidate evaluation
 │       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, and Markdown
 │       └── cli.py               # Unified CLI (`uv run idsignpost <command>`) and .env loader
 └── tests/
@@ -85,7 +85,7 @@ idsignpost/
     └── test_live_smoke.py       # Optional @pytest.mark.live end-to-end checks
 ```
 
-`pyproject.toml` targets Python 3.12+, uses the `uv_build` backend, and declares `pydantic`, `httpx`, `beautifulsoup4`, `markdownify`, `google-genai` and `pyarrow`, plus the dev dependencies `pytest`, `pytest-asyncio`, `respx`, `ruff` and `ty`. Pytest is configured with `addopts = "-m 'not live'"`, `asyncio_mode = "auto"` and a registered `live` marker.
+`pyproject.toml` targets Python 3.12+, uses the `uv_build` backend and declares `pydantic`, `httpx`, `beautifulsoup4`, `markdownify`, `google-genai` and `pyarrow`, plus the dev dependencies `pytest`, `pytest-asyncio`, `respx`, `ruff` and `ty`. Pytest is configured with `addopts = "-m 'not live'"`, `asyncio_mode = "auto"` and a registered `live` marker.
 
 ---
 
@@ -159,9 +159,9 @@ class CatalogEntry(BaseModel):
 
 ### 4.2 Stage 2: URL Verification and Discovery (`pipeline.py`)
 
-Verification orchestration is configured by `VerifyConfig` and executed through `run_verification(entries, config, *, checker=None, finder=None, wayback=None, generator=None, resolver=None)`:
+Verification orchestration is configured by `VerifyConfig` and executed through `run_verification(entries, config, *, deps=None)` using `VerifyDeps` for optional `checker`, `finder`, `wayback`, `generator` and `resolver` overrides:
 
-- `VerifyConfig` validates option ranges (`validate()`), resolves `verification_model_name` and `discovery_model_name` (defaulting to `model`), and selects target Catalog Entries (`select_targets()`, applying `--only-broken` before `--sample` or `--limit`).
+- `VerifyConfig` validates option ranges (`validate()`), resolves `verification_model_name` and `discovery_model_name` (defaulting to `model`) and selects target Catalog Entries (`select_targets()`, applying `--only-broken` before `--sample` or `--limit`).
 - `run_verification` loads `SessionCostTracker` and `CatalogCache`, constructs default `HTTPChecker`, `WaybackClient` and `GeminiFinder` adapters when overrides are not supplied, runs `Verifier.verify(targets)`, guarantees `aclose()` cleanup on adapters, saves `.url_cache.json` on completion or `KeyboardInterrupt`/`asyncio.CancelledError`, records run costs and returns `(merge_verified(entries, verified), verifier.stats)`.
 - `Verifier` accepts `cache`, `checker` (`Checker`), `finder` (`Finder`), `wayback` (`Archive`), concurrency limits, `save_archive`, `refresh` and an optional DNS `resolver` injected into `is_public_http_url`.
 
@@ -249,7 +249,7 @@ flowchart TD
 - Cache settled verdicts, including negative verdicts, via `CatalogCache.update_entry`. Do not cache transient Gemini or HTTP errors.
 
 #### Step 2d: Wayback Lookup and Save Page Now (`wayback.py` and `pipeline.py`)
-- `Verifier._resolve_wayback(url, *, allow_save: bool) -> str | None` unifies Wayback resolution across primary `web_link` URLs and `alternative_link` fallbacks, returning cached snapshots (unless `refresh=True`) before querying `archive.org` and preserving existing cached snapshots if a refresh lookup finds none.
+- `Verifier._resolve_wayback(url, *, allow_save: bool) -> str | None` unifies Wayback resolution across primary `web_link` URLs and Alternative links, returning cached snapshots (unless `refresh=True`) before querying `archive.org` and preserving existing cached snapshots if a refresh lookup finds none.
 - Query `https://archive.org/wayback/available?url=<encoded_url>` under a dedicated semaphore (`wayback_concurrency`, default `2`). Use three attempts with `2s` and `4s` backoff. On failure, keep any existing `wayback_link`.
 - Accept only snapshots whose `closest.status` is `"200"`. Ignore redirect and error snapshots.
 - Upgrade `http://web.archive.org/...` snapshot URLs to `https://`.
@@ -274,7 +274,7 @@ All output formats are rendered directly from the validated `list[CatalogEntry]`
    - All other fields: `pa.string()`
 4. **`idsignpost.md`:** Human-readable Markdown catalog where each entry is rendered under `## <filename>` with clean bullet points, including `Web link`, `Web link state`, `Wayback link`, and `Alternative link` (when present).
 
-All exporters write through `atomic_write`, creating missing parent directories, writing a temporary file in the destination directory, applying the caller's umask, and atomically replacing the target with `Path.replace`. JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) label `blocked` as `unverified`, while `idsignpost.json` keeps the canonical `blocked` state.
+All exporters write through `atomic_write`, creating missing parent directories, writing a temporary file in the destination directory, applying the caller's umask and atomically replacing the target with `Path.replace`. JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) label `blocked` as `unverified`, while `idsignpost.json` keeps the canonical `blocked` state.
 
 ---
 
@@ -315,7 +315,7 @@ All exporters write through `atomic_write`, creating missing parent directories,
 ```
 
 - **URL Tier interface (`get_check`, `put_check`, `get_wayback`, `set_wayback`):** `CatalogCache` exchanges `CheckResult` instances directly with `Verifier` without exposing `UrlRecord` mapping details. `put_check` ignores `cacheable=False` Transient Failures and preserves any existing `wayback_url` across `--refresh` runs.
-- **Entry Tier interface (`update_entry`, `drop_alternative`):** `update_entry(entry_id, url, ...)` constructs and persists `EntryRecord` values, carries forward prior `redirect_is_match` and `redirect_reason` fields when omitted and skips dirty writes when semantic fields are unchanged. `drop_alternative(entry_id, url, note)` clears a stored Alternative and caches the negative note while keeping any redirect verdict intact.
+- **Entry Tier interface (`update_entry`, `record_redirect`, `clear_entry`, `drop_alternative`):** `update_entry(entry_id, url, ...)` constructs and persists explicit `EntryRecord` values without implicitly carrying forward prior redirect verdicts, skipping dirty writes when semantic fields are unchanged. `record_redirect(entry_id, url, *, is_match, reason=None)` updates redirect verdict fields while preserving any cached Alternative fields (or clears stale redirect state when `is_match` is `None`). `clear_entry(entry_id, url)` removes stale Entry Tier records when a link recovers or stops redirecting, and `drop_alternative(entry_id, url, note)` clears a stored Alternative and caches the negative note while keeping any redirect verdict intact.
 - **Key canonicalization:** URL-tier and entry-tier keys use the sanitized URL with the fragment removed. Entry keys prefix the catalog `id` and `::`.
 - **Atomic writes:** Cache saves write to a temporary file in the same directory (creating missing parent directories) and atomically replace `.url_cache.json` via `Path.replace`. The canonical catalog and all exports use the same pattern.
 - **Transient error exclusion:** Results with `cacheable = False` (HTTP 429, 5xx, connect errors, timeouts, or Wayback API failures) are never written to the cache and do not overwrite existing verified fields.
@@ -385,13 +385,13 @@ On startup (unless `PYTEST_CURRENT_TEST` is set), `main()` reads `.env` from the
 
 `GEMINI_API_KEY` is required for `verify` and `run`. Fail fast at startup with a clear message if it is missing. Never log the key.
 
-Every subcommand and flag defines `--help` descriptions. `verify` and `run` build a `VerifyConfig` and delegate execution to `pipeline.run_verification`, accepting optional injected `checker`, `finder`, `wayback`, `generator` and `resolver` dependencies for testing without monkeypatching internal hooks.
+Every subcommand and flag defines `--help` descriptions. `verify` and `run` build a `VerifyConfig` and delegate execution to `pipeline.run_verification`, accepting an optional `VerifyDeps` bundle (`checker`, `finder`, `wayback`, `generator` and `resolver`) for testing without monkeypatching internal hooks.
 
 `verify` requires the canonical schema. Run `extract` first; legacy JSON keys are rejected with a clear error.
 
 `extract --limit N` prints to stdout unless `--output` is given explicitly. It must never truncate the canonical catalog by default. `verify` always loads the full catalog and writes the full catalog, updating only the selected entries. `--sample` and `--limit` are mutually exclusive. `--only-broken` is applied before `--sample` or `--limit`. `--min-prob` must be in `[0, 1]`.
 
-`run` performs a full `extract`, then `verify`, then `export`. `--limit` applies only to verification. Export runs only if verification exits successfully. The exit code is `0` even when broken links remain, `1` on fatal or file errors (including missing or unreadable files in `export` and `cost`, or `OfflineRunError`), `2` on invalid usage, and `130` on `KeyboardInterrupt` (after flushing `.url_cache.json` and printing `idsignpost <command>: interrupted, URL cache saved` to stderr without a traceback). Print a summary to stderr: counts per state, alternatives found, Wayback captures, cache hits and run cost breakdown.
+`run` performs a full `extract`, then `verify`, then `export`. `--limit` applies only to verification. Export runs only if verification exits successfully. The exit code is `0` even when broken links remain, `1` on fatal or file errors (including missing, unreadable or corrupt files in `export` and `cost`, or `OfflineRunError`), `2` on invalid usage and `130` on `KeyboardInterrupt` (after flushing `.url_cache.json` and printing `idsignpost <command>: interrupted, URL cache saved` to stderr without a traceback). Print a summary to stderr: counts per state, alternatives found, Wayback captures, cache hits and run cost breakdown.
 
 `--save-archive` is off by default, so the unarchived `ok` links stay unarchived unless the flag is used. Save Page Now captures use a separate 60-second timeout and a hard cap of two workers, independent of `--wayback-concurrency`.
 
@@ -399,18 +399,18 @@ Every subcommand and flag defines `--help` descriptions. `verify` and `run` buil
 
 ## 8. Testing Specification (`tests/`)
 
-All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 357 offline tests across 12 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
+All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 365 offline tests across 12 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
 
 1. **`tests/test_models.py`:** Tests `CatalogEntry` defaults, strict field validation (`extra="forbid"`), `alternative_probability` bounds, canonical HTTP and error status values, timestamp rules (`submitted_at` naive, `verified_at` UTC), `load_catalog`, duplicate `id` rejection and immutable `merge_verification` and `merge_verified` updates.
-2. **`tests/test_urls.py`:** Tests RFC 3986 sanitization, relative URL resolution, tracking parameter removal, fragment removal for cache keys, scheme and userinfo rejection, and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
-3. **`tests/test_extract.py`:** Tests direct HTML-to-`CatalogEntry` extraction against fixtures, covering double entity decoding (`&amp;#13;`), NBSP normalization, `is_free` conversion, list normalization (`available_as`), ISO date parsing with the fixed submitted format, Unicode filename slugs, split Flickr URLs, relative links and duplicate `id` rejection.
+2. **`tests/test_urls.py`:** Tests RFC 3986 sanitisation, relative URL resolution, tracking parameter removal, fragment removal for cache keys, scheme and userinfo rejection and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
+3. **`tests/test_extract.py`:** Tests direct HTML-to-`CatalogEntry` extraction against fixtures, covering double entity decoding (`&amp;#13;`), NBSP normalisation, `is_free` conversion, list normalisation (`available_as`), ISO date parsing with the fixed submitted format, Unicode filename slugs, split Flickr URLs, relative links and duplicate `id` rejection.
 4. **`tests/test_http_checker.py`:** Uses `respx` to test status classification (`200`, `400`, `403`, `404`, `429`, `503`), bounded 16 KB streaming `400`/`403` retries, `<title>` and `<h1>` extraction, redirect loops, protocol errors, suspicious redirect detection (cross-domain, root path collapse, soft-404 titles, login pages), non-redirecting soft-404 detection and the offline guard.
 5. **`tests/test_gemini_finder.py`:** Injects a single `FakeGenerator` at the `Generator` transport seam to verify `verify_redirect`, `discover` (including `min_probability` filtering and `hint`), `confirm_alternative`, blocklist suffix matching (`notebay.co.uk` must pass), malformed JSON retries, `429`/`5xx`/`TimeoutError` backoff retries, `--max-searches` caps and `SessionCostTracker` recording.
-6. **`tests/test_cost.py`:** Tests `GeminiOperation` coverage, model pricing table lookups, token and Grounded Search cost calculation, `SessionCostTracker` persistence, run summaries, aligned session tables, 24-hour session rollover and session resets.
-7. **`tests/test_wayback.py`:** Uses `respx` to test Availability API lookups, `closest.status == "200"` filtering, `http` to `https` normalization, retry logic and Save Page Now capture with its 60-second timeout and 429 handling.
-8. **`tests/test_cache.py`:** Verifies atomic disk writes, `get_check` and `put_check` round-trips, Wayback snapshot preservation on `--refresh`, transient failure exclusion, `update_entry` redirect carry-forward and dirty-write skipping, `drop_alternative`, TTL expiry, v1 cache discard and URL-tier/entry-tier isolation.
+6. **`tests/test_cost.py`:** Tests `GeminiOperation` coverage, model pricing table lookups, token and Grounded Search cost calculation, `SessionCostTracker` persistence, strict loading on corrupt or directory paths, run summaries, aligned session tables, 24-hour session rollover and session resets.
+7. **`tests/test_wayback.py`:** Uses `respx` to test Availability API lookups, `closest.status == "200"` filtering, `http` to `https` normalisation, retry logic and Save Page Now capture with its 60-second timeout and 429 handling.
+8. **`tests/test_cache.py`:** Verifies atomic disk writes, `get_check` and `put_check` round-trips, Wayback snapshot preservation on `--refresh`, transient failure exclusion, `update_entry` explicit updates and dirty-write skipping, `record_redirect` preservation of cached Alternatives, `clear_entry`, `drop_alternative`, TTL expiry, v1 cache discard and URL-tier/entry-tier isolation.
 9. **`tests/test_sampler.py`:** Verifies exclusion of entries without `web_link`, stratified sampling across all four buckets (`ok`, `broken`, `blocked`, `unverified`), shortfall redistribution, clamping and seed reproducibility.
-10. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`) and Markdown generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes, and `atomic_write` parent directory creation.
-11. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, redirect checks, broken-link discovery, Candidate policy filtering (pre-check and post-redirect with injected DNS resolver), cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
-12. **`tests/test_cli.py`:** Tests real CLI wiring without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) and `KeyboardInterrupt` exit code `130`.
+10. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`) and Markdown generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
+11. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig`, `VerifyDeps` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, redirect checks, broken-link discovery, Candidate policy filtering (pre-check and post-redirect with injected DNS resolver), cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation, stale redirect cleanup on `--refresh` and recovery, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
+12. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
 13. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.
