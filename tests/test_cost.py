@@ -5,11 +5,25 @@ from __future__ import annotations
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
+from typing import get_args
+
 from idsignpost.cost import (
+    OPERATION_LABELS,
+    GeminiOperation,
     SessionCostTracker,
     calculate_cost,
     get_model_rates,
 )
+
+
+def test_operation_labels_cover_gemini_operation_literal() -> None:
+    expected = {
+        "redirect_verification",
+        "candidate_discovery",
+        "candidate_confirmation",
+    }
+    assert set(get_args(GeminiOperation)) == expected
+    assert set(OPERATION_LABELS) == expected
 
 
 def test_get_model_rates_matches_prefixes() -> None:

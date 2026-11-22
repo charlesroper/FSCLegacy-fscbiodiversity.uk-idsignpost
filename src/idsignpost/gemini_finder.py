@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
+from idsignpost.cost import GeminiOperation, SessionCostTracker
 from idsignpost.http_checker import CheckResult
 from idsignpost.models import CatalogEntry
 from idsignpost.urls import cache_key, is_public_http_url, urls_equal
@@ -65,10 +66,85 @@ class DiscoveryOutcome:
     note: str | None = None
 
 
+@dataclass(frozen=True, slots=True)
+class GenerationResult:
+    """Text and usage metadata returned by one model generation call."""
+
+    text: str
+    prompt_tokens: int = 0
+    output_tokens: int = 0
+    cached_tokens: int = 0
+    search_queries: int = 0
+
+
+class Generator(Protocol):
+    async def generate(
+        self, prompt: str, *, model: str, json_mode: bool, search: bool
+    ) -> GenerationResult: ...
+
+
 class Checker(Protocol):
     async def check(
         self, url: str, *, entry_title: str | None = None
     ) -> CheckResult: ...
+
+
+class _GenAIGenerator:
+    """Google GenAI SDK adapter producing GenerationResult payloads."""
+
+    def __init__(self, client: Any = None, *, api_key: str | None = None) -> None:
+        if client is None:
+            if not api_key:
+                raise ValueError("GEMINI_API_KEY is required for Gemini lookups")
+            from google import genai
+
+            client = genai.Client(api_key=api_key)
+        self._client = client
+
+    @staticmethod
+    def _config(json_mode: bool, search: bool = False) -> Any:
+        from google.genai import types
+
+        options: dict[str, Any] = {
+            "temperature": 0.2,
+        }
+        if search:
+            options["tools"] = [types.Tool(google_search=types.GoogleSearch())]
+        if json_mode:
+            options["response_mime_type"] = "application/json"
+        return types.GenerateContentConfig(**options)
+
+    async def generate(
+        self, prompt: str, *, model: str, json_mode: bool, search: bool
+    ) -> GenerationResult:
+        response = await self._client.aio.models.generate_content(
+            model=model,
+            contents=prompt,
+            config=self._config(json_mode, search=search),
+        )
+        text = getattr(response, "text", "") or ""
+        usage = getattr(response, "usage_metadata", None)
+        prompt_tokens = getattr(usage, "prompt_token_count", 0) or 0
+        output_tokens = getattr(usage, "candidates_token_count", 0) or 0
+        cached_tokens = getattr(usage, "cached_content_token_count", 0) or 0
+
+        search_queries = 0
+        if search:
+            candidates = getattr(response, "candidates", None)
+            if candidates and len(candidates) > 0:
+                first = candidates[0]
+                grounding = getattr(first, "grounding_metadata", None)
+                web_queries = getattr(grounding, "web_search_queries", None)
+                if web_queries and isinstance(web_queries, list):
+                    search_queries = len(web_queries)
+
+        return GenerationResult(
+            text=text,
+            prompt_tokens=prompt_tokens,
+            output_tokens=output_tokens,
+            cached_tokens=cached_tokens,
+            search_queries=search_queries,
+        )
 
 
 def is_blocked_host(url: str) -> bool:
@@ -165,6 +241,8 @@ def parse_redirect_verdict(text: str) -> RedirectVerdict | None:
 
 
 def _retryable(exc: BaseException) -> bool:
+    if isinstance(exc, TimeoutError):
+        return True
     for attribute in ("code", "status_code"):
         code = getattr(exc, attribute, None)
         if isinstance(code, int) and not isinstance(code, bool):
@@ -184,20 +262,17 @@ class GeminiFinder:
         discovery_model: str = DEFAULT_MODEL,
         api_key: str | None = None,
         client: Any = None,
+        generator: Generator | None = None,
         timeout: float = DEFAULT_TIMEOUT,
         min_probability: float = DEFAULT_MIN_PROBABILITY,
         max_searches: int | None = None,
-        tracker: Any | None = None,
+        tracker: SessionCostTracker | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
         resolver: Callable[..., Any] | None = None,
     ) -> None:
-        if client is None:
-            if not api_key:
-                raise ValueError("GEMINI_API_KEY is required for Gemini lookups")
-            from google import genai
-
-            client = genai.Client(api_key=api_key)
-        self._client = client
+        if generator is None:
+            generator = _GenAIGenerator(client=client, api_key=api_key)
+        self._generator: Generator = generator
         if model is not None:
             verification_model = model
             discovery_model = model
@@ -208,7 +283,7 @@ class GeminiFinder:
         self.min_probability = min_probability
         self.max_searches = max_searches
         self.total_searches = 0
-        self.tracker = tracker
+        self.tracker: SessionCostTracker | None = tracker
         self._sleep = sleep
         self._resolver = resolver
 
@@ -217,24 +292,25 @@ class GeminiFinder:
         prompt: str,
         *,
         model: str,
-        operation: str,
+        operation: GeminiOperation,
         json_mode: bool,
         search: bool = False,
     ) -> str | None:
         for attempt in range(MAX_ATTEMPTS):
             try:
-                response = await asyncio.wait_for(
-                    self._client.aio.models.generate_content(
+                result = await asyncio.wait_for(
+                    self._generator.generate(
+                        prompt,
                         model=model,
-                        contents=prompt,
-                        config=self._config(json_mode, search=search),
+                        json_mode=json_mode,
+                        search=search,
                     ),
                     timeout=self.timeout,
                 )
                 self._record_usage(
-                    response, model=model, operation=operation, search=search
+                    result, model=model, operation=operation, search=search
                 )
-                return getattr(response, "text", "") or ""
+                return result.text
             except Exception as exc:
                 if not _retryable(exc) or attempt == MAX_ATTEMPTS - 1:
                     return None
@@ -243,50 +319,25 @@ class GeminiFinder:
 
     def _record_usage(
         self,
-        response: Any,
+        result: GenerationResult,
         *,
         model: str,
-        operation: str,
+        operation: GeminiOperation,
         search: bool,
     ) -> None:
-        usage = getattr(response, "usage_metadata", None)
-        prompt_tokens = getattr(usage, "prompt_token_count", 0) or 0
-        output_tokens = getattr(usage, "candidates_token_count", 0) or 0
-        cached_tokens = getattr(usage, "cached_content_token_count", 0) or 0
-
-        search_queries = 0
+        search_queries = result.search_queries if search else 0
         if search:
-            candidates = getattr(response, "candidates", None)
-            if candidates and len(candidates) > 0:
-                first = candidates[0]
-                grounding = getattr(first, "grounding_metadata", None)
-                web_queries = getattr(grounding, "web_search_queries", None)
-                if web_queries and isinstance(web_queries, list):
-                    search_queries = len(web_queries)
             self.total_searches += search_queries
 
         if self.tracker is not None:
             self.tracker.record_call(
                 operation=operation,
                 model=model,
-                prompt_tokens=prompt_tokens,
-                output_tokens=output_tokens,
-                cached_tokens=cached_tokens,
+                prompt_tokens=result.prompt_tokens,
+                output_tokens=result.output_tokens,
+                cached_tokens=result.cached_tokens,
                 search_queries=search_queries,
             )
-
-    @staticmethod
-    def _config(json_mode: bool, search: bool = False) -> Any:
-        from google.genai import types
-
-        options: dict[str, Any] = {
-            "temperature": 0.2,
-        }
-        if search:
-            options["tools"] = [types.Tool(google_search=types.GoogleSearch())]
-        if json_mode:
-            options["response_mime_type"] = "application/json"
-        return types.GenerateContentConfig(**options)
 
     async def verify_redirect(
         self,
@@ -400,7 +451,7 @@ class GeminiFinder:
                 return None
             candidates = parse_candidates(text)
             if candidates is not None:
-                return candidates
+                return [c for c in candidates if c.probability >= self.min_probability]
             if attempt == 0:
                 continue
         return None
