@@ -119,6 +119,7 @@ class VerifyConfig:
     limit: int | None = None
     only_broken: bool = False
     save_archive: bool = False
+    no_ia_keys: bool = False
     refresh: bool = False
     concurrency: int = DEFAULT_CONCURRENCY
     wayback_concurrency: int = DEFAULT_WAYBACK_CONCURRENCY
@@ -130,6 +131,8 @@ class VerifyConfig:
     discovery_model: str | None = None
     max_searches: int | None = None
     api_key: str | None = None
+    ia_access_key: str | None = None
+    ia_secret_key: str | None = None
 
     @property
     def verification_model_name(self) -> str:
@@ -837,11 +840,21 @@ async def run_verification(
         if active_deps.checker is not None
         else HTTPChecker(timeout=config.timeout)
     )
+    use_ia_keys = config.save_archive and not config.no_ia_keys
+    if use_ia_keys and active_deps.wayback is None:
+        if not (config.ia_access_key and config.ia_secret_key):
+            raise ValueError(
+                "IA_ACCESS_KEY and IA_SECRET_KEY are required with --save-archive "
+                "(or pass --no-ia-keys)"
+            )
     active_wayback: Archive = (
         active_deps.wayback
         if active_deps.wayback is not None
         else WaybackClient(
-            timeout=config.timeout, concurrency=config.wayback_concurrency
+            timeout=config.timeout,
+            concurrency=config.wayback_concurrency,
+            ia_access_key=config.ia_access_key if use_ia_keys else None,
+            ia_secret_key=config.ia_secret_key if use_ia_keys else None,
         )
     )
     try:

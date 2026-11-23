@@ -193,6 +193,84 @@ def test_verify_requires_the_api_key(
     assert "GEMINI_API_KEY" in capsys.readouterr().err
 
 
+def test_save_archive_requires_ia_keys_unless_no_ia_keys_set(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    monkeypatch.delenv("IA_ACCESS_KEY", raising=False)
+    monkeypatch.delenv("IA_SECRET_KEY", raising=False)
+    catalog = tmp_path / "idsignpost.json"
+    cache_file = tmp_path / "cache.json"
+    cost_file = tmp_path / "costs.json"
+    write_catalog(catalog, [make_entry("a")])
+
+    assert (
+        main(
+            [
+                "verify",
+                "--input",
+                str(catalog),
+                "--output",
+                str(catalog),
+                "--save-archive",
+            ]
+        )
+        == 1
+    )
+    err = capsys.readouterr().err
+    assert "IA_ACCESS_KEY and IA_SECRET_KEY" in err
+    assert "--no-ia-keys" in err
+
+    assert (
+        main(
+            [
+                "verify",
+                "--input",
+                str(catalog),
+                "--output",
+                str(catalog),
+                "--cache-file",
+                str(cache_file),
+                "--cost-file",
+                str(cost_file),
+                "--save-archive",
+                "--no-ia-keys",
+            ],
+            deps=VerifyDeps(
+                checker=FakeChecker(),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
+        )
+        == 0
+    )
+
+    monkeypatch.setenv("IA_ACCESS_KEY", "ia-access")
+    monkeypatch.setenv("IA_SECRET_KEY", "ia-secret")
+    assert (
+        main(
+            [
+                "verify",
+                "--input",
+                str(catalog),
+                "--output",
+                str(catalog),
+                "--cache-file",
+                str(cache_file),
+                "--cost-file",
+                str(cost_file),
+                "--save-archive",
+            ],
+            deps=VerifyDeps(
+                checker=FakeChecker(),
+                finder=FakeFinder(),
+                wayback=FakeArchive(),
+            ),
+        )
+        == 0
+    )
+
+
 def test_verify_merges_results_into_the_full_catalog(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -912,6 +990,7 @@ def test_load_env_file_supports_export_and_inline_comments(
                 "--limit",
                 "--only-broken",
                 "--save-archive",
+                "--no-ia-keys",
                 "--refresh",
                 "--concurrency",
                 "--wayback-concurrency",
@@ -939,6 +1018,7 @@ def test_load_env_file_supports_export_and_inline_comments(
                 "--limit",
                 "--only-broken",
                 "--save-archive",
+                "--no-ia-keys",
                 "--refresh",
                 "--concurrency",
                 "--wayback-concurrency",

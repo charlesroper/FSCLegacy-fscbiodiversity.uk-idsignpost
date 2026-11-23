@@ -4,7 +4,7 @@
 [![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
 [![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pytest](https://img.shields.io/badge/tests-366%20passed-0A9EDC.svg)](https://docs.pytest.org/)
+[![pytest](https://img.shields.io/badge/tests-373%20passed-0A9EDC.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#what-is-inside-the-catalogue)
@@ -140,11 +140,14 @@ uv sync
 The verification pipeline uses Google Gemini (`gemini-3.1-flash-lite` with Grounded Search) to inspect ambiguous redirects and find replacements for broken links.
 
 - **Offline tasks:** Extracting HTML (`extract`), rendering exports (`export`), inspecting cost history (`cost`) and running tests (`pytest`) work offline without an API key.
-- **Online verification:** To run `verify` or `run`, obtain an API key from [Google AI Studio](https://ai.google.dev/) and set `GEMINI_API_KEY` in a local `.env` file (recommended across shells) or in your current shell session:
+- **Online verification:** To run `verify` or `run`, obtain an API key from [Google AI Studio](https://ai.google.dev/) and set `GEMINI_API_KEY` in a local `.env` file (recommended across shells) or in your current shell session.
+- **Wayback Save Page Now (`--save-archive`):** When `--save-archive` is enabled, `verify` and `run` default to authenticated Internet Archive Save Page Now 2 (SPN2) captures using `IA_ACCESS_KEY` and `IA_SECRET_KEY` from [archive.org/account/s3.php](https://archive.org/account/s3.php). Pass `--no-ia-keys` to fall back explicitly to unauthenticated `GET` captures when those keys are absent.
 
 ```dotenv
 # .env (cross-platform, loaded automatically outside pytest)
 GEMINI_API_KEY="your-api-key-here"
+IA_ACCESS_KEY="your-ia-access-key"
+IA_SECRET_KEY="your-ia-secret-key"
 ```
 
 ```bash
@@ -206,7 +209,8 @@ uv run idsignpost verify --only-broken
 Additional options:
 
 - `--refresh`: ignores the cache and rechecks the selected entries.
-- `--save-archive`: asks the Wayback Machine to capture live pages that lack a snapshot (using two workers and a 60-second timeout).
+- `--save-archive`: asks the Wayback Machine to capture live pages that lack a snapshot (using two workers, a 60-second timeout, and authenticated SPN2 via `IA_ACCESS_KEY` and `IA_SECRET_KEY` by default).
+- `--no-ia-keys`: allows unauthenticated Wayback Save Page Now `GET` requests when `IA_ACCESS_KEY` and `IA_SECRET_KEY` are not set.
 - `--min-prob 0.40`: sets the minimum probability threshold for discovered Candidate URLs (default: `0.40`, range `0.0` to `1.0`).
 - `--model`, `--verification-model` and `--discovery-model`: set the default Gemini model (`gemini-3.1-flash-lite`) or assign separate models to verification checks and Grounded Search discovery.
 - `--max-searches`: caps Google Search grounding queries across a run to limit search charges.

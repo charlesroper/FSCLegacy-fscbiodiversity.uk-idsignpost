@@ -117,6 +117,7 @@ def _verify_config(args: argparse.Namespace) -> VerifyConfig:
         limit=args.limit,
         only_broken=args.only_broken,
         save_archive=args.save_archive,
+        no_ia_keys=args.no_ia_keys,
         refresh=args.refresh,
         concurrency=args.concurrency,
         wayback_concurrency=args.wayback_concurrency,
@@ -128,6 +129,8 @@ def _verify_config(args: argparse.Namespace) -> VerifyConfig:
         discovery_model=args.discovery_model,
         max_searches=args.max_searches,
         api_key=os.environ.get("GEMINI_API_KEY"),
+        ia_access_key=os.environ.get("IA_ACCESS_KEY"),
+        ia_secret_key=os.environ.get("IA_SECRET_KEY"),
     )
 
 
@@ -172,14 +175,22 @@ def _run_verify_stage(
     return merged, 0
 
 
-def _missing_key(command: str) -> bool:
-    if os.environ.get("GEMINI_API_KEY"):
-        return False
-    print(
-        f"idsignpost {command}: GEMINI_API_KEY is required for verification",
-        file=sys.stderr,
-    )
-    return True
+def _missing_keys(command: str, config: VerifyConfig) -> bool:
+    if not config.api_key:
+        print(
+            f"idsignpost {command}: GEMINI_API_KEY is required for verification",
+            file=sys.stderr,
+        )
+        return True
+    if config.save_archive and not config.no_ia_keys:
+        if not (config.ia_access_key and config.ia_secret_key):
+            print(
+                f"idsignpost {command}: IA_ACCESS_KEY and IA_SECRET_KEY are required "
+                "with --save-archive (or pass --no-ia-keys for unauthenticated captures)",
+                file=sys.stderr,
+            )
+            return True
+    return False
 
 
 def _prepare_verify(
@@ -190,7 +201,7 @@ def _prepare_verify(
     if error is not None:
         print(f"idsignpost {command}: {error}", file=sys.stderr)
         return None, 2
-    if _missing_key(command):
+    if _missing_keys(command, config):
         return None, 1
     return config, 0
 
@@ -289,6 +300,11 @@ def _add_verify_options(parser: argparse.ArgumentParser) -> None:
         "--save-archive",
         action="store_true",
         help="Trigger Wayback Save Page Now for unarchived live URLs.",
+    )
+    parser.add_argument(
+        "--no-ia-keys",
+        action="store_true",
+        help="Fall back to unauthenticated Save Page Now without IA_ACCESS_KEY and IA_SECRET_KEY.",
     )
     parser.add_argument(
         "--refresh",

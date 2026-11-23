@@ -10,7 +10,9 @@ from pathlib import Path
 import socket
 from typing import Any
 
+import httpx
 import pytest
+import respx
 
 from idsignpost.cache import CatalogCache
 from idsignpost.gemini_finder import Candidate, GenerationResult, RedirectVerdict
@@ -2062,3 +2064,96 @@ async def test_run_verification_wires_models_and_max_searches_to_gemini_finder(
     cost_payload = json.loads(cost_file.read_text(encoding="utf-8"))
     assert cost_payload["runs"][0]["calls"] == 3
     assert cost_payload["runs"][0]["search_queries"] == 1
+
+
+async def test_run_verification_save_archive_requires_ia_keys_by_default(
+    tmp_path: Path,
+) -> None:
+    config = VerifyConfig(
+        save_archive=True,
+        cache_file=tmp_path / "cache.json",
+        cost_file=tmp_path / "costs.json",
+    )
+
+    with pytest.raises(ValueError, match="IA_ACCESS_KEY and IA_SECRET_KEY"):
+        await run_verification(
+            [entry()],
+            config,
+            deps=VerifyDeps(
+                checker=CloseableChecker({URL: live()}),
+                finder=FakeFinder(),
+            ),
+        )
+
+
+async def test_run_verification_wires_ia_keys_and_no_ia_keys_fallback(
+    tmp_path: Path,
+) -> None:
+    from idsignpost.wayback import AVAILABILITY_URL, SAVE_URL, SPN2_SAVE_URL
+
+    with respx.mock:
+        respx.get(AVAILABILITY_URL).mock(
+            return_value=httpx.Response(200, json={"archived_snapshots": {}})
+        )
+        spn2_route = respx.post(SPN2_SAVE_URL).mock(
+            return_value=httpx.Response(
+                200,
+                json={
+                    "status": "success",
+                    "timestamp": "20261123000000",
+                    "original_url": URL,
+                },
+            )
+        )
+        anon_route = respx.get(f"{SAVE_URL}{URL}").mock(
+            return_value=httpx.Response(
+                200,
+                headers={
+                    "content-location": f"/web/20261123000001/{URL}",
+                },
+            )
+        )
+
+        auth_config = VerifyConfig(
+            save_archive=True,
+            ia_access_key="ia-access",
+            ia_secret_key="ia-secret",
+            cache_file=tmp_path / "auth-cache.json",
+            cost_file=tmp_path / "auth-costs.json",
+        )
+        auth_merged, _ = await run_verification(
+            [entry()],
+            auth_config,
+            deps=VerifyDeps(
+                checker=CloseableChecker({URL: live()}),
+                finder=FakeFinder(),
+            ),
+        )
+        assert (
+            auth_merged[0].wayback_link
+            == f"https://web.archive.org/web/20261123000000/{URL}"
+        )
+        assert spn2_route.call_count == 1
+        assert anon_route.call_count == 0
+
+        fallback_config = VerifyConfig(
+            save_archive=True,
+            no_ia_keys=True,
+            ia_access_key="ia-access",
+            ia_secret_key="ia-secret",
+            cache_file=tmp_path / "anon-cache.json",
+            cost_file=tmp_path / "anon-costs.json",
+        )
+        anon_merged, _ = await run_verification(
+            [entry()],
+            fallback_config,
+            deps=VerifyDeps(
+                checker=CloseableChecker({URL: live()}),
+                finder=FakeFinder(),
+            ),
+        )
+        assert (
+            anon_merged[0].wayback_link
+            == f"https://web.archive.org/web/20261123000001/{URL}"
+        )
+        assert anon_route.call_count == 1

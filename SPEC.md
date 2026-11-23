@@ -254,8 +254,9 @@ flowchart TD
 - Accept only snapshots whose `closest.status` is `"200"`. Ignore redirect and error snapshots.
 - Upgrade `http://web.archive.org/...` snapshot URLs to `https://`.
 - If no snapshot exists, `web_link_state == "ok"`, and `--save-archive` is enabled:
-  - Trigger `https://web.archive.org/save/<url>` with a 60-second timeout, a hard cap of two concurrent captures independent of `--wayback-concurrency`, and 429 handling that skips the capture for this run.
-  - Extract the new snapshot URL from the final redirect URL or `Content-Location` header and store it in `wayback_link`.
+  - By default, require `IA_ACCESS_KEY` and `IA_SECRET_KEY` and submit captures via the authenticated Save Page Now 2 (SPN2) JSON API (`POST https://web.archive.org/save` with `Authorization: LOW <IA_ACCESS_KEY>:<IA_SECRET_KEY>` and `Accept: application/json`), polling `GET https://web.archive.org/save/status/<job_id>` up to the 60-second budget until `status == "success"` (`https://web.archive.org/web/<timestamp>/<original_url>`).
+  - When `--no-ia-keys` is passed, fall back explicitly to unauthenticated `GET https://web.archive.org/save/<url>` and extract the snapshot URL from the final redirect URL or `Content-Location` header.
+  - Enforce a hard cap of two concurrent captures independent of `--wayback-concurrency`, and handle `429` or `401`/`403` responses by skipping the capture for this run without failing verification.
 - If an entry is `broken`, its original `web_link` has no Wayback snapshot, and a confirmed non-transient `alternative_link` exists:
   - Call `_resolve_wayback(alternative_link, allow_save=self.save_archive)`, storing any found or captured snapshot in `wayback_link` and caching it under `alternative_link` in the URL Tier.
 - `blocked` links get a read-only lookup. `blocked` entries do not get alternative discovery; this is a known blind spot.
@@ -358,6 +359,7 @@ uv run idsignpost verify [OPTIONS]
   --limit N                   Verify first N entries
   --only-broken               Only verify entries currently marked broken
   --save-archive              Trigger Wayback Save Page Now for unarchived live URLs (off by default)
+  --no-ia-keys                Fall back to unauthenticated Save Page Now without IA_ACCESS_KEY and IA_SECRET_KEY
   --refresh                   Ignore cache and force re-verification
   --concurrency INT           Concurrent HTTP workers (default: 10)
   --wayback-concurrency INT   Concurrent Wayback workers (default: 2)
@@ -383,7 +385,7 @@ uv run idsignpost cost [--cost-file .idsignpost_costs.json] [--reset] [--json]
 
 On startup (unless `PYTEST_CURRENT_TEST` is set), `main()` reads `.env` from the working directory without overwriting existing environment variables. The `.env` parser ignores blank lines and `#` comments, strips optional `export ` prefixes, parses quoted values and strips inline `#` comments from unquoted values.
 
-`GEMINI_API_KEY` is required for `verify` and `run`. Fail fast at startup with a clear message if it is missing. Never log the key.
+`GEMINI_API_KEY` is required for `verify` and `run`. When `--save-archive` is active without `--no-ia-keys`, `IA_ACCESS_KEY` and `IA_SECRET_KEY` are also required. Fail fast at startup with a clear message if required keys are missing. Never log any key.
 
 Every subcommand and flag defines `--help` descriptions. `verify` and `run` build a `VerifyConfig` and delegate execution to `pipeline.run_verification`, accepting an optional `VerifyDeps` bundle (`checker`, `finder`, `wayback`, `generator` and `resolver`) for testing without monkeypatching internal hooks.
 
@@ -399,7 +401,7 @@ Every subcommand and flag defines `--help` descriptions. `verify` and `run` buil
 
 ## 8. Testing Specification (`tests/`)
 
-All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 366 offline tests across 12 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
+All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 373 offline tests across 12 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
 
 1. **`tests/test_models.py`:** Tests `CatalogEntry` defaults, strict field validation (`extra="forbid"`), `alternative_probability` bounds, canonical HTTP and error status values, timestamp rules (`submitted_at` naive, `verified_at` UTC), `load_catalog`, duplicate `id` rejection, immutable `merge_verification` and `merge_verified` updates and the repository-wide no-em-dash guardrail.
 2. **`tests/test_urls.py`:** Tests RFC 3986 sanitisation, relative URL resolution, tracking parameter removal, fragment removal for cache keys, scheme and userinfo rejection and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
