@@ -227,9 +227,10 @@
 
 @layer components {
   .site-header {
+    position: relative;
     background-color: var(--header-bg);
     border-bottom: 4px solid var(--accent);
-    padding: 16px 0;
+    padding: 18px 0 16px;
     color: var(--header-text);
   }
 
@@ -241,10 +242,7 @@
 
   .site-header__inner {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 10px;
+    align-items: flex-start;
   }
 
   .brand {
@@ -254,7 +252,7 @@
     text-decoration: none;
     color: var(--header-text);
     min-width: 0;
-    flex: 1 1 auto;
+    padding-right: 38px;
   }
 
   .brand:hover {
@@ -270,10 +268,10 @@
 
   .brand__title {
     font-family: "Alegreya", Georgia, serif;
-    font-size: 1.625rem;
+    font-size: clamp(1.22rem, 4.5vw, 1.625rem);
     font-weight: 700;
     letter-spacing: -0.01em;
-    line-height: 1.1;
+    line-height: 1.15;
     color: var(--header-text);
     display: block;
   }
@@ -294,11 +292,12 @@
   }
 
   .theme-toggle {
+    position: absolute;
+    top: 4px;
+    right: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
@@ -310,8 +309,8 @@
   }
 
   .theme-toggle__icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
@@ -581,6 +580,15 @@
     font-weight: 700;
   }
 
+  .guide-action {
+    margin-top: 6px;
+  }
+
+  .guide-action .govuk-link {
+    display: inline-block;
+    padding: 4px 0;
+  }
+
   .formats,
   .muted {
     color: var(--text-muted);
@@ -588,9 +596,14 @@
   }
 
   .row-details {
-    margin-top: 6px;
+    margin-top: 14px;
     margin-bottom: 0;
     font-size: 0.92rem;
+  }
+
+  .row-details .govuk-details__summary {
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .row-details .govuk-details__text {

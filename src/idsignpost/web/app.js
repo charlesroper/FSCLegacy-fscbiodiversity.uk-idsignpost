@@ -153,7 +153,11 @@ function buildRow(entry) {
   const guide = cell("th", "Guide", "cell--guide");
   const guideBox = valueBox(make("strong", "guide-title", entry.title));
   const link = primaryLink(entry);
-  if (link) guideBox.append(make("br"), externalLink(link.url, link.label, entry.title));
+  if (link) {
+    const action = make("div", "guide-action");
+    action.append(externalLink(link.url, link.label, entry.title));
+    guideBox.append(action);
+  }
   const details = detailsFor(entry, key);
   if (details) guideBox.append(details);
   guide.append(guideBox);
