@@ -37,6 +37,7 @@ from idsignpost.http_checker import (
     is_auth_wall_redirect,
     is_auth_wall_url,
     is_explicit_soft_404,
+    is_same_host_root_redirect,
 )
 from idsignpost.models import (
     CatalogEntry,
@@ -48,7 +49,6 @@ from idsignpost.pre_resolver import PreResolver, PublisherPreResolver
 from idsignpost.sampler import get_stratified_sample
 from idsignpost.urls import (
     cache_key,
-    clean_host,
     host_matches,
     is_public_http_url,
     urls_equal,
@@ -260,7 +260,7 @@ def _pre_confirmation_rejection_note(
         return "rejected: generic hub page"
     if is_explicit_soft_404(result.page_title, result.page_h1):
         return "rejected: soft 404 page"
-    if _is_same_host_root_redirect(cleaned_url, final_url):
+    if is_same_host_root_redirect(cleaned_url, final_url):
         return "ignored: site homepage"
     return None
 
@@ -276,14 +276,6 @@ def _is_multi_resource_host(url: str) -> bool:
     return host_matches(url, MULTI_RESOURCE_HOSTS)
 
 
-def _is_same_host_root_redirect(source_url: str, target_url: str) -> bool:
-    return (
-        urlsplit(source_url).path not in {"", "/"}
-        and urlsplit(target_url).path in {"", "/"}
-        and clean_host(source_url) == clean_host(target_url)
-    )
-
-
 def _url_policy_note(url: str, broken_link: str) -> str | None:
     """Apply pure URL policy checks without DNS or network I/O."""
     try:
@@ -294,7 +286,7 @@ def _url_policy_note(url: str, broken_link: str) -> str | None:
         cleaned = cache_key(url)
         if urlsplit(cleaned).path in {"", "/"} and (
             _is_multi_resource_host(cleaned)
-            or _is_same_host_root_redirect(broken_link, cleaned)
+            or is_same_host_root_redirect(broken_link, cleaned)
         ):
             return "ignored: site homepage"
         if urls_equal(cleaned, broken_link):
@@ -436,9 +428,9 @@ class Verifier:
             )
         verdicts_by_index: dict[int, _Verdict] = {}
 
-        async def run_subgroup(items: list[tuple[int, CatalogEntry]]) -> None:
+        async def run_subgroup(indexed_entries: list[tuple[int, CatalogEntry]]) -> None:
             settled = not self.refresh
-            for index, member in items:
+            for index, member in indexed_entries:
                 verdict = await self._verdict(
                     member, facts, bypass_entry_cache=not settled
                 )
@@ -448,7 +440,12 @@ class Verifier:
 
         async with self._http:
             facts = await self._facts(url, entry.title)
-            await asyncio.gather(*(run_subgroup(items) for items in subgroups.values()))
+            await asyncio.gather(
+                *(
+                    run_subgroup(indexed_entries)
+                    for indexed_entries in subgroups.values()
+                )
+            )
             verdicts = [verdicts_by_index[index] for index in range(len(members))]
             allow_primary_save = self.save_archive and any(
                 verdict.state == "ok" and not verdict.transient for verdict in verdicts
@@ -771,6 +768,23 @@ class Verifier:
             note=note,
         )
 
+    async def _evaluate_candidates(
+        self,
+        entry: CatalogEntry,
+        candidates: Sequence[Candidate],
+        notes: list[str],
+    ) -> tuple[DiscoveryOutcome | None, bool]:
+        """Evaluate candidates in order, returning the first match and transient flag."""
+        transient = False
+        for candidate in candidates:
+            attempt = await self._evaluate_candidate(entry, candidate)
+            transient = transient or attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
+            if attempt.alternative is not None:
+                return attempt, transient
+        return None, transient
+
     async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:
         """Try any stored alternative first, then discover and evaluate candidates."""
         if not entry.web_link:
@@ -794,13 +808,12 @@ class Verifier:
 
         if self.pre_resolver is not None:
             pre_candidates = await self.pre_resolver.resolve(entry)
-            for candidate in pre_candidates:
-                attempt = await self._evaluate_candidate(entry, candidate)
-                transient = transient or attempt.transient
-                if attempt.note:
-                    notes.append(attempt.note)
-                if attempt.alternative is not None:
-                    return attempt
+            outcome, pre_transient = await self._evaluate_candidates(
+                entry, pre_candidates, notes
+            )
+            transient = transient or pre_transient
+            if outcome is not None:
+                return outcome
 
         async with self._gemini:
             candidates = await self.finder.discover(entry)
@@ -809,13 +822,12 @@ class Verifier:
                 transient=not rejected, note=_join_notes(notes) or "search failed"
             )
 
-        for candidate in candidates:
-            attempt = await self._evaluate_candidate(entry, candidate)
-            transient = transient or attempt.transient
-            if attempt.note:
-                notes.append(attempt.note)
-            if attempt.alternative is not None:
-                return attempt
+        outcome, disc_transient = await self._evaluate_candidates(
+            entry, candidates, notes
+        )
+        transient = transient or disc_transient
+        if outcome is not None:
+            return outcome
         return DiscoveryOutcome(
             transient=transient,
             note=_join_notes(notes) or "no candidates returned",

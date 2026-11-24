@@ -139,15 +139,30 @@ def _royensoc_pdf_stem(url: str) -> str | None:
     return stem or None
 
 
-def _royensoc_distinctive_tokens(title: str) -> list[str]:
+def _distinctive_tokens(
+    text: str,
+    *,
+    stopwords: frozenset[str],
+    min_length: int = 2,
+    skip_digits: bool = False,
+) -> list[str]:
+    """Return deduplicated non-stopword alphanumeric tokens in appearance order."""
     tokens: list[str] = []
-    for token in re.findall(r"[A-Za-z0-9]+", title):
+    seen: set[str] = set()
+    for token in re.findall(r"[A-Za-z0-9]+", text):
         lowered = token.lower()
-        if lowered in _ROYENSOC_STOPWORDS or lowered.isdigit() or len(lowered) <= 1:
+        if len(lowered) < min_length or lowered in stopwords:
             continue
-        if lowered not in {t.lower() for t in tokens}:
+        if skip_digits and lowered.isdigit():
+            continue
+        if lowered not in seen:
+            seen.add(lowered)
             tokens.append(token)
     return tokens
+
+
+def _royensoc_distinctive_tokens(title: str) -> list[str]:
+    return _distinctive_tokens(title, stopwords=_ROYENSOC_STOPWORDS, skip_digits=True)
 
 
 def _rendered_title(item: dict[str, Any]) -> str:
@@ -239,6 +254,13 @@ def _is_mikes_legacy_url(url: str) -> bool:
     )
 
 
+def _merge_site_links(target: dict[str, str], parsed: dict[str, str]) -> None:
+    """Merge extracted site links into target, preferring non-empty labels."""
+    for url, label in parsed.items():
+        if url not in target or (label and not target[url]):
+            target[url] = label
+
+
 def _extract_mikes_links(html: str) -> dict[str, str]:
     soup = BeautifulSoup(html, "html.parser")
     links: dict[str, str] = {}
@@ -255,17 +277,12 @@ def _extract_mikes_links(html: str) -> dict[str, str]:
             continue
         normalized = urlunsplit(("https", "sites.google.com", clean_path, "", ""))
         label = " ".join(tag.get_text(" ", strip=True).split())
-        if normalized not in links or (label and not links[normalized]):
-            links[normalized] = label
+        _merge_site_links(links, {normalized: label})
     return links
 
 
 def _distinctive_words(text: str, stopwords: frozenset[str]) -> set[str]:
-    return {
-        token.lower()
-        for token in re.findall(r"[A-Za-z0-9]+", text)
-        if len(token) > 1 and token.lower() not in stopwords
-    }
+    return {t.lower() for t in _distinctive_tokens(text, stopwords=stopwords)}
 
 
 def _score_mikes_link(
@@ -423,9 +440,7 @@ class PublisherPreResolver:
             }
             if not non_root:
                 root_links = await self._fetch_mikes_links(_MIKES_ROOT_URL)
-                for url, label in root_links.items():
-                    if url not in links or (label and not links[url]):
-                        links[url] = label
+                _merge_site_links(links, root_links)
 
             has_leaves = any(
                 len(urlsplit(url).path.strip("/").split("/")) >= 5
@@ -441,9 +456,7 @@ class PublisherPreResolver:
                 ][:_MIKES_MAX_SUBINDEXES]
                 for sub_url in subindexes:
                     sub_links = await self._fetch_mikes_links(sub_url)
-                    for url, label in sub_links.items():
-                        if url not in links or (label and not links[url]):
-                            links[url] = label
+                    _merge_site_links(links, sub_links)
 
             self._mikes_index = [
                 (url, label)
