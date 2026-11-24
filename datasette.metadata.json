@@ -1,0 +1,59 @@
+{
+  "title": "Biodiversity ID Signpost",
+  "description": "Verified catalogue of 736 British and Irish wildlife identification guides rescued from the Field Studies Council legacy archive.",
+  "source": "Field Studies Council Legacy Archive",
+  "source_url": "https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost",
+  "license": "MIT",
+  "license_url": "https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost/blob/main/LICENSE",
+  "databases": {
+    "idsignpost": {
+      "tables": {
+        "entries": {
+          "label_column": "title",
+          "fts_table": "entries_fts",
+          "sort": "id",
+          "facets": [
+            "web_link_state",
+            "is_free",
+            "web_link_status",
+            "submitted_by"
+          ],
+          "description": "All 736 Catalog Entries. Check web_link when web_link_state is ok, alternative_link when broken, or wayback_link for Internet Archive snapshots."
+        },
+        "entry_formats": {
+          "facets": [
+            "format"
+          ],
+          "sort": "format",
+          "description": "Normalised distribution formats (App, Online, PDF, Publication) linked to entries by title."
+        },
+        "entry_additional_links": {
+          "sort": "entry_id",
+          "description": "Extra links extracted from resource descriptions."
+        }
+      },
+      "queries": {
+        "search_working_guides": {
+          "title": "Search live and recovered guides",
+          "description": "Full-text search across working original guides and confirmed Alternatives (leave q blank to list all).",
+          "sql": "SELECT wg.title, wg.authors, wg.formats, CASE wg.is_free WHEN 1 THEN 'Free' WHEN 0 THEN 'Paid' ELSE 'Unknown' END AS price, wg.best_link, wg.link_source, wg.wayback_link, wg.keywords FROM working_guides AS wg WHERE COALESCE(NULLIF(trim(:q), ''), '') = '' OR wg.id IN (SELECT id FROM entries_fts WHERE entries_fts MATCH :q) ORDER BY wg.title;"
+        },
+        "free_online_and_pdf_guides": {
+          "title": "Free Online and PDF identification guides",
+          "description": "Zero-cost resources available directly online or as PDF downloads with verified live links.",
+          "sql": "SELECT DISTINCT wg.title, wg.authors, wg.formats, wg.best_link, wg.link_source, wg.wayback_link, wg.keywords FROM working_guides AS wg JOIN entry_formats AS ef ON ef.entry_id = wg.id WHERE wg.is_free = 1 AND ef.format IN ('Online', 'PDF') ORDER BY wg.title;"
+        },
+        "link_health_summary": {
+          "title": "Link health and recovery summary",
+          "description": "Counts by verification state alongside confirmed Alternatives and Wayback Machine coverage.",
+          "sql": "SELECT COALESCE(web_link_state, 'unlinked') AS state, COUNT(*) AS entries, SUM(CASE WHEN alternative_link IS NOT NULL THEN 1 ELSE 0 END) AS with_alternative, SUM(CASE WHEN wayback_link IS NOT NULL THEN 1 ELSE 0 END) AS with_wayback FROM entries GROUP BY COALESCE(web_link_state, 'unlinked') ORDER BY entries DESC;"
+        },
+        "recovered_alternatives_by_domain": {
+          "title": "Broken links and recoveries by host",
+          "description": "Groups broken Catalog Entries by original host and shows how many gained a confirmed Alternative.",
+          "sql": "WITH broken AS (SELECT web_link, alternative_link, substr(web_link, instr(web_link, '://') + 3) AS after_scheme FROM entries WHERE web_link_state = 'broken' AND web_link IS NOT NULL), hosts AS (SELECT lower(CASE WHEN instr(after_scheme, '/') > 0 THEN substr(after_scheme, 1, instr(after_scheme, '/') - 1) ELSE after_scheme END) AS host, alternative_link FROM broken) SELECT host, COUNT(*) AS broken_entries, SUM(CASE WHEN alternative_link IS NOT NULL THEN 1 ELSE 0 END) AS recovered FROM hosts GROUP BY host ORDER BY broken_entries DESC, host;"
+        }
+      }
+    }
+  }
+}
