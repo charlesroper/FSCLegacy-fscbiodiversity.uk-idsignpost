@@ -26,3 +26,9 @@ Judgement-call standards for `/code-review` and contributors in this repository.
 - Follow `docs/agents/writing-policy.md` and `AGENTS.md`: route each documentation section by reader job (`on-writing-well`, `ste-80` or `project-narrative`), then pass prose through `guardian-style-guide`.
 - Use British English (`-ise`, `-our`), down-style headings and zero Oxford commas unless needed to prevent ambiguity.
 - Never include em-dashes (`\u2014`) anywhere in prose, docstrings, comments or commit messages.
+
+## Web directory (`src/idsignpost/web/`)
+
+- Call `document.getElementById(...)` directly in DOM wiring rather than hiding element IDs behind wrapper helpers (`byId`), so static markup checks in `tests/test_web.py` verify every ID.
+- Keep all UI microcopy, headings, empty states and labels aligned with `GLOSSARY.md` and `docs/agents/writing-policy.md` (including zero Oxford commas in HTML/JS strings).
+- Separate interactive touch targets (`>= 10px` vertical breathing room) and verify both mobile (`390x844`) and desktop (`1280x800`) viewports via `node tests/js/check_layout.mjs` after CSS or HTML layout changes.
