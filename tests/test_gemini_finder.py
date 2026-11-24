@@ -389,13 +389,13 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
     assert call1.thinking_budget == 0
     assert "Comprehensive guide to bats in flight." in call1.prompt
 
-    # 2. discover: should use discovery_model and enable search
+    # 2. discover: should use discovery_model, enable search, and disable json/thinking
     await finder.discover(entry())
     call2 = generator.calls[1]
     assert call2.model == "gemini-3.8-flash"
     assert call2.search is True
-    assert call2.json_mode is True
-    assert call2.thinking_budget == 512
+    assert call2.json_mode is False
+    assert call2.thinking_budget == 0
 
     # 3. confirm_alternative: should use verification_model and disable search
     await finder.confirm_alternative(
@@ -576,8 +576,9 @@ async def test_genai_generator_configures_thinking_and_extracts_usage(
         thinking_budget=0
     )
     assert captured_configs[1].thinking_config == types.ThinkingConfig(
-        thinking_budget=512
+        thinking_budget=0
     )
+    assert captured_configs[1].response_mime_type is None
     assert captured_configs[2].thinking_config == types.ThinkingConfig(
         thinking_budget=0
     )
@@ -586,3 +587,29 @@ async def test_genai_generator_configures_thinking_and_extracts_usage(
     assert run.thinking_tokens == 180
     assert run.tool_use_prompt_tokens == 75
     assert run.search_queries == 2
+
+
+async def test_discover_extracts_json_when_grounded_search_returns_prose() -> None:
+    finder, generator, _ = make_finder(
+        [
+            GenerationResult(
+                text="Found https://example.org/found via Google Search (confidence 0.9).",
+                search_queries=2,
+            ),
+            GenerationResult(
+                text='{"candidates": [{"url": "https://example.org/found", "probability": 0.9, "reasoning": "Live host."}]}',
+            ),
+        ]
+    )
+
+    candidates = await finder.discover(entry())
+
+    assert candidates == [Candidate("https://example.org/found", 0.9, "Live host.")]
+    assert finder.total_searches == 2
+    assert len(generator.calls) == 2
+    assert generator.calls[0].search is True
+    assert generator.calls[0].json_mode is False
+    assert generator.calls[0].thinking_budget == 0
+    assert generator.calls[1].search is False
+    assert generator.calls[1].json_mode is True
+    assert generator.calls[1].thinking_budget == 0

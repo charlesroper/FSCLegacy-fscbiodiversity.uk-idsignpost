@@ -7,6 +7,7 @@ import json
 import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
@@ -46,10 +47,13 @@ BLOCKED_HOSTS = (
 )
 
 DISCOVERY_PROMPT = (
-    "Find the exact page that hosts or offers this identification guide. "
-    "Return at most three candidate URLs, most likely first. "
-    "Do not return a site homepage (unless it is a dedicated standalone resource "
-    "website), search page, or general category page.\n"
+    "Verify using Google Search where the exact page hosting or offering this "
+    "identification guide is located online right now ({current_date}). "
+    "Return at most three candidate URLs from today's Google Search results, "
+    "most likely first, each with a confidence probability between 0 and 1 and "
+    "one sentence explaining the match.\n"
+    "Do not suggest a site homepage (unless it is a dedicated standalone "
+    "resource website), a search page, or a general category page.\n"
     "Do not run site: search queries against the broken link's dead host "
     "({broken_host}); you may still find known migrated destinations without "
     "probing that dead host.\n"
@@ -62,6 +66,13 @@ DISCOVERY_PROMPT = (
     "Keywords: {keywords}\n"
     "Broken link: {web_link}\n"
     "{hint_block}"
+)
+
+EXTRACTION_PROMPT = (
+    "Extract the candidate replacement URLs recommended in the search notes below.\n"
+    "Only include URLs explicitly recommended as live replacements in the notes "
+    "(never invent URLs, and ignore any broken or excluded URLs mentioned only as inactive).\n"
+    "Search notes:\n{notes}\n"
     'Reply as JSON: {{"candidates": [{{"url": "...", "probability": 0.0, '
     '"reasoning": "one sentence"}}]}}.\n'
     "Use a probability between 0 and 1 for each candidate."
@@ -149,7 +160,7 @@ class _GenAIGenerator:
         }
         if search:
             options["tools"] = [types.Tool(google_search=types.GoogleSearch())]
-        if json_mode:
+        if json_mode and not search:
             options["response_mime_type"] = "application/json"
         if thinking_budget is not None:
             options["thinking_config"] = types.ThinkingConfig(
@@ -470,6 +481,7 @@ class GeminiFinder:
             else ""
         )
         prompt = DISCOVERY_PROMPT.format(
+            current_date=datetime.now(UTC).strftime("%d %B %Y"),
             broken_host=broken_host,
             title=entry.title,
             authors=entry.authors or "unknown",
@@ -479,17 +491,30 @@ class GeminiFinder:
             web_link=entry.web_link,
             hint_block=hint_block,
         )
+        # Keep json_mode=False and thinking_budget=0 on grounded search calls:
+        # gemini-3.1-flash-lite skips google_search when JSON output or thinking
+        # tokens are enabled alongside the tool.
         text = await self._generate(
             prompt,
             model=self.discovery_model,
             operation="candidate_discovery",
-            json_mode=True,
+            json_mode=False,
             search=True,
-            thinking_budget=512,
+            thinking_budget=0,
         )
         if text is None:
             return None
         candidates = parse_candidates(text)
+        if candidates is None and re.search(r"https?://\S+", text):
+            extracted = await self._generate(
+                EXTRACTION_PROMPT.format(notes=text),
+                model=self.verification_model,
+                operation="candidate_discovery",
+                json_mode=True,
+                search=False,
+                thinking_budget=0,
+            )
+            candidates = parse_candidates(extracted) if extracted is not None else None
         if candidates is None:
             return None
         return [c for c in candidates if c.probability >= self.min_probability]
