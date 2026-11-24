@@ -72,19 +72,30 @@ class GenerationResult:
     prompt_tokens: int = 0
     output_tokens: int = 0
     cached_tokens: int = 0
+    thinking_tokens: int = 0
+    tool_use_prompt_tokens: int = 0
     search_queries: int = 0
 
 
 class Generator(Protocol):
     async def generate(
-        self, prompt: str, *, model: str, json_mode: bool, search: bool
+        self,
+        prompt: str,
+        *,
+        model: str,
+        json_mode: bool,
+        search: bool,
+        thinking_budget: int | None = None,
     ) -> GenerationResult: ...
 
 
 class _GenAIGenerator:
     """Google GenAI SDK adapter producing GenerationResult payloads."""
 
-    def __init__(self, *, api_key: str | None = None) -> None:
+    def __init__(self, *, api_key: str | None = None, client: Any = None) -> None:
+        if client is not None:
+            self._client = client
+            return
         if not api_key:
             raise ValueError("GEMINI_API_KEY is required for Gemini lookups")
         from google import genai
@@ -92,7 +103,11 @@ class _GenAIGenerator:
         self._client = genai.Client(api_key=api_key)
 
     @staticmethod
-    def _config(json_mode: bool, search: bool = False) -> Any:
+    def _config(
+        json_mode: bool,
+        search: bool = False,
+        thinking_budget: int | None = None,
+    ) -> Any:
         from google.genai import types
 
         options: dict[str, Any] = {
@@ -102,21 +117,35 @@ class _GenAIGenerator:
             options["tools"] = [types.Tool(google_search=types.GoogleSearch())]
         if json_mode:
             options["response_mime_type"] = "application/json"
+        if thinking_budget is not None:
+            options["thinking_config"] = types.ThinkingConfig(
+                thinking_budget=thinking_budget
+            )
         return types.GenerateContentConfig(**options)
 
     async def generate(
-        self, prompt: str, *, model: str, json_mode: bool, search: bool
+        self,
+        prompt: str,
+        *,
+        model: str,
+        json_mode: bool,
+        search: bool,
+        thinking_budget: int | None = None,
     ) -> GenerationResult:
         response = await self._client.aio.models.generate_content(
             model=model,
             contents=prompt,
-            config=self._config(json_mode, search=search),
+            config=self._config(
+                json_mode, search=search, thinking_budget=thinking_budget
+            ),
         )
         text = getattr(response, "text", "") or ""
         usage = getattr(response, "usage_metadata", None)
         prompt_tokens = getattr(usage, "prompt_token_count", 0) or 0
         output_tokens = getattr(usage, "candidates_token_count", 0) or 0
         cached_tokens = getattr(usage, "cached_content_token_count", 0) or 0
+        thinking_tokens = getattr(usage, "thoughts_token_count", 0) or 0
+        tool_use_prompt_tokens = getattr(usage, "tool_use_prompt_token_count", 0) or 0
 
         search_queries = 0
         if search:
@@ -133,6 +162,8 @@ class _GenAIGenerator:
             prompt_tokens=prompt_tokens,
             output_tokens=output_tokens,
             cached_tokens=cached_tokens,
+            thinking_tokens=thinking_tokens,
+            tool_use_prompt_tokens=tool_use_prompt_tokens,
             search_queries=search_queries,
         )
 
@@ -275,6 +306,7 @@ class GeminiFinder:
         operation: GeminiOperation,
         json_mode: bool,
         search: bool = False,
+        thinking_budget: int | None = None,
     ) -> str | None:
         for attempt in range(MAX_ATTEMPTS):
             try:
@@ -284,6 +316,7 @@ class GeminiFinder:
                         model=model,
                         json_mode=json_mode,
                         search=search,
+                        thinking_budget=thinking_budget,
                     ),
                     timeout=self.timeout,
                 )
@@ -316,6 +349,8 @@ class GeminiFinder:
                 prompt_tokens=result.prompt_tokens,
                 output_tokens=result.output_tokens,
                 cached_tokens=result.cached_tokens,
+                thinking_tokens=result.thinking_tokens,
+                tool_use_prompt_tokens=result.tool_use_prompt_tokens,
                 search_queries=search_queries,
             )
 
@@ -351,6 +386,7 @@ class GeminiFinder:
             operation="redirect_verification",
             json_mode=True,
             search=False,
+            thinking_budget=0,
         )
         return parse_redirect_verdict(text) if text is not None else None
 
@@ -383,6 +419,7 @@ class GeminiFinder:
             operation="candidate_confirmation",
             json_mode=True,
             search=False,
+            thinking_budget=0,
         )
         return parse_redirect_verdict(text) if text is not None else None
 
@@ -414,24 +451,17 @@ class GeminiFinder:
             '"reasoning": "one sentence"}]}. '
             "Use a probability between 0 and 1 for each candidate."
         )
-        for attempt in range(2):
-            if (
-                self.max_searches is not None
-                and self.total_searches >= self.max_searches
-            ):
-                return None
-            text = await self._generate(
-                prompt,
-                model=self.discovery_model,
-                operation="candidate_discovery",
-                json_mode=True,
-                search=True,
-            )
-            if text is None:
-                return None
-            candidates = parse_candidates(text)
-            if candidates is not None:
-                return [c for c in candidates if c.probability >= self.min_probability]
-            if attempt == 0:
-                continue
-        return None
+        text = await self._generate(
+            prompt,
+            model=self.discovery_model,
+            operation="candidate_discovery",
+            json_mode=True,
+            search=True,
+            thinking_budget=512,
+        )
+        if text is None:
+            return None
+        candidates = parse_candidates(text)
+        if candidates is None:
+            return None
+        return [c for c in candidates if c.probability >= self.min_probability]
