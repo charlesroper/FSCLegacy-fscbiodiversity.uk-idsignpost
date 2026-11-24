@@ -243,16 +243,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     text-decoration: none;
     color: var(--header-text);
+    min-width: 0;
+    flex: 1 1 auto;
   }
 
   .brand:hover {
@@ -294,33 +296,47 @@
   .theme-toggle {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    border: 2px solid var(--header-muted);
+    justify-content: center;
+    margin-left: auto;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid transparent;
     background-color: transparent;
-    color: var(--header-text);
-    font-size: 0.95rem;
-    font-weight: 700;
+    color: var(--header-muted);
     cursor: pointer;
   }
 
-  .theme-toggle::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid var(--header-muted);
-    background-color: transparent;
+  .theme-toggle__icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
-  .theme-toggle[aria-pressed="true"]::before {
-    background-color: var(--header-muted);
+  .theme-toggle__icon--sun {
+    display: none;
   }
 
-  .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+  .theme-toggle[aria-pressed="true"] .theme-toggle__icon--moon {
+    display: none;
+  }
+
+  .theme-toggle[aria-pressed="true"] .theme-toggle__icon--sun {
+    display: block;
+  }
+
+  .theme-toggle:hover,
+  .theme-toggle:focus-visible {
+    opacity: 1;
+    color: var(--header-text);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
   }
 
   .intro {
@@ -554,8 +570,10 @@
     border-bottom: none;
   }
 
-  .results-table .govuk-table__row:hover {
-    background-color: var(--surface-alt);
+  @media (hover: hover) {
+    .results-table .govuk-table__row:hover {
+      background-color: var(--surface-alt);
+    }
   }
 
   .guide-title {
@@ -570,24 +588,37 @@
   }
 
   .row-details {
-    margin-top: 8px;
+    margin-top: 6px;
     margin-bottom: 0;
     font-size: 0.92rem;
+  }
+
+  .row-details .govuk-details__text {
+    background-color: transparent;
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 2px 12px;
+    margin-top: 6px;
   }
 
   .details-list {
     margin: 0;
     display: grid;
-    gap: 6px;
+    gap: 4px;
+    max-width: 65ch;
   }
 
   .details-list dt {
     font-weight: 700;
     color: var(--heading);
+    margin-top: 4px;
+  }
+
+  .details-list dt:first-child {
+    margin-top: 0;
   }
 
   .details-list dd {
-    margin: 0 0 4px 0;
+    margin: 0;
     overflow-wrap: anywhere;
   }
 
@@ -713,8 +744,23 @@
       width: 100%;
     }
 
-    .results-table th.govuk-table__header {
+    .results-table th.cell--guide {
+      display: block;
+      text-align: left;
       padding-top: 2px;
+      padding-bottom: 10px;
+    }
+
+    .results-table th.cell--guide::before {
+      display: none;
+    }
+
+    .results-table .cell--guide .cell-value {
+      text-align: left;
+    }
+
+    .results-table .cell--guide .guide-title {
+      font-size: 1.05rem;
     }
 
     .results-table td.govuk-table__cell:last-child {
