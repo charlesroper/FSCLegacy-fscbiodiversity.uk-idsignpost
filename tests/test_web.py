@@ -55,8 +55,8 @@ def _top_level_statements(css: str) -> list[str]:
 
 
 @pytest.mark.parametrize("name", SHIPPED)
-def test_shipped_files_exist_without_em_dashes(name: str) -> None:
-    assert "\u2014" not in _read(name)
+def test_shipped_files_exist(name: str) -> None:
+    assert (WEB_DIR / name).is_file()
 
 
 def test_stylesheet_orders_layers_and_keeps_govuk_in_its_own_layer() -> None:
@@ -188,8 +188,13 @@ def test_footer_links_to_downloads_and_a_working_duckdb_query() -> None:
 
 def test_pages_workflow_ships_every_web_file_and_the_catalogue_exports() -> None:
     workflow = WORKFLOW_PATH.read_text(encoding="utf-8")
-    for name in SHIPPED:
-        assert f"src/idsignpost/web/{name}" in workflow
+    for pattern in (
+        "src/idsignpost/web/*.html",
+        "src/idsignpost/web/*.css",
+        "src/idsignpost/web/*.js",
+    ):
+        assert pattern in workflow
+    assert "node_modules" not in workflow
     for name in (
         "idsignpost.json",
         "idsignpost.csv",

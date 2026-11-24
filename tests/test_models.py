@@ -251,10 +251,18 @@ def test_repository_prose_and_code_contain_no_em_dashes() -> None:
         *root.glob("tests/**/*.py"),
         *root.glob("docs/**/*.md"),
         *root.glob("plans/**/*.md"),
+        root / "datasette.metadata.json",
+        *root.glob(".github/workflows/*.yml"),
+        *root.glob("src/idsignpost/web/*.html"),
+        *root.glob("src/idsignpost/web/*.css"),
+        *root.glob("src/idsignpost/web/*.js"),
+        *root.glob("tests/js/*.mjs"),
     ]
     offenders = [
         str(path.relative_to(root))
         for path in sorted(set(candidates))
-        if path.name != "idsignpost.md" and "\u2014" in path.read_text(encoding="utf-8")
+        if path.is_file()
+        and path.name != "idsignpost.md"
+        and "\u2014" in path.read_text(encoding="utf-8")
     ]
     assert offenders == []

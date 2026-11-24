@@ -34,7 +34,7 @@ jobs:
       - name: Assemble Pages bundle
         run: |
           mkdir -p _site
-          cp src/idsignpost/web/index.html src/idsignpost/web/styles.css src/idsignpost/web/app.js src/idsignpost/web/catalogue.js src/idsignpost/web/theme.js _site/
+          cp src/idsignpost/web/*.html src/idsignpost/web/*.css src/idsignpost/web/*.js _site/
           cp idsignpost.json idsignpost.csv idsignpost.parquet idsignpost.db _site/
           touch _site/.nojekyll
 
