@@ -9,6 +9,7 @@ from typing import Any
 import pytest
 
 from idsignpost.gemini_finder import (
+    DISCOVERY_PROMPT,
     Candidate,
     GeminiFinder,
     GenerationResult,
@@ -259,10 +260,56 @@ async def test_discover_filters_candidates_below_min_probability() -> None:
         ("https://zvab.com/books", True),
         ("https://www.scribd.com/document/123", True),
         ("https://fscbiodiversity.uk/idsignpost/", True),
+        ("https://www.amazon.co.uk/dp/B0001", True),
+        ("https://smile.amazon.co.uk/dp/B0001", True),
+        ("https://amazon.com/dp/B0001", True),
+        ("https://www.abebooks.co.uk/book/123", True),
+        ("https://www.abebooks.com/book/123", True),
+        ("https://www.alibris.co.uk/book/123", True),
+        ("https://alibris.com/book/123", True),
+        ("https://www.waterstones.com/book/123", True),
+        ("https://www.foyles.co.uk/book/123", True),
+        ("https://www.blackwells.co.uk/book/123", True),
+        ("https://wordery.com/book/123", True),
+        ("https://uk.bookshop.org/p/books/123", True),
+        ("https://www.nhbs.com/title/123", False),
+        ("https://www.pemberleybooks.com/product/123", False),
+        ("https://www.summerfieldbooks.com/product/123", False),
     ],
 )
 def test_blocklist_uses_host_suffix_not_substring(url: str, blocked: bool) -> None:
     assert is_blocked_host(url) is blocked
+
+
+async def test_discovery_prompt_forbids_dead_host_site_queries_and_lists_marketplaces() -> (
+    None
+):
+    assert "site:" in DISCOVERY_PROMPT
+    finder, generator, _ = make_finder(['{"candidates": []}'])
+
+    await finder.discover(entry())
+
+    prompt = generator.calls[0].prompt
+    assert "site:" in prompt
+    assert "example.org" in prompt
+    for domain in (
+        "amazon.co.uk",
+        "amazon.com",
+        "abebooks.co.uk",
+        "abebooks.com",
+        "alibris.co.uk",
+        "alibris.com",
+        "waterstones.com",
+        "foyles.co.uk",
+        "blackwells.co.uk",
+        "wordery.com",
+        "bookshop.org",
+        "ebay.co.uk",
+        "zvab.com",
+        "scribd.com",
+        "archive.org",
+    ):
+        assert domain in prompt
 
 
 async def test_confirmation_prompt_includes_the_page_metadata() -> None:

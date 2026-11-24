@@ -13,6 +13,9 @@ from idsignpost.http_checker import (
     OFFLINE_MIN_CHECKS,
     CheckResult,
     HTTPChecker,
+    is_auth_wall_redirect,
+    is_auth_wall_url,
+    is_explicit_soft_404,
     parse_page,
 )
 
@@ -361,3 +364,87 @@ def test_parse_page(
     body: bytes, expected: tuple[str | None, str | None, str | None]
 ) -> None:
     assert parse_page(body) == expected
+
+
+@pytest.mark.parametrize(
+    ("url", "expected"),
+    [
+        ("https://accounts.google.com/v3/signin/identifier?continue=x", True),
+        ("https://sub.accounts.google.com/ServiceLogin", True),
+        ("https://login.microsoftonline.com/common/oauth2/authorize", True),
+        ("https://example.org/v3/signin", True),
+        ("https://example.org/ServiceLogin?next=/guide", True),
+        ("https://example.org/login", True),
+        ("https://example.org/signin/page", True),
+        ("https://notaccounts.google.com/guide", False),
+        ("https://example.org/guide", False),
+    ],
+)
+def test_is_auth_wall_url(url: str, expected: bool) -> None:
+    assert is_auth_wall_url(url) is expected
+
+
+@pytest.mark.parametrize(
+    ("original_url", "final_url", "expected"),
+    [
+        (
+            "https://sites.google.com/site/mikesinsectkeys/Home/beetles",
+            "https://accounts.google.com/v3/signin/identifier?continue=x",
+            True,
+        ),
+        (
+            "https://example.org/guide",
+            "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+            True,
+        ),
+        ("https://example.org/guide", "https://example.org/login", True),
+        ("https://example.org/guide", "https://example.org/ServiceLogin?a=1", True),
+        ("https://example.org/guide", "https://example.org/signin", True),
+        ("https://example.org/login", "https://example.org/login?next=1", False),
+        ("https://accounts.google.com/foo", "https://example.org/login", False),
+        ("https://example.org/old", "https://example.org/new", False),
+    ],
+)
+def test_is_auth_wall_redirect(
+    original_url: str, final_url: str, expected: bool
+) -> None:
+    assert is_auth_wall_redirect(original_url, final_url) is expected
+
+
+@respx.mock
+async def test_auth_wall_redirect_returns_broken_redirect_mismatch() -> None:
+    source = "https://sites.google.com/site/mikesinsectkeys/Home/beetles"
+    target = "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fsites.google.com"
+    respx.get(source).mock(
+        return_value=httpx.Response(302, headers={"location": target})
+    )
+    respx.get(target).mock(
+        return_value=html("<title>Sign in - Google Accounts</title>")
+    )
+
+    result = await check(respx.routes[0], url=source)
+
+    assert result.state == "broken"
+    assert result.status == "redirect_mismatch"
+    assert result.resolved_url == target
+    assert result.is_suspicious_redirect is True
+    assert result.cacheable is True
+
+
+@pytest.mark.parametrize(
+    ("title", "h1", "expected"),
+    [
+        ("404 Not Found", None, True),
+        ("Page Not Found - Royal Entomological Society", None, True),
+        ("Example Site", "Page not found", True),
+        ("Error 404", None, True),
+        ("404", None, True),
+        ("Unexpected error in sampling", "Error guide", False),
+        ("Catalogue 4040", None, False),
+        (None, None, False),
+    ],
+)
+def test_is_explicit_soft_404(
+    title: str | None, h1: str | None, expected: bool
+) -> None:
+    assert is_explicit_soft_404(title, h1) is expected
