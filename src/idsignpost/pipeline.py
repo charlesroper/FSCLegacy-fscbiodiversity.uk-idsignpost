@@ -11,7 +11,12 @@ from pathlib import Path
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
-from idsignpost.cache import DEFAULT_TTL_DAYS, CatalogCache, EntryRecord
+from idsignpost.cache import (
+    DEFAULT_TTL_DAYS,
+    CatalogCache,
+    EntryRecord,
+    normalize_title,
+)
 from idsignpost.cost import DEFAULT_COST_FILE, SessionCostTracker
 from idsignpost.gemini_finder import (
     DEFAULT_MIN_PROBABILITY,
@@ -230,6 +235,7 @@ class _Verdict:
     keep: bool = False
     note: str | None = None
     fresh: bool = False
+    settled: bool = True
 
 
 def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
@@ -410,18 +416,36 @@ class Verifier:
                 }
             )
             if entry.web_link:
-                self.cache.drop_alternative(entry.id, entry.web_link, note)
+                self.cache.drop_alternative(
+                    entry.title, entry.web_link, note, entry_id=entry.id
+                )
             cleaned.append(entry)
         return cleaned
 
     async def _verify_group(self, members: list[CatalogEntry]) -> list[CatalogEntry]:
         entry = members[0]
         url = entry.web_link or ""
+        subgroups: dict[str, list[tuple[int, CatalogEntry]]] = {}
+        for index, member in enumerate(members):
+            subgroups.setdefault(normalize_title(member.title), []).append(
+                (index, member)
+            )
+        verdicts_by_index: dict[int, _Verdict] = {}
+
+        async def run_subgroup(items: list[tuple[int, CatalogEntry]]) -> None:
+            settled = not self.refresh
+            for index, member in items:
+                verdict = await self._verdict(
+                    member, facts, bypass_entry_cache=not settled
+                )
+                verdicts_by_index[index] = verdict
+                if verdict.settled:
+                    settled = True
+
         async with self._http:
             facts = await self._facts(url, entry.title)
-            verdicts = await asyncio.gather(
-                *(self._verdict(member, facts) for member in members)
-            )
+            await asyncio.gather(*(run_subgroup(items) for items in subgroups.values()))
+            verdicts = [verdicts_by_index[index] for index in range(len(members))]
             allow_primary_save = self.save_archive and any(
                 verdict.state == "ok" and not verdict.transient for verdict in verdicts
             )
@@ -478,11 +502,19 @@ class Verifier:
             return "ignored: private address"
         return None
 
-    async def _verdict(self, entry: CatalogEntry, facts: _UrlFacts) -> _Verdict:
+    async def _verdict(
+        self,
+        entry: CatalogEntry,
+        facts: _UrlFacts,
+        *,
+        bypass_entry_cache: bool = False,
+    ) -> _Verdict:
         result = facts.result
         url = entry.web_link or ""
         record = (
-            None if self.refresh or not url else self.cache.get_entry(entry.id, url)
+            None
+            if bypass_entry_cache or not url
+            else self.cache.get_entry(entry.title, url, entry_id=entry.id)
         )
         previous = _alternative_fields(entry)
 
@@ -501,6 +533,7 @@ class Verifier:
                 ),
                 alternative=previous,
                 transient=True,
+                settled=False,
             )
 
         state: LinkState | None = result.state
@@ -523,13 +556,16 @@ class Verifier:
                         resolved_url=entry.web_link_resolved,
                         alternative=previous,
                         keep=True,
+                        settled=False,
                     )
                 fresh = True
             if not redirect_verdict.is_match:
                 state, status = "broken", "redirect_mismatch"
 
         if state != "broken":
-            self._clear_recovered_entry(entry.id, url, redirect_verdict)
+            self._clear_recovered_entry(
+                entry.title, url, redirect_verdict, entry_id=entry.id
+            )
             return _Verdict(
                 state=state,
                 status=status,
@@ -544,7 +580,7 @@ class Verifier:
         if outcome.transient:
             if url:
                 self.cache.record_redirect(
-                    entry.id,
+                    entry.title,
                     url,
                     is_match=(
                         redirect_verdict.is_match
@@ -556,6 +592,7 @@ class Verifier:
                         if redirect_verdict is not None
                         else None
                     ),
+                    entry_id=entry.id,
                 )
             return _Verdict(
                 state=state,
@@ -564,12 +601,14 @@ class Verifier:
                 alternative=outcome.alternative,
                 note=outcome.note,
                 fresh=False,
+                settled=False,
             )
 
         if url:
             self.cache.update_entry(
-                entry.id,
+                entry.title,
                 url,
+                entry_id=entry.id,
                 redirect_is_match=(
                     redirect_verdict.is_match if redirect_verdict is not None else None
                 ),
@@ -601,19 +640,25 @@ class Verifier:
         )
 
     def _clear_recovered_entry(
-        self, entry_id: str, url: str, redirect_verdict: RedirectVerdict | None
+        self,
+        title: str,
+        url: str,
+        redirect_verdict: RedirectVerdict | None,
+        *,
+        entry_id: str,
     ) -> None:
         if not url:
             return
         if redirect_verdict is not None:
             self.cache.update_entry(
-                entry_id,
+                title,
                 url,
+                entry_id=entry_id,
                 redirect_is_match=redirect_verdict.is_match,
                 redirect_reason=redirect_verdict.reasoning,
             )
             return
-        self.cache.clear_entry(entry_id, url)
+        self.cache.clear_entry(title, url, entry_id=entry_id)
 
     async def _resolve_broken_alternative(
         self,
