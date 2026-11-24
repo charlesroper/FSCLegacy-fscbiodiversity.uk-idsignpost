@@ -50,6 +50,7 @@ idsignpost/
 ├── NARRATIVE.md                 # Running engineering journal
 ├── README.md                    # Project documentation and guide
 ├── plans/                       # Milestone blueprints and archive
+├── .github/workflows/pages.yml  # GitHub Pages deployment for static explorer + catalog data
 ├── datasette.metadata.json      # Curated Datasette facets, FTS config and canned queries
 ├── idsignpost/                  # Raw scraped legacy HTML files (input source)
 ├── idsignpost.json              # Canonical structured catalog (generated & enriched)
@@ -72,7 +73,8 @@ idsignpost/
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
 │       ├── pipeline.py          # Async Verifier, VerifyConfig, VerifyDeps, run_verification and Candidate evaluation
 │       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, Markdown, and SQLite
-│       └── cli.py               # Unified CLI (`uv run idsignpost <command>`) and .env loader
+│       ├── cli.py               # Unified CLI (`uv run idsignpost <command>`) and .env loader
+│       └── web/                 # Static zero-WASM GitHub Pages directory UI (index.html, styles.css, app.js)
 └── tests/
     ├── fixtures/                # Small HTML fixtures for extraction and URL edge cases
     ├── test_models.py           # Schema validation, status values, duplicate id rejection and immutable merges
@@ -88,6 +90,7 @@ idsignpost/
     ├── test_export.py
     ├── test_pipeline.py         # Orchestration, Candidate evaluation, VerifyConfig and run_verification
     ├── test_cli.py              # Option wiring, .env loading, interrupt handling and exit codes
+    ├── test_web.py              # Static explorer schema field alignment, DuckDB link and Pages workflow checks
     └── test_live_smoke.py       # Optional @pytest.mark.live end-to-end checks
 ```
 
@@ -428,7 +431,7 @@ Every subcommand and flag defines `--help` descriptions. `verify` and `run` buil
 
 ## 8. Testing Specification (`tests/`)
 
-All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 468 offline tests across 13 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
+All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 477 offline tests across 14 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
 
 1. **`tests/test_models.py`:** Tests `CatalogEntry` defaults, strict field validation (`extra="forbid"`), `alternative_probability` bounds, canonical HTTP and error status values, timestamp rules (`submitted_at` naive, `verified_at` UTC), `load_catalog`, duplicate `id` rejection, immutable `merge_verification` and `merge_verified` updates and the repository-wide no-em-dash guardrail.
 2. **`tests/test_urls.py`:** Tests RFC 3986 sanitisation, relative URL resolution, tracking parameter removal, fragment removal for cache keys, `host_matches` exact/dot-suffix matching, scheme and userinfo rejection and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
@@ -443,4 +446,5 @@ All unit and integration tests reside in `tests/` and run offline via `uv run py
 11. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`), Markdown, and SQLite (normalised tables, `FTS5` search, views, and clean file replacement) generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
 12. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig`, `VerifyDeps` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, deterministic login-wall rejection without Gemini calls, redirect checks, broken-link discovery, `PublisherPreResolver` hit and fallback paths, duplicate same-title entry coordination vs distinct-title URL Tier sharing, cross-domain `200 OK` and standalone homepage Candidate confirmation, generic-hub / same-host-root / soft-404 Candidate pre-rejection, cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation and duplicate coordination, stale redirect cleanup on `--refresh` and recovery, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
 13. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `--sqlite` export wiring, `explore` auto-build and `datasette`/`uvx` fallback launch, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
-14. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.
+14. **`tests/test_web.py`:** Verifies that `src/idsignpost/web/` assets exist without em-dashes, every `entry.<field>` access in `app.js` matches `CatalogEntry.model_fields`, all `getElementById` calls resolve in `index.html`, external guide links enforce `noopener noreferrer`, the DuckDB Web Shell hash encodes `FSCLegacy-fscbiodiversity.uk-idsignpost` cleanly under `extraswaps` and `.github/workflows/pages.yml` bundles all catalog exports alongside the static frontend.
+15. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.

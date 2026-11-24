@@ -4,9 +4,9 @@ This repository preserves and updates the **Biodiversity ID signpost**, a direct
 
 If you need to find an identification key, chart, or guide for plants, insects, fungi, or animals in Britain and Ireland, this project gives you a clean, working catalogue.
 
-**[Explore the catalogue interactively in Datasette Lite](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fidsignpost.db&metadata=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fdatasette.metadata.json)** (runs in your browser with full-text search, format facets, and saved queries; no installation required).
+**[Open the interactive guide directory](https://charlesroper.github.io/FSCLegacy-fscbiodiversity.uk-idsignpost/)** (mobile-friendly search, format filters and saved URL state via GitHub Pages; no installation required).
 
-To run Datasette locally (prerequisite: [Python 3.12 or newer and `uv`](#prerequisites)):
+To browse in Datasette locally (prerequisite: [Python 3.12 or newer and `uv`](#prerequisites)):
 
 1. Clone the repository:
    ```bash
@@ -147,12 +147,14 @@ The catalogue is generated from canonical records in `idsignpost.json` and expor
 | `idsignpost.json` | Programmatic use and web applications | Open in text editors or import into software scripts |
 | `idsignpost.parquet` | Fast data analysis and database queries | Load into Python, R, DuckDB, Polars, or Pandas |
 
-### Explore interactively in Datasette
+### Explore interactively in your browser or locally
 
-You can search all 736 identification guides, facet by format (`Online`, `PDF`, `Publication`), filter link health and run pre-built queries without installing Python tools locally:
+You can search all 736 identification guides, facet by format (`Online`, `PDF`, `Publication`, `App`), filter link health and run SQL queries:
 
-- **[Open catalogue in Datasette Lite](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fidsignpost.db&metadata=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fdatasette.metadata.json)** (runs WebAssembly SQLite in your browser directly from `idsignpost.db` and `datasette.metadata.json`).
-- **Run locally with one command:** if you cloned the repository and installed `uv`, run:
+- **[GitHub Pages guide directory](https://charlesroper.github.io/FSCLegacy-fscbiodiversity.uk-idsignpost/):** lightweight static web app (`src/idsignpost/web/`) reading `idsignpost.json` directly with URL query persistence across reloads and external link hops.
+- **[Query with DuckDB Web Shell](https://shell.duckdb.org/#queries=v0,LOAD-httpfs~,CREATE-OR-REPLACE-VIEW-guides-AS-SELECT-title%2C-authors%2C-is_free%2C-available_as%2C-web_link_state%2C-COALESCE%28alternative_link%2C-web_link%29-AS-best_link%2C-wayback_link%2C-keywords-FROM-read_parquet%28%27https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy%20fscbiodiversity.uk%20idsignpost%2Fmain%2Fidsignpost.parquet%27%29~,FROM-guides-WHERE-web_link_state-%3D-%27ok%27-OR-best_link-IS-NOT-NULL-LIMIT-20~):** runs DuckDB-WASM in your browser directly against `idsignpost.parquet`.
+- **[Datasette Lite (desktop browsers)](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fidsignpost.db&metadata=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fdatasette.metadata.json):** runs WebAssembly SQLite and `datasette.metadata.json` in desktop browsers (mobile browsers may discard Pyodide tabs and lose loaded databases when following external links).
+- **Run Datasette locally:** if you cloned the repository and installed `uv`, run:
 
 ```bash
 uv run idsignpost explore --open
