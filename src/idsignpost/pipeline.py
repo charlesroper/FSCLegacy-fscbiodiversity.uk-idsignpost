@@ -44,6 +44,7 @@ from idsignpost.models import (
     ensure_unique_ids,
     merge_verified as merge_verified,
 )
+from idsignpost.pre_resolver import PreResolver, PublisherPreResolver
 from idsignpost.sampler import get_stratified_sample
 from idsignpost.urls import (
     cache_key,
@@ -216,6 +217,7 @@ class VerifyDeps:
     wayback: Archive | None = None
     generator: Generator | None = None
     resolver: Callable[..., Any] | None = None
+    pre_resolver: PreResolver | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -317,6 +319,7 @@ class Verifier:
         save_archive: bool = False,
         refresh: bool = False,
         resolver: Callable[..., Any] | None = None,
+        pre_resolver: PreResolver | None = None,
     ) -> None:
         self.cache = cache
         self.checker = checker
@@ -325,6 +328,7 @@ class Verifier:
         self.save_archive = save_archive
         self.refresh = refresh
         self._resolver = resolver
+        self.pre_resolver = pre_resolver
         self.stats = VerifyStats()
         self._http = asyncio.Semaphore(concurrency)
         self._gemini = asyncio.Semaphore(gemini_concurrency)
@@ -788,6 +792,16 @@ class Verifier:
             if attempt.alternative is not None:
                 return attempt
 
+        if self.pre_resolver is not None:
+            pre_candidates = await self.pre_resolver.resolve(entry)
+            for candidate in pre_candidates:
+                attempt = await self._evaluate_candidate(entry, candidate)
+                transient = transient or attempt.transient
+                if attempt.note:
+                    notes.append(attempt.note)
+                if attempt.alternative is not None:
+                    return attempt
+
         async with self._gemini:
             candidates = await self.finder.discover(entry)
         if candidates is None:
@@ -954,6 +968,11 @@ async def run_verification(
             ia_secret_key=config.ia_secret_key if use_ia_keys else None,
         )
     )
+    active_pre_resolver: PreResolver = (
+        active_deps.pre_resolver
+        if active_deps.pre_resolver is not None
+        else PublisherPreResolver(timeout=config.timeout)
+    )
     try:
         active_finder: Finder = (
             active_deps.finder
@@ -978,6 +997,7 @@ async def run_verification(
             save_archive=config.save_archive,
             refresh=config.refresh,
             resolver=active_deps.resolver,
+            pre_resolver=active_pre_resolver,
         )
         verified = await verifier.verify(targets)
     except (KeyboardInterrupt, asyncio.CancelledError):
@@ -987,7 +1007,10 @@ async def run_verification(
         try:
             await _close_adapter(active_checker)
         finally:
-            await _close_adapter(active_wayback)
+            try:
+                await _close_adapter(active_pre_resolver)
+            finally:
+                await _close_adapter(active_wayback)
 
     cache.save()
     run_record = tracker.finish_run(command=config.command)
