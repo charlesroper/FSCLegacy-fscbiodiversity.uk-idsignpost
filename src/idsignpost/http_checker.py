@@ -269,18 +269,26 @@ def _has_soft_404(text: str) -> bool:
     return any(phrase in lowered for phrase in SOFT_404_PHRASES)
 
 
+def is_same_host_root_redirect(original_url: str, final_url: str) -> bool:
+    """Return True when a non-root URL redirects to the root of the same host."""
+    return (
+        urlsplit(original_url).path not in {"", "/"}
+        and urlsplit(final_url).path in {"", "/"}
+        and clean_host(original_url) == clean_host(final_url)
+    )
+
+
 def _is_suspicious(
     original_url: str,
     final_url: str,
     page_title: str | None,
     entry_title: str | None,
 ) -> bool:
-    original_path = urlsplit(original_url).path or "/"
     final_path = urlsplit(final_url).path or "/"
 
     if clean_host(original_url) != clean_host(final_url):
         return True
-    if original_path not in {"", "/"} and final_path in {"", "/"}:
+    if is_same_host_root_redirect(original_url, final_url):
         return True
 
     haystack = f"{final_path} {page_title or ''}".lower()
