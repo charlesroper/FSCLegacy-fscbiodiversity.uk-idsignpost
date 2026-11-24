@@ -25,6 +25,11 @@ def utcnow() -> datetime:
     return datetime.now(UTC)
 
 
+def normalize_title(title: str) -> str:
+    """Normalize a resource title for Entry Tier cache keys."""
+    return " ".join(title.strip().lower().split())
+
+
 @dataclass(slots=True)
 class UrlRecord:
     """Facts about one URL, shared by every entry that points at it."""
@@ -295,61 +300,94 @@ class CatalogCache:
         record.wayback_url = snapshot
         return self.put_url(url, record)
 
-    def get_entry(self, entry_id: str, url: str) -> EntryRecord | None:
-        """Return a fresh entry-tier record, or None when absent or expired."""
-        record = self.entries.get(self._entry_key(entry_id, url))
-        if record is None or self._expired(record.checked_at):
-            return None
-        return record
+    def get_entry(
+        self, title: str, url: str, *, entry_id: str | None = None
+    ) -> EntryRecord | None:
+        """Return a fresh entry-tier record, migrating any legacy entry-id key."""
+        new_key = self._entry_key(title, url)
+        record = self.entries.get(new_key)
+        if record is not None:
+            if self._expired(record.checked_at):
+                return None
+            return record
+        if entry_id is not None:
+            legacy_key = self._legacy_entry_key(entry_id, url)
+            legacy_record = self.entries.get(legacy_key)
+            if legacy_record is not None and not self._expired(
+                legacy_record.checked_at
+            ):
+                self.entries[new_key] = legacy_record
+                self.entries.pop(legacy_key, None)
+                self._changed()
+                return legacy_record
+        return None
 
     def put_entry(
         self,
-        entry_id: str,
+        title: str,
         url: str,
         record: EntryRecord | None,
         *,
         cacheable: bool = True,
+        entry_id: str | None = None,
     ) -> bool:
         """Store an entry-tier record unless the result is transient."""
         if record is None or not cacheable:
             return False
         if record.checked_at is None:
             record.checked_at = self.now()
-        self.entries[self._entry_key(entry_id, url)] = record
+        self.entries[self._entry_key(title, url)] = record
+        if entry_id is not None:
+            self.entries.pop(self._legacy_entry_key(entry_id, url), None)
         self._changed()
         return True
 
-    def drop_alternative(self, entry_id: str, url: str, note: str) -> bool:
+    def drop_alternative(
+        self,
+        title: str,
+        url: str,
+        note: str,
+        *,
+        entry_id: str | None = None,
+    ) -> bool:
         """Clear a stored alternative for one entry and record the rejection note."""
-        record = self.get_entry(entry_id, url)
+        record = self.get_entry(title, url, entry_id=entry_id)
         if record is None:
             return False
         record.drop_alternative(note)
-        return self.put_entry(entry_id, url, record)
+        return self.put_entry(title, url, record, entry_id=entry_id)
 
-    def clear_entry(self, entry_id: str, url: str) -> bool:
+    def clear_entry(self, title: str, url: str, *, entry_id: str | None = None) -> bool:
         """Remove any entry-tier record for one entry and URL."""
-        if self.entries.pop(self._entry_key(entry_id, url), None) is None:
+        removed = self.entries.pop(self._entry_key(title, url), None) is not None
+        if entry_id is not None:
+            legacy_removed = (
+                self.entries.pop(self._legacy_entry_key(entry_id, url), None)
+                is not None
+            )
+            removed = removed or legacy_removed
+        if not removed:
             return False
         self._changed()
         return True
 
     def record_redirect(
         self,
-        entry_id: str,
+        title: str,
         url: str,
         *,
         is_match: bool | None,
         reason: str | None = None,
+        entry_id: str | None = None,
     ) -> EntryRecord | None:
         """Update redirect verdict fields while preserving any cached alternative."""
-        existing = self.get_entry(entry_id, url)
+        existing = self.get_entry(title, url, entry_id=entry_id)
         if is_match is None:
             reason = None
             if existing is None:
                 return None
             if not existing.alternative_checked and existing.alternative_url is None:
-                self.clear_entry(entry_id, url)
+                self.clear_entry(title, url, entry_id=entry_id)
                 return None
         if (
             existing is not None
@@ -373,14 +411,15 @@ class CatalogCache:
                 existing.alternative_confirmed if existing else False
             ),
         )
-        self.put_entry(entry_id, url, updated)
+        self.put_entry(title, url, updated, entry_id=entry_id)
         return updated
 
     def update_entry(
         self,
-        entry_id: str,
+        title: str,
         url: str,
         *,
+        entry_id: str | None = None,
         redirect_is_match: bool | None = None,
         redirect_reason: str | None = None,
         alternative_url: str | None = None,
@@ -391,7 +430,7 @@ class CatalogCache:
         alternative_confirmed: bool = False,
     ) -> EntryRecord:
         """Build and store an explicit entry-tier record, skipping unchanged writes."""
-        existing = self.get_entry(entry_id, url)
+        existing = self.get_entry(title, url, entry_id=entry_id)
         updated = EntryRecord(
             redirect_is_match=redirect_is_match,
             redirect_reason=redirect_reason,
@@ -404,11 +443,15 @@ class CatalogCache:
         )
         if existing is not None and _entry_fields(updated) == _entry_fields(existing):
             return existing
-        self.put_entry(entry_id, url, updated)
+        self.put_entry(title, url, updated, entry_id=entry_id)
         return updated
 
     @staticmethod
-    def _entry_key(entry_id: str, url: str) -> str:
+    def _entry_key(title: str, url: str) -> str:
+        return f"{normalize_title(title)}::{cache_key(url)}"
+
+    @staticmethod
+    def _legacy_entry_key(entry_id: str, url: str) -> str:
         return f"{entry_id}::{cache_key(url)}"
 
     def _changed(self) -> None:
