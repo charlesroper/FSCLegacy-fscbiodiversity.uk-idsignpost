@@ -1,18 +1,5 @@
 # Biodiversity ID Signpost
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2)](https://github.com/astral-sh/uv)
-[![Pydantic v2](https://img.shields.io/badge/pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![pytest](https://img.shields.io/badge/tests-373%20passed-0A9EDC.svg)](https://docs.pytest.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-[![Catalog Size](https://img.shields.io/badge/catalog-736%20resources-2ea44f.svg)](#what-is-inside-the-catalogue)
-[![Working Links](https://img.shields.io/badge/links-386%20live-brightgreen.svg)](#how-verification-decides)
-[![Recovered Alternatives](https://img.shields.io/badge/alternatives-93%20recovered-informational.svg)](#how-verification-decides)
-[![Archived Rate](https://img.shields.io/badge/wayback-91%25%20preserved-blue.svg)](#how-verification-decides)
-[![Gemini 3.1 Flash Lite](https://img.shields.io/badge/grounded%20with-Gemini%203.1%20Flash%20Lite-8E75B2.svg)](https://ai.google.dev/)
-
 This repository preserves and updates the **Biodiversity ID signpost**, a directory of more than 700 field identification guides for British and Irish wildlife originally published by the Field Studies Council (FSC).
 
 If you need to find an identification key, chart, or guide for plants, insects, fungi, or animals in Britain and Ireland, this project gives you a clean, working catalogue.
@@ -28,6 +15,72 @@ This project solves two problems:
 1. **Preservation:** it recovers every entry from the archived website files and formats them into clean, portable datasets.
 2. **Link repair:** it tests every web link, finds historical snapshots in the Internet Archive, and searches for current, working replacements when original sites are gone.
 
+## Data rescue and clean-up summary
+
+### Before and after
+
+Contributors originally submitted 736 identification guides to the Field Studies Council (FSC) website, and an early archive preserved those raw HTML files (`idsignpost/*.html`). Early helper scripts converted HTML to Markdown and JSON across lossy steps, which dropped verification metadata and misparsed structured fields.
+
+Seven core defects degraded the original dataset before this clean-up:
+
+- **Broken types:** Legacy JSON mixed key casings, stored booleans as strings and switched field types between single strings and lists.
+- **Dirty text and URLs:** Double-escaped HTML entities, broken Flickr links and tracking query parameters survived inside titles, descriptions and web links.
+- **Cache collisions:** Twenty-seven shared URLs collided in a flat cache, so discovery outputs for one guide overwrote another.
+- **Blind redirects:** Any `200 OK` response counted as healthy (`ok`), even when deep links redirected to sign-in screens, error pages or site homepages.
+- **Weak fallback links:** Rate-limited web scrapes proposed eBay auctions, used-book listings, SEO spam and dead signpost aliases.
+- **Duplicate API calls:** Separate Catalog Entries with identical titles and broken URLs triggered duplicate discovery searches and model checks.
+- **Passive archiving:** Seventy-nine live resources had no Wayback Machine snapshot at all.
+
+The clean-slate Python package (`src/idsignpost/`) and two validation passes on 24 November 2026 transformed the catalogue across all 736 Catalog Entries:
+
+| Metric | Initial clean extract | Pre-optimisation baseline | Validated catalogue (24 November 2026) |
+|---|---|---|---|
+| Total Catalog Entries | 736 | 736 | 736 |
+| Live `web_link` (`ok`) | 0 (unverified) | 386 | 369 (7 Google Sites login walls removed) |
+| Dead `web_link` (`broken`) | 0 (unverified) | 290 | 308 |
+| Blocked / unverified (`blocked`) | 0 (unverified) | 38 | 37 |
+| Entries without a `web_link` | 0 (unverified) | 22 | 22 |
+| Confirmed Alternatives | 0 | 93 | 227 (+134 recovered) |
+| Broken entries with explanatory notes | 0 | 289 | 308 (100% coverage) |
+| Historical Wayback links | 0 | 667 (91%) | 680 (92% of total; 95% of linked) |
+
+Three domain-level **Publisher Pre-Resolver** rules drove most of the Alternative gain without Grounded Search charges:
+
+- **Summerfield Books (`summerfieldbooks.com`):** Rewrites legacy `/<slug>~<id>` links to `/product/<clean-slug>/` and recovered all 16 broken Catalog Entries.
+- **Royal Entomological Society (`royensoc.co.uk`):** Queries cached WordPress media and product endpoints once per term and recovered all 70 broken Catalog Entries.
+- **Mike's Insect Keys (`sites.google.com/site/mikesinsectkeys`):** Matches legacy paths against the migrated New Google Sites index and recovered 83 of 85 broken Catalog Entries.
+
+### Rescue and validation process
+
+The rescue ran across six controlled stages on `main`:
+
+1. **Direct extraction (`idsignpost extract`):** Parse `idsignpost/*.html` directly into strict Pydantic v2 `CatalogEntry` models (`idsignpost.json`), decode entities, fix split links and strip tracking parameters.
+2. **Deterministic URL triage (`http_checker.py`):** Stream up to 16 KB per page via bounded HTTP GET checks and classify authentication-wall redirects as `broken` (`redirect_mismatch`).
+3. **Deduplicated caching (`cache.py`):** Store HTTP and Wayback facts in the **URL Tier** and key the **Entry Tier** by normalised title and URL.
+4. **Publisher Pre-Resolver stage (`pre_resolver.py`):** Propose migrated URLs for Summerfield Books, the Royal Entomological Society and Mike's Insect Keys before discovery calls run.
+5. **Grounded Search and confirmation (`gemini_finder.py`):** Run Google Search via `gemini-3.1-flash-lite` (JSON MIME disabled and `thinking_budget=0` so search triggers), extract Candidates cleanly and verify destination text.
+6. **Multi-format export (`idsignpost export`) and verification:** Render deterministic CSV, Parquet and Markdown files, backed by 468 offline `pytest` + `respx` tests, `ruff` lint checks and `ty` type checks.
+
+### Validation cost breakdown
+
+Session tracking in `.idsignpost_costs.json` recorded every API call on 24 November 2026 across two fresh (`--refresh`) validation runs with `gemini-3.1-flash-lite`:
+
+| Run | Operation | API calls | Input tokens | Output tokens | Grounded searches | Nominal USD cost | Nominal GBP cost |
+|---|---|---|---|---|---|---|---|
+| Pass 1 (full 736 entries, pre-fix) | Redirect checks (`thinking_budget=0`) | 25 | 6,808 | 1,138 | 0 | $0.00341 | £0.00262 |
+| Pass 1 (full 736 entries, pre-fix) | Candidate discovery (`thinking_budget=512`, JSON mode) | 82 | 51,224 | 54,266 | 0 | $0.09280 | £0.07120 |
+| Pass 1 (full 736 entries, pre-fix) | Alternative confirmations (`thinking_budget=0`) | 223 | 60,139 | 9,831 | 0 | $0.02978 | £0.02285 |
+| Pass 2 (`--only-broken`, search fix) | Redirect checks (`thinking_budget=0`) | 11 | 2,459 | 491 | 0 | $0.00135 | £0.00104 |
+| Pass 2 (`--only-broken`, search fix) | Discovery (search + JSON extraction) | 149 | 67,436 | 53,700 | 141 | $2.07134 | £1.58913 |
+| Pass 2 (`--only-broken`, search fix) | Alternative confirmations (`thinking_budget=0`) | 263 | 69,149 | 11,593 | 0 | $0.03468 | £0.02661 |
+| **Combined session total** | **All verification operations** | **753** | **257,215** | **131,019** | **141** | **$2.23335** | **£1.71343** |
+
+GBP conversions use the 24 November 2026 mid-market exchange rate (`$1 USD = £0.7672`). Three engineering choices kept total spend near $2.23 USD (£1.71 GBP) at official list rates (`$0.25/1M` input, `$1.50/1M` output, `$14.00/1k` searches):
+
+- **Deterministic login and pre-resolver gates:** Resolved 176 broken and sign-in entries locally without Grounded Search charges.
+- **Disabled reasoning on checks:** Set `thinking_budget=0` on redirect checks, Candidate discoveries and confirmations, which cut thinking tokens on Pass 2 from 45,519 to two tokens.
+- **Clean Grounded Search invocation:** Pass 1 revealed that `response_mime_type="application/json"` and non-zero `thinking_budget` suppressed `google_search` (`0` queries across 82 calls). Pass 2 restored live search grounding (`141` queries) while ungrounded confirmations cost less than $0.04 USD (£0.03 GBP) across 263 calls.
+
 ## What is inside the catalogue
 
 The catalogue contains **736 entries**. Each entry describes an identification resource and includes:
@@ -39,7 +92,7 @@ The catalogue contains **736 entries**. Each entry describes an identification r
   - `ok`: the link works and responds directly.
   - `broken`: the link is confirmed dead (such as a 404 Not Found error).
   - `blocked`: unverified link (the server blocked automated checks or failed with a Transient Failure). Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) relabel this state as `unverified`, while `idsignpost.json` keeps `blocked`.
-- **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. Over 660 entries (more than 91%) include a working snapshot.
+- **Wayback link:** a direct link to a preserved copy in the Internet Archive's Wayback Machine. Currently, 680 entries (92% of the catalogue, or 95% of entries with a web link) include a working snapshot.
 - **Alternative link and score:** for confirmed broken links, a working replacement found by searching publisher and museum archives, paired with a confidence score between 0.0 and 1.0.
 - **Alternative note:** the reason the replacement was accepted or rejected. Accepted pages carry a confirmation sentence from the model, and failed searches record why each candidate was dropped.
 
@@ -243,7 +296,7 @@ Each entry with a `web_link` passes through five stages:
 
 1. **HTTP status check:** An HTTP GET classifies the link as `ok`, `broken` or `blocked`. `blocked` means unverified (exported as `unverified` in CSV, Parquet and Markdown): the server refused the request or failed with a Transient Failure.
 2. **Redirect and soft-404 inspection:** A suspicious redirect (host change, collapse to site root, soft-404 page or login wall) or a non-redirecting `200 OK` page with a soft-404 title or heading is evaluated by Gemini. A confirmed match stays `ok`. A mismatch becomes `broken` with `web_link_status = "redirect_mismatch"`.
-3. **Alternative discovery:** For broken links, the pipeline queries Gemini with Grounded Search for up to three ranked Candidate URLs. The verifier filters Candidates against blocked hosts, image extensions, site homepages, the broken URL and private IP addresses before and after redirects, checks live reachability and asks Gemini to confirm the destination page.
+3. **Alternative discovery:** For broken links, the pipeline tries the **Publisher Pre-Resolver** first (`summerfieldbooks.com`, `royensoc.co.uk` and `sites.google.com/site/mikesinsectkeys`), then queries Gemini with Grounded Search for up to three ranked Candidate URLs. The verifier filters Candidates against blocked hosts (such as general retail marketplaces), image extensions, multi-resource site homepages, the broken URL and private IP addresses before and after redirects, checks live reachability and asks Gemini to confirm the destination page.
 4. **Wayback preservation:** The pipeline queries the Wayback Machine for a snapshot. If a broken link has no historical snapshot, the pipeline checks the confirmed replacement link and captures it via Save Page Now when `--save-archive` is active.
 5. **State cleanup:** When the final link state is not `broken`, any obsolete alternative fields are cleared.
 
@@ -254,7 +307,7 @@ Transient Failures never overwrite good results. A network timeout, server error
 `.url_cache.json` stores verification results across two tiers:
 
 - **URL tier:** Caches network facts about a target URL, including HTTP status, redirect destinations, page titles, and Wayback snapshot URLs. When multiple catalog entries share a URL, the network check runs only once per session.
-- **Entry tier:** Caches per-entry evaluation verdicts, model reasoning, and replacement links.
+- **Entry tier:** Caches evaluation verdicts, model reasoning and Alternatives keyed by normalised title and URL, so duplicate Catalog Entries share judgments without repeating discovery.
 
 Cached records expire after 30 days by default (configurable with `--cache-ttl-days`). If the cache schema version changes, outdated caches are automatically invalidated.
 
