@@ -176,7 +176,13 @@ class FakeGenerator:
         self.calls: list[tuple[str, bool]] = []
 
     async def generate(
-        self, prompt: str, *, model: str, json_mode: bool, search: bool
+        self,
+        prompt: str,
+        *,
+        model: str,
+        json_mode: bool,
+        search: bool,
+        thinking_budget: int | None = None,
     ) -> GenerationResult:
         self.calls.append((model, search))
         return self.script.pop(0)

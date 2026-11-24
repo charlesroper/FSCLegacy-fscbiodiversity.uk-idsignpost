@@ -38,6 +38,7 @@ class RecordedCall:
     model: str
     json_mode: bool
     search: bool
+    thinking_budget: int | None = None
 
 
 class FakeGenerator:
@@ -46,7 +47,13 @@ class FakeGenerator:
         self.calls: list[RecordedCall] = []
 
     async def generate(
-        self, prompt: str, *, model: str, json_mode: bool, search: bool
+        self,
+        prompt: str,
+        *,
+        model: str,
+        json_mode: bool,
+        search: bool,
+        thinking_budget: int | None = None,
     ) -> GenerationResult:
         self.calls.append(
             RecordedCall(
@@ -54,6 +61,7 @@ class FakeGenerator:
                 model=model,
                 json_mode=json_mode,
                 search=search,
+                thinking_budget=thinking_budget,
             )
         )
         item = self.script.pop(0)
@@ -197,7 +205,7 @@ async def test_generate_gives_up_after_four_attempts() -> None:
     assert sleeps == [1.0, 2.0, 4.0]
 
 
-async def test_discover_retries_once_on_malformed_json() -> None:
+async def test_discover_does_not_retry_on_malformed_json() -> None:
     finder, generator, _ = make_finder(
         [
             "not json",
@@ -205,16 +213,8 @@ async def test_discover_retries_once_on_malformed_json() -> None:
         ]
     )
 
-    candidates = await finder.discover(entry())
-
-    assert candidates == [Candidate("https://a.example", 0.7)]
-    assert len(generator.calls) == 2
-
-
-async def test_discover_returns_none_after_repeated_malformed_json() -> None:
-    finder, _, _ = make_finder(["not json", "still not json"])
-
     assert await finder.discover(entry()) is None
+    assert len(generator.calls) == 1
 
 
 async def test_discover_prompt_asks_for_the_exact_page() -> None:
@@ -339,6 +339,7 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
     assert call1.model == "gemini-3.1-flash-lite"
     assert call1.search is False
     assert call1.json_mode is True
+    assert call1.thinking_budget == 0
     assert "Comprehensive guide to bats in flight." in call1.prompt
 
     # 2. discover: should use discovery_model and enable search
@@ -347,6 +348,7 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
     assert call2.model == "gemini-3.8-flash"
     assert call2.search is True
     assert call2.json_mode is True
+    assert call2.thinking_budget == 512
 
     # 3. confirm_alternative: should use verification_model and disable search
     await finder.confirm_alternative(
@@ -359,6 +361,7 @@ async def test_distinct_models_and_search_tool_scoping() -> None:
     assert call3.model == "gemini-3.1-flash-lite"
     assert call3.search is False
     assert call3.json_mode is True
+    assert call3.thinking_budget == 0
 
 
 async def test_max_searches_ceiling_stops_discovery() -> None:
@@ -396,12 +399,16 @@ async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
                 prompt_tokens=120,
                 output_tokens=30,
                 cached_tokens=20,
+                thinking_tokens=15,
+                tool_use_prompt_tokens=10,
                 search_queries=3,
             ),
             GenerationResult(
                 text='{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
                 prompt_tokens=200,
                 output_tokens=50,
+                thinking_tokens=45,
+                tool_use_prompt_tokens=80,
                 search_queries=2,
             ),
         ]
@@ -428,6 +435,107 @@ async def test_cost_tracker_captures_gemini_usage(tmp_path: Path) -> None:
     assert run.prompt_tokens == 320
     assert run.output_tokens == 80
     assert run.cached_tokens == 20
+    assert run.thinking_tokens == 60
+    assert run.tool_use_prompt_tokens == 90
     assert run.search_queries == 2
     assert "redirect_verification" in run.by_operation
     assert "candidate_discovery" in run.by_operation
+
+
+async def test_genai_generator_configures_thinking_and_extracts_usage(
+    tmp_path: Path,
+) -> None:
+    from types import SimpleNamespace
+    from google.genai import types
+    from idsignpost.cost import SessionCostTracker
+    from idsignpost.gemini_finder import _GenAIGenerator
+
+    captured_configs: list[Any] = []
+    responses = [
+        SimpleNamespace(
+            text='{"is_match": true, "reasoning": "matched"}',
+            usage_metadata=SimpleNamespace(
+                prompt_token_count=100,
+                candidates_token_count=20,
+                cached_content_token_count=10,
+                thoughts_token_count=0,
+                tool_use_prompt_token_count=0,
+            ),
+            candidates=[],
+        ),
+        SimpleNamespace(
+            text='{"candidates": [{"url": "https://example.org/found", "probability": 0.9}]}',
+            usage_metadata=SimpleNamespace(
+                prompt_token_count=200,
+                candidates_token_count=40,
+                cached_content_token_count=0,
+                thoughts_token_count=180,
+                tool_use_prompt_token_count=75,
+            ),
+            candidates=[
+                SimpleNamespace(
+                    grounding_metadata=SimpleNamespace(
+                        web_search_queries=["bats guide", "bats pdf"]
+                    )
+                )
+            ],
+        ),
+        SimpleNamespace(
+            text='{"is_match": true, "reasoning": "confirmed"}',
+            usage_metadata=SimpleNamespace(
+                prompt_token_count=150,
+                candidates_token_count=25,
+                cached_content_token_count=0,
+                thoughts_token_count=0,
+                tool_use_prompt_token_count=0,
+            ),
+            candidates=[],
+        ),
+    ]
+
+    class FakeModels:
+        async def generate_content(
+            self, *, model: str, contents: str, config: Any
+        ) -> Any:
+            captured_configs.append(config)
+            return responses.pop(0)
+
+    fake_client = SimpleNamespace(aio=SimpleNamespace(models=FakeModels()))
+    tracker = SessionCostTracker(path=tmp_path / "costs.json")
+    finder = GeminiFinder(
+        generator=_GenAIGenerator(client=fake_client),
+        tracker=tracker,
+    )
+
+    await finder.verify_redirect(
+        title="Bats",
+        authors="NHM",
+        description="Bats",
+        web_link="https://example.org/old",
+        resolved_url="https://example.org/new",
+        page_title="Bats",
+        page_h1="Bats",
+    )
+    await finder.discover(entry())
+    await finder.confirm_alternative(
+        entry(),
+        url="https://example.org/found",
+        page_title="Bats",
+        page_h1="Bats",
+    )
+
+    assert len(captured_configs) == 3
+    assert captured_configs[0].thinking_config == types.ThinkingConfig(
+        thinking_budget=0
+    )
+    assert captured_configs[1].thinking_config == types.ThinkingConfig(
+        thinking_budget=512
+    )
+    assert captured_configs[2].thinking_config == types.ThinkingConfig(
+        thinking_budget=0
+    )
+
+    run = tracker.finish_run(command="test")
+    assert run.thinking_tokens == 180
+    assert run.tool_use_prompt_tokens == 75
+    assert run.search_queries == 2
