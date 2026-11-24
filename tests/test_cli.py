@@ -25,7 +25,7 @@ def test_help_lists_commands(capsys: pytest.CaptureFixture[str]) -> None:
 
     assert exc.value.code == 0
     output = capsys.readouterr().out
-    for command in ("extract", "verify", "export", "run", "cost"):
+    for command in ("extract", "verify", "export", "run", "cost", "explore"):
         assert command in output
 
 
@@ -54,13 +54,16 @@ def test_extract_limit_zero_is_usage_error(
     assert "--limit must be at least 1" in capsys.readouterr().err
 
 
-def test_export_renders_three_formats_from_catalog(tmp_path: Path) -> None:
+def test_export_renders_four_formats_from_catalog(tmp_path: Path) -> None:
+    import sqlite3
+
     catalog = tmp_path / "idsignpost.json"
     assert main(["extract", "--html-dir", str(FIXTURES), "--output", str(catalog)]) == 0
 
     csv_path = tmp_path / "idsignpost.csv"
     parquet_path = tmp_path / "idsignpost.parquet"
     md_path = tmp_path / "idsignpost.md"
+    sqlite_path = tmp_path / "idsignpost.db"
     assert (
         main(
             [
@@ -73,6 +76,8 @@ def test_export_renders_three_formats_from_catalog(tmp_path: Path) -> None:
                 str(parquet_path),
                 "--md",
                 str(md_path),
+                "--sqlite",
+                str(sqlite_path),
             ]
         )
         == 0
@@ -82,6 +87,11 @@ def test_export_renders_three_formats_from_catalog(tmp_path: Path) -> None:
     assert header.startswith("id,filename,title,")
     assert md_path.read_text(encoding="utf-8").startswith("## flickr-split.html\n")
     assert parquet_path.stat().st_size > 0
+    conn = sqlite3.connect(sqlite_path)
+    try:
+        assert conn.execute("SELECT COUNT(*) FROM entries").fetchone()[0] == 2
+    finally:
+        conn.close()
 
 
 def make_entry(
@@ -475,6 +485,7 @@ def test_run_extracts_verifies_and_exports(
     csv_path = tmp_path / "idsignpost.csv"
     parquet_path = tmp_path / "idsignpost.parquet"
     md_path = tmp_path / "idsignpost.md"
+    sqlite_path = tmp_path / "idsignpost.db"
 
     assert (
         main(
@@ -494,6 +505,8 @@ def test_run_extracts_verifies_and_exports(
                 str(parquet_path),
                 "--md",
                 str(md_path),
+                "--sqlite",
+                str(sqlite_path),
                 "--limit",
                 "1",
             ],
@@ -509,7 +522,12 @@ def test_run_extracts_verifies_and_exports(
     entries = read_catalog(output)
     assert [entry.id for entry in entries] == ["flickr-split", "full-entry"]
     assert sum(entry.web_link_state == "ok" for entry in entries) == 1
-    assert csv_path.exists() and parquet_path.exists() and md_path.exists()
+    assert (
+        csv_path.exists()
+        and parquet_path.exists()
+        and md_path.exists()
+        and sqlite_path.exists()
+    )
 
 
 def test_extract_replaces_a_legacy_catalog(
@@ -550,6 +568,8 @@ def test_run_replaces_a_legacy_catalog(
                 str(tmp_path / "out.parquet"),
                 "--md",
                 str(tmp_path / "out.md"),
+                "--sqlite",
+                str(tmp_path / "out.db"),
             ],
             deps=VerifyDeps(
                 checker=FakeChecker(),
@@ -815,6 +835,7 @@ def test_run_keyboard_interrupt_saves_cache_and_returns_130(
     csv_path = tmp_path / "out.csv"
     parquet_path = tmp_path / "out.parquet"
     md_path = tmp_path / "out.md"
+    sqlite_path = tmp_path / "out.db"
     checker = FakeChecker(
         interrupt_on="https://www.fscbiodiversity.uk/resources/guide.pdf"
     )
@@ -836,6 +857,8 @@ def test_run_keyboard_interrupt_saves_cache_and_returns_130(
             str(parquet_path),
             "--md",
             str(md_path),
+            "--sqlite",
+            str(sqlite_path),
             "--concurrency",
             "1",
         ],
@@ -852,6 +875,7 @@ def test_run_keyboard_interrupt_saves_cache_and_returns_130(
     assert not csv_path.exists()
     assert not parquet_path.exists()
     assert not md_path.exists()
+    assert not sqlite_path.exists()
 
 
 def test_export_missing_and_corrupt_files_return_one(
@@ -886,6 +910,8 @@ def test_export_unwritable_destination_returns_one(
             str(tmp_path / "out.parquet"),
             "--md",
             str(tmp_path / "out.md"),
+            "--sqlite",
+            str(tmp_path / "out.db"),
         ]
     )
 
@@ -1010,7 +1036,7 @@ def test_load_env_file_supports_export_and_inline_comments(
                 "--verbose",
             ],
         ),
-        ("export", ["--input", "--csv", "--parquet", "--md"]),
+        ("export", ["--input", "--csv", "--parquet", "--md", "--sqlite"]),
         (
             "run",
             [
@@ -1039,9 +1065,22 @@ def test_load_env_file_supports_export_and_inline_comments(
                 "--csv",
                 "--parquet",
                 "--md",
+                "--sqlite",
             ],
         ),
         ("cost", ["--cost-file", "--reset", "--json"]),
+        (
+            "explore",
+            [
+                "--input",
+                "--db",
+                "--metadata",
+                "--host",
+                "--port",
+                "--rebuild",
+                "--open",
+            ],
+        ),
     ],
 )
 def test_subcommand_help_describes_all_flags(
@@ -1065,3 +1104,127 @@ def test_subcommand_help_describes_all_flags(
     output = capsys.readouterr().out
     for flag in expected_flags:
         assert flag in output
+
+
+def test_explore_auto_builds_db_and_falls_back_to_uvx(tmp_path: Path) -> None:
+    from types import SimpleNamespace
+
+    catalog = tmp_path / "idsignpost.json"
+    db_path = tmp_path / "idsignpost.db"
+    metadata = tmp_path / "datasette.metadata.json"
+    metadata.write_text('{"title": "Test"}\n', encoding="utf-8")
+    write_catalog(catalog, [make_entry("a")])
+
+    seen_cmds: list[list[str]] = []
+
+    def fake_runner(cmd: list[str], *, check: bool = False) -> Any:
+        seen_cmds.append(cmd)
+        return SimpleNamespace(returncode=0)
+
+    def fake_which(binary: str) -> str | None:
+        return "/usr/bin/uvx" if binary == "uvx" else None
+
+    code = main(
+        [
+            "explore",
+            "--input",
+            str(catalog),
+            "--db",
+            str(db_path),
+            "--metadata",
+            str(metadata),
+            "--port",
+            "8009",
+            "--open",
+        ],
+        explore_runner=fake_runner,
+        which=fake_which,
+    )
+
+    assert code == 0
+    assert db_path.is_file()
+    assert seen_cmds == [
+        [
+            "/usr/bin/uvx",
+            "--from",
+            "datasette",
+            "datasette",
+            "serve",
+            str(db_path),
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8009",
+            "-m",
+            str(metadata),
+            "--open",
+        ]
+    ]
+
+
+def test_explore_uses_datasette_when_available_and_handles_errors(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    from types import SimpleNamespace
+
+    catalog = tmp_path / "idsignpost.json"
+    db_path = tmp_path / "idsignpost.db"
+    write_catalog(catalog, [make_entry("a")])
+    seen_cmds: list[list[str]] = []
+
+    def fake_runner(cmd: list[str], *, check: bool = False) -> Any:
+        seen_cmds.append(cmd)
+        return SimpleNamespace(returncode=0)
+
+    code = main(
+        [
+            "explore",
+            "--input",
+            str(catalog),
+            "--db",
+            str(db_path),
+            "--metadata",
+            str(tmp_path / "missing-meta.json"),
+        ],
+        explore_runner=fake_runner,
+        which=lambda b: "/usr/bin/datasette" if b == "datasette" else None,
+    )
+
+    assert code == 0
+    assert seen_cmds == [
+        [
+            "/usr/bin/datasette",
+            "serve",
+            str(db_path),
+            "--host",
+            "127.0.0.1",
+            "--port",
+            "8001",
+        ]
+    ]
+
+    assert (
+        main(
+            ["explore", "--port", "0"],
+            explore_runner=fake_runner,
+            which=lambda b: "/usr/bin/uvx",
+        )
+        == 2
+    )
+    assert "--port must be between" in capsys.readouterr().err
+
+    assert (
+        main(
+            [
+                "explore",
+                "--input",
+                str(catalog),
+                "--db",
+                str(db_path),
+            ],
+            explore_runner=fake_runner,
+            which=lambda b: None,
+        )
+        == 1
+    )
+    assert "datasette or uvx" in capsys.readouterr().err

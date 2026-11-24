@@ -6,6 +6,7 @@ import csv
 import io
 import json
 from pathlib import Path
+import sqlite3
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -20,6 +21,7 @@ from idsignpost.export import (
     write_json,
     write_markdown,
     write_parquet,
+    write_sqlite,
 )
 from idsignpost.models import CatalogEntry
 
@@ -231,3 +233,140 @@ def test_atomic_write_creates_missing_parent_directories(
         item["id"] for item in json.loads(nested_json.read_text(encoding="utf-8"))
     ] == ["a-bats", "z-moth"]
     assert nested_bin.read_bytes() == b"ok"
+
+
+def test_sqlite_exports_normalized_tables_fts5_and_views(
+    entries: list[CatalogEntry], tmp_path: Path
+) -> None:
+    db_path = tmp_path / "db" / "idsignpost.db"
+    broken_with_alt = make_entry(
+        "c-beetles",
+        title="Ground beetles guide",
+        web_link="https://example.org/dead",
+        web_link_status="404",
+        web_link_state="broken",
+        available_as=["Publication"],
+        keywords="coleoptera carabidae",
+        alternative_link="https://shop.example/carabidae",
+        alternative_probability=0.9,
+        alternative_note="confirmed: exact handbook page.",
+        wayback_link="https://web.archive.org/web/2021/https://example.org/dead",
+    )
+    broken_unrecovered = make_entry(
+        "d-flies",
+        title="Hoverfly key",
+        web_link="https://example.org/gone",
+        web_link_status="404",
+        web_link_state="broken",
+        available_as=["Online"],
+        alternative_link=None,
+        alternative_probability=None,
+        alternative_reasoning=None,
+        alternative_note="no candidates returned",
+    )
+    live_entry = make_entry(
+        "b-bees",
+        title="Bumblebees field guide",
+        is_free=True,
+        web_link="https://bees.example/guide",
+        web_link_status="200",
+        web_link_state="ok",
+        available_as=["Online", "PDF"],
+        alternative_link=None,
+        alternative_probability=None,
+        alternative_reasoning=None,
+    )
+
+    write_sqlite([*entries, broken_with_alt, broken_unrecovered, live_entry], db_path)
+
+    assert sorted(p.name for p in db_path.parent.iterdir()) == ["idsignpost.db"]
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    try:
+        rows = conn.execute("SELECT * FROM entries ORDER BY id").fetchall()
+        assert [row["id"] for row in rows] == [
+            "a-bats",
+            "b-bees",
+            "c-beetles",
+            "d-flies",
+            "z-moth",
+        ]
+        by_id = {row["id"]: row for row in rows}
+        assert by_id["a-bats"]["web_link_state"] == "unverified"
+        assert by_id["a-bats"]["is_free"] == 0
+        assert by_id["b-bees"]["is_free"] == 1
+        assert by_id["z-moth"]["is_free"] is None
+        assert json.loads(by_id["a-bats"]["available_as"]) == ["PDF", "Online"]
+
+        formats = conn.execute(
+            "SELECT entry_id, format FROM entry_formats ORDER BY entry_id, format"
+        ).fetchall()
+        assert [(r["entry_id"], r["format"]) for r in formats] == [
+            ("a-bats", "Online"),
+            ("a-bats", "PDF"),
+            ("b-bees", "Online"),
+            ("b-bees", "PDF"),
+            ("c-beetles", "Publication"),
+            ("d-flies", "Online"),
+        ]
+
+        add_links = conn.execute(
+            "SELECT entry_id, url FROM entry_additional_links ORDER BY entry_id, url"
+        ).fetchall()
+        assert ("a-bats", "https://example.org/a") in [
+            (r["entry_id"], r["url"]) for r in add_links
+        ]
+
+        fts_hits = conn.execute(
+            "SELECT id FROM entries_fts WHERE entries_fts MATCH 'carabidae'"
+        ).fetchall()
+        assert [r["id"] for r in fts_hits] == ["c-beetles"]
+
+        working = conn.execute(
+            "SELECT id, best_link, link_source, formats FROM working_guides ORDER BY id"
+        ).fetchall()
+        assert [
+            (r["id"], r["best_link"], r["link_source"], r["formats"]) for r in working
+        ] == [
+            ("a-bats", "https://example.org/new", "alternative", "Online; PDF"),
+            ("b-bees", "https://bees.example/guide", "original", "Online; PDF"),
+            (
+                "c-beetles",
+                "https://shop.example/carabidae",
+                "alternative",
+                "Publication",
+            ),
+        ]
+
+        unresolved = conn.execute(
+            "SELECT id FROM broken_without_alternative ORDER BY id"
+        ).fetchall()
+        assert [r["id"] for r in unresolved] == ["d-flies"]
+
+        recovered = conn.execute(
+            "SELECT id, broken_web_link, alternative_link FROM recovered_alternatives ORDER BY id"
+        ).fetchall()
+        assert [
+            (r["id"], r["broken_web_link"], r["alternative_link"]) for r in recovered
+        ] == [
+            ("c-beetles", "https://example.org/dead", "https://shop.example/carabidae")
+        ]
+    finally:
+        conn.close()
+
+
+def test_sqlite_replaces_existing_file_cleanly(
+    entries: list[CatalogEntry], tmp_path: Path
+) -> None:
+    db_path = tmp_path / "idsignpost.db"
+    db_path.write_text("stale", encoding="utf-8")
+
+    write_sqlite(entries, db_path)
+
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["idsignpost.db"]
+    conn = sqlite3.connect(db_path)
+    try:
+        count = conn.execute("SELECT COUNT(*) FROM entries").fetchone()[0]
+        assert count == 2
+    finally:
+        conn.close()

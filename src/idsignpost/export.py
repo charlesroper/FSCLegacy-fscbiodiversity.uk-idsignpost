@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import sqlite3
 import tempfile
 from collections.abc import Callable, Iterable, Sequence
 from pathlib import Path
@@ -208,3 +209,179 @@ def catalog_markdown(entries: Iterable[CatalogEntry]) -> str:
 def write_markdown(entries: Iterable[CatalogEntry], path: str | Path) -> Path:
     """Write the human-readable Markdown catalog."""
     return _write_text(path, catalog_markdown(entries))
+
+
+_SQLITE_SCHEMA = """
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE entries (
+    id TEXT PRIMARY KEY,
+    filename TEXT NOT NULL,
+    title TEXT NOT NULL,
+    submitted_by TEXT,
+    submitted_at TEXT,
+    description TEXT,
+    authors TEXT,
+    is_free INTEGER,
+    available_as TEXT NOT NULL,
+    keywords TEXT,
+    comment_body TEXT,
+    web_link TEXT,
+    additional_web_links TEXT NOT NULL,
+    web_link_status TEXT,
+    web_link_state TEXT,
+    web_link_resolved TEXT,
+    wayback_link TEXT,
+    alternative_link TEXT,
+    alternative_probability REAL,
+    alternative_reasoning TEXT,
+    alternative_note TEXT,
+    verified_at TEXT
+);
+
+CREATE TABLE entry_formats (
+    entry_id TEXT NOT NULL REFERENCES entries(id) ON DELETE CASCADE,
+    format TEXT NOT NULL,
+    PRIMARY KEY (entry_id, format)
+) WITHOUT ROWID;
+
+CREATE TABLE entry_additional_links (
+    entry_id TEXT NOT NULL REFERENCES entries(id) ON DELETE CASCADE,
+    url TEXT NOT NULL,
+    PRIMARY KEY (entry_id, url)
+) WITHOUT ROWID;
+
+CREATE VIRTUAL TABLE entries_fts USING fts5(
+    id UNINDEXED,
+    title,
+    authors,
+    description,
+    keywords,
+    alternative_note,
+    content='entries',
+    content_rowid='rowid'
+);
+
+CREATE VIEW working_guides AS
+SELECT
+    e.id,
+    e.title,
+    e.authors,
+    e.is_free,
+    COALESCE(
+        (
+            SELECT group_concat(f.format, '; ')
+            FROM (
+                SELECT format
+                FROM entry_formats
+                WHERE entry_id = e.id
+                ORDER BY format
+            ) AS f
+        ),
+        ''
+    ) AS formats,
+    CASE
+        WHEN e.web_link_state = 'ok' THEN e.web_link
+        ELSE e.alternative_link
+    END AS best_link,
+    CASE
+        WHEN e.web_link_state = 'ok' THEN 'original'
+        ELSE 'alternative'
+    END AS link_source,
+    e.wayback_link,
+    e.keywords,
+    e.alternative_probability
+FROM entries AS e
+WHERE e.web_link_state = 'ok' OR e.alternative_link IS NOT NULL;
+
+CREATE VIEW broken_without_alternative AS
+SELECT
+    id,
+    title,
+    authors,
+    web_link,
+    web_link_status,
+    alternative_note,
+    wayback_link,
+    keywords
+FROM entries
+WHERE web_link_state = 'broken' AND alternative_link IS NULL;
+
+CREATE VIEW recovered_alternatives AS
+SELECT
+    id,
+    title,
+    authors,
+    web_link AS broken_web_link,
+    web_link_status,
+    alternative_link,
+    alternative_probability,
+    alternative_reasoning,
+    alternative_note,
+    wayback_link
+FROM entries
+WHERE web_link_state = 'broken' AND alternative_link IS NOT NULL;
+"""
+
+
+def _sqlite_row(entry: CatalogEntry) -> tuple[Any, ...]:
+    values: list[Any] = []
+    for name in COLUMNS:
+        value = getattr(entry, name)
+        if name == "web_link_state":
+            value = display_state(value)
+        elif name == "is_free":
+            value = None if value is None else int(bool(value))
+        elif name in LIST_FIELDS:
+            value = json.dumps(value, ensure_ascii=False)
+        values.append(value)
+    return tuple(values)
+
+
+def write_sqlite(entries: Iterable[CatalogEntry], path: str | Path) -> Path:
+    """Write a normalised, FTS5-indexed SQLite catalog for Datasette."""
+    ordered = _sorted(entries)
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, temporary = tempfile.mkstemp(
+        dir=target.parent or ".", prefix=f".{target.name}.", suffix=".db.tmp"
+    )
+    os.close(descriptor)
+    placeholders = ", ".join("?" for _ in COLUMNS)
+    columns_sql = ", ".join(COLUMNS)
+    try:
+        connection = sqlite3.connect(temporary)
+        try:
+            with connection:
+                connection.executescript(_SQLITE_SCHEMA)
+                connection.executemany(
+                    f"INSERT INTO entries ({columns_sql}) VALUES ({placeholders})",
+                    [_sqlite_row(entry) for entry in ordered],
+                )
+                connection.executemany(
+                    "INSERT OR IGNORE INTO entry_formats (entry_id, format) VALUES (?, ?)",
+                    [
+                        (entry.id, fmt)
+                        for entry in ordered
+                        for fmt in sorted(set(entry.available_as))
+                    ],
+                )
+                connection.executemany(
+                    "INSERT OR IGNORE INTO entry_additional_links (entry_id, url) VALUES (?, ?)",
+                    [
+                        (entry.id, url)
+                        for entry in ordered
+                        for url in sorted(set(entry.additional_web_links))
+                    ],
+                )
+                connection.execute(
+                    "INSERT INTO entries_fts(entries_fts) VALUES('rebuild')"
+                )
+        finally:
+            connection.close()
+        os.chmod(temporary, _default_file_mode())
+        Path(temporary).replace(target)
+    except BaseException:
+        Path(temporary).unlink(missing_ok=True)
+        raise
+    return target

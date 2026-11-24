@@ -4,10 +4,14 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+from collections.abc import Callable
 import logging
 import os
 from pathlib import Path
+import shutil
+import subprocess
 import sys
+from typing import Any
 
 from idsignpost import __version__
 from idsignpost.cost import SessionCostTracker
@@ -17,6 +21,7 @@ from idsignpost.export import (
     write_json,
     write_markdown,
     write_parquet,
+    write_sqlite,
 )
 from idsignpost.extract import extract_catalog, merge_verification
 from idsignpost.models import CatalogEntry, load_catalog
@@ -31,9 +36,10 @@ from idsignpost.pipeline import (
 COMMANDS = {
     "extract": "Parse legacy HTML into the canonical catalog.",
     "verify": "Check links, archives, and alternatives.",
-    "export": "Render CSV, Parquet, and Markdown.",
+    "export": "Render CSV, Parquet, Markdown, and SQLite.",
     "run": "Extract, verify, and export in one pass.",
     "cost": "Inspect local session costs and run history.",
+    "explore": "Explore the SQLite catalog interactively with Datasette.",
 }
 
 
@@ -78,15 +84,76 @@ def _cmd_export(args: argparse.Namespace) -> int:
         write_csv(entries, args.csv)
         write_parquet(entries, args.parquet)
         write_markdown(entries, args.md)
+        write_sqlite(entries, args.sqlite)
     except (OSError, ValueError) as exc:
         print(f"idsignpost export: {exc}", file=sys.stderr)
         return 1
     print(
         f"idsignpost export: wrote {len(entries)} entries to "
-        f"{args.csv}, {args.parquet}, {args.md}",
+        f"{args.csv}, {args.parquet}, {args.md}, {args.sqlite}",
         file=sys.stderr,
     )
     return 0
+
+
+def _cmd_explore(
+    args: argparse.Namespace,
+    *,
+    runner: Callable[..., Any] | None = None,
+    which: Callable[[str], str | None] | None = None,
+) -> int:
+    if not 1 <= args.port <= 65535:
+        print("idsignpost explore: --port must be between 1 and 65535", file=sys.stderr)
+        return 2
+
+    input_path = Path(args.input)
+    db_path = Path(args.db)
+    metadata_path = Path(args.metadata)
+    needs_build = (
+        args.rebuild
+        or not db_path.is_file()
+        or (
+            input_path.is_file()
+            and input_path.stat().st_mtime > db_path.stat().st_mtime
+        )
+    )
+    if needs_build:
+        try:
+            entries = load_catalog(input_path)
+            write_sqlite(entries, db_path)
+        except (OSError, ValueError) as exc:
+            print(f"idsignpost explore: {exc}", file=sys.stderr)
+            return 1
+
+    resolve_bin = which or shutil.which
+    datasette_bin = resolve_bin("datasette")
+    uvx_bin = resolve_bin("uvx")
+    if datasette_bin:
+        cmd = [datasette_bin, "serve"]
+    elif uvx_bin:
+        cmd = [uvx_bin, "--from", "datasette", "datasette", "serve"]
+    else:
+        print(
+            "idsignpost explore: datasette or uvx is required to run 'idsignpost explore'",
+            file=sys.stderr,
+        )
+        return 1
+
+    cmd.extend([str(db_path), "--host", args.host, "--port", str(args.port)])
+    if metadata_path.is_file():
+        cmd.extend(["-m", str(metadata_path)])
+    if args.open:
+        cmd.append("--open")
+
+    run_cmd = runner or subprocess.run
+    try:
+        completed = run_cmd(cmd, check=False)
+    except KeyboardInterrupt:
+        return 130
+    except OSError as exc:
+        print(f"idsignpost explore: {exc}", file=sys.stderr)
+        return 1
+    return int(getattr(completed, "returncode", 0))
 
 
 def _cmd_cost(args: argparse.Namespace) -> int:
@@ -245,9 +312,10 @@ def _cmd_run(
     write_csv(merged, args.csv)
     write_parquet(merged, args.parquet)
     write_markdown(merged, args.md)
+    write_sqlite(merged, args.sqlite)
     print(
         f"idsignpost run: wrote {len(merged)} entries to "
-        f"{args.output}, {args.csv}, {args.parquet}, {args.md}",
+        f"{args.output}, {args.csv}, {args.parquet}, {args.md}, {args.sqlite}",
         file=sys.stderr,
     )
     return 0
@@ -383,6 +451,11 @@ def _add_export_options(parser: argparse.ArgumentParser) -> None:
         default="idsignpost.md",
         help="Output Markdown file path (default: idsignpost.md).",
     )
+    parser.add_argument(
+        "--sqlite",
+        default="idsignpost.db",
+        help="Output SQLite file path (default: idsignpost.db).",
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -464,6 +537,47 @@ def build_parser() -> argparse.ArgumentParser:
         help="Output session history in machine-readable JSON format.",
     )
     cost_parser.set_defaults(handler=_cmd_cost)
+
+    explore_parser = subparsers.add_parser(
+        "explore", help=COMMANDS["explore"], description=COMMANDS["explore"]
+    )
+    explore_parser.add_argument(
+        "--input",
+        default="idsignpost.json",
+        help="Input catalog JSON path used when building the SQLite database (default: idsignpost.json).",
+    )
+    explore_parser.add_argument(
+        "--db",
+        default="idsignpost.db",
+        help="SQLite database file path to serve in Datasette (default: idsignpost.db).",
+    )
+    explore_parser.add_argument(
+        "--metadata",
+        default="datasette.metadata.json",
+        help="Datasette metadata JSON path (default: datasette.metadata.json).",
+    )
+    explore_parser.add_argument(
+        "--host",
+        default="127.0.0.1",
+        help="Host interface for Datasette to bind (default: 127.0.0.1).",
+    )
+    explore_parser.add_argument(
+        "--port",
+        type=int,
+        default=8001,
+        help="Port for Datasette to listen on (default: 8001).",
+    )
+    explore_parser.add_argument(
+        "--rebuild",
+        action="store_true",
+        help="Rebuild the SQLite database from the catalog JSON before launching.",
+    )
+    explore_parser.add_argument(
+        "--open",
+        action="store_true",
+        help="Open Datasette in the default web browser automatically.",
+    )
+    explore_parser.set_defaults(handler=_cmd_explore)
     return parser
 
 
@@ -509,6 +623,8 @@ def main(
     argv: list[str] | None = None,
     *,
     deps: VerifyDeps | None = None,
+    explore_runner: Callable[..., Any] | None = None,
+    which: Callable[[str], str | None] | None = None,
 ) -> int:
     if "PYTEST_CURRENT_TEST" not in os.environ:
         _load_env_file()
@@ -517,6 +633,8 @@ def main(
         logging.basicConfig(level=logging.DEBUG)
     if args.command in {"verify", "run"}:
         return int(args.handler(args, deps=deps))
+    if args.command == "explore":
+        return int(args.handler(args, runner=explore_runner, which=which))
     return int(args.handler(args))
 
 
