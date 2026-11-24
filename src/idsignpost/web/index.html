@@ -1,92 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="govuk-template">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Biodiversity ID Signpost: Identification Guide Directory</title>
-  <meta name="description" content="Searchable directory of 736 British and Irish wildlife identification guides, recovered from the Field Studies Council Biodiversity ID Signpost.">
+  <title>ID Resource Signpost Revived: UK biological identification resources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Search keys, atlases, apps and books for identifying UK wildlife. Each entry shows whether its link still works and links to an archived copy where one exists.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#163323" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b140f" media="(prefers-color-scheme: dark)">
+  <script>
+    try {
+      var storedTheme = localStorage.getItem("idsignpost-theme");
+      if (storedTheme === "light" || storedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", storedTheme);
+      }
+    } catch (error) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;family=Alegreya:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/govuk-frontend@5.7.1/dist/govuk/govuk-frontend.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="govuk-template__body">
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
   <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <div>
-          <h1>Biodiversity ID Signpost</h1>
-          <p class="subtitle">Field identification keys, charts and guides for British and Irish wildlife.</p>
-        </div>
-        <a class="repo-link" href="https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost" target="_blank" rel="noopener noreferrer">GitHub repository</a>
-      </div>
-      <dl class="stats-bar" id="stats-bar" aria-label="Catalogue summary">
-        <div class="stat-pill"><dt>Working links</dt><dd id="stat-working">-</dd></div>
-        <div class="stat-pill"><dt>Recovered</dt><dd id="stat-recovered">-</dd></div>
-        <div class="stat-pill"><dt>Wayback archives</dt><dd id="stat-wayback">-</dd></div>
-        <div class="stat-pill"><dt>Total entries</dt><dd id="stat-total">-</dd></div>
-      </dl>
+    <div class="govuk-width-container site-header__inner">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A9.49 9.49 0 0 0 12 21c7 0 11-8 11-14a7 7 0 0 0-7-7c-5 0-9 3-10 8 .8-1 2.5-2 5-2 4 0 6 2 6 2z"/>
+        </svg>
+        <span>
+          <span class="brand__title">ID Resource Signpost <em>Revived</em></span>
+          <span class="brand__subtitle">Catalogue of UK biological identification resources</span>
+        </span>
+      </a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="controls" aria-label="Search and filter guides">
-      <form class="search-form" role="search" onsubmit="return false">
-        <label class="visually-hidden" for="search-input">Search guides</label>
-        <input id="search-input" type="search" inputmode="search" autocomplete="off" placeholder="Search taxon, title, author or keyword (e.g. beetles, fungi, BSBI)...">
-        <button id="clear-btn" type="button" class="btn-secondary" hidden>Clear</button>
-      </form>
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content">
+      <h1 class="govuk-heading-xl">Find an identification guide</h1>
+      <p class="govuk-body-l intro">Search keys, atlases, apps and books for identifying UK wildlife. Each entry shows whether its link still works, with an archived copy where one exists.</p>
 
-      <div class="view-tabs" role="tablist" aria-label="Guide availability view">
-        <button type="button" role="tab" class="tab-btn active" data-view="working" aria-selected="true">Working <span class="count" id="tab-count-working"></span></button>
-        <button type="button" role="tab" class="tab-btn" data-view="recovered" aria-selected="false">Recovered <span class="count" id="tab-count-recovered"></span></button>
-        <button type="button" role="tab" class="tab-btn" data-view="all" aria-selected="false">All <span class="count" id="tab-count-all"></span></button>
-        <button type="button" role="tab" class="tab-btn" data-view="broken" aria-selected="false">Needs link <span class="count" id="tab-count-broken"></span></button>
-      </div>
+      <noscript>
+        <div class="govuk-inset-text">Turn on JavaScript to search the catalogue. You can still download the data from the links at the bottom of the page.</div>
+      </noscript>
 
-      <div class="filter-row">
-        <div class="chip-group" role="group" aria-label="Format and cost filters">
-          <button type="button" class="chip-btn" id="free-toggle" aria-pressed="false">Free only</button>
-          <button type="button" class="chip-btn" data-format="Online" aria-pressed="false">Online</button>
-          <button type="button" class="chip-btn" data-format="PDF" aria-pressed="false">PDF</button>
-          <button type="button" class="chip-btn" data-format="Publication" aria-pressed="false">Publication</button>
-          <button type="button" class="chip-btn" data-format="App" aria-pressed="false">App</button>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">What the link statuses mean</span>
+        </summary>
+        <div class="govuk-details__text">
+          <dl class="status-help">
+            <div><dt><span class="status-tag status-tag--live">Live</span></dt><dd>The original link worked at the last check.</dd></div>
+            <div><dt><span class="status-tag status-tag--alternative">Alternative</span></dt><dd>The original link is broken. A working page for the same guide replaces it.</dd></div>
+            <div><dt><span class="status-tag status-tag--broken">Broken</span></dt><dd>The original link no longer works and no alternative was found. Try the Wayback archive.</dd></div>
+            <div><dt><span class="status-tag status-tag--unverified">Unverified</span></dt><dd>The website blocked the check or did not answer. The link may still work.</dd></div>
+            <div><dt><span class="status-tag status-tag--no-link">No link</span></dt><dd>The entry has no web address.</dd></div>
+          </dl>
+        </div>
+      </details>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <form role="search" aria-label="Search and filter guides" onsubmit="return false">
+            <div class="govuk-form-group search-group">
+              <label class="govuk-label govuk-label--s" for="search-input">Search guides</label>
+              <div id="search-hint" class="govuk-hint">For example: beetles, lichen or BSBI</div>
+              <input class="govuk-input" id="search-input" name="q" type="search" autocomplete="off" aria-describedby="search-hint">
+            </div>
+
+            <button type="button" id="filter-toggle" class="govuk-button govuk-button--secondary filter-toggle" aria-expanded="false" aria-controls="filter-panel">Show filters</button>
+
+            <div class="filter-panel" id="filter-panel">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="status-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Link status</legend>
+                  <div id="status-hint" class="govuk-hint">Choose one or more. Clear them all to see every guide.</div>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="status-live" name="status" type="checkbox" value="live">
+                      <label class="govuk-label govuk-checkboxes__label" for="status-live">Live <span class="count" data-count="status:live"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="status-alternative" name="status" type="checkbox" value="alternative">
+                      <label class="govuk-label govuk-checkboxes__label" for="status-alternative">Alternative <span class="count" data-count="status:alternative"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="status-broken" name="status" type="checkbox" value="broken">
+                      <label class="govuk-label govuk-checkboxes__label" for="status-broken">Broken <span class="count" data-count="status:broken"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="status-unverified" name="status" type="checkbox" value="unverified">
+                      <label class="govuk-label govuk-checkboxes__label" for="status-unverified">Unverified <span class="count" data-count="status:unverified"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="status-no-link" name="status" type="checkbox" value="no-link">
+                      <label class="govuk-label govuk-checkboxes__label" for="status-no-link">No link <span class="count" data-count="status:no-link"></span></label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Format</legend>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="format-online" name="format" type="checkbox" value="Online">
+                      <label class="govuk-label govuk-checkboxes__label" for="format-online">Online <span class="count" data-count="format:Online"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="format-pdf" name="format" type="checkbox" value="PDF">
+                      <label class="govuk-label govuk-checkboxes__label" for="format-pdf">PDF <span class="count" data-count="format:PDF"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="format-publication" name="format" type="checkbox" value="Publication">
+                      <label class="govuk-label govuk-checkboxes__label" for="format-publication">Publication <span class="count" data-count="format:Publication"></span></label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="format-app" name="format" type="checkbox" value="App">
+                      <label class="govuk-label govuk-checkboxes__label" for="format-app">App <span class="count" data-count="format:App"></span></label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Cost</legend>
+                  <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="cost-free" name="free" type="checkbox" value="1">
+                      <label class="govuk-label govuk-checkboxes__label" for="cost-free">Free to use <span class="count" data-count="free"></span></label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <button type="button" id="reset-filters" class="govuk-button govuk-button--secondary">Reset filters</button>
+            </div>
+          </form>
         </div>
 
-        <label class="sort-wrap">
-          <span>Sort</span>
-          <select id="sort-select">
-            <option value="relevance">Relevance / Title A-Z</option>
-            <option value="newest">Newest submitted</option>
-            <option value="confidence">Highest match score</option>
-          </select>
-        </label>
+        <div class="govuk-grid-column-two-thirds">
+          <div id="error-summary" class="govuk-error-summary" role="alert" hidden>
+            <h2 class="govuk-error-summary__title">There is a problem</h2>
+            <div class="govuk-error-summary__body">
+              <p id="error-message" class="govuk-body"></p>
+            </div>
+          </div>
+
+          <div id="active-filters" class="active-filters" hidden>
+            <p class="govuk-body-s">Filters applied</p>
+            <ul id="active-filter-list" class="filter-chips"></ul>
+          </div>
+
+          <div class="results-bar">
+            <p id="results-count" class="govuk-body results-count" role="status" tabindex="-1">Loading guides</p>
+            <div class="sort">
+              <label class="govuk-label" for="sort-select">Sort by</label>
+              <select class="govuk-select" id="sort-select" name="sort">
+                <option value="relevance">Best match</option>
+                <option value="title">Title (A to Z)</option>
+                <option value="newest">Date added (newest)</option>
+                <option value="oldest">Date added (oldest)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-scroll">
+            <table class="govuk-table results-table" id="results-table">
+              <caption class="govuk-table__caption govuk-visually-hidden">Identification guides that match your filters</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Guide</th>
+                  <th scope="col" class="govuk-table__header">Authors</th>
+                  <th scope="col" class="govuk-table__header">Format and cost</th>
+                  <th scope="col" class="govuk-table__header">Status</th>
+                  <th scope="col" class="govuk-table__header">Archive</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body" id="table-body"></tbody>
+            </table>
+          </div>
+
+          <div id="empty-state" class="govuk-inset-text" hidden>
+            <h2 class="govuk-heading-m">No guides match your filters</h2>
+            <p class="govuk-body">Remove a filter, check your spelling or search by an author or website name.</p>
+            <button type="button" id="empty-reset" class="govuk-button govuk-button--secondary">Reset filters</button>
+          </div>
+
+          <button type="button" id="export-button" class="govuk-button govuk-button--secondary export-button" hidden>Download results as CSV</button>
+
+          <nav class="govuk-pagination" aria-label="Pagination" id="pagination" hidden>
+            <div class="govuk-pagination__prev" id="page-prev">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m6.5938-0.0078125-6.7265 6.7266 6.7265 6.7266 1.4141-1.4141-4.3125-4.3125 10.891 0.0001v-2h-10.891l4.3125-4.3125-1.4141-1.4141z"></path>
+                </svg>
+                <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span></span>
+              </a>
+            </div>
+            <ul class="govuk-pagination__list" id="pagination-list"></ul>
+            <div class="govuk-pagination__next" id="page-next">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span>
+                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m8.107-0.0078125-1.414 1.414 4.292 4.293h-10.985v2h10.985l-4.292 4.293 1.414 1.414 6.707-6.707-6.707-6.707z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
-    </section>
-
-    <div class="results-meta">
-      <p id="results-status" aria-live="polite">Loading catalogue...</p>
-      <button id="reset-filters" type="button" class="link-btn" hidden>Reset filters</button>
-    </div>
-
-    <div id="error-banner" class="error-banner" role="alert" hidden></div>
-    <section id="results" class="results-grid" aria-label="Identification guides"></section>
-
-    <div class="pagination" id="pagination" hidden>
-      <button id="show-more-btn" type="button" class="btn-primary">Show more guides</button>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Data rescued from the Field Studies Council (FSC) Biodiversity ID Signpost archive and verified with Wayback Machine snapshots.</p>
-      <nav class="footer-links" aria-label="Data downloads and tools">
-        <a href="idsignpost.json" download>JSON</a>
-        <a href="idsignpost.csv" download>CSV</a>
-        <a href="idsignpost.parquet" download>Parquet</a>
-        <a href="idsignpost.db" download>SQLite</a>
-        <a id="duckdb-link" href="https://shell.duckdb.org/#queries=v0,LOAD-httpfs~,CREATE-OR-REPLACE-VIEW-guides-AS-SELECT-title%2C-authors%2C-is_free%2C-available_as%2C-web_link_state%2C-COALESCE%28alternative_link%2C-web_link%29-AS-best_link%2C-wayback_link%2C-keywords-FROM-read_parquet%28%27https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy%20fscbiodiversity.uk%20idsignpost%2Fmain%2Fidsignpost.parquet%27%29~,FROM-guides-WHERE-web_link_state-%3D-%27ok%27-OR-best_link-IS-NOT-NULL-LIMIT-20~" target="_blank" rel="noopener noreferrer">SQL in DuckDB Web Shell</a>
-      </nav>
+    <div class="govuk-width-container">
+      <h2 class="govuk-heading-s">About this catalogue</h2>
+      <p class="govuk-body-s footer-about">ID Resource Signpost Revived is a restored copy of the Field Studies Council's ID Signpost, a crowdsourced catalogue of UK biological identification resources. Every link was rechecked, and archived copies were added from the Internet Archive.</p>
+      <ul class="footer-links">
+        <li><a class="govuk-link" href="idsignpost.json" download>Download JSON</a></li>
+        <li><a class="govuk-link" href="idsignpost.csv" download>Download CSV</a></li>
+        <li><a class="govuk-link" href="idsignpost.parquet" download>Download Parquet</a></li>
+        <li><a class="govuk-link" href="idsignpost.db" download>Download SQLite database</a></li>
+        <li><a id="duckdb-link" href="https://shell.duckdb.org/#queries=v0,LOAD-httpfs~,CREATE-OR-REPLACE-VIEW-guides-AS-SELECT-title%2C-authors%2C-is_free%2C-available_as%2C-web_link_state%2C-COALESCE%28alternative_link%2C-web_link%29-AS-best_link%2C-wayback_link%2C-keywords-FROM-read_parquet%28%27https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy%20fscbiodiversity.uk%20idsignpost%2Fmain%2Fidsignpost.parquet%27%29~,FROM-guides-WHERE-web_link_state-%3D-%27ok%27-OR-best_link-IS-NOT-NULL-LIMIT-20~" class="govuk-link" target="_blank" rel="noopener noreferrer">Query the data with DuckDB</a></li>
+        <li><a class="govuk-link" href="https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost" target="_blank" rel="noopener noreferrer">View the source on GitHub</a></li>
+      </ul>
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
