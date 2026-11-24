@@ -35,6 +35,8 @@ flowchart LR
     EXPORT --> CSV["idsignpost.csv"]
     EXPORT --> PARQUET["idsignpost.parquet"]
     EXPORT --> MD["idsignpost.md"]
+    EXPORT --> SQLITE["idsignpost.db\n(SQLite + FTS5)"]
+    SQLITE --> EXPLORE["4. idsignpost explore\n(Datasette UI)"]
 ```
 
 ### 2.2 Repository Layout
@@ -48,11 +50,13 @@ idsignpost/
 ├── NARRATIVE.md                 # Running engineering journal
 ├── README.md                    # Project documentation and guide
 ├── plans/                       # Milestone blueprints and archive
+├── datasette.metadata.json      # Curated Datasette facets, FTS config and canned queries
 ├── idsignpost/                  # Raw scraped legacy HTML files (input source)
 ├── idsignpost.json              # Canonical structured catalog (generated & enriched)
 ├── idsignpost.csv               # Tabular export for spreadsheets (generated)
 ├── idsignpost.parquet           # Columnar export for analytics (generated)
 ├── idsignpost.md                # Readable Markdown catalog with verification data (generated)
+├── idsignpost.db                # Self-contained SQLite + FTS5 catalog (generated)
 ├── src/
 │   └── idsignpost/
 │       ├── __init__.py
@@ -67,7 +71,7 @@ idsignpost/
 │       ├── cache.py             # Two-tier atomic JSON cache (UrlRecord, EntryRecord, title+URL deduplication)
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
 │       ├── pipeline.py          # Async Verifier, VerifyConfig, VerifyDeps, run_verification and Candidate evaluation
-│       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, and Markdown
+│       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, Markdown, and SQLite
 │       └── cli.py               # Unified CLI (`uv run idsignpost <command>`) and .env loader
 └── tests/
     ├── fixtures/                # Small HTML fixtures for extraction and URL edge cases
@@ -289,8 +293,13 @@ All output formats are rendered directly from the validated `list[CatalogEntry]`
    - `alternative_probability`: `pa.float64()`
    - All other fields: `pa.string()`
 4. **`idsignpost.md`:** Human-readable Markdown catalog where each entry is rendered under `## <filename>` with clean bullet points, including `Web link`, `Web link state`, `Wayback link`, and `Alternative link` (when present).
+5. **`idsignpost.db`:** Self-contained SQLite database (stdlib `sqlite3`, no new runtime dependencies) structured for interactive exploration in Datasette:
+   - `entries`: Primary table mirroring CSV/Parquet columns (`is_free` as integer `0`/`1`, `available_as` and `additional_web_links` as JSON arrays, `alternative_probability` as `REAL`, `web_link_state` mapped to `"unverified"` for `"blocked"`), indexed on `web_link_state`, `is_free`, `submitted_at`, and `web_link_status`.
+   - `entry_formats` and `entry_additional_links`: Normalised child tables with `FOREIGN KEY (entry_id) REFERENCES entries(id)` so multi-value formats and links facet cleanly in Datasette.
+   - `entries_fts`: External-content `FTS5` virtual table indexing `title`, `description`, `authors`, `keywords`, `comment_body`, and `available_as` with insert/delete/update triggers.
+   - Views: `working_guides` (entries with `web_link_state = 'ok'` or a verified `alternative_link`, resolving a single `best_url`), `broken_without_alternative`, and `recovered_alternatives`.
 
-All exporters write through `atomic_write`, creating missing parent directories, writing a temporary file in the destination directory, applying the caller's umask and atomically replacing the target with `Path.replace`. JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Human-facing exports (`idsignpost.csv`, `idsignpost.parquet` and `idsignpost.md`) label `blocked` as `unverified`, while `idsignpost.json` keeps the canonical `blocked` state.
+All exporters write through `atomic_write` (creating missing parent directories, writing a temporary file in the destination directory, applying the caller's umask, and atomically replacing the target with `Path.replace`; `write_sqlite` closes the SQLite connection and temp file descriptor before calling `Path.replace`). JSON entries are sorted by `id`. CSV uses Python's `csv` module with `newline=""`. Markdown indents multi-line values by two spaces. Human-facing exports (`idsignpost.csv`, `idsignpost.parquet`, `idsignpost.md` and `idsignpost.db`) label `blocked` as `unverified`, while `idsignpost.json` keeps the canonical `blocked` state.
 
 ---
 
@@ -388,13 +397,16 @@ uv run idsignpost verify [OPTIONS]
   --cost-file PATH            Cost tracking file path (default: .idsignpost_costs.json)
   -v, --verbose               Enable debug logging
 
-# 3. Export canonical idsignpost.json to CSV, Parquet, and Markdown
-uv run idsignpost export [--input idsignpost.json] [--csv idsignpost.csv] [--parquet idsignpost.parquet] [--md idsignpost.md]
+# 3. Export canonical idsignpost.json to CSV, Parquet, Markdown, and SQLite
+uv run idsignpost export [--input idsignpost.json] [--csv idsignpost.csv] [--parquet idsignpost.parquet] [--md idsignpost.md] [--sqlite idsignpost.db]
 
 # 4. Run full pipeline (extract -> verify -> export)
 uv run idsignpost run [VERIFY_OPTIONS]
 
-# 5. Inspect local session costs and run history
+# 5. Launch local Datasette web UI against idsignpost.db and datasette.metadata.json
+uv run idsignpost explore [--input idsignpost.json] [--sqlite idsignpost.db] [--metadata datasette.metadata.json] [--host 127.0.0.1] [--port 8001] [--open]
+
+# 6. Inspect local session costs and run history
 uv run idsignpost cost [--cost-file .idsignpost_costs.json] [--reset] [--json]
 ```
 
@@ -428,7 +440,7 @@ All unit and integration tests reside in `tests/` and run offline via `uv run py
 8. **`tests/test_wayback.py`:** Uses `respx` to test Availability API lookups, `closest.status == "200"` filtering, `http` to `https` normalisation, retry logic and Save Page Now capture (both authenticated SPN2 POST/polling and unauthenticated fallback) with its 60-second timeout and 429 handling.
 9. **`tests/test_cache.py`:** Verifies atomic disk writes, `get_check` and `put_check` round-trips, Wayback snapshot preservation on `--refresh`, transient failure exclusion, `(normalize_title(title), url)` Entry Tier keys, transparent migration from legacy `<entry_id>::<url>` records, `update_entry` explicit updates and dirty-write skipping, `record_redirect` preservation of cached Alternatives, `clear_entry`, `drop_alternative`, TTL expiry, v1 cache discard and URL-tier/entry-tier isolation.
 10. **`tests/test_sampler.py`:** Verifies exclusion of entries without `web_link`, stratified sampling across all four buckets (`ok`, `broken`, `blocked`, `unverified`), shortfall redistribution, clamping and seed reproducibility.
-11. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`) and Markdown generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
+11. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`), Markdown, and SQLite (normalised tables, `FTS5` search, views, and clean file replacement) generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
 12. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig`, `VerifyDeps` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, deterministic login-wall rejection without Gemini calls, redirect checks, broken-link discovery, `PublisherPreResolver` hit and fallback paths, duplicate same-title entry coordination vs distinct-title URL Tier sharing, cross-domain `200 OK` and standalone homepage Candidate confirmation, generic-hub / same-host-root / soft-404 Candidate pre-rejection, cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation and duplicate coordination, stale redirect cleanup on `--refresh` and recovery, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
-13. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
+13. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `--sqlite` export wiring, `explore` auto-build and `datasette`/`uvx` fallback launch, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
 14. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.

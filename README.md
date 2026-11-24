@@ -118,14 +118,28 @@ The catalogue contains **736 entries**. Each entry describes an identification r
 
 ### Catalogue formats
 
-The catalogue is generated from canonical records in `idsignpost.json` and exported to four formats:
+The catalogue is generated from canonical records in `idsignpost.json` and exported to five formats:
 
 | File | Best for | How to open |
 |---|---|---|
+| `idsignpost.db` | Interactive search, facets, and SQL views | Open in Datasette (`idsignpost explore`), Datasette Lite, DB Browser for SQLite, or `sqlite3` |
 | `idsignpost.csv` | Spreadsheets, filtering, and sorting | Open in Microsoft Excel, Google Sheets, or Apple Numbers |
 | `idsignpost.md` | Reading on screen or browsing on GitHub | Open in any text editor or view directly on GitHub |
 | `idsignpost.json` | Programmatic use and web applications | Open in text editors or import into software scripts |
 | `idsignpost.parquet` | Fast data analysis and database queries | Load into Python, R, DuckDB, Polars, or Pandas |
+
+### Explore interactively in Datasette
+
+You can search all 736 identification guides, facet by format (`Online`, `PDF`, `Publication`), filter link health and run pre-built queries without installing Python tools locally:
+
+- **[Open catalogue in Datasette Lite](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fidsignpost.db&metadata=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fdatasette.metadata.json)** (runs WebAssembly SQLite in your browser directly from `idsignpost.db` and `datasette.metadata.json`).
+- **Run locally with one command:** if you cloned the repository and installed `uv`, run:
+
+```bash
+uv run idsignpost explore --open
+```
+
+`idsignpost explore` uses `datasette` on your `PATH` or falls back automatically to `uvx --from datasette datasette serve` without adding web server dependencies to `pyproject.toml`. Inside Datasette you can use full-text search on `entries` or run the built-in views (`working_guides`, `broken_without_alternative`, `recovered_alternatives`) and canned queries (`search_working_guides`, `free_online_and_pdf_guides`, `link_health_summary`, `recovered_alternatives_by_domain`).
 
 ### How to find and use identification guides
 
@@ -158,13 +172,14 @@ flowchart LR
     JSON --> VERIFY["3. idsignpost verify\n(HTTP, Gemini, Wayback)"]
     VERIFY --> JSON
     JSON --> EXPORT["4. idsignpost export\n(Renderers)"]
-    EXPORT --> EXPORTS["idsignpost.csv, .parquet, .md"]
+    EXPORT --> EXPORTS["idsignpost.csv, .parquet, .md, .db"]
 ```
 
 1. **Extract records (`uv run idsignpost extract`):** reads the original HTML files in `idsignpost/`, strips website clutter, formats links, and generates canonical `CatalogEntry` records in `idsignpost.json`.
 2. **Verify links (`uv run idsignpost verify`):** tests link reachability, detects redirects, queries `gemini-3.1-flash-lite` with Google Search grounding for working replacements, queries the Internet Archive for historical snapshots, and caches results in `.url_cache.json`.
-3. **Export files (`uv run idsignpost export`):** renders `idsignpost.csv`, `idsignpost.parquet`, and readable `idsignpost.md` directly from the verified catalog.
+3. **Export files (`uv run idsignpost export`):** renders `idsignpost.csv`, `idsignpost.parquet`, `idsignpost.md`, and `idsignpost.db` directly from the verified catalog.
 4. **All-in-one run (`uv run idsignpost run`):** extracts the corpus, verifies selected entries, and exports if verification finishes without aborting.
+5. **Explore interactively (`uv run idsignpost explore`):** builds or refreshes `idsignpost.db` when stale and launches Datasette with `datasette.metadata.json`.
 
 ## Installation and setup
 
@@ -251,11 +266,14 @@ uv run idsignpost extract
 # Check links, look up snapshots, and find replacements
 uv run idsignpost verify
 
-# Render idsignpost.csv, idsignpost.parquet, and idsignpost.md
+# Render idsignpost.csv, idsignpost.parquet, idsignpost.md, and idsignpost.db
 uv run idsignpost export
 
 # Run all three in one pass
 uv run idsignpost run
+
+# Open the interactive Datasette catalogue in a browser
+uv run idsignpost explore --open
 ```
 
 `extract --limit 5` prints a sample to stdout instead of writing the catalog. Use `--output` to write a file explicitly.
