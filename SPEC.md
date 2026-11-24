@@ -59,11 +59,12 @@ idsignpost/
 │       ├── models.py            # Pydantic schemas, validation and immutable verification merge helpers
 │       ├── urls.py              # RFC 3986 sanitization, tracking-param stripping, host normalization
 │       ├── extract.py           # Direct HTML -> CatalogEntry parser (replaces extract_idsignpost & md_to_json)
-│       ├── http_checker.py      # Async HTTP liveness, redirect analysis, and HTML <title>/<h1> extraction
-│       ├── gemini_finder.py     # Three-method Gemini adapter (verify_redirect, discover, confirm_alternative)
-│       ├── cost.py              # Typed Gemini operation pricing and local 24h session cost tracking
+│       ├── http_checker.py      # Async HTTP liveness, login-wall & redirect checks, and HTML metadata extraction
+│       ├── gemini_finder.py     # Three-method Gemini adapter with thinking budgets and marketplace blocklist
+│       ├── pre_resolver.py      # Deterministic Publisher Pre-Resolver before Grounded Search
+│       ├── cost.py              # Official Gemini token/search pricing and local 24h session cost tracking
 │       ├── wayback.py           # Wayback Availability API lookup and Save Page Now capture
-│       ├── cache.py             # Two-tier atomic JSON cache (UrlRecord, EntryRecord, CheckResult adapter)
+│       ├── cache.py             # Two-tier atomic JSON cache (UrlRecord, EntryRecord, title+URL deduplication)
 │       ├── sampler.py           # Deterministic stratified cross-section sampler
 │       ├── pipeline.py          # Async Verifier, VerifyConfig, VerifyDeps, run_verification and Candidate evaluation
 │       ├── export.py            # Exporters for JSON, CSV, Apache Parquet, and Markdown
@@ -75,6 +76,7 @@ idsignpost/
     ├── test_extract.py
     ├── test_http_checker.py
     ├── test_gemini_finder.py
+    ├── test_pre_resolver.py     # Offline respx tests for Publisher Pre-Resolver rules and run caching
     ├── test_cost.py
     ├── test_wayback.py
     ├── test_cache.py
@@ -159,11 +161,11 @@ class CatalogEntry(BaseModel):
 
 ### 4.2 Stage 2: URL Verification and Discovery (`pipeline.py`)
 
-Verification orchestration is configured by `VerifyConfig` and executed through `run_verification(entries, config, *, deps=None)` using `VerifyDeps` for optional `checker`, `finder`, `wayback`, `generator` and `resolver` overrides:
+Verification orchestration is configured by `VerifyConfig` and executed through `run_verification(entries, config, *, deps=None)` using `VerifyDeps` for optional `checker`, `finder`, `wayback`, `generator`, `resolver` and `pre_resolver` overrides:
 
 - `VerifyConfig` validates option ranges (`validate()`), resolves `verification_model_name` and `discovery_model_name` (defaulting to `model`) and selects target Catalog Entries (`select_targets()`, applying `--only-broken` before `--sample` or `--limit`).
-- `run_verification` loads `SessionCostTracker` and `CatalogCache`, constructs default `HTTPChecker`, `WaybackClient` and `GeminiFinder` adapters when overrides are not supplied, runs `Verifier.verify(targets)`, guarantees `aclose()` cleanup on adapters, saves `.url_cache.json` on completion or `KeyboardInterrupt`/`asyncio.CancelledError`, records run costs and returns `(merge_verified(entries, verified), verifier.stats)`.
-- `Verifier` accepts `cache`, `checker` (`Checker`), `finder` (`Finder`), `wayback` (`Archive`), concurrency limits, `save_archive`, `refresh` and an optional DNS `resolver` injected into `is_public_http_url`.
+- `run_verification` loads `SessionCostTracker` and `CatalogCache`, constructs default `HTTPChecker`, `WaybackClient`, `GeminiFinder` and `PublisherPreResolver` adapters when overrides are not supplied, runs `Verifier.verify(targets)`, guarantees `aclose()` cleanup on adapters, saves `.url_cache.json` on completion or `KeyboardInterrupt`/`asyncio.CancelledError`, records run costs and returns `(merge_verified(entries, verified), verifier.stats)`.
+- `Verifier` accepts `cache`, `checker` (`Checker`), `finder` (`Finder`), `wayback` (`Archive`), concurrency limits, `save_archive`, `refresh`, an optional DNS `resolver` injected into `is_public_http_url` and an optional `pre_resolver` (`PreResolver`).
 
 For each `CatalogEntry` with a non-empty `web_link`:
 
@@ -172,6 +174,7 @@ flowchart TD
     A["CatalogEntry with web_link"] --> B["1. HTTP Check (http_checker.py)"]
     B --> C{"HTTP Result"}
 
+    C -- "Redirect to login wall" --> G
     C -- "200-399 (Live)" --> D{"Suspicious Redirect?"}
     D -- "No" --> E["web_link_state = ok"]
     D -- "Yes (cross-domain, root collapse, soft-404)" --> F["2. Gemini Redirect Check"]
@@ -190,10 +193,12 @@ flowchart TD
     H --> N["3. Wayback Lookup (read-only)"]
     N --> L
 
-    G --> O["4. Gemini + Google Search Grounding\n(Request top 3 candidates)"]
-    I --> O
-    O --> P["Test Candidate Liveness in Rank Order"]
-    P --> Q["Select First Live Candidate >= min_prob in Rank Order"]
+    G --> PR["4a. Publisher Pre-Resolver (pre_resolver.py)"]
+    I --> PR
+    PR -- "No match" --> O["4b. Gemini + Google Search Grounding\n(Request top 3 candidates)"]
+    PR -- "Candidates proposed" --> P["Test Candidate Liveness & Confirmation"]
+    O --> P
+    P --> Q["Select First Confirmed Live Candidate"]
     Q --> N
 ```
 
@@ -213,37 +218,47 @@ flowchart TD
 - Catch per entry. One bad URL must not abort the run.
 - **Offline guard:** If at least 10 checks have run and every check failed with `ConnectError` or `TimeoutException` while no `2xx` or `4xx` response was seen, abort the run (`OfflineRunError`) without writing the catalog or the cache.
 - Record `web_link_resolved` whenever the final normalized URL differs from `web_link`. Normalize by lowercasing the host, removing default ports, dropping fragments, and ignoring a single trailing slash.
-- Flag `is_suspicious_redirect = True` when `resolved_url is not None` and any of these five conditions hold:
+- Deterministically classify authentication redirects (`is_auth_wall_redirect`): when a URL redirects to a known auth host (`accounts.google.com`, `login.microsoftonline.com`) or crosses onto an explicit auth path prefix (`/v3/signin`, `/servicelogin`, `/login`, `/signin`) when the original URL was not on an auth host or auth path, `HTTPChecker.check()` returns `CheckResult(status="redirect_mismatch", state="broken", resolved_url=resolved_url, is_suspicious_redirect=True, ..., cacheable=True)`. Primary links skip `verify_redirect` and proceed to alternative discovery; Candidate links fail before `confirm_alternative`.
+- Flag `is_suspicious_redirect = True` for non-auth redirects when `resolved_url is not None` and any of these five conditions hold:
   1. The clean host changed (`clean_host(original) != clean_host(final)`), where clean host means lowercase with a leading `www.` removed.
-  2. A non-empty path collapsed to the site root (`/`).
+  2. A non-empty path collapsed to the root of the same host (`is_same_host_root_redirect`).
   3. The destination path or HTML `<title>` contains soft-404 phrases (`"404"`, `"not found"`, `"page not found"`, `"error"`, `"expired"`).
   4. The destination path is a generic hub (`/shop`, `/shop/publications`, `/product-category`, `/resources`, `/search`, `/category`) while the entry `title` names a specific guide.
   5. The destination path or title contains `login`, `signin`, `register`, `subscribe`, `consent` or `cookie`.
-- When `resolved_url is None` and `state == "ok"`, inspect `page_title` and `page_h1` with `_has_soft_404` so non-redirecting `200 OK` soft-404 pages are still routed to Gemini verification.
+- Export `is_explicit_soft_404` (`"404 not found"`, `"page not found"`, `"error 404"` or standalone `\b404\b`) for Candidate pre-confirmation checks, while keeping `_has_soft_404` on non-redirecting `200 OK` primary `web_link` checks (`page_title` and `page_h1`) so primary soft-404 pages are still routed to Gemini redirect verification.
 - Transient results (`cacheable = False`) do not overwrite existing `web_link_state`, `web_link_status`, `web_link_resolved` or `wayback_link` on entries that already have a `web_link_state`. On an unverified entry (`web_link_state is None`), record the provisional `web_link_state`, `web_link_status` and `web_link_resolved` (plus `wayback_link` if found) without setting `verified_at` or writing to the cache. Transient entries are retried on the next run.
 
-#### Step 2b: Gemini Adapter Seam and Redirect Verification (`gemini_finder.py`)
+#### Step 2b: Gemini Adapter Seam, Thinking Budgets and Cost Accounting (`gemini_finder.py`, `cost.py`)
 - `Finder` (defined in `pipeline.py`) and `GeminiFinder` expose exactly three model operations: `verify_redirect`, `discover` and `confirm_alternative`.
-- Google GenAI SDK calls and token/search metadata extraction are isolated inside `_GenAIGenerator` behind an internal `Generator` protocol returning `GenerationResult` (`text`, `prompt_tokens`, `output_tokens`, `cached_tokens`, `search_queries`).
-- `GeminiFinder` uses a typed `tracker: SessionCostTracker | None` with `GeminiOperation` (`Literal["redirect_verification", "candidate_discovery", "candidate_confirmation"]` in `cost.py`) to record per-operation costs.
-- When a live link has `is_suspicious_redirect == True`, `Verifier` acquires `_gemini` only around `finder.verify_redirect(...)`, passing entry metadata (`title`, `authors`, `description`), `web_link`, `web_link_resolved` and extracted page `<title>`, `<h1>` and body snippet to `verification_model` (default: `gemini-3.1-flash-lite`).
+- Google GenAI SDK calls and token/search metadata extraction are isolated inside `_GenAIGenerator` behind an internal `Generator` protocol accepting `thinking_budget: int | None = None` (`types.ThinkingConfig(thinking_budget=...)`) and returning `GenerationResult` (`text`, `prompt_tokens`, `output_tokens`, `cached_tokens`, `thinking_tokens`, `tool_use_prompt_tokens`, `search_queries`).
+- `_GenAIGenerator.generate` reads `thoughts_token_count` (`thinking_tokens`) and `tool_use_prompt_token_count` (`tool_use_prompt_tokens`) from `usage_metadata`.
+- `GeminiFinder` uses a typed `tracker: SessionCostTracker | None` with `GeminiOperation` (`Literal["redirect_verification", "candidate_discovery", "candidate_confirmation"]` in `cost.py`) to record per-operation costs:
+  - `MODEL_RATES` uses official per-1M token (input, output, cached) and per-1k search rates (`gemini-3.1-flash-lite`: `0.25/1.50/0.025/14.0`; `gemini-3.1-pro`: `2.00/12.00/0.20/14.0`; `gemini-3-flash`: `0.50/3.00/0.05/14.0`; `gemini-2.5-flash-lite`: `0.10/0.40/0.01/35.0`; `gemini-2.5-flash`: `0.30/2.50/0.03/35.0`; `gemini-2.5-pro`: `1.25/10.00/0.125/35.0`), matched by longest prefix (`_SORTED_MODEL_PREFIXES`).
+  - `calculate_cost` bills `tool_use_prompt_tokens` at the uncached input rate and `thinking_tokens` at the output rate. Gemini 2.5 (and 2.0/1.5) models bill Search Grounding per grounded prompt (`1` unit when `search_queries > 0`, `$35.00 / 1k`); Gemini 3+ models bill per executed query (`$14.00 / 1k`).
+  - `.idsignpost_costs.json` persists `thinking_tokens` and `tool_use_prompt_tokens` per operation and run (defaulting to `0` on legacy logs), and `format_run_summary` / `format_session_table` display combined billed input (`prompt_tokens + tool_use_prompt_tokens`) and billed output (`output_tokens + thinking_tokens`).
+- When a live link has `is_suspicious_redirect == True`, `Verifier` acquires `_gemini` only around `finder.verify_redirect(...)`, passing entry metadata (`title`, `authors`, `description`), `web_link`, `web_link_resolved` and extracted page `<title>`, `<h1>` and body snippet to `verification_model` (default: `gemini-3.1-flash-lite`) with `thinking_budget=0` and `search=False`.
 - Google Search grounding is disabled for redirect verification (`search=False`). The check evaluates the fetched destination text directly, incurring token-only costs.
 - If Gemini confirms the page still hosts or offers the guide, keep `web_link_state = "ok"`.
 - If Gemini determines the redirect landed on an unrelated page or generic homepage, set `web_link_state = "broken"` and `web_link_status = "redirect_mismatch"`, then proceed to alternative discovery.
 - Cache the verdict in the Entry Tier via `CatalogCache.update_entry`. If Gemini fails transiently, keep the previous state and retry on the next run.
 
-#### Step 2c: Grounded Discovery and Candidate Evaluation (`gemini_finder.py` and `pipeline.py`)
+#### Step 2c: Publisher Pre-Resolution, Grounded Discovery and Candidate Evaluation (`pre_resolver.py`, `gemini_finder.py`, `pipeline.py`)
 - Executed **only** when `web_link_state == "broken"`.
-- `GeminiFinder.discover(entry, *, hint=None)` queries `discovery_model` (default: `gemini-3.1-flash-lite`) with Google Search grounding enabled (`search=True`, attaching `types.Tool(google_search=types.GoogleSearch())`), bounded across the run by `--max-searches`.
-- Prompt with `title`, `authors`, `description`, `available_as`, `keywords` and the broken `web_link`, requesting up to three ranked Candidates (`url`, `probability`, `reasoning`). `discover` also accepts an optional `hint` URL naming a rejected index page for targeted programmatic passes; `Verifier` currently calls `discover(entry)` without `hint`.
-- `_generate()` applies a 30-second timeout per attempt and retries `TimeoutError`, `429` and `5xx` up to four total attempts with `1s`, `2s` and `4s` backoff. `discover()` parses JSON tolerantly, retries once on malformed JSON and filters Candidates with `probability < min_probability` (default `0.40`) before returning.
-- `Verifier` owns all Candidate evaluation (`_evaluate_candidate`, `_discover`, `_reconfirm`, `_policy_note`, `_url_policy_note`), keeping HTTP checks out of `_gemini`:
-  1. Try any previously stored `entry.alternative_link` first, then call `finder.discover(entry)` under `_gemini` if needed.
-  2. Pre-check policy (`_policy_note`): accept only `http` and `https`, reject blocked hosts (`fscbiodiversity.uk`, `tombio.uk`, `archive.org`, `web.archive.org`, `ebay.co.uk`, `ebay.com`, `zvab.com`, `scribd.com` by exact host or dot-suffix), reject direct image URLs, reject site homepages (`""` or `"/"`), reject URLs equal to the broken `web_link` and reject userinfo or non-public IP addresses via `is_public_http_url` (using `Verifier._resolver` when injected). Rejections record `"ignored: <reason>"`.
-  3. Strip fragments via `cache_key` and run cached liveness through `Verifier._facts` (reusing the URL Tier cache, respecting `HTTPChecker.should_abort()` and incrementing `VerifyStats.checked` and `VerifyStats.cache_hits`). Transient HTTP errors record `"retry: transient check failure"` and skip caching. Non-`ok` or suspicious-redirect responses record `"rejected: link returned <status-or-state>"`.
-  4. Post-redirect policy (`_policy_note` on `result.resolved_url`): apply the same URL and DNS rules to the redirect destination, recording `"ignored: <reason>"` if rejected.
-  5. Acquire `_gemini` and call `finder.confirm_alternative(entry, url=..., page_title=..., page_h1=..., page_snippet=...)` using `verification_model` with Google Search disabled (`search=False`). Explicit mismatches record `"rejected: <reason>"`. Failed confirmation requests do not reject a live Candidate. Confirmed pages record `"confirmed: <reasoning>"` (when reasoning is present) and store the resolved URL as `alternative_link`.
-  6. Pick the first Candidate that passes all checks. On a failed search, store up to the first three `"ignored:"`, `"rejected:"` or `"retry:"` notes (or `"no candidates returned"` / `"search failed"`) in `alternative_note`.
+- `GeminiFinder.discover(entry, *, hint=None)` queries `discovery_model` (default: `gemini-3.1-flash-lite`) with `thinking_budget=512` and Google Search grounding enabled (`search=True`, attaching `types.Tool(google_search=types.GoogleSearch())`), bounded across the run by `--max-searches`.
+- `DISCOVERY_PROMPT` includes `title`, `authors`, `description`, `available_as`, `keywords`, broken `web_link` and optional `hint`, requests up to three ranked Candidates (`url`, `probability`, `reasoning`), forbids `site:` search queries against the broken entry's own dead host, and lists blocked hosts directly from `BLOCKED_HOSTS`.
+- `_generate()` applies a 30-second timeout per attempt and retries `TimeoutError`, `429` and `5xx` up to four total attempts with `1s`, `2s` and `4s` backoff. `discover()` parses JSON tolerantly in a single Grounded Search attempt (no outer JSON-parse retry loop that could double search charges) and filters Candidates with `probability < min_probability` (default `0.40`) before returning.
+- `Verifier` owns discovery orchestration (`_discover`, `_evaluate_candidates`, `_evaluate_candidate`, `_reconfirm`, `_policy_note`, `_url_policy_note`), keeping HTTP checks out of `_gemini`:
+  1. Try any previously stored `entry.alternative_link` first.
+  2. Next, if `Verifier.pre_resolver` is set (default `PublisherPreResolver` via `run_verification`), call `pre_resolver.resolve(entry)` before invoking Grounded Search and evaluate any proposed Candidates through the same liveness and confirmation loop. When a pre-resolved Candidate confirms, record the Alternative and skip `finder.discover()` with zero Grounded Search queries:
+     - **Summerfield Books (`summerfieldbooks.com`):** Rewrite legacy `/<slug>~<id>` paths (decoding URL escapes, stripping punctuation and trailing dots) to `https://www.summerfieldbooks.com/product/<clean-slug>/` with zero HTTP requests.
+     - **Royal Entomological Society (`royensoc.co.uk`):** Query cached WordPress `wp/v2/media` and `wp/v2/product` endpoints in memory across the run to propose matching `wp-content/uploads/...` PDFs or `/shop/publications/.../` handbook product pages.
+     - **Mike's Insect Keys (`sites.google.com/site/mikesinsectkeys` and `mikesinsectkeys2`):** Fetch and cache the New Google Sites navigation index once per run (`sites.google.com/view/mikes-insect-keys/home` with fallback to `/mikes-insect-keys` and bounded taxon sub-indexes) and match against the entry path slug and title.
+  3. Otherwise acquire `_gemini` and call `finder.discover(entry)`.
+  4. Pre-check policy (`_policy_note`): accept only `http` and `https`, reject blocked hosts (`fscbiodiversity.uk`, `tombio.uk`, `archive.org`, `web.archive.org`, `ebay.co.uk`, `ebay.com`, `zvab.com`, `scribd.com`, `amazon.co.uk`, `amazon.com`, `abebooks.co.uk`, `abebooks.com`, `alibris.co.uk`, `alibris.com`, `waterstones.com`, `foyles.co.uk`, `blackwells.co.uk`, `wordery.com`, `bookshop.org` by exact host or dot-suffix while keeping specialist natural-history booksellers `nhbs.com`, `pemberleybooks.com` and `summerfieldbooks.com` allowed), reject direct image URLs, allow standalone domain root homepages (`/`) while rejecting root URLs on `MULTI_RESOURCE_HOSTS` or same-host broken paths, reject URLs equal to the broken `web_link` and reject userinfo or non-public IP addresses via `is_public_http_url` (using `Verifier._resolver` when injected). Rejections record `"ignored: <reason>"`.
+  5. Strip fragments via `cache_key` and run cached liveness through `Verifier._facts` (reusing the URL Tier cache, respecting `HTTPChecker.should_abort()` and incrementing `VerifyStats.checked` and `VerifyStats.cache_hits`). Transient HTTP errors record `"retry: transient check failure"` and skip caching. Non-`ok` responses (including login-wall `redirect_mismatch`) record `"rejected: link returned <status-or-state>"`.
+  6. Apply post-redirect `_policy_note` on `result.resolved_url`, then check `_pre_confirmation_rejection_note`: allow `200 OK` Candidates that redirected across domains or carry incidental `is_suspicious_redirect` flags to reach confirmation, pre-rejecting only auth walls (`"rejected: login wall"`), `GENERIC_HUBS` (`"rejected: generic hub page"`), explicit soft-404 titles/headings (`"rejected: soft 404 page"`) and deep-to-same-host-root redirects (`"ignored: site homepage"`).
+  7. Acquire `_gemini` and call `finder.confirm_alternative(entry, url=..., page_title=..., page_h1=..., page_snippet=...)` using `verification_model` with `thinking_budget=0` and Google Search disabled (`search=False`). Explicit mismatches record `"rejected: <reason>"`. Failed confirmation requests do not reject a live Candidate. Confirmed pages record `"confirmed: <reasoning>"` (when reasoning is present) and store the resolved URL as `alternative_link`.
+  8. Pick the first Candidate that passes all checks. On a failed search, store up to the first three `"ignored:"`, `"rejected:"` or `"retry:"` notes (or `"no candidates returned"` / `"search failed"`) in `alternative_note`.
 - After the run, `_drop_shared_alternatives` drops any `alternative_link` assigned to three or more entries, restores the original URL's Wayback snapshot and calls `cache.drop_alternative(..., "dropped: URL shared by three or more entries")`.
 - Confirmed cached Alternatives (`record.alternative_confirmed`) still pass pure URL policy rules (`_url_policy_note`, without DNS or HTTP I/O) before reuse. Cached Alternatives without `alternative_confirmed` pass `_reconfirm()` through `_evaluate_candidate`, ensuring full policy, liveness and confirmation checks apply identically across discovery and cache reuse.
 - Cache settled verdicts, including negative verdicts, via `CatalogCache.update_entry`. Do not cache transient Gemini or HTTP errors.
@@ -300,7 +315,7 @@ All exporters write through `atomic_write`, creating missing parent directories,
     }
   },
   "entries": {
-    "bats-flight::https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf": {
+    "bats in flight::https://www.nhm.ac.uk/content/dam/nhmwww/take-part/identify-nature/bats-in-flight-id-guide.pdf": {
       "redirect_is_match": null,
       "redirect_reason": null,
       "alternative_url": "https://www.nhm.ac.uk/take-part/identify-nature/bats-in-flight-id-guide.html",
@@ -316,8 +331,8 @@ All exporters write through `atomic_write`, creating missing parent directories,
 ```
 
 - **URL Tier interface (`get_check`, `put_check`, `get_wayback`, `set_wayback`):** `CatalogCache` exchanges `CheckResult` instances directly with `Verifier` without exposing `UrlRecord` mapping details. `put_check` ignores `cacheable=False` Transient Failures and preserves any existing `wayback_url` across `--refresh` runs.
-- **Entry Tier interface (`update_entry`, `record_redirect`, `clear_entry`, `drop_alternative`):** `update_entry(entry_id, url, ...)` constructs and persists explicit `EntryRecord` values without implicitly carrying forward prior redirect verdicts, skipping dirty writes when semantic fields are unchanged. `record_redirect(entry_id, url, *, is_match, reason=None)` updates redirect verdict fields while preserving any cached Alternative fields (or clears stale redirect state when `is_match` is `None`). `clear_entry(entry_id, url)` removes stale Entry Tier records when a link recovers or stops redirecting, and `drop_alternative(entry_id, url, note)` clears a stored Alternative and caches the negative note while keeping any redirect verdict intact.
-- **Key canonicalization:** URL-tier and entry-tier keys use the sanitized URL with the fragment removed. Entry keys prefix the catalog `id` and `::`.
+- **Entry Tier interface (`get_entry`, `put_entry`, `update_entry`, `record_redirect`, `clear_entry`, `drop_alternative`):** All Entry Tier methods accept `(title, url, ..., entry_id=None)`. `update_entry` constructs and persists explicit `EntryRecord` values without implicitly carrying forward prior redirect verdicts, skipping dirty writes when semantic fields are unchanged. `record_redirect` updates redirect verdict fields while preserving any cached Alternative fields (or clears stale redirect state when `is_match` is `None`). `clear_entry` removes stale Entry Tier records when a link recovers or stops redirecting, and `drop_alternative` clears a stored Alternative and caches the negative note while keeping any redirect verdict intact.
+- **Key canonicalization and duplicate coordination:** URL-tier and entry-tier keys use the sanitized URL with the fragment removed (`cache_key(url)`). Entry Tier keys use `f"{normalize_title(title)}::{cache_key(url)}"` (`normalize_title` trims, lowercases and collapses whitespace), so Catalog Entries sharing the same title and broken URL reuse verdicts across runs, while `Verifier._verify_group` serialises identical-title subgroups in-run and runs distinct-title subgroups concurrently. When `get_entry` misses the new key and `entry_id` is provided, it checks legacy `f"{entry_id}::{cache_key(url)}"` records and migrates fresh hits in place.
 - **Atomic writes:** Cache saves write to a temporary file in the same directory (creating missing parent directories) and atomically replace `.url_cache.json` via `Path.replace`. The canonical catalog and all exports use the same pattern.
 - **Transient error exclusion:** Results with `cacheable = False` (HTTP 429, 5xx, connect errors, timeouts, or Wayback API failures) are never written to the cache and do not overwrite existing verified fields.
 - **TTL expiration:** Cached records older than `cache_ttl_days` (default `30` days) are automatically refreshed.
@@ -387,7 +402,7 @@ On startup (unless `PYTEST_CURRENT_TEST` is set), `main()` reads `.env` from the
 
 `GEMINI_API_KEY` is required for `verify` and `run`. When `--save-archive` is active without `--no-ia-keys`, `IA_ACCESS_KEY` and `IA_SECRET_KEY` are also required. Fail fast at startup with a clear message if required keys are missing. Never log any key.
 
-Every subcommand and flag defines `--help` descriptions. `verify` and `run` build a `VerifyConfig` and delegate execution to `pipeline.run_verification`, accepting an optional `VerifyDeps` bundle (`checker`, `finder`, `wayback`, `generator` and `resolver`) for testing without monkeypatching internal hooks.
+Every subcommand and flag defines `--help` descriptions. `verify` and `run` build a `VerifyConfig` and delegate execution to `pipeline.run_verification`, accepting an optional `VerifyDeps` bundle (`checker`, `finder`, `wayback`, `generator`, `resolver` and `pre_resolver`) for testing without monkeypatching internal hooks.
 
 `verify` requires the canonical schema. Run `extract` first; legacy JSON keys are rejected with a clear error.
 
@@ -401,18 +416,19 @@ Every subcommand and flag defines `--help` descriptions. `verify` and `run` buil
 
 ## 8. Testing Specification (`tests/`)
 
-All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 373 offline tests across 12 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
+All unit and integration tests reside in `tests/` and run offline via `uv run pytest` (collecting 467 offline tests across 13 test files, with `addopts = "-m 'not live'"` and `asyncio_mode = "auto"` configured in `pyproject.toml`, plus one deselected live smoke test). Extraction tests use small fixtures in `tests/fixtures/`, not the full 736-file corpus.
 
 1. **`tests/test_models.py`:** Tests `CatalogEntry` defaults, strict field validation (`extra="forbid"`), `alternative_probability` bounds, canonical HTTP and error status values, timestamp rules (`submitted_at` naive, `verified_at` UTC), `load_catalog`, duplicate `id` rejection, immutable `merge_verification` and `merge_verified` updates and the repository-wide no-em-dash guardrail.
-2. **`tests/test_urls.py`:** Tests RFC 3986 sanitisation, relative URL resolution, tracking parameter removal, fragment removal for cache keys, scheme and userinfo rejection and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
+2. **`tests/test_urls.py`:** Tests RFC 3986 sanitisation, relative URL resolution, tracking parameter removal, fragment removal for cache keys, `host_matches` exact/dot-suffix matching, scheme and userinfo rejection and private-address rejection. Split Flickr URL repair is covered in `test_extract.py`.
 3. **`tests/test_extract.py`:** Tests direct HTML-to-`CatalogEntry` extraction against fixtures, covering double entity decoding (`&amp;#13;`), NBSP normalisation, `is_free` conversion, list normalisation (`available_as`), ISO date parsing with the fixed submitted format, Unicode filename slugs, split Flickr URLs, relative links and duplicate `id` rejection.
-4. **`tests/test_http_checker.py`:** Uses `respx` to test status classification (`200`, `400`, `403`, `404`, `429`, `503`), bounded 16 KB streaming `400`/`403` retries, `<title>` and `<h1>` extraction, redirect loops, protocol errors, suspicious redirect detection (cross-domain, root path collapse, soft-404 titles, login pages), non-redirecting soft-404 detection and the offline guard.
-5. **`tests/test_gemini_finder.py`:** Injects a single `FakeGenerator` at the `Generator` transport seam to verify `verify_redirect`, `discover` (including `min_probability` filtering and `hint`), `confirm_alternative`, blocklist suffix matching (`notebay.co.uk` must pass), malformed JSON retries, `429`/`5xx`/`TimeoutError` backoff retries, `--max-searches` caps and `SessionCostTracker` recording.
-6. **`tests/test_cost.py`:** Tests `GeminiOperation` coverage, model pricing table lookups, token and Grounded Search cost calculation, `SessionCostTracker` persistence, strict loading on corrupt or directory paths, run summaries, aligned session tables, 24-hour session rollover and session resets.
-7. **`tests/test_wayback.py`:** Uses `respx` to test Availability API lookups, `closest.status == "200"` filtering, `http` to `https` normalisation, retry logic and Save Page Now capture with its 60-second timeout and 429 handling.
-8. **`tests/test_cache.py`:** Verifies atomic disk writes, `get_check` and `put_check` round-trips, Wayback snapshot preservation on `--refresh`, transient failure exclusion, `update_entry` explicit updates and dirty-write skipping, `record_redirect` preservation of cached Alternatives, `clear_entry`, `drop_alternative`, TTL expiry, v1 cache discard and URL-tier/entry-tier isolation.
-9. **`tests/test_sampler.py`:** Verifies exclusion of entries without `web_link`, stratified sampling across all four buckets (`ok`, `broken`, `blocked`, `unverified`), shortfall redistribution, clamping and seed reproducibility.
-10. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`) and Markdown generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
-11. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig`, `VerifyDeps` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, redirect checks, broken-link discovery, Candidate policy filtering (pre-check and post-redirect with injected DNS resolver), cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation, stale redirect cleanup on `--refresh` and recovery, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
-12. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
-13. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.
+4. **`tests/test_http_checker.py`:** Uses `respx` to test status classification (`200`, `400`, `403`, `404`, `429`, `503`), bounded 16 KB streaming `400`/`403` retries, `<title>` and `<h1>` extraction, redirect loops, protocol errors, deterministic login-wall `redirect_mismatch` classification, suspicious redirect detection (cross-domain, root path collapse, soft-404 titles, login pages), explicit vs primary soft-404 detection and the offline guard.
+5. **`tests/test_gemini_finder.py`:** Injects a single `FakeGenerator` at the `Generator` transport seam to verify `verify_redirect` (`thinking_budget=0`), `discover` (`thinking_budget=512`, `min_probability` filtering, `hint`, `DISCOVERY_PROMPT` rules, single-attempt failure on malformed JSON), `confirm_alternative` (`thinking_budget=0`), expanded retail marketplace blocklist (`notebay.co.uk` and specialist natural-history booksellers must pass), `ThinkingConfig` wiring and `usage_metadata` token extraction (`thoughts_token_count`, `tool_use_prompt_token_count`), `429`/`5xx`/`TimeoutError` backoff retries, `--max-searches` caps and `SessionCostTracker` recording.
+6. **`tests/test_pre_resolver.py`:** Uses `respx` fixtures to verify `PublisherPreResolver` slug rewriting for `summerfieldbooks.com`, WordPress media and product lookups for `royensoc.co.uk`, New Google Sites index parsing for `sites.google.com/site/mikesinsectkeys` (including `404` `/home` fallback and `mikesinsectkeys2`), concurrency-safe per-run caching and graceful HTTP/parse error handling.
+7. **`tests/test_cost.py`:** Tests `GeminiOperation` coverage, official `MODEL_RATES` and longest-prefix lookups, `thinking_tokens` and `tool_use_prompt_tokens` billing, Gemini 2.5 per-prompt vs Gemini 3+ per-query search pricing, `SessionCostTracker` persistence with legacy `0` defaults, strict loading on corrupt or directory paths, combined `in`/`out` reporting in run summaries and session tables, 24-hour session rollover and session resets.
+8. **`tests/test_wayback.py`:** Uses `respx` to test Availability API lookups, `closest.status == "200"` filtering, `http` to `https` normalisation, retry logic and Save Page Now capture (both authenticated SPN2 POST/polling and unauthenticated fallback) with its 60-second timeout and 429 handling.
+9. **`tests/test_cache.py`:** Verifies atomic disk writes, `get_check` and `put_check` round-trips, Wayback snapshot preservation on `--refresh`, transient failure exclusion, `(normalize_title(title), url)` Entry Tier keys, transparent migration from legacy `<entry_id>::<url>` records, `update_entry` explicit updates and dirty-write skipping, `record_redirect` preservation of cached Alternatives, `clear_entry`, `drop_alternative`, TTL expiry, v1 cache discard and URL-tier/entry-tier isolation.
+10. **`tests/test_sampler.py`:** Verifies exclusion of entries without `web_link`, stratified sampling across all four buckets (`ok`, `broken`, `blocked`, `unverified`), shortfall redistribution, clamping and seed reproducibility.
+11. **`tests/test_export.py`:** Verifies JSON, CSV, Parquet (schema and column types via `pyarrow`) and Markdown generation from `CatalogEntry` models, deterministic byte output, `blocked` to `unverified` display mapping, CSV quoting of embedded newlines and quotes and `atomic_write` parent directory creation.
+12. **`tests/test_pipeline.py`:** Tests `Verifier.verify`, `VerifyConfig`, `VerifyDeps` and `run_verification` with fake adapters and temporary-file `CatalogCache` instances: live links, deterministic login-wall rejection without Gemini calls, redirect checks, broken-link discovery, `PublisherPreResolver` hit and fallback paths, duplicate same-title entry coordination vs distinct-title URL Tier sharing, cross-domain `200 OK` and standalone homepage Candidate confirmation, generic-hub / same-host-root / soft-404 Candidate pre-rejection, cached Candidate liveness and stats, Gemini semaphore scoping, `refresh=True` Wayback preservation and duplicate coordination, stale redirect cleanup on `--refresh` and recovery, shared-hub pruning, `KeyboardInterrupt` cache saving, offline aborts and cost tracking.
+13. **`tests/test_cli.py`:** Tests real CLI wiring via `VerifyDeps` without monkeypatching internal hooks: `extract --limit` stdout output, `verify` full-catalog merge, model and search flag wiring, `--sample` and `--limit` mutual exclusion, `--only-broken` ordering, `.env` parsing (`export ` prefixes and unquoted inline `#` comments), `--help` flag coverage, error exit codes (`1` and `2`) including corrupt or directory cost files and `KeyboardInterrupt` exit code `130`.
+14. **`tests/test_live_smoke.py` (`@pytest.mark.live`):** Deselected by default; run via `uv run pytest -m live` to test a small stratified sample against live endpoints.

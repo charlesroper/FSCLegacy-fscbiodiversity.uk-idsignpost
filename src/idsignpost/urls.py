@@ -87,6 +87,12 @@ def clean_host(url: str) -> str:
     return host.removeprefix("www.")
 
 
+def host_matches(url: str, domains: Iterable[str]) -> bool:
+    """Match a URL's hostname against domains by exact host or dot-suffix."""
+    host = (urlsplit(url).hostname or "").lower()
+    return any(host == domain or host.endswith(f".{domain}") for domain in domains)
+
+
 def _remove_single_trailing_slash(path: str) -> str:
     if len(path) > 1 and path.endswith("/") and not path.endswith("//"):
         return path[:-1]

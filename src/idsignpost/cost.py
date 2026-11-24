@@ -26,15 +26,18 @@ OPERATION_LABELS: dict[GeminiOperation, str] = {
 }
 
 # Standard rates per 1,000,000 tokens (input, output, cached)
-# and per 1,000 Google Search grounding queries.
+# and per 1,000 Google Search grounding units.
 MODEL_RATES: dict[str, tuple[float, float, float, float]] = {
-    "gemini-3.1-flash-lite": (0.25, 1.50, 0.02, 14.0),
-    "gemini-2.5-flash-lite": (0.075, 0.30, 0.01875, 35.0),
-    "gemini-2.5-flash": (0.15, 0.60, 0.0375, 35.0),
-    "gemini-3.5-flash-lite": (0.25, 1.50, 0.02, 14.0),
-    "gemini-3.5-flash": (0.50, 2.00, 0.05, 14.0),
-    "gemini-3.8-flash": (0.50, 2.00, 0.05, 14.0),
+    "gemini-3.1-flash-lite": (0.25, 1.50, 0.025, 14.0),
+    "gemini-3.1-pro": (2.00, 12.00, 0.20, 14.0),
+    "gemini-3-flash": (0.50, 3.00, 0.05, 14.0),
+    "gemini-2.5-flash-lite": (0.10, 0.40, 0.01, 35.0),
+    "gemini-2.5-flash": (0.30, 2.50, 0.03, 35.0),
+    "gemini-2.5-pro": (1.25, 10.00, 0.125, 35.0),
 }
+_SORTED_MODEL_PREFIXES: tuple[str, ...] = tuple(
+    sorted(MODEL_RATES, key=lambda prefix: len(prefix), reverse=True)
+)
 
 
 def utcnow() -> datetime:
@@ -45,14 +48,22 @@ def isoformat(dt: datetime) -> str:
     return dt.isoformat(timespec="seconds")
 
 
+def _clean_model_name(model: str) -> str:
+    return model.removeprefix("models/").lower()
+
+
+def _is_per_prompt_search_model(clean_model: str) -> bool:
+    return any(tag in clean_model for tag in ("2.5", "2.0", "1.5"))
+
+
 def get_model_rates(model: str) -> tuple[float, float, float, float]:
     """Return (input_per_m, output_per_m, cached_per_m, search_per_k) for model."""
-    clean = model.removeprefix("models/").lower()
-    for prefix, rates in MODEL_RATES.items():
+    clean = _clean_model_name(model)
+    for prefix in _SORTED_MODEL_PREFIXES:
         if clean.startswith(prefix):
-            return rates
-    search_rate = 35.0 if any(tag in clean for tag in ("2.5", "2.0", "1.5")) else 14.0
-    return (0.25, 1.50, 0.02, search_rate)
+            return MODEL_RATES[prefix]
+    search_rate = 35.0 if _is_per_prompt_search_model(clean) else 14.0
+    return (0.25, 1.50, 0.025, search_rate)
 
 
 def calculate_cost(
@@ -61,17 +72,25 @@ def calculate_cost(
     prompt_tokens: int,
     output_tokens: int,
     cached_tokens: int = 0,
+    thinking_tokens: int = 0,
+    tool_use_prompt_tokens: int = 0,
     search_queries: int = 0,
 ) -> float:
     """Calculate nominal USD cost from token and search query counts."""
-    inp_m, out_m, cache_m, search_k = get_model_rates(model)
-    uncached_prompt = max(0, prompt_tokens - cached_tokens)
+    clean = _clean_model_name(model)
+    inp_m, out_m, cache_m, search_k = get_model_rates(clean)
+    uncached_prompt = max(0, prompt_tokens - cached_tokens) + tool_use_prompt_tokens
+    billed_output = output_tokens + thinking_tokens
     token_cost = (
         (uncached_prompt * inp_m / 1_000_000.0)
         + (cached_tokens * cache_m / 1_000_000.0)
-        + (output_tokens * out_m / 1_000_000.0)
+        + (billed_output * out_m / 1_000_000.0)
     )
-    search_cost = search_queries * search_k / 1_000.0
+    if _is_per_prompt_search_model(clean):
+        billable_searches = 1 if search_queries > 0 else 0
+    else:
+        billable_searches = max(0, search_queries)
+    search_cost = billable_searches * search_k / 1_000.0
     return token_cost + search_cost
 
 
@@ -86,6 +105,8 @@ class CallRecord:
     cached_tokens: int
     search_queries: int
     cost_usd: float
+    thinking_tokens: int = 0
+    tool_use_prompt_tokens: int = 0
 
 
 @dataclass(slots=True)
@@ -96,14 +117,26 @@ class OperationStats:
     prompt_tokens: int = 0
     output_tokens: int = 0
     cached_tokens: int = 0
+    thinking_tokens: int = 0
+    tool_use_prompt_tokens: int = 0
     search_queries: int = 0
     cost_usd: float = 0.0
+
+    @property
+    def billed_input_tokens(self) -> int:
+        return self.prompt_tokens + self.tool_use_prompt_tokens
+
+    @property
+    def billed_output_tokens(self) -> int:
+        return self.output_tokens + self.thinking_tokens
 
     def add(self, record: CallRecord) -> None:
         self.calls += 1
         self.prompt_tokens += record.prompt_tokens
         self.output_tokens += record.output_tokens
         self.cached_tokens += record.cached_tokens
+        self.thinking_tokens += record.thinking_tokens
+        self.tool_use_prompt_tokens += record.tool_use_prompt_tokens
         self.search_queries += record.search_queries
         self.cost_usd += record.cost_usd
 
@@ -113,6 +146,8 @@ class OperationStats:
             "prompt_tokens": self.prompt_tokens,
             "output_tokens": self.output_tokens,
             "cached_tokens": self.cached_tokens,
+            "thinking_tokens": self.thinking_tokens,
+            "tool_use_prompt_tokens": self.tool_use_prompt_tokens,
             "search_queries": self.search_queries,
             "cost_usd": round(self.cost_usd, 6),
         }
@@ -124,6 +159,8 @@ class OperationStats:
             prompt_tokens=data.get("prompt_tokens", 0),
             output_tokens=data.get("output_tokens", 0),
             cached_tokens=data.get("cached_tokens", 0),
+            thinking_tokens=data.get("thinking_tokens", 0),
+            tool_use_prompt_tokens=data.get("tool_use_prompt_tokens", 0),
             search_queries=data.get("search_queries", 0),
             cost_usd=float(data.get("cost_usd", 0.0)),
         )
@@ -142,6 +179,16 @@ class RunRecord:
     search_queries: int
     cost_usd: float
     by_operation: dict[str, OperationStats] = field(default_factory=dict)
+    thinking_tokens: int = 0
+    tool_use_prompt_tokens: int = 0
+
+    @property
+    def billed_input_tokens(self) -> int:
+        return self.prompt_tokens + self.tool_use_prompt_tokens
+
+    @property
+    def billed_output_tokens(self) -> int:
+        return self.output_tokens + self.thinking_tokens
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -151,6 +198,8 @@ class RunRecord:
             "prompt_tokens": self.prompt_tokens,
             "output_tokens": self.output_tokens,
             "cached_tokens": self.cached_tokens,
+            "thinking_tokens": self.thinking_tokens,
+            "tool_use_prompt_tokens": self.tool_use_prompt_tokens,
             "search_queries": self.search_queries,
             "cost_usd": round(self.cost_usd, 6),
             "by_operation": {k: v.to_dict() for k, v in self.by_operation.items()},
@@ -172,6 +221,8 @@ class RunRecord:
             search_queries=data.get("search_queries", 0),
             cost_usd=float(data.get("cost_usd", 0.0)),
             by_operation=by_op,
+            thinking_tokens=data.get("thinking_tokens", 0),
+            tool_use_prompt_tokens=data.get("tool_use_prompt_tokens", 0),
         )
 
 
@@ -201,6 +252,8 @@ class SessionCostTracker:
         prompt_tokens: int,
         output_tokens: int,
         cached_tokens: int = 0,
+        thinking_tokens: int = 0,
+        tool_use_prompt_tokens: int = 0,
         search_queries: int = 0,
     ) -> CallRecord:
         """Record usage and cost for one Gemini call."""
@@ -209,6 +262,8 @@ class SessionCostTracker:
             prompt_tokens=prompt_tokens,
             output_tokens=output_tokens,
             cached_tokens=cached_tokens,
+            thinking_tokens=thinking_tokens,
+            tool_use_prompt_tokens=tool_use_prompt_tokens,
             search_queries=search_queries,
         )
         record = CallRecord(
@@ -219,6 +274,8 @@ class SessionCostTracker:
             cached_tokens=cached_tokens,
             search_queries=search_queries,
             cost_usd=cost,
+            thinking_tokens=thinking_tokens,
+            tool_use_prompt_tokens=tool_use_prompt_tokens,
         )
         self._current_calls.append(record)
         return record
@@ -230,6 +287,8 @@ class SessionCostTracker:
         total_prompt = 0
         total_output = 0
         total_cached = 0
+        total_thinking = 0
+        total_tool_use = 0
         total_search = 0
         total_cost = 0.0
 
@@ -239,6 +298,8 @@ class SessionCostTracker:
             total_prompt += call.prompt_tokens
             total_output += call.output_tokens
             total_cached += call.cached_tokens
+            total_thinking += call.thinking_tokens
+            total_tool_use += call.tool_use_prompt_tokens
             total_search += call.search_queries
             total_cost += call.cost_usd
 
@@ -252,6 +313,8 @@ class SessionCostTracker:
             search_queries=total_search,
             cost_usd=total_cost,
             by_operation=by_op,
+            thinking_tokens=total_thinking,
+            tool_use_prompt_tokens=total_tool_use,
         )
         self.runs.append(run)
         self.updated_at = now
@@ -276,6 +339,22 @@ class SessionCostTracker:
         return sum(run.output_tokens for run in self.runs)
 
     @property
+    def session_total_thinking_tokens(self) -> int:
+        return sum(run.thinking_tokens for run in self.runs)
+
+    @property
+    def session_total_tool_use_prompt_tokens(self) -> int:
+        return sum(run.tool_use_prompt_tokens for run in self.runs)
+
+    @property
+    def session_total_billed_input_tokens(self) -> int:
+        return sum(run.billed_input_tokens for run in self.runs)
+
+    @property
+    def session_total_billed_output_tokens(self) -> int:
+        return sum(run.billed_output_tokens for run in self.runs)
+
+    @property
     def session_total_search_queries(self) -> int:
         return sum(run.search_queries for run in self.runs)
 
@@ -294,19 +373,20 @@ class SessionCostTracker:
             if stats and stats.calls > 0:
                 lines.append(
                     f"  {label:<20} {stats.calls:>3} calls, "
-                    f"{stats.prompt_tokens:>7,d} in, {stats.output_tokens:>6,d} out, "
+                    f"{stats.billed_input_tokens:>7,d} in, "
+                    f"{stats.billed_output_tokens:>6,d} out, "
                     f"{stats.search_queries:>3} searches, ${stats.cost_usd:0.5f}"
                 )
 
         lines.append(
             f"  {'Run total:':<20} {run.calls:>3} calls, "
-            f"{run.prompt_tokens:>7,d} in, {run.output_tokens:>6,d} out, "
+            f"{run.billed_input_tokens:>7,d} in, {run.billed_output_tokens:>6,d} out, "
             f"{run.search_queries:>3} searches, ${run.cost_usd:0.5f}"
         )
         lines.append(
             f"  {'Session grand total:':<20} {self.session_total_calls:>3} calls, "
-            f"{self.session_total_prompt_tokens:>7,d} in, "
-            f"{self.session_total_output_tokens:>6,d} out, "
+            f"{self.session_total_billed_input_tokens:>7,d} in, "
+            f"{self.session_total_billed_output_tokens:>6,d} out, "
             f"{self.session_total_search_queries:>3} searches, "
             f"${self.session_total_cost:0.5f} across {len(self.runs)} runs"
         )
@@ -334,15 +414,15 @@ class SessionCostTracker:
             ts = run.timestamp[:19].replace("T", " ")
             lines.append(
                 f"{idx:<4} {ts:<20} {run.command:<10} {run.calls:>6} "
-                f"{run.prompt_tokens:>11,d} {run.output_tokens:>11,d} "
+                f"{run.billed_input_tokens:>11,d} {run.billed_output_tokens:>11,d} "
                 f"{run.search_queries:>9} ${run.cost_usd:>10.5f}"
             )
 
         lines.append(divider)
         lines.append(
             f"{'Total':<36} {self.session_total_calls:>6} "
-            f"{self.session_total_prompt_tokens:>11,d} "
-            f"{self.session_total_output_tokens:>11,d} "
+            f"{self.session_total_billed_input_tokens:>11,d} "
+            f"{self.session_total_billed_output_tokens:>11,d} "
             f"{self.session_total_search_queries:>9} "
             f"${self.session_total_cost:>10.5f}"
         )

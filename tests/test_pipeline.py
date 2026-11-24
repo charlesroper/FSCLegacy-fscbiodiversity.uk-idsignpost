@@ -16,7 +16,7 @@ import respx
 
 from idsignpost.cache import CatalogCache
 from idsignpost.gemini_finder import Candidate, GenerationResult, RedirectVerdict
-from idsignpost.http_checker import CheckResult
+from idsignpost.http_checker import CheckResult, HTTPChecker
 from idsignpost.models import CatalogEntry
 from idsignpost.pipeline import (
     OfflineRunError,
@@ -500,7 +500,7 @@ async def test_cached_image_alternative_is_cleared(tmp_path: object) -> None:
         now=lambda: NOW,
     )
     cache.update_entry(
-        "guide",
+        "Bats in flight",
         url,
         alternative_url="https://example.org/scan.jpg",
         alternative_probability=0.8,
@@ -1142,6 +1142,220 @@ async def test_discovery_rejects_unsafe_redirect_targets(
     assert finder.confirm_calls == []
 
 
+@respx.mock
+async def test_primary_login_wall_redirect_marks_broken_without_confirm_redirect(
+    tmp_path: object,
+) -> None:
+    source = "https://sites.google.com/site/mikesinsectkeys/Home/beetles"
+    login_url = "https://accounts.google.com/v3/signin/identifier?continue=x"
+    respx.get(source).mock(
+        return_value=httpx.Response(302, headers={"location": login_url})
+    )
+    respx.get(login_url).mock(
+        return_value=httpx.Response(
+            200,
+            headers={"content-type": "text/html"},
+            content=b"<title>Sign in - Google Accounts</title>",
+        )
+    )
+    finder = FakeFinder(candidates={"guide": []})
+    async with httpx.AsyncClient(follow_redirects=True) as client:
+        verifier = Verifier(
+            cache=CatalogCache(
+                path=tmp_path / "cache.json",  # type: ignore[operator]
+                ttl_days=30,
+                now=lambda: NOW,
+            ),
+            checker=HTTPChecker(client=client),
+            finder=finder,
+            wayback=FakeArchive(),
+            resolver=public_resolver,
+        )
+        updated = (await verifier.verify([entry(web_link=source)]))[0]
+
+    assert updated.web_link_state == "broken"
+    assert updated.web_link_status == "redirect_mismatch"
+    assert finder.redirect_calls == []
+
+
+@pytest.mark.parametrize(
+    ("candidate_url", "check_result"),
+    [
+        (
+            "https://example.org/private-doc",
+            CheckResult(
+                "redirect_mismatch",
+                "broken",
+                resolved_url="https://accounts.google.com/v3/signin/identifier",
+                is_suspicious_redirect=True,
+            ),
+        ),
+        (
+            "https://example.org/private-doc",
+            CheckResult(
+                "200",
+                "ok",
+                resolved_url="https://accounts.google.com/v3/signin/identifier",
+            ),
+        ),
+        (
+            "https://example.org/login",
+            CheckResult("200", "ok"),
+        ),
+    ],
+)
+async def test_candidate_resolving_to_login_wall_is_rejected_without_confirmation(
+    tmp_path: object, candidate_url: str, check_result: CheckResult
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: check_result,
+        }
+    )
+    finder = FakeFinder(candidates={"guide": [Candidate(candidate_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
+    assert finder.confirm_calls == []
+
+
+@pytest.mark.parametrize(
+    "multi_url",
+    [
+        "https://www.field-studies-council.org/",
+        "https://www.royensoc.co.uk/",
+        "https://www.plantlife.org.uk/",
+        "https://www.nhbs.com/",
+        "https://www.pemberleybooks.com/",
+        "https://www.summerfieldbooks.com/",
+        "https://sites.google.com/",
+    ],
+)
+async def test_discovery_rejects_multi_resource_publisher_homepages(
+    tmp_path: object, multi_url: str
+) -> None:
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder(candidates={"guide": [Candidate(multi_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
+    assert updated.alternative_note == "ignored: site homepage"
+    assert checker.checked == [URL]
+    assert finder.confirm_calls == []
+
+
+@pytest.mark.parametrize(
+    "standalone_url",
+    [
+        "https://standalone-key.example/",
+        "https://standalone-key.example",
+    ],
+)
+async def test_discovery_allows_standalone_domain_root_homepage_to_confirmation(
+    tmp_path: object, standalone_url: str
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            standalone_url: live(),
+        }
+    )
+    finder = FakeFinder(
+        candidates={"guide": [Candidate(standalone_url, 0.9)]},
+        confirmations={standalone_url: RedirectVerdict(True, "Dedicated site.")},
+    )
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link == standalone_url
+    assert updated.alternative_note == "confirmed: Dedicated site."
+    assert finder.confirm_calls == [("guide", standalone_url)]
+
+
+async def test_discovery_confirms_200_candidate_with_cross_domain_redirect_or_suspicion(
+    tmp_path: object,
+) -> None:
+    candidate_url = "https://old-publisher.example/bats"
+    resolved_url = "https://new-publisher.example/bats-guide"
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: CheckResult(
+                "200",
+                "ok",
+                resolved_url=resolved_url,
+                is_suspicious_redirect=True,
+                page_title="Error tolerance and bat flight",
+            ),
+        }
+    )
+    finder = FakeFinder(
+        candidates={"guide": [Candidate(candidate_url, 0.9)]},
+        confirmations={resolved_url: RedirectVerdict(True, "Migrated guide.")},
+    )
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link == resolved_url
+    assert updated.alternative_note == "confirmed: Migrated guide."
+    assert finder.confirm_calls == [("guide", resolved_url)]
+
+
+@pytest.mark.parametrize(
+    ("candidate_url", "check_result"),
+    [
+        (
+            "https://other.example/deep/guide",
+            CheckResult("200", "ok", resolved_url="https://other.example/"),
+        ),
+        (
+            "https://other.example/shop/publications",
+            CheckResult("200", "ok"),
+        ),
+        (
+            "https://other.example/resources",
+            CheckResult("200", "ok"),
+        ),
+        (
+            "https://other.example/missing",
+            CheckResult("200", "ok", page_title="404 Not Found"),
+        ),
+        (
+            "https://other.example/missing-2",
+            CheckResult("200", "ok", page_title="Site", page_h1="Page Not Found"),
+        ),
+    ],
+)
+async def test_discovery_rejects_same_host_root_hub_or_soft_404_before_confirmation(
+    tmp_path: object, candidate_url: str, check_result: CheckResult
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: check_result,
+        }
+    )
+    finder = FakeFinder(candidates={"guide": [Candidate(candidate_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
+    assert finder.confirm_calls == []
+
+
 async def test_transient_discover_failure_does_not_cache(tmp_path: object) -> None:
     checker = FakeChecker({URL: CheckResult("404", "broken")})
     finder = FakeFinder(candidates={"guide": None})
@@ -1299,7 +1513,7 @@ async def test_reconfirm_drops_dead_cached_alternative_with_rejected_note(
     )
     cache.put_check(URL, CheckResult("404", "broken"))
     cache.update_entry(
-        "guide",
+        "Bats in flight",
         URL,
         alternative_url=alt_url,
         alternative_probability=0.9,
@@ -1333,7 +1547,7 @@ async def test_reconfirm_rejects_redirect_to_private_address(
     )
     cache.put_check(URL, CheckResult("404", "broken"))
     cache.update_entry(
-        "guide",
+        "Bats in flight",
         URL,
         alternative_url=alt_url,
         alternative_probability=0.9,
@@ -1371,7 +1585,7 @@ async def test_reconfirm_transient_failure_records_retry_note_without_caching(
         now=lambda: NOW,
     )
     cache.update_entry(
-        "guide",
+        "Bats in flight",
         URL,
         alternative_url=alt_url,
         alternative_probability=0.9,
@@ -1429,7 +1643,7 @@ async def test_confirmed_cached_alternative_is_filtered_by_pure_url_policy(
         now=lambda: NOW,
     )
     cache.update_entry(
-        "guide",
+        "Bats in flight",
         URL,
         alternative_url=bad_url,
         alternative_probability=0.9,
@@ -1578,7 +1792,7 @@ async def test_refresh_clears_stale_redirect_verdict_when_link_becomes_404(
     assert refreshed.web_link_state == "broken"
     assert refreshed.web_link_status == "404"
     reloaded = CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW)
-    record = reloaded.get_entry("guide", URL)
+    record = reloaded.get_entry("Bats in flight", URL)
     assert record is not None
     assert record.redirect_is_match is None
     assert record.redirect_reason is None
@@ -1616,7 +1830,7 @@ async def test_refresh_clears_stale_redirect_and_alternative_when_link_recovers(
     assert refreshed.web_link_state == "ok"
     assert refreshed.alternative_link is None
     reloaded = CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW)
-    assert reloaded.get_entry("guide", URL) is None
+    assert reloaded.get_entry("Bats in flight", URL) is None
     payload = json.loads((tmp_path / "cache.json").read_text(encoding="utf-8"))
     assert payload["entries"] == {}
 
@@ -1657,7 +1871,7 @@ async def test_recovery_without_alternative_clears_stale_redirect_verdict(
     assert recovered.alternative_link is None
     assert recovered.alternative_note is None
     final_cache = CatalogCache.load(tmp_path / "cache.json", now=lambda: current)
-    assert final_cache.get_entry("guide", URL) is None
+    assert final_cache.get_entry("Bats in flight", URL) is None
     payload = json.loads((tmp_path / "cache.json").read_text(encoding="utf-8"))
     assert payload["entries"] == {}
 
@@ -1698,7 +1912,7 @@ async def test_refresh_redirect_with_transient_discovery_keeps_cached_alternativ
     assert updated.web_link_status == "redirect_mismatch"
     assert updated.alternative_link == alt_url
     reloaded = CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW)
-    record = reloaded.get_entry("guide", URL)
+    record = reloaded.get_entry("Bats in flight", URL)
     assert record is not None
     assert record.redirect_is_match is False
     assert record.redirect_reason == "Generic homepage."
@@ -1851,7 +2065,13 @@ class RunFakeGenerator:
         self.calls: list[tuple[str, bool]] = []
 
     async def generate(
-        self, prompt: str, *, model: str, json_mode: bool, search: bool
+        self,
+        prompt: str,
+        *,
+        model: str,
+        json_mode: bool,
+        search: bool,
+        thinking_budget: int | None = None,
     ) -> GenerationResult:
         self.calls.append((model, search))
         return self.script.pop(0)
@@ -2157,3 +2377,422 @@ async def test_run_verification_wires_ia_keys_and_no_ia_keys_fallback(
             == f"https://web.archive.org/web/20261123000001/{URL}"
         )
         assert anon_route.call_count == 1
+
+
+async def test_duplicate_entries_with_same_normalized_title_share_discovery_and_confirmation(
+    tmp_path: Path,
+) -> None:
+    alt_url = "https://new.example/bats-guide"
+    checker = FakeChecker({URL: CheckResult("404", "broken"), alt_url: live(alt_url)})
+    finder = FakeFinder(
+        candidates={"bats-1": [Candidate(alt_url, 0.92, "Moved to new page.")]},
+        confirmations={alt_url: RedirectVerdict(True, "official bat guide")},
+    )
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+    entries = [
+        entry("bats-1", title="Bats in flight", web_link=URL),
+        entry("bats-2", title="  bats   in FLIGHT ", web_link=f"{URL}#page-2"),
+    ]
+
+    result = await verifier.verify(entries)
+    verifier.cache.save()
+
+    assert [item.id for item in result] == ["bats-1", "bats-2"]
+    assert checker.checked == [URL, alt_url]
+    assert finder.discovery_calls == ["bats-1"]
+    assert finder.confirm_calls == [("bats-1", alt_url)]
+    for item in result:
+        assert item.web_link_state == "broken"
+        assert item.alternative_link == alt_url
+        assert item.alternative_probability == pytest.approx(0.92)
+        assert item.alternative_reasoning == "Moved to new page."
+        assert item.alternative_note == "confirmed: official bat guide"
+
+    payload = json.loads((tmp_path / "cache.json").read_text(encoding="utf-8"))
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
+
+    second_finder = FakeFinder()
+    second = make_verifier(
+        tmp_path,
+        FakeChecker({}),
+        finder=second_finder,
+        cache=CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW),
+    )
+    rerun = await second.verify(entries)
+    assert [item.alternative_link for item in rerun] == [alt_url, alt_url]
+    assert second_finder.discovery_calls == []
+    assert second_finder.confirm_calls == []
+
+
+async def test_duplicate_entries_with_same_title_share_redirect_verdict(
+    tmp_path: Path,
+) -> None:
+    alt_url = "https://new.example/bats-guide"
+    checker = FakeChecker(
+        {
+            URL: live("https://other.example/", suspicious=True),
+            alt_url: live(alt_url),
+        }
+    )
+    finder = FakeFinder(
+        redirects=[RedirectVerdict(False, "Generic homepage.")],
+        candidates={"bats-1": [Candidate(alt_url, 0.88, "Official guide.")]},
+        confirmations={alt_url: RedirectVerdict(True, "matches guide")},
+    )
+    verifier = make_verifier(tmp_path, checker, finder=finder)
+    entries = [
+        entry("bats-1", title="Bats in flight", web_link=URL),
+        entry("bats-2", title="Bats in flight", web_link=URL),
+    ]
+
+    result = await verifier.verify(entries)
+
+    assert len(finder.redirect_calls) == 1
+    assert finder.discovery_calls == ["bats-1"]
+    assert finder.confirm_calls == [("bats-1", alt_url)]
+    assert [item.web_link_status for item in result] == [
+        "redirect_mismatch",
+        "redirect_mismatch",
+    ]
+    assert [item.alternative_link for item in result] == [alt_url, alt_url]
+    assert [item.alternative_note for item in result] == [
+        "confirmed: matches guide",
+        "confirmed: matches guide",
+    ]
+
+
+async def test_same_broken_url_with_different_titles_shares_url_tier_only(
+    tmp_path: Path,
+) -> None:
+    bats_alt = "https://new.example/bats"
+    owls_alt = "https://new.example/owls"
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            bats_alt: live(bats_alt),
+            owls_alt: live(owls_alt),
+        }
+    )
+    finder = FakeFinder(
+        candidates={
+            "bats": [Candidate(bats_alt, 0.9)],
+            "owls": [Candidate(owls_alt, 0.85)],
+        },
+        confirmations={
+            bats_alt: RedirectVerdict(True, "matches bats"),
+            owls_alt: RedirectVerdict(True, "matches owls"),
+        },
+    )
+    archive = FakeArchive({URL: "https://web.archive.org/web/2020/shared"})
+    verifier = make_verifier(tmp_path, checker, finder=finder, archive=archive)
+    entries = [
+        entry("bats", title="Bats in flight", web_link=URL),
+        entry("owls", title="Owls of Britain", web_link=URL),
+    ]
+
+    result = await verifier.verify(entries)
+
+    assert checker.checked.count(URL) == 1
+    assert archive.lookups == [URL]
+    assert sorted(finder.discovery_calls) == ["bats", "owls"]
+    assert result[0].alternative_link == bats_alt
+    assert result[0].alternative_note == "confirmed: matches bats"
+    assert result[1].alternative_link == owls_alt
+    assert result[1].alternative_note == "confirmed: matches owls"
+
+
+async def test_verifier_migrates_legacy_entry_cache_key_for_duplicates(
+    tmp_path: Path,
+) -> None:
+    alt_url = "https://new.example/bats-guide"
+    cache_path = tmp_path / "cache.json"
+    cache_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 2,
+                "urls": {
+                    URL: {
+                        "status": "404",
+                        "state": "broken",
+                        "resolved_url": None,
+                        "is_suspicious_redirect": False,
+                        "page_title": None,
+                        "page_h1": None,
+                        "page_snippet": None,
+                        "wayback_url": None,
+                        "checked_at": NOW.isoformat(),
+                    }
+                },
+                "entries": {
+                    f"bats-1::{URL}": {
+                        "redirect_is_match": None,
+                        "redirect_reason": None,
+                        "alternative_url": alt_url,
+                        "alternative_probability": 0.9,
+                        "alternative_reasoning": "Legacy cached.",
+                        "alternative_note": "confirmed: legacy match",
+                        "alternative_checked": True,
+                        "alternative_confirmed": True,
+                        "checked_at": NOW.isoformat(),
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    finder = FakeFinder()
+    checker = FakeChecker({})
+    verifier = make_verifier(
+        tmp_path,
+        checker,
+        finder=finder,
+        cache=CatalogCache.load(cache_path, now=lambda: NOW),
+    )
+    entries = [
+        entry("bats-1", title="Bats in flight", web_link=URL),
+        entry("bats-2", title="Bats in flight", web_link=URL),
+    ]
+
+    result = await verifier.verify(entries)
+    verifier.cache.save()
+
+    assert checker.checked == []
+    assert finder.discovery_calls == []
+    assert [item.alternative_link for item in result] == [alt_url, alt_url]
+    payload = json.loads(cache_path.read_text(encoding="utf-8"))
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
+
+
+async def test_refresh_with_duplicate_entries_runs_discovery_once_and_retries_after_transient(
+    tmp_path: Path,
+) -> None:
+    old_alt = "https://old.example/guide"
+    new_alt = "https://new.example/guide"
+    cache = CatalogCache(path=tmp_path / "cache.json", now=lambda: NOW)
+    cache.put_check(URL, CheckResult("404", "broken"))
+    cache.update_entry(
+        "Bats in flight",
+        URL,
+        alternative_url=old_alt,
+        alternative_probability=0.7,
+        alternative_note="confirmed: stale guide",
+        alternative_checked=True,
+        alternative_confirmed=True,
+    )
+    cache.save()
+
+    # First member succeeds under refresh=True: second duplicate reuses new_alt without re-discovering.
+    finder_ok = FakeFinder(
+        candidates={"bats-1": [Candidate(new_alt, 0.95)]},
+        confirmations={new_alt: RedirectVerdict(True, "fresh guide")},
+    )
+    checker_ok = FakeChecker(
+        {URL: CheckResult("404", "broken"), new_alt: live(new_alt)}
+    )
+    verifier_ok = make_verifier(
+        tmp_path,
+        checker_ok,
+        finder=finder_ok,
+        cache=CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW),
+        refresh=True,
+    )
+    entries = [
+        entry("bats-1", title="Bats in flight", web_link=URL),
+        entry("bats-2", title="Bats in flight", web_link=URL),
+    ]
+    res_ok = await verifier_ok.verify(entries)
+    assert finder_ok.discovery_calls == ["bats-1"]
+    assert finder_ok.confirm_calls == [("bats-1", new_alt)]
+    assert [item.alternative_link for item in res_ok] == [new_alt, new_alt]
+
+    # First member fails discovery transiently under refresh=True: second duplicate must NOT fall back to old_alt.
+    cache2 = CatalogCache(path=tmp_path / "cache2.json", now=lambda: NOW)
+    cache2.put_check(URL, CheckResult("404", "broken"))
+    cache2.update_entry(
+        "Bats in flight",
+        URL,
+        alternative_url=old_alt,
+        alternative_probability=0.7,
+        alternative_note="confirmed: stale guide",
+        alternative_checked=True,
+        alternative_confirmed=True,
+    )
+    cache2.save()
+
+    finder_retry = FakeFinder(
+        candidates={
+            "bats-1": None,
+            "bats-2": [Candidate(new_alt, 0.95)],
+            "bats-3": [Candidate(new_alt, 0.95)],
+        },
+        confirmations={new_alt: RedirectVerdict(True, "recovered guide")},
+    )
+    verifier_retry = make_verifier(
+        tmp_path,
+        FakeChecker({URL: CheckResult("404", "broken"), new_alt: live(new_alt)}),
+        finder=finder_retry,
+        cache=CatalogCache.load(tmp_path / "cache2.json", now=lambda: NOW),
+        refresh=True,
+    )
+    three_entries = [
+        entry("bats-1", title="Bats in flight", web_link=URL),
+        entry("bats-2", title="Bats in flight", web_link=URL),
+        entry("bats-3", title="Bats in flight", web_link=URL),
+    ]
+    res_retry = await verifier_retry.verify(three_entries)
+
+    assert finder_retry.discovery_calls == ["bats-1", "bats-2"]
+    assert res_retry[0].alternative_link is None
+    assert res_retry[1].alternative_link == new_alt
+    assert res_retry[2].alternative_link == new_alt
+
+
+class CloseablePreResolver:
+    def __init__(self, candidates: dict[str, list[Candidate]] | None = None) -> None:
+        self.candidates = candidates or {}
+        self.calls: list[str] = []
+        self.closed = False
+
+    async def resolve(self, entry: CatalogEntry) -> list[Candidate]:
+        self.calls.append(entry.id)
+        return self.candidates.get(entry.id, [])
+
+    async def aclose(self) -> None:
+        self.closed = True
+
+
+async def test_pre_resolver_confirmed_candidate_skips_grounded_search(
+    tmp_path: Path,
+) -> None:
+    broken_url = (
+        "https://www.summerfieldbooks.com/hybrid-flora-of-the-british-isles.~4789"
+    )
+    alt_url = (
+        "https://www.summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/"
+    )
+    checker = CloseableChecker(
+        {broken_url: CheckResult("404", "broken"), alt_url: live(alt_url)}
+    )
+    generator = RunFakeGenerator(
+        [
+            GenerationResult(
+                text='{"is_match": true, "reasoning": "Matches Hybrid Flora."}',
+                prompt_tokens=120,
+                output_tokens=20,
+            )
+        ]
+    )
+    config = VerifyConfig(
+        cache_file=tmp_path / "cache.json",
+        cost_file=tmp_path / "costs.json",
+    )
+
+    merged, stats = await run_verification(
+        [
+            entry(
+                "hybrid", title="Hybrid Flora of the British Isles", web_link=broken_url
+            )
+        ],
+        config,
+        deps=VerifyDeps(
+            checker=checker,
+            wayback=CloseableArchive(),
+            generator=generator,
+            resolver=public_resolver,
+        ),
+    )
+
+    assert merged[0].web_link_state == "broken"
+    assert merged[0].alternative_link == alt_url
+    assert merged[0].alternative_note == "confirmed: Matches Hybrid Flora."
+    assert generator.calls == [("gemini-3.1-flash-lite", False)]
+    assert stats.alternatives == 1
+    cost_payload = json.loads((tmp_path / "costs.json").read_text(encoding="utf-8"))
+    assert cost_payload["runs"][0]["search_queries"] == 0
+
+
+async def test_pre_resolver_falls_back_to_discover_when_rejected_or_empty(
+    tmp_path: Path,
+) -> None:
+    dead_pre = "https://new.example/dead-pre"
+    rejected_pre = "https://new.example/wrong-pre"
+    fallback_alt = "https://new.example/found-via-search"
+    broken_one = "https://example.org/broken-1"
+    broken_two = "https://example.org/broken-2"
+    checker = FakeChecker(
+        {
+            broken_one: CheckResult("404", "broken"),
+            broken_two: CheckResult("404", "broken"),
+            dead_pre: CheckResult("404", "broken"),
+            rejected_pre: live(rejected_pre),
+            fallback_alt: live(fallback_alt),
+        }
+    )
+    finder = FakeFinder(
+        candidates={
+            "e1": [Candidate(fallback_alt, 0.9, "Found by search.")],
+            "e2": None,
+        },
+        confirmations={
+            rejected_pre: RedirectVerdict(False, "different publication"),
+            fallback_alt: RedirectVerdict(True, "exact guide"),
+        },
+    )
+    pre_resolver = CloseablePreResolver(
+        candidates={
+            "e1": [Candidate(dead_pre, 0.85), Candidate(rejected_pre, 0.8)],
+            "e2": [Candidate(dead_pre, 0.85)],
+        }
+    )
+    verifier = Verifier(
+        cache=CatalogCache(path=tmp_path / "cache.json", now=lambda: NOW),
+        checker=checker,
+        finder=finder,
+        wayback=FakeArchive(),
+        resolver=public_resolver,
+        pre_resolver=pre_resolver,
+    )
+
+    result = await verifier.verify(
+        [
+            entry("e1", web_link=broken_one),
+            entry("e2", web_link=broken_two),
+        ]
+    )
+    verifier.cache.save()
+
+    assert pre_resolver.calls == ["e1", "e2"]
+    assert finder.discovery_calls == ["e1", "e2"]
+    assert result[0].alternative_link == fallback_alt
+    assert result[0].alternative_note == "confirmed: exact guide"
+    # When pre-resolved candidate was rejected and finder.discover() returned None,
+    # the failure remains transient and is not permanently cached.
+    assert result[1].alternative_link is None
+    assert (
+        CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW).get_entry(
+            "Bats in flight", broken_two
+        )
+        is None
+    )
+
+
+async def test_run_verification_closes_injected_pre_resolver(tmp_path: Path) -> None:
+    pre_resolver = CloseablePreResolver()
+    config = VerifyConfig(
+        cache_file=tmp_path / "cache.json",
+        cost_file=tmp_path / "costs.json",
+    )
+
+    await run_verification(
+        [entry()],
+        config,
+        deps=VerifyDeps(
+            checker=CloseableChecker({URL: live()}),
+            finder=FakeFinder(),
+            wayback=CloseableArchive(),
+            pre_resolver=pre_resolver,
+        ),
+    )
+
+    assert pre_resolver.closed is True

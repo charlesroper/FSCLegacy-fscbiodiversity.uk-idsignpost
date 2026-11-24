@@ -11,7 +11,12 @@ from pathlib import Path
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
-from idsignpost.cache import DEFAULT_TTL_DAYS, CatalogCache, EntryRecord
+from idsignpost.cache import (
+    DEFAULT_TTL_DAYS,
+    CatalogCache,
+    EntryRecord,
+    normalize_title,
+)
 from idsignpost.cost import DEFAULT_COST_FILE, SessionCostTracker
 from idsignpost.gemini_finder import (
     DEFAULT_MIN_PROBABILITY,
@@ -26,8 +31,13 @@ from idsignpost.gemini_finder import (
 )
 from idsignpost.http_checker import (
     DEFAULT_TIMEOUT as DEFAULT_HTTP_TIMEOUT,
+    GENERIC_HUBS,
     CheckResult,
     HTTPChecker,
+    is_auth_wall_redirect,
+    is_auth_wall_url,
+    is_explicit_soft_404,
+    is_same_host_root_redirect,
 )
 from idsignpost.models import (
     CatalogEntry,
@@ -35,8 +45,14 @@ from idsignpost.models import (
     ensure_unique_ids,
     merge_verified as merge_verified,
 )
+from idsignpost.pre_resolver import PreResolver, PublisherPreResolver
 from idsignpost.sampler import get_stratified_sample
-from idsignpost.urls import cache_key, is_public_http_url, urls_equal
+from idsignpost.urls import (
+    cache_key,
+    host_matches,
+    is_public_http_url,
+    urls_equal,
+)
 from idsignpost.wayback import (
     DEFAULT_CONCURRENCY as DEFAULT_WAYBACK_CONCURRENCY,
     WaybackClient,
@@ -45,6 +61,15 @@ from idsignpost.wayback import (
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
 SHARED_ALTERNATIVE_LIMIT = 3
+MULTI_RESOURCE_HOSTS = (
+    "field-studies-council.org",
+    "royensoc.co.uk",
+    "plantlife.org.uk",
+    "nhbs.com",
+    "pemberleybooks.com",
+    "summerfieldbooks.com",
+    "sites.google.com",
+)
 
 
 class OfflineRunError(RuntimeError):
@@ -192,6 +217,7 @@ class VerifyDeps:
     wayback: Archive | None = None
     generator: Generator | None = None
     resolver: Callable[..., Any] | None = None
+    pre_resolver: PreResolver | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -211,6 +237,7 @@ class _Verdict:
     keep: bool = False
     note: str | None = None
     fresh: bool = False
+    settled: bool = True
 
 
 def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
@@ -223,11 +250,30 @@ def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
     )
 
 
+def _pre_confirmation_rejection_note(
+    cleaned_url: str, final_url: str, result: CheckResult
+) -> str | None:
+    """Reject 200 OK candidates that land on auth walls, hubs, soft 404s, or host roots."""
+    if is_auth_wall_url(final_url) or is_auth_wall_redirect(cleaned_url, final_url):
+        return "rejected: login wall"
+    if urlsplit(final_url).path.rstrip("/").lower() in GENERIC_HUBS:
+        return "rejected: generic hub page"
+    if is_explicit_soft_404(result.page_title, result.page_h1):
+        return "rejected: soft 404 page"
+    if is_same_host_root_redirect(cleaned_url, final_url):
+        return "ignored: site homepage"
+    return None
+
+
 def _join_notes(notes: list[str], limit: int = 3) -> str | None:
     """Join the first few candidate notes into one cacheable line."""
     if not notes:
         return None
     return "; ".join(notes[:limit])
+
+
+def _is_multi_resource_host(url: str) -> bool:
+    return host_matches(url, MULTI_RESOURCE_HOSTS)
 
 
 def _url_policy_note(url: str, broken_link: str) -> str | None:
@@ -238,7 +284,10 @@ def _url_policy_note(url: str, broken_link: str) -> str | None:
         if is_unusable_alternative(url):
             return "ignored: blocked host or image file"
         cleaned = cache_key(url)
-        if urlsplit(cleaned).path in {"", "/"}:
+        if urlsplit(cleaned).path in {"", "/"} and (
+            _is_multi_resource_host(cleaned)
+            or is_same_host_root_redirect(broken_link, cleaned)
+        ):
             return "ignored: site homepage"
         if urls_equal(cleaned, broken_link):
             return "ignored: same as the broken link"
@@ -262,6 +311,7 @@ class Verifier:
         save_archive: bool = False,
         refresh: bool = False,
         resolver: Callable[..., Any] | None = None,
+        pre_resolver: PreResolver | None = None,
     ) -> None:
         self.cache = cache
         self.checker = checker
@@ -270,6 +320,7 @@ class Verifier:
         self.save_archive = save_archive
         self.refresh = refresh
         self._resolver = resolver
+        self.pre_resolver = pre_resolver
         self.stats = VerifyStats()
         self._http = asyncio.Semaphore(concurrency)
         self._gemini = asyncio.Semaphore(gemini_concurrency)
@@ -361,18 +412,41 @@ class Verifier:
                 }
             )
             if entry.web_link:
-                self.cache.drop_alternative(entry.id, entry.web_link, note)
+                self.cache.drop_alternative(
+                    entry.title, entry.web_link, note, entry_id=entry.id
+                )
             cleaned.append(entry)
         return cleaned
 
     async def _verify_group(self, members: list[CatalogEntry]) -> list[CatalogEntry]:
         entry = members[0]
         url = entry.web_link or ""
+        subgroups: dict[str, list[tuple[int, CatalogEntry]]] = {}
+        for index, member in enumerate(members):
+            subgroups.setdefault(normalize_title(member.title), []).append(
+                (index, member)
+            )
+        verdicts_by_index: dict[int, _Verdict] = {}
+
+        async def run_subgroup(indexed_entries: list[tuple[int, CatalogEntry]]) -> None:
+            settled = not self.refresh
+            for index, member in indexed_entries:
+                verdict = await self._verdict(
+                    member, facts, bypass_entry_cache=not settled
+                )
+                verdicts_by_index[index] = verdict
+                if verdict.settled:
+                    settled = True
+
         async with self._http:
             facts = await self._facts(url, entry.title)
-            verdicts = await asyncio.gather(
-                *(self._verdict(member, facts) for member in members)
+            await asyncio.gather(
+                *(
+                    run_subgroup(indexed_entries)
+                    for indexed_entries in subgroups.values()
+                )
             )
+            verdicts = [verdicts_by_index[index] for index in range(len(members))]
             allow_primary_save = self.save_archive and any(
                 verdict.state == "ok" and not verdict.transient for verdict in verdicts
             )
@@ -429,11 +503,19 @@ class Verifier:
             return "ignored: private address"
         return None
 
-    async def _verdict(self, entry: CatalogEntry, facts: _UrlFacts) -> _Verdict:
+    async def _verdict(
+        self,
+        entry: CatalogEntry,
+        facts: _UrlFacts,
+        *,
+        bypass_entry_cache: bool = False,
+    ) -> _Verdict:
         result = facts.result
         url = entry.web_link or ""
         record = (
-            None if self.refresh or not url else self.cache.get_entry(entry.id, url)
+            None
+            if bypass_entry_cache or not url
+            else self.cache.get_entry(entry.title, url, entry_id=entry.id)
         )
         previous = _alternative_fields(entry)
 
@@ -452,6 +534,7 @@ class Verifier:
                 ),
                 alternative=previous,
                 transient=True,
+                settled=False,
             )
 
         state: LinkState | None = result.state
@@ -474,13 +557,16 @@ class Verifier:
                         resolved_url=entry.web_link_resolved,
                         alternative=previous,
                         keep=True,
+                        settled=False,
                     )
                 fresh = True
             if not redirect_verdict.is_match:
                 state, status = "broken", "redirect_mismatch"
 
         if state != "broken":
-            self._clear_recovered_entry(entry.id, url, redirect_verdict)
+            self._clear_recovered_entry(
+                entry.title, url, redirect_verdict, entry_id=entry.id
+            )
             return _Verdict(
                 state=state,
                 status=status,
@@ -495,7 +581,7 @@ class Verifier:
         if outcome.transient:
             if url:
                 self.cache.record_redirect(
-                    entry.id,
+                    entry.title,
                     url,
                     is_match=(
                         redirect_verdict.is_match
@@ -507,6 +593,7 @@ class Verifier:
                         if redirect_verdict is not None
                         else None
                     ),
+                    entry_id=entry.id,
                 )
             return _Verdict(
                 state=state,
@@ -515,12 +602,14 @@ class Verifier:
                 alternative=outcome.alternative,
                 note=outcome.note,
                 fresh=False,
+                settled=False,
             )
 
         if url:
             self.cache.update_entry(
-                entry.id,
+                entry.title,
                 url,
+                entry_id=entry.id,
                 redirect_is_match=(
                     redirect_verdict.is_match if redirect_verdict is not None else None
                 ),
@@ -552,19 +641,25 @@ class Verifier:
         )
 
     def _clear_recovered_entry(
-        self, entry_id: str, url: str, redirect_verdict: RedirectVerdict | None
+        self,
+        title: str,
+        url: str,
+        redirect_verdict: RedirectVerdict | None,
+        *,
+        entry_id: str,
     ) -> None:
         if not url:
             return
         if redirect_verdict is not None:
             self.cache.update_entry(
-                entry_id,
+                title,
                 url,
+                entry_id=entry_id,
                 redirect_is_match=redirect_verdict.is_match,
                 redirect_reason=redirect_verdict.reasoning,
             )
             return
-        self.cache.clear_entry(entry_id, url)
+        self.cache.clear_entry(title, url, entry_id=entry_id)
 
     async def _resolve_broken_alternative(
         self,
@@ -639,7 +734,7 @@ class Verifier:
                 transient=True, note="retry: transient check failure"
             )
         result = facts.result
-        if result.state != "ok" or result.is_suspicious_redirect:
+        if result.state != "ok":
             return DiscoveryOutcome(
                 note=f"rejected: link returned {result.status or result.state}"
             )
@@ -649,6 +744,9 @@ class Verifier:
                 return DiscoveryOutcome(note=redirect_note)
 
         url = result.resolved_url or cleaned
+        rejection_note = _pre_confirmation_rejection_note(cleaned, url, result)
+        if rejection_note is not None:
+            return DiscoveryOutcome(note=rejection_note)
         verdict = await self._confirm(
             entry,
             url,
@@ -669,6 +767,23 @@ class Verifier:
             confirmed=verdict is not None,
             note=note,
         )
+
+    async def _evaluate_candidates(
+        self,
+        entry: CatalogEntry,
+        candidates: Sequence[Candidate],
+        notes: list[str],
+    ) -> tuple[DiscoveryOutcome | None, bool]:
+        """Evaluate candidates in order, returning the first match and transient flag."""
+        transient = False
+        for candidate in candidates:
+            attempt = await self._evaluate_candidate(entry, candidate)
+            transient = transient or attempt.transient
+            if attempt.note:
+                notes.append(attempt.note)
+            if attempt.alternative is not None:
+                return attempt, transient
+        return None, transient
 
     async def _discover(self, entry: CatalogEntry) -> DiscoveryOutcome:
         """Try any stored alternative first, then discover and evaluate candidates."""
@@ -691,6 +806,15 @@ class Verifier:
             if attempt.alternative is not None:
                 return attempt
 
+        if self.pre_resolver is not None:
+            pre_candidates = await self.pre_resolver.resolve(entry)
+            outcome, pre_transient = await self._evaluate_candidates(
+                entry, pre_candidates, notes
+            )
+            transient = transient or pre_transient
+            if outcome is not None:
+                return outcome
+
         async with self._gemini:
             candidates = await self.finder.discover(entry)
         if candidates is None:
@@ -698,13 +822,12 @@ class Verifier:
                 transient=not rejected, note=_join_notes(notes) or "search failed"
             )
 
-        for candidate in candidates:
-            attempt = await self._evaluate_candidate(entry, candidate)
-            transient = transient or attempt.transient
-            if attempt.note:
-                notes.append(attempt.note)
-            if attempt.alternative is not None:
-                return attempt
+        outcome, disc_transient = await self._evaluate_candidates(
+            entry, candidates, notes
+        )
+        transient = transient or disc_transient
+        if outcome is not None:
+            return outcome
         return DiscoveryOutcome(
             transient=transient,
             note=_join_notes(notes) or "no candidates returned",
@@ -857,6 +980,11 @@ async def run_verification(
             ia_secret_key=config.ia_secret_key if use_ia_keys else None,
         )
     )
+    active_pre_resolver: PreResolver = (
+        active_deps.pre_resolver
+        if active_deps.pre_resolver is not None
+        else PublisherPreResolver(timeout=config.timeout)
+    )
     try:
         active_finder: Finder = (
             active_deps.finder
@@ -881,6 +1009,7 @@ async def run_verification(
             save_archive=config.save_archive,
             refresh=config.refresh,
             resolver=active_deps.resolver,
+            pre_resolver=active_pre_resolver,
         )
         verified = await verifier.verify(targets)
     except (KeyboardInterrupt, asyncio.CancelledError):
@@ -890,7 +1019,10 @@ async def run_verification(
         try:
             await _close_adapter(active_checker)
         finally:
-            await _close_adapter(active_wayback)
+            try:
+                await _close_adapter(active_pre_resolver)
+            finally:
+                await _close_adapter(active_wayback)
 
     cache.save()
     run_record = tracker.finish_run(command=config.command)
