@@ -31,24 +31,44 @@ Seven core defects degraded the original dataset before this clean-up:
 - **Duplicate API calls:** Separate Catalog Entries with identical titles and broken URLs triggered duplicate discovery searches and model checks.
 - **Passive archiving:** Seventy-nine live resources had no Wayback Machine snapshot at all.
 
-The clean-slate Python package (`src/idsignpost/`) and two validation passes on 24 November 2026 transformed the catalogue across all 736 Catalog Entries:
+The clean-slate Python package (`src/idsignpost/`) started from 736 unverified Catalog Entries extracted from the raw archive (`0` live statuses, `0` Wayback snapshots and `0` Alternatives). After initial verification (`93` Alternatives) and two optimisation passes on 24 November 2026, the validated catalogue stands as follows:
 
-| Metric | Initial clean extract | Pre-optimisation baseline | Validated catalogue (24 November 2026) |
-|---|---|---|---|
-| Total Catalog Entries | 736 | 736 | 736 |
-| Live `web_link` (`ok`) | 0 (unverified) | 386 | 369 (7 Google Sites login walls removed) |
-| Dead `web_link` (`broken`) | 0 (unverified) | 290 | 308 |
-| Blocked / unverified (`blocked`) | 0 (unverified) | 38 | 37 |
-| Entries without a `web_link` | 0 (unverified) | 22 | 22 |
-| Confirmed Alternatives | 0 | 93 | 227 (+134 recovered) |
-| Broken entries with explanatory notes | 0 | 289 | 308 (100% coverage) |
-| Historical Wayback links | 0 | 667 (91%) | 680 (92% of total; 95% of linked) |
+| Metric | Pre-optimisation baseline | Validated catalogue (24 November 2026) |
+|---|---|---|
+| Total Catalog Entries | 736 | 736 |
+| Live `web_link` (`ok`) | 386 | 369 (7 Google Sites login walls removed) |
+| Dead `web_link` (`broken`) | 290 | 308 |
+| Blocked / unverified (`blocked`) | 38 | 37 |
+| Entries without a `web_link` | 22 | 22 |
+| Confirmed Alternatives | 93 | 227 (+134 recovered) |
+| Broken entries with explanatory notes | 289 | 308 (100% coverage) |
+| Historical Wayback links | 667 (91%) | 680 (92% of total; 95% of linked) |
 
 Three domain-level **Publisher Pre-Resolver** rules drove most of the Alternative gain without Grounded Search charges:
 
 - **Summerfield Books (`summerfieldbooks.com`):** Rewrites legacy `/<slug>~<id>` links to `/product/<clean-slug>/` and recovered all 16 broken Catalog Entries.
 - **Royal Entomological Society (`royensoc.co.uk`):** Queries cached WordPress media and product endpoints once per term and recovered all 70 broken Catalog Entries.
 - **Mike's Insect Keys (`sites.google.com/site/mikesinsectkeys`):** Matches legacy paths against the migrated New Google Sites index and recovered 83 of 85 broken Catalog Entries.
+
+### Exemplar Catalog Entries
+
+Five Catalog Entries show the range of HTML repairs, deterministic checks, pre-resolution rules and Grounded Search recoveries across the dataset:
+
+1. **HTML anchor repair and metadata normalisation (`photo-gallery-sciomyzidae-snail-killing-or-marsh-flies`):**
+   - **Before:** Raw HTML split the Flickr address outside the anchor tag (`<a href=".../63075200">...</a>@N07/collections/...`), escaped apostrophes as `&#039;` and stored free status and submitter date as raw page labels.
+   - **After:** Extraction repaired the full `@N07` Flickr URL, converted fields into strict types (`is_free: true`, `available_as: ["Online"]`, ISO `submitted_at`), confirmed HTTP `200` (`ok`) and attached a 2021 Wayback link.
+2. **Hidden sign-in wall caught and migrated (`key-identification-british-histeridae`):**
+   - **Before:** Mike Hackston's Classic Google Sites URL redirected with HTTP `200` to `accounts.google.com/v3/signin/...`, so earlier checks wrongly marked the Catalog Entry as `ok`.
+   - **After:** Deterministic auth-wall detection flagged `broken` (`redirect_mismatch`). The **Publisher Pre-Resolver** matched the migrated New Google Sites guide at `sites.google.com/view/mikes-insect-keys/...` (`0.95` confidence), kept a 2020 Wayback link and used zero Grounded Searches.
+3. **Relocated CMS PDF recovered (`res-handbook-vol-1-part-7-psocoptera`):**
+   - **Before:** The Royal Entomological Society link to `/sites/default/files/Archive%204/Vol01_Part07.pdf` failed with HTTP `404` after a site migration.
+   - **After:** The **Publisher Pre-Resolver** queried the cached WordPress media endpoint, confirmed `wp-content/uploads/2021/12/Vol01_Part07.pdf` (`0.95` confidence) and preserved a 2021 Wayback snapshot.
+4. **Dedicated website homepage recovered via Grounded Search (`spiders-north-west-europe`):**
+   - **Before:** The legacy host `ednieuw.home.xs4all.nl` failed (`404`), and earlier rules blocked root homepage Candidates (`/`).
+   - **After:** Updated policy rules allowed root homepages on standalone guide websites, so **Grounded Search** on `gemini-3.1-flash-lite` confirmed the migrated site at `https://ednieuw.com/` (`0.95` confidence) alongside a 2026 Wayback snapshot.
+5. **Out-of-print handbook resolved to specialist bookseller (`coleoptera-curculionidae-entiminae-broad-nosed-weevils`):**
+   - **Before:** The original Field Studies Council shop page returned `404`, and the previous run stopped on `rejected: link returned 403`.
+   - **After:** **Grounded Search** excluded general marketplaces (`amazon`, `ebay`, `abebooks`) and confirmed the exact Volume 5 Part 17a listing at `pemberleybooks.com` (`0.60` confidence), paired with a 2023 Wayback snapshot.
 
 ### Rescue and validation process
 
