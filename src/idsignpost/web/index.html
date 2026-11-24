@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biodiversity ID Signpost: Identification Guide Directory</title>
+  <meta name="description" content="Searchable directory of 736 British and Irish wildlife identification guides, recovered from the Field Studies Council Biodiversity ID Signpost.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div>
+          <h1>Biodiversity ID Signpost</h1>
+          <p class="subtitle">Field identification keys, charts and guides for British and Irish wildlife.</p>
+        </div>
+        <a class="repo-link" href="https://github.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+      </div>
+      <dl class="stats-bar" id="stats-bar" aria-label="Catalogue summary">
+        <div class="stat-pill"><dt>Working links</dt><dd id="stat-working">-</dd></div>
+        <div class="stat-pill"><dt>Recovered</dt><dd id="stat-recovered">-</dd></div>
+        <div class="stat-pill"><dt>Wayback archives</dt><dd id="stat-wayback">-</dd></div>
+        <div class="stat-pill"><dt>Total entries</dt><dd id="stat-total">-</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filter guides">
+      <form class="search-form" role="search" onsubmit="return false">
+        <label class="visually-hidden" for="search-input">Search guides</label>
+        <input id="search-input" type="search" inputmode="search" autocomplete="off" placeholder="Search taxon, title, author or keyword (e.g. beetles, fungi, BSBI)...">
+        <button id="clear-btn" type="button" class="btn-secondary" hidden>Clear</button>
+      </form>
+
+      <div class="view-tabs" role="tablist" aria-label="Guide availability view">
+        <button type="button" role="tab" class="tab-btn active" data-view="working" aria-selected="true">Working <span class="count" id="tab-count-working"></span></button>
+        <button type="button" role="tab" class="tab-btn" data-view="recovered" aria-selected="false">Recovered <span class="count" id="tab-count-recovered"></span></button>
+        <button type="button" role="tab" class="tab-btn" data-view="all" aria-selected="false">All <span class="count" id="tab-count-all"></span></button>
+        <button type="button" role="tab" class="tab-btn" data-view="broken" aria-selected="false">Needs link <span class="count" id="tab-count-broken"></span></button>
+      </div>
+
+      <div class="filter-row">
+        <div class="chip-group" role="group" aria-label="Format and cost filters">
+          <button type="button" class="chip-btn" id="free-toggle" aria-pressed="false">Free only</button>
+          <button type="button" class="chip-btn" data-format="Online" aria-pressed="false">Online</button>
+          <button type="button" class="chip-btn" data-format="PDF" aria-pressed="false">PDF</button>
+          <button type="button" class="chip-btn" data-format="Publication" aria-pressed="false">Publication</button>
+          <button type="button" class="chip-btn" data-format="App" aria-pressed="false">App</button>
+        </div>
+
+        <label class="sort-wrap">
+          <span>Sort</span>
+          <select id="sort-select">
+            <option value="relevance">Relevance / Title A-Z</option>
+            <option value="newest">Newest submitted</option>
+            <option value="confidence">Highest match score</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <div class="results-meta">
+      <p id="results-status" aria-live="polite">Loading catalogue...</p>
+      <button id="reset-filters" type="button" class="link-btn" hidden>Reset filters</button>
+    </div>
+
+    <div id="error-banner" class="error-banner" role="alert" hidden></div>
+    <section id="results" class="results-grid" aria-label="Identification guides"></section>
+
+    <div class="pagination" id="pagination" hidden>
+      <button id="show-more-btn" type="button" class="btn-primary">Show more guides</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Data rescued from the Field Studies Council (FSC) Biodiversity ID Signpost archive and verified with Wayback Machine snapshots.</p>
+      <nav class="footer-links" aria-label="Data downloads and tools">
+        <a href="idsignpost.json" download>JSON</a>
+        <a href="idsignpost.csv" download>CSV</a>
+        <a href="idsignpost.parquet" download>Parquet</a>
+        <a href="idsignpost.db" download>SQLite</a>
+        <a id="duckdb-link" href="https://shell.duckdb.org/#queries=v0,LOAD-httpfs~,CREATE-OR-REPLACE-VIEW-guides-AS-SELECT-title%2C-authors%2C-is_free%2C-available_as%2C-web_link_state%2C-COALESCE%28alternative_link%2C-web_link%29-AS-best_link%2C-wayback_link%2C-keywords-FROM-read_parquet%28%27https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy%20fscbiodiversity.uk%20idsignpost%2Fmain%2Fidsignpost.parquet%27%29~,FROM-guides-WHERE-web_link_state-%3D-%27ok%27-OR-best_link-IS-NOT-NULL-LIMIT-20~" target="_blank" rel="noopener noreferrer">SQL in DuckDB Web Shell</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
