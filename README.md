@@ -4,6 +4,8 @@ This repository preserves and updates the **Biodiversity ID signpost**, a direct
 
 If you need to find an identification key, chart, or guide for plants, insects, fungi, or animals in Britain and Ireland, this project gives you a clean, working catalogue.
 
+**[Explore the catalogue interactively in Datasette Lite](https://lite.datasette.io/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fidsignpost.db&metadata=https%3A%2F%2Fraw.githubusercontent.com%2Fcharlesroper%2FFSCLegacy-fscbiodiversity.uk-idsignpost%2Fmain%2Fdatasette.metadata.json)** (runs in your browser with full-text search, format facets, and saved queries; no installation required).
+
 ## Why this project exists
 
 Over many years, the Field Studies Council collected recommendations for identification resources. Contributors submitted links to field keys, handbooks, recording schemes, and scientific papers covering groups from caddisflies and beetles to lichens, wildflowers, and sea anemones.
