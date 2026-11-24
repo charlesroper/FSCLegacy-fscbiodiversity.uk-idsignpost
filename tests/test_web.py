@@ -72,7 +72,7 @@ def test_pages_workflow_packages_web_assets_and_catalog_files() -> None:
         "idsignpost.csv",
         "idsignpost.parquet",
         "idsignpost.db",
-        "actions/deploy-pages@v4",
+        "actions/deploy-pages@v5",
     ):
         assert required in workflow
 
