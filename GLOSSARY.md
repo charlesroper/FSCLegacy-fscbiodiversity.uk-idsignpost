@@ -21,7 +21,7 @@ The shared cache tier keyed by normalized URL that stores network facts (HTTP st
 _Avoid_: Link cache, HTTP cache
 
 **Entry Tier**:
-The per-entry cache tier keyed by Catalog Entry ID and normalized URL that stores model judgments (redirect match verdict, Alternative, and evaluation note).
+The cache tier keyed by normalized resource title and normalized URL that stores model judgments (redirect match verdict, Alternative, and evaluation note) across Catalog Entries sharing that title and URL.
 _Avoid_: Verdict cache, record cache
 
 **Transient Failure**:
@@ -31,3 +31,7 @@ _Avoid_: Soft error, temporary error
 **Grounded Search**:
 A Gemini discovery call that runs live Google Search queries to find Candidate URLs, counted against `--max-searches` and tracked per query in session costs.
 _Avoid_: Web search tool, grounded query
+
+**Publisher Pre-Resolver**:
+A deterministic discovery rule or publisher index lookup that proposes Candidate URLs for known migrated domains before falling back to Grounded Search.
+_Avoid_: Scraper, URL rewriter, sitemap crawler
