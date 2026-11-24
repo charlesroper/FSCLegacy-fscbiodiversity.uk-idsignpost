@@ -15,6 +15,7 @@ from idsignpost.cache import (
     CatalogCache,
     EntryRecord,
     UrlRecord,
+    normalize_title,
 )
 from idsignpost.http_checker import CheckResult
 
@@ -47,7 +48,7 @@ def test_round_trip_url_and_entry_records(tmp_path: Path) -> None:
         ),
     )
     cache.put_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         EntryRecord(
             redirect_is_match=False,
@@ -61,7 +62,7 @@ def test_round_trip_url_and_entry_records(tmp_path: Path) -> None:
     payload = read_payload(tmp_path)
     assert payload["schema_version"] == CACHE_VERSION
     assert list(payload["urls"]) == [URL]
-    assert list(payload["entries"]) == [f"a-bats::{URL}"]
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
 
     reloaded = make_cache(tmp_path)
     url_record = reloaded.get_url(URL)
@@ -71,7 +72,7 @@ def test_round_trip_url_and_entry_records(tmp_path: Path) -> None:
     assert url_record.page_title == "Not found"
     assert url_record.checked_at == NOW
 
-    entry_record = reloaded.get_entry("a-bats", URL)
+    entry_record = reloaded.get_entry("Bats in flight", URL)
     assert entry_record is not None
     assert entry_record.redirect_is_match is False
     assert entry_record.alternative_probability == pytest.approx(0.9)
@@ -80,10 +81,10 @@ def test_round_trip_url_and_entry_records(tmp_path: Path) -> None:
 def test_fragment_is_ignored_in_both_tiers(tmp_path: Path) -> None:
     cache = make_cache(tmp_path)
     cache.put_url(f"{URL}#a", UrlRecord(status="200", state="ok"))
-    cache.put_entry("a-bats", f"{URL}#b", EntryRecord(redirect_is_match=True))
+    cache.put_entry("Bats in flight", f"{URL}#b", EntryRecord(redirect_is_match=True))
 
     assert cache.get_url(URL) is not None
-    assert cache.get_entry("a-bats", f"{URL}#c") is not None
+    assert cache.get_entry("Bats in flight", f"{URL}#c") is not None
     assert len(cache.urls) == 1
     assert len(cache.entries) == 1
 
@@ -91,14 +92,24 @@ def test_fragment_is_ignored_in_both_tiers(tmp_path: Path) -> None:
 def test_shared_url_keeps_entries_isolated(tmp_path: Path) -> None:
     cache = make_cache(tmp_path)
     cache.put_url(URL, UrlRecord(status="404", state="broken"))
-    cache.put_entry("first", URL, EntryRecord(alternative_url="https://one.example"))
-    cache.put_entry("second", URL, EntryRecord(alternative_url="https://two.example"))
+    cache.put_entry(
+        "First guide", URL, EntryRecord(alternative_url="https://one.example")
+    )
+    cache.put_entry(
+        "Second guide", URL, EntryRecord(alternative_url="https://two.example")
+    )
     cache.save()
 
     reloaded = make_cache(tmp_path)
-    assert reloaded.get_url(URL).status == "404"  # type: ignore[union-attr]
-    assert reloaded.get_entry("first", URL).alternative_url == "https://one.example"  # type: ignore[union-attr]
-    assert reloaded.get_entry("second", URL).alternative_url == "https://two.example"  # type: ignore[union-attr]
+    url_record = reloaded.get_url(URL)
+    first_record = reloaded.get_entry("First guide", URL)
+    second_record = reloaded.get_entry("Second guide", URL)
+    assert url_record is not None
+    assert first_record is not None
+    assert second_record is not None
+    assert url_record.status == "404"
+    assert first_record.alternative_url == "https://one.example"
+    assert second_record.alternative_url == "https://two.example"
 
 
 def test_expired_records_are_not_returned(tmp_path: Path) -> None:
@@ -107,7 +118,7 @@ def test_expired_records_are_not_returned(tmp_path: Path) -> None:
         URL, UrlRecord(status="200", state="ok", checked_at=NOW - timedelta(days=31))
     )
     cache.put_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         EntryRecord(
             alternative_url="https://old.example", checked_at=NOW - timedelta(days=31)
@@ -115,7 +126,7 @@ def test_expired_records_are_not_returned(tmp_path: Path) -> None:
     )
 
     assert cache.get_url(URL) is None
-    assert cache.get_entry("a-bats", URL) is None
+    assert cache.get_entry("Bats in flight", URL) is None
 
 
 def test_fresh_records_within_ttl_are_returned(tmp_path: Path) -> None:
@@ -146,7 +157,10 @@ def test_transient_results_are_not_stored(tmp_path: Path) -> None:
     )
     assert (
         cache.put_entry(
-            "a-bats", URL, EntryRecord(redirect_is_match=False), cacheable=False
+            "Bats in flight",
+            URL,
+            EntryRecord(redirect_is_match=False),
+            cacheable=False,
         )
         is False
     )
@@ -168,13 +182,13 @@ def test_transient_results_do_not_overwrite_good_records(tmp_path: Path) -> None
 def test_negative_verdicts_are_cached(tmp_path: Path) -> None:
     cache = make_cache(tmp_path)
     cache.put_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         EntryRecord(redirect_is_match=False, redirect_reason="Generic homepage."),
     )
     cache.save()
 
-    record = make_cache(tmp_path).get_entry("a-bats", URL)
+    record = make_cache(tmp_path).get_entry("Bats in flight", URL)
     assert record is not None
     assert record.redirect_is_match is False
     assert record.alternative_url is None
@@ -355,7 +369,7 @@ def test_drop_alternative_clears_alternative_and_keeps_redirect_verdict(
 ) -> None:
     cache = make_cache(tmp_path)
     cache.put_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         EntryRecord(
             redirect_is_match=False,
@@ -370,11 +384,11 @@ def test_drop_alternative_clears_alternative_and_keeps_redirect_verdict(
     )
     note = "dropped: URL shared by three or more entries"
 
-    assert cache.drop_alternative("a-bats", f"{URL}#frag", note) is True
+    assert cache.drop_alternative("Bats in flight", f"{URL}#frag", note) is True
     cache.save()
 
     reloaded = make_cache(tmp_path)
-    record = reloaded.get_entry("a-bats", URL)
+    record = reloaded.get_entry("Bats in flight", URL)
     assert record is not None
     assert record.redirect_is_match is False
     assert record.redirect_reason == "Generic homepage"
@@ -391,11 +405,11 @@ def test_drop_alternative_returns_false_when_absent_or_expired(
 ) -> None:
     cache = make_cache(tmp_path)
 
-    assert cache.drop_alternative("missing", URL, "dropped: missing") is False
+    assert cache.drop_alternative("Missing guide", URL, "dropped: missing") is False
     assert cache.pending_writes == 0
 
     cache.put_entry(
-        "expired",
+        "Expired guide",
         URL,
         EntryRecord(
             alternative_url="https://old.example/guide",
@@ -403,7 +417,7 @@ def test_drop_alternative_returns_false_when_absent_or_expired(
         ),
     )
     writes_before = cache.pending_writes
-    assert cache.drop_alternative("expired", URL, "dropped: expired") is False
+    assert cache.drop_alternative("Expired guide", URL, "dropped: expired") is False
     assert cache.pending_writes == writes_before
 
 
@@ -413,7 +427,7 @@ def test_update_entry_stores_new_record_without_carrying_stale_redirect(
     cache = make_cache(tmp_path)
 
     created = cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Generic homepage.",
@@ -423,7 +437,7 @@ def test_update_entry_stores_new_record_without_carrying_stale_redirect(
     assert created.checked_at == NOW
 
     updated = cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         f"{URL}#frag",
         alternative_url="https://alt.example/guide",
         alternative_probability=0.92,
@@ -439,9 +453,9 @@ def test_update_entry_stores_new_record_without_carrying_stale_redirect(
     cache.save()
     payload = read_payload(tmp_path)
     assert payload["schema_version"] == CACHE_VERSION
-    assert list(payload["entries"]) == [f"a-bats::{URL}"]
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
 
-    reloaded = make_cache(tmp_path).get_entry("a-bats", URL)
+    reloaded = make_cache(tmp_path).get_entry("Bats in flight", URL)
     assert reloaded is not None
     assert reloaded.redirect_is_match is None
     assert reloaded.redirect_reason is None
@@ -460,7 +474,7 @@ def test_record_redirect_preserves_alternative_and_skips_unchanged(
     current = t0
     cache = CatalogCache.load(tmp_path / ".url_cache.json", now=lambda: current)
     cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         alternative_url="https://alt.example/guide",
         alternative_probability=0.85,
@@ -474,7 +488,7 @@ def test_record_redirect_preserves_alternative_and_skips_unchanged(
 
     current = NOW
     recorded = cache.record_redirect(
-        "a-bats", f"{URL}#frag", is_match=False, reason="Generic homepage."
+        "Bats in flight", f"{URL}#frag", is_match=False, reason="Generic homepage."
     )
     assert recorded is not None
     assert cache.pending_writes == 1
@@ -487,13 +501,13 @@ def test_record_redirect_preserves_alternative_and_skips_unchanged(
     cache.save()
     current = NOW + timedelta(hours=1)
     unchanged = cache.record_redirect(
-        "a-bats", URL, is_match=False, reason="Generic homepage."
+        "Bats in flight", URL, is_match=False, reason="Generic homepage."
     )
     assert unchanged is not None
     assert cache.pending_writes == 0
     assert unchanged.checked_at == NOW
 
-    cleared = cache.record_redirect("a-bats", URL, is_match=None)
+    cleared = cache.record_redirect("Bats in flight", URL, is_match=None)
     assert cleared is not None
     assert cleared.redirect_is_match is None
     assert cleared.redirect_reason is None
@@ -505,11 +519,11 @@ def test_clear_entry_removes_stale_redirect_and_alternative_state(
     tmp_path: Path,
 ) -> None:
     cache = make_cache(tmp_path)
-    assert cache.clear_entry("missing", URL) is False
+    assert cache.clear_entry("Missing guide", URL) is False
     assert cache.pending_writes == 0
 
     cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Generic homepage.",
@@ -518,9 +532,9 @@ def test_clear_entry_removes_stale_redirect_and_alternative_state(
     )
     cache.save()
 
-    assert cache.clear_entry("a-bats", f"{URL}#frag") is True
+    assert cache.clear_entry("Bats in flight", f"{URL}#frag") is True
     assert cache.pending_writes == 1
-    assert cache.get_entry("a-bats", URL) is None
+    assert cache.get_entry("Bats in flight", URL) is None
     cache.save()
 
     assert read_payload(tmp_path)["entries"] == {}
@@ -531,7 +545,7 @@ def test_update_entry_replaces_redirect_verdict_and_clears_alternative(
 ) -> None:
     cache = make_cache(tmp_path)
     cache.put_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         EntryRecord(
             redirect_is_match=False,
@@ -545,7 +559,7 @@ def test_update_entry_replaces_redirect_verdict_and_clears_alternative(
         ),
     )
 
-    updated = cache.update_entry("a-bats", URL, redirect_is_match=True)
+    updated = cache.update_entry("Bats in flight", URL, redirect_is_match=True)
 
     assert updated.redirect_is_match is True
     assert updated.redirect_reason is None
@@ -559,7 +573,7 @@ def test_transient_entry_result_does_not_overwrite_good_entry_record(
 ) -> None:
     cache = make_cache(tmp_path)
     cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         alternative_url="https://alt.example/guide",
         alternative_probability=0.9,
@@ -570,11 +584,11 @@ def test_transient_entry_result_does_not_overwrite_good_entry_record(
 
     assert (
         cache.put_entry(
-            "a-bats", URL, EntryRecord(redirect_is_match=True), cacheable=False
+            "Bats in flight", URL, EntryRecord(redirect_is_match=True), cacheable=False
         )
         is False
     )
-    record = cache.get_entry("a-bats", URL)
+    record = cache.get_entry("Bats in flight", URL)
     assert record is not None
     assert record.redirect_is_match is None
     assert record.alternative_url == "https://alt.example/guide"
@@ -588,7 +602,7 @@ def test_update_entry_skips_write_when_semantic_fields_are_unchanged(
     current = t0
     cache = CatalogCache.load(tmp_path / ".url_cache.json", now=lambda: current)
     cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Generic homepage.",
@@ -604,7 +618,7 @@ def test_update_entry_skips_write_when_semantic_fields_are_unchanged(
 
     current = NOW
     unchanged_explicit = cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Generic homepage.",
@@ -619,7 +633,7 @@ def test_update_entry_skips_write_when_semantic_fields_are_unchanged(
     assert unchanged_explicit.checked_at == t0
 
     changed = cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Generic homepage.",
@@ -638,7 +652,7 @@ def test_update_entry_writes_when_absent_or_expired(tmp_path: Path) -> None:
     current = NOW - timedelta(days=31)
     cache = CatalogCache.load(tmp_path / ".url_cache.json", now=lambda: current)
     cache.update_entry(
-        "a-bats",
+        "Bats in flight",
         URL,
         redirect_is_match=False,
         redirect_reason="Old mismatch.",
@@ -646,8 +660,131 @@ def test_update_entry_writes_when_absent_or_expired(tmp_path: Path) -> None:
     cache.save()
 
     current = NOW
-    refreshed = cache.update_entry("a-bats", URL)
+    refreshed = cache.update_entry("Bats in flight", URL)
     assert cache.pending_writes == 1
     assert refreshed.checked_at == NOW
     assert refreshed.redirect_is_match is None
     assert refreshed.redirect_reason is None
+
+
+def test_normalize_title_and_entry_key_matching(tmp_path: Path) -> None:
+    assert normalize_title("  Bats   in\t\nFLIGHT  ") == "bats in flight"
+
+    cache = make_cache(tmp_path)
+    cache.put_entry(
+        "  Bats   in\tFlight ",
+        f"{URL}#frag-1",
+        EntryRecord(
+            alternative_url="https://alt.example/bats",
+            alternative_checked=True,
+            alternative_confirmed=True,
+        ),
+    )
+    cache.save()
+
+    payload = read_payload(tmp_path)
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
+
+    reloaded = make_cache(tmp_path)
+    hit = reloaded.get_entry("bats in flight", f"{URL}#frag-2")
+    assert hit is not None
+    assert hit.alternative_url == "https://alt.example/bats"
+
+
+def test_legacy_entry_key_migrates_on_read_and_saves_under_normalized_title(
+    tmp_path: Path,
+) -> None:
+    path = tmp_path / ".url_cache.json"
+    path.write_text(
+        json.dumps(
+            {
+                "schema_version": CACHE_VERSION,
+                "urls": {},
+                "entries": {
+                    f"legacy-bats::{URL}": {
+                        "redirect_is_match": False,
+                        "redirect_reason": "Generic homepage.",
+                        "alternative_url": "https://alt.example/bats",
+                        "alternative_probability": 0.9,
+                        "alternative_reasoning": "Moved.",
+                        "alternative_note": "confirmed: official guide",
+                        "alternative_checked": True,
+                        "alternative_confirmed": True,
+                        "checked_at": NOW.isoformat(),
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    cache = make_cache(tmp_path)
+    assert cache.get_entry("Bats in flight", URL) is None
+
+    migrated = cache.get_entry("Bats in flight", URL, entry_id="legacy-bats")
+    assert migrated is not None
+    assert migrated.alternative_url == "https://alt.example/bats"
+    assert cache.pending_writes == 1
+
+    cache.save()
+    payload = read_payload(tmp_path)
+    assert list(payload["entries"]) == [f"bats in flight::{URL}"]
+
+    reloaded = make_cache(tmp_path)
+    assert reloaded.get_entry("Bats in flight", URL) is not None
+
+
+def test_expired_legacy_entry_key_is_not_returned_or_migrated(tmp_path: Path) -> None:
+    path = tmp_path / ".url_cache.json"
+    path.write_text(
+        json.dumps(
+            {
+                "schema_version": CACHE_VERSION,
+                "urls": {},
+                "entries": {
+                    f"legacy-bats::{URL}": {
+                        "alternative_url": "https://old.example/bats",
+                        "alternative_checked": True,
+                        "checked_at": (NOW - timedelta(days=31)).isoformat(),
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    cache = make_cache(tmp_path)
+    assert cache.get_entry("Bats in flight", URL, entry_id="legacy-bats") is None
+    assert cache.pending_writes == 0
+    assert f"bats in flight::{URL}" not in cache.entries
+
+
+def test_put_and_clear_remove_legacy_entry_key(tmp_path: Path) -> None:
+    path = tmp_path / ".url_cache.json"
+    legacy_payload = {
+        "schema_version": CACHE_VERSION,
+        "urls": {},
+        "entries": {
+            f"legacy-bats::{URL}": {
+                "alternative_url": "https://old.example/bats",
+                "alternative_checked": True,
+                "checked_at": NOW.isoformat(),
+            }
+        },
+    }
+    path.write_text(json.dumps(legacy_payload), encoding="utf-8")
+
+    cache = make_cache(tmp_path)
+    cache.put_entry(
+        "Bats in flight",
+        URL,
+        EntryRecord(alternative_url="https://new.example/bats"),
+        entry_id="legacy-bats",
+    )
+    assert f"legacy-bats::{URL}" not in cache.entries
+    assert f"bats in flight::{URL}" in cache.entries
+
+    path.write_text(json.dumps(legacy_payload), encoding="utf-8")
+    cache2 = make_cache(tmp_path)
+    assert cache2.clear_entry("Bats in flight", URL, entry_id="legacy-bats") is True
+    assert cache2.entries == {}
