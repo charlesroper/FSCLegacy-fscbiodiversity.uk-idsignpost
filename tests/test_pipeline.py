@@ -2646,3 +2646,153 @@ async def test_refresh_with_duplicate_entries_runs_discovery_once_and_retries_af
     assert res_retry[0].alternative_link is None
     assert res_retry[1].alternative_link == new_alt
     assert res_retry[2].alternative_link == new_alt
+
+
+class CloseablePreResolver:
+    def __init__(self, candidates: dict[str, list[Candidate]] | None = None) -> None:
+        self.candidates = candidates or {}
+        self.calls: list[str] = []
+        self.closed = False
+
+    async def resolve(self, entry: CatalogEntry) -> list[Candidate]:
+        self.calls.append(entry.id)
+        return self.candidates.get(entry.id, [])
+
+    async def aclose(self) -> None:
+        self.closed = True
+
+
+async def test_pre_resolver_confirmed_candidate_skips_grounded_search(
+    tmp_path: Path,
+) -> None:
+    broken_url = (
+        "https://www.summerfieldbooks.com/hybrid-flora-of-the-british-isles.~4789"
+    )
+    alt_url = (
+        "https://www.summerfieldbooks.com/product/hybrid-flora-of-the-british-isles/"
+    )
+    checker = CloseableChecker(
+        {broken_url: CheckResult("404", "broken"), alt_url: live(alt_url)}
+    )
+    generator = RunFakeGenerator(
+        [
+            GenerationResult(
+                text='{"is_match": true, "reasoning": "Matches Hybrid Flora."}',
+                prompt_tokens=120,
+                output_tokens=20,
+            )
+        ]
+    )
+    config = VerifyConfig(
+        cache_file=tmp_path / "cache.json",
+        cost_file=tmp_path / "costs.json",
+    )
+
+    merged, stats = await run_verification(
+        [
+            entry(
+                "hybrid", title="Hybrid Flora of the British Isles", web_link=broken_url
+            )
+        ],
+        config,
+        deps=VerifyDeps(
+            checker=checker,
+            wayback=CloseableArchive(),
+            generator=generator,
+            resolver=public_resolver,
+        ),
+    )
+
+    assert merged[0].web_link_state == "broken"
+    assert merged[0].alternative_link == alt_url
+    assert merged[0].alternative_note == "confirmed: Matches Hybrid Flora."
+    assert generator.calls == [("gemini-3.1-flash-lite", False)]
+    assert stats.alternatives == 1
+    cost_payload = json.loads((tmp_path / "costs.json").read_text(encoding="utf-8"))
+    assert cost_payload["runs"][0]["search_queries"] == 0
+
+
+async def test_pre_resolver_falls_back_to_discover_when_rejected_or_empty(
+    tmp_path: Path,
+) -> None:
+    dead_pre = "https://new.example/dead-pre"
+    rejected_pre = "https://new.example/wrong-pre"
+    fallback_alt = "https://new.example/found-via-search"
+    broken_one = "https://example.org/broken-1"
+    broken_two = "https://example.org/broken-2"
+    checker = FakeChecker(
+        {
+            broken_one: CheckResult("404", "broken"),
+            broken_two: CheckResult("404", "broken"),
+            dead_pre: CheckResult("404", "broken"),
+            rejected_pre: live(rejected_pre),
+            fallback_alt: live(fallback_alt),
+        }
+    )
+    finder = FakeFinder(
+        candidates={
+            "e1": [Candidate(fallback_alt, 0.9, "Found by search.")],
+            "e2": None,
+        },
+        confirmations={
+            rejected_pre: RedirectVerdict(False, "different publication"),
+            fallback_alt: RedirectVerdict(True, "exact guide"),
+        },
+    )
+    pre_resolver = CloseablePreResolver(
+        candidates={
+            "e1": [Candidate(dead_pre, 0.85), Candidate(rejected_pre, 0.8)],
+            "e2": [Candidate(dead_pre, 0.85)],
+        }
+    )
+    verifier = Verifier(
+        cache=CatalogCache(path=tmp_path / "cache.json", now=lambda: NOW),
+        checker=checker,
+        finder=finder,
+        wayback=FakeArchive(),
+        resolver=public_resolver,
+        pre_resolver=pre_resolver,
+    )
+
+    result = await verifier.verify(
+        [
+            entry("e1", web_link=broken_one),
+            entry("e2", web_link=broken_two),
+        ]
+    )
+    verifier.cache.save()
+
+    assert pre_resolver.calls == ["e1", "e2"]
+    assert finder.discovery_calls == ["e1", "e2"]
+    assert result[0].alternative_link == fallback_alt
+    assert result[0].alternative_note == "confirmed: exact guide"
+    # When pre-resolved candidate was rejected and finder.discover() returned None,
+    # the failure remains transient and is not permanently cached.
+    assert result[1].alternative_link is None
+    assert (
+        CatalogCache.load(tmp_path / "cache.json", now=lambda: NOW).get_entry(
+            "Bats in flight", broken_two
+        )
+        is None
+    )
+
+
+async def test_run_verification_closes_injected_pre_resolver(tmp_path: Path) -> None:
+    pre_resolver = CloseablePreResolver()
+    config = VerifyConfig(
+        cache_file=tmp_path / "cache.json",
+        cost_file=tmp_path / "costs.json",
+    )
+
+    await run_verification(
+        [entry()],
+        config,
+        deps=VerifyDeps(
+            checker=CloseableChecker({URL: live()}),
+            finder=FakeFinder(),
+            wayback=CloseableArchive(),
+            pre_resolver=pre_resolver,
+        ),
+    )
+
+    assert pre_resolver.closed is True
