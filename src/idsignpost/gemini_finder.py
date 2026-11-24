@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 
 from idsignpost.cost import GeminiOperation, SessionCostTracker
 from idsignpost.models import CatalogEntry
+from idsignpost.urls import host_matches
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite"
 DEFAULT_TIMEOUT = 30.0
@@ -31,6 +32,41 @@ BLOCKED_HOSTS = (
     "ebay.com",
     "zvab.com",
     "scribd.com",
+    "amazon.co.uk",
+    "amazon.com",
+    "abebooks.co.uk",
+    "abebooks.com",
+    "alibris.co.uk",
+    "alibris.com",
+    "waterstones.com",
+    "foyles.co.uk",
+    "blackwells.co.uk",
+    "wordery.com",
+    "bookshop.org",
+)
+
+DISCOVERY_PROMPT = (
+    "Find the exact page that hosts or offers this identification guide. "
+    "Return at most three candidate URLs, most likely first. "
+    "Do not return a site homepage (unless it is a dedicated standalone resource "
+    "website), search page, or general category page.\n"
+    "Do not run site: search queries against the broken link's dead host "
+    "({broken_host}); you may still find known migrated destinations without "
+    "probing that dead host.\n"
+    "Do not return general retail marketplaces or blocked hosts: "
+    "amazon.co.uk, amazon.com, abebooks.co.uk, abebooks.com, alibris.co.uk, "
+    "alibris.com, waterstones.com, foyles.co.uk, blackwells.co.uk, wordery.com, "
+    "bookshop.org, ebay.co.uk, ebay.com, zvab.com, scribd.com, archive.org.\n"
+    "Title: {title}\n"
+    "Authors: {authors}\n"
+    "Description: {description}\n"
+    "Available as: {available_as}\n"
+    "Keywords: {keywords}\n"
+    "Broken link: {web_link}\n"
+    "{hint_block}"
+    'Reply as JSON: {{"candidates": [{{"url": "...", "probability": 0.0, '
+    '"reasoning": "one sentence"}}]}}.\n'
+    "Use a probability between 0 and 1 for each candidate."
 )
 
 
@@ -170,10 +206,7 @@ class _GenAIGenerator:
 
 def is_blocked_host(url: str) -> bool:
     """Match blocked hosts by exact host or dot-suffix, never substring."""
-    host = (urlsplit(url).hostname or "").lower()
-    return any(
-        host == blocked or host.endswith(f".{blocked}") for blocked in BLOCKED_HOSTS
-    )
+    return host_matches(url, BLOCKED_HOSTS)
 
 
 def is_unusable_alternative(url: str) -> bool:
@@ -431,25 +464,22 @@ class GeminiFinder:
             return None
         if self.max_searches is not None and self.total_searches >= self.max_searches:
             return None
-        prompt = (
-            "Find the exact page that hosts or offers this identification guide. "
-            "Return at most three candidate URLs, most likely first. "
-            "Do not return a site homepage, search page, or general category page.\n"
-            f"Title: {entry.title}\n"
-            f"Authors: {entry.authors or 'unknown'}\n"
-            f"Description: {entry.description or 'unknown'}\n"
-            f"Available as: {', '.join(entry.available_as) or 'unknown'}\n"
-            f"Keywords: {entry.keywords or 'unknown'}\n"
-            f"Broken link: {entry.web_link}\n"
-            + (
-                f"The page {hint} is an index. Return the specific page inside it "
-                "that matches the entry, not the index itself.\n"
-                if hint
-                else ""
-            )
-            + 'Reply as JSON: {"candidates": [{"url": "...", "probability": 0.0, '
-            '"reasoning": "one sentence"}]}. '
-            "Use a probability between 0 and 1 for each candidate."
+        broken_host = urlsplit(entry.web_link).hostname or "unknown"
+        hint_block = (
+            f"The page {hint} is an index. Return the specific page inside it "
+            "that matches the entry, not the index itself.\n"
+            if hint
+            else ""
+        )
+        prompt = DISCOVERY_PROMPT.format(
+            broken_host=broken_host,
+            title=entry.title,
+            authors=entry.authors or "unknown",
+            description=entry.description or "unknown",
+            available_as=", ".join(entry.available_as) or "unknown",
+            keywords=entry.keywords or "unknown",
+            web_link=entry.web_link,
+            hint_block=hint_block,
         )
         text = await self._generate(
             prompt,

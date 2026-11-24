@@ -26,8 +26,12 @@ from idsignpost.gemini_finder import (
 )
 from idsignpost.http_checker import (
     DEFAULT_TIMEOUT as DEFAULT_HTTP_TIMEOUT,
+    GENERIC_HUBS,
     CheckResult,
     HTTPChecker,
+    is_auth_wall_redirect,
+    is_auth_wall_url,
+    is_explicit_soft_404,
 )
 from idsignpost.models import (
     CatalogEntry,
@@ -36,7 +40,13 @@ from idsignpost.models import (
     merge_verified as merge_verified,
 )
 from idsignpost.sampler import get_stratified_sample
-from idsignpost.urls import cache_key, is_public_http_url, urls_equal
+from idsignpost.urls import (
+    cache_key,
+    clean_host,
+    host_matches,
+    is_public_http_url,
+    urls_equal,
+)
 from idsignpost.wayback import (
     DEFAULT_CONCURRENCY as DEFAULT_WAYBACK_CONCURRENCY,
     WaybackClient,
@@ -45,6 +55,15 @@ from idsignpost.wayback import (
 DEFAULT_CONCURRENCY = 10
 DEFAULT_GEMINI_CONCURRENCY = 3
 SHARED_ALTERNATIVE_LIMIT = 3
+MULTI_RESOURCE_HOSTS = (
+    "field-studies-council.org",
+    "royensoc.co.uk",
+    "plantlife.org.uk",
+    "nhbs.com",
+    "pemberleybooks.com",
+    "summerfieldbooks.com",
+    "sites.google.com",
+)
 
 
 class OfflineRunError(RuntimeError):
@@ -223,11 +242,38 @@ def _alternative_fields(entry: CatalogEntry) -> Alternative | None:
     )
 
 
+def _pre_confirmation_rejection_note(
+    cleaned_url: str, final_url: str, result: CheckResult
+) -> str | None:
+    """Reject 200 OK candidates that land on auth walls, hubs, soft 404s, or host roots."""
+    if is_auth_wall_url(final_url) or is_auth_wall_redirect(cleaned_url, final_url):
+        return "rejected: login wall"
+    if urlsplit(final_url).path.rstrip("/").lower() in GENERIC_HUBS:
+        return "rejected: generic hub page"
+    if is_explicit_soft_404(result.page_title, result.page_h1):
+        return "rejected: soft 404 page"
+    if _is_same_host_root_redirect(cleaned_url, final_url):
+        return "ignored: site homepage"
+    return None
+
+
 def _join_notes(notes: list[str], limit: int = 3) -> str | None:
     """Join the first few candidate notes into one cacheable line."""
     if not notes:
         return None
     return "; ".join(notes[:limit])
+
+
+def _is_multi_resource_host(url: str) -> bool:
+    return host_matches(url, MULTI_RESOURCE_HOSTS)
+
+
+def _is_same_host_root_redirect(source_url: str, target_url: str) -> bool:
+    return (
+        urlsplit(source_url).path not in {"", "/"}
+        and urlsplit(target_url).path in {"", "/"}
+        and clean_host(source_url) == clean_host(target_url)
+    )
 
 
 def _url_policy_note(url: str, broken_link: str) -> str | None:
@@ -238,7 +284,10 @@ def _url_policy_note(url: str, broken_link: str) -> str | None:
         if is_unusable_alternative(url):
             return "ignored: blocked host or image file"
         cleaned = cache_key(url)
-        if urlsplit(cleaned).path in {"", "/"}:
+        if urlsplit(cleaned).path in {"", "/"} and (
+            _is_multi_resource_host(cleaned)
+            or _is_same_host_root_redirect(broken_link, cleaned)
+        ):
             return "ignored: site homepage"
         if urls_equal(cleaned, broken_link):
             return "ignored: same as the broken link"
@@ -639,7 +688,7 @@ class Verifier:
                 transient=True, note="retry: transient check failure"
             )
         result = facts.result
-        if result.state != "ok" or result.is_suspicious_redirect:
+        if result.state != "ok":
             return DiscoveryOutcome(
                 note=f"rejected: link returned {result.status or result.state}"
             )
@@ -649,6 +698,9 @@ class Verifier:
                 return DiscoveryOutcome(note=redirect_note)
 
         url = result.resolved_url or cleaned
+        rejection_note = _pre_confirmation_rejection_note(cleaned, url, result)
+        if rejection_note is not None:
+            return DiscoveryOutcome(note=rejection_note)
         verdict = await self._confirm(
             entry,
             url,

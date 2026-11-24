@@ -16,7 +16,7 @@ import respx
 
 from idsignpost.cache import CatalogCache
 from idsignpost.gemini_finder import Candidate, GenerationResult, RedirectVerdict
-from idsignpost.http_checker import CheckResult
+from idsignpost.http_checker import CheckResult, HTTPChecker
 from idsignpost.models import CatalogEntry
 from idsignpost.pipeline import (
     OfflineRunError,
@@ -1139,6 +1139,220 @@ async def test_discovery_rejects_unsafe_redirect_targets(
 
     assert updated.alternative_link is None
     assert updated.alternative_note == expected_note
+    assert finder.confirm_calls == []
+
+
+@respx.mock
+async def test_primary_login_wall_redirect_marks_broken_without_confirm_redirect(
+    tmp_path: object,
+) -> None:
+    source = "https://sites.google.com/site/mikesinsectkeys/Home/beetles"
+    login_url = "https://accounts.google.com/v3/signin/identifier?continue=x"
+    respx.get(source).mock(
+        return_value=httpx.Response(302, headers={"location": login_url})
+    )
+    respx.get(login_url).mock(
+        return_value=httpx.Response(
+            200,
+            headers={"content-type": "text/html"},
+            content=b"<title>Sign in - Google Accounts</title>",
+        )
+    )
+    finder = FakeFinder(candidates={"guide": []})
+    async with httpx.AsyncClient(follow_redirects=True) as client:
+        verifier = Verifier(
+            cache=CatalogCache(
+                path=tmp_path / "cache.json",  # type: ignore[operator]
+                ttl_days=30,
+                now=lambda: NOW,
+            ),
+            checker=HTTPChecker(client=client),
+            finder=finder,
+            wayback=FakeArchive(),
+            resolver=public_resolver,
+        )
+        updated = (await verifier.verify([entry(web_link=source)]))[0]
+
+    assert updated.web_link_state == "broken"
+    assert updated.web_link_status == "redirect_mismatch"
+    assert finder.redirect_calls == []
+
+
+@pytest.mark.parametrize(
+    ("candidate_url", "check_result"),
+    [
+        (
+            "https://example.org/private-doc",
+            CheckResult(
+                "redirect_mismatch",
+                "broken",
+                resolved_url="https://accounts.google.com/v3/signin/identifier",
+                is_suspicious_redirect=True,
+            ),
+        ),
+        (
+            "https://example.org/private-doc",
+            CheckResult(
+                "200",
+                "ok",
+                resolved_url="https://accounts.google.com/v3/signin/identifier",
+            ),
+        ),
+        (
+            "https://example.org/login",
+            CheckResult("200", "ok"),
+        ),
+    ],
+)
+async def test_candidate_resolving_to_login_wall_is_rejected_without_confirmation(
+    tmp_path: object, candidate_url: str, check_result: CheckResult
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: check_result,
+        }
+    )
+    finder = FakeFinder(candidates={"guide": [Candidate(candidate_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
+    assert finder.confirm_calls == []
+
+
+@pytest.mark.parametrize(
+    "multi_url",
+    [
+        "https://www.field-studies-council.org/",
+        "https://www.royensoc.co.uk/",
+        "https://www.plantlife.org.uk/",
+        "https://www.nhbs.com/",
+        "https://www.pemberleybooks.com/",
+        "https://www.summerfieldbooks.com/",
+        "https://sites.google.com/",
+    ],
+)
+async def test_discovery_rejects_multi_resource_publisher_homepages(
+    tmp_path: object, multi_url: str
+) -> None:
+    checker = FakeChecker({URL: CheckResult("404", "broken")})
+    finder = FakeFinder(candidates={"guide": [Candidate(multi_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
+    assert updated.alternative_note == "ignored: site homepage"
+    assert checker.checked == [URL]
+    assert finder.confirm_calls == []
+
+
+@pytest.mark.parametrize(
+    "standalone_url",
+    [
+        "https://standalone-key.example/",
+        "https://standalone-key.example",
+    ],
+)
+async def test_discovery_allows_standalone_domain_root_homepage_to_confirmation(
+    tmp_path: object, standalone_url: str
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            standalone_url: live(),
+        }
+    )
+    finder = FakeFinder(
+        candidates={"guide": [Candidate(standalone_url, 0.9)]},
+        confirmations={standalone_url: RedirectVerdict(True, "Dedicated site.")},
+    )
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link == standalone_url
+    assert updated.alternative_note == "confirmed: Dedicated site."
+    assert finder.confirm_calls == [("guide", standalone_url)]
+
+
+async def test_discovery_confirms_200_candidate_with_cross_domain_redirect_or_suspicion(
+    tmp_path: object,
+) -> None:
+    candidate_url = "https://old-publisher.example/bats"
+    resolved_url = "https://new-publisher.example/bats-guide"
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: CheckResult(
+                "200",
+                "ok",
+                resolved_url=resolved_url,
+                is_suspicious_redirect=True,
+                page_title="Error tolerance and bat flight",
+            ),
+        }
+    )
+    finder = FakeFinder(
+        candidates={"guide": [Candidate(candidate_url, 0.9)]},
+        confirmations={resolved_url: RedirectVerdict(True, "Migrated guide.")},
+    )
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link == resolved_url
+    assert updated.alternative_note == "confirmed: Migrated guide."
+    assert finder.confirm_calls == [("guide", resolved_url)]
+
+
+@pytest.mark.parametrize(
+    ("candidate_url", "check_result"),
+    [
+        (
+            "https://other.example/deep/guide",
+            CheckResult("200", "ok", resolved_url="https://other.example/"),
+        ),
+        (
+            "https://other.example/shop/publications",
+            CheckResult("200", "ok"),
+        ),
+        (
+            "https://other.example/resources",
+            CheckResult("200", "ok"),
+        ),
+        (
+            "https://other.example/missing",
+            CheckResult("200", "ok", page_title="404 Not Found"),
+        ),
+        (
+            "https://other.example/missing-2",
+            CheckResult("200", "ok", page_title="Site", page_h1="Page Not Found"),
+        ),
+    ],
+)
+async def test_discovery_rejects_same_host_root_hub_or_soft_404_before_confirmation(
+    tmp_path: object, candidate_url: str, check_result: CheckResult
+) -> None:
+    checker = FakeChecker(
+        {
+            URL: CheckResult("404", "broken"),
+            candidate_url: check_result,
+        }
+    )
+    finder = FakeFinder(candidates={"guide": [Candidate(candidate_url, 0.9)]})
+
+    updated = (await make_verifier(tmp_path, checker, finder=finder).verify([entry()]))[
+        0
+    ]
+
+    assert updated.alternative_link is None
     assert finder.confirm_calls == []
 
 

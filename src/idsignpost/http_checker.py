@@ -3,13 +3,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
 from urllib.parse import urlsplit
 
 import httpx
 from bs4 import BeautifulSoup, Tag
 
 from idsignpost.models import LinkState
-from idsignpost.urls import clean_host, sanitize_url, urls_equal
+from idsignpost.urls import clean_host, host_matches, sanitize_url, urls_equal
 
 MAX_HTML_BYTES = 16 * 1024
 SNIPPET_CHARS = 800
@@ -35,6 +36,8 @@ TRANSIENT_CODES = frozenset({429, 500, 502, 503, 504})
 RETRY_CODES = frozenset({400, 403})
 
 SOFT_404_PHRASES = ("404", "not found", "page not found", "error", "expired")
+EXPLICIT_SOFT_404_PHRASES = ("404 not found", "page not found", "error 404")
+_STANDALONE_404 = re.compile(r"\b404\b")
 GENERIC_HUBS = frozenset(
     {
         "/shop",
@@ -46,6 +49,8 @@ GENERIC_HUBS = frozenset(
     }
 )
 LOGIN_PHRASES = ("login", "signin", "register", "subscribe", "consent", "cookie")
+AUTH_HOSTS = ("accounts.google.com", "login.microsoftonline.com")
+AUTH_PATH_PREFIXES = ("/v3/signin", "/servicelogin", "/login", "/signin")
 
 
 @dataclass(frozen=True, slots=True)
@@ -154,6 +159,17 @@ class HTTPChecker:
         final_url = sanitize_url(str(response.url))
         resolved_url = None if urls_equal(url, final_url) else final_url
         page_title, page_h1, page_snippet = parse_page(body)
+        if resolved_url is not None and is_auth_wall_redirect(url, final_url):
+            return CheckResult(
+                status="redirect_mismatch",
+                state="broken",
+                resolved_url=resolved_url,
+                is_suspicious_redirect=True,
+                page_title=page_title,
+                page_h1=page_h1,
+                page_snippet=page_snippet,
+                cacheable=True,
+            )
         if resolved_url is not None:
             suspicious = _is_suspicious(url, final_url, page_title, entry_title)
         elif state == "ok":
@@ -209,6 +225,42 @@ class HTTPChecker:
             if size >= MAX_HTML_BYTES:
                 break
         return b"".join(chunks)[:MAX_HTML_BYTES]
+
+
+def _matches_auth_host(url: str) -> bool:
+    return host_matches(url, AUTH_HOSTS)
+
+
+def _matches_auth_path(url: str) -> bool:
+    path = (urlsplit(url).path or "/").lower()
+    return any(path.startswith(prefix) for prefix in AUTH_PATH_PREFIXES)
+
+
+def is_auth_wall_url(url: str) -> bool:
+    """Return True when a URL points at a known authentication host or endpoint."""
+    return _matches_auth_host(url) or _matches_auth_path(url)
+
+
+def is_auth_wall_redirect(original_url: str, final_url: str) -> bool:
+    """Return True when a redirect lands on a known auth host or login endpoint."""
+    if _matches_auth_host(final_url):
+        return True
+    if _matches_auth_host(original_url):
+        return False
+    original_path = (urlsplit(original_url).path or "/").lower()
+    final_path = (urlsplit(final_url).path or "/").lower()
+    return any(
+        final_path.startswith(prefix) and not original_path.startswith(prefix)
+        for prefix in AUTH_PATH_PREFIXES
+    )
+
+
+def is_explicit_soft_404(title: str | None, h1: str | None = None) -> bool:
+    """Return True only when page title or heading carries an explicit 404 message."""
+    text = f"{title or ''} {h1 or ''}".lower()
+    return any(phrase in text for phrase in EXPLICIT_SOFT_404_PHRASES) or bool(
+        _STANDALONE_404.search(text)
+    )
 
 
 def _has_soft_404(text: str) -> bool:
