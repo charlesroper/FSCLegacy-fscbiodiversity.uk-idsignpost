@@ -31,9 +31,23 @@ function isExecutable(file) {
   }
 }
 
+function readBrowsersConfig() {
+  try {
+    const file = path.join(os.homedir(), ".config", "agent", "browsers.json");
+    if (!existsSync(file)) return null;
+    return JSON.parse(readFileSync(file, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 function findChromiumExecutable() {
   if (process.env.CHROME_PATH && isExecutable(process.env.CHROME_PATH)) {
     return process.env.CHROME_PATH;
+  }
+  const hostExe = readBrowsersConfig()?.engines?.chromium?.executablePath;
+  if (hostExe && isExecutable(hostExe)) {
+    return hostExe;
   }
   const cacheDir =
     process.env.PLAYWRIGHT_BROWSERS_PATH || path.join(os.homedir(), ".cache", "ms-playwright");
@@ -129,9 +143,29 @@ async function checkViewport(browser, baseUrl, viewport, isMobile) {
   assert.notEqual(toggled.bg, initialBg, "Theme toggle did not change body backgroundColor");
   await page.click("#theme-toggle");
 
-  // Expand first Details disclosure & measure touch spacing and card width
+  // Expand first Details disclosure & measure touch spacing, focus contrast, and card width
   const firstRow = page.locator("#table-body tr").first();
   await firstRow.locator(".row-details summary").click();
+  const focusSummaryBg = await firstRow.locator(".row-details summary").evaluate((el) => {
+    el.focus();
+    return getComputedStyle(el).backgroundColor;
+  });
+  assert.equal(
+    focusSummaryBg,
+    "rgba(0, 0, 0, 0)",
+    `Details summary focus background should stay transparent, got ${focusSummaryBg}`,
+  );
+
+  const paginationBg = await page.evaluate(() => {
+    const li = document.querySelector(".govuk-pagination__item--current");
+    return li ? getComputedStyle(li).backgroundColor : null;
+  });
+  assert.equal(
+    paginationBg,
+    "rgba(0, 0, 0, 0)",
+    `Current pagination item li background should be transparent, got ${paginationBg}`,
+  );
+
   const detailMetrics = await firstRow.evaluate((row) => {
     const link = row.querySelector(".guide-action a")?.getBoundingClientRect();
     const summary = row.querySelector(".row-details summary").getBoundingClientRect();
@@ -139,7 +173,9 @@ async function checkViewport(browser, baseUrl, viewport, isMobile) {
     const card = row.getBoundingClientRect();
     return {
       linkBottom: link?.bottom ?? null,
+      linkHeight: link?.height ?? null,
       summaryTop: summary.top,
+      summaryHeight: summary.height,
       detailsWidth: detailsText.width,
       cardWidth: card.width,
     };
@@ -152,6 +188,10 @@ async function checkViewport(browser, baseUrl, viewport, isMobile) {
     );
   }
   if (isMobile) {
+    assert.ok(detailMetrics.summaryHeight >= 44, `Mobile summary target < 44px (${detailMetrics.summaryHeight})`);
+    if (detailMetrics.linkHeight !== null) {
+      assert.ok(detailMetrics.linkHeight >= 44, `Mobile guide link target < 44px (${detailMetrics.linkHeight})`);
+    }
     assert.ok(
       detailMetrics.detailsWidth >= detailMetrics.cardWidth * 0.78,
       `Mobile details too narrow (${detailMetrics.detailsWidth} vs card ${detailMetrics.cardWidth})`,
@@ -174,10 +214,12 @@ async function main() {
   await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
   const { port } = server.address();
   const baseUrl = `http://127.0.0.1:${port}/`;
-  const launchArgs = process.platform === "linux" ? ["--no-sandbox"] : [];
+  const launchArgs =
+    readBrowsersConfig()?.launchArgs ?? (process.platform === "linux" ? ["--no-sandbox"] : []);
   const browser = await chromium.launch({ executablePath, headless: true, args: launchArgs });
   try {
     await checkViewport(browser, baseUrl, { width: 390, height: 844 }, true);
+    await checkViewport(browser, baseUrl, { width: 768, height: 1024 }, true);
     await checkViewport(browser, baseUrl, { width: 1280, height: 800 }, false);
     console.log("LAYOUT_CHECK_OK");
   } finally {

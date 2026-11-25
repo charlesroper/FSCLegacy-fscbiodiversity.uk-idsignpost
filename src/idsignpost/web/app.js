@@ -22,7 +22,7 @@ const DATA_URLS = [
   "https://raw.githubusercontent.com/charlesroper/FSCLegacy-fscbiodiversity.uk-idsignpost/main/idsignpost.json",
 ];
 const FILTERS_KEY = "idsignpost-filters";
-const MOBILE_QUERY = "(max-width: 640.98px)";
+const MOBILE_QUERY = "(max-width: 960px)";
 
 let entries = [];
 let filters = initialFilters();
@@ -249,7 +249,9 @@ function renderPagination(paging) {
 
   const items = pageWindow(paging.page, paging.totalPages).map((entryPage) => {
     if (entryPage === "gap") {
-      return make("li", "govuk-pagination__item govuk-pagination__item--ellipses", "\u22ef");
+      const gap = make("li", "govuk-pagination__item govuk-pagination__item--ellipses", "\u22ef");
+      gap.setAttribute("aria-hidden", "true");
+      return gap;
     }
     const current = entryPage === paging.page;
     const item = make(
